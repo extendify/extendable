@@ -47,15 +47,17 @@ function extendable_register_block_patterns() {
 	$block_patterns = array(
 		'footer-call-to-action',
 		'footer-call-to-action-dark',
+		'footer-logo-description-two-nav',
 		'footer-logo-nav',
 		'footer-offset-heading-buttons',
 		'footer-offset-heading-buttons-dark',
 		'footer-offset-heading-buttons-primary',
-		'footer-logo-description-two-nav',
 		'header-logo-nav-button',
+		'header-logo-nav-social-button',
 		'header-logo-tagline-nav-button',
 		'header-logo-tagline-social',
-		'header-nav-logo-social'
+		'header-nav-logo-social',
+		'header-social-centered-logo-nav-button'
 	);
 
 	/**

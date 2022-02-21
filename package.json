@@ -1,0 +1,23 @@
+{
+	"name": "extendable",
+	"version": "0.0.0",
+	"description": "",
+	"main": "index.js",
+	"author": "WordPress",
+	"license": "GPL-2.0-or-later",
+	"bugs": {
+		"url": "https://github.com/extendify/extendable/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/extendify/extendable.git"
+	},
+	"homepage": "https://github.com/extendify/extendable#readme",
+	"devDependencies": {
+		"@wordpress/stylelint-config": "^19.1.0",
+		"stylelint": "^13.13.1"
+	},
+	"scripts": {
+		"lint:css": "stylelint **/*.css --fix -i .gitignore"
+	}
+}

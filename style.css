@@ -1,0 +1,287 @@
+/*
+Theme Name: Extendable
+Theme URI: https://github.com/extendify/extendable
+Author: Extendify
+Author URI: https://extendify.com
+Description:
+Requires at least: 5.9
+Tested up to: 5.9
+Requires PHP: 5.6
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: extendable
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments
+
+Extendable is a derivative work of the code from the
+Twenty Twenty-Two WordPress Theme, which is licensed GPLv2.
+
+Extendable WordPress Theme, (C) 2022 Extendify Inc.
+Extendable therefore is also distributed under the terms of the GNU GPL.
+*/
+
+.is-offset-copy span {
+	display: block;
+}
+
+.is-offset-copy span:nth-child(2) {
+	padding-left: var(--wp--custom--spacing--small, 1.25rem);
+}
+
+.header--title {
+	width: 33%;
+	flex: 1 1 33%;
+}
+
+.header--nav {
+	width: 34%;
+	flex: 1 1 34%;
+}
+
+.header--extra {
+	width: 33%;
+}
+
+.order-1 {
+	order: 1;
+}
+
+.order-2 {
+	order: 2;
+}
+
+.order-3 {
+	order: 3;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.items-start {
+	align-items: flex-start !important;
+}
+
+@media (min-width: 600px) {
+	.md\:order-1 {
+		order: 1;
+	}
+
+	.md\:order-2 {
+		order: 2;
+	}
+
+	.md\:order-3 {
+		order: 3;
+	}
+
+	.md\:text-center {
+		text-align: center;
+	}
+
+	.md\:flex-col {
+		flex-direction: column;
+	}
+
+	.md\:flex-row {
+		flex-direction: row;
+	}
+
+	.md\:items-center {
+		align-items: center !important;
+	}
+}
+
+@media (min-width: 781px) {
+	.lg\:justify-end {
+		justify-content: flex-end !important;
+	}
+
+	.hide-on-desktop {
+		display: none !important;
+	}
+}
+
+/* Improve mobile on header parts */
+@media (max-width: 599px) {
+	.header--nav.is-responsive {
+		justify-content: flex-end;
+		width: auto;
+		flex: inherit;
+		margin-left: 1rem;
+	}
+
+	.no-mobile-gap {
+		margin-top: 0 !important;
+		margin-right: 1rem;
+	}
+
+	.hide-on-mobile {
+		display: none !important;
+	}
+}
+
+.md\:text-center .components-resizable-box__container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+.wp-block-site-title a {
+	text-decoration: none;
+}
+
+@media (max-width: 599px) {
+        .wp-block-navigation__responsive-container .wp-block-navigation-item {
+                font-size: var(--wp--preset--font-size--large) !important;
+        }
+}
+
+/* .wp-block-navigation__responsive-container-open svg {
+	width: 30px;
+}
+
+.wp-block-navigation__responsive-container-open svg rect {
+	width: 22px;
+} */
+
+
+/*
+ * Font smoothing.
+ * This is a niche setting that will not be available via Global Styles.
+ * https://github.com/WordPress/gutenberg/issues/35934
+ */
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*
+ * Text and navigation link styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+
+a {
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.25ch;
+}
+
+a:hover,
+a:focus {
+	text-decoration-style: dashed;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+.wp-block-navigation .wp-block-navigation-item a:hover,
+.wp-block-navigation .wp-block-navigation-item a:focus {
+	text-decoration: underline;
+	text-decoration-style: solid;
+}
+
+/*
+ * Search and File Block button styles.
+ * Necessary until the following issues are resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/36444
+ * https://github.com/WordPress/gutenberg/issues/27760
+ */
+
+.wp-block-search__button,
+.wp-block-file .wp-block-file__button {
+	background-color: var(--wp--preset--color--primary);
+	border-radius: 0;
+	border: none;
+	color: var(--wp--preset--color--background);
+	font-size: var(--wp--preset--font-size--medium);
+	padding: calc(.667em + 2px) calc(1.333em + 2px);
+}
+
+/*
+ * Button hover styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+
+.wp-block-search__button:hover,
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-button__link:hover {
+	opacity: 0.90;
+}
+
+/*
+ * Alignment styles.
+ * These rules are temporary, and should not be relied on or
+ * modified too heavily by themes or plugins that build on
+ * Extendable. These are meant to be a precursor to
+ * a global solution provided by the Block Editor.
+ *
+ * Relevant issues:
+ * https://github.com/WordPress/gutenberg/issues/35607
+ * https://github.com/WordPress/gutenberg/issues/35884
+ */
+
+.wp-site-blocks,
+body > .is-root-container,
+.edit-post-visual-editor__post-title-wrapper,
+.wp-block-group.alignfull,
+.wp-block-group.has-background,
+.wp-block-cover.alignfull,
+.is-root-container .wp-block[data-align="full"] > .wp-block-group,
+.is-root-container .wp-block[data-align="full"] > .wp-block-cover {
+	padding-left: var(--wp--custom--spacing--outer);
+	padding-right: var(--wp--custom--spacing--outer);
+}
+
+.wp-site-blocks .alignfull,
+.wp-site-blocks > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-cover,
+.wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-template-part > .wp-block-cover,
+body > .is-root-container > .wp-block-group.has-background,
+body > .is-root-container > .wp-block-cover,
+body > .is-root-container > .wp-block-template-part > .wp-block-group.has-background,
+body > .is-root-container > .wp-block-template-part > .wp-block-cover,
+.is-root-container .wp-block[data-align="full"] {
+	margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+	margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+	width: unset;
+}
+
+/* Blocks inside columns don't have negative margins. */
+.wp-site-blocks .wp-block-columns .wp-block-column .alignfull,
+.is-root-container .wp-block-columns .wp-block-column .wp-block[data-align="full"],
+/* We also want to avoid stacking negative margins. */
+.wp-site-blocks .alignfull:not(.wp-block-group) .alignfull,
+.is-root-container .wp-block[data-align="full"] > *:not(.wp-block-group) .wp-block[data-align="full"] {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	width: inherit;
+}
+
+/*
+ * Responsive menu container padding.
+ * This ensures the responsive container inherits the same
+ * spacing defined above. This behavior may be built into
+ * the Block Editor in the future.
+ */
+
+.wp-block-navigation__responsive-container.is-menu-open {
+	padding-top: var(--wp--custom--spacing--outer);
+	padding-bottom: var(--wp--custom--spacing--large);
+	padding-right: var(--wp--custom--spacing--outer);
+	padding-left: var(--wp--custom--spacing--outer);
+}
+

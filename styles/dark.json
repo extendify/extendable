@@ -1,0 +1,39 @@
+{
+	"version": 2,
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "foreground",
+					"color": "#fff",
+					"name": "Foreground"
+				},
+				{
+					"slug": "background",
+					"color": "#111113",
+					"name": "Background"
+				},
+				{
+					"slug": "primary",
+					"color": "#ffc017",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#a3a3ac",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#1E1F24",
+					"name": "Tertiary"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"text": "var(--wp--preset--color--secondary)"
+		}
+	}
+}

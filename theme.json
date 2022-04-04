@@ -282,7 +282,7 @@
 	},
 	"templateParts": [
 		{
-			"name": "header-default",
+			"name": "header",
 			"title": "Header",
 			"area": "header"
 		},

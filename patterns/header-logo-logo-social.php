@@ -1,12 +1,13 @@
 <?php
 /**
- * Default footer
+ * Title:       Header (Navigation, Logo, Social)
+ * Slug:        extendable/header-nav-logo-social
+ * Categories:  extendable-headers
+ * blockTypes:  core/template-part/header
  */
-return array(
-	'title'      => __( 'Header (Navigation, Logo, Social)', 'extendable' ),
-	'categories' => array( 'ext-all', 'ext-header' ),
-	'blockTypes' => array( 'core/template-part/header' ),
-	'content'    => '<!-- wp:group {"align":"full","layout":{"inherit":true}} -->
+?>
+
+<!-- wp:group {"align":"full","layout":{"inherit":true}} -->
 <div class="wp-block-group alignfull"><!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002dsmall, 1.25rem)","bottom":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002dsmall, 1.25rem)"}}},"backgroundColor":"tertiary","layout":{"inherit":true}} -->
 <div class="wp-block-group alignfull has-tertiary-background-color has-background" style="padding-top:var(--wp--custom--spacing--small, 1.25rem);padding-bottom:var(--wp--custom--spacing--small, 1.25rem)"><!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"0rem"}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"nowrap"}} -->
 <div class="wp-block-group alignfull">
@@ -26,5 +27,4 @@ return array(
 <!-- /wp:social-links --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
-<!-- /wp:group -->',
-);
+<!-- /wp:group -->

@@ -1,12 +1,13 @@
 <?php
 /**
- * Default footer
+ * Title:       Header (Social, Center Logo & Navigation, Button)
+ * Slug:        extendable/header-social-centered-logo-nav-button
+ * Categories:  extendable-headers
+ * blockTypes:  core/template-part/header
  */
-return array(
-	'title'      => __( 'Header (Social, Center Logo & Navigation, Button)', 'extendable' ),
-	'categories' => array( 'ext-all', 'ext-header' ),
-	'blockTypes' => array( 'core/template-part/header' ),
-	'content'    => '<!-- wp:group {"align":"full","layout":{"inherit":true}} -->
+?>
+
+<!-- wp:group {"align":"full","layout":{"inherit":true}} -->
 <div class="wp-block-group alignfull"><!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002dsmall, 1.25rem)","bottom":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002dsmall, 1.25rem)"}}},"backgroundColor":"tertiary","layout":{"inherit":true}} -->
 <div class="wp-block-group alignfull has-tertiary-background-color has-background" style="padding-top:var(--wp--custom--spacing--small, 1.25rem);padding-bottom:var(--wp--custom--spacing--small, 1.25rem)"><!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"0rem"}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"nowrap"}} -->
 <div class="wp-block-group alignfull"><!-- wp:social-links {"iconColor":"foreground","iconColorValue":"#000000","size":"has-small-icon-size","className":"is-style-logos-only header\u002d\u002dtitle order-2 md:order-1 hide-on-mobile","layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"1rem"}}} -->
@@ -34,5 +35,4 @@ return array(
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
-<!-- /wp:group -->',
-);
+<!-- /wp:group -->

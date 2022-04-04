@@ -146,5 +146,44 @@ endif;
 
 add_action( 'wp_head', 'extendable_preload_webfonts' );
 
-// Add block patterns
-require get_template_directory() . '/inc/block-patterns.php';
+/**
+ * Registers pattern categories.
+ *
+ * @since Extendable 1.0
+ *
+ * @return void
+ */
+function extendable_register_pattern_categories() {
+	$block_pattern_categories = array(
+		'ext-all' => array( 'label' => __( 'Extendable All', 'extendable' ) ),
+		'ext-footer'   => array( 'label' => __( 'Extendable Footers', 'extendable' ) ),
+		'ext-header'   => array( 'label' => __( 'Extendable Headers', 'extendable' ) ),
+		'ext-query'    => array( 'label' => __( 'Extendable Query', 'extendable' ) ),
+		'ext-pages'    => array( 'label' => __( 'Extendable Pages', 'extendable' ) ),
+	);
+
+	/**
+	 * Filters the theme block pattern categories.
+	 *
+	 * @since Extendable 1.0
+	 *
+	 * @param array[] $block_pattern_categories {
+	 *     An associative array of block pattern categories, keyed by category name.
+	 *
+	 *     @type array[] $properties {
+	 *         An array of block category properties.
+	 *
+	 *         @type string $label A human-readable label for the pattern category.
+	 *     }
+	 * }
+	 */
+	$block_pattern_categories = apply_filters( 'extendable_block_pattern_categories', $block_pattern_categories );
+
+	foreach ( $block_pattern_categories as $name => $properties ) {
+		if ( ! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name ) ) {
+			register_block_pattern_category( $name, $properties );
+		}
+	}
+
+}
+add_action( 'init', 'extendable_register_pattern_categories', 9 );

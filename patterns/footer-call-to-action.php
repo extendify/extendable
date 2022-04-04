@@ -1,12 +1,13 @@
 <?php
 /**
- * Default footer
+ * Title:       Footer with logo and two column nav
+ * Slug:        extendable/footer-logo-desc-two-nav
+ * Categories:  extendable-footers
+ * blockTypes:  core/template-part/footer
  */
-return array(
-	'title'      => __( 'Footer with logo and two column nav', 'extendable' ),
-	'categories' => array( 'ext-all', 'ext-footer' ),
-	'blockTypes' => array( 'core/template-part/footer' ),
-	'content'    => '<!-- wp:group {"align":"full","layout":{"inherit":true}} -->
+?>
+
+<!-- wp:group {"align":"full","layout":{"inherit":true}} -->
 <div class="wp-block-group alignfull"><!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002dsmall, 1.25rem)","bottom":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002dsmall, 1.25rem)"}}},"backgroundColor":"tertiary","layout":{"inherit":true}} -->
 <div class="wp-block-group alignfull has-tertiary-background-color has-background" style="padding-top:var(--wp--custom--spacing--small, 1.25rem);padding-bottom:var(--wp--custom--spacing--small, 1.25rem)"><!-- wp:columns {"align":"full","style":{"spacing":{"padding":{"right":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002douter, 1.25rem)","left":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002douter, 1.25rem)"}}}} -->
 <div class="wp-block-columns alignfull" style="padding-right:var(--wp--custom--spacing--outer, 1.25rem);padding-left:var(--wp--custom--spacing--outer, 1.25rem)"><!-- wp:column {"width":"50%"} -->
@@ -50,5 +51,4 @@ return array(
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
 <!-- /wp:group --></div>
-<!-- /wp:group -->',
-);
+<!-- /wp:group -->

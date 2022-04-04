@@ -1,17 +1,18 @@
 <?php
 /**
- * Default footer
+ * Title:       Footer with offset heading and buttons (Primary)
+ * Slug:        extendable/footer-offset-heading-buttons
+ * Categories:  extendable-footers
+ * blockTypes:  core/template-part/footer
  */
-return array(
-	'title'      => __( 'Footer with offset heading and buttons (Dark)', 'extendable' ),
-	'categories' => array( 'ext-all', 'ext-footer' ),
-	'blockTypes' => array( 'core/template-part/footer' ),
-	'content'    => '<!-- wp:group {"align":"full","layout":{"inherit":true}} -->
-<div class="wp-block-group alignfull"><!-- wp:group {"align":"full","style":{"spacing":{"padding":{"bottom":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002dsmall, 1.25rem)"}}},"backgroundColor":"foreground","textColor":"background","layout":{"inherit":true}} -->
-<div class="wp-block-group alignfull has-background-color has-foreground-background-color has-text-color has-background" style="padding-bottom:var(--wp--custom--spacing--small, 1.25rem)"><!-- wp:columns {"align":"wide"} -->
+?>
+
+<!-- wp:group {"align":"full","layout":{"inherit":true}} -->
+<div class="wp-block-group alignfull"><!-- wp:group {"align":"full","style":{"spacing":{"padding":{"bottom":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002dsmall, 1.25rem)"}}},"backgroundColor":"primary","textColor":"background","layout":{"inherit":true}} -->
+<div class="wp-block-group alignfull has-background-color has-primary-background-color has-text-color has-background" style="padding-bottom:var(--wp--custom--spacing--small, 1.25rem)"><!-- wp:columns {"align":"wide"} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:heading {"textAlign":"left","style":{"typography":{"lineHeight":"1.1"}},"className":"is-offset-copy","fontSize":"xx-large"} -->
-<h2 class="has-text-align-left is-offset-copy has-xx-large-font-size" id="let-s-work-together" style="line-height:1.1"><span style="color: revert; font-family: var(--wp--preset--font-family--source-serif-pro); font-size: clamp(3.5rem, 8vw, 8rem); display: inline !important;">Let\'s</span><span>Work</span><span>Together</span></h2>
+<h2 class="has-text-align-left is-offset-copy has-xx-large-font-size" id="let-s-work-together" style="line-height:1.1"><span style="color: revert; font-family: var(--wp--preset--font-family--source-serif-pro); font-size: clamp(3.5rem, 8vw, 8rem); display: inline !important;">Let's</span><span>Work</span><span>Together</span></h2>
 <!-- /wp:heading --></div>
 <!-- /wp:column -->
 
@@ -21,8 +22,8 @@ return array(
 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link">Learn More</a></div>
 <!-- /wp:button -->
 
-<!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link">Contact Us</a></div>
+<!-- wp:button {"backgroundColor":"background","textColor":"primary"} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-primary-color has-background-background-color has-text-color has-background">Contact Us</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 
@@ -36,8 +37,8 @@ return array(
 <div class="wp-block-group alignfull"><!-- wp:group {"style":{"spacing":{"blockGap":"0rem"}},"className":"flex-col md:flex-row items-start md:items-center","layout":{"type":"flex","allowOrientation":false,"flexWrap":"wrap"}} -->
 <div class="wp-block-group flex-col md:flex-row items-start md:items-center"><!-- wp:site-title {"style":{"spacing":{"margin":{"right":"1.75rem"}},"elements":{"link":{"color":{"text":"var:preset|color|background"}}}},"textColor":"background"} /-->
 
-<!-- wp:paragraph {"align":"right","style":{"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"typography":{"fontSize":"0.95rem"}},"textColor":"secondary"} -->
-<p class="has-text-align-right has-secondary-color has-text-color has-link-color" style="font-size:0.95rem">Proudly powered by <a href="https://wordpress.org" rel="nofollow">WordPress</a></p>
+<!-- wp:paragraph {"align":"right","style":{"elements":{"link":{"color":{"text":"var:preset|color|background"}}},"typography":{"fontSize":"0.95rem"}},"textColor":"background"} -->
+<p class="has-text-align-right has-background-color has-text-color has-link-color" style="font-size:0.95rem">Proudly powered by <a href="https://wordpress.org" rel="nofollow">WordPress</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -50,5 +51,4 @@ return array(
 <!-- /wp:social-links --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
-<!-- /wp:group -->',
-);
+<!-- /wp:group -->

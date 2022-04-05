@@ -1,0 +1,111 @@
+{
+	"version": 2,
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "foreground",
+					"color": "#333",
+					"name": "Foreground"
+				},
+				{
+					"slug": "background",
+					"color": "#F9EDDA",
+					"name": "Background"
+				},
+				{
+					"slug": "primary",
+					"color": "#19201b",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#223327",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#3e5745",
+					"name": "Tertiary"
+				}
+			]
+		},
+		"typography": {
+			"fontSizes": [
+				{
+					"size": "clamp(0.9rem, 1.75vw, 1.075rem)",
+					"slug": "small"
+				},
+				{
+					"size": "1.25rem",
+					"slug": "medium"
+				},
+				{
+					"size": "clamp(2rem, 4vw, 3rem)",
+					"slug": "large"
+				},
+				{
+					"size": "clamp(3rem, 6vw, 5.5rem)",
+					"slug": "x-large"
+				},
+				{
+					"size": "clamp(5rem, 8vw, 8rem)",
+					"slug": "xx-large",
+					"name": "2X Large"
+				}
+			]
+		}
+	},
+	"styles": {
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-serif-4)",
+					"fontWeight": "300"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-serif-4)",
+					"fontWeight": "300"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-serif-4)",
+					"fontWeight": "300"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-serif-4)",
+					"fontWeight": "300"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-serif-4)",
+					"fontWeight": "300"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-serif-4)",
+					"fontWeight": "300"
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--primary)"
+				}
+			}
+		},
+		"spacing": {
+			"blockGap": "2rem"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--source-serif-4)",
+			"fontWeight": "400"
+		}
+	}
+}

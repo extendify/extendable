@@ -12,7 +12,7 @@
 <div class="wp-block-group alignfull has-background-color has-foreground-background-color has-text-color has-background" style="padding-bottom:var(--wp--custom--spacing--small, 1.25rem)"><!-- wp:columns {"align":"wide"} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%"><!-- wp:heading {"textAlign":"left","style":{"typography":{"lineHeight":"1.1"}},"className":"is-offset-copy","fontSize":"xx-large"} -->
-<h2 class="has-text-align-left is-offset-copy has-xx-large-font-size" id="let-s-work-together" style="line-height:1.1"><span style="color: revert; font-family: var(--wp--preset--font-family--source-serif-pro); font-size: clamp(3.5rem, 8vw, 8rem); display: inline !important;">Let's</span><span>Work</span><span>Together</span></h2>
+<h2 class="has-text-align-left is-offset-copy has-xx-large-font-size" id="let-s-work-together" style="line-height:1.1"><span style="color: revert; font-family: var(--wp--preset--font-family--source-serif-4); font-size: clamp(3.5rem, 8vw, 8rem); display: inline !important;">Let's</span><span>Work</span><span>Together</span></h2>
 <!-- /wp:heading --></div>
 <!-- /wp:column -->
 

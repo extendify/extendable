@@ -13,7 +13,6 @@
 	"settings": {
 		"appearanceTools": true,
 		"color": {
-			"defaultPalette": false,
 			"defaultGradients": false,
 			"duotone": [
 				{

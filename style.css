@@ -237,7 +237,7 @@ a:active {
 	padding-right: var(--wp--custom--spacing--outer);
 }
 
-.wp-site-blocks .alignfull,
+/* .wp-site-blocks .alignfull,
 .wp-site-blocks>.wp-block-cover,
 .wp-site-blocks>.wp-block-group.has-background {
 	margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
@@ -258,7 +258,12 @@ body>.is-root-container>footer {
 	margin-left: auto !important;
 	margin-right: auto !important;
 	width: inherit;
-}
+} */
+
+/* .wp-block-template-part > .wp-block-group {
+	padding-right: 0;
+	padding-left: 0;
+} */
 
 .alignfull+.alignfull {
 	margin-top: 0 !important;

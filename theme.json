@@ -13,7 +13,6 @@
 	"settings": {
 		"appearanceTools": true,
 		"color": {
-			"defaultPalette": false,
 			"defaultGradients": false,
 			"duotone": [
 				{
@@ -127,6 +126,22 @@
 							"fontStretch": "normal",
 							"src": [
 								"file:./assets/fonts/SourceSerif4-VariableFont.ttf"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Oswald\", sans-serif",
+					"name": "Oswald",
+					"slug": "oswald",
+					"fontFace": [
+						{
+							"fontFamily": "Oswald",
+							"fontWeight": "600",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": [
+								"file:./assets/fonts/Oswald-VariableFont.ttf"
 							]
 						}
 					]

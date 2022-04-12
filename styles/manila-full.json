@@ -101,61 +101,6 @@
 		},
 		"typography": {
 			"dropCap": false,
-			"fontFamilies": [
-				{
-					"fontFamily": "\"Inter\", sans-serif",
-					"name": "Inter",
-					"slug": "inter",
-					"fontFace": [
-						{
-							"fontFamily": "Inter",
-							"fontWeight": "400",
-							"fontStyle": "normal",
-							"fontStretch": "normal",
-							"src": [
-								"file:./assets/fonts/Inter-VariableFont.ttf"
-							]
-						}
-					]
-				},
-				{
-					"fontFamily": "\"Source Serif 4\", serif",
-					"name": "Source Serif 4",
-					"slug": "source-serif-4",
-					"fontFace": [
-						{
-							"fontFamily": "Source Serif 4",
-							"fontWeight": "400",
-							"fontStyle": "normal",
-							"fontStretch": "normal",
-							"src": [
-								"file:./assets/fonts/SourceSerif4-VariableFont.ttf"
-							]
-						}
-					]
-				},
-				{
-					"fontFamily": "\"Oswald\", sans-serif",
-					"name": "Oswald",
-					"slug": "oswald",
-					"fontFace": [
-						{
-							"fontFamily": "Oswald",
-							"fontWeight": "600",
-							"fontStyle": "normal",
-							"fontStretch": "normal",
-							"src": [
-								"file:./assets/fonts/Oswald-VariableFont.ttf"
-							]
-						}
-					]
-				},
-				{
-					"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
-					"name": "System Font",
-					"slug": "system-font"
-				}
-			],
 			"fontSizes": [
 				{
 					"size": "clamp(0.9rem, 1.75vw, 1.075rem)",

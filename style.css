@@ -20,6 +20,14 @@ Extendable WordPress Theme, (C) 2022 Extendify Inc.
 Extendable therefore is also distributed under the terms of the GNU GPL.
 */
 
+
+.menu-item-home {
+	display: none !important;
+}
+
+
+
+
 .is-offset-copy span {
 	display: block;
 }

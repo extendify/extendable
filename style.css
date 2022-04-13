@@ -245,6 +245,10 @@ a:active {
 	padding-right: var(--wp--custom--spacing--outer);
 }
 
+header > .wp-block-group {
+        padding-left: 0;
+        padding-right: 0;
+}
 /* .wp-site-blocks .alignfull,
 .wp-site-blocks>.wp-block-cover,
 .wp-site-blocks>.wp-block-group.has-background {

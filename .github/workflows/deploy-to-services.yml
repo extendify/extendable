@@ -1,0 +1,14 @@
+name: Deploy to internal services
+on:
+    push:
+        branches:
+            - main
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Trigger deployment at onboarding.extendify.com
+              uses: fjogeleit/http-request-action@master
+              with:
+                  url: ${{ secrets.DEPLOY_WEBHOOK_ONBOARDING }}
+                  method: 'POST'

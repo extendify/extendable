@@ -43,36 +43,36 @@
             "palette": [
                 {
                     "slug": "foreground",
-                    "color": "#040579",
+                    "color": "#333",
                     "name": "Foreground"
                 },
                 {
                     "slug": "background",
-                    "color": "#DEE6FD",
+                    "color": "#F9EDDA",
                     "name": "Background"
                 },
                 {
                     "slug": "primary",
-                    "color": "#690479",
+                    "color": "#19201b",
                     "name": "Primary"
                 },
                 {
                     "slug": "secondary",
-                    "color": "#34b7d5",
+                    "color": "#223327",
                     "name": "Secondary"
                 },
                 {
                     "slug": "tertiary",
-                    "color": "#abb8d9",
+                    "color": "#3e5745",
                     "name": "Tertiary"
                 }
             ]
         },
         "custom": {
             "spacing": {
-                "small": "clamp(2rem, 6vw, 4rem)",
-                "medium": "clamp(3rem, 9vw, calc(4.5 * var(--wp--style--block-gap)))",
-                "large": "clamp(4rem, 11vw, 9rem)",
+                "small": "clamp(2rem, 5vw, 4rem)",
+                "medium": "clamp(2rem, 8vw, calc(4 * var(--wp--style--block-gap)))",
+                "large": "clamp(4rem, 10vw, 8rem)",
                 "outer": "var(--wp--custom--spacing--small, 1.25rem)"
             },
             "typography": {
@@ -101,61 +101,6 @@
         },
         "typography": {
             "dropCap": false,
-            "fontFamilies": [
-                {
-                    "fontFamily": "\"Inter\", sans-serif",
-                    "name": "Inter",
-                    "slug": "inter",
-                    "fontFace": [
-                        {
-                            "fontFamily": "Inter",
-                            "fontWeight": "400",
-                            "fontStyle": "normal",
-                            "fontStretch": "normal",
-                            "src": [
-                                "file:.\/assets\/fonts\/Inter-VariableFont.ttf"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "fontFamily": "\"Source Serif 4\", serif",
-                    "name": "Source Serif 4",
-                    "slug": "source-serif-4",
-                    "fontFace": [
-                        {
-                            "fontFamily": "Source Serif 4",
-                            "fontWeight": "400",
-                            "fontStyle": "normal",
-                            "fontStretch": "normal",
-                            "src": [
-                                "file:.\/assets\/fonts\/SourceSerif4-VariableFont.ttf"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "fontFamily": "\"Oswald\", sans-serif",
-                    "name": "Oswald",
-                    "slug": "oswald",
-                    "fontFace": [
-                        {
-                            "fontFamily": "Oswald",
-                            "fontWeight": "600",
-                            "fontStyle": "normal",
-                            "fontStretch": "normal",
-                            "src": [
-                                "file:.\/assets\/fonts\/Oswald-VariableFont.ttf"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
-                    "name": "System Font",
-                    "slug": "system-font"
-                }
-            ],
             "fontSizes": [
                 {
                     "size": "clamp(0.9rem, 1.75vw, 1.075rem)",
@@ -194,19 +139,15 @@
             },
             "core\/button": {
                 "border": {
-                    "radius": "1rem"
+                    "radius": "100rem"
                 },
                 "color": {
                     "background": "var(--wp--preset--color--primary)",
                     "text": "var(--wp--preset--color--background)"
                 },
                 "typography": {
-                    "fontSize": "var(--wp--preset--font-size--small)",
-                    "fontFamily": "var(--wp--preset--font-family--oswald)",
-                    "fontWeight": "600",
-                    "lineHeight": "1",
-                    "textTransform": "uppercase",
-                    "letterSpacing": ".025em"
+                    "fontSize": "var(--wp--preset--font-size--medium)",
+                    "lineHeight": "1"
                 },
                 "spacing": {
                     "padding": {
@@ -219,8 +160,8 @@
             },
             "core\/post-title": {
                 "typography": {
-                    "fontFamily": "var(--wp--preset--font-family--oswald)",
-                    "fontWeight": "600",
+                    "fontFamily": "var(--wp--preset--font-family--source-serif-4)",
+                    "fontWeight": "300",
                     "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
                     "fontSize": "var(--wp--custom--typography--font-size--gigantic)"
                 }
@@ -240,7 +181,7 @@
             "core\/query-title": {
                 "typography": {
                     "fontFamily": "var(--wp--preset--font-family--source-serif-4)",
-                    "fontWeight": "600",
+                    "fontWeight": "300",
                     "lineHeight": "var(--wp--custom--typography--line-height--small)",
                     "fontSize": "var(--wp--custom--typography--font-size--gigantic)"
                 }
@@ -252,11 +193,10 @@
             },
             "core\/site-title": {
                 "typography": {
-                    "fontFamily": "var(--wp--preset--font-family--oswald)",
+                    "fontFamily": "var(--wp--preset--font-family--inter)",
                     "lineHeight": "var(--wp--custom--typography--line-height--normal)",
                     "fontSize": "clamp(1.2rem, 3vw, 1.5rem)",
                     "fontWeight": "600",
-                    "textTransform": "uppercase",
                     "letterSpacing": "-.025em"
                 }
             }
@@ -268,44 +208,40 @@
         "elements": {
             "h1": {
                 "typography": {
-                    "fontFamily": "var(--wp--preset--font-family--oswald)",
-                    "fontWeight": "600",
-                    "textTransform": "uppercase",
+                    "fontFamily": "var(--wp--preset--font-family--source-serif-4)",
+                    "fontWeight": "300",
                     "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
                     "fontSize": "var(--wp--custom--typography--font-size--colossal)"
                 }
             },
             "h2": {
                 "typography": {
-                    "fontFamily": "var(--wp--preset--font-family--oswald)",
-                    "fontWeight": "600",
-                    "textTransform": "uppercase",
+                    "fontFamily": "var(--wp--preset--font-family--source-serif-4)",
+                    "fontWeight": "300",
                     "lineHeight": "var(--wp--custom--typography--line-height--small)",
                     "fontSize": "var(--wp--custom--typography--font-size--gigantic)"
                 }
             },
             "h3": {
                 "typography": {
-                    "fontFamily": "var(--wp--preset--font-family--oswald)",
-                    "fontWeight": "600",
-                    "textTransform": "uppercase",
+                    "fontFamily": "var(--wp--preset--font-family--source-serif-4)",
+                    "fontWeight": "300",
                     "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
                     "fontSize": "var(--wp--custom--typography--font-size--huge)"
                 }
             },
             "h4": {
                 "typography": {
-                    "fontFamily": "var(--wp--preset--font-family--oswald)",
+                    "fontFamily": "var(--wp--preset--font-family--source-serif-4)",
                     "fontWeight": "300",
-                    "textTransform": "uppercase",
                     "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
                     "fontSize": "var(--wp--preset--font-size--x-large)"
                 }
             },
             "h5": {
                 "typography": {
-                    "fontFamily": "var(--wp--preset--font-family--oswald)",
-                    "fontWeight": "700",
+                    "fontFamily": "var(--wp--preset--font-family--source-serif-4)",
+                    "fontWeight": "300",
                     "textTransform": "uppercase",
                     "lineHeight": "var(--wp--custom--typography--line-height--normal)",
                     "fontSize": "var(--wp--preset--font-size--medium)"
@@ -313,8 +249,8 @@
             },
             "h6": {
                 "typography": {
-                    "fontFamily": "var(--wp--preset--font-family--oswald)",
-                    "fontWeight": "400",
+                    "fontFamily": "var(--wp--preset--font-family--source-serif-4)",
+                    "fontWeight": "300",
                     "textTransform": "uppercase",
                     "lineHeight": "var(--wp--custom--typography--line-height--normal)",
                     "fontSize": "var(--wp--preset--font-size--medium)"
@@ -327,10 +263,10 @@
             }
         },
         "spacing": {
-            "blockGap": "2.5rem"
+            "blockGap": "2rem"
         },
         "typography": {
-            "fontFamily": "var(--wp--preset--font-family--inter)",
+            "fontFamily": "var(--wp--preset--font-family--source-serif-4)",
             "lineHeight": "var(--wp--custom--typography--line-height--normal)",
             "fontSize": "var(--wp--preset--font-size--medium)",
             "fontWeight": "400"

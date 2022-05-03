@@ -289,7 +289,7 @@
             "blockGap": "2rem"
         },
         "typography": {
-            "fontFamily": "var(--wp--preset--font-family--source-serif-4)",
+            "fontFamily": "var(--wp--preset--font-family--system-fonts)",
             "lineHeight": "var(--wp--custom--typography--line-height--normal)",
             "fontSize": "var(--wp--preset--font-size--medium)",
             "fontWeight": "var(--wp--custom--typography--font-weight--regular)"

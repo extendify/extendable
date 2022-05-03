@@ -81,6 +81,17 @@
                     "gigantic": "clamp(2.75rem, 6vw, 3.25rem)",
                     "colossal": "clamp(3.25rem, 8vw, 6.25rem)"
                 },
+                "font-weight": {
+                    "black": "900",
+                    "extraBold": "800",
+                    "bold": "700",
+                    "semiBold": "600",
+                    "medium": "500",
+                    "regular": "400",
+                    "light": "300",
+                    "extraLight": "200",
+                    "thin": "100"
+                },
                 "line-height": {
                     "tiny": 1.15,
                     "small": 1.2,

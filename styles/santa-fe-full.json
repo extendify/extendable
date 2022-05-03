@@ -1,0 +1,303 @@
+{
+	"version": 2,
+	"customTemplates": [],
+	"settings": {
+		"appearanceTools": true,
+		"blocks": {
+			"core/button": {
+				"border": {
+					"color": false,
+					"radius": false,
+					"style": false,
+					"width": false
+				},
+				"color": {
+					"gradients": [],
+					"palette": []
+				},
+				"spacing": {
+					"margin": false,
+					"padding": false
+				},
+				"typography": {
+					"fontSizes": []
+				}
+			}
+		},
+		"border": {
+			"color": false,
+			"radius": false,
+			"style": false,
+			"width": false
+		},
+		"color": {
+			"background": true,
+			"custom": false,
+			"customDuotone": false,
+			"customGradient": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"duotone": [],
+			"gradients": [
+				{
+					"slug": "diagonal",
+					"gradient": "linear-gradient(to bottom,var(--wp--preset--color--secondary) 0%,var(--wp--preset--color--tertiary) 100%)",
+					"name": "Vertical secondary to tertiary"
+				},
+				{
+					"slug": "vertical-secondary-to-background",
+					"gradient": "linear-gradient(to bottom,var(--wp--preset--color--secondary) 0%,var(--wp--preset--color--background) 100%)",
+					"name": "Vertical secondary to background"
+				}
+			],
+			"link": false,
+			"palette": [
+				{
+					"slug": "foreground",
+					"color": "#000000",
+					"name": "Foreground"
+				},
+				{
+					"slug": "background",
+					"color": "#ffffff",
+					"name": "Background"
+				},
+				{
+					"slug": "primary",
+					"color": "#005450",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#551A8B",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#004D49",
+					"name": "Tertiary"
+				}
+			],
+			"text": true
+		},
+		"custom": {
+			"borderRadius": {
+				"small": "4px",
+				"medium": "8px",
+				"large": "10px",
+				"xlarge": "180px"
+			},
+			"spacing": {
+				"small": "0.5rem",
+				"baseline": "1rem",
+				"medium": "var(--wp--custom--spacing--baseline, 1rem)",
+				"large": "1.5rem",
+				"xlarge": "2rem"
+			},
+			"typography": {
+				"font-size": {
+					"headingOne": "clamp(2.5rem, 8vw, 7.5rem)",
+					"headingTwo": "clamp(2rem, 6vw, 6.5rem)",
+					"headingThree": "clamp(1.5rem, 4vw, 3.5rem)",
+					"headingFour": "clamp(1.125rem, 3vw, 2.5rem)",
+					"headingFive": "",
+					"headingSix": ""
+				},
+				"font-weight": {
+					"black": "900",
+					"extraBold": "800",
+					"bold": "700",
+					"semiBold": "600",
+					"medium": "500",
+					"regular": "400",
+					"light": "300",
+					"extraLight": "210",
+					"thin": "150"
+				},
+				"line-height": {
+					"tiny": 1.2,
+					"small": 1.3,
+					"medium": 1.5,
+					"normal": 1.6
+				},
+				"rootSize": 16
+			},
+			"zIndex": {
+				"xs": -1,
+				"sm": 1,
+				"md": 5,
+				"lg": 10,
+				"xl": 15,
+				"xxl": 20,
+				"xxxl": 25
+			}
+		},
+		"layout": {
+			"contentSize": "60em",
+			"wideSize": "90em"
+		},
+		"typography": {
+			"customFontSize": false,
+			"dropCap": false,
+			"fontFamilies": [
+				{
+					"fontFamily": "\"Radio Canada\", sans-serif",
+					"name": "Radio Canada",
+					"slug": "radio-canada",
+					"fontFace": [
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Radio Canada",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "300 700",
+							"src": [
+								"file:./assets/fonts/RadioCanada-VariableFont_wdth,wght.woff2"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Faustina\", sans-serif",
+					"name": "Faustina",
+					"slug": "faustina",
+					"fontFace": [
+						{
+							"fontDisplay": "swap",
+							"fontFamily": "Faustina",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "300 800",
+							"src": ["file:./assets/fonts/Faustina-VariableFont_wght.woff2"]
+						}
+					]
+				}
+			],
+			"fontSizes": [
+				{
+					"name": "Small",
+					"size": "0.75rem",
+					"slug": "small"
+				},
+				{
+					"name": "Medium",
+					"size": "clamp(1.1rem, 2vw, 1.24rem)",
+					"slug": "medium"
+				},
+				{
+					"name": "Large",
+					"size": "clamp(1.24rem, 2vw, 1.5rem)",
+					"slug": "large"
+				},
+				{
+					"name": "X-large",
+					"size": "clamp(1.48rem, 2vw, 1.7rem)",
+					"slug": "x-large"
+				},
+				{
+					"name": "h1",
+					"size": "var(--wp--custom--typography--font-size--heading-one)",
+					"slug": "headingone"
+				},
+				{
+					"name": "h2",
+					"size": "var(--wp--custom--typography--font-size--heading-two)",
+					"slug": "headingtwo"
+				},
+				{
+					"name": "h3",
+					"size": "var(--wp--custom--typography--font-size--heading-three)",
+					"slug": "headingthree"
+				},
+				{
+					"name": "h4",
+					"size": "var(--wp--custom--typography--font-size--heading-four)",
+					"slug": "headingfour"
+				}
+			],
+			"fontStyle": false,
+			"fontWeight": false,
+			"letterSpacing": false,
+			"lineHeight": false,
+			"textDecoration": false,
+			"textTransform": true
+		}
+	},
+	"styles": {
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--faustina)",
+					"fontSize": "var(--wp--custom--typography--font-size--heading-one)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
+					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--faustina)",
+					"fontSize": "var(--wp--custom--typography--font-size--heading-two)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
+					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--faustina)",
+					"fontSize": "var(--wp--custom--typography--font-size--heading-three)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--faustina)",
+					"fontSize": "var(--wp--custom--typography--font-size--heading-four)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--faustina)",
+					"fontSize": "var(--wp--custom--typography--font-size--heading-five)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--faustina)",
+					"fontSize": "var(--wp--custom--typography--font-size--heading-six)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
+					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--primary)"
+				}
+			}
+		},
+		"spacing": {
+			"blockGap": "2rem"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--radio-canada)",
+			"lineHeight": "var(--wp--custom--typography--line-height--medium)",
+			"fontSize": "var(--wp--preset--font-size--medium)",
+			"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
+		}
+	},
+	"templateParts": [
+		{
+			"name": "header-santa-fe",
+			"title": "Header for Santa Fe",
+			"area": "header"
+		},
+		{
+			"name": "footer-santa-fe",
+			"title": "Footer for Santa Fe",
+			"area": "footer"
+		}
+	]
+}

@@ -41,6 +41,7 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 	 * @return void
 	 */
 	function extendable_styles() {
+
 		// Register theme stylesheet.
 		$theme_version = wp_get_theme()->get( 'Version' );
 

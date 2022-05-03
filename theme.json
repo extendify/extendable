@@ -292,7 +292,7 @@
             "fontFamily": "var(--wp--preset--font-family--source-serif-4)",
             "lineHeight": "var(--wp--custom--typography--line-height--normal)",
             "fontSize": "var(--wp--preset--font-size--medium)",
-            "fontWeight": "400"
+            "fontWeight": "var(--wp--custom--typography--font-weight--regular)"
         }
     },
     "templateParts": [

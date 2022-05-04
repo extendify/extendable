@@ -289,7 +289,7 @@
 			}
 		},
 		"spacing": {
-			"blockGap": "2rem"
+			"blockGap": "4rem"
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--radio-canada)",

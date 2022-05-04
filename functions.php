@@ -139,3 +139,31 @@ function extendable_register_pattern_categories() {
 
 }
 add_action( 'init', 'extendable_register_pattern_categories', 9 );
+
+/**
+ * Register block styles.
+ *
+ * @since Extendable 1.0
+ */
+function extendable_register_block_styles() {
+
+	$block_styles = array(
+		'core/list'           => array(
+			'no-disc'   => __( 'No Disc', 'extendable' ),
+			'checkmark' => __( 'Checkmark', 'extendable' ),
+		),
+	);
+
+	foreach ( $block_styles as $block => $styles ) {
+		foreach ( $styles as $style_name => $style_label ) {
+			register_block_style(
+				$block,
+				array(
+					'name'  => $style_name,
+					'label' => $style_label,
+				)
+			);
+		}
+	}
+}
+add_action( 'init', 'extendable_register_block_styles' );

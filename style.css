@@ -349,3 +349,31 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
 	padding-left: var(--wp--custom--spacing--outer);
 }
 
+/* Styles
+--------------------------------------------- */
+
+/* Checkmark variation */
+:where(.is-style-checkmark, .is-style-checkmark ul) {
+	list-style-type: none;
+	padding-left: 0.24rem;
+}
+
+.is-style-checkmark li {
+	padding: 0.18rem 0 0 2.1rem;
+	position: relative;
+}
+
+.is-style-checkmark li::before {
+	background-image: var(--wp--custom--icon--checkmark);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	display: inline-block;
+	height: 1.5rem;
+	left: 0.24rem;
+	opacity: 0.5;
+	position: absolute;
+	top: 0.35rem;
+	width: 1.5rem;
+}

@@ -86,6 +86,9 @@
 				"large": "10px",
 				"xlarge": "180px"
 			},
+			"icon": {
+				"checkmark": "url(assets/icons/icon_checkmark--medical.svg)"
+			},
 			"spacing": {
 				"small": "0.5rem",
 				"baseline": "1rem",

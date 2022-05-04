@@ -38,7 +38,7 @@
 
 <!-- wp:column {"verticalAlignment":"center","width":"20%","style":{"spacing":{"padding":{"top":"3rem","right":"1rem","bottom":"3rem","left":"1rem"}}},"backgroundColor":"tertiary","textColor":"background"} -->
 <div class="wp-block-column is-vertically-aligned-center has-background-color has-tertiary-background-color has-text-color has-background" style="padding-top:3rem;padding-right:1rem;padding-bottom:3rem;padding-left:1rem;flex-basis:20%"><!-- wp:paragraph -->
-<p>Tertiary:<br>#004d49</p>
+<p>Tertiary:<br>#3a403a</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

@@ -226,10 +226,14 @@
 	"styles": {
 		"elements": {
 			"h1": {
+				"color": {
+					"text": "var(--wp--preset--color--primary)"
+				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-one)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
+					"letterSpacing": "-0.01em",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
@@ -237,11 +241,15 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-two)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"letterSpacing": "-0.01em",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"h3": {
+				"color": {
+					"text": "var(--wp--preset--color--tertiary)"
+				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-three)",
@@ -261,14 +269,17 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-five)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--medium)"
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"letterSpacing": "0.02em",
+					"textTransform": "normal"
 				}
 			},
 			"h6": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-six)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
+					"letterSpacing": "0.3em",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},

@@ -96,8 +96,8 @@
 			},
 			"typography": {
 				"font-size": {
-					"headingOne": "clamp(2.5rem, 8vw, 7.5rem)",
-					"headingTwo": "clamp(2rem, 6vw, 6.5rem)",
+					"headingOne": "clamp(2.5rem, 8vw, 5.4rem)",
+					"headingTwo": "clamp(1.9rem, 6vw, 4.6rem)",
 					"headingThree": "clamp(1.5rem, 4vw, 3.5rem)",
 					"headingFour": "clamp(1.125rem, 3vw, 2.5rem)",
 					"headingFive": "",

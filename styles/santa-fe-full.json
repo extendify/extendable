@@ -223,6 +223,21 @@
 		}
 	},
 	"styles": {
+		"blocks": {
+			"core/navigation": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--normal)"
+				}
+			},
+			"core/group": {
+				"spacing": {
+					"padding": {
+						"bottom": "clamp(var(--wp--custom--spacing--large), 1.5vw, var(--wp--style--block-gap))",
+						"top": "clamp(var(--wp--custom--spacing--large), 1.5vw, var(--wp--style--block-gap))"
+					}
+				}
+			}
+		},
 		"elements": {
 			"h1": {
 				"color": {

@@ -132,8 +132,8 @@
 			}
 		},
 		"layout": {
-			"contentSize": "60em",
-			"wideSize": "90em"
+			"contentSize": "40em",
+			"wideSize": "70em"
 		},
 		"typography": {
 			"customFontSize": false,

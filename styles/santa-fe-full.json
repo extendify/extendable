@@ -1,5 +1,4 @@
 {
-	"version": 2,
 	"customTemplates": [],
 	"settings": {
 		"appearanceTools": true,
@@ -310,5 +309,6 @@
 			"title": "Footer for Santa Fe",
 			"area": "footer"
 		}
-	]
+	],
+	"version": 2
 }

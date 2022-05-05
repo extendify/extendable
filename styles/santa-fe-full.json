@@ -243,6 +243,9 @@
 				}
 			},
 			"h2": {
+				"color": {
+					"text": "var(--wp--preset--color--primary)"
+				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-two)",

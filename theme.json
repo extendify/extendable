@@ -14,32 +14,6 @@
         "appearanceTools": true,
         "color": {
             "defaultGradients": false,
-            "duotone": [
-                {
-                    "colors": [
-                        "#000000",
-                        "#ffffff"
-                    ],
-                    "slug": "foreground-and-background",
-                    "name": "Foreground and background"
-                },
-                {
-                    "colors": [
-                        "#0b4a43",
-                        "#ffffff"
-                    ],
-                    "slug": "primary-and-background",
-                    "name": "Primary and background"
-                },
-                {
-                    "colors": [
-                        "#0b4a43",
-                        "#f6c202"
-                    ],
-                    "slug": "primary-and-quarternary",
-                    "name": "Primary and quarternary"
-                }
-            ],
             "palette": [
                 {
                     "slug": "foreground",
@@ -48,7 +22,7 @@
                 },
                 {
                     "slug": "background",
-                    "color": "#F9EDDA",
+                    "color": "#ffffff",
                     "name": "Background"
                 },
                 {

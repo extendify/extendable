@@ -215,17 +215,26 @@
 	},
 	"styles": {
 		"blocks": {
+			"core/button": {
+				"border": {
+					"radius": "100rem"
+				},
+				"color": {
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--background)"
+				},
+				"spacing": {
+					"padding": {
+						"top": "clamp(1rem, 1.5vw, 1.5rem)",
+						"bottom": "clamp(1rem, 1.5vw, 1.5rem)",
+						"right": "clamp(1.18rem, 2.5vw, 2rem)",
+						"left": "clamp(1.18rem, 2.5vw, 2rem)"
+					}
+				}
+			},
 			"core/navigation": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--normal)"
-				}
-			},
-			"core/group": {
-				"spacing": {
-					"padding": {
-						"bottom": "clamp(var(--wp--custom--spacing--large), 1.5vw, var(--wp--style--block-gap))",
-						"top": "clamp(var(--wp--custom--spacing--large), 1.5vw, var(--wp--style--block-gap))"
-					}
 				}
 			}
 		},

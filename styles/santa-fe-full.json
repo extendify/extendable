@@ -36,19 +36,7 @@
 			"customGradient": false,
 			"defaultGradients": false,
 			"defaultPalette": false,
-			"duotone": [],
-			"gradients": [
-				{
-					"slug": "diagonal",
-					"gradient": "linear-gradient(to bottom,var(--wp--preset--color--secondary) 0%,var(--wp--preset--color--tertiary) 100%)",
-					"name": "Vertical secondary to tertiary"
-				},
-				{
-					"slug": "vertical-secondary-to-background",
-					"gradient": "linear-gradient(to bottom,var(--wp--preset--color--secondary) 0%,var(--wp--preset--color--background) 100%)",
-					"name": "Vertical secondary to background"
-				}
-			],
+			"gradients": [],
 			"link": false,
 			"palette": [
 				{

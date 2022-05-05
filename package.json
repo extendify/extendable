@@ -15,6 +15,7 @@
 	"homepage": "https://github.com/extendify/extendable#readme",
 	"devDependencies": {
 		"@wordpress/stylelint-config": "^19.1.0",
+		"node-fetch": "^3.2.4",
 		"stylelint": "^13.13.1"
 	},
 	"scripts": {

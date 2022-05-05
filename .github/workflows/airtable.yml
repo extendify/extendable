@@ -1,0 +1,17 @@
+name: Airtable Sync
+on:
+  workflow_dispatch:
+  push:
+    main
+jobs:
+  airtable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v2
+      - name: Install npm packages
+        run: npm ci
+      - name: Send themeJson files to airtable
+        run: node scripts/send-theme-json.mjs
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}

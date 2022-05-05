@@ -74,16 +74,6 @@
 				"large": "10px",
 				"xlarge": "180px"
 			},
-			"icon": {
-				"checkmark": "url(assets/icons/icon_checkmark--medical.svg)"
-			},
-			"spacing": {
-				"small": "0.5rem",
-				"baseline": "1rem",
-				"medium": "var(--wp--custom--spacing--baseline, 1rem)",
-				"large": "1.5rem",
-				"xlarge": "2rem"
-			},
 			"typography": {
 				"font-size": {
 					"headingOne": "clamp(2.5rem, 8vw, 5.4rem)",

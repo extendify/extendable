@@ -80,21 +80,21 @@ add_action( 'after_setup_theme', function() {
 				'font-weight'  => '400',
 				'font-style'   => 'normal',
 				'font-stretch' => 'normal',
-				'src'          => array( 'file:./assets/fonts/Inter-VariableFont.ttf' ),
+				'src'          => get_theme_file_uri( 'assets/fonts/Inter-VariableFont.ttf' ),
 			),
 			array(
 				'font-family'  => 'Source Serif 4',
 				'font-weight'  => '400',
 				'font-style'   => 'normal',
 				'font-stretch' => 'normal',
-				'src'          => array( 'file:./assets/fonts/SourceSerif4-VariableFont.ttf' ),
+				'src'          => get_theme_file_uri( 'assets/fonts/SourceSerif4-VariableFont.ttf' ),
 			),
 			array(
 				'font-family'  => 'Oswald',
 				'font-weight'  => '600',
 				'font-style'   => 'normal',
 				'font-stretch' => 'normal',
-				'src'          => array( 'file:./assets/fonts/Oswald-VariableFont.ttf' ),
+				'src'          => get_theme_file_uri( 'assets/fonts/Oswald-VariableFont.ttf' ),
 			),
 		)
 	);

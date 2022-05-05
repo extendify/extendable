@@ -89,13 +89,13 @@
 					"bold": "700",
 					"semiBold": "600",
 					"medium": "500",
-					"regular": "400",
+					"regular": "350",
 					"light": "300",
 					"extraLight": "210",
 					"thin": "150"
 				},
 				"line-height": {
-					"tiny": 1.2,
+					"tiny": 1.15,
 					"small": 1.3,
 					"medium": 1.5,
 					"normal": 1.6
@@ -161,7 +161,7 @@
 				},
 				{
 					"name": "Medium",
-					"size": "clamp(1.1rem, 2vw, 1.24rem)",
+					"size": "clamp(1.08rem, 2vw, 1.18rem)",
 					"slug": "medium"
 				},
 				{

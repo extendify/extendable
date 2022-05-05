@@ -2,7 +2,8 @@ name: Airtable Sync
 on:
   workflow_dispatch:
   push:
-    main
+    branches:
+      - main
 jobs:
   airtable:
     runs-on: ubuntu-latest

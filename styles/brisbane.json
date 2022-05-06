@@ -245,11 +245,6 @@
 					"letterSpacing": "0.02em",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
-			},
-			"core/social-links": {
-				"color": {
-					"text": "var(--wp--preset--color--tertiary)"
-				}
 			}
 		},
 		"color": {

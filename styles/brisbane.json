@@ -83,7 +83,7 @@
 					"slug": "gluten",
 					"fontFace": [
 						{
-							"fontDisplay": "swap",
+							"fontDisplay": "block",
 							"fontFamily": "Gluten",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
@@ -98,7 +98,7 @@
 					"slug": "radio-canada",
 					"fontFace": [
 						{
-							"fontDisplay": "swap",
+							"fontDisplay": "block",
 							"fontFamily": "Radio Canada",
 							"fontStretch": "normal",
 							"fontStyle": "normal",

@@ -85,7 +85,7 @@
 					"slug": "roboto-flex",
 					"fontFace": [
 						{
-							"fontDisplay": "swap",
+							"fontDisplay": "block",
 							"fontFamily": "Roboto Flex",
 							"fontStretch": "normal",
 							"fontStyle": "normal",

@@ -85,7 +85,7 @@
 					"slug": "radio-canada",
 					"fontFace": [
 						{
-							"fontDisplay": "swap",
+							"fontDisplay": "block",
 							"fontFamily": "Radio Canada",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
@@ -102,7 +102,7 @@
 					"slug": "noto-serif-display",
 					"fontFace": [
 						{
-							"fontDisplay": "swap",
+							"fontDisplay": "block",
 							"fontFamily": "Noto Serif Display",
 							"fontStretch": "normal",
 							"fontStyle": "normal",

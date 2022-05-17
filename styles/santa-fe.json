@@ -89,7 +89,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "300 700",
 							"src": [
-								"file:./assets/fonts/RadioCanada-VariableFont_wdth,wght.woff2"
+								"file:./assets/fonts/RadioCanada/RadioCanada-VariableFont_wdth,wght.woff2"
 							]
 						}
 					]

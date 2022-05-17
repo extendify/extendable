@@ -63,37 +63,6 @@ endif;
 add_action( 'wp_enqueue_scripts', 'extendable_styles' );
 
 /**
- * Registers font families.
- *
- * @since Extendable 1.0
- *
- * @return void
- */
-add_action( 'after_setup_theme', function() {
-	if ( ! function_exists( 'wp_register_webfonts' ) ) {
-		return;
-	}
-	wp_register_webfonts(
-		array(
-			array(
-				'font-family'  => 'Inter',
-				'font-weight'  => '400',
-				'font-style'   => 'normal',
-				'font-stretch' => 'normal',
-				'src'          => get_theme_file_uri( 'assets/fonts/Inter-VariableFont.ttf' ),
-			),
-			array(
-				'font-family'  => 'Source Serif 4',
-				'font-weight'  => '400',
-				'font-style'   => 'normal',
-				'font-stretch' => 'normal',
-				'src'          => get_theme_file_uri( 'assets/fonts/SourceSerif4-VariableFont.ttf' ),
-			),
-		)
-	);
-} );
-
-/**
  * Registers pattern categories.
  *
  * @since Extendable 1.0

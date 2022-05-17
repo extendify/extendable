@@ -15,7 +15,7 @@
 			"palette": [
 				{
 					"slug": "foreground",
-					"color": "#ffffff",
+					"color": "var(--wp--preset--color--white, #fff)",
 					"name": "Foreground"
 				},
 				{
@@ -35,31 +35,34 @@
 				},
 				{
 					"slug": "tertiary",
-					"color": "#fdfbf7",
+					"color": "#062557",
 					"name": "Tertiary"
 				}
 			]
 		},
 		"custom": {
+			"spacing": {
+				"outer": "min(48px, 6vw)"
+			},
 			"typography": {
 				"font-size": {
-					"headingOne": "clamp(3.5rem, 8vw, 5.4rem)",
-					"headingTwo": "clamp(2.8rem, 6vw, 4.6rem)",
-					"headingThree": "clamp(2.3rem, 4vw, 3.8rem)",
+					"headingOne": "clamp(3.2rem, 8vw, 4.5rem)",
+					"headingTwo": "clamp(2.8rem, 6vw, 3.8rem)",
+					"headingThree": "clamp(2.35rem, 4vw, 3.2rem)",
 					"headingFour": "clamp(2.1rem, 3vw, 3rem)",
-					"headingFive": "clamp(1.8rem, 3vw, 2.8rem)",
-					"headingSix": "clamp(1.6rem, 3vw, 2.5rem)"
+					"headingFive": "clamp(1.8rem, 3vw, 2.6rem)",
+					"headingSix": "clamp(1.6rem, 3vw, 2.4rem)"
 				},
 				"font-weight": {
 					"black": "900",
 					"extraBold": "800",
 					"bold": "700",
 					"semiBold": "600",
-					"medium": "490",
-					"regular": "425",
+					"medium": "500",
+					"regular": "400",
 					"light": "300",
-					"extraLight": "210",
-					"thin": "150"
+					"extraLight": "200",
+					"thin": "100"
 				},
 				"line-height": {
 					"tiny": 1.15,
@@ -78,24 +81,32 @@
 			"dropCap": false,
 			"fontFamilies": [
 				{
-					"fontFamily": "\"Gluten\", sans-serif",
-					"name": "Gluten",
-					"slug": "gluten",
+					"fontFamily": "\"Arsenal\", sans-serif",
+					"name": "Headings (System Font)",
+					"slug": "heading-font",
 					"fontFace": [
 						{
 							"fontDisplay": "block",
-							"fontFamily": "Gluten",
+							"fontFamily": "Arsenal",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
-							"fontWeight": "100 900",
-							"src": ["file:./assets/fonts/Gluten[ital,wght].woff2"]
+							"fontWeight": "400",
+							"src": ["file:./assets/fonts/Google/Arsenal/Arsenal-Regular.woff2"]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Arsenal",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": ["file:./assets/fonts/Google/Arsenal/Arsenal-Bold.woff2"]
 						}
 					]
 				},
 				{
 					"fontFamily": "\"Radio Canada\", sans-serif",
-					"name": "Radio Canada",
-					"slug": "radio-canada",
+					"name": "Body (System Font)",
+					"slug": "body-font",
 					"fontFace": [
 						{
 							"fontDisplay": "block",
@@ -171,17 +182,38 @@
 				},
 				"spacing": {
 					"padding": {
-						"top": "clamp(0.7rem, 1.5vw, 0.9rem)",
+						"top": "clamp(0.7rem, 1.5vw, 0.8rem)",
 						"bottom": "clamp(0.7rem, 1.5vw, 0.8rem)",
 						"right": "clamp(1.2rem, 2.5vw, 2rem)",
 						"left": "clamp(1.2rem, 2.5vw, 2rem)"
 					}
 				},
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--gluten)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--large)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
-					"letterSpacing": "0.04em"
+					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
+					"letterSpacing": "0.03em",
+					"lineHeight": "1"
+				}
+			},
+			"core/group": {
+				"border": {
+					"radius":{
+						"bottomLeft": "140px",
+						"bottomRight": "98px",
+						"topLeft": "210px",
+						"topRight": "80px"
+					}
+				}
+			},
+			"core/image": {
+				"border": {
+					"radius":{
+						"bottomLeft": "70px",
+						"bottomRight": "128px",
+						"topLeft": "100px",
+						"topRight": "190px"
+					}
 				}
 			},
 			"core/navigation": {
@@ -191,14 +223,15 @@
 			},
 			"core/post-title": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--gluten)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-two)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"core/pullquote": {
 				"border": {
+					"color": "transparent",
 					"radius": {
 						"bottomLeft": "38px",
 						"bottomRight": "153px",
@@ -239,9 +272,9 @@
 			},
 			"core/site-title": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--gluten)",
-					"fontSize": "var(--wp--custom--typography--font-size--heading-five)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--preset--font-size--x-large)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
 					"letterSpacing": "0.02em",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
@@ -253,61 +286,55 @@
 		},
 		"elements": {
 			"h1": {
-				"color": {
-					"text": "var(--wp--preset--color--foreground)"
-				},
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--gluten)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-one)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--thin)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
 					"letterSpacing": "-0.01em",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"h2": {
-				"color": {
-					"text": "var(--wp--preset--color--tertiary)"
-				},
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--gluten)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-two)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
 					"letterSpacing": "0.01em",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"h3": {
 				"color": {
-					"text": "var(--wp--preset--color--tertiary)"
+					"text": "var(--wp--preset--color--secondary)"
 				},
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--gluten)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-three)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--gluten)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-four)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
 					"letterSpacing": "0.02em",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"h5": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--gluten)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-five)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
 					"letterSpacing": "0.04em",
 					"textTransform": "normal"
 				}
 			},
 			"h6": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--gluten)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-six)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
 					"letterSpacing": "0.1em",
@@ -324,7 +351,7 @@
 			"blockGap": "min(30px, 5vw)"
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--radio-canada)",
+			"fontFamily": "var(--wp--preset--font-family--body-font)",
 			"lineHeight": "var(--wp--custom--typography--line-height--medium)",
 			"fontSize": "var(--wp--preset--font-size--medium)",
 			"fontWeight": "var(--wp--custom--typography--font-weight--regular)"

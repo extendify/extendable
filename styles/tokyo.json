@@ -130,7 +130,7 @@
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [
-								"file:./assets/fonts/Inter-VariableFont.ttf"
+								"file:./assets/fonts/Inter/Inter-VariableFont_slnt,wght.woff2"
 							]
 						}
 					]

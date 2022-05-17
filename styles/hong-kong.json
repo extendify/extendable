@@ -89,7 +89,7 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
-							"src": ["file:./assets/fonts/Inter-VariableFont.ttf"]
+							"src": ["file:./assets/fonts/Inter/Inter-VariableFont_slnt,wght.woff2"]
 						}
 					]
 				},

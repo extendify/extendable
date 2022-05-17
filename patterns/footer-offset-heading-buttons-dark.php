@@ -2,7 +2,7 @@
 /**
  * Title:       Dark Footer with offset heading and buttons
  * Slug:        extendable/footer-offset-heading-buttons-dark
- * Categories:  extendable-footers
+ * Categories:  footer
  * blockTypes:  core/template-part/footer
  */
 ?>

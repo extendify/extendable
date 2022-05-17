@@ -20,6 +20,10 @@ Extendable WordPress Theme, (C) 2022 Extendify Inc.
 Extendable therefore is also distributed under the terms of the GNU GPL.
 */
 
+/* header > .wp-block-group,
+footer > .wp-block-group {
+	background: rgba(255, 0, 0, 0.173);
+} */
 
 .menu-item-home {
 	display: none !important;

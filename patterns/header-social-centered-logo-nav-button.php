@@ -2,7 +2,7 @@
 /**
  * Title:       Header (Social, Center Logo & Navigation, Button)
  * Slug:        extendable/header-social-centered-logo-nav-button
- * Categories:  extendable-headers
+ * Categories:  header
  * blockTypes:  core/template-part/header
  */
 ?>

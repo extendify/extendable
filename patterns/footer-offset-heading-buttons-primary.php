@@ -2,7 +2,7 @@
 /**
  * Title:       Footer with offset heading and buttons
  * Slug:        extendable/footer-offset-heading-buttons-primary
- * Categories:  extendable-footers
+ * Categories:  footer
  * blockTypes:  core/template-part/footer
  */
 ?>

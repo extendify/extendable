@@ -114,7 +114,7 @@
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [
-								"file:./assets/fonts/Koulen-Regular.ttf"
+								"file:./assets/fonts/Koulen/Koulen-Regular.woff2"
 							]
 						}
 					]

@@ -89,13 +89,6 @@ add_action( 'after_setup_theme', function() {
 				'font-stretch' => 'normal',
 				'src'          => get_theme_file_uri( 'assets/fonts/SourceSerif4-VariableFont.ttf' ),
 			),
-			array(
-				'font-family'  => 'Oswald',
-				'font-weight'  => '600',
-				'font-style'   => 'normal',
-				'font-stretch' => 'normal',
-				'src'          => get_theme_file_uri( 'assets/fonts/Oswald-VariableFont.ttf' ),
-			),
 		)
 	);
 } );

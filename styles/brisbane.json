@@ -42,7 +42,7 @@
 		},
 		"custom": {
 			"spacing": {
-				"outer": "var(--wp--style--block-gap, 1.25rem)"
+				"outer": "min(48px, 6vw)"
 			},
 			"typography": {
 				"font-size": {

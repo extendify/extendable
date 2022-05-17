@@ -106,7 +106,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
 							"src": [
-								"file:./assets/fonts/NotoSerifDisplay-VariableFont_wdth,wght.woff2"
+								"file:./assets/fonts/NotoSerifDisplay/NotoSerifDisplay-VariableFont_wdth,wght.woff2"
 							]
 						}
 					]

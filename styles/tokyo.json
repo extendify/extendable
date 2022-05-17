@@ -44,12 +44,12 @@
 			"palette": [
 				{
 					"slug": "foreground",
-					"color": "#000000",
+					"color": "var(--wp--preset--color--black, #000)",
 					"name": "Foreground"
 				},
 				{
 					"slug": "background",
-					"color": "#ffffff",
+					"color": "var(--wp--preset--color--white, #fff)",
 					"name": "Background"
 				},
 				{

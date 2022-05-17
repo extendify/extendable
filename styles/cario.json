@@ -49,7 +49,7 @@
 				},
 				{
 					"slug": "background",
-					"color": "#000000",
+					"color": "var(--wp--preset--color--black, #000)",
 					"name": "Background"
 				},
 				{

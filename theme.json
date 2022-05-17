@@ -22,7 +22,7 @@
                 },
                 {
                     "slug": "background",
-                    "color": "#ffffff",
+                    "color": "var(--wp--preset--color--white, #fff)",
                     "name": "Background"
                 },
                 {

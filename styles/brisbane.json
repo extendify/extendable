@@ -41,6 +41,9 @@
 			]
 		},
 		"custom": {
+			"spacing": {
+				"outer": "var(--wp--style--block-gap, 1.25rem)"
+			},
 			"typography": {
 				"font-size": {
 					"headingOne": "clamp(3.2rem, 8vw, 4.5rem)",

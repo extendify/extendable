@@ -15,12 +15,12 @@
 			"palette": [
 				{
 					"slug": "foreground",
-					"color": "#ffffff",
+					"color": "var(--wp--preset--color--white, #fff)",
 					"name": "Foreground"
 				},
 				{
 					"slug": "background",
-					"color": "#000000",
+					"color": "var(--wp--preset--color--black, #000)",
 					"name": "Background"
 				},
 				{

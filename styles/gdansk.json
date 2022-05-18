@@ -46,23 +46,20 @@
 			},
 			"typography": {
 				"font-size": {
-					"headingOne": "clamp(3.6rem, 8vw, 5.3rem)",
-					"headingTwo": "clamp(3rem, 6vw, 4.6rem)",
-					"headingThree": "clamp(2.6rem, 4vw, 3.8rem)",
-					"headingFour": "clamp(2.4rem, 3vw, 3.18rem)",
-					"headingFive": "clamp(2.18rem, 3vw, 2.9rem)",
-					"headingSix": "clamp(1.8rem, 3vw, 2.5rem)"
+					"huge": "clamp(2.6rem, 5vw, 3.6rem)",
+					"gigantic": "clamp(3rem, 6vw, 4.8rem)",
+					"colossal": "clamp(3.6rem, 8vw, 5.6rem)"
 				},
 				"font-weight": {
 					"black": "900",
 					"extraBold": "800",
 					"bold": "700",
 					"semiBold": "600",
-					"medium": "490",
+					"medium": "500",
 					"regular": "400",
 					"light": "300",
-					"extraLight": "210",
-					"thin": "120"
+					"extraLight": "200",
+					"thin": "100"
 				},
 				"line-height": {
 					"tiny": 1.1,
@@ -81,8 +78,8 @@
 			"fontFamilies": [
 				{
 					"fontFamily": "\"Roboto Flex\", sans-serif",
-					"name": "Roboto Flex",
-					"slug": "roboto-flex",
+					"name": "Body (System Font)",
+					"slug": "body-font",
 					"fontFace": [
 						{
 							"fontDisplay": "block",
@@ -95,6 +92,11 @@
 							]
 						}
 					]
+				},
+				{
+					"fontFamily": "\"Roboto Flex\", serif",
+					"name": "Headings (System Font)",
+					"slug": "heading-font"
 				}
 			],
 			"fontSizes": [
@@ -109,34 +111,34 @@
 					"slug": "medium"
 				},
 				{
-					"name": "Large",
-					"size": "clamp(1.24rem, 2vw, 1.5rem)",
+					"name": "Large (H6)",
+					"size": "clamp(1.8rem, 3vw, 2.3rem)",
 					"slug": "large"
 				},
 				{
-					"name": "X-large",
-					"size": "clamp(1.48rem, 2vw, 1.7rem)",
+					"name": "X-large (H5)",
+					"size": "clamp(2.18rem, 4vw, 2.85rem)",
 					"slug": "x-large"
 				},
 				{
-					"name": "h1",
-					"size": "var(--wp--custom--typography--font-size--heading-one)",
-					"slug": "headingone"
+					"name": "2X Large (H4)",
+					"size": "clamp(2.4rem, 4vw, 3.18rem)",
+					"slug": "xx-large"
 				},
 				{
-					"name": "h2",
-					"size": "var(--wp--custom--typography--font-size--heading-two)",
-					"slug": "headingtwo"
+					"name": "Huge (H3)",
+					"size": "var(--wp--custom--typography--font-size--huge, 4.5rem)",
+					"slug": "huge"
 				},
 				{
-					"name": "h3",
-					"size": "var(--wp--custom--typography--font-size--heading-three)",
-					"slug": "headingthree"
+					"name": "Gigantic (H2)",
+					"size": "var(--wp--custom--typography--font-size--gigantic, 4.8rem)",
+					"slug": "gigantic"
 				},
 				{
-					"name": "h4",
-					"size": "var(--wp--custom--typography--font-size--heading-four)",
-					"slug": "headingfour"
+					"name": "Colossal (H1)",
+					"size": "var(--wp--custom--typography--font-size--colossal, 5.4rem)",
+					"slug": "colossal"
 				}
 			]
 		}
@@ -233,60 +235,51 @@
 		},
 		"elements": {
 			"h1": {
-				"color": {
-					"text": "var(--wp--preset--color--primary)"
-				},
 				"typography": {
-					"fontSize": "var(--wp--custom--typography--font-size--heading-one)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
-					"letterSpacing": "-0.01em",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--custom--typography--font-size--colossal)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--thin)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontSize": "var(--wp--custom--typography--font-size--heading-two)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--custom--typography--font-size--gigantic)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--extra-light)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"h3": {
-				"color": {
-					"text": "var(--wp--preset--color--primary)"
-				},
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--roboto-flex)",
-					"fontSize": "var(--wp--custom--typography--font-size--heading-three)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--custom--typography--font-size--huge)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"h4": {
-				"color": {
-					"text": "var(--wp--preset--color--foreground)"
-				},
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--roboto-flex)",
-					"fontSize": "var(--wp--custom--typography--font-size--heading-four)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--preset--font-size--xx-large)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 					"letterSpacing": "0.01em",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"h5": {
 				"typography": {
-					"fontSize": "var(--wp--custom--typography--font-size--heading-five)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--preset--font-size--x-large)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 					"letterSpacing": "0.01em",
 					"textTransform": "normal"
 				}
 			},
 			"h6": {
-				"color": {
-					"text": "var(--wp--preset--color--primary)"
-				},
 				"typography": {
-					"fontSize": "var(--wp--custom--typography--font-size--heading-six)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--preset--font-size--large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
 					"letterSpacing": "0.03em",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
@@ -303,7 +296,7 @@
 			"blockGap": "min(36px, 8vw)"
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--roboto-flex)",
+			"fontFamily": "var(--wp--preset--font-family--body-font)",
 			"lineHeight": "var(--wp--custom--typography--line-height--small)",
 			"fontSize": "var(--wp--preset--font-size--medium)",
 			"fontWeight": "var(--wp--custom--typography--font-weight--regular)"

@@ -122,32 +122,32 @@
 					"slug": "medium"
 				},
 				{
-					"name": "Large (h6)",
+					"name": "Large (H6)",
 					"size": "clamp(1.5rem, 2vw, 2.5rem)",
 					"slug": "large"
 				},
 				{
-					"name": "X Large (h5)",
+					"name": "X Large (H5)",
 					"size": "clamp(1.8rem, 3vw, 3rem)",
 					"slug": "x-large"
 				},
 				{
-					"name": "2X Large (h4)",
+					"name": "2X Large (H4)",
 					"size": "clamp(2.2rem, 4vw, 3.5rem)",
 					"slug": "xx-large"
 				},
 				{
-					"name": "Huge (h3)",
+					"name": "Huge (H3)",
 					"size": "var(--wp--custom--typography--font-size--huge, 4.5rem)",
 					"slug": "huge"
 				},
 				{
-					"name": "Gigantic (h2)",
+					"name": "Gigantic (H2)",
 					"size": "var(--wp--custom--typography--font-size--gigantic, 4.8rem)",
 					"slug": "gigantic"
 				},
 				{
-					"name": "Colossal (h1)",
+					"name": "Colossal (H1)",
 					"size": "var(--wp--custom--typography--font-size--colossal, 5.4rem)",
 					"slug": "colossal"
 				}

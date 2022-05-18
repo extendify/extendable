@@ -11,31 +11,65 @@
 		"appearanceTools": true,
 		"color": {
 			"defaultGradients": false,
-			"defaultPalette": true,
+			"customDuotone": false,
+			"duotone": [
+				{
+					"colors": [
+						"#ffffff",
+						"#191816"
+					],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": [
+						"#191816",
+						"#FBCBCB"
+					],
+					"slug": "background-and-primary",
+					"name": "Background and primary"
+				},
+				{
+					"colors": [
+						"#191816",
+						"#a53915"
+					],
+					"slug": "background-and-secondary",
+					"name": "Background and secondary"
+				},
+				{
+					"colors": [
+						"#191816",
+						"#115239"
+					],
+					"slug": "background-and-tertiary",
+					"name": "Background and tertiary"
+				}
+			],
 			"palette": [
 				{
 					"slug": "foreground",
-					"color": "var(--wp--preset--color--white, #fff)",
+					"color": "#ffffff",
 					"name": "Foreground"
 				},
 				{
 					"slug": "background",
-					"color": "#212121",
+					"color": "#191816",
 					"name": "Background"
 				},
 				{
 					"slug": "primary",
-					"color": "#F2DF07",
+					"color": "#FBCBCB",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#73726e",
+					"color": "#a53915",
 					"name": "Secondary"
 				},
 				{
 					"slug": "tertiary",
-					"color": "#e6e6e6",
+					"color": "#115239",
 					"name": "Tertiary"
 				}
 			]
@@ -298,9 +332,6 @@
 				}
 			},
 			"h3": {
-				"color": {
-					"text": "var(--wp--preset--color--tertiary)"
-				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-three)",
@@ -310,9 +341,6 @@
 				}
 			},
 			"h4": {
-				"color": {
-					"text": "var(--wp--preset--color--tertiary)"
-				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-four)",
@@ -331,9 +359,6 @@
 				}
 			},
 			"h6": {
-				"color": {
-					"text": "var(--wp--preset--color--tertiary)"
-				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-six)",

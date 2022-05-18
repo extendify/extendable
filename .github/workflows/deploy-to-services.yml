@@ -12,3 +12,8 @@ jobs:
               with:
                   url: ${{ secrets.DEPLOY_WEBHOOK_ONBOARDING }}
                   method: 'POST'
+            - name: Trigger deployment at launch.extendify.com
+              uses: fjogeleit/http-request-action@master
+              with:
+                  url: ${{ secrets.DEPLOY_WEBHOOK_LAUNCH }}
+                  method: 'POST'

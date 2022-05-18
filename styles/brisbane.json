@@ -304,9 +304,6 @@
 				}
 			},
 			"h3": {
-				"color": {
-					"text": "var(--wp--preset--color--secondary)"
-				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-three)",

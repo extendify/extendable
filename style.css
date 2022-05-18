@@ -174,8 +174,8 @@ footer > .wp-block-group {
  */
 
 body {
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: var(--wp--custom--typography--font-smoothing--moz, auto);
+	-webkit-font-smoothing: var(--wp--custom--typography--font-smoothing--webkit, auto);
 }
 
 /*

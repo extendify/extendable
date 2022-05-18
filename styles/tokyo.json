@@ -334,18 +334,8 @@
 			"area": "header"
 		},
 		{
-			"name": "footer-call-to-action",
-			"title": "Footer (Call to action)",
-			"area": "footer"
-		},
-		{
-			"name": "footer-call-to-action-dark",
-			"title": "Footer (Call to action, Dark)",
-			"area": "footer"
-		},
-		{
-			"name": "footer-offset-heading-buttons-primary",
-			"title": "Footer (Offset heading, Primary)",
+			"name": "footer",
+			"title": "Footer",
 			"area": "footer"
 		}
 	]

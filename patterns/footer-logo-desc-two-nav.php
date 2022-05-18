@@ -2,7 +2,7 @@
 /**
  * Title:       Footer, Call to Action
  * Slug:        extendable/footer-call-to-action
- * Categories:  extendable-footers
+ * Categories:  footer
  * blockTypes:  core/template-part/footer
  */
 ?>

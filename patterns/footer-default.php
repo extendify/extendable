@@ -2,7 +2,7 @@
 /**
  * Title:       Footer (Logo, Copyright, Social)
  * Slug:        extendable/footer-default
- * Categories:  extendable-footers
+ * Categories:  footer
  * blockTypes:  core/template-part/footer
  */
 ?>

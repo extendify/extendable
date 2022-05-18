@@ -2,7 +2,7 @@
 /**
  * Title:       Footer with logo and two column nav
  * Slug:        extendable/footer-logo-desc-two-nav
- * Categories:  extendable-footers
+ * Categories:  footer
  * blockTypes:  core/template-part/footer
  */
 ?>

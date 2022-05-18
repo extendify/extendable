@@ -2,7 +2,7 @@
 /**
  * Title:       Footer, Logo and Navigation TEST
  * Slug:        extendable/footer-logo-nav
- * Categories:  extendable-footers
+ * Categories:  footer
  * blockTypes:  core/template-part/footer
  */
 ?>

@@ -2,7 +2,7 @@
 /**
  * Title:       Header (Navigation, Logo, Social)
  * Slug:        extendable/header-nav-logo-social
- * Categories:  extendable-headers
+ * Categories:  header
  * blockTypes:  core/template-part/header
  */
 ?>

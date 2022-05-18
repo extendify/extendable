@@ -71,9 +71,7 @@ add_action( 'wp_enqueue_scripts', 'extendable_styles' );
  */
 function extendable_register_pattern_categories() {
 	$block_pattern_categories = array(
-		'extendable-all'     => array( 'label' => __( 'Extendable All', 'extendable' ) ),
-		'extendable-footers' => array( 'label' => __( 'Extendable Footers', 'extendable' ) ),
-		'extendable-headers' => array( 'label' => __( 'Extendable Headers', 'extendable' ) ),
+		'footer' => array( 'label' => __( 'Footers', 'extendable' ) ),
 	);
 
 	/**

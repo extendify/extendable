@@ -11,11 +11,45 @@
 		"appearanceTools": true,
 		"color": {
 			"defaultGradients": false,
-			"defaultPalette": true,
+			"customDuotone": false,
+			"duotone": [
+				{
+					"colors": [
+						"#f4f3f0",
+						"#383838"
+					],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": [
+						"#383838",
+						"#f0ede6"
+					],
+					"slug": "background-and-primary",
+					"name": "Background and primary"
+				},
+				{
+					"colors": [
+						"#383838",
+						"#0d0c0c"
+					],
+					"slug": "background-and-secondary",
+					"name": "Background and secondary"
+				},
+				{
+					"colors": [
+						"#f0ede6",
+						"#0d0c0c"
+					],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				}
+			],
 			"palette": [
 				{
 					"slug": "foreground",
-					"color": "var(--wp--preset--color--white, #fff)",
+					"color": "#f4f3f0",
 					"name": "Foreground"
 				},
 				{
@@ -30,8 +64,13 @@
 				},
 				{
 					"slug": "secondary",
-					"color": "var(--wp--preset--color--black, #000)",
+					"color": "#0d0c0c",
 					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#474646",
+					"name": "Tertiary"
 				}
 			]
 		},

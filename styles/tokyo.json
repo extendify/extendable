@@ -15,56 +15,65 @@
 		"appearanceTools": true,
 		"color": {
 			"defaultGradients": false,
+			"defaultDuotone": false,
 			"duotone": [
 				{
 					"colors": [
-						"#000000",
+						"#d61935",
+						"#e3f2f2"
+					],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": [
+						"#d61935",
+						"#ffeae6"
+					],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				},
+				{
+					"colors": [
+						"#e3f2f2",
+						"#d61935"
+					],
+					"slug": "secondary-and-primary",
+					"name": "Secondary and primary"
+				},
+				{
+					"colors": [
+						"#010101",
 						"#ffffff"
 					],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
-				},
-				{
-					"colors": [
-						"#0b4a43",
-						"#ffffff"
-					],
-					"slug": "primary-and-background",
-					"name": "Primary and background"
-				},
-				{
-					"colors": [
-						"#0b4a43",
-						"#f6c202"
-					],
-					"slug": "primary-and-quarternary",
-					"name": "Primary and quarternary"
 				}
 			],
 			"palette": [
 				{
 					"slug": "foreground",
-					"color": "var(--wp--preset--color--black, #000)",
+					"color": "#010101",
 					"name": "Foreground"
 				},
 				{
 					"slug": "background",
-					"color": "var(--wp--preset--color--white, #fff)",
+					"color": "#ffffff",
 					"name": "Background"
 				},
 				{
 					"slug": "primary",
-					"color": "#eb4726",
+					"color": "#d61935",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#f3c412",
+					"color": "#e3f2f2",
 					"name": "Secondary"
 				},
 				{
 					"slug": "tertiary",
-					"color": "#f8d4d4",
+					"color": "#ffeae6",
 					"name": "Tertiary"
 				}
 			]
@@ -325,18 +334,8 @@
 			"area": "header"
 		},
 		{
-			"name": "footer-call-to-action",
-			"title": "Footer (Call to action)",
-			"area": "footer"
-		},
-		{
-			"name": "footer-call-to-action-dark",
-			"title": "Footer (Call to action, Dark)",
-			"area": "footer"
-		},
-		{
-			"name": "footer-offset-heading-buttons-primary",
-			"title": "Footer (Offset heading, Primary)",
+			"name": "footer",
+			"title": "Footer",
 			"area": "footer"
 		}
 	]

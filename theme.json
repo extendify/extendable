@@ -10,6 +10,7 @@
 	"settings": {
 		"appearanceTools": true,
 		"color": {
+			"defaultDuotone": false,
 			"defaultGradients": false,
 			"palette": [
 				{

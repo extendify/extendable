@@ -15,12 +15,12 @@
 			"palette": [
 				{
 					"slug": "foreground",
-					"color": "var(--wp--preset--color--white, #fff)",
+					"color": "#fff",
 					"name": "Foreground"
 				},
 				{
 					"slug": "background",
-					"color": "#2779a7",
+					"color": "#477d9c",
 					"name": "Background"
 				},
 				{
@@ -304,9 +304,6 @@
 				}
 			},
 			"h3": {
-				"color": {
-					"text": "var(--wp--preset--color--secondary)"
-				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-three)",

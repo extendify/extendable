@@ -55,8 +55,8 @@
 			},
 			"typography": {
 				"font-size": {
-					"huge": "clamp(2.25rem, 4vw, 2.75rem)",
-					"gigantic": "clamp(2.75rem, 6vw, 3.25rem)",
+					"huge": "clamp(2.2rem, 5vw, 4rem)",
+					"gigantic": "clamp(2.75rem, 6vw, 5rem)",
 					"colossal": "clamp(3.25rem, 8vw, 6.25rem)"
 				},
 				"font-weight": {
@@ -106,25 +106,44 @@
 			],
 			"fontSizes": [
 				{
+					"name": "Small",
 					"size": "clamp(0.9rem, 1.75vw, 1.075rem)",
 					"slug": "small"
 				},
 				{
+					"name": "Medium",
 					"size": "1.25rem",
 					"slug": "medium"
 				},
 				{
-					"size": "clamp(2rem, 4vw, 3rem)",
+					"name": "Large (H6)",
+					"size": "clamp(1.6rem, 3vw, 3rem)",
 					"slug": "large"
 				},
 				{
-					"size": "clamp(3rem, 6vw, 5.5rem)",
+					"name": "X Large (H5)",
+					"size": "clamp(1.8rem, 4vw, 3.2rem)",
 					"slug": "x-large"
 				},
 				{
-					"size": "clamp(5rem, 8vw, 8rem)",
-					"slug": "xx-large",
-					"name": "2X Large"
+					"name": "2X Large (H4)",
+					"size": "clamp(2.1rem, 5vw, 4.5rem)",
+					"slug": "xx-large"
+				},
+				{
+					"name": "Huge (H3)",
+					"size": "var(--wp--custom--typography--font-size--huge, 4.5rem)",
+					"slug": "huge"
+				},
+				{
+					"name": "Gigantic (H2)",
+					"size": "var(--wp--custom--typography--font-size--gigantic, 4.8rem)",
+					"slug": "gigantic"
+				},
+				{
+					"name": "Colossal (H1)",
+					"size": "var(--wp--custom--typography--font-size--colossal, 5.4rem)",
+					"slug": "colossal"
 				}
 			]
 		},
@@ -208,44 +227,51 @@
 		"elements": {
 			"h1": {
 				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--colossal)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--extra-bold)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"h2": {
 				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--gigantic)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--extra-bold)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 					"lineHeight": "var(--wp--custom--typography--line-height--small)"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--extra-bold)",
-					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
-					"fontSize": "var(--wp--custom--typography--font-size--huge)"
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--custom--typography--font-size--huge)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
+					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--x-large)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--preset--font-size--xx-large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--extra-bold)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"h5": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--medium)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--extra-bold)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--preset--font-size--x-large)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
 					"lineHeight": "var(--wp--custom--typography--line-height--normal)",
 					"textTransform": "uppercase"
 				}
 			},
 			"h6": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--medium)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--preset--font-size--large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--extra-bold)",
+					"letterSpacing": "0.02em",
 					"lineHeight": "var(--wp--custom--typography--line-height--normal)",
 					"textTransform": "uppercase"
 				}

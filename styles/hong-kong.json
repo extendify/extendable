@@ -20,14 +20,14 @@
 				{
 					"colors": [
 						"#c6120d",
-						"#0c0c0b"
+						"#f1e3e1"
 					],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
 					"colors": [
-						"#0c0c0b",
+						"#f1e3e1",
 						"#c6120d"
 					],
 					"slug": "background-and-foreground",
@@ -50,7 +50,7 @@
 				},
 				{
 					"slug": "background",
-					"color": "#0c0c0b",
+					"color": "#f1e3e1",
 					"name": "Background"
 				},
 				{

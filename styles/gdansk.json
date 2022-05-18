@@ -16,14 +16,14 @@
 				{
 					"colors": [
 						"#ffffff",
-						"#191816"
+						"#0c0c0b"
 					],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
 					"colors": [
-						"#191816",
+						"#0c0c0b",
 						"#FBCBCB"
 					],
 					"slug": "background-and-primary",
@@ -31,7 +31,7 @@
 				},
 				{
 					"colors": [
-						"#191816",
+						"#0c0c0b",
 						"#a53915"
 					],
 					"slug": "background-and-secondary",
@@ -39,7 +39,7 @@
 				},
 				{
 					"colors": [
-						"#191816",
+						"#0c0c0b",
 						"#115239"
 					],
 					"slug": "background-and-tertiary",
@@ -54,7 +54,7 @@
 				},
 				{
 					"slug": "background",
-					"color": "#191816",
+					"color": "#0c0c0b",
 					"name": "Background"
 				},
 				{

@@ -17,12 +17,12 @@
 			"palette": [
 				{
 					"slug": "foreground",
-					"color": "#000000",
+					"color": "var(--wp--preset--color--black, #000)",
 					"name": "Foreground"
 				},
 				{
 					"slug": "background",
-					"color": "#ffffff",
+					"color": "var(--wp--preset--color--white, #fff)",
 					"name": "Background"
 				},
 				{
@@ -79,8 +79,8 @@
 			"fontFamilies": [
 				{
 					"fontFamily": "\"Radio Canada\", sans-serif",
-					"name": "Radio Canada",
-					"slug": "radio-canada",
+					"name": "Body (System Font)",
+					"slug": "body-font",
 					"fontFace": [
 						{
 							"fontDisplay": "block",
@@ -89,15 +89,15 @@
 							"fontStyle": "normal",
 							"fontWeight": "300 700",
 							"src": [
-								"file:./assets/fonts/RadioCanada-VariableFont_wdth,wght.woff2"
+								"file:./assets/fonts/RadioCanada/RadioCanada-VariableFont_wdth,wght.woff2"
 							]
 						}
 					]
 				},
 				{
 					"fontFamily": "\"Noto Serif Display\", serif",
-					"name": "Noto Serif Display",
-					"slug": "noto-serif-display",
+					"name": "Headings (System Font)",
+					"slug": "heading-font",
 					"fontFace": [
 						{
 							"fontDisplay": "block",
@@ -106,7 +106,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
 							"src": [
-								"file:./assets/fonts/NotoSerifDisplay-VariableFont_wdth,wght.woff2"
+								"file:./assets/fonts/NotoSerifDisplay/NotoSerifDisplay-VariableFont_wdth,wght.woff2"
 							]
 						}
 					]
@@ -185,7 +185,7 @@
 			},
 			"core/post-title": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-two)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
@@ -193,7 +193,7 @@
 			},
 			"core/site-title": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--preset--font-size--x-large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 					"letterSpacing": "0.02em",
@@ -211,7 +211,7 @@
 					"text": "var(--wp--preset--color--primary)"
 				},
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-one)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
 					"letterSpacing": "-0.01em",
@@ -223,7 +223,7 @@
 					"text": "var(--wp--preset--color--tertiary)"
 				},
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-two)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 					"letterSpacing": "-0.01em",
@@ -235,7 +235,7 @@
 					"text": "var(--wp--preset--color--tertiary)"
 				},
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-three)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
@@ -243,7 +243,7 @@
 			},
 			"h4": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-four)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
@@ -251,7 +251,7 @@
 			},
 			"h5": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-five)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 					"letterSpacing": "0.02em",
@@ -260,7 +260,7 @@
 			},
 			"h6": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--custom--typography--font-size--heading-six)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
 					"letterSpacing": "0.3em",
@@ -277,7 +277,7 @@
 			"blockGap": "min(28px, 6vw)"
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--radio-canada)",
+			"fontFamily": "var(--wp--preset--font-family--body-font)",
 			"lineHeight": "var(--wp--custom--typography--line-height--medium)",
 			"fontSize": "var(--wp--preset--font-size--medium)",
 			"fontWeight": "var(--wp--custom--typography--font-weight--regular)"

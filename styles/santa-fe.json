@@ -297,7 +297,7 @@
 			},
 			"link": {
 				"color": {
-					"text": "var(--wp--preset--color--secondary)"
+					"text": "var(--wp--preset--color--primary)"
 				}
 			}
 		},

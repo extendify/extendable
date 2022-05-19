@@ -68,8 +68,7 @@
 					"small": 1.3,
 					"medium": 1.5,
 					"normal": 1.6
-				},
-				"rootSize": 16
+				}
 			}
 		},
 		"layout": {

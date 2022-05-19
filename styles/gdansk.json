@@ -194,10 +194,6 @@
 					"radius": "999px",
 					"width": "1px !important"
 				},
-				"color": {
-					"background": "var(--wp--preset--color--primary)",
-					"text": "var(--wp--preset--color--background)"
-				},
 				"spacing": {
 					"padding": {
 						"top": "clamp(0.9rem, 1.5vw, 1.1rem)",

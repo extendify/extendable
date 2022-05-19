@@ -6,10 +6,7 @@
 		{
 			"name": "blank",
 			"title": "Blank",
-			"postTypes": [
-				"page",
-				"post"
-			]
+			"postTypes": ["page", "post"]
 		}
 	],
 	"settings": {
@@ -20,34 +17,22 @@
 			"customDuotone": false,
 			"duotone": [
 				{
-					"colors": [
-						"#010101",
-						"#fbfbfb"
-					],
+					"colors": ["#010101", "#fbfbfb"],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
-					"colors": [
-						"#010101",
-						"#ffd800"
-					],
+					"colors": ["#010101", "#ffd800"],
 					"slug": "foreground-and-primary",
 					"name": "Foreground and primary"
 				},
 				{
-					"colors": [
-						"#ffd800",
-						"#174c2f"
-					],
+					"colors": ["#ffd800", "#174c2f"],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": [
-						"#ffd800",
-						"#7cb5e3"
-					],
+					"colors": ["#ffd800", "#7cb5e3"],
 					"slug": "primary-and-tertiary",
 					"name": "Primary and tertiary"
 				}
@@ -113,14 +98,7 @@
 			}
 		},
 		"spacing": {
-			"units": [
-				"%",
-				"px",
-				"em",
-				"rem",
-				"vh",
-				"vw"
-			]
+			"units": ["%", "px", "em", "rem", "vh", "vw"]
 		},
 		"typography": {
 			"dropCap": false,

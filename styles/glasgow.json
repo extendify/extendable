@@ -94,6 +94,7 @@
 					"slug": "body-font",
 					"fontFace": [
 						{
+							"fontDisplay": "block",
 							"fontFamily": "Rubik",
 							"fontWeight": "300 900",
 							"fontStyle": "normal",

@@ -1,6 +1,6 @@
 {
-	"version": 2,
 	"title": "Rio",
+	"version": 2,
 	"customTemplates": [
 		{
 			"name": "blank",

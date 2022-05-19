@@ -25,7 +25,7 @@
 			"palette": [
 				{
 					"slug": "foreground",
-					"color": "var(--wp--preset--color--black, #000)",
+					"color": "#000",
 					"name": "Foreground"
 				},
 				{

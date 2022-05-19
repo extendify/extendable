@@ -126,12 +126,12 @@
 				},
 				{
 					"name": "X Large (H5)",
-					"size": "clamp(1.8rem, 4vw, 3.2rem)",
+					"size": "clamp(1.8rem, 3vw, 3.2rem)",
 					"slug": "x-large"
 				},
 				{
 					"name": "2X Large (H4)",
-					"size": "clamp(2.1rem, 5vw, 4.5rem)",
+					"size": "clamp(2.1rem, 4vw, 4.5rem)",
 					"slug": "xx-large"
 				},
 				{

@@ -132,7 +132,7 @@
 				},
 				{
 					"name": "Large (H6)",
-					"size": "clamp(1.6rem, 3vw, 2rem)",
+					"size": "clamp(1.6rem, 3vw, 2.1rem)",
 					"slug": "large"
 				},
 				{

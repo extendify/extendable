@@ -269,9 +269,6 @@
 				}
 			},
 			"core/site-title": {
-				"color": {
-					"text": "var(--wp--preset--color--primary)"
-				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--preset--font-size--large)",

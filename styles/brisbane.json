@@ -61,7 +61,7 @@
 					"bold": "700",
 					"semiBold": "600",
 					"medium": "500",
-					"regular": "400",
+					"regular": "350",
 					"light": "300",
 					"extraLight": "200",
 					"thin": "100"
@@ -75,8 +75,8 @@
 			}
 		},
 		"layout": {
-			"contentSize": "40em",
-			"wideSize": "70em"
+			"contentSize": "610px",
+			"wideSize": "68rem"
 		},
 		"typography": {
 			"dropCap": false,
@@ -125,7 +125,7 @@
 			"fontSizes": [
 				{
 					"name": "Small",
-					"size": "0.94rem",
+					"size": "0.95rem",
 					"slug": "small"
 				},
 				{

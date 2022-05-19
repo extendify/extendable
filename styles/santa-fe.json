@@ -204,10 +204,6 @@
 				"border": {
 					"radius": "100rem"
 				},
-				"color": {
-					"background": "var(--wp--preset--color--secondary)",
-					"text": "var(--wp--preset--color--background)"
-				},
 				"spacing": {
 					"padding": {
 						"top": "clamp(1rem, 1.5vw, 1.25rem)",

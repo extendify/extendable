@@ -1,4 +1,5 @@
 {
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"title": "Rio",
 	"version": 2,
 	"customTemplates": [

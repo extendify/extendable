@@ -97,8 +97,8 @@
 			}
 		},
 		"layout": {
-			"contentSize": "38em",
-			"wideSize": "64em"
+			"contentSize": "640px",
+			"wideSize": "76rem"
 		},
 		"typography": {
 			"dropCap": false,

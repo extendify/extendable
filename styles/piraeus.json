@@ -194,12 +194,8 @@
 		"blocks": {
 			"core/button": {
 				"border": {
-					"color": "var(--wp--preset--color--foreground) !important",
 					"radius": "0px",
 					"width": "2px !important"
-				},
-				"color": {
-					"background": "var(--wp--preset--color--secondary)"
 				},
 				"spacing": {
 					"padding": {

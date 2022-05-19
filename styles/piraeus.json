@@ -1,5 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Piraeus",
+	"version": 2,
 	"customTemplates": [
 		{
 			"name": "blank",
@@ -378,7 +380,5 @@
 			"title": "Footer",
 			"area": "footer"
 		}
-	],
-	"title": "Piraeus",
-	"version": 2
+	]
 }

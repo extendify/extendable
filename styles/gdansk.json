@@ -17,34 +17,22 @@
 			"customDuotone": false,
 			"duotone": [
 				{
-					"colors": [
-						"#ffffff",
-						"#0c0c0b"
-					],
+					"colors": ["#ffffff", "#0c0c0b"],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
-					"colors": [
-						"#0c0c0b",
-						"#FBCBCB"
-					],
+					"colors": ["#0c0c0b", "#FBCBCB"],
 					"slug": "background-and-primary",
 					"name": "Background and primary"
 				},
 				{
-					"colors": [
-						"#0c0c0b",
-						"#a53915"
-					],
+					"colors": ["#0c0c0b", "#a53915"],
 					"slug": "background-and-secondary",
 					"name": "Background and secondary"
 				},
 				{
-					"colors": [
-						"#0c0c0b",
-						"#115239"
-					],
+					"colors": ["#0c0c0b", "#115239"],
 					"slug": "background-and-tertiary",
 					"name": "Background and tertiary"
 				}

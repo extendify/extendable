@@ -44,7 +44,10 @@
 		},
 		"custom": {
 			"spacing": {
-				"outer": "min(48px, 6vw)"
+				"small": "clamp(2rem, 5vw, 4rem)",
+				"medium": "clamp(2rem, 8vw, calc(4 * var(--wp--style--block-gap)))",
+				"large": "clamp(4rem, 10vw, 8rem)",
+				"outer": "var(--wp--custom--spacing--small, 1.25rem)"
 			},
 			"typography": {
 				"font-size": {

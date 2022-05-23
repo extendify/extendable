@@ -38,13 +38,13 @@ body {
  */
 
 a {
-	text-decoration-thickness: 1px;
-	text-underline-offset: 0.25ch;
+	text-decoration-thickness: var(--wp--custom--elements--link--text-decoration-thickness, 1px);
+	text-underline-offset: var(--wp--custom--elements--link--text-underline-offset, 0.25ch);
 }
 
 a:hover,
 a:focus {
-	text-decoration-style: dashed;
+	text-decoration-style: var(--wp--custom--elements--link--interactive--text-decoration-style, dashed);
 }
 
 a:active {

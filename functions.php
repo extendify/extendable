@@ -25,6 +25,8 @@ if ( ! function_exists( 'extendable_support' ) ) :
 		// Enqueue editor styles.
 		add_editor_style( 'style.css' );
 
+		remove_theme_support( 'core-block-patterns' );
+
 	}
 
 endif;
@@ -71,6 +73,7 @@ add_action( 'wp_enqueue_scripts', 'extendable_styles' );
  */
 function extendable_register_pattern_categories() {
 	$block_pattern_categories = array(
+		'header' => array( 'label' => __( 'Headers', 'extendable' ) ),
 		'footer' => array( 'label' => __( 'Footers', 'extendable' ) ),
 	);
 

@@ -12,8 +12,6 @@
 	"settings": {
 		"appearanceTools": true,
 		"color": {
-			"defaultGradients": false,
-			"defaultDuotone": false,
 			"duotone": [
 				{
 					"colors": ["#ffffff", "#606d6c"],

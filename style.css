@@ -206,3 +206,46 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
 	padding-left: var(--wp--custom--spacing--outer);
 }
 
+/*
+ * --------------------------------------------------------
+ *  Custom
+ * --------------------------------------------------------
+ */
+
+/*
+ * Responsive menu animation and customization.
+ */
+@media (max-width: 599px) {
+	.wp-block-navigation__responsive-container {
+		display: block !important;
+		opacity: 0;
+		transform: translateX(200px);
+		transition: transform 170ms ease-in-out, opacity 150ms ease-in-out;
+		visibility: hidden;
+	}
+
+	.wp-block-navigation__responsive-container[aria-hidden="false"] {
+		opacity: 1;
+		transform: translateX(0);
+		visibility: visible;
+	}
+}
+
+/*
+ * Remove all animations, transitions and smooth scroll
+ * for people that prefer not to see them.
+ */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

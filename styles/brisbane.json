@@ -12,8 +12,6 @@
 	"settings": {
 		"appearanceTools": true,
 		"color": {
-			"defaultGradients": false,
-			"defaultPalette": true,
 			"palette": [
 				{
 					"slug": "foreground",

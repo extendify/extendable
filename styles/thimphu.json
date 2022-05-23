@@ -14,22 +14,22 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#f24139", "#ffdda6"],
+					"colors": ["#f24139", "#ffebcc"],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#ffdda6", "#f24139"],
+					"colors": ["#ffebcc", "#f24139"],
 					"slug": "background-and-foreground",
 					"name": "Background and foreground"
 				},
 				{
-					"colors": ["#3a312e", "#ffdda6"],
+					"colors": ["#3a312e", "#ffebcc"],
 					"slug": "primary-and-background",
 					"name": "Primary and background"
 				},
 				{
-					"colors": ["#ffdda6", "#3a312e"],
+					"colors": ["#ffebcc", "#3a312e"],
 					"slug": "background-and-primary",
 					"name": "Background and primary"
 				}
@@ -84,7 +84,7 @@
 				},
 				{
 					"slug": "background",
-					"color": "#ffdda6",
+					"color": "#ffebcc",
 					"name": "Background"
 				},
 				{
@@ -99,7 +99,7 @@
 				},
 				{
 					"slug": "tertiary",
-					"color": "#ffebcc",
+					"color": "#ffdda6",
 					"name": "Tertiary"
 				}
 			]

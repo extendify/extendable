@@ -1,12 +1,11 @@
 <?php
 /**
- * Title:       Header (Logo, Navigation)
+ * Title:       Header (Logo, Site Title, Navigation)
  * Slug:        extendable/header-default
  * Categories:  header
  * blockTypes:  core/template-part/header
  */
 ?>
-
 
 <!-- wp:group {"align":"full","layout":{"inherit":true},"style":{"spacing":{"padding":{"bottom":"var(--wp--style--block-gap)","top":"var(--wp--style--block-gap)"}}}} -->
 <div class="wp-block-group alignfull" style="padding-bottom:var(--wp--style--block-gap);padding-top:var(--wp--style--block-gap)"><!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->

@@ -207,7 +207,8 @@
 					"radius": "8px"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--primary)"
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--secondary)"
 				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--medium)",

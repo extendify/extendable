@@ -89,12 +89,12 @@
 				},
 				{
 					"slug": "primary",
-					"color": "#0d0c0c",
+					"color": "#f0ede6",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#f0ede6",
+					"color": "#0d0c0c",
 					"name": "Secondary"
 				},
 				{
@@ -228,7 +228,8 @@
 					"width": "2px !important"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--primary)"
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--secondary)"
 				},
 				"spacing": {
 					"padding": {
@@ -370,7 +371,7 @@
 			},
 			"link": {
 				"color": {
-					"text": "var(--wp--preset--color--primary)"
+					"text": "var(--wp--preset--color--foreground)"
 				}
 			}
 		},

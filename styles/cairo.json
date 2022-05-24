@@ -224,6 +224,10 @@
 				"border": {
 					"radius": "100rem"
 				},
+				"color": {
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--secondary)"
+				},
 				"spacing": {
 					"padding": {
 						"top": "1.2rem",

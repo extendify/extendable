@@ -231,7 +231,8 @@
 					"width": "1px !important"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--primary)"
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--secondary)"
 				},
 				"spacing": {
 					"padding": {

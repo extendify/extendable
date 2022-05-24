@@ -228,6 +228,10 @@
 				"border": {
 					"radius": "100rem"
 				},
+				"color": {
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--background)"
+				},
 				"spacing": {
 					"padding": {
 						"top": "clamp(1rem, 1.5vw, 1.25rem)",
@@ -237,6 +241,7 @@
 					}
 				},
 				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
 					"lineHeight": "1"
 				}
 			},

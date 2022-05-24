@@ -151,9 +151,15 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
 
 /*
  * --------------------------------------------------------
- *  Custom
+ *  Custom - blocks
  * --------------------------------------------------------
  */
+
+/* Table
+----------------------------------------------------------*/
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd){
+	background-color: var(--wp--custom--blocks--core-table--variant-stripes--color--background, var(--wp--preset--color--tertiary));
+}
 
 /*
  * --------------------------------------------------------

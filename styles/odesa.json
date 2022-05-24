@@ -270,7 +270,7 @@
 					"width": "7px"
 				},
 				"typography": {
-					"fontSize": "var(--wp--custom--typography--font-size--large)"
+					"fontSize": "var(--wp--preset--font-size--large)"
 				}
 			},
 			"core/query-pagination-next": {

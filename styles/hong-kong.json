@@ -205,11 +205,6 @@
 	},
 	"styles": {
 		"blocks": {
-			"core/navigation": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--medium)"
-				}
-			},
 			"core/button": {
 				"border": {
 					"radius": "100rem"
@@ -228,6 +223,11 @@
 						"right": "2rem",
 						"left": "2rem"
 					}
+				}
+			},
+			"core/navigation": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)"
 				}
 			},
 			"core/post-title": {

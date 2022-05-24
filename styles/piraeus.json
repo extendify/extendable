@@ -89,12 +89,12 @@
 				},
 				{
 					"slug": "primary",
-					"color": "#f0ede6",
+					"color": "#0d0c0c",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#0d0c0c",
+					"color": "#f0ede6",
 					"name": "Secondary"
 				},
 				{

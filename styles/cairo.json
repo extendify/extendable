@@ -224,17 +224,17 @@
 				"border": {
 					"radius": "100rem"
 				},
+				"spacing": {
+					"padding": {
+						"top": "1.2rem",
+						"bottom": "1.2rem",
+						"right": "2rem",
+						"left": "2rem"
+					}
+				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--medium)",
 					"lineHeight": "1"
-				},
-				"spacing": {
-					"padding": {
-						"top": "clamp(1.1rem, 1.5vw, 1.5rem)",
-						"bottom": "clamp(1.1rem, 1.5vw, 1.5rem)",
-						"right": "clamp(1.25rem, 2.5vw, 2rem)",
-						"left": "clamp(1.25rem, 2.5vw, 2rem)"
-					}
 				}
 			},
 			"core/post-title": {

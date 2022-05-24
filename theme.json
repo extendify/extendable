@@ -89,6 +89,10 @@
 				"outer": "var(--wp--custom--spacing--small, 1.25rem)"
 			},
 			"typography": {
+				"fontSmoothing": {
+					"moz": "grayscale",
+					"webkit": "antialiased"
+				},
 				"font-size": {
 					"huge": "clamp(2.65rem, 5vw, 4.7rem)",
 					"gigantic": "clamp(3.1rem, 6vw, 5.5rem)",

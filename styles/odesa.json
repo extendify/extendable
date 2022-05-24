@@ -259,7 +259,7 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
-					"fontSize": "var(--wp--custom--typography--font-size--heading-four)",
+					"fontSize": "var(--wp--preset--font-size--huge)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},

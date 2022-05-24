@@ -38,6 +38,7 @@ body {
  */
 
 a {
+	text-decoration-style: var(--wp--custom--elements--link--static--text-decoration-style, solid);
 	text-decoration-thickness: var(--wp--custom--elements--link--text-decoration-thickness, 1px);
 	text-underline-offset: var(--wp--custom--elements--link--text-underline-offset, 0.25ch);
 }

@@ -236,9 +236,9 @@
 			},
 			"core/post-title": {
 				"typography": {
+					"fontSize": "var(--wp--preset--font-size--huge)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
-					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
-					"fontSize": "var(--wp--preset--font-size--gigantic)"
+					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"core/pullquote": {

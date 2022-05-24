@@ -56,27 +56,27 @@
 			"palette": [
 				{
 					"slug": "foreground",
-					"color": "#000",
+					"color": "#1c1e21",
 					"name": "Foreground"
 				},
 				{
 					"slug": "background",
-					"color": "#f0f0f0",
+					"color": "#fcfcfc",
 					"name": "Background"
 				},
 				{
 					"slug": "primary",
-					"color": "#9b51e0",
+					"color": "#182941",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#f0f7df",
+					"color": "#AE8AF8",
 					"name": "Secondary"
 				},
 				{
 					"slug": "tertiary",
-					"color": "#CBC3F5",
+					"color": "#e4d7ff",
 					"name": "Tertiary"
 				}
 			]
@@ -199,8 +199,8 @@
 					"radius": "100rem"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--primary)",
-					"text": "var(--wp--preset--color--background)"
+					"background": "var(--wp--preset--color--secondary)",
+					"text": "var(--wp--preset--color--primary)"
 				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--medium)",
@@ -230,7 +230,7 @@
 			"core/post-title": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
 					"fontSize": "var(--wp--custom--typography--font-size--huge)"
 				}
@@ -248,7 +248,7 @@
 			"core/query-title": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
 					"lineHeight": "var(--wp--custom--typography--line-height--small)",
 					"fontSize": "var(--wp--custom--typography--font-size--huge)"
 				}
@@ -272,7 +272,7 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--preset--font-size--colossal)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--thin)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
 					"letterSpacing": "-0.03em",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
@@ -281,7 +281,7 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--preset--font-size--gigantic)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--extra-light)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
 					"lineHeight": "var(--wp--custom--typography--line-height--small)"
 				}
 			},
@@ -289,7 +289,7 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--preset--font-size--huge)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
@@ -297,7 +297,7 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--preset--font-size--xx-large)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
@@ -305,7 +305,7 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--preset--font-size--x-large)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--normal)",
 					"lineHeight": "var(--wp--custom--typography--line-height--normal)",
 					"textTransform": "uppercase"
 				}
@@ -314,7 +314,7 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--preset--font-size--large)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--normal)",
 					"letterSpacing": "0.04em",
 					"lineHeight": "var(--wp--custom--typography--line-height--normal)",
 					"textTransform": "uppercase"

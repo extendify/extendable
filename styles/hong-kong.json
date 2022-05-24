@@ -214,6 +214,9 @@
 				"border": {
 					"radius": "100rem"
 				},
+				"color": {
+					"background": "var(--wp--preset--color--primary)"
+				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--medium)",
 					"lineHeight": "1"

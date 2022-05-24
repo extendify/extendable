@@ -92,15 +92,6 @@
 					}
 				}
 			},
-			"elements": {
-				"link": {
-					"interactive": {
-						"textDecorationStyle": "dotted"
-					},
-					"textDecorationThickness": "3px",
-					"textUnderlineOffset": "3px"
-				}
-			},
 			"spacing": {
 				"small": "clamp(2rem, 5vw, 4rem)",
 				"medium": "clamp(2rem, 8vw, calc(4 * var(--wp--style--block-gap)))",

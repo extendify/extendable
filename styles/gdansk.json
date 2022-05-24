@@ -300,6 +300,14 @@
 					"textTransform": "uppercase"
 				}
 			},
+			"core/query-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--preset--font-size--gigantic)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
+					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
+				}
+			},
 			"core/quote": {
 				"border": {
 					"color": "var(--wp--preset--color--primary)",

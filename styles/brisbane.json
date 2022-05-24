@@ -62,12 +62,12 @@
 				},
 				{
 					"slug": "background",
-					"color": "#477d9c",
+					"color": "#49697c",
 					"name": "Background"
 				},
 				{
 					"slug": "primary",
-					"color": "#ac5039",
+					"color": "#102e43",
 					"name": "Primary"
 				},
 				{
@@ -77,7 +77,7 @@
 				},
 				{
 					"slug": "tertiary",
-					"color": "#062557",
+					"color": "#204f46",
 					"name": "Tertiary"
 				}
 			]
@@ -365,7 +365,7 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--preset--font-size--xx-large)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
 					"letterSpacing": "0.02em",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}

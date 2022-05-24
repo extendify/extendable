@@ -300,21 +300,18 @@
 			},
 			"core/query-pagination-next": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--large)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
 					"textTransform": "uppercase"
 				}
 			},
 			"core/query-pagination-numbers": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--large)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--medium)"
+					"fontWeight": "var(--wp--custom--typography--font-weight--light)"
 				}
 			},
 			"core/query-pagination-previous": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--large)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
 					"textTransform": "uppercase"
 				}
 			},

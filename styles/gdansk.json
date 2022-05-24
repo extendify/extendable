@@ -373,7 +373,7 @@
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--preset--font-size--large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
-					"letterSpacing": "0.03em",
+					"letterSpacing": "0.02em",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
 					"textTransform": "uppercase"
 				}

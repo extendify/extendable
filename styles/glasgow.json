@@ -260,10 +260,10 @@
 			},
 			"core/site-title": {
 				"typography": {
-					"lineHeight": "var(--wp--custom--typography--line-height--normal)",
 					"fontSize": "clamp(1.2rem, 3vw, 1.5rem)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
-					"letterSpacing": "-.025em"
+					"letterSpacing": "-.025em",
+					"lineHeight": "var(--wp--custom--typography--line-height--normal)"
 				}
 			}
 		},

@@ -156,8 +156,13 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
  */
 
 /*
- * Responsive menu animation and customization.
+ * --------------------------------------------------------
+ *  Custom - experimental
+ * --------------------------------------------------------
  */
+
+/* Responsive menu animation and customization.
+----------------------------------------------------------*/
 @media (max-width: 599px) {
 	.wp-block-navigation__responsive-container {
 		display: block !important;

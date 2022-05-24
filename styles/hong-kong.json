@@ -163,7 +163,7 @@
 				},
 				{
 					"name": "Medium",
-					"size": "1rem",
+					"size": "clamp(1.07rem, 2vw, 1.18rem)",
 					"slug": "medium"
 				},
 				{

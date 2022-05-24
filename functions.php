@@ -25,8 +25,6 @@ if ( ! function_exists( 'extendable_support' ) ) :
 		// Enqueue editor styles.
 		add_editor_style( 'style.css' );
 
-		remove_theme_support( 'core-block-patterns' );
-
 	}
 
 endif;

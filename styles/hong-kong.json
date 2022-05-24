@@ -248,9 +248,9 @@
 			"core/query-title": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--space-mono)",
+					"fontSize": "var(--wp--preset--font-size--gigantic)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
-					"lineHeight": "var(--wp--custom--typography--line-height--small)",
-					"fontSize": "var(--wp--custom--typography--font-size--gigantic)"
+					"lineHeight": "var(--wp--custom--typography--line-height--small)"
 				}
 			},
 			"core/site-title": {

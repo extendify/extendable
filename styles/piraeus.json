@@ -227,6 +227,9 @@
 					"radius": "0px",
 					"width": "2px !important"
 				},
+				"color": {
+					"background": "var(--wp--preset--color--primary)"
+				},
 				"spacing": {
 					"padding": {
 						"top": "1.2rem",

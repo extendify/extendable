@@ -83,6 +83,15 @@
 			]
 		},
 		"custom": {
+			"blocks": {
+				"core/table": {
+					"variantStripes": {
+						"color": {
+							"background": "var(--wp--preset--color--primary)"
+						}
+					}
+				}
+			},
 			"elements": {
 				"link": {
 					"interactive": {

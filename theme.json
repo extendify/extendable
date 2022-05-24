@@ -137,21 +137,9 @@
 					]
 				},
 				{
-					"fontFamily": "\"Source Serif 4\", serif",
+					"fontFamily": "\"Inter\", sans-serif",
 					"name": "Headings (System Font)",
-					"slug": "heading-font",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Source Serif 4",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "100 900",
-							"src": [
-								"file:./assets/fonts/SourceSerif4/SourceSerif4-VariableFont_opsz,wght.woff2"
-							]
-						}
-					]
+					"slug": "heading-font"
 				}
 			],
 			"fontSizes": [

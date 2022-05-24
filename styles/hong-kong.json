@@ -107,6 +107,10 @@
 				"outer": "var(--wp--custom--spacing--small, 1.25rem)"
 			},
 			"typography": {
+				"fontSmoothing": {
+					"moz": "grayscale",
+					"webkit": "antialiased"
+				},
 				"font-size": {
 					"huge": "clamp(2.35rem, 5vw, 4rem)",
 					"gigantic": "clamp(2.75rem, 6vw, 5rem)",
@@ -154,12 +158,12 @@
 			"fontSizes": [
 				{
 					"name": "Small",
-					"size": "0.75rem",
+					"size": "0.95rem",
 					"slug": "small"
 				},
 				{
 					"name": "Medium",
-					"size": "1rem",
+					"size": "clamp(1.07rem, 2vw, 1.18rem)",
 					"slug": "medium"
 				},
 				{
@@ -201,14 +205,12 @@
 	},
 	"styles": {
 		"blocks": {
-			"core/navigation": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--medium)"
-				}
-			},
 			"core/button": {
 				"border": {
 					"radius": "100rem"
+				},
+				"color": {
+					"background": "var(--wp--preset--color--primary)"
 				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--medium)",
@@ -216,19 +218,24 @@
 				},
 				"spacing": {
 					"padding": {
-						"top": "clamp(1.1rem, 1.5vw, 1.5rem)",
-						"bottom": "clamp(1.1rem, 1.5vw, 1.5rem)",
-						"right": "clamp(1.25rem, 2.5vw, 2rem)",
-						"left": "clamp(1.25rem, 2.5vw, 2rem)"
+						"top": "1.4rem",
+						"bottom": "1.4rem",
+						"right": "2rem",
+						"left": "2rem"
 					}
+				}
+			},
+			"core/navigation": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)"
 				}
 			},
 			"core/post-title": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--source-serif-4)",
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--preset--font-size--huge)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
-					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
-					"fontSize": "var(--wp--custom--typography--font-size--gigantic)"
+					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"core/post-comments": {
@@ -241,9 +248,9 @@
 			"core/query-title": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--space-mono)",
+					"fontSize": "var(--wp--preset--font-size--gigantic)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
-					"lineHeight": "var(--wp--custom--typography--line-height--small)",
-					"fontSize": "var(--wp--custom--typography--font-size--gigantic)"
+					"lineHeight": "var(--wp--custom--typography--line-height--small)"
 				}
 			},
 			"core/site-title": {

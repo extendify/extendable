@@ -136,8 +136,8 @@
 			}
 		},
 		"layout": {
-			"contentSize": "700px",
-			"wideSize": "68em"
+			"contentSize": "650px",
+			"wideSize": "80rem"
 		},
 		"typography": {
 			"dropCap": false,
@@ -224,10 +224,14 @@
 					"radius": "999px",
 					"width": "1px !important"
 				},
+				"color": {
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--secondary)"
+				},
 				"spacing": {
 					"padding": {
-						"top": "clamp(0.9rem, 1.5vw, 1.1rem)",
-						"bottom": "clamp(0.8rem, 1.5vw, 1rem)",
+						"top": "clamp(0.9rem, 1.5vw, 1.2rem)",
+						"bottom": "clamp(0.8rem, 1.5vw, 1.1rem)",
 						"right": "clamp(1.6rem, 2.5vw, 2rem)",
 						"left": "clamp(1.6rem, 2.5vw, 2rem)"
 					}

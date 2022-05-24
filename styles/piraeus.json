@@ -229,10 +229,10 @@
 				},
 				"spacing": {
 					"padding": {
-						"top": "clamp(0.8rem, 1.5vw, 1rem)",
-						"bottom": "clamp(0.6rem, 1.5vw, 0.8rem)",
-						"right": "clamp(1.3rem, 2.5vw, 1.6rem)",
-						"left": "clamp(1.3rem, 2.5vw, 1.6rem)"
+						"top": "1.2rem",
+						"bottom": "1.2rem",
+						"right": "1.9rem",
+						"left": "1.9rem"
 					}
 				},
 				"typography": {

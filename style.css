@@ -204,3 +204,12 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
 		scroll-behavior: auto !important;
 	}
 }
+
+/*
+ * Matching caret and focus outline colors.
+ */
+input {
+	caret-color: var(--wp--preset--color--tertiary);
+	outline-color: var(--wp--preset--color--tertiary);
+	outline-offset: 0.2ch;
+}

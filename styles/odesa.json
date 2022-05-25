@@ -140,8 +140,8 @@
 			}
 		},
 		"layout": {
-			"contentSize": "640px",
-			"wideSize": "76rem"
+			"contentSize": "710px",
+			"wideSize": "77rem"
 		},
 		"typography": {
 			"dropCap": false,

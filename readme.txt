@@ -27,3 +27,80 @@ This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
+
+This theme bundles the following third-party resources:
+
+*Fonts*
+
+Arsenal Font
+Copyright: 2012 The Arsenal Project Authors (andrij.design@gmail.com)
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/google/fonts/tree/main/ofl/arsenal
+
+Geom Font
+Copyright: Thanos Poulakidas <thanospoulakidas@gmail.com>
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/ThanosPoulakidas/Geom
+
+Heebo Font
+Copyright: Oded Ezer,
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/odedezer/heebo
+
+Inter Font
+Copyright: 2016-2020 The Inter Project Authors
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/rsms/inter
+
+Koulen Font
+Copyright: Danh Hong <danhhong@gmail.com>
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/danhhong/Koulen
+
+Montserrat Font
+Copyright: Julieta Ulanovsky <julieta.ulanovsky@gmail.com>
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/JulietaUla/Montserrat
+
+Noto Serif Display Font
+Copyright: 2016 Google Inc. All Rights Reserved.
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://fonts.google.com/noto/specimen/Noto+Serif+Display?query=noto+serif+display
+
+Radio Canada Font
+Copyright: 2019 The Radio-Canada Project Authors (https://github.com/cbcrc/radiocanadafonts)
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/cbcrc/radiocanadafonts
+
+Roboto Flex Font
+Copyright: 2011 The Roboto Flex Project Authors (https://github.com/googlefonts/roboto-flex)
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/googlefonts/roboto-flex
+
+Rubik Font
+Copyright: 2015 The Rubik Project Authors (https://github.com/googlefonts/rubik)
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/googlefonts/Rubik
+
+Source Serif 4 Font
+Copyright: 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe in the United States and/or other countries.
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/adobe-fonts/source-serif
+
+Space Mono Font
+Copyright: 2016 Google Inc. All Rights Reserved.
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/googlefonts/spacemono
+
+*Images:*
+
+WordPress screenshot.png contains the following images:
+
+Chuck Grimmett: "McDonald Creek in black and white, Glacier National Park", CC0
+https://wordpress.org/photos/photo/4906200918/
+
+Rich Tabor: "Abstract architecture, black and white", CC0
+https://wordpress.org/photos/photo/6261d87ca7/
+
+Rich Tabor: "Architecture, Atlanta, Abstract, Black and White", CC0
+https://wordpress.org/photos/photo/43261db65c/

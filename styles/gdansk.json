@@ -388,7 +388,7 @@
 			},
 			"link": {
 				"color": {
-					"text": "var(--wp--preset--color--primary)"
+					"text": "var(--wp--preset--color--foreground)"
 				}
 			}
 		},

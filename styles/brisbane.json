@@ -255,6 +255,11 @@
 					"fontSize": "var(--wp--preset--font-size--small)"
 				}
 			},
+			"core/comments-title": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--x-large)"
+				}
+			},
 			"core/group": {
 				"border": {
 					"radius": {

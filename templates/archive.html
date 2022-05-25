@@ -13,8 +13,8 @@
 
 			<!-- wp:post-featured-image {"isLink":true,"align":"wide"} /-->
 
-			<!-- wp:columns {"align":"wide"} -->
-			<div class="wp-block-columns alignwide">
+			<!-- wp:columns {"align":"wide","style":{"spacing":{"margin":{"bottom":"0"}}}} -->
+			<div class="wp-block-columns alignwide" style="margin-bottom: 0;">
 				<!-- wp:column {"width":"650px"} -->
 				<div class="wp-block-column" style="flex-basis:650px">
 					<!-- wp:post-excerpt /-->
@@ -30,8 +30,8 @@
 			</div>
 			<!-- /wp:columns -->
 
-			<!-- wp:spacer {"height":112} -->
-			<div style="height:112px" aria-hidden="true" class="wp-block-spacer"></div>
+			<!-- wp:spacer {"height":var(--wp--custom--spacing--small)} -->
+			<div style="height:var(--wp--custom--spacing--small)" aria-hidden="true" class="wp-block-spacer"></div>
 			<!-- /wp:spacer -->
 
 		<!-- /wp:post-template -->

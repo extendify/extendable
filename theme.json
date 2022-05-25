@@ -94,9 +94,9 @@
 					"webkit": "antialiased"
 				},
 				"font-size": {
-					"huge": "clamp(2rem, 0.982rem + 5.09vw, 4.8rem)",
-					"gigantic": "clamp(2.8rem, 1.818rem + 4.91vw, 5.5rem)",
-					"colossal": "clamp(3.3rem, 2.282rem + 5.09vw, 6.1rem)"
+					"huge": "clamp(2.25rem, 1.977rem + 1.36vw, 3rem)",
+					"gigantic": "clamp(3.125rem, 2.489rem + 3.18vw, 4.875rem)",
+					"colossal": "clamp(3.875rem, 3.239rem + 3.18vw, 5.625rem)"
 				},
 				"font-weight": {
 					"black": "900",
@@ -152,22 +152,22 @@
 					"slug": "small"
 				},
 				{
-					"size": "clamp(1.08rem, 1.055rem + 0.13vw, 1.15rem)",
+					"size": "1.15rem",
 					"slug": "medium"
 				},
 				{
 					"name": "Large (H6)",
-					"size": "clamp(1.2rem, 0.873rem + 1.64vw, 2.1rem)",
+					"size": "clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem)",
 					"slug": "large"
 				},
 				{
 					"name": "X Large (H5)",
-					"size": "clamp(1.5rem, 0.882rem + 3.09vw, 3.2rem)",
+					"size": "clamp(1.25rem, 1.068rem + 0.91vw, 1.75rem)",
 					"slug": "x-large"
 				},
 				{
 					"name": "2X Large (H4)",
-					"size": "clamp(1.8rem, 0.855rem + 4.73vw, 4.4rem)",
+					"size": "clamp(1.75rem, 1.568rem + 0.91vw, 2.25rem)",
 					"slug": "xx-large"
 				},
 				{
@@ -222,7 +222,8 @@
 			},
 			"core/comments-title": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--x-large)"
+					"fontSize": "var(--wp--preset--font-size--large)",
+					"fontWeight": "(--wp--custom--typography--font-weight--bold)"
 				}
 			},
 			"core/navigation": {
@@ -243,29 +244,46 @@
 				}
 			},
 			"core/post-title": {
+				"spacing": {
+					"margin": {
+						"bottom": "var(--wp--custom--spacing--small)",
+						"top": "var(--wp--custom--spacing--small)"
+					}
+				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--preset--font-size--gigantic)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
-					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
-					"fontSize": "var(--wp--preset--font-size--huge)"
+					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"core/pullquote": {
 				"border": {
 					"width": "1px 0"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--medium)"
 				}
 			},
 			"core/quote": {
 				"border": {
 					"width": "1px"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--large)"
 				}
 			},
 			"core/query-title": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--preset--font-size--huge)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
-					"lineHeight": "var(--wp--custom--typography--line-height--small)",
-					"fontSize": "var(--wp--preset--font-size--huge)"
+					"lineHeight": "var(--wp--custom--typography--line-height--small)"
+				}
+			},
+			"core/separator": {
+				"color": {
+					"text": "var(--wp--preset--color--tertiary)"
 				}
 			},
 			"core/site-title": {
@@ -274,7 +292,7 @@
 					"fontSize": "var(--wp--preset--font-size--large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
 					"letterSpacing": "0.02em",
-					"lineHeight": "var(--wp--custom--typography--line-height--normal)"
+					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			}
 		},
@@ -320,7 +338,7 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--preset--font-size--x-large)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--normal)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 					"lineHeight": "var(--wp--custom--typography--line-height--normal)",
 					"textTransform": "uppercase"
 				}
@@ -329,8 +347,8 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--preset--font-size--large)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--normal)",
-					"letterSpacing": "0.04em",
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"letterSpacing": "0.03em",
 					"lineHeight": "var(--wp--custom--typography--line-height--normal)",
 					"textTransform": "uppercase"
 				}

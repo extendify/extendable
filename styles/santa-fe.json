@@ -137,8 +137,8 @@
 			}
 		},
 		"layout": {
-			"contentSize": "780px",
-			"wideSize": "1240px"
+			"contentSize": "720px",
+			"wideSize": "80rem"
 		},
 		"typography": {
 			"dropCap": false,

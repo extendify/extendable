@@ -251,6 +251,11 @@
 					"textTransform": "uppercase"
 				}
 			},
+			"core/comment-edit-link": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)"
+				}
+			},
 			"core/navigation": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--small)"

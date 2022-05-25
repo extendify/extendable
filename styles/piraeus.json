@@ -248,6 +248,11 @@
 					"textTransform": "uppercase"
 				}
 			},
+			"core/comment-edit-link": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)"
+				}
+			},
 			"core/navigation": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--body-font)",

@@ -188,7 +188,7 @@
 				},
 				{
 					"name": "2X Large (H4)",
-					"size": "clamp(2rem, 4vw, 13rem)",
+					"size": "clamp(2rem, 4vw, 3rem)",
 					"slug": "xx-large"
 				},
 				{

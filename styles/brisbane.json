@@ -135,7 +135,7 @@
 			"dropCap": false,
 			"fontFamilies": [
 				{
-					"fontFamily": "\"Arsenal\", sans-serif",
+					"fontFamily": "\"Arsenal\", serif",
 					"name": "Headings (System Font)",
 					"slug": "heading-font",
 					"fontFace": [

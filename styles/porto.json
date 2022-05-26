@@ -287,6 +287,13 @@
 					}
 				}
 			},
+			"core/post-featured-image": {
+				"spacing": {
+					"margin": {
+						"bottom": "var(--wp--custom--spacing--large) !important"
+					}
+				}
+			},
 			"core/post-title": {
 				"spacing": {
 					"margin": {
@@ -320,7 +327,7 @@
 				"spacing": {
 					"margin": {
 						"bottom": "var(--wp--custom--spacing--large) !important",
-						"top": "var(--wp--custom--spacing--large) !important"
+						"top": "var(--wp--custom--spacing--medium) !important"
 					}
 				}
 			},

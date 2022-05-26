@@ -113,9 +113,9 @@
 			},
 			"typography": {
 				"font-size": {
-					"huge": "clamp(2.9rem, 5vw, 3.9rem)",
-					"gigantic": "clamp(3.5rem, 6vw, 4.7rem)",
-					"colossal": "clamp(4rem, 8vw, 5.6rem)"
+					"huge": "clamp(2.25rem, 1.977rem + 1.36vw, 3rem)",
+					"gigantic": "clamp(3.125rem, 2.489rem + 3.18vw, 4.875rem)",
+					"colossal": "clamp(3.875rem, 3.239rem + 3.18vw, 5.625rem)"
 				},
 				"font-weight": {
 					"black": "900",
@@ -178,28 +178,26 @@
 			],
 			"fontSizes": [
 				{
-					"name": "Small",
-					"size": "0.94rem",
+					"size": "clamp(0.94rem, 0.9rem + 0.2vw, 1.05rem)",
 					"slug": "small"
 				},
 				{
-					"name": "Medium",
-					"size": "clamp(1.08rem, 2vw, 1.15rem)",
+					"size": "1.15rem",
 					"slug": "medium"
 				},
 				{
 					"name": "Large (H6)",
-					"size": "clamp(1.7rem, 3vw, 2rem)",
+					"size": "clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem)",
 					"slug": "large"
 				},
 				{
 					"name": "X Large (H5)",
-					"size": "clamp(2.1rem, 3vw, 2.9rem)",
+					"size": "clamp(1.25rem, 1.068rem + 0.91vw, 1.75rem)",
 					"slug": "x-large"
 				},
 				{
 					"name": "2X Large (H4)",
-					"size": "clamp(2.5rem, 4vw, 3rem)",
+					"size": "clamp(1.75rem, 1.568rem + 0.91vw, 2.25rem)",
 					"slug": "xx-large"
 				},
 				{
@@ -272,8 +270,8 @@
 			"core/post-title": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 					"fontSize": "var(--wp--preset--font-size--huge)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
@@ -303,6 +301,14 @@
 					"fontSize": "var(--wp--preset--font-size--medium)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 					"textTransform": "uppercase"
+				}
+			},
+			"core/query-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontSize": "var(--wp--preset--font-size--xx-large)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
+					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"core/quote": {

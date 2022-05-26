@@ -269,6 +269,13 @@
 					"fontSize": "var(--wp--preset--font-size--small)"
 				}
 			},
+			"core/post-comments": {
+				"spacing": {
+					"padding": {
+						"top": "var(--wp--custom--spacing--small)"
+					}
+				}
+			},
 			"core/post-date": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--small)"

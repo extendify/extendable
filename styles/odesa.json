@@ -117,9 +117,9 @@
 					"webkit": "antialiased"
 				},
 				"font-size": {
-					"huge": "clamp(2.75rem, 2.477rem + 1.36vw, 3.5rem)",
-					"gigantic": "clamp(4.125rem, 3.716rem + 2.05vw, 5.25rem)",
-					"colossal": "clamp(4.625rem, 4.08rem + 2.73vw, 6.125rem)"
+					"huge": "clamp(2.25rem, 1.977rem + 1.36vw, 3rem)",
+					"gigantic": "clamp(3.125rem, 2.489rem + 3.18vw, 4.875rem)",
+					"colossal": "clamp(3.875rem, 3.239rem + 3.18vw, 5.625rem)"
 				},
 				"font-weight": {
 					"black": "900",
@@ -183,28 +183,26 @@
 			],
 			"fontSizes": [
 				{
-					"name": "Small",
 					"size": "clamp(0.94rem, 0.9rem + 0.2vw, 1.05rem)",
 					"slug": "small"
 				},
 				{
-					"name": "Medium",
 					"size": "1.15rem",
 					"slug": "medium"
 				},
 				{
 					"name": "Large (H6)",
-					"size": "clamp(1.25rem, 1.114rem + 0.68vw, 1.625rem)",
+					"size": "clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem)",
 					"slug": "large"
 				},
 				{
 					"name": "X Large (H5)",
-					"size": "clamp(1.688rem, 1.46rem + 1.14vw, 2.313rem)",
+					"size": "clamp(1.25rem, 1.068rem + 0.91vw, 1.75rem)",
 					"slug": "x-large"
 				},
 				{
 					"name": "2X Large (H4)",
-					"size": "clamp(2.188rem, 1.892rem + 1.48vw, 3rem)",
+					"size": "clamp(1.75rem, 1.568rem + 0.91vw, 2.25rem)",
 					"slug": "xx-large"
 				},
 				{
@@ -290,7 +288,7 @@
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
-					"fontSize": "var(--wp--preset--font-size--gigantic)",
+					"fontSize": "var(--wp--preset--font-size--huge)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
@@ -328,7 +326,7 @@
 			"core/query-title": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
-					"fontSize": "var(--wp--preset--font-size--huge)",
+					"fontSize": "var(--wp--preset--font-size--xx-large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}

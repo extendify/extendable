@@ -117,9 +117,9 @@
 					"webkit": "antialiased"
 				},
 				"font-size": {
-					"huge": "clamp(2.6rem, 5vw, 3.6rem)",
-					"gigantic": "clamp(3rem, 6vw, 4.8rem)",
-					"colossal": "clamp(3.6rem, 8vw, 5.6rem)"
+					"huge": "clamp(2.25rem, 1.977rem + 1.36vw, 3rem)",
+					"gigantic": "clamp(3.125rem, 2.489rem + 3.18vw, 4.875rem)",
+					"colossal": "clamp(3.875rem, 3.239rem + 3.18vw, 5.625rem)"
 				},
 				"font-weight": {
 					"black": "900",
@@ -141,7 +141,7 @@
 		},
 		"layout": {
 			"contentSize": "670px",
-			"wideSize": "79rem"
+			"wideSize": "68rem"
 		},
 		"typography": {
 			"dropCap": false,
@@ -183,28 +183,26 @@
 			],
 			"fontSizes": [
 				{
-					"name": "Small",
-					"size": "0.95rem",
+					"size": "clamp(0.94rem, 0.9rem + 0.2vw, 1.05rem)",
 					"slug": "small"
 				},
 				{
-					"name": "Medium",
-					"size": "clamp(1.07rem, 2vw, 1.18rem)",
+					"size": "1.15rem",
 					"slug": "medium"
 				},
 				{
 					"name": "Large (H6)",
-					"size": "clamp(1.3rem, 3vw, 1.8rem)",
+					"size": "clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem)",
 					"slug": "large"
 				},
 				{
-					"name": "X-large (H5)",
-					"size": "clamp(2.18rem, 4vw, 2.85rem)",
+					"name": "X Large (H5)",
+					"size": "clamp(1.25rem, 1.068rem + 0.91vw, 1.75rem)",
 					"slug": "x-large"
 				},
 				{
 					"name": "2X Large (H4)",
-					"size": "clamp(2.4rem, 4vw, 3.18rem)",
+					"size": "clamp(1.75rem, 1.568rem + 0.91vw, 2.25rem)",
 					"slug": "xx-large"
 				},
 				{
@@ -283,7 +281,7 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
-					"fontSize": "var(--wp--custom--typography--font-size--gigantic)",
+					"fontSize": "var(--wp--custom--typography--font-size--huge)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
@@ -327,7 +325,7 @@
 			"core/query-title": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
-					"fontSize": "var(--wp--preset--font-size--huge)",
+					"fontSize": "var(--wp--preset--font-size--xx-large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}

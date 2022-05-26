@@ -3,7 +3,7 @@ Contributors: extendify, richtabor, colorful-tones
 Requires at least: 6.0
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Extendable is a distinct, dynamic block theme designed as a canvas for your next online venture. Sporting multiple style variations, Extendable is the most expressive block theme yet. Go fresh, bold, bohemaian or minimal — with a single click.
 
 == Changelog ==
+
+= 1.0.2 - 2022-05-26 =
+- New: Porto style variant
+- Various improvements to existing variations
 
 == Copyright ==
 
@@ -47,10 +51,20 @@ Copyright: Oded Ezer,
 License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
 Source: https://github.com/odedezer/heebo
 
+Inconsolatas Font
+Copyright: 2006 The Inconsolata Project Authors (https://github.com/cyrealtype/Inconsolata)
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/googlefonts/inconsolata
+
 Inter Font
 Copyright: 2016-2020 The Inter Project Authors
 License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
 Source: https://github.com/rsms/inter
+
+Karla Font
+Copyright: Jonathan Pinhorn <jonpinhorn.typedesign@gmail.com>
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/googlefonts/karla
 
 Koulen Font
 Copyright: Danh Hong <danhhong@gmail.com>

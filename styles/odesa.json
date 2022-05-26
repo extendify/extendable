@@ -282,6 +282,12 @@
 				}
 			},
 			"core/post-title": {
+				"spacing": {
+					"margin": {
+						"bottom": "var(--wp--custom--spacing--small)",
+						"top": "var(--wp--custom--spacing--small)"
+					}
+				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading-font)",
 					"fontSize": "var(--wp--preset--font-size--gigantic)",

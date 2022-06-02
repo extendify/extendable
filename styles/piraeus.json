@@ -19,17 +19,17 @@
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#383838", "#f0ede6"],
+					"colors": ["#383838", "#0d0c0c"],
 					"slug": "background-and-primary",
 					"name": "Background and primary"
 				},
 				{
-					"colors": ["#383838", "#0d0c0c"],
+					"colors": ["#383838", "#f0ede6"],
 					"slug": "background-and-secondary",
 					"name": "Background and secondary"
 				},
 				{
-					"colors": ["#f0ede6", "#0d0c0c"],
+					"colors": ["#0d0c0c", "#f0ede6"],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				}
@@ -89,12 +89,12 @@
 				},
 				{
 					"slug": "primary",
-					"color": "#f0ede6",
+					"color": "#0d0c0c",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#0d0c0c",
+					"color": "#f0ede6",
 					"name": "Secondary"
 				},
 				{
@@ -235,6 +235,7 @@
 		"blocks": {
 			"core/button": {
 				"border": {
+					"color": "var(--wp--preset--color--primary)",
 					"radius": {
 						"bottomLeft": "0px",
 						"bottomRight": "0px",
@@ -251,7 +252,7 @@
 				"spacing": {
 					"padding": {
 						"top": "1.2rem",
-						"bottom": "1.2rem",
+						"bottom": "1rem",
 						"right": "1.9rem",
 						"left": "1.9rem"
 					}
@@ -376,7 +377,7 @@
 						"topRight": "0px"
 					},
 					"style": "solid solid solid solid",
-					"width": "1px"
+					"width": "6px 0"
 				},
 				"color": {
 					"background": "var(--wp--preset--color--tertiary)",
@@ -424,7 +425,7 @@
 				"border": {
 					"color": "var(--wp--preset--color--primary)",
 					"style": "solid",
-					"width": "6px"
+					"width": "0 0 0 6px"
 				},
 				"spacing": {
 					"margin": {

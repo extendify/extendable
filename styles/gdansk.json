@@ -29,7 +29,7 @@
 					"name": "Background and secondary"
 				},
 				{
-					"colors": ["#0c0c0b", "#115239"],
+					"colors": ["#0c0c0b", "#083021"],
 					"slug": "background-and-tertiary",
 					"name": "Background and tertiary"
 				}
@@ -99,7 +99,7 @@
 				},
 				{
 					"slug": "tertiary",
-					"color": "#115239",
+					"color": "#083021",
 					"name": "Tertiary"
 				}
 			]
@@ -236,6 +236,7 @@
 		"blocks": {
 			"core/button": {
 				"border": {
+					"color": "var(--wp--preset--color--primary)",
 					"radius": {
 						"bottomLeft": "999px",
 						"bottomRight": "999px",
@@ -243,11 +244,11 @@
 						"topRight": "999px"
 					},
 					"style": "solid solid solid solid",
-					"width": "1px !important"
+					"width": "4px !important"
 				},
 				"color": {
 					"background": "var(--wp--preset--color--primary)",
-					"text": "var(--wp--preset--color--secondary)"
+					"text": "var(--wp--preset--color--background)"
 				},
 				"spacing": {
 					"padding": {
@@ -376,10 +377,11 @@
 						"topLeft": "0px",
 						"topRight": "0px"
 					},
-					"width": "7px"
+					"style": "solid",
+					"width": "7px 0"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--tertiary)",
+					"background": "transparent",
 					"text": "var(--wp--preset--color--foreground)"
 				},
 				"spacing": {
@@ -424,7 +426,7 @@
 				"border": {
 					"color": "var(--wp--preset--color--primary)",
 					"style": "solid",
-					"width": "5px"
+					"width": "0 0 0 5px"
 				},
 				"spacing": {
 					"margin": {

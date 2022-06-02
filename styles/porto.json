@@ -216,6 +216,7 @@
 		"blocks": {
 			"core/button": {
 				"border": {
+					"color": "currentColor",
 					"radius": {
 						"bottomLeft": "0px",
 						"bottomRight": "0px",
@@ -357,7 +358,7 @@
 						"topRight": "0px"
 					},
 					"style": "solid solid solid solid",
-					"width": "1px 0"
+					"width": "2px 0"
 				},
 				"color": {
 					"background": "var(--wp--preset--color--tertiary)",
@@ -405,7 +406,7 @@
 				"border": {
 					"color": "var(--wp--preset--color--primary)",
 					"style": "solid",
-					"width": "1px"
+					"width": "0 0 0 2px"
 				},
 				"spacing": {
 					"margin": {

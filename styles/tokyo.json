@@ -427,7 +427,7 @@
 				"border": {
 					"color": "var(--wp--preset--color--primary)",
 					"style": "solid",
-					"width": "1px"
+					"width": "0 0 0 1px"
 				},
 				"spacing": {
 					"margin": {

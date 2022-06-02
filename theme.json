@@ -205,6 +205,7 @@
 		"blocks": {
 			"core/button": {
 				"border": {
+					"color": "currentColor",
 					"radius": {
 						"bottomLeft": "100rem",
 						"bottomRight": "100rem",
@@ -345,6 +346,7 @@
 						"topLeft": "0px",
 						"topRight": "0px"
 					},
+					"style": "solid",
 					"width": "1px 0"
 				},
 				"color": {
@@ -393,7 +395,7 @@
 				"border": {
 					"color": "var(--wp--preset--color--primary)",
 					"style": "solid",
-					"width": "1px"
+					"width": "0 0 0 1px"
 				},
 				"spacing": {
 					"margin": {

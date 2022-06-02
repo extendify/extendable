@@ -24,12 +24,12 @@
 					"name": "Background and primary"
 				},
 				{
-					"colors": ["#1f033b", "#a6b1bd"],
+					"colors": ["#1f033b", "#d5dce3"],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#1f033b", "#d1c6ae"],
+					"colors": ["#1f033b", "#f0ede4"],
 					"slug": "primary-and-tertiary",
 					"name": "Primary and tertiary"
 				}
@@ -94,12 +94,12 @@
 				},
 				{
 					"slug": "secondary",
-					"color": "#a6b1bd",
+					"color": "#d5dce3",
 					"name": "Secondary"
 				},
 				{
 					"slug": "tertiary",
-					"color": "#d1c6ae",
+					"color": "#f0ede4",
 					"name": "Tertiary"
 				}
 			]

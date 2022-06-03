@@ -62,7 +62,7 @@
 				},
 				{
 					"slug": "background",
-					"color": "#EBF0EE",
+					"color": "#F8FAF9",
 					"name": "Background"
 				},
 				{
@@ -77,7 +77,7 @@
 				},
 				{
 					"slug": "tertiary",
-					"color": "#f5dfdc",
+					"color": "#F8ECEA",
 					"name": "Tertiary"
 				}
 			]

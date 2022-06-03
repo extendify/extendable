@@ -284,10 +284,10 @@
 			"core/group": {
 				"border": {
 					"radius": {
-						"bottomLeft": "140px",
-						"bottomRight": "98px",
-						"topLeft": "210px",
-						"topRight": "80px"
+						"bottomLeft": "21%",
+						"bottomRight": "18%",
+						"topLeft": "16%",
+						"topRight": "10%"
 					}
 				}
 			},

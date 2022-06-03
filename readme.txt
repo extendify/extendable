@@ -55,6 +55,11 @@ Copyright: Oded Ezer,
 License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
 Source: https://github.com/odedezer/heebo
 
+Hind Font
+Copyright: 2022 Indian Type Foundry
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/itfoundry/hind
+
 Inconsolatas Font
 Copyright: 2006 The Inconsolata Project Authors (https://github.com/cyrealtype/Inconsolata)
 License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1

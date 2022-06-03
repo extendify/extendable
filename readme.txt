@@ -3,7 +3,7 @@ Contributors: extendify, richtabor, colorful-tones
 Requires at least: 6.0
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,12 +13,15 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 1.0.4 - 2022-06-03 =
+- New: Kampala style variation
+
 = 1.0.3 - 2022-06-02 =
 - Santa Fe style variation: update tertiary color
 - Various improvements to existing variations
 
 = 1.0.2 - 2022-05-26 =
-- New: Porto style variant
+- New: Porto style variation
 - Various improvements to existing variations
 
 == Copyright ==
@@ -54,6 +57,11 @@ Heebo Font
 Copyright: Oded Ezer,
 License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
 Source: https://github.com/odedezer/heebo
+
+Hind Font
+Copyright: 2022 Indian Type Foundry
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/itfoundry/hind
 
 Inconsolatas Font
 Copyright: 2006 The Inconsolata Project Authors (https://github.com/cyrealtype/Inconsolata)

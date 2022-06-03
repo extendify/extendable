@@ -227,10 +227,10 @@
 				},
 				"spacing": {
 					"padding": {
-						"top": "1.5rem",
-						"bottom": "1.5rem",
-						"right": "2rem",
-						"left": "2rem"
+						"top": "clamp(1.1rem, 1.5vw, 1.3rem)",
+						"bottom": "clamp(1.1rem, 1.5vw, 1.3rem)",
+						"right": "clamp(1.5rem, 2.5vw, 2rem)",
+						"left": "clamp(1.5rem, 2.5vw, 2rem)"
 					}
 				},
 				"typography": {

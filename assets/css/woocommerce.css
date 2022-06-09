@@ -1,0 +1,72 @@
+/*
+ * --------------------------------------------------------
+ *  WooCommerce
+ * --------------------------------------------------------
+ */
+
+/*
+ * --------------------------------------------------------
+ *  All of our variables.
+ *  These could probably live in theme.json.
+ * --------------------------------------------------------
+ */
+
+.woocommerce {
+	--wc--col-min: 25ch;
+	--wc--gap: var(--wp--style--block-gap, 1rem);
+	--wc--img-ratio: 1/1;
+	--wc--spacing--sm: var(--wp--custom--spacing--small);
+	--wc--spacing--md: var(--wp--custom--spacing--medium);
+	--wc--spacing--lg: var(--wp--custom--spacing--large);
+	--wc--spacing--outer: var(--wp--custom--spacing--outer);
+	--wc--z-index-xs: -1;
+	--wc--z-index-sm: 1;
+	--wc--z-index-md: 5;
+	--wc--z-index-lg: 10;
+	--wc--z-index-xl: 20;
+	--wc--z-index-xxl: 25;
+	--wc--z-index-xxxl: 30;
+}
+
+/*
+ * --------------------------------------------------------
+ *  Products lists
+ * --------------------------------------------------------
+ */
+
+.woocommerce :is(.products) {
+	display: grid;
+	grid-gap: var(--wc--gap);
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--wc--col-min)), 1fr));
+	list-style: none;
+	margin: var(--wc--spacing--md) 0;
+	padding: 0;
+}
+
+.woocommerce :is(.products) > .product {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wc--gap);
+	position: relative;
+}
+
+.woocommerce :is(.product) .size-woocommerce_thumbnail {
+	aspect-ratio: var(--wc-img-ratio);
+	object-fit: cover;
+	width: 100%;
+}
+
+.woocommerce :is(.product) .woocommerce-loop-product__title {
+	font-size: var(--wp--preset--font-size--x-large);
+}
+
+.woocommerce :is(.product) .onsale {
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--foreground);
+	opacity: 0.8;
+	padding: calc(0.5 * var(--wc--spacing--sm));
+	position: absolute;
+	right: calc(0.5 * var(--wc--spacing--sm));
+	top: calc(0.5 * var(--wc--spacing--sm));
+	z-index: var(--wc--z-index-md);
+}

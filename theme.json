@@ -327,7 +327,7 @@
 				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--gigantic)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
 					"letterSpacing": "0",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
@@ -381,7 +381,7 @@
 			"core/query-title": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--huge)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
 					"lineHeight": "var(--wp--custom--typography--line-height--small)"
 				}
 			},
@@ -419,7 +419,7 @@
 			"h1": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--colossal)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
 					"letterSpacing": "-0.03em",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
@@ -427,21 +427,21 @@
 			"h2": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--gigantic)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
 					"lineHeight": "var(--wp--custom--typography--line-height--small)"
 				}
 			},
 			"h3": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--huge)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},
 			"h4": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--xx-large)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			},

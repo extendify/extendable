@@ -158,7 +158,7 @@
 				{
 					"fontFamily": "\"Source Serif 4\", serif",
 					"name": "Body (System Font)",
-					"slug": "body-font",
+					"slug": "body",
 					"fontFace": [
 						{
 							"fontDisplay": "block",
@@ -175,7 +175,7 @@
 				{
 					"fontFamily": "\"Source Serif 4\", serif",
 					"name": "Headings (System Font)",
-					"slug": "heading-font"
+					"slug": "heading"
 				}
 			],
 			"fontSizes": [
@@ -251,7 +251,7 @@
 					}
 				},
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--body-font)",
+					"fontFamily": "var(--wp--preset--font-family--body)",
 					"fontSize": "var(--wp--preset--font-size--medium)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
 					"letterSpacing": "0",
@@ -408,7 +408,7 @@
 			},
 			"core/query-title": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "var(--wp--preset--font-size--xx-large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
 					"lineHeight": "var(--wp--custom--typography--line-height--small)"
@@ -434,7 +434,7 @@
 			},
 			"core/site-title": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "clamp(1.2rem, 3vw, 1.5rem)",
 					"lineHeight": "var(--wp--custom--typography--line-height--normal)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
@@ -449,7 +449,7 @@
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "var(--wp--preset--font-size--colossal)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--extra-light)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
@@ -457,7 +457,7 @@
 			},
 			"h2": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "var(--wp--preset--font-size--gigantic)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
 					"lineHeight": "var(--wp--custom--typography--line-height--small)"
@@ -465,7 +465,7 @@
 			},
 			"h3": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "var(--wp--preset--font-size--huge)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
@@ -473,7 +473,7 @@
 			},
 			"h4": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "var(--wp--preset--font-size--xx-large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
@@ -481,7 +481,7 @@
 			},
 			"h5": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "var(--wp--preset--font-size--x-large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 					"lineHeight": "var(--wp--custom--typography--line-height--normal)",
@@ -490,7 +490,7 @@
 			},
 			"h6": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading-font)",
+					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "var(--wp--preset--font-size--large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
 					"letterSpacing": "0.04em",
@@ -508,7 +508,7 @@
 			"blockGap": "2rem"
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--body-font)",
+			"fontFamily": "var(--wp--preset--font-family--body)",
 			"lineHeight": "var(--wp--custom--typography--line-height--normal)",
 			"fontSize": "var(--wp--preset--font-size--medium)",
 			"fontWeight": "var(--wp--custom--typography--font-weight--regular)"

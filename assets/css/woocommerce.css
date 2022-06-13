@@ -81,6 +81,10 @@
 	margin-bottom: 0.38rem;
 }
 
+.woocommerce .product .price {
+	font-size: var(--wp--preset--font-size--medium);
+}
+
 .woocommerce .product .button {
 	background-color: var(--wc--button--background--static);
 	color: var(--wc--button--color--static);

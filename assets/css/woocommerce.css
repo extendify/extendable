@@ -58,6 +58,7 @@
 .woocommerce .products > .product {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	gap: calc(0.5 * var(--wc--gap));
 	position: relative;
 }

@@ -15,17 +15,10 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 = 1.0.5 - 2022-06-10 =
 - Add no-title.html template
+- Resolve single.html template footer issue
 
 = 1.0.4 - 2022-06-03 =
 - New: Kampala style variation
-
-= 1.0.3 - 2022-06-02 =
-- Santa Fe style variation: update tertiary color
-- Various improvements to existing variations
-
-= 1.0.2 - 2022-05-26 =
-- New: Porto style variation
-- Various improvements to existing variations
 
 == Copyright ==
 

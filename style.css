@@ -7,7 +7,7 @@ Description: Extendable is a distinct, dynamic block theme designed as a canvas 
 Requires at least: 6.0
 Tested up to: 6.0
 Requires PHP: 5.6
-Version: 1.0.4
+Version: 1.0.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: extendable
@@ -160,6 +160,13 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
 ----------------------------------------------------------*/
 .wp-block-table.is-style-stripes tbody tr:nth-child(odd){
 	background-color: var(--wp--custom--blocks--core-table--variant-stripes--color--background, var(--wp--preset--color--tertiary));
+}
+
+/* Quote - 'Plain' variation
+----------------------------------------------------------*/
+blockquote:is(.is-style-plain) {
+	border: none;
+	padding-left: 0;
 }
 
 /*

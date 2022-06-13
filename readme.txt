@@ -3,7 +3,7 @@ Contributors: extendify, richtabor, colorful-tones
 Requires at least: 6.0
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,16 +13,15 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 1.0.6 - 2022-06-13 =
+- Fix: missing style variation title entry for Kampala
+
+= 1.0.5 - 2022-06-10 =
+- Add no-title.html template
+- Resolve single.html template footer issue
+
 = 1.0.4 - 2022-06-03 =
 - New: Kampala style variation
-
-= 1.0.3 - 2022-06-02 =
-- Santa Fe style variation: update tertiary color
-- Various improvements to existing variations
-
-= 1.0.2 - 2022-05-26 =
-- New: Porto style variation
-- Various improvements to existing variations
 
 == Copyright ==
 

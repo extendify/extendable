@@ -131,11 +131,6 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 		$theme_version = wp_get_theme()->get( 'Version' );
 		$version_string = is_string( $theme_version ) ? $theme_version : false;
 
-		// Remove WooCommerce stylesheets.
-		unset( $styles['woocommerce-general'] );
-		unset( $styles['woocommerce-layout'] );
-		unset( $styles['woocommerce-smallscreen'] );
-
 		// Add Extendable's WooCommerce styles.
 		$styles['extendable-woocommerce'] = array(
 			'src'     => get_template_directory_uri() . '/assets/css/woocommerce.css',

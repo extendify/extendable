@@ -31,7 +31,7 @@
 	--wc--z-index-xxxl: 30;
 
 	--wc--button--background--static: var(--wp--preset--color--primary);
-	--wc--button--color--static: var(--wp--preset--color--foreground);
+	--wc--button--color--static: var(--wp--preset--color--secondary);
 	--wc--button--padding--horizontal: 1.6rem;
 	--wc--button--padding--vertical: 1.1rem;
 
@@ -93,7 +93,7 @@
 	aspect-ratio: 1/1;
 	background-color: var(--wp--preset--color--primary);
 	border-radius: 50%;
-	color: var(--wp--preset--color--foreground);
+	color: var(--wp--preset--color--secondary);
 	display: inline-flex;
 	font-weight: var(--wp--custom--typography--font-weight--semi-bold);
 	opacity: 0.8;

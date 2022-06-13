@@ -7,15 +7,12 @@
 /*
  * --------------------------------------------------------
  *  All of our variables.
- *  These could probably live in theme.json.
+ *  These could probably live in theme.json at some point.
  * --------------------------------------------------------
  */
 
 .woocommerce {
-	--wc--col-min: 20ch;
 	--wc--gap: var(--wp--style--block-gap, 1rem);
-
-	--wc--img-ratio: 3/2;
 
 	--wc--spacing--sm: var(--wp--custom--spacing--small);
 	--wc--spacing--md: var(--wp--custom--spacing--medium);
@@ -30,16 +27,38 @@
 	--wc--z-index-xxl: 25;
 	--wc--z-index-xxxl: 30;
 
-	--wc--button--background--static: var(--wp--preset--color--primary);
-	--wc--button--color--static: var(--wp--preset--color--secondary);
-	--wc--button--padding--horizontal: 1.6rem;
-	--wc--button--padding--vertical: 1.1rem;
+	--wc--button--background--static: var(--wp--custom--elements--button--color--background);
+	--wc--button--color--static: var(--wp--custom--elements--button--color--text);
 
-	--wc-product--text-align: var(--wp--custom--plugins--woo--product--text-align, center);
-}
+	--wc--button--border--color: var(--wp--custom--elements--button--border--color, currentColor);
 
-:is(.product) {
-	position: relative;
+	--wc--button--border--style: var(--wp--custom--elements--button--border--style, solid);
+
+	--wc--button--border--width: var(--wp--custom--elements--button--border--width, 1px);
+
+	--wc--button--border--radius-bottom-left: var(--wp--custom--elements--button--border--radius--bottom-left, 0);
+	--wc--button--border--radius-bottom-right: var(--wp--custom--elements--button--border--radius--bottom-right, 0);
+	--wc--button--border--radius-top-left: var(--wp--custom--elements--button--border--radius--top-left, 0);
+	--wc--button--border--radius-top-right: var(--wp--custom--elements--button--border--radius--top-right, 0);
+	--wc--button--border--radius: var(--wc--button--border--radius-top-left) var(--wc--button--border--radius-top-right) var(--wc--button--border--radius-bottom-right) var(--wc--button--border--radius-bottom-left);
+
+	--wc--button--typography--font-family: var(--wp--custom--elements--button--typography--font-family, inherit);
+	--wc--button--typograhpy--font-size: var(--wp--custom--elements--button--typography--font-size, inherit);
+	--wc--button--typography--font-weight: var(--wp--custom--elements--button--typography--font-weight, 400);
+	--wc--button--typography--letter-spacing: var(--wp--custom--elements--button--typography--letter-spacing, 0);
+	--wc--button--typography--line-height: var(--wp--custom--elements--button--typography--line-height, 1);
+	--wc--button--typography--text-align: center;
+	--wc--button--typography--text-transform: var(--wp--custom--elements--button--typography--text-transform, none);
+
+	--wc--button--padding--bottom: var(--wp--custom--elements--button--spacing--padding--bottom, 1.1rem);
+	--wc--button--padding--left: var(--wp--custom--elements--button--spacing--padding--left, 2rem);
+	--wc--button--padding--right: var(--wp--custom--elements--button--spacing--padding--right, 2rem);
+	--wc--button--padding--top: var(--wp--custom--elements--button--spacing--padding--top, 1.1rem);
+	--wc--button--padding: var(--wc--button--padding--top) var(--wc--button--padding--right) var(--wc--button--padding--bottom) var(--wc--button--padding--left);
+
+	--wc--preset--color--alt: var(--wp--preset--color--foreground);
+
+	--wc--tabs--color--text--static: var(--wp--preset--color--foreground);
 }
 
 /*
@@ -48,66 +67,45 @@
  * --------------------------------------------------------
  */
 
-.woocommerce ul.products {
-	display: grid;
-	grid-gap: calc(2 * var(--wc--gap)) var(--wc--gap);
-	grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--wc--col-min)), 1fr));
+.woocommerce .products {
 	list-style: none;
-	margin: var(--wc--spacing--md) 0;
+	margin: 0;
 	padding: 0;
-}
-
-.woocommerce .products > .product {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	gap: calc(0.5 * var(--wc--gap));
-	position: relative;
-	text-align: var(--wc-product--text-align);
 }
 
 .woocommerce .product a {
 	text-decoration: none;
 }
 
-.woocommerce .product .size-woocommerce_thumbnail {
-	aspect-ratio: var(--wc--img-ratio);
-	object-fit: cover;
-	width: 100%;
-}
-
 .woocommerce .product .woocommerce-loop-product__title {
 	font-size: var(--wp--preset--font-size--large);
-	margin-bottom: 0.38rem;
 }
 
 .woocommerce .product .price {
 	font-size: var(--wp--preset--font-size--medium);
 }
 
-.woocommerce .product .button {
-	background-color: var(--wc--button--background--static);
-	color: var(--wc--button--color--static);
-	line-height: 1;
-	padding: var(--wc--button--padding--vertical) var(--wc--button--padding--horizontal);
-	text-align: center;
-}
+/*
+ * --------------------------------------------------------
+ *  Buttons, buttons, buttons.
+ * --------------------------------------------------------
+ */
 
-.woocommerce .product .onsale {
-	align-items: center;
-	aspect-ratio: 1/1;
-	background-color: var(--wp--preset--color--primary);
-	border-radius: 50%;
-	color: var(--wp--preset--color--secondary);
-	display: inline-flex;
-	font-weight: var(--wp--custom--typography--font-weight--semi-bold);
-	opacity: 0.8;
-	padding: calc(0.5 * var(--wc--spacing--sm));
-	position: absolute;
-	left: calc(0.5 * var(--wc--spacing--sm));
-	text-transform: uppercase;
-	top: calc(0.5 * var(--wc--spacing--sm));
-	z-index: var(--wc--z-index-md);
+ .woocommerce :is(button.alt, .button, button.button.alt) {
+	background-color: var(--wc--button--background--static);
+	border-color: var(--wc--button--border--color);
+	border-radius: var(--wc--button--border--radius);
+	border-style: var(--wc--button--border--style);
+	border-width: var(--wc--button--border--width);
+	color: var(--wc--button--color--static);
+	font-family: var(--wc--button--typography--font-family);
+	font-size: var(--wc--button--typograhpy--font-size);
+	font-weight: var(--wc--button--typography--font-weight);
+	letter-spacing: var(--wc--button--typography--letter-spacing);
+	line-height: var(--wc--button--typography--line-height);
+	padding: var(--wc--button--padding);
+	text-align: var(--wc--button--typography--text-align);
+	text-transform: var(--wc--button--typography--text-transform);
 }
 
 /*
@@ -115,52 +113,46 @@
  *  Pagination
  * --------------------------------------------------------
  */
-.woocommerce-pagination :is(.page-numbers) {
-	display: flex;
-	list-style: none;
-	margin: 0;
-	padding: 0;
+
+.woocommerce nav.woocommerce-pagination ul,
+.woocommerce nav.woocommerce-pagination ul li {
+	border: none;
 }
 
 /*
  * --------------------------------------------------------
- *  Single Product template
+ *  Single product - tabs
  * --------------------------------------------------------
  */
 
-@media screen and (min-width:600px) {
-	[data-template="single-product"] :is(.site-main > .product) {
-		display: flex;
-		gap: var(--wc--gap);
-		flex-wrap: wrap;
-	}
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+	color: var(--wc--tabs--color--text--static);
+}
 
-	[data-template="single-product"] :is(.site-main > .product > .woocommerce-product-gallery, .site-main > .product > .summary) {
-		flex-basis: 42%;
-	}
-
-	[data-template="single-product"] :is(.site-main > .product) :not(.woocommerce-product-gallery):not(.summary) {
-		flex-basis: 100%;
-	}
+.woocommerce div.product .woocommerce-tabs ul.tabs li,
+.woocommerce div.product .woocommerce-tabs ul.tabs::after,
+.woocommerce div.product .woocommerce-tabs ul.tabs::before {
+	border-color: var(--wc--preset--color--alt);
 }
 
 /*
  * --------------------------------------------------------
- *  Product Gallery
+ *  Colors, colors, colors.
  * --------------------------------------------------------
  */
-
-.woocommerce-product-gallery {
-	position: relative;
+.woocommerce ul.products li.product .price,
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+	color: var(--wc--preset--color--alt);
 }
 
-.woocommerce-product-gallery__wrapper {
-	margin: 0;
+.woocommerce span.onsale {
+	background-color: var(--wc--preset--color--alt);
 }
 
-.woocommerce-product-gallery__trigger {
-	bottom: calc(0.5 * var(--wc--spacing--sm));
-	position: absolute;
-	right: calc(0.5 * var(--wc--spacing--sm));
-	z-index: var(--wc--z-index-md);
+.woocommerce nav.woocommerce-pagination ul li a:focus,
+.woocommerce nav.woocommerce-pagination ul li a:hover,
+.woocommerce nav.woocommerce-pagination ul li span.current {
+	background: transparent;
+	color: var(--wc--preset--color--alt);
 }

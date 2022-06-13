@@ -34,6 +34,8 @@
 	--wc--button--color--static: var(--wp--preset--color--foreground);
 	--wc--button--padding--horizontal: 1.6rem;
 	--wc--button--padding--vertical: 1.1rem;
+
+	--wc-product--text-align: var(--wp--custom--plugins--woo--product--text-align, center);
 }
 
 :is(.product) {
@@ -61,6 +63,7 @@
 	justify-content: space-between;
 	gap: calc(0.5 * var(--wc--gap));
 	position: relative;
+	text-align: var(--wc-product--text-align);
 }
 
 .woocommerce .product a {

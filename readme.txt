@@ -13,6 +13,9 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 1.0.6 - 2022-06-13 =
+- Fix: missing style variation title entry for Kampala
+
 = 1.0.5 - 2022-06-10 =
 - Add no-title.html template
 - Resolve single.html template footer issue

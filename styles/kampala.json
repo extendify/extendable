@@ -1,5 +1,6 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Kampala",
 	"version": 2,
 	"customTemplates": [
 		{

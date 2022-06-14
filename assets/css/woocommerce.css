@@ -211,11 +211,17 @@
 .woocommerce div.product .woocommerce-tabs ul.tabs li::after,
 .woocommerce div.product .woocommerce-tabs ul.tabs li::before {
 	border-color: var(--wc--preset--color--alt);
+	box-shadow: none;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
 	background: var(--wp--preset--color--background);
 	border-bottom-color: var(--wp--preset--color--background);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active::before,
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active::after {
+	box-shadow: none;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active a {

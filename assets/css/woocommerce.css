@@ -11,7 +11,8 @@
  * --------------------------------------------------------
  */
 
-.woocommerce {
+.woocommerce,
+.woocommerce-page {
 	--wc--gap: var(--wp--style--block-gap, 1rem);
 
 	--wc--spacing--sm: var(--wp--custom--spacing--small);
@@ -29,6 +30,9 @@
 
 	--wc--button--background--static: var(--wp--custom--elements--button--color--background);
 	--wc--button--color--static: var(--wp--custom--elements--button--color--text);
+
+	--wc--button--background--interactive: var(--wp--custom--elements--button--color--text);
+	--wc--button--color--interactive: var(--wp--custom--elements--button--color--background);
 
 	--wc--button--border--color: var(--wp--custom--elements--button--border--color, currentColor);
 
@@ -56,9 +60,12 @@
 	--wc--button--padding--top: var(--wp--custom--elements--button--spacing--padding--top, 1.1rem);
 	--wc--button--padding: var(--wc--button--padding--top) var(--wc--button--padding--right) var(--wc--button--padding--bottom) var(--wc--button--padding--left);
 
+	--wc--pagination--current--typography--font-weight: var(--wp--custom--typography--font-weight--bold, 700);
+
 	--wc--preset--color--alt: var(--wp--preset--color--foreground);
 
 	--wc--tabs--color--text--static: var(--wp--preset--color--foreground);
+	--wc--tabs--color--background--static: var(--wp--preset--color--tertiary);
 }
 
 /*
@@ -73,6 +80,12 @@
 	padding: 0;
 }
 
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+	margin-top: var(--wc--gap);
+	text-align: center;
+}
+
 .woocommerce .product a {
 	text-decoration: none;
 }
@@ -85,13 +98,30 @@
 	font-size: var(--wp--preset--font-size--medium);
 }
 
+.woocommerce .price ins,
+.woocommerce .price bdi {
+	text-decoration: none;
+}
+
+.woocommerce .add_to_cart_button.loading {
+	opacity: 0.5;
+}
+
+.woocommerce a.added_to_cart {
+	display: block;
+	margin-top: 0.2rem;
+}
+
 /*
  * --------------------------------------------------------
  *  Buttons, buttons, buttons.
  * --------------------------------------------------------
  */
 
- .woocommerce :is(button.alt, .button, button.button.alt) {
+.woocommerce :is(button.alt, .button, button.button.alt),
+.wc-block-components-button:not(.is-link).contained,
+.woocommerce #respond input#submit,
+.woocommerce button.button.alt.disabled {
 	background-color: var(--wc--button--background--static);
 	border-color: var(--wc--button--border--color);
 	border-radius: var(--wc--button--border--radius);
@@ -108,6 +138,26 @@
 	text-transform: var(--wc--button--typography--text-transform);
 }
 
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+	background-color: var(--wc--button--background--interactive);
+	color: var(--wc--button--color--interactive);
+}
+
+/*
+ * --------------------------------------------------------
+ *  Breadcrumbs
+ * --------------------------------------------------------
+ */
+
+.woocommerce .woocommerce-breadcrumb,
+ .woocommerce .woocommerce-breadcrumb a {
+	color: var(--wp--preset--color--foreground);
+	text-decoration: none;
+}
+
 /*
  * --------------------------------------------------------
  *  Pagination
@@ -119,20 +169,75 @@
 	border: none;
 }
 
+.woocommerce nav.woocommerce-pagination ul li span.current {
+	font-weight: var(--wc--pagination--current--typography--font-weight);
+}
+
 /*
  * --------------------------------------------------------
- *  Single product - tabs
+ *  Shop page
  * --------------------------------------------------------
  */
 
-.woocommerce div.product .woocommerce-tabs ul.tabs li a {
-	color: var(--wc--tabs--color--text--static);
+.woocommerce-ordering .orderby {
+	padding: 0.3rem 0 0.3rem 0.5rem;
 }
 
-.woocommerce div.product .woocommerce-tabs ul.tabs li,
-.woocommerce div.product .woocommerce-tabs ul.tabs::after,
-.woocommerce div.product .woocommerce-tabs ul.tabs::before {
+/*
+ * --------------------------------------------------------
+ *  Single product
+ * --------------------------------------------------------
+ */
+
+.single-product .summary .product_title {
+	font-size: var(--wp--preset--font-size--huge);
+}
+
+.woocommerce div.product form.cart .button {
+	width: 100%;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+	color: var(--wc--tabs--color--text--static);
+	opacity: 0.7;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+	background-color: var(--wc--tabs--color--background--static);
 	border-color: var(--wc--preset--color--alt);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::before,
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after,
+.woocommerce div.product .woocommerce-tabs ul.tabs li::before {
+	border-color: var(--wc--preset--color--alt);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+	background: var(--wp--preset--color--background);
+	border-bottom-color: var(--wp--preset--color--background);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+	opacity: 1;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
+	color: currentColor;
+	opacity: 1;
+}
+
+.woocommerce-Tabs-panel h2 {
+	font-size: var(--wp--preset--font-size--x-large);
+}
+
+.single-product .related {
+	margin-top: var(--wp--custom--spacing--large);
+}
+
+.single-product .related h2 {
+	font-size: var(--wp--preset--font-size--xx-large);
+	margin-bottom: 0;
 }
 
 /*
@@ -140,6 +245,7 @@
  *  Colors, colors, colors.
  * --------------------------------------------------------
  */
+
 .woocommerce ul.products li.product .price,
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
@@ -147,7 +253,8 @@
 }
 
 .woocommerce span.onsale {
-	background-color: var(--wc--preset--color--alt);
+	background-color: var(--wp--preset--color--secondary);
+	color: var(--wp--preset--color--primary);
 }
 
 .woocommerce nav.woocommerce-pagination ul li a:focus,
@@ -155,4 +262,35 @@
 .woocommerce nav.woocommerce-pagination ul li span.current {
 	background: transparent;
 	color: var(--wc--preset--color--alt);
+}
+
+.wc-block-components-product-badge {
+	color: var(--wp--preset--color--secondary);
+}
+
+.wc-block-components-checkout-return-to-cart-button svg {
+	fill: currentColor;
+}
+
+/*
+ * --------------------------------------------------------
+ *  Quantity picker.
+ * --------------------------------------------------------
+ */
+
+.woocommerce div.product form.cart div.quantity {
+	float: none;
+	margin-bottom: var(--wc--gap);
+	margin-right: 0;
+}
+
+.quantity .qty {
+	color: currentColor;
+	font-size: 1.4rem;
+	height: 100%;
+	text-align: center;
+	background-color: transparent;
+	border-color: currentColor;
+	border-style: solid;
+	padding: 0.3rem 0.5rem;
 }

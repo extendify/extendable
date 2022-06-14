@@ -238,6 +238,7 @@
 }
 
 .single-product .related {
+	margin-bottom: var(--wp--custom--spacing--large);
 	margin-top: var(--wp--custom--spacing--large);
 }
 

@@ -13,11 +13,14 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
-= 1.0.6 - 2022-06-13 =
+= 1.0.6 - 2022-06-15 =
 - Fix: missing style variation title entry for Kampala
 - New: WooCommerce support
   - WooCommerce FSE templates added
   - WooCommerce stylesheet to keep style variations looking good
+- Changed: Streamlined all style variation's *.json to rely on parent theme.json
+  - See: [Extendify-SDK PR #825](https://github.com/extendify/extendify-sdk/pull/825)
+  - See: [Extendable PR #75](https://github.com/extendify/extendable/pull/75)
 
 = 1.0.5 - 2022-06-10 =
 - Add no-title.html template

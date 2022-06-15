@@ -25,6 +25,18 @@ if ( ! function_exists( 'extendable_support' ) ) :
 		// Enqueue editor styles.
 		add_editor_style( 'style.css' );
 
+		// Register WooCommerce theme features.
+		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-slider' );
+		add_theme_support(
+			'woocommerce',
+			array(
+				'thumbnail_image_width' => 400,
+				'single_image_width'    => 600,
+			)
+		);
+
 	}
 
 endif;

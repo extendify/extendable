@@ -300,26 +300,6 @@
 					"letterSpacing": "0"
 				}
 			},
-			"core/group": {
-				"border": {
-					"radius": {
-						"bottomLeft": "0",
-						"bottomRight": "0",
-						"topLeft": "0",
-						"topRight": "0"
-					}
-				}
-			},
-			"core/image": {
-				"border": {
-					"radius": {
-						"bottomLeft": "0",
-						"bottomRight": "0",
-						"topLeft": "0",
-						"topRight": "0"
-					}
-				}
-			},
 			"core/navigation": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--small)"
@@ -375,12 +355,6 @@
 			"core/pullquote": {
 				"border": {
 					"color": "transparent",
-					"radius": {
-						"bottomLeft": "0px",
-						"bottomRight": "0px",
-						"topLeft": "0px",
-						"topRight": "0px"
-					},
 					"style": "solid",
 					"width": "1px 0"
 				},

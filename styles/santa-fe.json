@@ -1,5 +1,4 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"title": "Santa Fe",
 	"version": 2,
 	"customTemplates": [

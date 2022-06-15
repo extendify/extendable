@@ -1,5 +1,4 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"title": "Glasgow",
 	"version": 2,
 	"customTemplates": [

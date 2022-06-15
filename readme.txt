@@ -3,7 +3,7 @@ Contributors: extendify, richtabor, colorful-tones
 Requires at least: 6.0
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,9 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 = 1.0.6 - 2022-06-13 =
 - Fix: missing style variation title entry for Kampala
+- New: WooCommerce support
+  - WooCommerce FSE templates added
+  - WooCommerce stylesheet to keep style variations looking good
 
 = 1.0.5 - 2022-06-10 =
 - Add no-title.html template

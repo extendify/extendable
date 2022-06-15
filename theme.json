@@ -485,6 +485,7 @@
 			},
 			"h4": {
 				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--headings)",
 					"fontSize": "var(--wp--preset--font-size--xx-large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"

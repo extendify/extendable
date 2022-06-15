@@ -161,6 +161,10 @@
 				}
 			}
 		},
+		"layout": {
+			"contentSize": "650px",
+			"wideSize": "80rem"
+		},
 		"spacing": {
 			"units": ["%", "px", "em", "rem", "vh", "vw"]
 		},
@@ -225,10 +229,6 @@
 					"slug": "colossal"
 				}
 			]
-		},
-		"layout": {
-			"contentSize": "650px",
-			"wideSize": "80rem"
 		}
 	},
 	"styles": {

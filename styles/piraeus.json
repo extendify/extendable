@@ -80,7 +80,7 @@
 						}
 					},
 					"typography": {
-						"fontFamily": "var(--wp--preset--font-family--headings)",
+						"fontFamily": "var(--wp--preset--font-family--heading)",
 						"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 						"letterSpacing": "0.02em",
 						"textTransform": "uppercase"
@@ -120,7 +120,7 @@
 				{
 					"fontFamily": "\"Geom\", sans-serif",
 					"name": "Headings (Geom)",
-					"slug": "headings",
+					"slug": "heading",
 					"fontFace": [
 						{
 							"fontDisplay": "block",

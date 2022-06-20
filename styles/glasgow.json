@@ -87,7 +87,7 @@
 				{
 					"fontFamily": "\"Rubik\", sans-serif",
 					"name": "Headings (Rubik)",
-					"slug": "headings"
+					"slug": "heading"
 				}
 			]
 		},
@@ -118,7 +118,7 @@
 			},
 			"core/query-title": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--headings)",
+					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "var(--wp--preset--font-size--xx-large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--light)"
 				}

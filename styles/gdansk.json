@@ -79,7 +79,7 @@
 						}
 					},
 					"typography": {
-						"fontFamily": "var(--wp--preset--font-family--headings)",
+						"fontFamily": "var(--wp--preset--font-family--heading)",
 						"fontSize": "var(--wp--preset--font-size--small)",
 						"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 						"letterSpacing": "0.03em"
@@ -113,7 +113,7 @@
 				{
 					"fontFamily": "\"Montserrat\", sans-serif",
 					"name": "Headings (Montserrat)",
-					"slug": "headings",
+					"slug": "heading",
 					"fontFace": [
 						{
 							"fontDisplay": "block",

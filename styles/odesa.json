@@ -79,7 +79,7 @@
 						}
 					},
 					"typography": {
-						"fontFamily": "var(--wp--preset--font-family--headings)",
+						"fontFamily": "var(--wp--preset--font-family--heading)",
 						"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 						"letterSpacing": "0.03em",
 						"textTransform": "uppercase"
@@ -113,7 +113,7 @@
 				{
 					"fontFamily": "\"Roboto Flex\", sans-serif",
 					"name": "Headings (Roboto Flex)",
-					"slug": "headings",
+					"slug": "heading",
 					"fontFace": [
 						{
 							"fontDisplay": "block",

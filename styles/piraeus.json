@@ -94,10 +94,6 @@
 				}
 			}
 		},
-		"layout": {
-			"contentSize": "730px",
-			"wideSize": "78rem"
-		},
 		"typography": {
 			"fontFamilies": [
 				{

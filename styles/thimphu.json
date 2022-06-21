@@ -110,10 +110,6 @@
 					"slug": "heading"
 				}
 			]
-		},
-		"layout": {
-			"contentSize": "680px",
-			"wideSize": "80rem"
 		}
 	},
 	"styles": {

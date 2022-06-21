@@ -241,8 +241,8 @@
 			}
 		},
 		"layout": {
-			"contentSize": "50rem",
-			"wideSize": "80rem"
+			"contentSize": "38rem",
+			"wideSize": "76rem"
 		},
 		"spacing": {
 			"units": ["%", "px", "em", "rem", "vh", "vw"]

@@ -6,7 +6,7 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#ffffff", "#0c0c0b"],
+					"colors": ["#fcece8", "#0c0c0b"],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
@@ -29,7 +29,7 @@
 			"palette": [
 				{
 					"slug": "foreground",
-					"color": "#ffffff",
+					"color": "#fcece8",
 					"name": "Foreground"
 				},
 				{
@@ -39,18 +39,18 @@
 				},
 				{
 					"slug": "primary",
-					"color": "#FBCBCB",
+					"color": "#f5ac8e",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#a53915",
+					"color": "#9d2c1e",
 					"name": "Secondary"
 				},
 				{
 					"slug": "tertiary",
-					"color": "#083021",
-					"name": "Tertiary"
+					"color": "#50140d",
+					"name": "Background Alt"
 				}
 			]
 		},

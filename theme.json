@@ -569,6 +569,16 @@
 			"area": "header"
 		},
 		{
+			"name": "header-title-nav-button",
+			"title": "Header with Button",
+			"area": "header"
+		},
+		{
+			"name": "header-title-social-nav",
+			"title": "Header with Social",
+			"area": "header"
+		},
+		{
 			"name": "footer",
 			"title": "Footer",
 			"area": "footer"

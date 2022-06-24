@@ -83,13 +83,9 @@
 				{
 					"fontFamily": "\"Hind\", sans-serif",
 					"name": "Headings (Hind)",
-					"slug": "headings"
+					"slug": "heading"
 				}
 			]
-		},
-		"layout": {
-			"contentSize": "680px",
-			"wideSize": "76rem"
 		}
 	},
 	"styles": {

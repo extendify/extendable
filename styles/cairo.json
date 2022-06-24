@@ -98,13 +98,9 @@
 				{
 					"fontFamily": "\"Source Serif 4\", serif",
 					"name": "Headings (Source Serif 4)",
-					"slug": "headings"
+					"slug": "heading"
 				}
 			]
-		},
-		"layout": {
-			"contentSize": "650px",
-			"wideSize": "80rem"
 		}
 	},
 	"styles": {
@@ -143,7 +139,7 @@
 			},
 			"core/query-title": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--headings)",
+					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "var(--wp--preset--font-size--xx-large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--light)"
 				}
@@ -155,7 +151,7 @@
 			},
 			"core/site-title": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--headings)",
+					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "clamp(1.2rem, 3vw, 1.5rem)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
 					"letterSpacing": "-.025em"

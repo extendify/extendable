@@ -23,29 +23,29 @@
 			],
 			"palette": [
 				{
-					"slug": "foreground",
-					"color": "#c6120d",
-					"name": "Foreground"
-				},
-				{
 					"slug": "background",
-					"color": "#f1e3e1",
+					"color": "#ffebe9",
 					"name": "Background"
 				},
 				{
+					"slug": "foreground",
+					"color": "#a40e26",
+					"name": "Foreground"
+				},
+				{
 					"slug": "primary",
-					"color": "#dc1912",
+					"color": "#A30026",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#faf3f3",
+					"color": "#ffcecb",
 					"name": "Secondary"
 				},
 				{
 					"slug": "tertiary",
-					"color": "#fbfbfb",
-					"name": "Tertiary"
+					"color": "#ffffff",
+					"name": "Background Alt"
 				}
 			]
 		},
@@ -68,13 +68,16 @@
 						}
 					}
 				}
+			},
+			"spacing": {
+				"small": "min(3rem, 4vw)"
 			}
 		},
 		"typography": {
 			"fontFamilies": [
 				{
-					"fontFamily": "\"Space Mono\", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace",
-					"name": "Body (Space Mono)",
+					"fontFamily": "\"Space Mono\", monospace",
+					"name": "Body",
 					"slug": "body",
 					"fontFace": [
 						{
@@ -90,31 +93,37 @@
 							"src": ["file:./assets/fonts/SpaceMono/SpaceMono-Bold.woff2"]
 						}
 					]
-				},
-				{
-					"fontFamily": "\"Space Mono\", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace",
-					"name": "Headings (Space Mono)",
-					"slug": "headings"
 				}
 			]
 		},
 		"layout": {
-			"contentSize": "760px",
-			"wideSize": "80rem"
+			"contentSize": "38rem",
+			"wideSize": "76rem"
 		}
 	},
 	"styles": {
 		"blocks": {
+			"core/button": {
+				"border": {
+					"radius": "9px"
+				},
+				"typography": {
+					"textTransform": "uppercase",
+					"letterSpacing": "0.25rem",
+					"fontSize": "0.8rem",
+					"fontWeight": "400"
+				}
+			},
 			"core/comments-title": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--x-large)",
-					"fontWeight": "(--wp--custom--typography--font-weight--semi-bold)"
+					"fontWeight": "400"
 				}
 			},
 			"core/post-title": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--huge)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
+					"fontWeight": "400"
 				}
 			},
 			"core/pullquote": {
@@ -124,58 +133,76 @@
 			},
 			"core/query-pagination-next": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
+					"fontWeight": "400"
 				}
 			},
 			"core/query-pagination-numbers": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
+					"fontWeight": "400"
 				}
 			},
 			"core/query-pagination-previous": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
+					"fontWeight": "400"
 				}
 			},
 			"core/query-title": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--xx-large)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
+					"fontWeight": "400"
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontSize": "var(--wp--preset--font-size--large)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
+					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
 				}
 			}
 		},
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
-					"letterSpacing": "0"
+					"fontWeight": "400",
+					"letterSpacing": "normal"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
+					"fontWeight": "400",
+					"letterSpacing": "normal"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
+					"fontWeight": "400",
+					"letterSpacing": "normal"
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
+					"fontWeight": "400",
+					"letterSpacing": "normal"
 				}
 			},
 			"h5": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
+					"fontWeight": "400",
+					"letterSpacing": "normal"
 				}
 			},
 			"h6": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
+					"fontWeight": "400",
+					"letterSpacing": "normal"
 				}
 			}
+		},
+		"typography": {
+			"fontSize": "1rem",
+			"fontWeight": "400",
+			"lineHeight": "var(--wp--custom--typography--line-height--large)"
 		}
 	}
 }

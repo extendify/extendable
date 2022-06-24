@@ -190,7 +190,7 @@
  */
 
 .single-product .summary .product_title {
-	font-size: var(--wp--preset--font-size--huge);
+	font-size: var(--wp--preset--font-size--xx-large);
 }
 
 .woocommerce div.product form.cart .button {

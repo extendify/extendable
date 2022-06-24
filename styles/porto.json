@@ -82,7 +82,7 @@
 				{
 					"fontFamily": "\"Karla\", sans-serif",
 					"name": "Headings (Karla)",
-					"slug": "headings",
+					"slug": "heading",
 					"fontFace": [
 						{
 							"fontDisplay": "block",

@@ -106,7 +106,7 @@
 				{
 					"fontFamily": "\"Noto Serif Display\", serif",
 					"name": "Headings (Noto Serif Display)",
-					"slug": "headings",
+					"slug": "heading",
 					"fontFace": [
 						{
 							"fontDisplay": "block",

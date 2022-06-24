@@ -107,13 +107,9 @@
 				{
 					"fontFamily": "\"Heebo\", sans-serif",
 					"name": "Headings (Heebo)",
-					"slug": "headings"
+					"slug": "heading"
 				}
 			]
-		},
-		"layout": {
-			"contentSize": "680px",
-			"wideSize": "80rem"
 		}
 	},
 	"styles": {

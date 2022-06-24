@@ -80,7 +80,7 @@
 						}
 					},
 					"typography": {
-						"fontFamily": "var(--wp--preset--font-family--headings)",
+						"fontFamily": "var(--wp--preset--font-family--heading)",
 						"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 						"letterSpacing": "0.02em",
 						"textTransform": "uppercase"
@@ -93,10 +93,6 @@
 					"webkit": "auto"
 				}
 			}
-		},
-		"layout": {
-			"contentSize": "730px",
-			"wideSize": "78rem"
 		},
 		"typography": {
 			"fontFamilies": [
@@ -120,7 +116,7 @@
 				{
 					"fontFamily": "\"Geom\", sans-serif",
 					"name": "Headings (Geom)",
-					"slug": "headings",
+					"slug": "heading",
 					"fontFace": [
 						{
 							"fontDisplay": "block",

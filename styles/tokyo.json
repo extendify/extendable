@@ -101,7 +101,7 @@
 				{
 					"fontFamily": "\"Koulen\", sans-serif",
 					"name": "Headings (Koulen)",
-					"slug": "headings",
+					"slug": "heading",
 					"fontFace": [
 						{
 							"fontDisplay": "block",
@@ -114,10 +114,6 @@
 					]
 				}
 			]
-		},
-		"layout": {
-			"contentSize": "710px",
-			"wideSize": "76rem"
 		}
 	},
 	"styles": {

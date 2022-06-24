@@ -54,39 +54,6 @@
 				}
 			]
 		},
-		"custom": {
-			"elements": {
-				"button": {
-					"border": {
-						"color": "var(--wp--preset--color--primary)",
-						"radius": {
-							"bottomLeft": "4px",
-							"bottomRight": "4px",
-							"topLeft": "4px",
-							"topRight": "4px"
-						}
-					},
-					"color": {
-						"background": "var(--wp--preset--color--primary)",
-						"text": "var(--wp--preset--color--secondary)"
-					},
-					"spacing": {
-						"padding": {
-							"top": "1.1rem",
-							"bottom": "1.1rem",
-							"right": "1.8rem",
-							"left": "1.8rem"
-						}
-					},
-					"typography": {
-						"fontFamily": "var(--wp--preset--font-family--heading)",
-						"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
-						"letterSpacing": "0.03em",
-						"textTransform": "uppercase"
-					}
-				}
-			}
-		},
 		"layout": {
 			"contentSize": "710px",
 			"wideSize": "77rem"
@@ -95,7 +62,7 @@
 			"fontFamilies": [
 				{
 					"fontFamily": "\"Inter\", sans-serif",
-					"name": "Body (Inter)",
+					"name": "Inter",
 					"slug": "body",
 					"fontFace": [
 						{
@@ -112,7 +79,7 @@
 				},
 				{
 					"fontFamily": "\"Roboto Flex\", sans-serif",
-					"name": "Headings (Roboto Flex)",
+					"name": "Roboto Flex",
 					"slug": "heading",
 					"fontFace": [
 						{

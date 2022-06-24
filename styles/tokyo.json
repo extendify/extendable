@@ -55,23 +55,6 @@
 			]
 		},
 		"custom": {
-			"elements": {
-				"button": {
-					"border": {
-						"color": "var(--wp--preset--color--primary)",
-						"radius": {
-							"bottomLeft": "5px",
-							"bottomRight": "5px",
-							"topLeft": "5px",
-							"topRight": "5px"
-						}
-					},
-					"color": {
-						"background": "var(--wp--preset--color--primary)",
-						"text": "var(--wp--preset--color--secondary)"
-					}
-				}
-			},
 			"typography": {
 				"fontSmoothing": {
 					"moz": "auto",
@@ -83,7 +66,7 @@
 			"fontFamilies": [
 				{
 					"fontFamily": "\"Inter\", sans-serif",
-					"name": "Body (Inter)",
+					"name": "Inter",
 					"slug": "body",
 					"fontFace": [
 						{
@@ -100,7 +83,7 @@
 				},
 				{
 					"fontFamily": "\"Koulen\", sans-serif",
-					"name": "Headings (Koulen)",
+					"name": "Koulen",
 					"slug": "heading",
 					"fontFace": [
 						{

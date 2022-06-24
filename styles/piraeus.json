@@ -55,38 +55,6 @@
 			]
 		},
 		"custom": {
-			"elements": {
-				"button": {
-					"border": {
-						"color": "var(--wp--preset--color--primary)",
-						"radius": {
-							"bottomLeft": "0px",
-							"bottomRight": "0px",
-							"topLeft": "0px",
-							"topRight": "0px"
-						},
-						"width": "2px !important"
-					},
-					"color": {
-						"background": "var(--wp--preset--color--primary)",
-						"text": "var(--wp--preset--color--secondary)"
-					},
-					"spacing": {
-						"padding": {
-							"top": "1.2rem",
-							"bottom": "1rem",
-							"right": "1.9rem",
-							"left": "1.9rem"
-						}
-					},
-					"typography": {
-						"fontFamily": "var(--wp--preset--font-family--heading)",
-						"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
-						"letterSpacing": "0.02em",
-						"textTransform": "uppercase"
-					}
-				}
-			},
 			"typography": {
 				"fontSmoothing": {
 					"moz": "auto",
@@ -98,7 +66,7 @@
 			"fontFamilies": [
 				{
 					"fontFamily": "\"Roboto Flex\", sans-serif",
-					"name": "Body (Roboto Flex)",
+					"name": "Roboto Flex",
 					"slug": "body",
 					"fontFace": [
 						{
@@ -115,7 +83,7 @@
 				},
 				{
 					"fontFamily": "\"Geom\", sans-serif",
-					"name": "Headings (Geom)",
+					"name": "Geom",
 					"slug": "heading",
 					"fontFace": [
 						{

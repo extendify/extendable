@@ -41,44 +41,13 @@
 						}
 					}
 				}
-			},
-			"elements": {
-				"button": {
-					"border": {
-						"color": "var(--wp--preset--color--primary)",
-						"radius": {
-							"bottomLeft": "26px",
-							"bottomRight": "7px",
-							"topLeft": "12px",
-							"topRight": "16px"
-						}
-					},
-					"color": {
-						"background": "var(--wp--preset--color--primary)",
-						"text": "var(--wp--preset--color--foreground)"
-					},
-					"spacing": {
-						"padding": {
-							"top": "1.1rem",
-							"bottom": "1.1rem",
-							"right": "1.6rem",
-							"left": "1.6rem"
-						}
-					},
-					"typography": {
-						"fontFamily": "var(--wp--preset--font-family--heading)",
-						"fontSize": "var(--wp--custom--typography--font-size--large)",
-						"fontWeight": "var(--wp--custom--typography--font-weight--light)",
-						"letterSpacing": "0.03em"
-					}
-				}
 			}
 		},
 		"typography": {
 			"fontFamilies": [
 				{
 					"fontFamily": "\"Arsenal\", serif",
-					"name": "Headings (Arsenal)",
+					"name": "Arsenal",
 					"slug": "heading",
 					"fontFace": [
 						{
@@ -101,7 +70,7 @@
 				},
 				{
 					"fontFamily": "\"Radio Canada\", sans-serif",
-					"name": "Body (Radio Canada)",
+					"name": "Radio Canada",
 					"slug": "body",
 					"fontFace": [
 						{

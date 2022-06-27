@@ -86,12 +86,11 @@
 		"blocks": {
 			"core/button": {
 				"border": {
-					"radius": "9px"
+					"radius": "8px"
 				},
 				"typography": {
 					"textTransform": "uppercase",
-					"letterSpacing": "0.25rem",
-					"fontSize": "0.8rem",
+					"letterSpacing": "0.15rem",
 					"fontWeight": "400"
 				}
 			},

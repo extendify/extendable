@@ -220,3 +220,15 @@ input {
 	outline-color: var(--wp--preset--color--tertiary);
 	outline-offset: 0.2ch;
 }
+
+/*
+ * Matching input with outline button style.
+ */
+.wp-block-post-comments-form input:not([type=submit]), 
+.wp-block-post-comments-form textarea {
+    border: 2px solid currentColor;
+    padding: 0.667em 1.333em !important;
+	font-size: 1.15rem;
+    line-height: 1.384;
+	border-radius: 0.5rem;
+}

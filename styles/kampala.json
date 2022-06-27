@@ -67,17 +67,6 @@
 				"color": {
 					"background": "var(--wp--preset--color--primary)",
 					"text": "var(--wp--preset--color--white)"
-				},
-				"spacing": {
-					"padding": {
-						"top": "1.05rem",
-						"bottom": "1.05rem",
-						"right": "2rem",
-						"left": "2rem"
-					}
-				},
-				"typography": {
-					"fontSize": "1rem"
 				}
 			},
 			"core/post-title": {

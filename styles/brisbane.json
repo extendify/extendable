@@ -24,7 +24,7 @@
 				{
 					"colors": [
 						"#49697c",
-						"#faf8d4"
+						"#DDDAC2"
 					],
 					"slug": "secondary",
 					"name": "Secondary"
@@ -32,7 +32,7 @@
 				{
 					"colors": [
 						"#102e43",
-						"#faf8d4"
+						"#DDDAC2"
 					],
 					"slug": "primary-secondary",
 					"name": "Primary and Secondary"
@@ -48,7 +48,7 @@
 				{
 					"colors": [
 						"#204f46",
-						"#faf8d4"
+						"#DDDAC2"
 					],
 					"slug": "tertiary-secondary",
 					"name": "Tertiary and Secondary"
@@ -72,7 +72,7 @@
 				},
 				{
 					"slug": "secondary",
-					"color": "#faf8d4",
+					"color": "#DDDAC2",
 					"name": "Secondary"
 				},
 				{
@@ -145,42 +145,11 @@
 					"fontSize": "var(--wp--preset--font-size--x-large)"
 				}
 			},
-			"core/group": {
-				"border": {
-					"radius": {
-						"bottomLeft": "21%",
-						"bottomRight": "18%",
-						"topLeft": "16%",
-						"topRight": "10%"
-					}
-				}
-			},
-			"core/image": {
-				"border": {
-					"radius": {
-						"bottomLeft": "15%",
-						"bottomRight": "10%",
-						"topLeft": "23%",
-						"topRight": "18%"
-					}
-				}
-			},
 			"core/post-title": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--huge)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
 					"letterSpacing": "0.01em"
-				}
-			},
-			"core/pullquote": {
-				"border": {
-					"radius": {
-						"bottomLeft": "18%",
-						"bottomRight": "15%",
-						"topLeft": "10%",
-						"topRight": "23%"
-					},
-					"width": "1px"
 				}
 			},
 			"core/query-pagination-next": {

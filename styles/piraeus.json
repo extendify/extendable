@@ -6,87 +6,83 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#f4f3f0", "#383838"],
-					"slug": "foreground-and-background",
-					"name": "Foreground and background"
+					"colors": [
+						"#000000",
+						"#ffffff"
+					],
+					"slug": "grayscale",
+					"name": "Grayscale"
 				},
 				{
-					"colors": ["#383838", "#0d0c0c"],
-					"slug": "background-and-primary",
-					"name": "Background and primary"
+					"colors": [
+						"#272725",
+						"#A89F84"
+					],
+					"slug": "primary",
+					"name": "Primary"
 				},
 				{
-					"colors": ["#383838", "#f0ede6"],
-					"slug": "background-and-secondary",
-					"name": "Background and secondary"
+					"colors": [
+						"#272725",
+						"#3F2D0B"
+					],
+					"slug": "secondary",
+					"name": "Secondary"
 				},
 				{
-					"colors": ["#0d0c0c", "#f0ede6"],
-					"slug": "primary-and-secondary",
-					"name": "Primary and secondary"
+					"colors": [
+						"#A89F84",
+						"#3F2D0B"
+					],
+					"slug": "primary-secondary",
+					"name": "Primary and Secondary"
+				},
+				{
+					"colors": [
+						"#3F2D0B",
+						"#A89F84"
+					],
+					"slug": "secondary-primary",
+					"name": "Secondary and Primary"
+				},
+				{
+					"colors": [
+						"#32322D",
+						"#ffffff"
+					],
+					"slug": "tertiary-white",
+					"name": "Tertiary and White"
 				}
 			],
 			"palette": [
 				{
 					"slug": "foreground",
-					"color": "#f4f3f0",
+					"color": "#ffffff",
 					"name": "Foreground"
 				},
 				{
 					"slug": "background",
-					"color": "#383838",
+					"color": "#272725",
 					"name": "Background"
 				},
 				{
 					"slug": "primary",
-					"color": "#0d0c0c",
+					"color": "#A89F84",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#f0ede6",
+					"color": "#3F2D0B",
 					"name": "Secondary"
 				},
 				{
 					"slug": "tertiary",
-					"color": "#474646",
-					"name": "Tertiary"
+					"color": "#32322D",
+					"name": "Background Alt"
 				}
 			]
 		},
 		"custom": {
-			"elements": {
-				"button": {
-					"border": {
-						"color": "var(--wp--preset--color--primary)",
-						"radius": {
-							"bottomLeft": "0px",
-							"bottomRight": "0px",
-							"topLeft": "0px",
-							"topRight": "0px"
-						},
-						"width": "2px !important"
-					},
-					"color": {
-						"background": "var(--wp--preset--color--primary)",
-						"text": "var(--wp--preset--color--secondary)"
-					},
-					"spacing": {
-						"padding": {
-							"top": "1.2rem",
-							"bottom": "1rem",
-							"right": "1.9rem",
-							"left": "1.9rem"
-						}
-					},
-					"typography": {
-						"fontFamily": "var(--wp--preset--font-family--heading)",
-						"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
-						"letterSpacing": "0.02em",
-						"textTransform": "uppercase"
-					}
-				}
-			},
 			"typography": {
 				"fontSmoothing": {
 					"moz": "auto",
@@ -98,7 +94,7 @@
 			"fontFamilies": [
 				{
 					"fontFamily": "\"Roboto Flex\", sans-serif",
-					"name": "Body (Roboto Flex)",
+					"name": "Roboto Flex",
 					"slug": "body",
 					"fontFace": [
 						{
@@ -115,7 +111,7 @@
 				},
 				{
 					"fontFamily": "\"Geom\", sans-serif",
-					"name": "Headings (Geom)",
+					"name": "Geom",
 					"slug": "heading",
 					"fontFace": [
 						{
@@ -133,6 +129,15 @@
 	},
 	"styles": {
 		"blocks": {
+			"core/button": {
+				"border": {
+					"radius": "0"
+				},
+				"color": {
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--white)"
+				}
+			},
 			"core/comments-title": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--x-large)",
@@ -203,9 +208,6 @@
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
 				}
 			}
-		},
-		"spacing": {
-			"blockGap": "min(48px, 6vw)"
 		}
 	}
 }

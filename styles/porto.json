@@ -32,39 +32,11 @@
 				}
 			]
 		},
-		"custom": {
-			"elements": {
-				"block": {
-					"border": {
-						"radius": {
-							"bottomLeft": "0px",
-							"bottomRight": "0px",
-							"topLeft": "0px",
-							"topRight": "0px"
-						},
-						"style": "double double double double",
-						"width": "7px !important"
-					},
-					"color": {
-						"background": "var(--wp--preset--color--primary)",
-						"text": "var(--wp--preset--color--secondary)"
-					},
-					"spacing": {
-						"padding": {
-							"top": "1.1rem",
-							"bottom": "1.1rem",
-							"right": "1.6rem",
-							"left": "1.6rem"
-						}
-					}
-				}
-			}
-		},
 		"typography": {
 			"fontFamilies": [
 				{
 					"fontFamily": "\"Inconsolata\", sans-serif",
-					"name": "Body (Inconsolata)",
+					"name": "Inconsolata",
 					"slug": "body",
 					"fontFace": [
 						{
@@ -81,7 +53,7 @@
 				},
 				{
 					"fontFamily": "\"Karla\", sans-serif",
-					"name": "Headings (Karla)",
+					"name": "Karla",
 					"slug": "heading",
 					"fontFace": [
 						{

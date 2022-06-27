@@ -55,17 +55,6 @@
 			]
 		},
 		"custom": {
-			"elements": {
-				"button": {
-					"border": {
-						"color": "var(--wp--preset--color--primary)"
-					},
-					"color": {
-						"background": "var(--wp--preset--color--primary)",
-						"text": "var(--wp--preset--color--foreground)"
-					}
-				}
-			},
 			"typography": {
 				"fontSmoothing": {
 					"moz": "auto",
@@ -77,7 +66,7 @@
 			"fontFamilies": [
 				{
 					"fontFamily": "\"Space Mono\", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace",
-					"name": "Body (Space Mono)",
+					"name": "Space Mono",
 					"slug": "body",
 					"fontFace": [
 						{
@@ -96,7 +85,7 @@
 				},
 				{
 					"fontFamily": "\"Space Mono\", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace",
-					"name": "Headings (Space Mono)",
+					"name": "Space Mono",
 					"slug": "heading"
 				}
 			]

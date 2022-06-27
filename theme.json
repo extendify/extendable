@@ -536,6 +536,11 @@
 			"name": "footer",
 			"title": "Footer",
 			"area": "footer"
+		},
+		{
+			"name": "footer-logo-nav",
+			"title": "Footer with Logo and Navigation",
+			"area": "footer"
 		}
 	]
 }

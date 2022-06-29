@@ -231,4 +231,6 @@ input {
 	font-size: 1.15rem;
     line-height: 1.384;
 	border-radius: 0.5rem;
+	background-color: var(--wp--preset--color--background);
+	color: var(--wp--preset--color--foreground);
 }

@@ -530,6 +530,21 @@
 			"name": "footer-logo-nav",
 			"title": "Footer with Logo and Navigation",
 			"area": "footer"
+		},
+		{
+			"name": "footer-social-icons",
+			"title": "Footer with Social Icons",
+			"area": "footer"
+		},
+		{
+			"name": "footer-with-address-four-columns",
+			"title": "Footer with Address, Four Columns",
+			"area": "footer"
+		},
+		{
+			"name": "footer-with-address-dark-three-columns",
+			"title": "Footer with Address, Dark, Three Columns",
+			"area": "footer"
 		}
 	]
 }

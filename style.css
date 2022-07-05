@@ -58,6 +58,11 @@ a:active {
 	text-decoration-style: solid;
 }
 
+/* Don't display the homepage in the Page List block, when located inside a navigation element. */
+nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
+	display: none;
+}
+
 /*
  * Search and File Block button styles.
  * Necessary until the following issues are resolved in Gutenberg:

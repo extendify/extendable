@@ -54,10 +54,6 @@
 				}
 			]
 		},
-		"layout": {
-			"contentSize": "710px",
-			"wideSize": "77rem"
-		},
 		"typography": {
 			"fontFamilies": [
 				{

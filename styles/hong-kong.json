@@ -76,10 +76,6 @@
 					]
 				}
 			]
-		},
-		"layout": {
-			"contentSize": "38rem",
-			"wideSize": "76rem"
 		}
 	},
 	"styles": {
@@ -100,12 +96,6 @@
 					"fontWeight": "400"
 				}
 			},
-			"core/post-title": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--huge)",
-					"fontWeight": "400"
-				}
-			},
 			"core/pullquote": {
 				"border": {
 					"color": "var(--wp--preset--color--primary)"
@@ -123,12 +113,6 @@
 			},
 			"core/query-pagination-previous": {
 				"typography": {
-					"fontWeight": "400"
-				}
-			},
-			"core/query-title": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--xx-large)",
 					"fontWeight": "400"
 				}
 			},

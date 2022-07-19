@@ -13,12 +13,16 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 1.0.7 - 2022-07-19 =
+- New: Add three new footer parts
+- Change: Improve style variations
+
 = 1.0.6 - 2022-06-27 =
 - New: Add template parts as parts, not patterns
 - New: WooCommerce support
   - WooCommerce FSE templates added
   - WooCommerce stylesheet to keep style variations looking good
-- Changed: Streamlined all style variation's *.json to rely on parent theme.json
+- Change: Streamlined all style variation's *.json to rely on parent theme.json
   - See: [Extendify-SDK PR #825](https://github.com/extendify/extendify-sdk/pull/825)
   - See: [Extendable PR #75](https://github.com/extendify/extendable/pull/75)
 - Change: Adjust styles for improved/more consistent design

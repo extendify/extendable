@@ -22,8 +22,8 @@
 		"lint:css": "stylelint **/*.css --fix -i .gitignore",
 		"build": "NO_CHECKS=true bash ./bin/build-zip.sh",
 		"release:version": "replace-in-files --regex='Version: \\d+\\.\\d+\\.\\d+' --replacement='Version: '${npm_package_version}'' style.css && replace-in-files --regex='Stable tag: \\d+\\.\\d+\\.\\d+' --replacement='Stable tag: '${npm_package_version}'' readme.txt",
-		"release:patch": "npm run build && git push && npm version patch --no-git-tag-version && npm run release:version && git add -u && npm run commit:version && npm run make:tag && npm run commit:tag && npm run build:zip",
-		"release:minor": "npm run build && git push && npm version minor --no-git-tag-version && npm run release:version && git add -u && npm run commit:version && npm run make:tag && npm run commit:tag && npm run build:zip",
+		"release:patch": "npm run build && git push && npm version patch --no-git-tag-version && npm run release:version && git add -u && npm run commit:version && npm run make:tag && npm run commit:tag && npm run build",
+		"release:minor": "npm run build && git push && npm version minor --no-git-tag-version && npm run release:version && git add -u && npm run commit:version && npm run make:tag && npm run commit:tag && npm run build",
 		"make:tag": "git tag ${npm_package_version}",
 		"commit:tag": "git push --tags",
 		"commit:version": "git commit -m 'Version bump to '${npm_package_version}''"

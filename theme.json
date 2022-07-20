@@ -486,6 +486,11 @@
 			"name": "footer-logo-nav",
 			"title": "Footer with Logo and Navigation",
 			"area": "footer"
+		},
+		{
+			"name": "footer-mega",
+			"title": "Footer Mega Dark",
+			"area": "footer"
 		}
 	]
 }

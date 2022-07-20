@@ -39,7 +39,7 @@
 <h4 class="has-small-font-size" id="about">About</h4>
 <!-- /wp:heading -->
 
-<!-- wp:navigation {"ref":177,"overlayMenu":"never","className":"header\u002d\u002dnav order-3 md:order-2","layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"left","flexWrap":"nowrap","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.75rem"}}} /--></div>
+<!-- wp:navigation {"overlayMenu":"never","className":"header\u002d\u002dnav order-3 md:order-2","layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"left","flexWrap":"nowrap","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.75rem"}}} /--></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"width":"25%"} -->
@@ -47,7 +47,7 @@
 <h4 class="has-small-font-size" id="company-1">Products</h4>
 <!-- /wp:heading -->
 
-<!-- wp:navigation {"ref":177,"overlayMenu":"never","className":"header\u002d\u002dnav order-3 md:order-2","layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"left","flexWrap":"nowrap","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.75rem"}}} /--></div>
+<!-- wp:navigation {"overlayMenu":"never","className":"header\u002d\u002dnav order-3 md:order-2","layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"left","flexWrap":"nowrap","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.75rem"}}} /--></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
 <!-- /wp:group --></div>

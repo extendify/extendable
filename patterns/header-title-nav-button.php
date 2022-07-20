@@ -12,7 +12,7 @@
 <div class="wp-block-group"><!-- wp:site-title /-->
 
 <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap"}} -->
-<div class="wp-block-group"><!-- wp:navigation {"ref":2515,"layout":{"type":"flex","justifyContent":"right","flexWrap":"nowrap"}} /-->
+<div class="wp-block-group"><!-- wp:navigation {"layout":{"type":"flex","justifyContent":"right","flexWrap":"nowrap"}} /-->
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->

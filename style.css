@@ -7,7 +7,7 @@ Description: Extendable is a distinct, dynamic block theme designed as a canvas 
 Requires at least: 6.0
 Tested up to: 6.0
 Requires PHP: 5.6
-Version: 1.0.6
+Version: 1.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: extendable
@@ -56,6 +56,11 @@ a:active {
 .wp-block-navigation .wp-block-navigation-item a:focus {
 	text-decoration: underline;
 	text-decoration-style: solid;
+}
+
+/* Don't display the homepage in the Page List block, when located inside a navigation element. */
+nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
+	display: none;
 }
 
 /*

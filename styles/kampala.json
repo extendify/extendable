@@ -69,16 +69,6 @@
 					"text": "var(--wp--preset--color--white)"
 				}
 			},
-			"core/post-title": {
-				"typography": {
-					"fontWeight": "900"
-				}
-			},
-			"core/query-title": {
-				"typography": {
-					"fontWeight": "900"
-				}
-			},
 			"core/separator": {
 				"color": {
 					"text": "var(--wp--preset--color--primary)"

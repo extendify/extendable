@@ -54,10 +54,6 @@
 				}
 			]
 		},
-		"layout": {
-			"contentSize": "670px",
-			"wideSize": "68rem"
-		},
 		"typography": {
 			"fontFamilies": [
 				{
@@ -104,12 +100,6 @@
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
 				}
 			},
-			"core/post-title": {
-				"typography": {
-					"fontSize": "var(--wp--custom--typography--font-size--huge)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)"
-				}
-			},
 			"core/pullquote": {
 				"border": {
 					"color": "var(--wp--preset--color--primary)",
@@ -134,11 +124,6 @@
 					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
 				}
 			},
-			"core/query-title": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--xx-large)"
-				}
-			},
 			"core/quote": {
 				"border": {
 					"width": "0 0 0 5px"
@@ -153,35 +138,37 @@
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--thin)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
 					"letterSpacing": "0"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--extra-light)"
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)"
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
 					"letterSpacing": "0.01em"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)"
 				}
 			},
 			"h6": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
 					"letterSpacing": "0.02em"
 				}
 			}
-		},
-		"spacing": {
-			"blockGap": "min(40px, 9vw)"
 		}
 	}
 }

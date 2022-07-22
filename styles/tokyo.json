@@ -107,22 +107,9 @@
 					"letterSpacing": "0.03em"
 				}
 			},
-			"core/post-title": {
-				"typography": {
-					"fontSize": "var(--wp--custom--typography--font-size--huge)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
-					"letterSpacing": "0.02em"
-				}
-			},
 			"core/pullquote": {
 				"border": {
 					"color": "var(--wp--preset--color--primary)"
-				}
-			},
-			"core/query-title": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--xx-large)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
 				}
 			},
 			"core/site-title": {
@@ -168,9 +155,6 @@
 					"letterSpacing": "0.05em"
 				}
 			}
-		},
-		"spacing": {
-			"blockGap": "2.5rem"
 		}
 	}
 }

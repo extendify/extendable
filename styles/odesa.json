@@ -54,10 +54,6 @@
 				}
 			]
 		},
-		"layout": {
-			"contentSize": "710px",
-			"wideSize": "77rem"
-		},
 		"typography": {
 			"fontFamilies": [
 				{
@@ -104,12 +100,6 @@
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
 				}
 			},
-			"core/post-title": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--huge)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)"
-				}
-			},
 			"core/pullquote": {
 				"border": {
 					"color": "var(--wp--preset--color--primary)",
@@ -119,23 +109,17 @@
 			},
 			"core/query-pagination-next": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)"
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
 				}
 			},
 			"core/query-pagination-numbers": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)"
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
 				}
 			},
 			"core/query-pagination-previous": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)"
-				}
-			},
-			"core/query-title": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--xx-large)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--black)"
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
 				}
 			},
 			"core/quote": {
@@ -159,18 +143,18 @@
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--extra-light)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
 					"letterSpacing": "-0.01em"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)"
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--medium)"
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
 				}
 			},
 			"h4": {
@@ -192,9 +176,6 @@
 					"letterSpacing": "0.02em"
 				}
 			}
-		},
-		"spacing": {
-			"blockGap": "min(32px, 7vw)"
 		}
 	}
 }

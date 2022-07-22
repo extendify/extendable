@@ -144,21 +144,10 @@
 					"fontWeight": "(--wp--custom--typography--font-weight--semi-bold)"
 				}
 			},
-			"core/post-title": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--huge)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--medium)"
-				}
-			},
 			"core/pullquote": {
 				"border": {
 					"color": "var(--wp--preset--color--primary)",
 					"width": "6px 0"
-				}
-			},
-			"core/query-title": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--xx-large)"
 				}
 			},
 			"core/quote": {

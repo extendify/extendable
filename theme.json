@@ -501,6 +501,11 @@
 			"name": "footer-with-address-dark-three-columns",
 			"title": "Footer with Address, Dark, Three Columns",
 			"area": "footer"
+		},
+		{
+			"name": "footer-mega",
+			"title": "Footer with Three Columns of Menus",
+			"area": "footer"
 		}
 	]
 }

@@ -8,27 +8,6 @@
 			"postTypes": ["page", "post"]
 		},
 		{
-			"name": "page-cart",
-			"title": "Cart",
-			"postTypes": [
-				"page"
-			]
-		},
-		{
-			"name": "page-checkout",
-			"title": "Checkout",
-			"postTypes": [
-				"page"
-			]
-		},
-		{
-			"name": "single-product",
-			"title": "Single Product",
-			"postTypes": [
-				"product"
-			]
-		},
-		{
 			"name": "no-title",
 			"title": "No Title",
 			"postTypes": ["page", "post"]

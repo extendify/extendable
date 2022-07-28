@@ -63,6 +63,19 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
 	display: none;
 }
 
+/* Add support for the list block when placed inside a navigation block. */
+.wp-block-navigation .wp-block-page-list {
+  display: flex;
+  flex-direction: var(--navigation-layout-direction, initial);
+  justify-content: var(--navigation-layout-justify, initial);
+  align-items: var(--navigation-layout-align, initial);
+  flex-wrap: var(--navigation-layout-wrap, wrap);
+  background-color: inherit;
+}
+.wp-block-navigation .wp-block-navigation-item {
+  background-color: inherit;
+}
+
 /*
  * Search and File Block button styles.
  * Necessary until the following issues are resolved in Gutenberg:
@@ -229,7 +242,7 @@ input {
 /*
  * Matching input with outline button style.
  */
-.wp-block-post-comments-form input:not([type=submit]), 
+.wp-block-post-comments-form input:not([type=submit]),
 .wp-block-post-comments-form textarea {
     border: 2px solid currentColor;
     padding: 0.667em 1.333em !important;

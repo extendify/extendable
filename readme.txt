@@ -13,6 +13,11 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 1.0.8 - 2022-07-29 =
+- New: Add new footer part
+- Change: Improve style variations
+- Change: Remove extraneous WooCommerce templates
+
 = 1.0.7 - 2022-07-19 =
 - New: Add three new footer parts
 - Change: Improve style variations

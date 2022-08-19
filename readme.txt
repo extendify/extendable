@@ -3,7 +3,7 @@ Contributors: extendify, richtabor, colorful-tones
 Requires at least: 6.0
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Extendable is a distinct, dynamic block theme designed as a canvas for your next online venture. Sporting multiple style variations, Extendable is the most expressive block theme yet. Go fresh, bold, bohemaian or minimal — with a single click.
 
 == Changelog ==
+
+= 1.0.8 - 2022-07-29 =
+- New: Add new footer part
+- Change: Improve style variations
+- Change: Remove extraneous WooCommerce templates
 
 = 1.0.7 - 2022-07-19 =
 - New: Add three new footer parts

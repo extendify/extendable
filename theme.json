@@ -153,7 +153,7 @@
 				"small": "min(2rem, 3.5vw)",
 				"medium": "calc(2 * var(--wp--custom--spacing--small))",
 				"large": "min(6rem, 10vw)",
-				"outer": "max(1.25rem, 3vw)"
+				"outer": "max(1.25rem, 4vw)"
 			},
 			"typography": {
 				"fontSmoothing": {

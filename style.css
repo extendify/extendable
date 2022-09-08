@@ -115,7 +115,9 @@ body > .is-root-container,
 	padding-left: var(--wp--custom--spacing--outer);
 	padding-right: var(--wp--custom--spacing--outer);
 }
-
+.block-editor-block-list__layout.is-root-container > .alignfull,
+.block-editor-block-list__layout.is-root-container > .alignfull > .alignfull,
+.is-root-container > .wp-block-group.has-background,
 .wp-site-blocks .alignfull,
 .wp-site-blocks > .wp-block-group.has-background,
 .wp-site-blocks > .wp-block-cover,

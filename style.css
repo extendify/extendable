@@ -76,7 +76,6 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
 	border-radius: 0;
 	border: none;
 	color: var(--wp--preset--color--background);
-	font-size: var(--wp--preset--font-size--medium);
 	padding: calc(.667em + 2px) calc(1.333em + 2px);
 }
 

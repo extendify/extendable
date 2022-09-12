@@ -106,32 +106,32 @@
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontWeight": "300"
+					"fontWeight": "500"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontWeight": "300"
+					"fontWeight": "500"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontWeight": "300"
+					"fontWeight": "500"
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontWeight": "300"
+					"fontWeight": "500"
 				}
 			},
 			"h5": {
 				"typography": {
-					"fontWeight": "300"
+					"fontWeight": "500"
 				}
 			},
 			"h6": {
 				"typography": {
-					"fontWeight": "300"
+					"fontWeight": "500"
 				}
 			}
 		}

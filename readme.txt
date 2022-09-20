@@ -13,6 +13,18 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 1.0.9 - 2022-09-21 =
+- Change: Remove post title block from default page template
+- Change: Improve blocks style
+  - Block post title: Remove text underline decoration and add hover, focus, and active state indicator. 
+  - Block post terms: Remove text underline decoration and add hover, focus, and active state indicator. 
+  - Block post date: Remove text underline decoration.
+  - Block query pagination numbers: Add spacing around numbers.
+  - Use normal font size beside medium for the search block button.
+- Change: Use medium font-weight for heading in Grayscale style variation.
+- Change: Adjust layout horizontal spacing
+- Change: Reduce outer spacing
+
 = 1.0.8 - 2022-07-29 =
 - New: Add new footer part
 - Change: Improve style variations

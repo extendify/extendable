@@ -1,6 +1,6 @@
 # Extendable
 
-Extendable is a distinct, dynamic block theme designed as a canvas for your next online venture. Sporting multiple style variations, Extendable is the most expressive block theme yet. Go fresh, bold, bohemaian or minimal — with a single click.
+Extendable is a distinct, dynamic block theme designed as a canvas for your next online venture. Sporting multiple style variations, Extendable is the most expressive block theme yet. Go fresh, bold, bohemian or minimal — with a single click.
 
 ## Getting Started
 
@@ -35,4 +35,3 @@ You can install the test-specific development dependencies by running `npm i && 
 - [Global Styles & theme.json documentation](https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/)
 - [The Ultimate Guide to WordPress Block Templates in Gutenberg](https://richtabor.com/gutenberg-block-templates/)
 - [A Primer on Full Site Editing for WordPress Theme Developers](https://richtabor.com/full-site-editing/)
-

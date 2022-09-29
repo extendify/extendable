@@ -9,15 +9,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Extendable is a distinct, dynamic block theme designed as a canvas for your next online venture. Sporting multiple style variations, Extendable is the most expressive block theme yet. Go fresh, bold, bohemaian or minimal — with a single click.
+Extendable is a distinct, dynamic block theme designed as a canvas for your next online venture. Sporting multiple style variations, Extendable is the most expressive block theme yet. Go fresh, bold, bohemian or minimal — with a single click.
 
 == Changelog ==
 
 = 1.0.9 - 2022-09-21 =
 - Change: Remove post title block from default page template
 - Change: Improve blocks style
-  - Block post title: Remove text underline decoration and add hover, focus, and active state indicator. 
-  - Block post terms: Remove text underline decoration and add hover, focus, and active state indicator. 
+  - Block post title: Remove text underline decoration and add hover, focus, and active state indicator.
+  - Block post terms: Remove text underline decoration and add hover, focus, and active state indicator.
   - Block post date: Remove text underline decoration.
   - Block query pagination numbers: Add spacing around numbers.
   - Use normal font size beside medium for the search block button.

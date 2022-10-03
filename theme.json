@@ -150,12 +150,6 @@
 					}
 				}
 			},
-			"spacing": {
-				"small": "min(2rem, 3.5vw)",
-				"medium": "calc(2 * var(--wp--custom--spacing--small))",
-				"large": "min(6rem, 10vw)",
-				"outer": "max(1.25rem, 4vw)"
-			},
 			"typography": {
 				"fontSmoothing": {
 					"moz": "grayscale",
@@ -545,7 +539,7 @@
 			}
 		},
 		"spacing": {
-			"blockGap": "var:custom|spacing|small",
+			"blockGap": "var(--wp--preset--spacing--30, clamp(1.5rem, 5vw, 2rem))",
 			"padding": {
 				"top": "var(--wp--preset--spacing--40)",
 				"right": "var(--wp--preset--spacing--30)",

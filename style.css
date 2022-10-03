@@ -20,6 +20,16 @@ Extendable WordPress Theme, (C) 2022 Extendify Inc.
 Extendable therefore is also distributed under the terms of the GNU GPL.
 */
 
+
+/* Fallback for deprecate variables.
+---------------------------------------------------------------------------- */
+:root {
+	--wp--custom--spacing--small: var(--wp--preset--spacing--30, clamp(1.5rem, 5vw, 2rem));
+	--wp--custom--spacing--medium: var(--wp--preset--spacing--50, clamp(2.5rem, 8vw, 4rem));
+	--wp--custom--spacing--large: var(--wp--preset--spacing--60, clamp(2.5rem, 8vw, 6rem));
+	--wp--custom--spacing--outer: max(1.25rem, 4vw);
+}
+
 /*
  * Font smoothing.
  * This is a niche setting that will not be available via Global Styles.

@@ -22,8 +22,18 @@ if ( ! function_exists( 'extendable_support' ) ) :
 		// Add support for block styles.
 		add_theme_support( 'wp-block-styles' );
 
+		global $wp_version;
+		// Add style for WordPress older versions.
+		if(version_compare( $wp_version, '6.0.2', '<=' )) {
+			$editor_style = array(
+				'style.css',
+				'/assets/css/deprecate-style.css',
+			);
+		} else {
+			$editor_style = 'style.css';
+		}
 		// Enqueue editor styles.
-		add_editor_style( 'style.css' );
+		add_editor_style( $editor_style );
 
 		// Register WooCommerce theme features.
 		add_theme_support( 'wc-product-gallery-zoom' );
@@ -70,7 +80,15 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 
 		global $wp_version;
 		if(version_compare( $wp_version, '6.0.2', '<=' )) {
-			wp_add_inline_style( 'extendable-style', extendable_backward_compatibilitye_styles() );
+			// Register deprecate stylesheet.
+			wp_register_style(
+				'extendable-deprecate-style',
+				get_template_directory_uri() . '/assets/css/deprecate-style.css',
+				array(),
+				$version_string
+			);
+			// Enqueue deprecate stylesheet.
+			wp_enqueue_style( 'extendable-deprecate-style' );
 		};
 	}
 
@@ -148,70 +166,3 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 	}
 	add_filter( 'woocommerce_enqueue_styles', 'extendable_woocommerce_enqueue_styles' );
 }
-
-if ( ! function_exists( 'extendable_inline_editor_styles' ) ) :
-
-	/**
-	 * Enqueue editor styles.
-	 *
-	 * @since Extendable 1.1.0
-	 *
-	 * @return void
-	 */
-	function extendable_inline_editor_styles() {
-
-		// Add editor styles inline.
-		global $wp_version;
-		if(version_compare( $wp_version, '6.0.2', '<=' )) {
-			wp_add_inline_style( 'wp-block-library', extendable_backward_compatibilitye_styles() );
-		}
-	}
-
-endif;
-
-add_action( 'admin_init', 'extendable_inline_editor_styles' );
-if ( ! function_exists( 'extendable_backward_compatibilitye_styles' ) ) :
-
-	/**
-	 * Get editor styles.
-	 *
-	 * @since Extendable 1.1.0
-	 *
-	 * @return string
-	 */
-	function extendable_backward_compatibilitye_styles() {
-
-		return "
-			/*
-			* Alignment styles.
-			* These rules are temporary, and should not be relied on or
-			* modified too heavily by themes or plugins that build on
-			* Twenty Twenty-Two. These are meant to be a precursor to
-			* a global solution provided by the Block Editor.
-			*
-			* Relevant issues:
-			* https://github.com/WordPress/gutenberg/issues/35607
-			* https://github.com/WordPress/gutenberg/issues/35884
-			*/
-		
-		   .block-editor-block-list__layout.is-root-container > .alignfull,
-		   .block-editor-block-list__layout.is-root-container > .alignfull > .alignfull,
-		   .is-root-container > .wp-block-group.has-background,
-		   .wp-site-blocks .alignfull,
-		   .wp-site-blocks > .wp-block-group.has-background,
-		   .wp-site-blocks > .wp-block-cover,
-		   .wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background,
-		   .wp-site-blocks > .wp-block-template-part > .wp-block-cover,
-		   body > .is-root-container > .wp-block-cover,
-		   body > .is-root-container > .wp-block-template-part > .wp-block-group.has-background,
-		   body > .is-root-container > .wp-block-template-part > .wp-block-cover,
-		   .is-root-container .wp-block[data-align=\"full\"] {
-				margin-right: calc(clamp(1.5rem, 5vw, 2rem) * -1) !important;
-				margin-left: calc(clamp(1.5rem, 5vw, 2rem) * -1) !important;
-				width: unset;
-		   }
-		";
-
-	}
-
-endif;

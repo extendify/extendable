@@ -542,9 +542,9 @@
 			"blockGap": "2rem",
 			"padding": {
 				"top": "0",
-				"right": "var(--wp--preset--spacing--30, clamp(1.5rem, 5vw, 2rem))",
+				"right": "var(--wp--preset--spacing--30)",
 				"bottom": "0",
-				"left": "var(--wp--preset--spacing--30, clamp(1.5rem, 5vw, 2rem))"
+				"left": "var(--wp--preset--spacing--30)"
 			}
 		},
 		"typography": {

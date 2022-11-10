@@ -14,6 +14,7 @@
 		style="padding-top:clamp(1.5rem, 5vw, 2rem);padding-right:clamp(1.5rem, 5vw, 2rem);padding-bottom:clamp(1.5rem, 5vw, 2rem);padding-left:clamp(1.5rem, 5vw, 2rem)">
 		<!-- wp:group {"style":{"spacing":{"blockGap":"1.5rem"}},"layout":{"type":"flex","allowOrientation":false}} -->
 		<div class="wp-block-group">
+			<!-- wp:site-logo {"width":120} /-->
 			<!-- wp:site-title {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"medium"} /-->
 		</div>
 		<!-- /wp:group -->

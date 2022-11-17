@@ -16,9 +16,8 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 = 1.1.1 - 2022-11-18 =
 - New: Add step spacing support.
 - New: Add site padding support.
-- Add fluid typography support.
 - Change: Deprecate custom spacing.
-- Change: Minor spacing tweaks
+- Change: Minor spacing tweaks.`
 
 = 1.1.0 - 2022-09-21 =
 - Change: Remove post title block from default page template

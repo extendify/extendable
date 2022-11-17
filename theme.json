@@ -149,12 +149,6 @@
 					}
 				}
 			},
-			"spacing": {
-				"small": "min(2rem, 3.5vw)",
-				"medium": "calc(2 * var(--wp--custom--spacing--small))",
-				"large": "min(6rem, 10vw)",
-				"outer": "max(1.25rem, 4vw)"
-			},
 			"typography": {
 				"fontSmoothing": {
 					"moz": "grayscale",
@@ -185,6 +179,41 @@
 			"wideSize": "80rem"
 		},
 		"spacing": {
+			"spacingScale": {
+				"steps": 0
+			},
+			"spacingSizes": [
+				{
+					"size": "clamp(1.5rem, 5vw, 2rem)",
+					"slug": "30",
+					"name": "1"
+				},
+				{
+					"size": "clamp(1.8rem, 1.8rem + ((1vw - 0.48rem) * 2.885), 3rem)",
+					"slug": "40",
+					"name": "2"
+				},
+				{
+					"size": "clamp(2.5rem, 8vw, 4rem)",
+					"slug": "50",
+					"name": "3"
+				},
+				{
+					"size": "clamp(2.5rem, 8vw, 6rem)",
+					"slug": "60",
+					"name": "4"
+				},
+				{
+					"size": "clamp(3.75rem, 10vw, 7rem)",
+					"slug": "70",
+					"name": "5"
+				},
+				{
+					"size": "clamp(5rem, 5.25rem + ((1vw - 0.48rem) * 9.096), 8rem)",
+					"slug": "80",
+					"name": "6"
+				}
+			],
 			"units": ["%", "px", "em", "rem", "vh", "vw"]
 		},
 		"typography": {
@@ -238,7 +267,8 @@
 					"slug": "xx-large"
 				}
 			]
-		}
+		},
+		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
 		"blocks": {
@@ -509,7 +539,13 @@
 			}
 		},
 		"spacing": {
-			"blockGap": "var:custom|spacing|small"
+			"blockGap": "2rem",
+			"padding": {
+				"top": "0",
+				"right": "var(--wp--preset--spacing--30)",
+				"bottom": "0",
+				"left": "var(--wp--preset--spacing--30)"
+			}
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--body)",

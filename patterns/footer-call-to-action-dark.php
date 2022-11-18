@@ -24,8 +24,8 @@
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
 
-<!-- wp:separator {"align":"full","style":{"color":{"background":"#0000000f"}},"className":"is-style-wide"} -->
-<hr class="wp-block-separator alignfull has-text-color has-alpha-channel-opacity has-background is-style-wide" style="background-color:#0000000f;color:#0000000f"/>
+<!-- wp:separator {"align":"full","style":{"color":{"background":"#ffffff1f"}},"className":"is-style-wide"} -->
+<hr class="wp-block-separator alignfull has-text-color has-alpha-channel-opacity has-background is-style-wide" style="background-color:#ffffff1f;color:#ffffff1f"/>
 <!-- /wp:separator -->
 
 <!-- wp:columns {"align":"wide","style":{"spacing":{"padding":{"bottom":"var:preset|spacing|40","top":"var:preset|spacing|40"},"blockGap":"3rem"}}} -->
@@ -60,8 +60,8 @@
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
-<!-- wp:separator {"align":"full","style":{"color":{"background":"#0000000f"}},"className":"is-style-wide"} -->
-<hr class="wp-block-separator alignfull has-text-color has-alpha-channel-opacity has-background is-style-wide" style="background-color:#0000000f;color:#0000000f"/>
+<!-- wp:separator {"align":"full","style":{"color":{"background":"#ffffff1f"}},"className":"is-style-wide"} -->
+<hr class="wp-block-separator alignfull has-text-color has-alpha-channel-opacity has-background is-style-wide" style="background-color:#ffffff1f;color:#ffffff1f"/>
 <!-- /wp:separator -->
 
 <!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":"2rem","padding":{"bottom":"1rem"}}}} -->

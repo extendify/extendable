@@ -186,6 +186,36 @@ input {
 	outline-offset: 0.2ch;
 }
 
+.wp-block-post-comments input:not([type="submit"]),
+.wp-block-post-comments input:not([type="submit"]):not([type="checkbox"]),
+.wp-block-post-comments textarea,
+[multiple],
+[type="date"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+    border-color: var(--wp--custom--elements--input--border--color);
+    border-radius: var(--wp--custom--elements--input--border--radius);
+    border-width: var(--wp--custom--elements--input--border--width);
+    box-sizing: border-box;
+    display: block;
+    font-size: var(--wp--custom--elements--typography--font-size);
+    line-height: var(--wp--custom--elements--typography--line-height);
+    padding: var(--wp--custom--elements--input--spacing--padding--top) var(--wp--custom--elements--input--spacing--padding--right) var(--wp--custom--elements--input--spacing--padding--bottom) var(--wp--custom--elements--input--spacing--padding--left);
+    width: 100%;
+}
+
+
 /*
  * Matching input with outline button style.
  */

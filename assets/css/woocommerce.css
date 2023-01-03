@@ -38,26 +38,22 @@
 
 	--wc--button--border--style: var(--wp--custom--elements--button--border--style, solid);
 
-	--wc--button--border--width: var(--wp--custom--elements--button--border--width, 1px);
+	--wc--button--border--width: var(--wp--custom--elements--button--border--width, 2px);
 
-	--wc--button--border--radius-bottom-left: var(--wp--custom--elements--button--border--radius--bottom-left, 0);
-	--wc--button--border--radius-bottom-right: var(--wp--custom--elements--button--border--radius--bottom-right, 0);
-	--wc--button--border--radius-top-left: var(--wp--custom--elements--button--border--radius--top-left, 0);
-	--wc--button--border--radius-top-right: var(--wp--custom--elements--button--border--radius--top-right, 0);
-	--wc--button--border--radius: var(--wc--button--border--radius-top-left) var(--wc--button--border--radius-top-right) var(--wc--button--border--radius-bottom-right) var(--wc--button--border--radius-bottom-left);
+	--wc--button--border--radius: var(--wp--custom--elements--button--border--radius);
 
 	--wc--button--typography--font-family: var(--wp--custom--elements--button--typography--font-family, inherit);
-	--wc--button--typograhpy--font-size: var(--wp--custom--elements--button--typography--font-size, inherit);
+	--wc--button--typograhpy--font-size: var(--wp--custom--elements--button--typography--font-size, 1.15rem);
 	--wc--button--typography--font-weight: var(--wp--custom--elements--button--typography--font-weight, 400);
 	--wc--button--typography--letter-spacing: var(--wp--custom--elements--button--typography--letter-spacing, 0);
-	--wc--button--typography--line-height: var(--wp--custom--elements--button--typography--line-height, 1);
+	--wc--button--typography--line-height: var(--wp--custom--elements--button--typography--line-height, 1.384);
 	--wc--button--typography--text-align: center;
 	--wc--button--typography--text-transform: var(--wp--custom--elements--button--typography--text-transform, none);
-
-	--wc--button--padding--bottom: var(--wp--custom--elements--button--spacing--padding--bottom, 1.1rem);
-	--wc--button--padding--left: var(--wp--custom--elements--button--spacing--padding--left, 2rem);
-	--wc--button--padding--right: var(--wp--custom--elements--button--spacing--padding--right, 2rem);
-	--wc--button--padding--top: var(--wp--custom--elements--button--spacing--padding--top, 1.1rem);
+	
+	--wc--button--padding--bottom: calc(var(--wp--custom--elements--button--spacing--padding--bottom, calc(0.667em + 2px)) - 2px);
+	--wc--button--padding--left: calc(var(--wp--custom--elements--button--spacing--padding--left, calc(1.333em + 2px)) - 2px);
+	--wc--button--padding--right: calc(var(--wp--custom--elements--button--spacing--padding--right, calc(1.333em + 2px)) - 2px);
+	--wc--button--padding--top: calc(var(--wp--custom--elements--button--spacing--padding--top, calc(0.667em + 2px)) - 2px);
 	--wc--button--padding: var(--wc--button--padding--top) var(--wc--button--padding--right) var(--wc--button--padding--bottom) var(--wc--button--padding--left);
 
 	--wc--pagination--current--typography--font-weight: var(--wp--custom--typography--font-weight--bold, 700);
@@ -82,7 +78,6 @@
 
 .woocommerce ul.products li.product,
 .woocommerce-page ul.products li.product {
-	margin-top: var(--wc--gap);
 	text-align: center;
 }
 
@@ -90,8 +85,8 @@
 	text-decoration: none;
 }
 
-.woocommerce .product .woocommerce-loop-product__title {
-	font-size: var(--wp--preset--font-size--large);
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+	font-size: var(--wp--preset--font-size--medium);
 }
 
 .woocommerce .product .price {
@@ -151,11 +146,17 @@
  *  Breadcrumbs
  * --------------------------------------------------------
  */
-
+ .woocommerce .woocommerce-breadcrumb {
+	margin-bottom: 0.5rem;
+ }
+ .woocommerce.single-product .woocommerce-breadcrumb {
+	margin-bottom: var(--wp--preset--spacing--30);
+ }
 .woocommerce .woocommerce-breadcrumb,
  .woocommerce .woocommerce-breadcrumb a {
 	color: var(--wp--preset--color--foreground);
 	text-decoration: none;
+	font-size: var(--wp--preset--font-size--small);
 }
 
 /*
@@ -179,6 +180,18 @@
  * --------------------------------------------------------
  */
 
+.woocommerce-products-header__title.page-title {
+	margin-top: 0;
+	margin-bottom: var(--wp--preset--spacing--40);
+	font-size: var(--wp--preset--font-size--x-large);
+}
+.woocommerce-result-count {
+	font-size: var(--wp--preset--font-size--small);
+	margin-bottom: var(--wp--preset--spacing--30);
+}
+.woocommerce .woocommerce-ordering {
+	margin-bottom: var(--wp--preset--spacing--30);
+}
 .woocommerce-ordering .orderby {
 	padding: 0.3rem 0 0.3rem 0.5rem;
 }
@@ -189,34 +202,79 @@
  * --------------------------------------------------------
  */
 
-.single-product .summary .product_title {
-	font-size: var(--wp--preset--font-size--xx-large);
+ .woocommerce div.product {
+	margin-top: var(--wp--preset--spacing--30);
+ }
+.single-product .summary .product_title.entry-title {
+	font-size: var(--wp--preset--font-size--x-large);
+	margin-bottom: 1rem;
+}
+
+.woocommerce div.product p.price {
+	margin-top: 1rem;
+	font-weight: 700;
+}
+
+.woocommerce div.product div.summary .woocommerce-product-details__short-description {
+	margin-bottom: var(--wp--preset--spacing--40);
+}
+
+.woocommerce div.product div.summary .stock {
+	font-weight: 700;
+	color: var(--wp--preset--color--primary);
+}
+
+.woocommerce div.product div.summary form.cart {
+	margin-bottom: var(--wp--preset--spacing--50);
 }
 
 .woocommerce div.product form.cart .button {
-	width: 100%;
+	margin-left: 0.5rem;
+}
+.woocommerce div.product .product_meta {
+	display: flex;
+	flex-direction: column;
+	font-weight: 700;
+	font-size: var(--wp--preset--font-size--small);
+}
+.woocommerce div.product .product_meta > * > * {
+	font-weight: 400;
+}
+
+.woocommerce div.product .woocommerce-tabs {
+	padding-top: var(--wp--preset--spacing--30);
+	margin-bottom: var(--wp--preset--spacing--60);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+	padding: 0;
+	margin-bottom: var(--wp--preset--spacing--30);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::before {
+    border-bottom: 2px solid var(--wp--preset--color--foreground);
+	opacity: 0.2;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
 	color: var(--wc--tabs--color--text--static);
-	opacity: 0.7;
+	opacity: 0.5;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
-	background-color: var(--wc--tabs--color--background--static);
-	border-color: var(--wc--preset--color--alt);
+	background-color: transparent;
+	border: none;
+	border-bottom: solid 2px transparent;
+	border-radius: 0;
 }
 
-.woocommerce div.product .woocommerce-tabs ul.tabs::before,
 .woocommerce div.product .woocommerce-tabs ul.tabs li::after,
 .woocommerce div.product .woocommerce-tabs ul.tabs li::before {
-	border-color: var(--wc--preset--color--alt);
-	box-shadow: none;
+	border: none;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
-	background: var(--wp--preset--color--background);
-	border-bottom-color: var(--wp--preset--color--background);
+	border-bottom: solid 2px var(--wp--preset--color--foreground);
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active::before,
@@ -234,17 +292,19 @@
 }
 
 .woocommerce-Tabs-panel h2 {
-	font-size: var(--wp--preset--font-size--x-large);
+	font-size: var(--wp--preset--font-size--medium);
 }
-
+.woocommerce div.product .related.products {
+	margin-top: var(--wp--preset--spacing--60);
+}
 .single-product .related {
 	margin-bottom: var(--wp--custom--spacing--large);
 	margin-top: var(--wp--custom--spacing--large);
 }
 
 .single-product .related h2 {
-	font-size: var(--wp--preset--font-size--xx-large);
-	margin-bottom: 0;
+	font-size: var(--wp--preset--font-size--large);
+	margin-bottom: var(--wp--preset--spacing--30);
 }
 
 /*
@@ -286,18 +346,51 @@
  */
 
 .woocommerce div.product form.cart div.quantity {
-	float: none;
-	margin-bottom: var(--wc--gap);
 	margin-right: 0;
 }
 
 .quantity .qty {
 	color: currentColor;
-	font-size: 1.4rem;
+	font-size: var(--wc--button--typograhpy--font-size);
 	height: 100%;
 	text-align: center;
 	background-color: transparent;
 	border-color: currentColor;
 	border-style: solid;
-	padding: 0.3rem 0.5rem;
+	border-radius: var(--wp--custom--elements--input--border--radius);
+	border-width: var(--wp--custom--elements--input--border--width);
+	padding: var(--wp--custom--elements--input--spacing--padding--top, calc(0.667em + 2px)) var(--wp--custom--elements--input--spacing--padding--right, calc(1.333em + 2px)) ;
+}
+
+/*
+ * --------------------------------------------------------
+ *  input
+ * --------------------------------------------------------
+ */
+
+.woocommerce-page .input-text {
+    border-color: var(--wp--custom--elements--input--border--color);
+    border-radius: var(--wp--custom--elements--input--border--radius);
+    border-width: var(--wp--custom--elements--input--border--width);
+    box-sizing: border-box;
+    display: block;
+    line-height: var(--wp--custom--elements--typography--line-height);
+    padding: var(--wp--custom--elements--input--spacing--padding--top) var(--wp--custom--elements--input--spacing--padding--right) var(--wp--custom--elements--input--spacing--padding--bottom) var(--wp--custom--elements--input--spacing--padding--left);
+    width: 100%;
+}
+.woocommerce form .form-row .select2-container .select2-selection--single {
+    background-color: var(--wp--custom--elements--input--color--background);
+    border-color: var(--wp--custom--elements--input--color--foreground);
+    border-radius: var(--wp--custom--elements--input--border--radius);
+    border-style: solid;
+    border-width: var(--wp--custom--elements--input--border--width);
+    color: currentColor;
+    cursor: pointer;
+    display: block;
+    font-size: var(--wp--preset--font-size--small);
+	line-height: var(--wp--custom--elements--input--typography--line-height);
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: calc(var(--wp--custom--elements--input--spacing--padding--top) - 5px) var(--wp--custom--elements--input--spacing--padding--right) calc(var(--wp--custom--elements--input--spacing--padding--bottom) - 5px) var(--wp--custom--elements--input--spacing--padding--left);
 }

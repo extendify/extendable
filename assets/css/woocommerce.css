@@ -626,11 +626,15 @@
 }
 .woocommerce-account .woocommerce-MyAccount-navigation li,
 .woocommerce-account .woocommerce-MyAccount-navigation li:first-child {
+	padding: 0;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation li a{
 	background-color: var(--wp--preset--color--tertiary);
 	padding: calc(var(--wp--preset--spacing--30) / 2)
 		calc(var(--wp--preset--spacing--30) / 1.5);
 	border-radius: var(--wp--custom--elements--input--border--radius);
 	font-size: var(--wp--preset--font-size--small);
+	display: block;
 }
 
 .woocommerce-account .woocommerce-MyAccount-content {

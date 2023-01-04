@@ -204,18 +204,22 @@ input {
 [type="week"],
 select,
 textarea {
+	background-color: var(--wp--custom--elements--input--color--background);
+	color: var(--wp--custom--elements--input--color--text);
     border-color: var(--wp--custom--elements--input--border--color);
     border-radius: var(--wp--custom--elements--input--border--radius);
     border-width: var(--wp--custom--elements--input--border--width);
     box-sizing: border-box;
     display: block;
-    font-size: var(--wp--custom--elements--typography--font-size);
-    line-height: var(--wp--custom--elements--typography--line-height);
+    font-size: var(--wp--custom--elements--input--typography--font-size);
+    line-height: var(--wp--custom--elements--input--typography--line-height);
     padding: var(--wp--custom--elements--input--spacing--padding--top) var(--wp--custom--elements--input--spacing--padding--right) var(--wp--custom--elements--input--spacing--padding--bottom) var(--wp--custom--elements--input--spacing--padding--left);
     width: 100%;
 }
 
-
+label, .woocommerce-page label {
+	margin-bottom: 0.5rem;
+}
 /*
  * Matching input with outline button style.
  */

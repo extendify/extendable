@@ -214,6 +214,15 @@
 	color: var(--wc--button--color--interactive);
 }
 
+.woocommerce a.button.disabled,
+.woocommerce a.button:disabled,
+.woocommerce a.button:disabled[disabled],
+.woocommerce button.button.disabled,
+.woocommerce button.button:disabled,
+.woocommerce button.button:disabled[disabled]{
+	color: var(--wc--button--color--static);
+}
+
 .woocommerce ul.products li.product .button {
 	font-size: var(--wp--preset--font-size--small);
 }

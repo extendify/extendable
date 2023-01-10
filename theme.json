@@ -182,7 +182,7 @@
 					},
 					"color": {
 						"background": "var(--wp--preset--color--primary)",
-						"text": "var(--wp--preset--color--secondary)"
+						"text": "var(--wp--preset--color--white)"
 					},
 					"spacing": {
 						"padding": {
@@ -328,7 +328,7 @@
 				},
 				"color": {
 					"background": "var(--wp--preset--color--primary)",
-					"text": "var(--wp--preset--color--secondary)"
+					"text": "var(--wp--preset--color--white)"
 				},
 				"typography": {
 					"fontSize": "1.15rem",

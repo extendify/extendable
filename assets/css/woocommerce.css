@@ -206,12 +206,15 @@
 .woocommerce-page .woocommerce-cart-form .actions .button {
 	font-size: var(--wp--preset--font-size--small);
 }
+.woocommerce .button:hover,
 .woocommerce #respond input#submit.alt:hover,
 .woocommerce a.button.alt:hover,
 .woocommerce button.button.alt:hover,
 .woocommerce input.button.alt:hover {
-	background-color: var(--wc--button--background--interactive);
-	color: var(--wc--button--color--interactive);
+	background-color: var(--wc--button--background--static);
+	border-color: var(--wc--button--border--color);
+	color: var(--wc--button--color--static);
+    opacity: 0.90;
 }
 
 .woocommerce a.button.disabled,
@@ -221,6 +224,18 @@
 .woocommerce button.button:disabled,
 .woocommerce button.button:disabled[disabled]{
 	color: var(--wc--button--color--static);
+}
+
+.woocommerce a.button.disabled:hover,
+.woocommerce a.button:disabled:hover,
+.woocommerce a.button:disabled[disabled]:hover,
+.woocommerce button.button.disabled:hover,
+.woocommerce button.button:disabled:hover,
+.woocommerce button.button:disabled[disabled]:hover {
+	background-color: var(--wc--button--background--static);
+	border-color: var(--wc--button--border--color);
+	color: var(--wc--button--color--static);
+    opacity: 0.90;
 }
 
 .woocommerce ul.products li.product .button {
@@ -611,8 +626,9 @@
 
 .woocommerce-page ul.woocommerce-order-overview {
 	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--30)
-		calc(var(--wp--preset--spacing--30) / 2);
+	calc(var(--wp--preset--spacing--30) / 2);
 	background-color: var(--wp--preset--color--foreground);
+	color: var(--wp--preset--color--background);
 }
 
 #add_payment_method table.cart td.actions .coupon .input-text,

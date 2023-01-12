@@ -571,6 +571,26 @@
 			"area": "header"
 		},
 		{
+			"name": "header-with-center-logo-and-social",
+			"title": "Header with Center Logo and Social",
+			"area": "header"
+		},
+		{
+			"name": "header-with-search-bar",
+			"title": "Header with Search bar",
+			"area": "header"
+		},
+		{
+			"name": "header-with-center-logo-and-search-bar",
+			"title": "Header with Center Logo and Search bar",
+			"area": "header"
+		},
+		{
+			"name": "header-with-center-nav-and-social",
+			"title": "Header with Center Nav and Social",
+			"area": "header"
+		},
+		{
 			"name": "footer",
 			"title": "Footer",
 			"area": "footer"
@@ -598,6 +618,26 @@
 		{
 			"name": "footer-mega",
 			"title": "Footer with Three Columns of Menus",
+			"area": "footer"
+		},
+		{
+			"name": "footer-with-three-center-columns-of-menus",
+			"title": "Footer with Three Center Columns of Menus",
+			"area": "footer"
+		},
+		{
+			"name": "footer-with-six-columns-of-menus",
+			"title": "Footer with Six Columns of Menus",
+			"area": "footer"
+		},
+		{
+			"name": "footer-with-center-logo-and-menu",
+			"title": "Footer with Center Logo and Menu",
+			"area": "footer"
+		},
+		{
+			"name": "footer-with-site-description-and-menu",
+			"title": "Footer with Site Description and Menu",
 			"area": "footer"
 		}
 	]

@@ -32,7 +32,7 @@
 			<!-- /wp:social-links -->
 
 			<!-- wp:navigation {"overlayMenu":"always","overlayBackgroundColor":"primary","overlayTextColor":"secondary","layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"right"}} -->
-			<!-- wp:page-list /-->
+			<!-- wp:page-list {"isNavigationChild":true,"showSubmenuIcon":true,"openSubmenusOnClick":false} /-->
 			<!-- /wp:navigation -->
 		</div>
 		<!-- /wp:group -->

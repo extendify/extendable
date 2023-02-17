@@ -13,6 +13,10 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 1.4.0 - 2023-02-14 =
+- New: Add orange style variation
+- Change: Customize Page-List Block Parameters for the Headers
+
 = 1.3.0 - 2023-01-24 =
 - New: Add 4 Headers
 - New: Add 4 Footers

@@ -202,9 +202,14 @@
 	text-transform: var(--wc--button--typography--text-transform);
 }
 
+.woocommerce-page .woocommerce-cart-form #coupon_code {
+	flex: 1;
+	flex-basis: 0;
+}
 .woocommerce-page .woocommerce-cart-form #coupon_code,
 .woocommerce-page .woocommerce-cart-form .actions .button {
 	font-size: var(--wp--preset--font-size--small);
+	height: 100%;
 }
 .woocommerce .button:hover,
 .woocommerce #respond input#submit.alt:hover,
@@ -500,7 +505,6 @@
 .woocommerce .quantity .qty {
 	color: currentColor;
 	font-size: var(--wc--button--typograhpy--font-size);
-	height: 100%;
 	width: 100%;
 	max-width: 120px;
 	text-align: center;
@@ -509,16 +513,12 @@
 	border-style: solid;
 	border-radius: var(--wp--custom--elements--input--border--radius);
 	border-width: var(--wp--custom--elements--input--border--width);
-	padding: var(
-			--wp--custom--elements--input--spacing--padding--top,
-			calc(0.667em + 2px)
-		)
-		calc(
-			var(
-					--wp--custom--elements--input--spacing--padding--right,
-					calc(1.333em + 2px)
-				) / 2
-		);
+	padding: var( --wp--custom--elements--input--spacing--padding--top, calc(0.667em + 2px) ) calc( var( --wp--custom--elements--input--spacing--padding--right, calc(1.333em + 2px) ) / 2 );
+
+	padding: var(--wp--custom--elements--input--spacing--padding--top)
+		var(--wp--custom--elements--input--spacing--padding--right)
+		var(--wp--custom--elements--input--spacing--padding--bottom)
+		var(--wp--custom--elements--input--spacing--padding--left);
 }
 
 /*
@@ -527,13 +527,15 @@
  * --------------------------------------------------------
  */
 
+ .woocommerce-page .woocommerce-cart-form #coupon_code,
 .woocommerce-page .input-text {
 	border-color: var(--wp--custom--elements--input--border--color);
 	border-radius: var(--wp--custom--elements--input--border--radius);
 	border-width: var(--wp--custom--elements--input--border--width);
 	box-sizing: border-box;
 	display: block;
-	line-height: var(--wp--custom--elements--typography--line-height);
+	font-size: var(--wp--custom--elements--input--typography--font-size);
+	line-height: var(--wp--custom--elements--input--typography--line-height) !important;
 	padding: var(--wp--custom--elements--input--spacing--padding--top)
 		var(--wp--custom--elements--input--spacing--padding--right)
 		var(--wp--custom--elements--input--spacing--padding--bottom)
@@ -563,14 +565,14 @@
 	color: currentColor;
 	cursor: pointer;
 	display: block;
-	font-size: var(--wp--preset--font-size--small);
-	line-height: var(--wp--custom--elements--input--typography--line-height);
+	font-size: var(--wp--custom--elements--input--typography--font-size);
+	line-height: var(--wp--custom--elements--input--typography--line-height) !important;
 	height: auto;
 	margin: 0;
 	outline: 0;
-	padding: calc(var(--wp--custom--elements--input--spacing--padding--top) - 5px)
+	padding: var(--wp--custom--elements--input--spacing--padding--top) 
 		var(--wp--custom--elements--input--spacing--padding--right)
-		calc(var(--wp--custom--elements--input--spacing--padding--bottom) - 5px)
+		var(--wp--custom--elements--input--spacing--padding--bottom)
 		var(--wp--custom--elements--input--spacing--padding--left);
 }
 

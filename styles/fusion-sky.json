@@ -75,9 +75,9 @@
 						}
 					},
 					"typography": {
-						"fontSize": "inherit",
+						"fontSize": "1.125rem",
 						"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
-						"lineHeight": "inherit"
+						"lineHeight": "var(--wp--custom--typography--line-height--normal)"
 					}
 				},
 				"input": {
@@ -92,16 +92,16 @@
 					},
 					"spacing": {
 						"padding": {
-							"bottom": "calc(0.667em + 3px)",
-							"left": "calc(1.333em + 3px)",
-							"right": "calc(1.333em + 3px)",
-							"top": "calc(0.667em + 3px)"
+							"bottom": "calc(0.667em + 1px)",
+							"left": "calc(1.333em + 1px)",
+							"right": "calc(1.333em + 1px)",
+							"top": "calc(0.667em + 1px)"
 						}
 					},
 					"typography": {
-						"fontSize": "1.15rem",
+						"fontSize": "inherit",
 						"fontWeight": "var(--wp--custom--font-weight--regular)",
-						"lineHeight": "1.384"
+						"lineHeight": "var(--wp--custom--typography--line-height--normal)"
 					}
 				}
 			}

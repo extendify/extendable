@@ -210,10 +210,10 @@
 					},
 					"spacing": {
 						"padding": {
-							"bottom": "calc(0.667em + 3px)",
-							"left": "calc(1.333em + 3px)",
-							"right": "calc(1.333em + 3px)",
-							"top": "calc(0.667em + 3px)"
+							"bottom": "calc(0.667em + 1px)",
+							"left": "calc(1.333em + 1px)",
+							"right": "calc(1.333em + 1px)",
+							"top": "calc(0.667em + 1px)"
 						}
 					},
 					"typography": {

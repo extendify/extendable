@@ -104,11 +104,6 @@
 	},
 	"styles": {
 		"blocks": {
-			"core/button": {
-				"color": {
-					"text": "var(--wp--preset--color--background)"
-				}
-			},
 			"core/comments-title": {
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"

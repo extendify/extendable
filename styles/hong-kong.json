@@ -112,17 +112,6 @@
 	},
 	"styles": {
 		"blocks": {
-			"core/button": {
-				"border": {
-					"radius": "8px"
-				},
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--small)",
-					"textTransform": "uppercase",
-					"letterSpacing": "0.15rem",
-					"fontWeight": "400"
-				}
-			},
 			"core/comments-title": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--x-large)",
@@ -159,6 +148,35 @@
 			}
 		},
 		"elements": {
+			"button": {
+				"border": {
+					"radius": "0.5rem"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"textTransform": "uppercase",
+					"letterSpacing": "0.15rem",
+					"fontWeight": "400"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--tertiary)",
+						"text": "var(--wp--preset--color--foreground)"
+					}
+				},
+				":focus": {
+					"color": {
+						"background": "var(--wp--preset--color--tertiary)",
+						"text": "var(--wp--preset--color--foreground)"
+					}
+				},
+				":active": {
+					"color": {
+						"background": "var(--wp--preset--color--secondary)",
+						"text": "var(--wp--preset--color--foreground)"
+					}
+				}
+			},
 			"h1": {
 				"typography": {
 					"fontWeight": "400",

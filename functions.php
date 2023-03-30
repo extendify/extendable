@@ -168,7 +168,7 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 		if ( version_compare( $woocommerce_version, '7.0.1', '<' ) ) {
 			// Add the deprecate-woocommerce.css file
 		  	$styles['deprecate-extendable-woocommerce'] = array(
-				'src'     => get_template_directory_uri() . '/path/to/deprecate-woocommerce.css',
+				'src'     => get_template_directory_uri() . '/assets/css/deprecate-woocommerce.css',
 				  'deps'    => '',
 				  'version' => $version_string,
 				  'media'   => 'all',

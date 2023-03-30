@@ -4,14 +4,8 @@
  * --------------------------------------------------------
  */
 
-
-
-/*
- * --------------------------------------------------------
- *  Buttons, buttons, buttons.
- * --------------------------------------------------------
- */
-
+/* Buttons, buttons, buttons.
+----------------------------------------------------------*/
 .woocommerce :is(button.alt, .button, button.button.alt),
 .wc-block-components-button:not(.is-link).contained,
 .woocommerce #respond input#submit,

@@ -93,6 +93,16 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
  * --------------------------------------------------------
  */
 
+ /* Button
+----------------------------------------------------------*/
+.wp-element-button {
+	transition: background-color 0.15s ease;
+}
+.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background):hover, 
+.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background):hover {
+	background-color: rgba(159, 159, 159, 0.2);
+}
+
 /* Table
 ----------------------------------------------------------*/
 .wp-block-table.is-style-stripes tbody tr:nth-child(odd){

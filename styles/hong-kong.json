@@ -160,20 +160,20 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--tertiary)",
-						"text": "var(--wp--preset--color--foreground)"
+						"background": "var(--wp--preset--color--secondary)",
+						"text": "var(--wp--preset--color--primary)"
 					}
 				},
 				":focus": {
 					"color": {
-						"background": "var(--wp--preset--color--tertiary)",
-						"text": "var(--wp--preset--color--foreground)"
+						"background": "var(--wp--preset--color--secondary)",
+						"text": "var(--wp--preset--color--primary)"
 					}
 				},
 				":active": {
 					"color": {
-						"background": "var(--wp--preset--color--secondary)",
-						"text": "var(--wp--preset--color--foreground)"
+						"background": "var(--wp--preset--color--primary)",
+						"text": "var(--wp--preset--color--background)"
 					}
 				}
 			},

@@ -140,6 +140,13 @@ blockquote:is(.is-style-plain) {
  * --------------------------------------------------------
  */
 
+.block-editor-block-list__block.wp-block.is-default-size.wp-block-site-logo .components-resizable-box__container,
+.wp-block-site-logo.is-default-size img {
+    max-height: 42px !important;
+    height: auto !important;
+    width: auto !important;
+}
+
 /* Responsive menu animation and customization.
 ----------------------------------------------------------*/
 @media (max-width: 599px) {

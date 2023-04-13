@@ -1,0 +1,59 @@
+/*
+ * --------------------------------------------------------
+ *  Deprecate WooCommerce
+ * --------------------------------------------------------
+ */
+
+/* Buttons, buttons, buttons.
+----------------------------------------------------------*/
+.woocommerce :is(button.alt, .button, button.button.alt),
+.wc-block-components-button:not(.is-link).contained,
+.woocommerce #respond input#submit,
+.woocommerce button.button.alt.disabled {
+	background-color: var(--wc--button--background--static);
+	border-color: var(--wc--button--border--color);
+	border-radius: var(--wc--button--border--radius);
+	border-style: var(--wc--button--border--style);
+	border-width: var(--wc--button--border--width);
+	color: var(--wc--button--color--static);
+	font-family: var(--wc--button--typography--font-family);
+	font-size: var(--wc--button--typograhpy--font-size);
+	font-weight: var(--wc--button--typography--font-weight);
+	letter-spacing: var(--wc--button--typography--letter-spacing);
+	line-height: var(--wc--button--typography--line-height);
+	padding: var(--wc--button--padding) !important;
+	text-align: var(--wc--button--typography--text-align);
+	text-transform: var(--wc--button--typography--text-transform);
+}
+
+.woocommerce .button:hover,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+	background-color: var(--wc--button--background--static);
+	border-color: var(--wc--button--border--color);
+	color: var(--wc--button--color--static);
+    opacity: 0.90;
+}
+
+.woocommerce a.button.disabled,
+.woocommerce a.button:disabled,
+.woocommerce a.button:disabled[disabled],
+.woocommerce button.button.disabled,
+.woocommerce button.button:disabled,
+.woocommerce button.button:disabled[disabled]{
+	color: var(--wc--button--color--static);
+}
+
+.woocommerce a.button.disabled:hover,
+.woocommerce a.button:disabled:hover,
+.woocommerce a.button:disabled[disabled]:hover,
+.woocommerce button.button.disabled:hover,
+.woocommerce button.button:disabled:hover,
+.woocommerce button.button:disabled[disabled]:hover {
+	background-color: var(--wc--button--background--static);
+	border-color: var(--wc--button--border--color);
+	color: var(--wc--button--color--static);
+    opacity: 0.90;
+}

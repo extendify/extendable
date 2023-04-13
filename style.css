@@ -74,34 +74,6 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
 }
 
 /*
- * Search and File Block button styles.
- * Necessary until the following issues are resolved in Gutenberg:
- * https://github.com/WordPress/gutenberg/issues/36444
- * https://github.com/WordPress/gutenberg/issues/27760
- */
-
-.wp-block-search__button,
-.wp-block-file .wp-block-file__button {
-	background-color: var(--wp--preset--color--primary);
-	border-radius: 0;
-	border: none;
-	color: var(--wp--preset--color--background);
-	padding: calc(.667em + 2px) calc(1.333em + 2px);
-}
-
-/*
- * Button hover styles.
- * Necessary until the following issue is resolved in Gutenberg:
- * https://github.com/WordPress/gutenberg/issues/27075
- */
-
-.wp-block-search__button:hover,
-.wp-block-file .wp-block-file__button:hover,
-.wp-block-button__link:hover {
-	opacity: 0.90;
-}
-
-/*
  * Responsive menu container padding.
  * This ensures the responsive container inherits the same
  * spacing defined above. This behavior may be built into
@@ -121,6 +93,16 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
  * --------------------------------------------------------
  */
 
+ /* Button
+----------------------------------------------------------*/
+.wp-element-button {
+	transition: background-color 0.15s ease;
+}
+.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background):hover, 
+.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background):hover {
+	background-color: rgba(159, 159, 159, 0.2);
+}
+
 /* Table
 ----------------------------------------------------------*/
 .wp-block-table.is-style-stripes tbody tr:nth-child(odd){
@@ -132,6 +114,20 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
 blockquote:is(.is-style-plain) {
 	border: none;
 	padding-left: 0;
+}
+
+/* Search Block
+----------------------------------------------------------*/
+:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) {
+	border-color: var(--wp--custom--elements--input--border--color);
+	border-radius: var(--wp--custom--elements--button--border--radius);
+	border-width: var(--wp--custom--elements--input--border--width);
+}
+:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input {
+	border-color: transparent;
+}
+.wp-block-search .wp-block-search__input {
+	border-radius: var(--wp--custom--elements--button--border--radius);
 }
 
 /*
@@ -181,7 +177,7 @@ blockquote:is(.is-style-plain) {
  * Matching caret and focus outline colors.
  */
 input {
-	caret-color: var(--wp--preset--color--tertiary);
+	caret-color: inherit;
 	outline-color: var(--wp--preset--color--tertiary);
 	outline-offset: 0.2ch;
 }

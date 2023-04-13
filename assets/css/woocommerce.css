@@ -182,65 +182,26 @@
  * --------------------------------------------------------
  */
 
-.woocommerce :is(button.alt, .button, button.button.alt),
-.wc-block-components-button:not(.is-link).contained,
-.woocommerce #respond input#submit,
-.woocommerce button.button.alt.disabled {
-	background-color: var(--wc--button--background--static);
-	border-color: var(--wc--button--border--color);
-	border-radius: var(--wc--button--border--radius);
-	border-style: var(--wc--button--border--style);
-	border-width: var(--wc--button--border--width);
-	color: var(--wc--button--color--static);
-	font-family: var(--wc--button--typography--font-family);
-	font-size: var(--wc--button--typograhpy--font-size);
-	font-weight: var(--wc--button--typography--font-weight);
-	letter-spacing: var(--wc--button--typography--letter-spacing);
-	line-height: var(--wc--button--typography--line-height);
-	padding: var(--wc--button--padding) !important;
-	text-align: var(--wc--button--typography--text-align);
-	text-transform: var(--wc--button--typography--text-transform);
+ #add_payment_method .wc-proceed-to-checkout a.checkout-button, 
+ .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, 
+ .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
+	font-size: var(	--wp--custom--elements--button--typography--font-size, 1.15rem );
 }
 
+.woocommerce-page .woocommerce-cart-form #coupon_code {
+	flex: 1;
+	flex-basis: 0;
+}
 .woocommerce-page .woocommerce-cart-form #coupon_code,
 .woocommerce-page .woocommerce-cart-form .actions .button {
 	font-size: var(--wp--preset--font-size--small);
-}
-.woocommerce .button:hover,
-.woocommerce #respond input#submit.alt:hover,
-.woocommerce a.button.alt:hover,
-.woocommerce button.button.alt:hover,
-.woocommerce input.button.alt:hover {
-	background-color: var(--wc--button--background--static);
-	border-color: var(--wc--button--border--color);
-	color: var(--wc--button--color--static);
-    opacity: 0.90;
-}
-
-.woocommerce a.button.disabled,
-.woocommerce a.button:disabled,
-.woocommerce a.button:disabled[disabled],
-.woocommerce button.button.disabled,
-.woocommerce button.button:disabled,
-.woocommerce button.button:disabled[disabled]{
-	color: var(--wc--button--color--static);
-}
-
-.woocommerce a.button.disabled:hover,
-.woocommerce a.button:disabled:hover,
-.woocommerce a.button:disabled[disabled]:hover,
-.woocommerce button.button.disabled:hover,
-.woocommerce button.button:disabled:hover,
-.woocommerce button.button:disabled[disabled]:hover {
-	background-color: var(--wc--button--background--static);
-	border-color: var(--wc--button--border--color);
-	color: var(--wc--button--color--static);
-    opacity: 0.90;
+	height: 100%;
 }
 
 .woocommerce ul.products li.product .button {
 	font-size: var(--wp--preset--font-size--small);
 }
+
 /*
  * --------------------------------------------------------
  *  Breadcrumbs
@@ -500,7 +461,6 @@
 .woocommerce .quantity .qty {
 	color: currentColor;
 	font-size: var(--wc--button--typograhpy--font-size);
-	height: 100%;
 	width: 100%;
 	max-width: 120px;
 	text-align: center;
@@ -509,16 +469,12 @@
 	border-style: solid;
 	border-radius: var(--wp--custom--elements--input--border--radius);
 	border-width: var(--wp--custom--elements--input--border--width);
-	padding: var(
-			--wp--custom--elements--input--spacing--padding--top,
-			calc(0.667em + 2px)
-		)
-		calc(
-			var(
-					--wp--custom--elements--input--spacing--padding--right,
-					calc(1.333em + 2px)
-				) / 2
-		);
+	padding: var( --wp--custom--elements--input--spacing--padding--top, calc(0.667em + 2px) ) calc( var( --wp--custom--elements--input--spacing--padding--right, calc(1.333em + 2px) ) / 2 );
+
+	padding: var(--wp--custom--elements--input--spacing--padding--top)
+		var(--wp--custom--elements--input--spacing--padding--right)
+		var(--wp--custom--elements--input--spacing--padding--bottom)
+		var(--wp--custom--elements--input--spacing--padding--left);
 }
 
 /*
@@ -527,13 +483,15 @@
  * --------------------------------------------------------
  */
 
+ .woocommerce-page .woocommerce-cart-form #coupon_code,
 .woocommerce-page .input-text {
 	border-color: var(--wp--custom--elements--input--border--color);
 	border-radius: var(--wp--custom--elements--input--border--radius);
 	border-width: var(--wp--custom--elements--input--border--width);
 	box-sizing: border-box;
 	display: block;
-	line-height: var(--wp--custom--elements--typography--line-height);
+	font-size: var(--wp--custom--elements--input--typography--font-size);
+	line-height: var(--wp--custom--elements--input--typography--line-height) !important;
 	padding: var(--wp--custom--elements--input--spacing--padding--top)
 		var(--wp--custom--elements--input--spacing--padding--right)
 		var(--wp--custom--elements--input--spacing--padding--bottom)
@@ -563,14 +521,14 @@
 	color: currentColor;
 	cursor: pointer;
 	display: block;
-	font-size: var(--wp--preset--font-size--small);
-	line-height: var(--wp--custom--elements--input--typography--line-height);
+	font-size: var(--wp--custom--elements--input--typography--font-size);
+	line-height: var(--wp--custom--elements--input--typography--line-height) !important;
 	height: auto;
 	margin: 0;
 	outline: 0;
-	padding: calc(var(--wp--custom--elements--input--spacing--padding--top) - 5px)
+	padding: var(--wp--custom--elements--input--spacing--padding--top) 
 		var(--wp--custom--elements--input--spacing--padding--right)
-		calc(var(--wp--custom--elements--input--spacing--padding--bottom) - 5px)
+		var(--wp--custom--elements--input--spacing--padding--bottom)
 		var(--wp--custom--elements--input--spacing--padding--left);
 }
 

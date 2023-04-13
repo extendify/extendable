@@ -162,6 +162,20 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 			'has_rtl' => true,
 		);
 
+		// Get the WooCommerce version
+		$woocommerce_version = get_option( 'woocommerce_version' );
+		// Check if the version is less than 7.0.1
+		if ( version_compare( $woocommerce_version, '7.0.1', '<' ) ) {
+			// Add the deprecate-woocommerce.css file
+		  	$styles['deprecate-extendable-woocommerce'] = array(
+				'src'     => get_template_directory_uri() . '/assets/css/deprecate-woocommerce.css',
+				  'deps'    => '',
+				  'version' => $version_string,
+				  'media'   => 'all',
+				  'has_rtl' => true,
+			  );
+		}
+
 		return apply_filters( 'woocommerce_extendable_styles', $styles );
 	}
 	add_filter( 'woocommerce_enqueue_styles', 'extendable_woocommerce_enqueue_styles' );

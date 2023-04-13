@@ -13,6 +13,15 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 1.5.0 - 2023-04-14 =
+- New: Added FusionSky style variation for modern corporate websites
+- New: Expanded button styles and interactivity in all style variations
+- Change: Optimized headers with center logo, removing site title
+- Change: Enhanced WooCommerce input consistency
+- Change: Deprecated custom button style for WooCommerce buttons (v7.0.1 compatibility)
+- Change: Refined search block style for better UI alignment
+- Change: Improved logo resizing: Logo height adapts to 42px without distortion by default.
+
 = 1.4.0 - 2023-02-14 =
 - New: Add orange style variation
 - Change: Customize Page-List Block Parameters for the Headers

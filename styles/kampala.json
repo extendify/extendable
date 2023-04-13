@@ -5,7 +5,6 @@
 	"settings": {
 		"color": {
 			"palette": [
-
 				{
 					"slug": "background",
 					"color": "#f7f9fe",
@@ -32,6 +31,15 @@
 					"name": "Background Alt"
 				}
 			]
+		},
+		"custom": {
+			"elements": {
+				"button": {
+					"border": {
+						"radius": "0.5rem"
+					}
+				}
+			}
 		},
 		"typography": {
 			"fontFamilies": [
@@ -61,9 +69,6 @@
 	"styles": {
 		"blocks": {
 			"core/button": {
-				"border": {
-					"radius": "0.5rem"
-				},
 				"color": {
 					"background": "var(--wp--preset--color--primary)",
 					"text": "var(--wp--preset--color--white)"
@@ -76,6 +81,11 @@
 			}
 		},
 		"elements": {
+			"button": {
+				"border": {
+					"radius": "0.5rem"
+				}
+			},
 			"h1": {
 				"typography": {
 					"letterSpacing": "-0.01em"

@@ -181,6 +181,35 @@
 			}
 		},
 		"elements": {
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--secondary)",
+					"text": "var(--wp--preset--color--primary)"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--foreground)",
+						"text": "var(--wp--preset--color--primary)"
+					}
+				},
+				":focus": {
+					"color": {
+						"background": "var(--wp--preset--color--foreground)",
+						"text": "var(--wp--preset--color--primary)"
+					}
+				},
+				":active": {
+					"color": {
+						"background": "var(--wp--preset--color--primary)",
+						"text": "var(--wp--preset--color--foreground)"
+					}
+				},
+				":visited": {
+					"color": {
+						"text": "var(--wp--preset--color--primary)"
+					}
+				}
+			},
 			"h1": {
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",

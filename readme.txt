@@ -13,6 +13,9 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 1.5.1 - 2023-04-21 =
+- Fix: Image border-radius issue
+
 = 1.5.0 - 2023-04-14 =
 - New: Added FusionSky style variation for modern corporate websites
 - New: Expanded button styles and interactivity in all style variations

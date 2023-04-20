@@ -130,6 +130,10 @@ blockquote:is(.is-style-plain) {
 	border-radius: var(--wp--custom--elements--button--border--radius);
 }
 
+/* Image
+----------------------------------------------------------*/
+.wp-block-image[style*="-radius"]:not([style*="overflow"]) { overflow: hidden }
+
 /*
  * --------------------------------------------------------
  *  Custom - experimental

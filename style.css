@@ -112,6 +112,8 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
 /* Template Part Block
 ----------------------------------------------------------*/
 
+/* Temporary fix until template-part blocks support spacing */
+
 footer.wp-block-template-part:not([style*="margin-top"]) {
 	margin-top: 0;
 }

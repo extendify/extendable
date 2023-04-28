@@ -156,6 +156,12 @@ blockquote:is(.is-style-plain) {
     width: auto !important;
 }
 
+/* Ensure default logo works well on light and dark backgrounds
+----------------------------------------------------------*/
+.wp-block-site-logo img[src*="extendify-demo-"] {
+	mix-blend-mode: difference;
+}
+
 /* Responsive menu animation and customization.
 ----------------------------------------------------------*/
 @media (max-width: 599px) {

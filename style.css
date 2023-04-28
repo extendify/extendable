@@ -109,6 +109,15 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
 	background-color: var(--wp--custom--blocks--core-table--variant-stripes--color--background, var(--wp--preset--color--tertiary));
 }
 
+/* Template Part Block
+----------------------------------------------------------*/
+
+/* Temporary fix until template-part blocks support spacing */
+
+footer.wp-block-template-part:not([style*="margin-top"]) {
+	margin-top: 0;
+}
+
 /* Quote - 'Plain' variation
 ----------------------------------------------------------*/
 blockquote:is(.is-style-plain) {

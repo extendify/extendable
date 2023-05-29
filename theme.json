@@ -67,6 +67,14 @@
 					],
 					"slug": "foreground-secondary",
 					"name": "Foreground and Secondary"
+				},
+				{
+					"colors": [
+						"#381d92",
+						"#0B0620"
+					],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
 				}
 			],
 			"gradients": [

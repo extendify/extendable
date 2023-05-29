@@ -24,6 +24,11 @@
 					"colors": ["#063483", "#F8D648"],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#063483", "#111111"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
 				}
 			],
 			"palette": [

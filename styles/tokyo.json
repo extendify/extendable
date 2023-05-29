@@ -24,6 +24,11 @@
 					"colors": ["#010101", "#ffffff"],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#d61935", "#010101"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
 				}
 			],
 			"palette": [

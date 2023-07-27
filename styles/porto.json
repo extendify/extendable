@@ -4,6 +4,28 @@
 	"version": 2,
 	"settings": {
 		"color": {
+			"duotone": [
+				{
+					"colors": ["#404E5C", "#F8FAF9"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#F8FAF9", "#404E5C"],
+					"slug": "background-and-foreground",
+					"name": "Background and foreground"
+				},
+				{
+					"colors": ["#F87666", "#0D1B1E"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#F87666", "#404E5C"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				}
+			],
 			"palette": [
 				{
 					"slug": "foreground",

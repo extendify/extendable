@@ -6,52 +6,39 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": [
-						"#000000",
-						"#ffffff"
-					],
+					"colors": ["#000000", "#ffffff"],
 					"slug": "grayscale",
 					"name": "Grayscale"
 				},
 				{
-					"colors": [
-						"#49697c",
-						"#102e43"
-					],
+					"colors": ["#49697c", "#102e43"],
 					"slug": "primary",
 					"name": "Primary"
 				},
 				{
-					"colors": [
-						"#49697c",
-						"#DDDAC2"
-					],
+					"colors": ["#49697c", "#DDDAC2"],
 					"slug": "secondary",
 					"name": "Secondary"
 				},
 				{
-					"colors": [
-						"#102e43",
-						"#DDDAC2"
-					],
+					"colors": ["#102e43", "#DDDAC2"],
 					"slug": "primary-secondary",
 					"name": "Primary and Secondary"
 				},
 				{
-					"colors": [
-						"#ffffff",
-						"#102e43"
-					],
+					"colors": ["#ffffff", "#102e43"],
 					"slug": "foreground-primary",
 					"name": "Foreground and Primary"
 				},
 				{
-					"colors": [
-						"#204f46",
-						"#DDDAC2"
-					],
+					"colors": ["#204f46", "#DDDAC2"],
 					"slug": "tertiary-secondary",
 					"name": "Tertiary and Secondary"
+				},
+				{
+					"colors": ["#0A1E2F", "#f7fafc"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
 				}
 			],
 			"palette": [

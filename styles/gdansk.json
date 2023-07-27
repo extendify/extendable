@@ -24,6 +24,11 @@
 					"colors": ["#0c0c0b", "#083021"],
 					"slug": "background-and-tertiary",
 					"name": "Background and tertiary"
+				},
+				{
+					"colors": ["#f5ac8e", "#fcece8"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
 				}
 			],
 			"palette": [

@@ -19,6 +19,11 @@
 					"colors": ["#FF5828", "#02235B"],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#FF5828", "#1A1A1A"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
 				}
 			],
 			"palette": [
@@ -49,7 +54,7 @@
 				}
 			]
 		},
-        "custom": {
+		"custom": {
 			"elements": {
 				"button": {
 					"border": {

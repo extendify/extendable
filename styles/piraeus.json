@@ -6,52 +6,39 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": [
-						"#000000",
-						"#ffffff"
-					],
+					"colors": ["#000000", "#ffffff"],
 					"slug": "grayscale",
 					"name": "Grayscale"
 				},
 				{
-					"colors": [
-						"#272725",
-						"#A89F84"
-					],
+					"colors": ["#272725", "#A89F84"],
 					"slug": "primary",
 					"name": "Primary"
 				},
 				{
-					"colors": [
-						"#272725",
-						"#3F2D0B"
-					],
+					"colors": ["#272725", "#3F2D0B"],
 					"slug": "secondary",
 					"name": "Secondary"
 				},
 				{
-					"colors": [
-						"#A89F84",
-						"#3F2D0B"
-					],
+					"colors": ["#A89F84", "#3F2D0B"],
 					"slug": "primary-secondary",
 					"name": "Primary and Secondary"
 				},
 				{
-					"colors": [
-						"#3F2D0B",
-						"#A89F84"
-					],
+					"colors": ["#3F2D0B", "#A89F84"],
 					"slug": "secondary-primary",
 					"name": "Secondary and Primary"
 				},
 				{
-					"colors": [
-						"#32322D",
-						"#ffffff"
-					],
+					"colors": ["#32322D", "#ffffff"],
 					"slug": "tertiary-white",
 					"name": "Tertiary and White"
+				},
+				{
+					"colors": ["#A89F84", "#ffffff"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
 				}
 			],
 			"palette": [
@@ -82,7 +69,7 @@
 				}
 			]
 		},
-		"custom": {			
+		"custom": {
 			"elements": {
 				"button": {
 					"border": {

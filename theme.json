@@ -39,7 +39,7 @@
 				{
 					"colors": [
 						"#ffffff",
-						"#cfcaf8"
+						"#1C0A63"
 					],
 					"slug": "secondary",
 					"name": "Secondary"
@@ -47,7 +47,7 @@
 				{
 					"colors": [
 						"#381d92",
-						"#cfcaf8"
+						"#1C0A63"
 					],
 					"slug": "primary-secondary",
 					"name": "Primary and Secondary"
@@ -63,7 +63,7 @@
 				{
 					"colors": [
 						"#0B0620",
-						"#cfcaf8"
+						"#1C0A63"
 					],
 					"slug": "foreground-secondary",
 					"name": "Foreground and Secondary"
@@ -137,12 +137,12 @@
 				},
 				{
 					"slug": "secondary",
-					"color": "#cfcaf8",
+					"color": "#1C0A63",
 					"name": "Secondary"
 				},
 				{
 					"slug": "tertiary",
-					"color": "#ebe9fc",
+					"color": "#F2F2FA",
 					"name": "Background Alt"
 				}
 			]
@@ -574,8 +574,9 @@
 					"text": "var(--wp--preset--color--background)"
 				},
 				"typography": {
-					"fontSize": "1.15rem",
-					"lineHeight": "1.384"
+					"fontSize": "inherit",
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"lineHeight": "inherit"
 				},
 				":hover": {
 					"color": {

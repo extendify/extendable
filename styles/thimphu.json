@@ -17,18 +17,18 @@
 				},
 				{
 					"colors": ["#3a312e", "#ffebcc"],
-					"slug": "primary-and-background",
-					"name": "Primary and background"
+					"slug": "secondary-and-background",
+					"name": "secondary and background"
 				},
 				{
 					"colors": ["#ffebcc", "#3a312e"],
-					"slug": "background-and-primary",
-					"name": "Background and primary"
+					"slug": "background-and-secondary",
+					"name": "Background and secondary"
 				},
 				{
 					"colors": ["#3a312e", "#f24139"],
-					"slug": "primary-foreground",
-					"name": "Primary and Foreground"
+					"slug": "secondary-foreground",
+					"name": "secondary and Foreground"
 				}
 			],
 			"palette": [
@@ -44,12 +44,12 @@
 				},
 				{
 					"slug": "primary",
-					"color": "#3a312e",
+					"color": "#f24139",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#ebbc83",
+					"color": "#3a312e",
 					"name": "Secondary"
 				},
 				{
@@ -66,30 +66,6 @@
 					"webkit": "auto"
 				}
 			}
-		},
-		"typography": {
-			"fontFamilies": [
-				{
-					"fontFamily": "\"Heebo\", sans-serif",
-					"name": "Heebo",
-					"slug": "body",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Heebo",
-							"fontWeight": "100 900",
-							"fontStyle": "normal",
-							"fontStretch": "normal",
-							"src": ["file:./assets/fonts/Heebo/Heebo-VariableFont_wght.woff2"]
-						}
-					]
-				},
-				{
-					"fontFamily": "\"Heebo\", sans-serif",
-					"name": "Heebo",
-					"slug": "heading"
-				}
-			]
 		}
 	},
 	"styles": {
@@ -110,10 +86,26 @@
 		},
 		"elements": {
 			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--secondary)",
+					"text": "var(--wp--preset--color--background)"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--foreground)",
+						"text": "var(--wp--preset--color--background)"
+					}
+				},
+				":focus": {
+					"color": {
+						"background": "var(--wp--preset--color--foreground)",
+						"text": "var(--wp--preset--color--background)"
+					}
+				},
 				":active": {
 					"color": {
 						"background": "var(--wp--preset--color--secondary)",
-						"text": "var(--wp--preset--color--soreground)"
+						"text": "var(--wp--preset--color--foreground)"
 					}
 				}
 			},
@@ -147,7 +139,15 @@
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--black)"
 				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heebo)"
+				}
 			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--heebo)"
 		}
 	}
 }

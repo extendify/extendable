@@ -90,29 +90,6 @@
 			"spacing": {
 				"small": "min(3rem, 4vw)"
 			}
-		},
-		"typography": {
-			"fontFamilies": [
-				{
-					"fontFamily": "\"Space Mono\", monospace",
-					"name": "Body",
-					"slug": "body",
-					"fontFace": [
-						{
-							"fontFamily": "Space Mono",
-							"fontStyle": "normal",
-							"fontWeight": "400",
-							"src": ["file:./assets/fonts/SpaceMono/SpaceMono-Regular.woff2"]
-						},
-						{
-							"fontFamily": "Space Mono",
-							"fontStyle": "normal",
-							"fontWeight": "700",
-							"src": ["file:./assets/fonts/SpaceMono/SpaceMono-Bold.woff2"]
-						}
-					]
-				}
-			]
 		}
 	},
 	"styles": {
@@ -217,9 +194,15 @@
 					"fontWeight": "400",
 					"letterSpacing": "normal"
 				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--space-mono)"
+				}
 			}
 		},
 		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--space-mono)",
 			"fontSize": "1rem",
 			"fontWeight": "400",
 			"lineHeight": "var(--wp--custom--typography--line-height--large)"

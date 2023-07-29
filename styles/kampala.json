@@ -62,30 +62,6 @@
 					}
 				}
 			}
-		},
-		"typography": {
-			"fontFamilies": [
-				{
-					"fontFamily": "\"Hind\", sans-serif",
-					"name": "Hind",
-					"slug": "body",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Hind",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "100 900",
-							"src": ["file:./assets/fonts/Hind/Hind-Variable.woff2"]
-						}
-					]
-				},
-				{
-					"fontFamily": "\"Hind\", sans-serif",
-					"name": "Hind",
-					"slug": "heading"
-				}
-			]
 		}
 	},
 	"styles": {
@@ -117,11 +93,12 @@
 				"typography": {
 					"fontWeight": "900"
 				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--hind)"
+				}
 			}
-		},
-		"typography": {
-			"fontSize": "1.3rem",
-			"lineHeight": "var(--wp--custom--typography--line-height--large)"
 		}
 	}
 }

@@ -53,42 +53,6 @@
 					"name": "Tertiary"
 				}
 			]
-		},
-		"typography": {
-			"fontFamilies": [
-				{
-					"fontFamily": "\"Inconsolata\", sans-serif",
-					"name": "Inconsolata",
-					"slug": "body",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Inconsolata",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "100 900",
-							"src": [
-								"file:./assets/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.woff2"
-							]
-						}
-					]
-				},
-				{
-					"fontFamily": "\"Karla\", sans-serif",
-					"name": "Karla",
-					"slug": "heading",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Karla",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "100 900",
-							"src": ["file:./assets/fonts/Karla/Karla-VariableFont_wght.woff2"]
-						}
-					]
-				}
-			]
 		}
 	},
 	"styles": {
@@ -145,7 +109,15 @@
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--extra-bold)"
 				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--karla)"
+				}
 			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--inconsolata)"
 		}
 	}
 }

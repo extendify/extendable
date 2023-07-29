@@ -66,44 +66,6 @@
 					"webkit": "auto"
 				}
 			}
-		},
-		"typography": {
-			"fontFamilies": [
-				{
-					"fontFamily": "\"Radio Canada\", sans-serif",
-					"name": "Body (Radio Canada)",
-					"slug": "body",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Radio Canada",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "300 700",
-							"src": [
-								"file:./assets/fonts/RadioCanada/RadioCanada-VariableFont_wdth,wght.woff2"
-							]
-						}
-					]
-				},
-				{
-					"fontFamily": "\"Noto Serif Display\", serif",
-					"name": "Headings (Noto Serif Display)",
-					"slug": "heading",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Noto Serif Display",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "100 900",
-							"src": [
-								"file:./assets/fonts/NotoSerifDisplay/NotoSerifDisplay-VariableFont_wdth,wght.woff2"
-							]
-						}
-					]
-				}
-			]
 		}
 	},
 	"styles": {
@@ -153,7 +115,15 @@
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--bold)"
 				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)"
+				}
 			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--radio-canada)"
 		}
 	}
 }

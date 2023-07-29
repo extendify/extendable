@@ -21,58 +21,37 @@
 			"defaultDuotone": false,
 			"duotone": [
 				{
-					"colors": [
-						"#000000",
-						"#ffffff"
-					],
+					"colors": ["#000000", "#ffffff"],
 					"slug": "grayscale",
 					"name": "Grayscale"
 				},
 				{
-					"colors": [
-						"#ffffff",
-						"#381d92"
-					],
+					"colors": ["#ffffff", "#381d92"],
 					"slug": "primary",
 					"name": "Primary"
 				},
 				{
-					"colors": [
-						"#ffffff",
-						"#1C0A63"
-					],
+					"colors": ["#ffffff", "#1C0A63"],
 					"slug": "secondary",
 					"name": "Secondary"
 				},
 				{
-					"colors": [
-						"#381d92",
-						"#1C0A63"
-					],
+					"colors": ["#381d92", "#1C0A63"],
 					"slug": "primary-secondary",
 					"name": "Primary and Secondary"
 				},
 				{
-					"colors": [
-						"#0B0620",
-						"#381d92"
-					],
+					"colors": ["#0B0620", "#381d92"],
 					"slug": "foreground-primary",
 					"name": "Foreground and Primary"
 				},
 				{
-					"colors": [
-						"#0B0620",
-						"#1C0A63"
-					],
+					"colors": ["#0B0620", "#1C0A63"],
 					"slug": "foreground-secondary",
 					"name": "Foreground and Secondary"
 				},
 				{
-					"colors": [
-						"#381d92",
-						"#0B0620"
-					],
+					"colors": ["#381d92", "#0B0620"],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				}
@@ -204,7 +183,7 @@
 						"fontSize": "1.15rem",
 						"fontWeight": "var(--wp--custom--font-weight--regular)",
 						"lineHeight": "1.384"
-					},				
+					},
 					":hover": {
 						"color": {
 							"background": "var(--wp--preset--color--foreground)",
@@ -301,26 +280,283 @@
 			"dropCap": false,
 			"fontFamilies": [
 				{
-					"fontFamily": "\"Inter\", sans-serif",
-					"name": "Body",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Arsenal",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": ["file:./assets/fonts/Arsenal/Arsenal-Regular.woff2"]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Arsenal",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": ["file:./assets/fonts/Arsenal/Arsenal-Bold.woff2"]
+						}
+					],
+					"fontFamily": "\"Arsenal\", serif",
+					"name": "Arsenal",
+					"slug": "arsenal"
+				},
+				{
+					"fontFamily": "\"Geom\", sans-serif",
+					"name": "Geom",
+					"slug": "geom",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Geom",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "300 900",
+							"src": ["file:./assets/fonts/Geom/Geom-Variable.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Heebo\", sans-serif",
+					"name": "Heebo",
+					"slug": "heebo",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Heebo",
+							"fontWeight": "100 900",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./assets/fonts/Heebo/Heebo-VariableFont_wght.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Hind\", sans-serif",
+					"name": "Hind",
 					"slug": "body",
 					"fontFace": [
 						{
 							"fontDisplay": "block",
+							"fontFamily": "Hind",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": ["file:./assets/fonts/Hind/Hind-Variable.woff2"]
+						}
+					]
+				},
+				{
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Inconsolata",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Inconsolata\", sans-serif",
+					"name": "Inconsolata",
+					"slug": "inconsolata"
+				},
+				{
+					"fontFace": [
+						{
 							"fontFamily": "Inter",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
+							"fontWeight": "200 900",
+							"src": ["file:./assets/fonts/inter/InterVariable.woff2"]
+						}
+					],
+					"fontFamily": "\"Inter\", sans-serif",
+					"name": "Inter",
+					"slug": "inter"
+				},
+				{
+					"fontFamily": "\"Jost\", sans-serif",
+					"name": "Jost",
+					"slug": "jost",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Jost",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
 							"fontWeight": "100 800",
+							"src": ["file:./assets/fonts/Jost/Jost-VariableFont_wght.woff2"]
+						}
+					]
+				},
+				{
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Karla",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": ["file:./assets/fonts/Karla/Karla-VariableFont_wght.woff2"]
+						}
+					],
+					"fontFamily": "\"Karla\", sans-serif",
+					"name": "Karla",
+					"slug": "karla"
+				},
+				{
+					"fontFamily": "\"Koulen\", sans-serif",
+					"name": "Koulen",
+					"slug": "koulen",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Koulen",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": ["file:./assets/fonts/Koulen/Koulen-Regular.woff2"]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Montserrat\", sans-serif",
+					"name": "Montserrat",
+					"slug": "montserrat",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Montserrat",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
 							"src": [
-								"file:./assets/fonts/Inter/Inter-VariableFont_slnt,wght.woff2"
+								"file:./assets/fonts/Montserrat/Montserrat-VariableFont_wght.woff2"
 							]
 						}
 					]
 				},
 				{
-					"fontFamily": "\"Inter\", sans-serif",
-					"name": "Headings",
-					"slug": "heading"
+					"fontFamily": "\"Mulish\", sans-serif",
+					"name": "Mulish",
+					"slug": "mulish",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Mulish",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "100 800",
+							"src": [
+								"file:./assets/fonts/Mulish/Mulish-VariableFont_wght.woff2"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Noto Serif Display\", serif",
+					"name": "Noto Serif Display",
+					"slug": "noto-serif-display",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Noto Serif Display",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/NotoSerifDisplay/NotoSerifDisplay-VariableFont_wdth,wght.woff2"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "\"Radio Canada\", sans-serif",
+					"name": "Radio Canada",
+					"slug": "radio-canada",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Radio Canada",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "300 700",
+							"src": [
+								"file:./assets/fonts/RadioCanada/RadioCanada-VariableFont_wdth,wght.woff2"
+							]
+						}
+					]
+				},
+				{
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Roboto Flex",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": [
+								"file:./assets/fonts/RobotoFlex/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Roboto Flex\", sans-serif",
+					"name": "Roboto Flex",
+					"slug": "roboto-flex"
+				},
+				{
+					"fontFamily": "\"Rubik\", sans-serif",
+					"name": "Rubik",
+					"slug": "rubik",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Rubik",
+							"fontWeight": "300 900",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./assets/fonts/Rubik/Rubik-VariableFont_wght.woff2"]
+						}
+					]
+				},
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Source Serif Pro",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "200 900",
+							"src": [
+								"file:./assets/fonts/SourceSerif4/SourceSerif4-VariableFont_opsz,wght.woff2"
+							]
+						}
+					],
+					"fontFamily": "\"Source Serif Pro\", serif",
+					"name": "Source Serif Pro",
+					"slug": "source-serif-pro"
+				},
+				{
+					"fontFamily": "\"Space Mono\", monospace",
+					"name": "Space Mono",
+					"slug": "space-mono",
+					"fontFace": [
+						{
+							"fontFamily": "Space Mono",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": ["file:./assets/fonts/SpaceMono/SpaceMono-Regular.woff2"]
+						},
+						{
+							"fontFamily": "Space Mono",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": ["file:./assets/fonts/SpaceMono/SpaceMono-Bold.woff2"]
+						}
+					]
 				}
 			],
 			"fontSizes": [
@@ -370,6 +606,17 @@
 	},
 	"styles": {
 		"blocks": {
+			"core/button": {
+				"variations": {
+					"outline": {
+						"border": {
+							"color": "currentColor",
+							"style": "solid",
+							"width": "1px"
+						}
+					}
+				}
+			},
 			"core/comment-content": {
 				"spacing": {
 					"margin": {
@@ -604,7 +851,6 @@
 			},
 			"h1": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "var(--wp--preset--font-size--xx-large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
 					"letterSpacing": "-0.02em",
@@ -613,7 +859,6 @@
 			},
 			"h2": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "var(--wp--preset--font-size--x-large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
 					"letterSpacing": "-0.02em",
@@ -622,7 +867,6 @@
 			},
 			"h3": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "var(--wp--preset--font-size--large)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
 					"letterSpacing": "-0.02em",
@@ -631,7 +875,6 @@
 			},
 			"h4": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "clamp(1.5rem, 1.5rem + ((1vw - 0.48rem) * 0.721), 1.875rem)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
@@ -639,7 +882,6 @@
 			},
 			"h5": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "clamp(1.25rem, 1.25rem + ((1vw - 0.48rem) * 0.721), 1.5rem)",
 					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
 					"lineHeight": "var(--wp--custom--typography--line-height--normal)",
@@ -648,12 +890,16 @@
 			},
 			"h6": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heading)",
 					"fontSize": "1.125rem",
 					"fontWeight": "400",
 					"letterSpacing": "0.03em",
 					"lineHeight": "var(--wp--custom--typography--line-height--normal)",
 					"textTransform": "uppercase"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--inter)"
 				}
 			},
 			"link": {
@@ -672,7 +918,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--body)",
+			"fontFamily": "var(--wp--preset--font-family--inter)",
 			"fontSize": "1.125rem",
 			"fontWeight": "400",
 			"lineHeight": "var(--wp--custom--typography--line-height--normal)"

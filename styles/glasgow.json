@@ -68,25 +68,6 @@
 					"name": "Background Alt"
 				}
 			]
-		},
-		"typography": {
-			"fontFamilies": [
-				{
-					"fontFamily": "\"Rubik\", sans-serif",
-					"name": "Rubik",
-					"slug": "body",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Rubik",
-							"fontWeight": "300 900",
-							"fontStyle": "normal",
-							"fontStretch": "normal",
-							"src": ["file:./assets/fonts/Rubik/Rubik-VariableFont_wght.woff2"]
-						}
-					]
-				}
-			]
 		}
 	},
 	"styles": {
@@ -121,6 +102,9 @@
 					"fontWeight": "500"
 				}
 			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--rubik)"
 		}
 	}
 }

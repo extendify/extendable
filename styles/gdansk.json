@@ -67,44 +67,6 @@
 					}
 				}
 			}
-		},
-		"typography": {
-			"fontFamilies": [
-				{
-					"fontFamily": "\"Inter\", sans-serif",
-					"name": "Body (Inter)",
-					"slug": "body",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Inter",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "100 900",
-							"src": [
-								"file:./assets/fonts/Inter/Inter-VariableFont_slnt,wght.woff2"
-							]
-						}
-					]
-				},
-				{
-					"fontFamily": "\"Montserrat\", sans-serif",
-					"name": "Headings (Montserrat)",
-					"slug": "heading",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Montserrat",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "100 900",
-							"src": [
-								"file:./assets/fonts/Montserrat/Montserrat-VariableFont_wght.woff2"
-							]
-						}
-					]
-				}
-			]
 		}
 	},
 	"styles": {
@@ -182,7 +144,15 @@
 					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
 					"letterSpacing": "0.02em"
 				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--montserrat)"
+				}
 			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--inter)"
 		}
 	}
 }

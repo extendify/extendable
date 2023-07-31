@@ -93,11 +93,43 @@
 			"fontSizes": [
 				{
 					"fluid": {
-						"min": "0.875",
-						"max": "0.875"
+						"min": "1rem",
+						"max": "1rem"
 					},
-					"size": "0.875",
+					"size": "1rem",
 					"slug": "small"
+				},
+				{
+					"fluid": {
+						"min": "1.125",
+						"max": "1.25rem"
+					},
+					"size": "1.25rem",
+					"slug": "medium"
+				},
+				{
+					"fluid": {
+						"min": "1.875rem",
+						"max": "2.25rem"
+					},
+					"size": "2.25rem",
+					"slug": "large"
+				},
+				{
+					"fluid": {
+						"min": "2.25rem",
+						"max": "3rem"
+					},
+					"size": "3rem",
+					"slug": "x-large"
+				},
+				{
+					"fluid": {
+						"min": "3rem",
+						"max": "3.75rem"
+					},
+					"size": "3.75rem",
+					"slug": "xx-large"
 				}
 			]
 		}
@@ -169,7 +201,7 @@
 			},
 			"heading": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--heebo)"
+					"fontFamily": "var(--wp--preset--font-family--montserrat)"
 				}
 			}
 		},

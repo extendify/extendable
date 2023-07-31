@@ -161,37 +161,37 @@
 			},
 			"h1": {
 				"typography": {
-					"fontWeight": "400",
+					"fontWeight": "700",
 					"letterSpacing": "normal"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontWeight": "400",
+					"fontWeight": "700",
 					"letterSpacing": "normal"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontWeight": "400",
+					"fontWeight": "700",
 					"letterSpacing": "normal"
 				}
 			},
 			"h4": {
 				"typography": {
-					"fontWeight": "400",
+					"fontWeight": "700",
 					"letterSpacing": "normal"
 				}
 			},
 			"h5": {
 				"typography": {
-					"fontWeight": "400",
+					"fontWeight": "700",
 					"letterSpacing": "normal"
 				}
 			},
 			"h6": {
 				"typography": {
-					"fontWeight": "400",
+					"fontWeight": "700",
 					"letterSpacing": "normal"
 				}
 			},

@@ -101,6 +101,11 @@
 				"typography": {
 					"fontWeight": "500"
 				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--rubik)"
+				}
 			}
 		},
 		"typography": {

@@ -56,6 +56,11 @@
 					"slug": "tertiary",
 					"color": "#fcf9f5",
 					"name": "Tertiary"
+				},
+				{
+					"slug": "foreground-alt",
+					"color": "#595769",
+					"name": "foreground Alt"
 				}
 			]
 		}
@@ -107,6 +112,9 @@
 				}
 			}
 		},
+		"color": {
+			"text": "var(--wp--preset--color--foreground-alt)"
+		},
 		"elements": {
 			"button": {
 				"border": {
@@ -117,22 +125,34 @@
 				}
 			},
 			"h1": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				},
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
 					"letterSpacing": "-0.01em"
 				}
 			},
 			"h2": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				},
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
 				}
 			},
 			"h3": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				},
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
 				}
 			},
 			"h4": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				},
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
 					"letterSpacing": "0.01em"
@@ -146,6 +166,9 @@
 				}
 			},
 			"h6": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				},
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
 					"letterSpacing": "0.02em"

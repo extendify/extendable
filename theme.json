@@ -318,9 +318,21 @@
 					]
 				},
 				{
-					"fontFamily": "\"Heebo\", sans-serif",
-					"name": "Heebo",
-					"slug": "heebo",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Heebo",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./assets/fonts/gotu/gotu-regular.woff2"]
+						}
+					],
+					"fontFamily": "\"Gotu\", sans-serif",
+					"name": "Gotu",
+					"slug": "gotu"
+				},
+				{
 					"fontFace": [
 						{
 							"fontDisplay": "block",
@@ -330,7 +342,10 @@
 							"fontStretch": "normal",
 							"src": ["file:./assets/fonts/Heebo/Heebo-VariableFont_wght.woff2"]
 						}
-					]
+					],
+					"fontFamily": "\"Heebo\", sans-serif",
+					"name": "Heebo",
+					"slug": "heebo"
 				},
 				{
 					"fontFamily": "\"Hind\", sans-serif",
@@ -486,9 +501,6 @@
 					"slug": "karla"
 				},
 				{
-					"fontFamily": "\"Koulen\", sans-serif",
-					"name": "Koulen",
-					"slug": "koulen",
 					"fontFace": [
 						{
 							"fontDisplay": "block",
@@ -498,7 +510,25 @@
 							"fontWeight": "400",
 							"src": ["file:./assets/fonts/Koulen/Koulen-Regular.woff2"]
 						}
-					]
+					],
+					"fontFamily": "\"Koulen\", sans-serif",
+					"name": "Koulen",
+					"slug": "koulen"
+				},
+				{
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Manrope",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "200 800",
+							"src": ["file:./assets/fonts/Koulen/manrope_wght.woff2"]
+						}
+					],
+					"fontFamily": "\"Manrope\", sans-serif",
+					"name": "Manrope",
+					"slug": "manrope"
 				},
 				{
 					"fontFace": [

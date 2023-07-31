@@ -351,6 +351,83 @@
 					"fontFace": [
 						{
 							"fontDisplay": "block",
+							"fontFamily": "IBM Plex Sans",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "100",
+							"src": [
+								"file:./assets/fonts/ibm-plex-sans/IBMPlexSans-Thin.woff2"
+							]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "IBM Plex Sans",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "200",
+							"src": [
+								"file:./assets/fonts/ibm-plex-sans/IBMPlexSans-ExtraLight.woff2"
+							]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "IBM Plex Sans",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "300",
+							"src": [
+								"file:./assets/fonts/ibm-plex-sans/IBMPlexSans-Light.woff2"
+							]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "IBM Plex Sans",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": [
+								"file:./assets/fonts/ibm-plex-sans/IBMPlexSans-Regular.woff2"
+							]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "IBM Plex Sans",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "500",
+							"src": [
+								"file:./assets/fonts/ibm-plex-sans/IBMPlexSans-Medium.woff2"
+							]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "IBM Plex Sans",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "600",
+							"src": [
+								"file:./assets/fonts/ibm-plex-sans/IBMPlexSans-SemiBold.woff2"
+							]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "IBM Plex Sans",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": [
+								"file:./assets/fonts/ibm-plex-sans/IBMPlexSans-Bold.woff2"
+							]
+						}
+					],
+					"fontFamily": "'IBM Plex Sans', sans-serif",
+					"name": "IBM Plex Sans",
+					"slug": "ibm-plex-sans"
+				},
+				{
+					"fontFace": [
+						{
+							"fontDisplay": "block",
 							"fontFamily": "Inconsolata",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
@@ -422,6 +499,61 @@
 							"src": ["file:./assets/fonts/Koulen/Koulen-Regular.woff2"]
 						}
 					]
+				},
+				{
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Martel",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "200",
+							"src": ["file:./assets/fonts/martel/martel-200.woff2"]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Martel",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "300",
+							"src": ["file:./assets/fonts/martel/martel-300.woff2"]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Martel",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": ["file:./assets/fonts/martel/martel-regular.woff2"]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Martel",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "600",
+							"src": ["file:./assets/fonts/martel/martel-600.woff2"]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Martel",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "700",
+							"src": ["file:./assets/fonts/martel/martel-700.woff2"]
+						},
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Martel",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "800",
+							"src": ["file:./assets/fonts/martel/martel-800.woff2"]
+						}
+					],
+					"fontFamily": "'Martel', serif",
+					"name": "Martel",
+					"slug": "martel"
 				},
 				{
 					"fontFamily": "\"Montserrat\", sans-serif",

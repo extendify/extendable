@@ -239,6 +239,24 @@ textarea {
     width: 100%;
 }
 
+input[type="date"]::placeholder,
+input[type="datetime-local"]::placeholder,
+input[type="email"]::placeholder,
+input[type="month"]::placeholder,
+input[type="number"]::placeholder,
+input[type="password"]::placeholder,
+input[type="search"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="text"]::placeholder,
+input[type="time"]::placeholder,
+input[type="url"]::placeholder,
+input[type="week"]::placeholder,
+select::placeholder,
+textarea::placeholder {
+	color: var(--wp--custom--elements--input--color--text);
+	opacity: 0.65; 
+}
+
 label, .woocommerce-page label {
 	margin-bottom: 0.5rem;
 }

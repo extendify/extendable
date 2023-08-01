@@ -283,6 +283,21 @@
 					"fontFace": [
 						{
 							"fontDisplay": "block",
+							"fontFamily": "Archivo",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": ["file:./assets/fonts/archivo/archivo_wght"]
+						}
+					],
+					"fontFamily": "\"Archivo\", sans-serif",
+					"name": "Archivo",
+					"slug": "archivo"
+				},
+				{
+					"fontFace": [
+						{
+							"fontDisplay": "block",
 							"fontFamily": "Arsenal",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
@@ -301,6 +316,21 @@
 					"fontFamily": "\"Arsenal\", serif",
 					"name": "Arsenal",
 					"slug": "arsenal"
+				},
+				{
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Baloo Tamma 2",
+							"fontWeight": "400 800",
+							"fontStyle": "normal",
+							"fontStretch": "normal",
+							"src": ["file:./assets/fonts/baloo-tamma-2/baloo-tamma-2.woff2"]
+						}
+					],
+					"fontFamily": "\"Baloo Tamma 2\", sans-serif",
+					"name": "Baloo Tamma 2",
+					"slug": "baloo-tamma-2"
 				},
 				{
 					"fontFamily": "\"Geom\", sans-serif",
@@ -534,56 +564,16 @@
 					"fontFace": [
 						{
 							"fontDisplay": "block",
-							"fontFamily": "Martel",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "200",
-							"src": ["file:./assets/fonts/martel/martel-200.woff2"]
-						},
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Martel",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "300",
-							"src": ["file:./assets/fonts/martel/martel-300.woff2"]
-						},
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Martel",
+							"fontFamily": "Marcellus",
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "400",
-							"src": ["file:./assets/fonts/martel/martel-regular.woff2"]
-						},
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Martel",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "600",
-							"src": ["file:./assets/fonts/martel/martel-600.woff2"]
-						},
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Martel",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "700",
-							"src": ["file:./assets/fonts/martel/martel-700.woff2"]
-						},
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Martel",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "800",
-							"src": ["file:./assets/fonts/martel/martel-800.woff2"]
+							"src": ["file:./assets/fonts/marcellus/marcellus_wght.woff2"]
 						}
 					],
-					"fontFamily": "'Martel', serif",
-					"name": "Martel",
-					"slug": "martel"
+					"fontFamily": "'Marcellus', serif",
+					"name": "Marcellus",
+					"slug": "marcellus"
 				},
 				{
 					"fontFamily": "\"Montserrat\", sans-serif",
@@ -603,9 +593,6 @@
 					]
 				},
 				{
-					"fontFamily": "\"Mulish\", sans-serif",
-					"name": "Mulish",
-					"slug": "mulish",
 					"fontFace": [
 						{
 							"fontDisplay": "block",
@@ -617,7 +604,10 @@
 								"file:./assets/fonts/Mulish/Mulish-VariableFont_wght.woff2"
 							]
 						}
-					]
+					],
+					"fontFamily": "\"Mulish\", sans-serif",
+					"name": "Mulish",
+					"slug": "mulish"
 				},
 				{
 					"fontFamily": "\"Noto Serif Display\", serif",

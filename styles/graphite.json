@@ -56,6 +56,11 @@
 					"slug": "tertiary",
 					"color": "#E9E8E6",
 					"name": "Tertiary"
+				},
+                {
+					"slug": "foreground-alt",
+					"color": "#444444",
+					"name": "Foreground Alt"
 				}
 			]
 		},
@@ -113,8 +118,46 @@
 		}
 	},
 	"styles": {
+		"blocks": {
+			"core/button": {
+				"variations": {
+					"outline": {
+						"spacing": {
+							"padding": {
+								"top": "calc(0.838rem - 1px)",
+								"right": "calc(2rem - 1px)",
+								"bottom": "calc(0.838rem - 1px)",
+								"left": "calc(2rem - 1px)"
+							}
+						}
+					}
+				}
+			}
+		},
+		"color": {
+			"text": "var(--wp--preset--color--foreground-alt)"
+		},
 		"elements": {
+			
+			"button": {
+				"spacing": {
+					"padding": {
+						"top": "0.838rem",
+						"right": "2rem",
+						"bottom": "0.838rem",
+						"left": "2rem"
+					}
+				},
+				"typography": {
+					"fontSize": "1.0625rem",
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"lineHeight": "inherit"
+				}
+			},
 			"heading": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--gotu)",
 					"fontWeight": "400"

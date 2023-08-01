@@ -56,6 +56,11 @@
 					"slug": "tertiary",
 					"color": "#F9FAFE",
 					"name": "Tertiary"
+				},
+				{
+					"slug": "foreground-alt",
+					"color": "#333333",
+					"name": "foreground Alt"
 				}
 			]
 		},
@@ -113,6 +118,9 @@
 		}
 	},
 	"styles": {
+		"color": {
+			"text": "var(--wp--preset--color--foreground-alt)"
+		},
 		"elements": {
 			"button": {
 				"color": {
@@ -161,6 +169,9 @@
 				}
 			},
 			"heading": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--jost)"
 				}

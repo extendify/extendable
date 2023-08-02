@@ -63,6 +63,22 @@
 					"name": "foreground Alt"
 				}
 			]
+		},
+		"custom": {
+			"elements": {
+				"button": {
+					"border": {
+						"radius": "2px",
+						"width": "1px"
+					}
+				},
+				"input": {
+					"border": {
+						"radius": "2px",
+						"width": "1px"
+					}
+				}
+			}
 		}
 	},
 	"styles": {

@@ -159,7 +159,7 @@ blockquote:is(.is-style-plain) {
 /* Ensure default logo works well on light and dark backgrounds
 ----------------------------------------------------------*/
 .wp-block-site-logo img[src*="extendify-demo-"] {
-	mix-blend-mode: difference;
+	filter: var(--wp--preset--duotone--primary-foreground);
 }
 
 /* Responsive menu animation and customization.

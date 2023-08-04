@@ -32,11 +32,11 @@
 <!-- /wp:group -->
 
 <!-- wp:social-links {"iconColor":"background","iconColorValue":"#ffffff","size":"has-normal-icon-size","style":{"spacing":{"blockGap":"1rem"}},"className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"right"}} -->
-<ul class="wp-block-social-links has-normal-icon-size has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"#","service":"facebook"} /-->
+<ul class="wp-block-social-links has-normal-icon-size has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"https://www.facebook.com/","service":"facebook"} /-->
 
-<!-- wp:social-link {"url":"#","service":"instagram"} /-->
+<!-- wp:social-link {"url":"https://www.instagram.com/","service":"instagram"} /-->
 
-<!-- wp:social-link {"url":"#","service":"twitter"} /--></ul>
+<!-- wp:social-link {"url":"https://twitter.com/","service":"twitter"} /--></ul>
 <!-- /wp:social-links --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

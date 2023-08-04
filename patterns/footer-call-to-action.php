@@ -75,17 +75,17 @@
 
 <!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:social-links {"iconColor":"foreground","iconColorValue":"#0B0620","size":"has-small-icon-size","style":{"spacing":{"blockGap":{"top":"1.5rem","left":"1.5rem"}}},"className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"right"}} -->
-<ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"#","service":"facebook"} /-->
+<ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"https://www.facebook.com/","service":"facebook"} /-->
 
-<!-- wp:social-link {"url":"#","service":"twitter"} /-->
+<!-- wp:social-link {"url":"https://twitter.com/","service":"twitter"} /-->
 
-<!-- wp:social-link {"url":"#","service":"instagram"} /-->
+<!-- wp:social-link {"url":"https://www.instagram.com/","service":"instagram"} /-->
 
-<!-- wp:social-link {"url":"#","service":"linkedin"} /-->
+<!-- wp:social-link {"url":"https://www.linkedin.com/","service":"linkedin"} /-->
 
-<!-- wp:social-link {"url":"#","service":"tiktok"} /-->
+<!-- wp:social-link {"url":"https://www.tiktok.com/","service":"tiktok"} /-->
 
-<!-- wp:social-link {"url":"#","service":"youtube"} /--></ul>
+<!-- wp:social-link {"url":"https://www.youtube.com/","service":"youtube"} /--></ul>
 <!-- /wp:social-links --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

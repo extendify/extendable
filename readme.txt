@@ -228,7 +228,6 @@ Copyright: 2016 Google Inc. All Rights Reserved.
 License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
 Source: https://github.com/google/fonts/tree/main/ofl/marcellus
 
-
 *Images:*
 
 WordPress screenshot.png contains the following images:

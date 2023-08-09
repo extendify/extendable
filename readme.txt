@@ -13,6 +13,17 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.0 - 2023-08-10 =
+- **Important:** Updating to this version might alter your current typography and colors due to major improvements for accessibility standards. It is recommended to backup your website and test the update in a staging environment before applying it to a live site.
+- Updated: Improved color and typography across all style variations to meet accessibility (a11y) standards.
+- New: Users can now choose custom fonts directly in the Site Editor.
+- New: Introduced 4 new styles - Bloom, Graphite, Lagoon, Onyx.
+- New: Added duotone filters that adjust based on the Primary and Foreground colors.
+- Fixed: Resolved an issue affecting the width of blocks within the Site Editor.
+- Fixed: Addressed an issue with input field placeholder text colors not displaying correctly.
+- Fixed: Layout width issue within the Site Editor for the “No title” template.
+- Change: Replaced Page List Block with Custom Nav Items and refactored spacing in the footer.
+
 = 1.5.1 - 2023-04-21 =
 - Fix: Image border-radius issue
 
@@ -176,6 +187,47 @@ Space Mono Font
 Copyright: 2016 Google Inc. All Rights Reserved.
 License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
 Source: https://github.com/googlefonts/spacemono
+
+Jost Font
+Copyright: 2016 Google Inc. All Rights Reserved.
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/google/fonts/tree/main/ofl/jost
+
+Mulish Font
+Copyright: 2016 Google Inc. All Rights Reserved.
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/googlefonts/mulish
+
+Archivo Font
+Copyright: 2016 Google Inc. All Rights Reserved.
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/google/fonts/tree/main/ofl/archivo
+
+Baloo Tamma 2 Font
+Copyright: 2016 Google Inc. All Rights Reserved.
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/google/fonts/tree/main/ofl/balootamma2
+
+Gotu Font
+Copyright: 2016 Google Inc. All Rights Reserved.
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/google/fonts/tree/main/ofl/gotu
+
+IBM Plex Sans Font
+Copyright: 2016 Google Inc. All Rights Reserved.
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/google/fonts/tree/main/ofl/ibmplexsans
+
+Manrope Font
+Copyright: 2016 Google Inc. All Rights Reserved.
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/google/fonts/tree/main/ofl/manrope
+
+Marcellus Font
+Copyright: 2016 Google Inc. All Rights Reserved.
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://github.com/google/fonts/tree/main/ofl/marcellus
+
 
 *Images:*
 

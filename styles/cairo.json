@@ -6,27 +6,27 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#ffffff", "#606d6c"],
+					"colors": ["#ffffff", "#393646"],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#ffffff", "#002522"],
+					"colors": ["#ffffff", "#F4EEE0"],
 					"slug": "foreground-and-primary",
 					"name": "Foreground and primary"
 				},
 				{
-					"colors": ["#606d6c", "#002522"],
+					"colors": ["#393646", "#F4EEE0"],
 					"slug": "primary-and-background",
 					"name": "Primary and background"
 				},
 				{
-					"colors": ["#002522", "#98d3d0"],
+					"colors": ["#F4EEE0", "#331D2C"],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#002522", "#ffffff"],
+					"colors": ["#F4EEE0", "#ffffff"],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				}
@@ -39,49 +39,23 @@
 				},
 				{
 					"slug": "background",
-					"color": "#606d6c",
+					"color": "#393646",
 					"name": "Background"
 				},
 				{
 					"slug": "primary",
-					"color": "#002522",
+					"color": "#F4EEE0",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#98d3d0",
+					"color": "#EFE1D1",
 					"name": "Secondary"
 				},
 				{
 					"slug": "tertiary",
-					"color": "#4a5e5e",
+					"color": "#4F4557",
 					"name": "Tertiary"
-				}
-			]
-		},
-		"typography": {
-			"fontFamilies": [
-				{
-					"fontFamily": "\"Source Serif 4\", serif",
-					"name": "Source Serif 4",
-					"slug": "body",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Source Serif 4",
-							"fontWeight": "200 900",
-							"fontStyle": "normal",
-							"fontStretch": "normal",
-							"src": [
-								"file:./assets/fonts/SourceSerif4/SourceSerif4-VariableFont_opsz,wght.woff2"
-							]
-						}
-					]
-				},
-				{
-					"fontFamily": "\"Source Serif 4\", serif",
-					"name": "Source Serif 4",
-					"slug": "heading"
 				}
 			]
 		}
@@ -129,35 +103,6 @@
 			}
 		},
 		"elements": {
-			"button": {
-				"color": {
-					"background": "var(--wp--preset--color--primary)",
-					"text": "var(--wp--preset--color--foreground)"
-				},
-				":hover": {
-					"color": {
-						"background": "var(--wp--preset--color--foreground)",
-						"text": "var(--wp--preset--color--primary)"
-					}
-				},
-				":focus": {
-					"color": {
-						"background": "var(--wp--preset--color--foreground)",
-						"text": "var(--wp--preset--color--primary)"
-					}
-				},
-				":active": {
-					"color": {
-						"background": "var(--wp--preset--color--secondary)",
-						"text": "var(--wp--preset--color--primary)"
-					}
-				},
-				":visited": {
-					"color": {
-						"text": "var(--wp--preset--color--foreground)"
-					}
-				}
-			},
 			"h1": {
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
@@ -187,6 +132,11 @@
 			"h6": {
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--bold)"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-serif-pro)"
 				}
 			}
 		}

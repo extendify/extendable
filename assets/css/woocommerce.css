@@ -325,9 +325,6 @@
 	margin-bottom: var(--wp--preset--spacing--50);
 }
 
-.woocommerce div.product form.cart .button {
-	margin-left: 0.5rem;
-}
 .woocommerce div.product .product_meta {
 	display: flex;
 	flex-direction: column;
@@ -424,8 +421,8 @@
 }
 
 .woocommerce span.onsale {
-	background-color: var(--wp--preset--color--secondary);
-	color: var(--wp--preset--color--primary);
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--background);
 }
 
 .woocommerce nav.woocommerce-pagination ul li a:focus,

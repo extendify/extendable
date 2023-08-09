@@ -1,0 +1,202 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Bloom",
+	"version": 2,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#014932", "#395144"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#014932", "#FFEFEA"],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				},
+				{
+					"colors": ["#395144", "#014932"],
+					"slug": "secondary-and-primary",
+					"name": "Secondary and primary"
+				},
+				{
+					"colors": ["#000000", "#ffffff"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#014932", "#000000"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				}
+			],
+			"palette": [
+				{
+					"slug": "foreground",
+					"color": "#000000",
+					"name": "Foreground"
+				},
+				{
+					"slug": "background",
+					"color": "#ffffff",
+					"name": "Background"
+				},
+				{
+					"slug": "primary",
+					"color": "#014932",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#395144",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#FFEFEA",
+					"name": "Tertiary"
+				},
+				{
+					"slug": "foreground-alt",
+					"color": "#333333",
+					"name": "foreground Alt"
+				}
+			]
+		},
+		"custom": {
+			"elements": {
+				"button": {
+					"border": {
+						"radius": "0.4rem",
+						"color": "var(--wp--preset--color--secondary)",
+						"width": "1px"
+					},
+					"color": {
+						"background": "var(--wp--preset--color--secondary)",
+						"text": "var(--wp--preset--color--foreground)"
+					},
+					"spacing": {
+						"padding": {
+							"top": "calc(0.838rem - 1px)",
+							"right": "calc(2.5rem - 1px)",
+							"bottom": "calc(0.838rem - 1px)",
+							"left": "calc(2.5rem - 1px)"
+						}
+					},
+					"typography": {
+						"fontSize": "1.0625rem",
+						"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
+						"lineHeight": "var(--wp--custom--typography--line-height--normal)"
+					}
+				},
+				"input": {
+					"border": {
+						"radius": "0.4rem",
+						"width": "1px",
+						"color": "var(--wp--preset--color--foreground)"
+					},
+					"color": {
+						"background": "var(--wp--preset--color--background)",
+						"text": "var(--wp--preset--color--foreground)"
+					},
+					"spacing": {
+						"padding": {
+							"top": "calc(0.838rem - 1px)",
+							"right": "calc(1rem - 1px)",
+							"bottom": "calc(0.838rem - 1px)",
+							"left": "calc(1rem - 1px)"
+						}
+					},
+					"typography": {
+						"fontSize": "1.0625rem",
+						"fontWeight": "var(--wp--custom--font-weight--regular)",
+						"lineHeight": "var(--wp--custom--typography--line-height--normal)"
+					}
+				}
+			}
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/button": {
+				"variations": {
+					"outline": {
+						"spacing": {
+							"padding": {
+								"top": "calc(0.838rem - 1px)",
+								"right": "calc(2.5rem - 1px)",
+								"bottom": "calc(0.838rem - 1px)",
+								"left": "calc(2.5rem - 1px)"
+							}
+						}
+					}
+				}
+			}
+		},
+		"color": {
+			"text": "var(--wp--preset--color--foreground-alt)"
+		},
+		"elements": {
+			"button": {
+				"border": {
+					"radius": "0.4rem"
+				},			
+				"spacing": {
+					"padding": {
+						"top": "0.838rem",
+						"right": "2.5rem",
+						"bottom": "0.838rem",
+						"left": "2.5rem"
+					}
+				},
+				"typography": {
+					"fontSize": "1.0625rem",
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"lineHeight": "inherit"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"heading": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--marcellus)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--ibm-plex-sans)"
+		}
+	}
+}

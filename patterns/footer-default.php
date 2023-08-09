@@ -23,11 +23,11 @@
 
 <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group"><!-- wp:social-links {"iconColor":"foreground","iconColorValue":"var(--wp--preset--color--foreground)","size":"has-small-icon-size","className":"is-style-logos-only","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"},"style":{"spacing":{"blockGap":"1rem"}}} -->
-<ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"#","service":"instagram"} /-->
+<ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"https://www.instagram.com/","service":"instagram"} /-->
 
-<!-- wp:social-link {"url":"#","service":"facebook"} /-->
+<!-- wp:social-link {"url":"https://www.facebook.com/","service":"facebook"} /-->
 
-<!-- wp:social-link {"url":"#","service":"twitter"} /--></ul>
+<!-- wp:social-link {"url":"https://twitter.com/","service":"twitter"} /--></ul>
 <!-- /wp:social-links --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

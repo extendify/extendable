@@ -66,42 +66,6 @@
 					"webkit": "auto"
 				}
 			}
-		},
-		"typography": {
-			"fontFamilies": [
-				{
-					"fontFamily": "\"Inter\", sans-serif",
-					"name": "Inter",
-					"slug": "body",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Inter",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "100 900",
-							"src": [
-								"file:./assets/fonts/Inter/Inter-VariableFont_slnt,wght.woff2"
-							]
-						}
-					]
-				},
-				{
-					"fontFamily": "\"Koulen\", sans-serif",
-					"name": "Koulen",
-					"slug": "heading",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Koulen",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "400",
-							"src": ["file:./assets/fonts/Koulen/Koulen-Regular.woff2"]
-						}
-					]
-				}
-			]
 		}
 	},
 	"styles": {
@@ -159,7 +123,15 @@
 					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
 					"letterSpacing": "0.05em"
 				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--koulen)"
+				}
 			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--inter)"
 		}
 	}
 }

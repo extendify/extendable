@@ -6,22 +6,22 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#404E5C", "#F8FAF9"],
+					"colors": ["#4D4848", "#F8FAF9"],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#F8FAF9", "#404E5C"],
+					"colors": ["#F8FAF9", "#4D4848"],
 					"slug": "background-and-foreground",
 					"name": "Background and foreground"
 				},
 				{
-					"colors": ["#F87666", "#0D1B1E"],
+					"colors": ["#854836", "#0D1B1E"],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#F87666", "#404E5C"],
+					"colors": ["#854836", "#4D4848"],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				}
@@ -29,7 +29,7 @@
 			"palette": [
 				{
 					"slug": "foreground",
-					"color": "#404E5C",
+					"color": "#4D4848",
 					"name": "Foreground"
 				},
 				{
@@ -39,7 +39,7 @@
 				},
 				{
 					"slug": "primary",
-					"color": "#F87666",
+					"color": "#854836",
 					"name": "Primary"
 				},
 				{
@@ -51,42 +51,6 @@
 					"slug": "tertiary",
 					"color": "#F8ECEA",
 					"name": "Tertiary"
-				}
-			]
-		},
-		"typography": {
-			"fontFamilies": [
-				{
-					"fontFamily": "\"Inconsolata\", sans-serif",
-					"name": "Inconsolata",
-					"slug": "body",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Inconsolata",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "100 900",
-							"src": [
-								"file:./assets/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.woff2"
-							]
-						}
-					]
-				},
-				{
-					"fontFamily": "\"Karla\", sans-serif",
-					"name": "Karla",
-					"slug": "heading",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Karla",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "100 900",
-							"src": ["file:./assets/fonts/Karla/Karla-VariableFont_wght.woff2"]
-						}
-					]
 				}
 			]
 		}
@@ -145,7 +109,15 @@
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--extra-bold)"
 				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--karla)"
+				}
 			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--inconsolata)"
 		}
 	}
 }

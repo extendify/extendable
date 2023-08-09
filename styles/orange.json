@@ -16,12 +16,12 @@
 					"name": "Background and foreground"
 				},
 				{
-					"colors": ["#FF5828", "#02235B"],
+					"colors": ["#DE3707", "#02235B"],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#FF5828", "#1A1A1A"],
+					"colors": ["#DE3707", "#1A1A1A"],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				}
@@ -39,7 +39,7 @@
 				},
 				{
 					"slug": "primary",
-					"color": "#FF5828",
+					"color": "#DE3707",
 					"name": "Primary"
 				},
 				{
@@ -49,7 +49,7 @@
 				},
 				{
 					"slug": "tertiary",
-					"color": "#F2F2F2",
+					"color": "#f2f3f5",
 					"name": "Background Alt"
 				}
 			]
@@ -90,28 +90,46 @@
 			}
 		},
 		"typography": {
-			"fontFamilies": [
+			"fontSizes": [
 				{
-					"fontFamily": "\"Montserrat\", sans-serif",
-					"name": "Body",
-					"slug": "body",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Montserrat",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "100 900",
-							"src": [
-								"file:./assets/fonts/Montserrat/Montserrat-VariableFont_wght.woff2"
-							]
-						}
-					]
+					"fluid": {
+						"min": "1rem",
+						"max": "1rem"
+					},
+					"size": "1rem",
+					"slug": "small"
 				},
 				{
-					"fontFamily": "\"Montserrat\", sans-serif",
-					"name": "Headings",
-					"slug": "heading"
+					"fluid": {
+						"min": "1.125",
+						"max": "1.25rem"
+					},
+					"size": "1.25rem",
+					"slug": "medium"
+				},
+				{
+					"fluid": {
+						"min": "1.875rem",
+						"max": "2.25rem"
+					},
+					"size": "2.25rem",
+					"slug": "large"
+				},
+				{
+					"fluid": {
+						"min": "2.25rem",
+						"max": "3rem"
+					},
+					"size": "3rem",
+					"slug": "x-large"
+				},
+				{
+					"fluid": {
+						"min": "3rem",
+						"max": "3.75rem"
+					},
+					"size": "3.75rem",
+					"slug": "xx-large"
 				}
 			]
 		}
@@ -120,7 +138,7 @@
 		"elements": {
 			"button": {
 				"border": {
-					"radius": "0"
+					"radius": "2px"
 				},
 				":hover": {
 					"color": {
@@ -144,25 +162,29 @@
 			"h1": {
 				"typography": {
 					"fontWeight": "700",
-					"letterSpacing": "normal"
+					"letterSpacing": "normal",
+					"textTransform": "uppercase"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontWeight": "700700700",
-					"letterSpacing": "normal"
+					"fontWeight": "700",
+					"letterSpacing": "normal",
+					"textTransform": "uppercase"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontWeight": "700700",
-					"letterSpacing": "normal"
+					"fontWeight": "700",
+					"letterSpacing": "normal",
+					"textTransform": "uppercase"
 				}
 			},
 			"h4": {
 				"typography": {
 					"fontWeight": "700",
-					"letterSpacing": "normal"
+					"letterSpacing": "normal",
+					"textTransform": "uppercase"
 				}
 			},
 			"h5": {
@@ -176,7 +198,16 @@
 					"fontWeight": "500",
 					"letterSpacing": "normal"
 				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--montserrat)"
+				}
 			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--heebo)",
+			"fontSize": "1rem"
 		}
 	}
 }

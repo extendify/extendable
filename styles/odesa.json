@@ -6,27 +6,27 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#111111", "#ffffff"],
+					"colors": ["#0b0449", "#ffffff"],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#ffffff", "#063483"],
+					"colors": ["#ffffff", "#ffc401"],
 					"slug": "background-and-primary",
 					"name": "Background and primary"
 				},
 				{
-					"colors": ["#ffffff", "#F8D648"],
+					"colors": ["#ffffff", "#f3c8cf"],
 					"slug": "background-and-secondary",
 					"name": "Background and secondary"
 				},
 				{
-					"colors": ["#063483", "#F8D648"],
+					"colors": ["#ffc401", "#f3c8cf"],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#063483", "#111111"],
+					"colors": ["#ffc401", "#0b0449"],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				}
@@ -34,7 +34,7 @@
 			"palette": [
 				{
 					"slug": "foreground",
-					"color": "#111111",
+					"color": "#0b0449",
 					"name": "Foreground"
 				},
 				{
@@ -44,58 +44,41 @@
 				},
 				{
 					"slug": "primary",
-					"color": "#063483",
+					"color": "#0b0449",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#F8D648",
+					"color": "#f3c8cf",
 					"name": "Secondary"
 				},
 				{
 					"slug": "tertiary",
-					"color": "#f2f2f3",
+					"color": "#fcf9f5",
 					"name": "Tertiary"
+				},
+				{
+					"slug": "foreground-alt",
+					"color": "#595769",
+					"name": "foreground Alt"
 				}
 			]
 		},
-		"typography": {
-			"fontFamilies": [
-				{
-					"fontFamily": "\"Inter\", sans-serif",
-					"name": "Inter",
-					"slug": "body",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Inter",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "100 900",
-							"src": [
-								"file:./assets/fonts/Inter/Inter-VariableFont_slnt,wght.woff2"
-							]
-						}
-					]
+		"custom": {
+			"elements": {
+				"button": {
+					"border": {
+						"radius": "2px",
+						"width": "1px"
+					}
 				},
-				{
-					"fontFamily": "\"Roboto Flex\", sans-serif",
-					"name": "Roboto Flex",
-					"slug": "heading",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Roboto Flex",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "100 900",
-							"src": [
-								"file:./assets/fonts/RobotoFlex/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.woff2"
-							]
-						}
-					]
+				"input": {
+					"border": {
+						"radius": "2px",
+						"width": "1px"
+					}
 				}
-			]
+			}
 		}
 	},
 	"styles": {
@@ -145,7 +128,18 @@
 				}
 			}
 		},
+		"color": {
+			"text": "var(--wp--preset--color--foreground-alt)"
+		},
 		"elements": {
+			"button": {
+				"border": {
+					"radius": "2px"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)"
+				}
+			},
 			"h1": {
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
@@ -180,7 +174,18 @@
 					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
 					"letterSpacing": "0.02em"
 				}
+			},
+			"heading": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-serif-pro)"
+				}
 			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--roboto-flex)"
 		}
 	}
 }

@@ -16,12 +16,12 @@
 					"name": "Primary"
 				},
 				{
-					"colors": ["#49697c", "#DDDAC2"],
+					"colors": ["#49697c", "#fcf8f2"],
 					"slug": "secondary",
 					"name": "Secondary"
 				},
 				{
-					"colors": ["#102e43", "#DDDAC2"],
+					"colors": ["#102e43", "#fcf8f2"],
 					"slug": "primary-secondary",
 					"name": "Primary and Secondary"
 				},
@@ -31,12 +31,12 @@
 					"name": "Foreground and Primary"
 				},
 				{
-					"colors": ["#204f46", "#DDDAC2"],
+					"colors": ["#204f46", "#fcf8f2"],
 					"slug": "tertiary-secondary",
 					"name": "Tertiary and Secondary"
 				},
 				{
-					"colors": ["#0A1E2F", "#f7fafc"],
+					"colors": ["#F9F6DE", "#f7fafc"],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				}
@@ -54,12 +54,12 @@
 				},
 				{
 					"slug": "primary",
-					"color": "#0A1E2F",
+					"color": "#F9F6DE",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#DDDAC2",
+					"color": "#fcf8f2",
 					"name": "Secondary"
 				},
 				{
@@ -79,160 +79,35 @@
 					}
 				}
 			}
-		},
-		"typography": {
-			"fontFamilies": [
-				{
-					"fontFamily": "\"Arsenal\", serif",
-					"name": "Arsenal",
-					"slug": "heading",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Arsenal",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "400",
-							"src": ["file:./assets/fonts/Arsenal/Arsenal-Regular.woff2"]
-						},
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Arsenal",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "700",
-							"src": ["file:./assets/fonts/Arsenal/Arsenal-Bold.woff2"]
-						}
-					]
-				},
-				{
-					"fontFamily": "\"Radio Canada\", sans-serif",
-					"name": "Radio Canada",
-					"slug": "body",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Radio Canada",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "300 700",
-							"src": [
-								"file:./assets/fonts/RadioCanada/RadioCanada-VariableFont_wdth,wght.woff2"
-							]
-						}
-					]
-				}
-			]
 		}
 	},
 	"styles": {
-		"blocks": {
-			"core/comments-title": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--x-large)"
-				}
-			},
-			"core/query-pagination-next": {
-				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)"
-				}
-			},
-			"core/query-pagination-numbers": {
-				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)"
-				}
-			},
-			"core/query-pagination-previous": {
-				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--light)"
-				}
-			},
-			"core/query-title": {
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--xx-large)",
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
-					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
-				}
-			},
-			"core/quote": {
-				"border": {
-					"color": "var(--wp--preset--color--secondary)",
-					"width": "0 0 0 15px"
-				}
-			},
-			"core/site-title": {
-				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
-					"letterSpacing": "0.02em"
-				}
-			}
-		},
 		"elements": {
-			"button": {
-				"color": {
-					"background": "var(--wp--preset--color--secondary)",
-					"text": "var(--wp--preset--color--primary)"
-				},
-				":hover": {
-					"color": {
-						"background": "var(--wp--preset--color--foreground)",
-						"text": "var(--wp--preset--color--primary)"
-					}
-				},
-				":focus": {
-					"color": {
-						"background": "var(--wp--preset--color--foreground)",
-						"text": "var(--wp--preset--color--primary)"
-					}
-				},
-				":active": {
-					"color": {
-						"background": "var(--wp--preset--color--primary)",
-						"text": "var(--wp--preset--color--foreground)"
-					}
-				},
-				":visited": {
-					"color": {
-						"text": "var(--wp--preset--color--primary)"
-					}
-				}
-			},
 			"h1": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
+					"fontWeight": "500",
 					"letterSpacing": "-0.01em"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
+					"fontWeight": "500",
 					"letterSpacing": "0.01em"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
+					"fontWeight": "600"
 				}
 			},
-			"h4": {
+			"heading": {
 				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--regular)",
-					"letterSpacing": "0.02em"
-				}
-			},
-			"h5": {
-				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
-					"letterSpacing": "0.04em"
-				}
-			},
-			"h6": {
-				"typography": {
-					"fontWeight": "var(--wp--custom--typography--font-weight--bold)"
+					"fontFamily": "var(--wp--preset--font-family--arsenal)"
 				}
 			}
 		},
 		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--radio-canada)",
 			"lineHeight": "var(--wp--custom--typography--line-height--medium)"
 		}
 	}

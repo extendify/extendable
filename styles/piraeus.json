@@ -83,42 +83,6 @@
 					"webkit": "auto"
 				}
 			}
-		},
-		"typography": {
-			"fontFamilies": [
-				{
-					"fontFamily": "\"Roboto Flex\", sans-serif",
-					"name": "Roboto Flex",
-					"slug": "body",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Roboto Flex",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "100 900",
-							"src": [
-								"file:./assets/fonts/RobotoFlex/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.woff2"
-							]
-						}
-					]
-				},
-				{
-					"fontFamily": "\"Geom\", sans-serif",
-					"name": "Geom",
-					"slug": "heading",
-					"fontFace": [
-						{
-							"fontDisplay": "block",
-							"fontFamily": "Geom",
-							"fontStretch": "normal",
-							"fontStyle": "normal",
-							"fontWeight": "300 900",
-							"src": ["file:./assets/fonts/Geom/Geom-Variable.woff2"]
-						}
-					]
-				}
-			]
 		}
 	},
 	"styles": {
@@ -201,7 +165,15 @@
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
 				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--geom)"
+				}
 			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--roboto-flex)"
 		}
 	}
 }

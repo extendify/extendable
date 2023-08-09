@@ -11,22 +11,22 @@
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#010101", "#ffd800"],
+					"colors": ["#010101", "#174c2f"],
 					"slug": "foreground-and-primary",
 					"name": "Foreground and primary"
 				},
 				{
-					"colors": ["#ffd800", "#174c2f"],
+					"colors": ["#174c2f", "#ffd800"],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#ffd800", "#7cb5e3"],
+					"colors": ["#174c2f", "#A8E1FF"],
 					"slug": "primary-and-tertiary",
 					"name": "Primary and tertiary"
 				},
 				{
-					"colors": ["#ffd800", "#010101"],
+					"colors": ["#174c2f", "#010101"],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				}
@@ -44,17 +44,17 @@
 				},
 				{
 					"slug": "primary",
-					"color": "#ffd800",
+					"color": "#174c2f",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#174c2f",
+					"color": "#ffd800",
 					"name": "Secondary"
 				},
 				{
 					"slug": "tertiary",
-					"color": "#7cb5e3",
+					"color": "#A8E1FF",
 					"name": "Tertiary"
 				}
 			]
@@ -66,34 +66,6 @@
 					"webkit": "auto"
 				}
 			}
-		},
-		"typography": {
-			"fontFamilies": [
-				{
-					"fontFamily": "\"Space Mono\", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace",
-					"name": "Space Mono",
-					"slug": "body",
-					"fontFace": [
-						{
-							"fontFamily": "Space Mono",
-							"fontStyle": "normal",
-							"fontWeight": "400",
-							"src": ["file:./assets/fonts/SpaceMono/SpaceMono-Regular.woff2"]
-						},
-						{
-							"fontFamily": "Space Mono",
-							"fontStyle": "normal",
-							"fontWeight": "700",
-							"src": ["file:./assets/fonts/SpaceMono/SpaceMono-Bold.woff2"]
-						}
-					]
-				},
-				{
-					"fontFamily": "\"Space Mono\", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace",
-					"name": "Space Mono",
-					"slug": "heading"
-				}
-			]
 		}
 	},
 	"styles": {
@@ -122,18 +94,18 @@
 		"elements": {
 			"button": {
 				"color": {
-					"background": "var(--wp--preset--color--primary)",
+					"background": "var(--wp--preset--color--secondary)",
 					"text": "var(--wp--preset--color--foreground)"
 				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--secondary)",
+						"background": "var(--wp--preset--color--primary)",
 						"text": "var(--wp--preset--color--background)"
 					}
 				},
 				":focus": {
 					"color": {
-						"background": "var(--wp--preset--color--secondary)",
+						"background": "var(--wp--preset--color--primary)",
 						"text": "var(--wp--preset--color--background)"
 					}
 				},
@@ -178,7 +150,15 @@
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
 				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--space-mono)"
+				}
 			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--space-mono)"
 		}
 	}
 }

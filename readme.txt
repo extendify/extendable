@@ -13,6 +13,9 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.1 - 2023-08-21 =
+- Fixed: Footer text visibility in the dark mode footer
+
 = 2.0.0 - 2023-08-10 =
 - **Important:** Updating to this version might alter your current typography and colors due to major improvements for accessibility standards. It is recommended to backup your website and test the update in a staging environment before applying it to a live site.
 - Updated: Improved color and typography across all style variations to meet accessibility (a11y) standards.

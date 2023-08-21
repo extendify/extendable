@@ -1,4 +1,4 @@
-<!-- wp:group {"align":"full","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"backgroundColor":"foreground","textColor":"background","layout":{"inherit":true,"type":"constrained"}} -->
+<!-- wp:group {"align":"full","style":{"elements":{"link":{"color":{"text":"var:preset|color|background"}}},"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"backgroundColor":"foreground","textColor":"background","layout":{"inherit":true,"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-background-color has-foreground-background-color has-text-color has-background has-link-color"
 	style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
 	<!-- wp:group {"align":"wide"} -->
@@ -6,7 +6,7 @@
 		<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|60","left":"var:preset|spacing|60"}}}} -->
 		<div class="wp-block-columns"><!-- wp:column {"width":"70%"} -->
 			<div class="wp-block-column" style="flex-basis:70%">
-				<!-- wp:site-title {"level":2,"style":{"typography":{"textTransform":"none"}},"fontSize":"large"} /-->
+				<!-- wp:site-title {"level":2,"style":{"typography":{"textTransform":"none"}},"textColor":"background","fontSize":"large"} /-->
 
 				<!-- wp:paragraph -->
 				<p>123 Demo Street<br>New York, NY 12345<br><a href="tel:(555) 555-5555" data-type="tel"
@@ -21,8 +21,9 @@
 			<!-- /wp:column -->
 
 			<!-- wp:column {"width":"15%"} -->
-			<div class="wp-block-column" style="flex-basis:15%"><!-- wp:heading {"level":3,"fontSize":"medium"} -->
-				<h3 class="wp-block-heading has-medium-font-size">About</h3>
+			<div class="wp-block-column" style="flex-basis:15%">
+				<!-- wp:heading {"level":3,"textColor":"background","fontSize":"medium"} -->
+				<h3 class="wp-block-heading has-background-color has-text-color has-medium-font-size">About</h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:navigation {"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} -->
@@ -42,8 +43,9 @@
 			<!-- /wp:column -->
 
 			<!-- wp:column {"width":"15%"} -->
-			<div class="wp-block-column" style="flex-basis:15%"><!-- wp:heading {"level":3,"fontSize":"medium"} -->
-				<h3 class="wp-block-heading has-medium-font-size">Follow</h3>
+			<div class="wp-block-column" style="flex-basis:15%">
+				<!-- wp:heading {"level":3,"textColor":"background","fontSize":"medium"} -->
+				<h3 class="wp-block-heading has-background-color has-text-color has-medium-font-size">Follow</h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:navigation {"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} -->

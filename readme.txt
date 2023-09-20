@@ -13,6 +13,10 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.2 - 2023-09-21 =
+- Fixed: Overlay menu color
+- Updated: Footer(Footer with Address, Dark, Three Columns) layout
+
 = 2.0.1 - 2023-08-21 =
 - Fixed: Footer text visibility in the dark mode footer
 

@@ -27,6 +27,6 @@
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:navigation {"ref":85,"overlayBackgroundColor":"foreground","overlayTextColor":"background","className":"header\u002d\u002dnav order-3 md:order-2","layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"right","flexWrap":"nowrap"}} /--></div>
+<!-- wp:navigation {"ref":85,"className":"header\u002d\u002dnav order-3 md:order-2","layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"right","flexWrap":"nowrap"}} /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

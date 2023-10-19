@@ -14,108 +14,120 @@
         style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30)">
         <!-- wp:column {"style":{"spacing":{"blockGap":"1.5rem"}}} -->
         <div class="wp-block-column"><!-- wp:heading {"level":3,"fontSize":"medium"} -->
-            <h3 class="wp-block-heading has-medium-font-size">Articles</h3>
+            <h3 class="wp-block-heading has-medium-font-size">
+                <?php echo esc_html__( 'Articles', 'extendable' ); ?>
+            </h3>
             <!-- /wp:heading -->
 
             <!-- wp:navigation {"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} -->
-            <!-- wp:navigation-link {"label":"Blog","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Blog', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Case Studies","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Case Studies', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Whitepapers","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Whitepapers', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Industry Insights","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Industry Insights', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"News","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'News', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Webinars","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Webinars', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
             <!-- /wp:navigation -->
         </div>
         <!-- /wp:column -->
 
         <!-- wp:column {"style":{"spacing":{"blockGap":"1.5rem"}}} -->
         <div class="wp-block-column"><!-- wp:heading {"level":3,"fontSize":"medium"} -->
-            <h3 class="wp-block-heading has-medium-font-size">Products</h3>
+            <h3 class="wp-block-heading has-medium-font-size">
+                <?php echo esc_html__( 'Products', 'extendable' ); ?>
+            </h3>
             <!-- /wp:heading -->
 
             <!-- wp:navigation {"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} -->
-            <!-- wp:navigation-link {"label":"Product Overview","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Product Overview', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Pricing Plans","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Pricing Plans', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Product Support","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Product Support', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Product FAQ","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Product FAQ', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
             <!-- /wp:navigation -->
         </div>
         <!-- /wp:column -->
 
         <!-- wp:column {"style":{"spacing":{"blockGap":"1.5rem"}}} -->
         <div class="wp-block-column"><!-- wp:heading {"level":3,"fontSize":"medium"} -->
-            <h3 class="wp-block-heading has-medium-font-size">Use cases</h3>
+            <h3 class="wp-block-heading has-medium-font-size">
+                <?php echo esc_html__( 'Use cases', 'extendable' ); ?>
+            </h3>
             <!-- /wp:heading -->
 
             <!-- wp:navigation {"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} -->
-            <!-- wp:navigation-link {"label":"E-commerce","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'E-commerce', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Marketing","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Marketing', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Education","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Education', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Non-profit","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Non-profit', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Healthcare","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Healthcare', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Real Estate","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Real Estate', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
             <!-- /wp:navigation -->
         </div>
         <!-- /wp:column -->
 
         <!-- wp:column {"style":{"spacing":{"blockGap":"1.5rem"}}} -->
         <div class="wp-block-column"><!-- wp:heading {"level":3,"fontSize":"medium"} -->
-            <h3 class="wp-block-heading has-medium-font-size">Resources</h3>
+            <h3 class="wp-block-heading has-medium-font-size">
+                <?php echo esc_html__( 'Resources', 'extendable' ); ?>
+            </h3>
             <!-- /wp:heading -->
 
             <!-- wp:navigation {"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} -->
-            <!-- wp:navigation-link {"label":"Guides","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Guides', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Tutorials","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Tutorials', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Templates","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Templates', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Videos","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Videos', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Webinars","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Webinars', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"FAQ","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'FAQ', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
             <!-- /wp:navigation -->
         </div>
         <!-- /wp:column -->
 
         <!-- wp:column {"style":{"spacing":{"blockGap":"1.5rem"}}} -->
         <div class="wp-block-column"><!-- wp:heading {"level":3,"fontSize":"medium"} -->
-            <h3 class="wp-block-heading has-medium-font-size">Company</h3>
+            <h3 class="wp-block-heading has-medium-font-size">
+                <?php echo esc_html__( 'Company', 'extendable' ); ?>
+            </h3>
             <!-- /wp:heading -->
 
             <!-- wp:navigation {"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} -->
-            <!-- wp:navigation-link {"label":"About Us","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'About Us', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Our Team","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Our Team', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Careers","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Careers', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Awards","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Awards', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Testimonials","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Testimonials', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
 
-            <!-- wp:navigation-link {"label":"Contact Us","url":"#","kind":"custom"} /-->
+            <!-- wp:navigation-link {"label":"<?php echo esc_html__( 'Contact us', 'extendable' ); ?>","url":"#","kind":"custom"} /-->
             <!-- /wp:navigation -->
         </div>
         <!-- /wp:column -->
 
         <!-- wp:column {"style":{"spacing":{"blockGap":"1.5rem"}}} -->
         <div class="wp-block-column"><!-- wp:heading {"level":3,"fontSize":"medium"} -->
-            <h3 class="wp-block-heading has-medium-font-size">Follow</h3>
+            <h3 class="wp-block-heading has-medium-font-size">
+                <?php echo esc_html__( 'Follow', 'extendable' ); ?>
+            </h3>
             <!-- /wp:heading -->
 
             <!-- wp:navigation {"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} -->
@@ -137,10 +149,10 @@
         style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
         <!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
         <div class="wp-block-group alignwide"><!-- wp:paragraph {"fontSize":"small"} -->
-            <p class="has-small-font-size">© Your Company LLC</p>
-            <!-- /wp:paragraph -->
+            <p class="has-small-font-size" <?php echo esc_html__( '© Your Company LLC' , 'extendable' ); ?>/p>
+                <!-- /wp:paragraph -->
 
-            <!-- wp:group {"style":{"spacing":{"blockGap":"1rem"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+                <!-- wp:group {"style":{"spacing":{"blockGap":"1rem"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
             <div class="wp-block-group"><!-- wp:site-logo /-->
 
                 <!-- wp:group -->

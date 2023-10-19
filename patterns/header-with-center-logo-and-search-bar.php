@@ -13,8 +13,8 @@
         style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
         <!-- wp:column {"verticalAlignment":"center","width":"42%"} -->
         <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%">
-			<!-- wp:navigation {"layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"left"}} -->
-			<!-- /wp:navigation -->
+            <!-- wp:navigation {"layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"left"}} -->
+            <!-- /wp:navigation -->
         </div>
         <!-- /wp:column -->
 
@@ -28,7 +28,7 @@
 
         <!-- wp:column {"verticalAlignment":"center","width":"42%"} -->
         <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%">
-            <!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Search...","buttonText":"Search","buttonPosition":"no-button","align":"right","style":{"typography":{"lineHeight":1.6},"border":{"width":"1px","radius":"4px"}},"className":"ext-hidden tablet:ext-block","fontSize":"small"} /-->
+            <!-- wp:search {"label":"Search","showLabel":false,"placeholder":"<?php echo esc_html__( 'Search...', 'extendable' ); ?>","buttonText":"<?php echo esc_html__( 'Search', 'extendable' ); ?>","buttonPosition":"no-button","align":"right","style":{"typography":{"lineHeight":1.6},"border":{"width":"1px","radius":"4px"}},"className":"ext-hidden tablet:ext-block","fontSize":"small"} /-->
         </div>
         <!-- /wp:column -->
     </div>

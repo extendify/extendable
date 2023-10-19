@@ -25,9 +25,9 @@
         <!-- /wp:group -->
 
         <!-- wp:navigation {"layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"right"}} -->
-		    <!-- wp:page-list {"isNavigationChild":true,"showSubmenuIcon":true,"openSubmenusOnClick":false} /-->
-            <!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Search...","buttonText":"Search","buttonPosition":"no-button","buttonUseIcon":true,"style":{"border":{"width":"1px","radius":"4px"},"typography":{"lineHeight":"2"}},"borderColor":"foreground","fontSize":"small"} /-->
-		<!-- /wp:navigation -->
+        <!-- wp:page-list {"isNavigationChild":true,"showSubmenuIcon":true,"openSubmenusOnClick":false} /-->
+        <!-- wp:search {"label":"Search","showLabel":false,"placeholder":"<?php echo esc_html__( 'Search...', 'extendable' ); ?>","buttonText":"<?php echo esc_html__( 'Search', 'extendable' ); ?>","buttonPosition":"no-button","buttonUseIcon":true,"style":{"border":{"width":"1px","radius":"4px"},"typography":{"lineHeight":"2"}},"borderColor":"foreground","fontSize":"small"} /-->
+        <!-- /wp:navigation -->
     </div>
     <!-- /wp:group -->
 </div>

@@ -28,7 +28,7 @@
 
         <!-- wp:column {"verticalAlignment":"center","width":"42%"} -->
         <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:42%">
-            <!-- wp:search {"label":"Search","showLabel":false,"placeholder":"<?php echo esc_html__( 'Search...', 'extendable' ); ?>","buttonText":"<?php echo esc_html__( 'Search', 'extendable' ); ?>","buttonPosition":"no-button","align":"right","style":{"typography":{"lineHeight":1.6},"border":{"width":"1px","radius":"4px"}},"className":"ext-hidden tablet:ext-block","fontSize":"small"} /-->
+            <!-- wp:search {"label":"<?php echo esc_html__( 'Search', 'extendable' ); ?>","showLabel":false,"placeholder":"<?php echo esc_html__( 'Search...', 'extendable' ); ?>","buttonText":"<?php echo esc_html__( 'Search', 'extendable' ); ?>","buttonPosition":"no-button","align":"right","style":{"typography":{"lineHeight":1.6},"border":{"width":"1px","radius":"4px"}},"className":"ext-hidden tablet:ext-block","fontSize":"small"} /-->
         </div>
         <!-- /wp:column -->
     </div>

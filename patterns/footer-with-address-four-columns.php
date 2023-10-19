@@ -16,30 +16,23 @@
             <div class="wp-block-column" style="flex-basis:40%"><!-- wp:site-title {"level":2,"fontSize":"large"} /-->
 
                 <!-- wp:paragraph -->
-                <p>
-                    <?php echo esc_html__( 'Empower Your Path to Success', 'extendable' ); ?>
-                </p>
+                <p><?php echo esc_html__( 'Empower Your Path to Success', 'extendable' ); ?></p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:column -->
 
             <!-- wp:column {"width":"22.5%"} -->
             <div class="wp-block-column" style="flex-basis:22.5%"><!-- wp:paragraph -->
-                <p>
-                    <?php echo esc_html__( '123 Demo Street', 'extendable' ); ?><br>
-                    <?php echo esc_html__( 'Brooklyn, NY 12345', 'extendable' ); ?>
-                </p>
+            <p><?php echo esc_html__( '123 Demo Street', 'extendable' ); ?><br><?php echo esc_html__( 'Brooklyn, NY 12345', 'extendable' ); ?></p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:column -->
 
             <!-- wp:column {"width":"22.5%"} -->
-            <div class="wp-block-column" style="flex-basis:22.5%"><!-- wp:paragraph -->
-                <p>
-                    <?php echo esc_html__( 'email@example.com', 'extendable' ); ?><br>
-                    <?php echo esc_html__( '(555) 555-5555', 'extendable' ); ?>
-                </p>
-                <!-- /wp:paragraph -->
+            <div class="wp-block-column" style="flex-basis:22.5%">
+            <!-- wp:paragraph -->
+            <p><?php echo esc_html__( 'email@example.com', 'extendable' ); ?><br> <?php echo esc_html__( '(555) 555-5555', 'extendable' ); ?></p>
+            <!-- /wp:paragraph -->
             </div>
             <!-- /wp:column -->
 

@@ -21,7 +21,7 @@
         <!-- /wp:group -->
 
         <!-- wp:paragraph {"fontSize":"small"} -->
-        <p class="has-small-font-size" <?php echo esc_html__( '© Your Company LLC' , 'extendable' ); ?>/p>
+        <p class="has-small-font-size"><?php echo esc_html__( '© Your Company LLC' , 'extendable' ); ?></p>
             <!-- /wp:paragraph -->
 
             <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->

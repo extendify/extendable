@@ -16,8 +16,6 @@
         <div class="wp-block-group">
             <!-- wp:group {"style":{"spacing":{"blockGap":"1rem"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
             <div class="wp-block-group">
-                <!-- wp:site-logo /-->
-
                 <!-- wp:group -->
                 <div class="wp-block-group">
                     <!-- wp:site-title {"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"medium"} /-->
@@ -29,10 +27,7 @@
             <!-- wp:group {"layout":{"type":"constrained","contentSize":"450px"}} -->
             <div class="wp-block-group">
                 <!-- wp:paragraph {"fontSize":"small"} -->
-                <p class="has-small-font-size">
-                    <?php echo esc_html__( 'We are a company that specializes in providing a wide range of
-                    high-quality products and services to our customers.', 'extendable' ); ?>
-                </p>
+                <p class="has-small-font-size"><?php echo esc_html__( 'We are a company that specializes in providing a wide range of high-quality products and services to our customers.', 'extendable' ); ?></p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->
@@ -66,12 +61,11 @@
     <div class="wp-block-group alignwide"
         style="border-top-color:#cccccca6;border-top-width:1px;margin-top:var(--wp--preset--spacing--50);padding-top:var(--wp--preset--spacing--30)">
         <!-- wp:paragraph {"fontSize":"small"} -->
-        <p class="has-small-font-size" <?php echo esc_html__( '© Your Company LLC' , 'extendable' ); ?>/p>
+        <p class="has-small-font-size"><?php echo esc_html__( '© Your Company LLC' , 'extendable' ); ?></p>
             <!-- /wp:paragraph -->
 
             <!-- wp:social-links {"iconColor":"foreground","iconColorValue":"var(\u002d\u002dwp\u002d\u002dpreset\u002d\u002dcolor\u002d\u002dforeground)","size":"has-small-icon-size","style":{"spacing":{"blockGap":"1rem"}},"className":"is-style-logos-only ext-justify-start tablet:ext-justify-end","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"}} -->
-        <ul
-            class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only ext-justify-start tablet:ext-justify-end">
+        <ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only ext-justify-start tablet:ext-justify-end">
             <!-- wp:social-link {"url":"https://www.instagram.com/","service":"instagram"} /-->
 
             <!-- wp:social-link {"url":"https://www.facebook.com/","service":"facebook"} /-->

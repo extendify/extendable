@@ -12,9 +12,8 @@
     style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)">
     <!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
     <div class="wp-block-group alignwide">
-        <!-- wp:group {"style":{"spacing":{"blockGap":"1rem"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-        <div class="wp-block-group"><!-- wp:site-logo /-->
-
+        <!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+        <div class="wp-block-group">
             <!-- wp:group -->
             <div class="wp-block-group"><!-- wp:site-title {"fontSize":"medium"} /--></div>
             <!-- /wp:group -->
@@ -22,7 +21,7 @@
         <!-- /wp:group -->
 
         <!-- wp:paragraph {"fontSize":"small"} -->
-        <p class="has-small-font-size" <?php echo esc_html__( '© Your Company LLC' , 'extendable' ); ?>/p>
+        <p class="has-small-font-size"><?php echo esc_html__( '© Your Company LLC' , 'extendable' ); ?></p>
             <!-- /wp:paragraph -->
 
             <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->

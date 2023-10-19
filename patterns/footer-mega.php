@@ -22,9 +22,7 @@
 
         <!-- wp:column {"style":{"spacing":{"blockGap":"1.5rem"}}} -->
         <div class="wp-block-column"><!-- wp:heading {"level":3,"textColor":"background","fontSize":"medium"} -->
-            <h3 class="wp-block-heading has-background-color has-text-color has-medium-font-size">
-                <?php echo esc_html__( 'Products', 'extendable' ); ?>
-            </h3>
+            <h3 class="wp-block-heading has-background-color has-text-color has-medium-font-size"><?php echo esc_html__( 'Products', 'extendable' ); ?></h3>
             <!-- /wp:heading -->
 
             <!-- wp:navigation {"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} -->
@@ -41,9 +39,7 @@
 
         <!-- wp:column {"style":{"spacing":{"blockGap":"1.5rem"}}} -->
         <div class="wp-block-column"><!-- wp:heading {"level":3,"textColor":"background","fontSize":"medium"} -->
-            <h3 class="wp-block-heading has-background-color has-text-color has-medium-font-size">
-                <?php echo esc_html__( 'Articles', 'extendable' ); ?>
-            </h3>
+            <h3 class="wp-block-heading has-background-color has-text-color has-medium-font-size"><?php echo esc_html__( 'Articles', 'extendable' ); ?></h3>
             <!-- /wp:heading -->
 
             <!-- wp:navigation {"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} -->
@@ -64,9 +60,7 @@
 
         <!-- wp:column {"style":{"spacing":{"blockGap":"1.5rem"}}} -->
         <div class="wp-block-column"><!-- wp:heading {"level":3,"textColor":"background","fontSize":"medium"} -->
-            <h3 class="wp-block-heading has-background-color has-text-color has-medium-font-size">
-                <?php echo esc_html__( 'About', 'extendable' ); ?>
-            </h3>
+            <h3 class="wp-block-heading has-background-color has-text-color has-medium-font-size"><?php echo esc_html__( 'About', 'extendable' ); ?></h3>
             <!-- /wp:heading -->
 
             <!-- wp:navigation {"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} -->
@@ -98,9 +92,7 @@
         <div class="wp-block-column is-vertically-aligned-center">
             <!-- wp:group {"layout":{"type":"flex","allowOrientation":false,"flexWrap":"wrap"}} -->
             <div class="wp-block-group"><!-- wp:paragraph {"fontSize":"small"} -->
-                <p class="has-small-font-size">
-                    <?php echo esc_html__( '© Your Company LLC', 'extendable' ); ?>
-                </p>
+                <p class="has-small-font-size"><?php echo esc_html__( '© Your Company LLC', 'extendable' ); ?></p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->

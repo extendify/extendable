@@ -18,14 +18,11 @@
                 <!-- wp:site-title {"level":2,"style":{"typography":{"textTransform":"none"}},"textColor":"background","fontSize":"large"} /-->
 
                 <!-- wp:paragraph -->
-                <p><?php echo esc_html__( '123 Demo Street', 'extendable' ); ?><br><?php echo esc_html__( 'New York, NY 12345', 'extendable' ); ?><br><a href="tel:(555) 555-5555" data-type="tel"
-                        data-id="tel:(555) 555-5555"><?php echo esc_html__( '(555) 555-5555', 'extendable' ); ?></a></p>
+                <p><?php echo esc_html__( '123 Demo Street', 'extendable' ); ?><br><?php echo esc_html__( 'New York, NY 12345', 'extendable' ); ?><br><a href="tel:(555) 555-5555" data-type="tel" data-id="tel:(555) 555-5555"><?php echo esc_html__( '(555) 555-5555', 'extendable' ); ?></a></p>
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph -->
-                <p>
-                    <?php echo esc_html__( 'Empower Your Path to Success', 'extendable' ); ?>
-                </p>
+                <p><?php echo esc_html__( 'Empower Your Path to Success', 'extendable' ); ?></p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:column -->

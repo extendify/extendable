@@ -11,7 +11,7 @@ Version: 2.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: extendable
-Tags: one-column, custom-colors, custom-menu, custom-logo, e-commerce, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments
+Tags: one-column, custom-colors, custom-menu, custom-logo, e-commerce, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
 Extendable is a derivative work of the code from the
 Twenty Twenty-Two WordPress Theme, which is licensed GPLv2.
@@ -20,13 +20,21 @@ Extendable WordPress Theme, (C) 2022 Extendify Inc.
 Extendable therefore is also distributed under the terms of the GNU GPL.
 */
 
-
 /* Fallback for deprecate variables.
 ---------------------------------------------------------------------------- */
 :root {
-	--wp--custom--spacing--small: var(--wp--preset--spacing--30, clamp(1.5rem, 5vw, 2rem));
-	--wp--custom--spacing--medium: var(--wp--preset--spacing--50, clamp(2.5rem, 8vw, 4rem));
-	--wp--custom--spacing--large: var(--wp--preset--spacing--60, clamp(2.5rem, 8vw, 6rem));
+	--wp--custom--spacing--small: var(
+		--wp--preset--spacing--30,
+		clamp(1.5rem, 5vw, 2rem)
+	);
+	--wp--custom--spacing--medium: var(
+		--wp--preset--spacing--50,
+		clamp(2.5rem, 8vw, 4rem)
+	);
+	--wp--custom--spacing--large: var(
+		--wp--preset--spacing--60,
+		clamp(2.5rem, 8vw, 6rem)
+	);
 	--wp--custom--spacing--outer: max(1.25rem, 4vw);
 }
 
@@ -37,8 +45,14 @@ Extendable therefore is also distributed under the terms of the GNU GPL.
  */
 
 body {
-	-moz-osx-font-smoothing: var(--wp--custom--typography--font-smoothing--moz, auto);
-	-webkit-font-smoothing: var(--wp--custom--typography--font-smoothing--webkit, auto);
+	-moz-osx-font-smoothing: var(
+		--wp--custom--typography--font-smoothing--moz,
+		auto
+	);
+	-webkit-font-smoothing: var(
+		--wp--custom--typography--font-smoothing--webkit,
+		auto
+	);
 }
 
 /*
@@ -48,14 +62,26 @@ body {
  */
 
 a {
-	text-decoration-style: var(--wp--custom--elements--link--static--text-decoration-style, solid);
-	text-decoration-thickness: var(--wp--custom--elements--link--text-decoration-thickness, 1px);
-	text-underline-offset: var(--wp--custom--elements--link--text-underline-offset, 0.25ch);
+	text-decoration-style: var(
+		--wp--custom--elements--link--static--text-decoration-style,
+		solid
+	);
+	text-decoration-thickness: var(
+		--wp--custom--elements--link--text-decoration-thickness,
+		1px
+	);
+	text-underline-offset: var(
+		--wp--custom--elements--link--text-underline-offset,
+		0.25ch
+	);
 }
 
 a:hover,
 a:focus {
-	text-decoration-style: var(--wp--custom--elements--link--interactive--text-decoration-style, dashed);
+	text-decoration-style: var(
+		--wp--custom--elements--link--interactive--text-decoration-style,
+		dashed
+	);
 }
 
 a:active {
@@ -93,20 +119,25 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
  * --------------------------------------------------------
  */
 
- /* Button
+/* Button
 ----------------------------------------------------------*/
 .wp-element-button {
 	transition: background-color 0.15s ease;
 }
-.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background):hover, 
-.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background):hover {
+.wp-block-button
+	.wp-block-button__link.is-style-outline:not(.has-background):hover,
+.wp-block-button.is-style-outline
+	> .wp-block-button__link:not(.has-background):hover {
 	background-color: rgba(159, 159, 159, 0.2);
 }
 
 /* Table
 ----------------------------------------------------------*/
-.wp-block-table.is-style-stripes tbody tr:nth-child(odd){
-	background-color: var(--wp--custom--blocks--core-table--variant-stripes--color--background, var(--wp--preset--color--tertiary));
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+	background-color: var(
+		--wp--custom--blocks--core-table--variant-stripes--color--background,
+		var(--wp--preset--color--tertiary)
+	);
 }
 
 /* Template Part Block
@@ -132,7 +163,8 @@ blockquote:is(.is-style-plain) {
 	border-radius: var(--wp--custom--elements--button--border--radius);
 	border-width: var(--wp--custom--elements--input--border--width);
 }
-:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input {
+:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper)
+	.wp-block-search__input {
 	border-color: transparent;
 }
 .wp-block-search .wp-block-search__input {
@@ -141,7 +173,9 @@ blockquote:is(.is-style-plain) {
 
 /* Image
 ----------------------------------------------------------*/
-.wp-block-image[style*="-radius"]:not([style*="overflow"]) { overflow: hidden }
+.wp-block-image[style*="-radius"]:not([style*="overflow"]) {
+	overflow: hidden;
+}
 
 /*
  * --------------------------------------------------------
@@ -149,11 +183,12 @@ blockquote:is(.is-style-plain) {
  * --------------------------------------------------------
  */
 
-.block-editor-block-list__block.wp-block.is-default-size.wp-block-site-logo .components-resizable-box__container,
+.block-editor-block-list__block.wp-block.is-default-size.wp-block-site-logo
+	.components-resizable-box__container,
 .wp-block-site-logo.is-default-size img {
-    max-height: 42px !important;
-    height: auto !important;
-    width: auto !important;
+	max-height: 42px !important;
+	height: auto !important;
+	width: auto !important;
 }
 
 /* Ensure default logo works well on light and dark backgrounds
@@ -228,15 +263,18 @@ select,
 textarea {
 	background-color: var(--wp--custom--elements--input--color--background);
 	color: var(--wp--custom--elements--input--color--text);
-    border-color: var(--wp--custom--elements--input--border--color);
-    border-radius: var(--wp--custom--elements--input--border--radius);
-    border-width: var(--wp--custom--elements--input--border--width);
-    box-sizing: border-box;
-    display: block;
-    font-size: var(--wp--custom--elements--input--typography--font-size);
-    line-height: var(--wp--custom--elements--input--typography--line-height);
-    padding: var(--wp--custom--elements--input--spacing--padding--top) var(--wp--custom--elements--input--spacing--padding--right) var(--wp--custom--elements--input--spacing--padding--bottom) var(--wp--custom--elements--input--spacing--padding--left);
-    width: 100%;
+	border-color: var(--wp--custom--elements--input--border--color);
+	border-radius: var(--wp--custom--elements--input--border--radius);
+	border-width: var(--wp--custom--elements--input--border--width);
+	box-sizing: border-box;
+	display: block;
+	font-size: var(--wp--custom--elements--input--typography--font-size);
+	line-height: var(--wp--custom--elements--input--typography--line-height);
+	padding: var(--wp--custom--elements--input--spacing--padding--top)
+		var(--wp--custom--elements--input--spacing--padding--right)
+		var(--wp--custom--elements--input--spacing--padding--bottom)
+		var(--wp--custom--elements--input--spacing--padding--left);
+	width: 100%;
 }
 
 input[type="date"]::placeholder,
@@ -254,21 +292,22 @@ input[type="week"]::placeholder,
 select::placeholder,
 textarea::placeholder {
 	color: var(--wp--custom--elements--input--color--text);
-	opacity: 0.65; 
+	opacity: 0.65;
 }
 
-label, .woocommerce-page label {
+label,
+.woocommerce-page label {
 	margin-bottom: 0.5rem;
 }
 /*
  * Matching input with outline button style.
  */
-.wp-block-post-comments-form input:not([type=submit]),
+.wp-block-post-comments-form input:not([type="submit"]),
 .wp-block-post-comments-form textarea {
-    border: 2px solid currentColor;
-    padding: 0.667em 1.333em !important;
+	border: 2px solid currentColor;
+	padding: 0.667em 1.333em !important;
 	font-size: 1.15rem;
-    line-height: 1.384;
+	line-height: 1.384;
 	border-radius: 0.5rem;
 	background-color: var(--wp--preset--color--background);
 	color: var(--wp--preset--color--foreground);

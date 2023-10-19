@@ -19,6 +19,12 @@ if ( ! function_exists( 'extendable_support' ) ) :
 	 */
 	function extendable_support() {
 
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 */
+		load_theme_textdomain( 'extendable', get_template_directory() . '/languages' );
+
 		// Add support for block styles.
 		add_theme_support( 'wp-block-styles' );
 

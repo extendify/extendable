@@ -27,7 +27,7 @@
 <div class="wp-block-group"><!-- wp:site-title {"className":"is-style-rounded"} /-->
 
 <!-- wp:paragraph {"align":"right","fontSize":"small"} -->
-<p class="has-text-align-right has-small-font-size">Proudly powered by <a href="https://wordpress.org" rel="nofollow">WordPress</a></p>
+<p class="has-text-align-right has-small-font-size"><?php echo esc_html__( 'Empower Your Path to Success', 'extendable' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

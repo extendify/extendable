@@ -13,6 +13,9 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.5 - 2023-11-28 =
+- Fixed: internationalize hardcoded strings in templates
+
 = 2.0.4 - 2023-11-10 =
 - Fixed: Hamburger menu responsive bug
 

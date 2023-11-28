@@ -29,7 +29,7 @@
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
 				<!-- wp:button -->
-				<div class="wp-block-button"><a class="wp-block-button__link">Get Started</a></div>
+				<div class="wp-block-button"><a class="wp-block-button__link"><?php echo esc_html_x( 'Get Started', 'Button text of this section', 'extendable' ); ?></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->

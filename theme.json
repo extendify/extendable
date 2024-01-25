@@ -627,6 +627,23 @@
 					]
 				},
 				{
+					"fontFamily": "\"Oswald\", sans-serif",
+					"name": "Oswald",
+					"slug": "oswald",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Oswald",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "300 700",
+							"src": [
+								"file:./assets/fonts/Oswald/Oswald-VariableFont_wght.woff2"
+							]
+						}
+					]
+				},
+				{
 					"fontFamily": "\"Radio Canada\", sans-serif",
 					"name": "Radio Canada",
 					"slug": "radio-canada",

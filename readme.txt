@@ -13,6 +13,9 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.7 - 2024-02-28 =
+- Updated: Enhance Font Support with Latin-Extended Glyphs for Nordic Languages
+
 = 2.0.6 - 2024-01-29 =
 - Updated: Oswald font added for enhanced design and wider Latin script support in Tokyo style headings.
 

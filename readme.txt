@@ -3,7 +3,7 @@ Contributors: extendify, richtabor, colorful-tones
 Requires at least: 6.0
 Tested up to: 6.0
 Requires PHP: 5.6
-Stable tag: 2.0.2
+Stable tag: 2.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,21 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Extendable is a distinct, dynamic block theme designed as a canvas for your next online venture. Sporting multiple style variations, Extendable is the most expressive block theme yet. Go fresh, bold, bohemian or minimal — with a single click.
 
 == Changelog ==
+
+= 2.0.7 - 2024-02-28 =
+- Updated: Enhance Font Support with Latin-Extended Glyphs for Nordic Languages
+
+= 2.0.6 - 2024-01-29 =
+- Updated: Oswald font added for enhanced design and wider Latin script support in Tokyo style headings.
+
+= 2.0.5 - 2023-11-28 =
+- Fixed: internationalize hardcoded strings in templates
+
+= 2.0.4 - 2023-11-10 =
+- Fixed: Hamburger menu responsive bug
+
+= 2.0.3 - 2023-10-31 =
+- Change: Update placeholder text with site title in some footers 
 
 = 2.0.2 - 2023-09-21 =
 - Fixed: Overlay menu color

@@ -182,10 +182,13 @@
  * --------------------------------------------------------
  */
 
- #add_payment_method .wc-proceed-to-checkout a.checkout-button, 
- .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, 
- .woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
-	font-size: var(	--wp--custom--elements--button--typography--font-size, 1.15rem );
+#add_payment_method .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
+	font-size: var(
+		--wp--custom--elements--button--typography--font-size,
+		1.15rem
+	);
 }
 
 .woocommerce-page .woocommerce-cart-form #coupon_code {
@@ -416,7 +419,8 @@
 	color: var(--wc--preset--color--alt);
 }
 
-.woocommerce div.product p.price del, .woocommerce div.product span.price del {
+.woocommerce div.product p.price del,
+.woocommerce div.product span.price del {
 	opacity: 0.75;
 }
 
@@ -458,20 +462,16 @@
 .woocommerce .quantity .qty {
 	color: currentColor;
 	font-size: var(--wc--button--typograhpy--font-size);
-	width: 100%;
-	max-width: 120px;
+	width: 100% !important;
+	max-width: 120px !important;
 	text-align: center;
 	background-color: transparent;
 	border-color: currentColor;
 	border-style: solid;
 	border-radius: var(--wp--custom--elements--input--border--radius);
 	border-width: var(--wp--custom--elements--input--border--width);
-	padding: var( --wp--custom--elements--input--spacing--padding--top, calc(0.667em + 2px) ) calc( var( --wp--custom--elements--input--spacing--padding--right, calc(1.333em + 2px) ) / 2 );
-
-	padding: var(--wp--custom--elements--input--spacing--padding--top)
-		var(--wp--custom--elements--input--spacing--padding--right)
-		var(--wp--custom--elements--input--spacing--padding--bottom)
-		var(--wp--custom--elements--input--spacing--padding--left);
+	padding-top: var(--wp--custom--elements--input--spacing--padding--top);
+	padding-bottom: var(--wp--custom--elements--input--spacing--padding--bottom);
 }
 
 /*
@@ -480,7 +480,7 @@
  * --------------------------------------------------------
  */
 
- .woocommerce-page .woocommerce-cart-form #coupon_code,
+.woocommerce-page .woocommerce-cart-form #coupon_code,
 .woocommerce-page .input-text {
 	border-color: var(--wp--custom--elements--input--border--color);
 	border-radius: var(--wp--custom--elements--input--border--radius);
@@ -488,7 +488,9 @@
 	box-sizing: border-box;
 	display: block;
 	font-size: var(--wp--custom--elements--input--typography--font-size);
-	line-height: var(--wp--custom--elements--input--typography--line-height) !important;
+	line-height: var(
+		--wp--custom--elements--input--typography--line-height
+	) !important;
 	padding: var(--wp--custom--elements--input--spacing--padding--top)
 		var(--wp--custom--elements--input--spacing--padding--right)
 		var(--wp--custom--elements--input--spacing--padding--bottom)
@@ -496,17 +498,17 @@
 	width: 100%;
 }
 
-.woocommerce-page .input-text::placeholder { 
+.woocommerce-page .input-text::placeholder {
 	color: var(--wp--preset--color--foreground);
-	opacity: 0.75; 
-  }
+	opacity: 0.75;
+}
 .select2-dropdown {
 	background-color: var(--wp--preset--color--tertiary);
-	color:  var(--wp--preset--color--foreground);
+	color: var(--wp--preset--color--foreground);
 	font-size: var(--wp--preset--font-size--small);
 }
-.select2-container--default .select2-results__option[aria-selected=true], 
-.select2-container--default .select2-results__option[data-selected=true] {
+.select2-container--default .select2-results__option[aria-selected="true"],
+.select2-container--default .select2-results__option[data-selected="true"] {
 	background-color: var(--wp--preset--color--background);
 }
 .woocommerce form .form-row .select2-container .select2-selection--single {
@@ -519,11 +521,13 @@
 	cursor: pointer;
 	display: block;
 	font-size: var(--wp--custom--elements--input--typography--font-size);
-	line-height: var(--wp--custom--elements--input--typography--line-height) !important;
+	line-height: var(
+		--wp--custom--elements--input--typography--line-height
+	) !important;
 	height: auto;
 	margin: 0;
 	outline: 0;
-	padding: var(--wp--custom--elements--input--spacing--padding--top) 
+	padding: var(--wp--custom--elements--input--spacing--padding--top)
 		var(--wp--custom--elements--input--spacing--padding--right)
 		var(--wp--custom--elements--input--spacing--padding--bottom)
 		var(--wp--custom--elements--input--spacing--padding--left);
@@ -533,10 +537,12 @@
 	.select2-results__option--highlighted[aria-selected],
 .select2-container--default
 	.select2-results__option--highlighted[data-selected] {
-		background-color: var(--wp--preset--color--primary);
+	background-color: var(--wp--preset--color--primary);
 }
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-	color:  var(--wp--preset--color--foreground);
+.select2-container--default
+	.select2-selection--single
+	.select2-selection__rendered {
+	color: var(--wp--preset--color--foreground);
 }
 
 /*
@@ -589,7 +595,7 @@
 
 .woocommerce-page ul.woocommerce-order-overview {
 	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--30)
-	calc(var(--wp--preset--spacing--30) / 2);
+		calc(var(--wp--preset--spacing--30) / 2);
 	background-color: var(--wp--preset--color--foreground);
 	color: var(--wp--preset--color--background);
 }
@@ -616,7 +622,7 @@
 .woocommerce-account .woocommerce-MyAccount-navigation li:first-child {
 	padding: 0;
 }
-.woocommerce-account .woocommerce-MyAccount-navigation li a{
+.woocommerce-account .woocommerce-MyAccount-navigation li a {
 	background-color: var(--wp--preset--color--tertiary);
 	padding: calc(var(--wp--preset--spacing--30) / 2)
 		calc(var(--wp--preset--spacing--30) / 1.5);

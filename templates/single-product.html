@@ -1,0 +1,49 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:woocommerce/breadcrumbs /-->
+
+    <!-- wp:woocommerce/store-notices /-->
+
+    <!-- wp:columns {"align":"wide"} -->
+    <div class="wp-block-columns alignwide"><!-- wp:column {"width":"512px"} -->
+        <div class="wp-block-column" style="flex-basis:512px"><!-- wp:woocommerce/product-image-gallery /--></div>
+        <!-- /wp:column -->
+
+        <!-- wp:column -->
+        <div class="wp-block-column">
+            <!-- wp:post-title {"level":1,"__woocommerceNamespace":"woocommerce/product-query/product-title"} /-->
+
+            <!-- wp:woocommerce/product-rating {"isDescendentOfSingleProductTemplate":true,"fontSize":"small","style":{"spacing":{"margin":{"top":"1rem","bottom":"0"}}}} /-->
+
+            <!-- wp:woocommerce/product-price {"isDescendentOfSingleProductTemplate":true,"fontSize":"medium","style":{"typography":{"fontStyle":"normal","fontWeight":"700"},"spacing":{"margin":{"top":"1rem"}}}} /-->
+
+            <!-- wp:post-excerpt {"__woocommerceNamespace":"woocommerce/product-query/product-summary"} /-->
+
+            <!-- wp:woocommerce/add-to-cart-form /-->
+
+            <!-- wp:woocommerce/product-meta -->
+            <div class="wp-block-woocommerce-product-meta">
+                <!-- wp:group {"style":{"spacing":{"blockGap":"0.24rem"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+                <div class="wp-block-group">
+                    <!-- wp:woocommerce/product-sku {"isDescendentOfSingleProductTemplate":true} /-->
+
+                    <!-- wp:post-terms {"term":"product_cat","prefix":"Category: "} /-->
+
+                    <!-- wp:post-terms {"term":"product_tag","prefix":"Tags: "} /-->
+                </div>
+                <!-- /wp:group -->
+            </div>
+            <!-- /wp:woocommerce/product-meta -->
+        </div>
+        <!-- /wp:column -->
+    </div>
+    <!-- /wp:columns -->
+
+    <!-- wp:woocommerce/product-details {"align":"wide","className":"is-style-minimal","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|40"}}}} /-->
+    <!-- wp:pattern {"slug":"extendable/hidden-woo-related-products"} /-->
+
+</div>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"extendable"} /-->

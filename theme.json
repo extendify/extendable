@@ -974,6 +974,13 @@
 						"top": "0px"
 					}
 				}
+			},
+			"woocommerce/product-button": {
+				"spacing": {
+					"margin": {
+						"right": "20px"
+					}
+				}
 			}
 		},
 		"color": {

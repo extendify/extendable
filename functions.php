@@ -35,18 +35,6 @@ if ( ! function_exists( 'extendable_support' ) ) :
 		// Enqueue editor styles.
 		add_editor_style( $editor_style );
 
-		// Register WooCommerce theme features.
-		add_theme_support( 'wc-product-gallery-zoom' );
-		add_theme_support( 'wc-product-gallery-lightbox' );
-		add_theme_support( 'wc-product-gallery-slider' );
-		add_theme_support(
-			'woocommerce',
-			array(
-				'thumbnail_image_width' => 400,
-				'single_image_width'    => 600,
-			)
-		);
-
 	}
 
 endif;
@@ -161,20 +149,6 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 			'media'   => 'all',
 			'has_rtl' => true,
 		);
-
-		// Get the WooCommerce version
-		$woocommerce_version = get_option( 'woocommerce_version' );
-		// Check if the version is less than 7.0.1
-		if ( version_compare( $woocommerce_version, '7.0.1', '<' ) ) {
-			// Add the deprecate-woocommerce.css file
-		  	$styles['deprecate-extendable-woocommerce'] = array(
-				'src'     => get_template_directory_uri() . '/assets/css/deprecate-woocommerce.css',
-				  'deps'    => '',
-				  'version' => $version_string,
-				  'media'   => 'all',
-				  'has_rtl' => true,
-			  );
-		}
 
 		return apply_filters( 'woocommerce_extendable_styles', $styles );
 	}

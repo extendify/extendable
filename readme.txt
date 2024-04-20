@@ -13,6 +13,10 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.8 - 2024-04-20 =
+- Updated: Updated WooCommerce support for WooCommerce blocks.
+- Fixed: Removed custom CSS for WooCommerce classic templates to fix style conflicts.
+
 = 2.0.7 - 2024-02-28 =
 - Updated: Enhance Font Support with Latin-Extended Glyphs for Nordic Languages
 

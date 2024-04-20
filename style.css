@@ -193,28 +193,13 @@ input {
 
 .wp-block-post-comments input:not([type="submit"]),
 .wp-block-post-comments input:not([type="submit"]):not([type="checkbox"]),
-.wp-block-post-comments textarea,
-[multiple],
-[type="date"],
-[type="datetime-local"],
-[type="email"],
-[type="month"],
-[type="number"],
-[type="password"],
-[type="search"],
-[type="tel"],
-[type="text"],
-[type="time"],
-[type="url"],
-[type="week"],
-select,
-textarea {
+.wp-block-post-comments textarea
+ {
 	background-color: var(--wp--custom--elements--input--color--background);
 	color: var(--wp--custom--elements--input--color--text);
     border-color: var(--wp--custom--elements--input--border--color);
     border-radius: var(--wp--custom--elements--input--border--radius);
     border-width: var(--wp--custom--elements--input--border--width);
-    box-sizing: border-box;
     display: block;
     font-size: var(--wp--custom--elements--input--typography--font-size);
     line-height: var(--wp--custom--elements--input--typography--line-height);
@@ -222,27 +207,6 @@ textarea {
     width: 100%;
 }
 
-input[type="date"]::placeholder,
-input[type="datetime-local"]::placeholder,
-input[type="email"]::placeholder,
-input[type="month"]::placeholder,
-input[type="number"]::placeholder,
-input[type="password"]::placeholder,
-input[type="search"]::placeholder,
-input[type="tel"]::placeholder,
-input[type="text"]::placeholder,
-input[type="time"]::placeholder,
-input[type="url"]::placeholder,
-input[type="week"]::placeholder,
-select::placeholder,
-textarea::placeholder {
-	color: var(--wp--custom--elements--input--color--text);
-	opacity: 0.65; 
-}
-
-label, .woocommerce-page label {
-	margin-bottom: 0.5rem;
-}
 /*
  * Matching input with outline button style.
  */
@@ -255,4 +219,27 @@ label, .woocommerce-page label {
 	border-radius: 0.5rem;
 	background-color: var(--wp--preset--color--background);
 	color: var(--wp--preset--color--foreground);
+}
+
+
+/*
+ * Woocommerce temporarily customization until the woo blocks offer support
+ */
+
+.woocommerce-Tabs-panel--description h2, .woocommerce-Reviews-title {
+	font-size: var(--wp--preset--font-size--medium);
+}
+
+.wp-block-button.wc-block-components-product-button {
+	flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+	gap: 1rem;
+}
+.wp-block-button.wc-block-components-product-button a.added_to_cart {
+	margin-top: 0;
+}
+
+.woocommerce-checkout.woocommerce-page header.wp-block-template-part nav.wp-block-navigation {
+	visibility: hidden;
 }

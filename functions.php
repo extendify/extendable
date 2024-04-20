@@ -35,18 +35,6 @@ if ( ! function_exists( 'extendable_support' ) ) :
 		// Enqueue editor styles.
 		add_editor_style( $editor_style );
 
-		// Register WooCommerce theme features.
-		add_theme_support( 'wc-product-gallery-zoom' );
-		add_theme_support( 'wc-product-gallery-lightbox' );
-		add_theme_support( 'wc-product-gallery-slider' );
-		add_theme_support(
-			'woocommerce',
-			array(
-				'thumbnail_image_width' => 400,
-				'single_image_width'    => 600,
-			)
-		);
-
 	}
 
 endif;
@@ -135,48 +123,3 @@ function extendable_register_pattern_categories() {
 }
 add_action( 'init', 'extendable_register_pattern_categories', 9 );
 
-if ( ! function_exists( 'is_woocommerce_activated' ) ) {
-	// This theme does not have a traditional sidebar.
-	remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
-
-	/**
-	 * Alter the queue for WooCommerce styles and scripts.
-	 *
-	 * @since Extendable 1.0.5
-	 *
-	 * @param array $styles Array of registered styles.
-	 *
-	 * @return array
-	 */
-	function extendable_woocommerce_enqueue_styles( $styles ) {
-		// Get a theme version for cache busting.
-		$theme_version = wp_get_theme()->get( 'Version' );
-		$version_string = is_string( $theme_version ) ? $theme_version : false;
-
-		// Add Extendable's WooCommerce styles.
-		$styles['extendable-woocommerce'] = array(
-			'src'     => get_template_directory_uri() . '/assets/css/woocommerce.css',
-			'deps'    => '',
-			'version' => $version_string,
-			'media'   => 'all',
-			'has_rtl' => true,
-		);
-
-		// Get the WooCommerce version
-		$woocommerce_version = get_option( 'woocommerce_version' );
-		// Check if the version is less than 7.0.1
-		if ( version_compare( $woocommerce_version, '7.0.1', '<' ) ) {
-			// Add the deprecate-woocommerce.css file
-		  	$styles['deprecate-extendable-woocommerce'] = array(
-				'src'     => get_template_directory_uri() . '/assets/css/deprecate-woocommerce.css',
-				  'deps'    => '',
-				  'version' => $version_string,
-				  'media'   => 'all',
-				  'has_rtl' => true,
-			  );
-		}
-
-		return apply_filters( 'woocommerce_extendable_styles', $styles );
-	}
-	add_filter( 'woocommerce_enqueue_styles', 'extendable_woocommerce_enqueue_styles' );
-}

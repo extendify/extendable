@@ -122,4 +122,3 @@ function extendable_register_pattern_categories() {
 
 }
 add_action( 'init', 'extendable_register_pattern_categories', 9 );
-

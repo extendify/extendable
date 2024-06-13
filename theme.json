@@ -244,32 +244,32 @@
 			},
 			"spacingSizes": [
 				{
-					"size": "clamp(1.5rem, 5vw, 2rem)",
+					"size": "min(2rem, 5vw)",
 					"slug": "30",
 					"name": "1"
 				},
 				{
-					"size": "clamp(1.8rem, 1.8rem + ((1vw - 0.48rem) * 2.885), 3rem)",
+					"size": "min(3rem, 4vw)",
 					"slug": "40",
 					"name": "2"
 				},
 				{
-					"size": "clamp(2.5rem, 8vw, 4rem)",
+					"size": "min(4rem, 6vw)",
 					"slug": "50",
 					"name": "3"
 				},
 				{
-					"size": "clamp(2.5rem, 8vw, 6rem)",
+					"size": "min(6rem, 8vw)",
 					"slug": "60",
 					"name": "4"
 				},
 				{
-					"size": "clamp(3.75rem, 10vw, 7rem)",
+					"size": "min(7rem, 10vw)",
 					"slug": "70",
 					"name": "5"
 				},
 				{
-					"size": "clamp(5rem, 5.25rem + ((1vw - 0.48rem) * 9.096), 8rem)",
+					"size": "min(8rem, 12vw)",
 					"slug": "80",
 					"name": "6"
 				}
@@ -277,7 +277,7 @@
 			"units": ["%", "px", "em", "rem", "vh", "vw"]
 		},
 		"typography": {
-			"dropCap": false,
+			"fluid": true,
 			"fontFamilies": [
 				{
 					"fontFace": [
@@ -732,16 +732,13 @@
 			],
 			"fontSizes": [
 				{
-					"fluid": {
-						"min": "1rem",
-						"max": "1rem"
-					},
+					"fluid": false,
 					"size": "1rem",
 					"slug": "small"
 				},
 				{
 					"fluid": {
-						"min": "1.125",
+						"min": "1.05rem",
 						"max": "1.25rem"
 					},
 					"size": "1.25rem",
@@ -749,7 +746,7 @@
 				},
 				{
 					"fluid": {
-						"min": "1.875rem",
+						"min": "1.39rem",
 						"max": "2.25rem"
 					},
 					"size": "2.25rem",
@@ -757,7 +754,7 @@
 				},
 				{
 					"fluid": {
-						"min": "2.25rem",
+						"min": "1.85rem",
 						"max": "3rem"
 					},
 					"size": "3rem",
@@ -765,13 +762,14 @@
 				},
 				{
 					"fluid": {
-						"min": "3rem",
+						"min": "2.5rem",
 						"max": "3.75rem"
 					},
 					"size": "3.75rem",
 					"slug": "xx-large"
 				}
-			]
+			],
+			"writingMode": true
 		},
 		"useRootPaddingAwareAlignments": true
 	},
@@ -1080,7 +1078,7 @@
 			}
 		},
 		"spacing": {
-			"blockGap": "2rem",
+			"blockGap": "min(2rem, 5vw)",
 			"padding": {
 				"top": "0",
 				"right": "var(--wp--preset--spacing--30)",

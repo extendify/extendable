@@ -244,32 +244,37 @@
 			},
 			"spacingSizes": [
 				{
-					"size": "clamp(1.5rem, 5vw, 2rem)",
+					"size": "1rem",
+					"slug": "20",
+					"name": "0.9"
+				},
+				{
+					"size": "min(2rem, 5vw)",
 					"slug": "30",
 					"name": "1"
 				},
 				{
-					"size": "clamp(1.8rem, 1.8rem + ((1vw - 0.48rem) * 2.885), 3rem)",
+					"size": "min(3rem, 6vw)",
 					"slug": "40",
 					"name": "2"
 				},
 				{
-					"size": "clamp(2.5rem, 8vw, 4rem)",
+					"size": "min(4rem, 7vw)",
 					"slug": "50",
 					"name": "3"
 				},
 				{
-					"size": "clamp(2.5rem, 8vw, 6rem)",
+					"size": "min(6rem, 8vw)",
 					"slug": "60",
 					"name": "4"
 				},
 				{
-					"size": "clamp(3.75rem, 10vw, 7rem)",
+					"size": "min(7rem, 10vw)",
 					"slug": "70",
 					"name": "5"
 				},
 				{
-					"size": "clamp(5rem, 5.25rem + ((1vw - 0.48rem) * 9.096), 8rem)",
+					"size": "min(8rem, 12vw)",
 					"slug": "80",
 					"name": "6"
 				}
@@ -277,7 +282,7 @@
 			"units": ["%", "px", "em", "rem", "vh", "vw"]
 		},
 		"typography": {
-			"dropCap": false,
+			"fluid": true,
 			"fontFamilies": [
 				{
 					"fontFace": [
@@ -732,24 +737,18 @@
 			],
 			"fontSizes": [
 				{
-					"fluid": {
-						"min": "1rem",
-						"max": "1rem"
-					},
+					"fluid": false,
 					"size": "1rem",
 					"slug": "small"
 				},
 				{
-					"fluid": {
-						"min": "1.125",
-						"max": "1.25rem"
-					},
+					"fluid": false,
 					"size": "1.25rem",
 					"slug": "medium"
 				},
 				{
 					"fluid": {
-						"min": "1.875rem",
+						"min": "1.39rem",
 						"max": "2.25rem"
 					},
 					"size": "2.25rem",
@@ -757,7 +756,7 @@
 				},
 				{
 					"fluid": {
-						"min": "2.25rem",
+						"min": "1.85rem",
 						"max": "3rem"
 					},
 					"size": "3rem",
@@ -765,13 +764,14 @@
 				},
 				{
 					"fluid": {
-						"min": "3rem",
+						"min": "2.25rem",
 						"max": "3.75rem"
 					},
 					"size": "3.75rem",
 					"slug": "xx-large"
 				}
-			]
+			],
+			"writingMode": true
 		},
 		"useRootPaddingAwareAlignments": true
 	},
@@ -1080,7 +1080,7 @@
 			}
 		},
 		"spacing": {
-			"blockGap": "2rem",
+			"blockGap": "var(--wp--preset--spacing--30)",
 			"padding": {
 				"top": "0",
 				"right": "var(--wp--preset--spacing--30)",
@@ -1093,7 +1093,8 @@
 			"fontSize": "1.125rem",
 			"fontWeight": "400",
 			"lineHeight": "var(--wp--custom--typography--line-height--normal)"
-		}
+		},
+		"css": ".wp-block-heading { word-wrap: break-word; overflow-wrap: break-word; hyphens: auto;} .wp-block-heading:lang(zh), .wp-block-heading:lang(ja), .wp-block-heading:lang(ko), .wp-block-heading:lang(th), .wp-block-heading:lang(lo), .wp-block-heading:lang(my), .wp-block-heading:lang(km), .wp-block-heading:lang(ar), .wp-block-heading:lang(ur) { word-break: keep-all; }"
 	},
 	"templateParts": [
 		{

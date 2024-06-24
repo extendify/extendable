@@ -13,6 +13,11 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.10 - 2024-06-24 =
+- Updated: Made fonts responsive for small screens
+- Change: Improved responsive spacing
+- Change: Applied word break for wp-block-heading elements for certain languages
+
 = 2.0.9 - 2024-05-23 =
 - Fixed: Fix the font not available issue for Lagoon and Graphite style variations
 

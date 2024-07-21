@@ -24,7 +24,7 @@ if ( ! function_exists( 'extendable_support' ) ) :
 
 		global $wp_version;
 		// Add style for WordPress older versions.
-		if(version_compare( $wp_version, '6.0.2', '<=' )) {
+		if ( version_compare( $wp_version, '6.0.2', '<=' ) ) {
 			$editor_style = array(
 				'style.css',
 				'/assets/css/deprecate-style.css',
@@ -67,7 +67,7 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 		wp_enqueue_style( 'extendable-style' );
 
 		global $wp_version;
-		if(version_compare( $wp_version, '6.0.2', '<=' )) {
+		if ( version_compare( $wp_version, '6.0.2', '<=' ) ) {
 			// Register deprecate stylesheet.
 			wp_register_style(
 				'extendable-deprecate-style',

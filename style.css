@@ -58,6 +58,11 @@ a:focus {
 	text-decoration-style: var(--wp--custom--elements--link--interactive--text-decoration-style, dashed);
 }
 
+:where(.wp-site-blocks *:focus) {
+	outline-width:1px;
+	outline-style:solid
+}
+
 a:active {
 	text-decoration: none;
 }
@@ -185,40 +190,19 @@ blockquote:is(.is-style-plain) {
 /*
  * Matching caret and focus outline colors.
  */
-input {
+input, textarea {
 	caret-color: inherit;
-	outline-color: var(--wp--preset--color--tertiary);
-	outline-offset: 0.2ch;
-}
-
-.wp-block-post-comments input:not([type="submit"]),
-.wp-block-post-comments input:not([type="submit"]):not([type="checkbox"]),
-.wp-block-post-comments textarea
- {
-	background-color: var(--wp--custom--elements--input--color--background);
-	color: var(--wp--custom--elements--input--color--text);
-    border-color: var(--wp--custom--elements--input--border--color);
-    border-radius: var(--wp--custom--elements--input--border--radius);
-    border-width: var(--wp--custom--elements--input--border--width);
-    display: block;
-    font-size: var(--wp--custom--elements--input--typography--font-size);
-    line-height: var(--wp--custom--elements--input--typography--line-height);
-    padding: var(--wp--custom--elements--input--spacing--padding--top) var(--wp--custom--elements--input--spacing--padding--right) var(--wp--custom--elements--input--spacing--padding--bottom) var(--wp--custom--elements--input--spacing--padding--left);
-    width: 100%;
+	outline-color: inherit;
 }
 
 /*
  * Matching input with outline button style.
  */
-.wp-block-post-comments-form input:not([type=submit]),
-.wp-block-post-comments-form textarea {
-    border: 2px solid currentColor;
-    padding: 0.667em 1.333em !important;
-	font-size: 1.15rem;
-    line-height: 1.384;
-	border-radius: 0.5rem;
+:where(.wp-block-post-comments-form) input:not([type=submit]), 
+:where(.wp-block-post-comments-form) textarea {
 	background-color: var(--wp--preset--color--background);
 	color: var(--wp--preset--color--foreground);
+	border-color: inherit;
 }
 
 

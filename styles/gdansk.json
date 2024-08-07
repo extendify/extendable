@@ -58,15 +58,6 @@
 					"name": "Background Alt"
 				}
 			]
-		},
-		"custom": {
-			"elements": {
-				"button": {
-					"color": {
-						"text": "var(--wp--preset--color--background)"
-					}
-				}
-			}
 		}
 	},
 	"styles": {

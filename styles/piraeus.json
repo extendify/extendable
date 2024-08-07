@@ -74,6 +74,16 @@
 				"button": {
 					"border": {
 						"radius": "0"
+					},
+					"color": {
+						"background": "var(--wp--preset--color--primary)",
+						"text": "var(--wp--preset--color--foreground)"
+					},
+					":focus": {
+						"color": {
+							"background": "var(--wp--preset--color--primary)",
+							"text": "var(--wp--preset--color--foreground)"
+						}
 					}
 				}
 			},
@@ -112,26 +122,6 @@
 			}
 		},
 		"elements": {
-			"button": {
-				"border": {
-					"radius": "0"
-				},
-				"color": {
-					"background": "var(--wp--preset--color--primary)",
-					"text": "var(--wp--preset--color--foreground)"
-				},
-				":active": {
-					"color": {
-						"background": "var(--wp--preset--color--secondary)",
-						"text": "var(--wp--preset--color--foreground)"
-					}
-				},
-				":visited": {
-					"color": {
-						"text": "var(--wp--preset--color--foreground)"
-					}
-				}
-			},
 			"h1": {
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--light)",

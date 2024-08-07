@@ -85,6 +85,36 @@ endif;
 add_action( 'wp_enqueue_scripts', 'extendable_styles' );
 
 /**
+ * Enqueue block-specific styles.
+ *
+ * @since Extendable 2.0.11
+ *
+ * @return void
+ */
+function extendable_enqueue_block_styles() {
+	// Check for specific blocks and enqueue their styles
+	if ( has_block( 'contact-form-7/contact-form-selector' ) ) {
+		wp_enqueue_style(
+			'extendable-contact-form-7-style',
+			get_template_directory_uri() . '/assets/css/contact-form-7.css',
+			array(),
+			'1.0.0'
+		);
+	}
+
+	if ( has_block( 'wpforms/form-selector' ) ) {
+		wp_enqueue_style(
+			'extendable-wpforms-style',
+			get_template_directory_uri() . '/assets/css/wpforms.css',
+			array(),
+			'1.0.0'
+		);
+	}
+}
+
+add_action( 'enqueue_block_assets', 'extendable_enqueue_block_styles' );
+
+/**
  * Registers pattern categories.
  *
  * @since Extendable 1.0

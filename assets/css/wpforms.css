@@ -1,0 +1,57 @@
+.wpforms-block.wpforms-container .wpforms-field-label {
+	font-weight: inherit;
+	margin-bottom: 0.25em;
+}
+.wpforms-block input:where(:not([type="submit"]):not([type="checkbox"])) {
+	border: 1px solid;
+	line-height: inherit;
+	font-size: inherit;
+}
+.wpforms-block input:where(:not([type="submit"]):not([type="checkbox"])),
+.wpforms-block textarea {
+	padding: calc(0.667em + 1px);
+	width: 100%;
+	background-color: var(--wp--preset--color--background);
+	color: var(--wp--preset--color--foreground);
+	border-color: inherit;
+}
+.wpforms-field-sublabel {
+	opacity: 0.8;
+}
+
+.wpforms-block button.wpforms-submit {
+	background-color: var(--wp--custom--elements--button--color--background);
+	color: var(--wp--custom--elements--button--color--text);
+	border-radius: var(--wp--custom--elements--button--border--radius);
+	border-width: 0;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: var(--wp--custom--typography--font-weight--medium);
+	line-height: inherit;
+	padding-top: calc(0.667em + 2px);
+	padding-right: calc(1.333em + 2px);
+	padding-bottom: calc(0.667em + 2px);
+	padding-left: calc(1.333em + 2px);
+	text-decoration: none;
+	cursor: pointer;
+	margin-top: 1rem;
+}
+
+.wpforms-block button.wpforms-submit:hover {
+	background-color: var(
+		--wp--custom--elements--button--hover--color--background
+	);
+	color: var(--wp--custom--elements--button--hover--color--text);
+}
+
+.wpforms-block button.wpforms-submit:focus {
+	background-color: var(
+		--wp--custom--elements--button--focus--color--background
+	);
+	color: var(--wp--custom--elements--button--focus--color--text);
+	outline-color: var(--wp--custom--elements--button--focus--color--background);
+	offset: 2px;
+	outline-width: 2px;
+	outline-offset: 2px;
+	outline-style: solid;
+}

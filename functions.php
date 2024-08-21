@@ -34,7 +34,6 @@ if ( ! function_exists( 'extendable_support' ) ) :
 		}
 		// Enqueue editor styles.
 		add_editor_style( $editor_style );
-
 	}
 
 endif;
@@ -77,7 +76,7 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 			);
 			// Enqueue deprecate stylesheet.
 			wp_enqueue_style( 'extendable-deprecate-style' );
-		};
+		}
 	}
 
 endif;
@@ -149,6 +148,5 @@ function extendable_register_pattern_categories() {
 			register_block_pattern_category( $name, $properties );
 		}
 	}
-
 }
 add_action( 'init', 'extendable_register_pattern_categories', 9 );

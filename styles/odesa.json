@@ -44,7 +44,7 @@
 				},
 				{
 					"slug": "primary",
-					"color": "#0b0449",
+					"color": "#070f79",
 					"name": "Primary"
 				},
 				{
@@ -68,14 +68,7 @@
 			"elements": {
 				"button": {
 					"border": {
-						"radius": "2px",
-						"width": "1px"
-					}
-				},
-				"input": {
-					"border": {
-						"radius": "2px",
-						"width": "1px"
+						"radius": "2px"
 					}
 				}
 			}
@@ -132,14 +125,6 @@
 			"text": "var(--wp--preset--color--foreground-alt)"
 		},
 		"elements": {
-			"button": {
-				"border": {
-					"radius": "2px"
-				},
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--small)"
-				}
-			},
 			"h1": {
 				"typography": {
 					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",

@@ -31,6 +31,14 @@ Extendable therefore is also distributed under the terms of the GNU GPL.
 }
 
 /*
+ * Smooth scrolling
+ */
+
+ html {
+	scroll-behavior: smooth;
+  }
+
+/*
  * Font smoothing.
  * This is a niche setting that will not be available via Global Styles.
  * https://github.com/WordPress/gutenberg/issues/35934

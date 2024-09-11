@@ -13,6 +13,10 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.12 - 2024-09-11 =
+- Add no-title-sticky-header.html template
+- Add Smooth scrolling
+
 = 2.0.11 - 2024-08-22 =
 - New: Added style compatibility support for Contact Form 7 and WPForms.
 - Change: Updated theme requirements and compatibility information.

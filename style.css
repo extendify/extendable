@@ -235,3 +235,11 @@ input, textarea {
 .woocommerce-checkout.woocommerce-page header.wp-block-template-part nav.wp-block-navigation {
 	visibility: hidden;
 }
+
+/*
+ * Adds offset for sticky header overlap
+ */
+
+ .sticky-header-offset-container .entry-content > .wp-block-group {
+	scroll-margin-top: var(--wp--preset--spacing--60);
+}

@@ -50,7 +50,6 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 	 * @return void
 	 */
 	function extendable_styles() {
-
 		// Register theme stylesheet.
 		$theme_version = wp_get_theme()->get( 'Version' );
 
@@ -149,4 +148,42 @@ function extendable_register_pattern_categories() {
 		}
 	}
 }
+
 add_action( 'init', 'extendable_register_pattern_categories', 9 );
+
+function extendable_replace_ai_variation( $response, $_server, $request ) {
+	$extendable_variations_route = '/wp/v2/global-styles/themes/extendable/variations';
+
+	// Here we make sure the code only runs when we are asking specifically
+	// for Extendable's variations.
+	if ( $request->get_route() !== $extendable_variations_route ) {
+		return $response;
+	}
+
+	// We get the AI variation saved in the database.
+	$extendable_ai_variation_option = get_option( 'extendable_ai_variation', null );
+
+	// If no AI variation is stored in the database, we return the variations without the empty AI variation
+	// to avoid showing the empty variation in the site editor.
+	if ( $extendable_ai_variation_option === null ) {
+		$data = $response->get_data();
+		$data = array_values( array_filter( $data, fn ( $variation ) => $variation['title'] !== 'AI Variation' ) );
+		$response->set_data( $data );
+
+		return $response;
+	}
+
+	// We parse the option and transform the original JSON theme.json schema into the form
+	// it is consumed internally by WordPress.
+	$extendable_ai_variation_json = json_decode( $extendable_ai_variation_option, true );
+	$extendable_ai_variation      = ( new WP_Theme_JSON_Data( $extendable_ai_variation_json, 'custom' ) )->get_data();
+
+	// We replace the empty AI variation with the one stored in the database.
+	$data = $response->get_data();
+	$data = array_map( fn ( $variation ) => $variation['title'] === 'AI Variation' ? $extendable_ai_variation : $variation, $data );
+	$response->set_data( $data );
+
+	return $response;
+}
+
+add_filter( 'rest_post_dispatch', 'extendable_replace_ai_variation', 10, 3 );

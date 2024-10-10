@@ -50,7 +50,6 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 	 * @return void
 	 */
 	function extendable_styles() {
-
 		// Register theme stylesheet.
 		$theme_version = wp_get_theme()->get( 'Version' );
 
@@ -149,4 +148,43 @@ function extendable_register_pattern_categories() {
 		}
 	}
 }
+
 add_action( 'init', 'extendable_register_pattern_categories', 9 );
+
+function extendable_replace_custom_variation( $response, $_server, $request ) {
+	$extendable_variations_route = '/wp/v2/global-styles/themes/extendable/variations';
+
+	// Here we make sure the code only runs when we are asking specifically
+	// for Extendable's variations.
+	if ( $request->get_route() !== $extendable_variations_route ) {
+		return $response;
+	}
+
+	// We get the Custom variation saved in the database.
+	$extendable_custom_variation_string = get_option( 'extendable_custom_variation', null );
+
+	// If no Custom variation is stored in the database, we return the response as it is.
+	if ( $extendable_custom_variation_string === null ) {
+		return $response;
+	}
+
+	$extendable_custom_variation_json = json_decode( $extendable_custom_variation_string, true );
+
+	// If the content from the database is not valid JSON, we return the response as it is.
+	if ( ! $extendable_custom_variation_json ) {
+		return $response;
+	}
+
+	// We parse the the content from the custom variation and transform it into the shape
+	// that is expected by WordPress.
+	$extendable_custom_variation = ( new WP_Theme_JSON_Data( $extendable_custom_variation_json, 'theme' ) )->get_data();
+
+	// We append our custom variation at the start of the variations array.
+	$data = $response->get_data();
+	array_unshift( $data, $extendable_custom_variation );
+	$response->set_data( $data );
+
+	return $response;
+}
+
+add_filter( 'rest_post_dispatch', 'extendable_replace_custom_variation', 10, 3 );

@@ -151,7 +151,7 @@ function extendable_register_pattern_categories() {
 
 add_action( 'init', 'extendable_register_pattern_categories', 9 );
 
-function extendable_replace_ai_variation( $response, $_server, $request ) {
+function extendable_replace_custom_variation( $response, $_server, $request ) {
 	$extendable_variations_route = '/wp/v2/global-styles/themes/extendable/variations';
 
 	// Here we make sure the code only runs when we are asking specifically
@@ -160,14 +160,14 @@ function extendable_replace_ai_variation( $response, $_server, $request ) {
 		return $response;
 	}
 
-	// We get the AI variation saved in the database.
-	$extendable_ai_variation_option = get_option( 'extendable_ai_variation', null );
+	// We get the Custom variation saved in the database.
+	$extendable_custom_variation_option = get_option( 'extendable_custom_variation', null );
 
-	// If no AI variation is stored in the database, we return the variations without the empty AI variation
+	// If no Custom variation is stored in the database, we return the variations without the empty Custom variation
 	// to avoid showing the empty variation in the site editor.
-	if ( $extendable_ai_variation_option === null ) {
+	if ( $extendable_custom_variation_option === null ) {
 		$data = $response->get_data();
-		$data = array_values( array_filter( $data, fn ( $variation ) => $variation['title'] !== 'AI Variation' ) );
+		$data = array_values( array_filter( $data, fn ( $variation ) => $variation['title'] !== 'Extendable Custom Variation' ) );
 		$response->set_data( $data );
 
 		return $response;
@@ -175,12 +175,12 @@ function extendable_replace_ai_variation( $response, $_server, $request ) {
 
 	// We parse the option and transform the original JSON theme.json schema into the form
 	// it is consumed internally by WordPress.
-	$extendable_ai_variation_json = json_decode( $extendable_ai_variation_option, true );
-	$extendable_ai_variation      = ( new WP_Theme_JSON_Data( $extendable_ai_variation_json, 'custom' ) )->get_data();
+	$extendable_custom_variation_json = json_decode( $extendable_custom_variation_option, true );
+	$extendable_custom_variation      = ( new WP_Theme_JSON_Data( $extendable_custom_variation_json, 'theme' ) )->get_data();
 
-	// We replace the empty AI variation with the one stored in the database.
+	// We replace the empty Custom variation with the one stored in the database.
 	$data = $response->get_data();
-	$data = array_map( fn ( $variation ) => $variation['title'] === 'AI Variation' ? $extendable_ai_variation : $variation, $data );
+	$data = array_map( fn ( $variation ) => $variation['title'] === 'Extendable Custom Variation' ? $extendable_custom_variation : $variation, $data );
 	$response->set_data( $data );
 
 	return $response;

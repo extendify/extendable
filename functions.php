@@ -161,29 +161,24 @@ function extendable_replace_custom_variation( $response, $_server, $request ) {
 	}
 
 	// We get the Custom variation saved in the database.
-	$extendable_custom_variation_option = get_option( 'extendable_custom_variation', null );
+	$extendable_custom_variation_string = get_option( 'extendable_custom_variation', null );
 
-	// If no Custom variation is stored in the database, we return the variations without the empty Custom variation
-	// to avoid showing the empty variation in the site editor.
-	if ( $extendable_custom_variation_option === null ) {
-		$data = $response->get_data();
-		$data = array_values( array_filter( $data, fn ( $variation ) => $variation['title'] !== 'Extendable Custom Variation' ) );
-		$response->set_data( $data );
-
+	// If no Custom variation is stored in the database, we just return the response as it is.
+	if ( $extendable_custom_variation_string === null ) {
 		return $response;
 	}
 
-	// We parse the option and transform the original JSON theme.json schema into the form
-	// it is consumed internally by WordPress.
-	$extendable_custom_variation_json = json_decode( $extendable_custom_variation_option, true );
+	// We parse the the content from the custom variation and transform it into the shape WP
+	// transforms other variations.
+	$extendable_custom_variation_json = json_decode( $extendable_custom_variation_string, true );
 	$extendable_custom_variation      = ( new WP_Theme_JSON_Data( $extendable_custom_variation_json, 'theme' ) )->get_data();
 
-	// We replace the empty Custom variation with the one stored in the database.
+	// We append our custom variation at the start of the variations array.
 	$data = $response->get_data();
-	$data = array_map( fn ( $variation ) => $variation['title'] === 'Extendable Custom Variation' ? $extendable_custom_variation : $variation, $data );
+	array_unshift( $data, $extendable_custom_variation );
 	$response->set_data( $data );
 
 	return $response;
 }
 
-add_filter( 'rest_post_dispatch', 'extendable_replace_ai_variation', 10, 3 );
+add_filter( 'rest_post_dispatch', 'extendable_replace_custom_variation', 10, 3 );

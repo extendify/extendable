@@ -1,0 +1,200 @@
+:root {
+	--tec-font-family-sans-serif: var(--wp--preset--font-family--ibm-plex-sans);
+
+	/* Text Colors */
+	--tec-color-text-primary: var(--wp--preset--color--foreground);
+	--tec-color-text-primary-light: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 62%
+	);
+	--tec-color-text-secondary: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 20%
+	);
+	--tec-color-text-disabled: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 70%
+	);
+
+	/* Icon Colors */
+	--tec-color-icon-primary: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 30%
+	);
+	--tec-color-icon-primary-alt: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 60%
+	);
+	--tec-color-icon-secondary: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 40%
+	);
+	--tec-color-icon-active: var(--wp--preset--color--foreground);
+	--tec-color-icon-disabled: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 50%
+	);
+	--tec-color-icon-focus: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		var(--wp--preset--color--primary) 20%
+	);
+	--tec-color-icon-error: #da394d;
+
+	/* Event Icon Colors */
+	--tec-color-event-icon: var(--wp--preset--color--foreground);
+	--tec-color-event-icon-hover: var(--wp--preset--color--primary);
+
+	/* Accent Colors */
+	--tec-color-accent-primary: var(--wp--preset--color--primary);
+	--tec-color-accent-primary-hover: color-mix(
+		in srgb,
+		var(--wp--preset--color--primary),
+		transparent 80%
+	);
+	--tec-color-accent-primary-active: color-mix(
+		in srgb,
+		var(--wp--preset--color--primary),
+		transparent 90%
+	);
+	--tec-color-accent-primary-background: color-mix(
+		in srgb,
+		var(--wp--preset--color--primary),
+		transparent 10%
+	);
+	--tec-color-accent-secondary: var(--wp--preset--color--foreground);
+	--tec-color-accent-secondary-hover: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 80%
+	);
+	--tec-color-accent-secondary-active: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 90%
+	);
+	--tec-color-accent-secondary-background: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 10%
+	);
+
+	/* Link Accent */
+	--tec-color-link-accent-hover: color-mix(
+		in srgb,
+		var(--wp--preset--color--primary),
+		transparent 80%
+	);
+
+	/* Border Colors */
+	--tec-color-border-default: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 40%
+	);
+	--tec-color-border-secondary: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 20%
+	);
+	--tec-color-border-tertiary: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 60%
+	);
+	--tec-color-border-hover: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 20%
+	);
+	--tec-color-border-active: var(--wp--preset--color--foreground);
+
+	/* Background Colors */
+	--tec-color-background: var(--wp--preset--color--background);
+	--tec-color-background-events: transparent;
+	--tec-color-background-transparent: hsla(0, 0%, 100%, 0.6);
+	--tec-color-background-secondary: color-mix(
+		in srgb,
+		var(--wp--preset--color--background),
+		var(--wp--preset--color--foreground) 5%
+	);
+	--tec-color-background-messages: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 7%
+	);
+	--tec-color-background-secondary-hover: #f0eeee; /* Preserved original specific color */
+	--tec-color-background-error: color-mix(in srgb, #da394d, transparent 8%);
+
+	/* Box Shadow Colors */
+	--tec-color-box-shadow: rgba(0, 0, 0, 0.14);
+	--tec-color-box-shadow-secondary: rgba(0, 0, 0, 0.1);
+
+	/* Scrollbar Colors */
+	--tec-color-scroll-track: rgba(0, 0, 0, 0.25);
+	--tec-color-scroll-bar: rgba(0, 0, 0, 0.5);
+
+	/* Multiday Event Backgrounds */
+	--tec-color-background-primary-multiday: color-mix(
+		in srgb,
+		var(--wp--preset--color--primary),
+		transparent 24%
+	);
+	--tec-color-background-primary-multiday-hover: color-mix(
+		in srgb,
+		var(--wp--preset--color--primary),
+		transparent 34%
+	);
+	--tec-color-background-secondary-multiday: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 24%
+	);
+	--tec-color-background-secondary-multiday-hover: color-mix(
+		in srgb,
+		var(--wp--preset--color--foreground),
+		transparent 34%
+	);
+
+	/* Week Event Accents */
+	--tec-color-accent-primary-week-event: color-mix(
+		in srgb,
+		var(--wp--preset--color--primary),
+		transparent 10%
+	);
+	--tec-color-accent-primary-week-event-hover: color-mix(
+		in srgb,
+		var(--wp--preset--color--primary),
+		transparent 20%
+	);
+	--tec-color-accent-primary-week-event-featured: color-mix(
+		in srgb,
+		var(--wp--preset--color--primary),
+		transparent 4%
+	);
+	--tec-color-accent-primary-week-event-featured-hover: color-mix(
+		in srgb,
+		var(--wp--preset--color--primary),
+		transparent 14%
+	);
+}
+
+.tribe-block.tec-block__archive-events {
+	margin-top: 0;
+}
+.tribe-common .tribe-common-l-container {
+	max-width: var(--wp--style--global--wide-size);
+}
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+	padding-bottom: var(--wp--preset--spacing--50);
+	padding-top: var(--wp--preset--spacing--50);
+	padding-right: var(--wp--preset--spacing--30);
+	padding-left: var(--wp--preset--spacing--30);
+}

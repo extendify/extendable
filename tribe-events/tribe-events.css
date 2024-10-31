@@ -6,7 +6,7 @@
 	--tec-color-text-primary-light: color-mix(
 		in srgb,
 		var(--wp--preset--color--foreground),
-		transparent 62%
+		transparent 25%
 	);
 	--tec-color-text-secondary: color-mix(
 		in srgb,
@@ -57,7 +57,7 @@
 	--tec-color-accent-primary-hover: color-mix(
 		in srgb,
 		var(--wp--preset--color--primary),
-		transparent 80%
+		transparent 20%
 	);
 	--tec-color-accent-primary-active: color-mix(
 		in srgb,
@@ -73,7 +73,7 @@
 	--tec-color-accent-secondary-hover: color-mix(
 		in srgb,
 		var(--wp--preset--color--foreground),
-		transparent 80%
+		transparent 25%
 	);
 	--tec-color-accent-secondary-active: color-mix(
 		in srgb,
@@ -86,23 +86,44 @@
 		transparent 10%
 	);
 
+
+	/* Buttons */
+
+	--tec-color-button-primary: var(--wp--custom--elements--button--color--background);
+    --tec-color-button-primary-hover: var(--wp--custom--elements--button--hover--color--background);
+    --tec-color-button-primary-active: color-mix(
+		in srgb,
+		var(--wp--custom--elements--button--hover--color--background),
+		transparent 5%
+	);
+    --tec-color-button-primary-background: color-mix(
+		in srgb,
+		var(--wp--custom--elements--button--hover--color--background),
+		transparent 10%
+	);
+    --tec-color-button-secondary: var(--tec-color-accent-secondary);
+    --tec-color-button-secondary-hover: var(--tec-color-accent-secondary-hover);
+    --tec-color-button-secondary-active: var(--tec-color-accent-secondary-active);
+    --tec-color-button-secondary-background: var(--tec-color-accent-secondary-background);
+
 	/* Link Accent */
+	--tec-color-link-accent: var(--wp--preset--color--foreground);
 	--tec-color-link-accent-hover: color-mix(
 		in srgb,
-		var(--wp--preset--color--primary),
-		transparent 80%
+		var(--wp--preset--color--foreground),
+		transparent 20%
 	);
 
 	/* Border Colors */
 	--tec-color-border-default: color-mix(
 		in srgb,
 		var(--wp--preset--color--foreground),
-		transparent 40%
+		transparent 80%
 	);
 	--tec-color-border-secondary: color-mix(
 		in srgb,
 		var(--wp--preset--color--foreground),
-		transparent 20%
+		transparent 70%
 	);
 	--tec-color-border-tertiary: color-mix(
 		in srgb,
@@ -112,54 +133,44 @@
 	--tec-color-border-hover: color-mix(
 		in srgb,
 		var(--wp--preset--color--foreground),
-		transparent 20%
+		transparent 50%
 	);
 	--tec-color-border-active: var(--wp--preset--color--foreground);
 
 	/* Background Colors */
 	--tec-color-background: var(--wp--preset--color--background);
-	--tec-color-background-events: transparent;
-	--tec-color-background-transparent: hsla(0, 0%, 100%, 0.6);
-	--tec-color-background-secondary: color-mix(
-		in srgb,
-		var(--wp--preset--color--background),
-		var(--wp--preset--color--foreground) 5%
-	);
+	--tec-color-background-secondary: var(--wp--preset--color--tertiary);
 	--tec-color-background-messages: color-mix(
 		in srgb,
-		var(--wp--preset--color--foreground),
+		var(--wp--preset--color--tertiary),
 		transparent 7%
 	);
-	--tec-color-background-secondary-hover: #f0eeee; /* Preserved original specific color */
+	--tec-color-background-secondary-hover: 	--tec-color-background-messages: color-mix(
+		in srgb,
+		var(--wp--preset--color--tertiary),
+		transparent 5%
+	);
 	--tec-color-background-error: color-mix(in srgb, #da394d, transparent 8%);
-
-	/* Box Shadow Colors */
-	--tec-color-box-shadow: rgba(0, 0, 0, 0.14);
-	--tec-color-box-shadow-secondary: rgba(0, 0, 0, 0.1);
-
-	/* Scrollbar Colors */
-	--tec-color-scroll-track: rgba(0, 0, 0, 0.25);
-	--tec-color-scroll-bar: rgba(0, 0, 0, 0.5);
 
 	/* Multiday Event Backgrounds */
 	--tec-color-background-primary-multiday: color-mix(
 		in srgb,
-		var(--wp--preset--color--primary),
+		var(--wp--preset--color--tertiary),
 		transparent 24%
 	);
 	--tec-color-background-primary-multiday-hover: color-mix(
 		in srgb,
-		var(--wp--preset--color--primary),
+		var(--wp--preset--color--tertiary),
 		transparent 34%
 	);
 	--tec-color-background-secondary-multiday: color-mix(
 		in srgb,
-		var(--wp--preset--color--foreground),
+		var(--wp--preset--color--tertiary),
 		transparent 24%
 	);
 	--tec-color-background-secondary-multiday-hover: color-mix(
 		in srgb,
-		var(--wp--preset--color--foreground),
+		var(--wp--preset--color--tertiary),
 		transparent 34%
 	);
 
@@ -186,15 +197,48 @@
 	);
 }
 
-.tribe-block.tec-block__archive-events {
+.tribe-block.tec-block__archive-events,.tribe-block.tec-block__single-event {
 	margin-top: 0;
 }
-.tribe-common .tribe-common-l-container {
+.tribe-common .tribe-common-l-container, #tribe-events-pg-template.tribe-events-pg-template {
 	max-width: var(--wp--style--global--wide-size);
 }
-.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container, #tribe-events-pg-template.tribe-events-pg-template {
 	padding-bottom: var(--wp--preset--spacing--50);
-	padding-top: var(--wp--preset--spacing--50);
+	padding-top: var(--wp--preset--spacing--40);
 	padding-right: var(--wp--preset--spacing--30);
 	padding-left: var(--wp--preset--spacing--30);
+}
+.tribe-events-sub-nav {
+	padding: 0;
+	margin: 0;
+}
+.tribe-common .tribe-common-c-btn, .tribe-common a.tribe-common-c-btn, .tribe-common button.tribe-common-c-btn,
+.tribe-common .tribe-common-c-btn:focus, .tribe-common .tribe-common-c-btn:hover, .tribe-common a.tribe-common-c-btn:focus, .tribe-common a.tribe-common-c-btn:hover, .tribe-common button.tribe-common-c-btn:focus, .tribe-common button.tribe-common-c-btn:hover {
+	padding-top: calc(0.667em + 2px);
+	padding-right: calc(1.333em + 2px);
+	padding-bottom: calc(0.667em + 2px);
+	padding-left: calc(1.333em + 2px);
+	border-radius: var(--wp--custom--elements--button--border--radius);
+	font-weight: var(--wp--custom--typography--font-weight--medium);
+}
+
+
+
+.tribe-events-single .tribe-events-back {
+	margin-top: 0;
+	margin-bottom: var(--wp--preset--spacing--20);
+}
+.tribe-events-single .tribe-events-back a {
+	color: var(--tec-color-icon-secondary);
+}
+.tribe-events-single .tribe-events-schedule.tribe-clearfix {
+
+	margin: var(--tec-spacer-2) 0 var(--tec-spacer-7);
+}
+.tribe-tickets__rsvp-actions {
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: var(--wp--preset--spacing--30) !important;
 }

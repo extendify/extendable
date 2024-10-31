@@ -258,6 +258,7 @@
 	border-radius: 20rem;
 	padding: 0.25rem 1rem;
     width: fit-content;
+	font-size: var(--wp--preset--font-size--small);
 }
 
 .tribe-events-back {

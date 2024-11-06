@@ -16,9 +16,7 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 = 2.0.14 - 2024-11-07 =
 - New: Added style compatibility for The Events Calendar plugin.
 - Change: Wrapped the Navigation Block in a Group block to align the WooCommerce icon in a header.
-- UUpdated: Updated the theme screenshot.
-
-== Changelog ==
+- Updated: Updated the theme screenshot.
 
 = 2.0.13 - 2024-09-12 =
 -  Add: scroll margin for sticky header page content

@@ -28,6 +28,7 @@ styles=$(ls styles/*.json)
 parts=$(ls parts/*.html)
 assets=$(ls assets/css/*.css)
 fonts=$(ls assets/fonts/**/*.{woff2,txt})
+tribeEvents=$(ls tribe-events/*.css)
 
 zip -r ./build/extendable.zip \
 	$toplevelFiles \
@@ -38,6 +39,7 @@ zip -r ./build/extendable.zip \
 	$styles \
 	$assets \
 	$fonts \
+	$tribeEvents \
 
 unzip ./build/extendable.zip -d "./build/extendable/"
 

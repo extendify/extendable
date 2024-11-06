@@ -11,6 +11,11 @@
 			"name": "no-title",
 			"title": "No Title",
 			"postTypes": ["page", "post"]
+		},
+		{
+			"name": "no-title-sticky-header",
+			"title": "No Title Sticky Header",
+			"postTypes": ["page", "post"]
 		}
 	],
 	"settings": {

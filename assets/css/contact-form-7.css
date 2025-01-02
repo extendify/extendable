@@ -10,6 +10,7 @@
 	background-color: var(--wp--preset--color--background);
 	color: var(--wp--preset--color--foreground);
 	border-color: inherit;
+	box-sizing: border-box;
 }
 
 .wpcf7-form-control-wrap {
@@ -46,7 +47,9 @@
 		--wp--custom--elements--button--focus--color--background
 	);
 	color: var(--wp--custom--elements--button--focus--color--text);
-	outline-color: var(--wp--custom--elements--button--focus--color--background);
+	outline-color: var(
+		--wp--custom--elements--button--focus--color--background
+	);
 	offset: 2px;
 	outline-width: 1px;
 	outline-offset: 2px;

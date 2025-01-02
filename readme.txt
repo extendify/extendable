@@ -13,6 +13,9 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.16 - 2025-01-02 =
+- Fixed: Input overflow issues in WPCF7 forms on mobile.
+
 = 2.0.15 - 2024-12-19 =
 - Updated: Set wide aspect ratio for featured images to fix size issues.
 

@@ -1,0 +1,59 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Montserrat Heebo",
+	"version": 3,
+	"slug": "montserrat-heebo",
+	"styles": {
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "normal",
+					"textTransform": "uppercase"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "normal",
+					"textTransform": "uppercase"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "normal",
+					"textTransform": "uppercase"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "normal",
+					"textTransform": "uppercase"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontWeight": "500",
+					"letterSpacing": "normal"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontWeight": "500",
+					"letterSpacing": "normal"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--montserrat)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--heebo)",
+			"fontSize": "1rem"
+		}
+	}
+}

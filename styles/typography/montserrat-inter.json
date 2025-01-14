@@ -1,0 +1,78 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Montserrat & Inter",
+	"version": 3,
+	"slug": "montserrat-inter",
+	"styles": {
+		"blocks": {
+			"core/comments-title": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
+				}
+			},
+			"core/query-pagination-next": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
+				}
+			},
+			"core/query-pagination-numbers": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
+				}
+			},
+			"core/query-pagination-previous": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--regular)"
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"letterSpacing": "0.03em"
+				}
+			}
+		},
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
+					"letterSpacing": "0"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
+					"letterSpacing": "0.01em"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
+					"letterSpacing": "0.02em"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--montserrat)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--inter)"
+		}
+	}
+}

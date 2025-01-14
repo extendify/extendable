@@ -1,0 +1,111 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Fusion Sky",
+	"version": 3,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#d61935", "#e3f2f2"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#d61935", "#ffeae6"],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				},
+				{
+					"colors": ["#e3f2f2", "#d61935"],
+					"slug": "secondary-and-primary",
+					"name": "Secondary and primary"
+				},
+				{
+					"colors": ["#010101", "#ffffff"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#0B51C2", "#000000"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				}
+			],
+			"palette": [
+				{
+					"slug": "foreground",
+					"color": "#000000",
+					"name": "Foreground"
+				},
+				{
+					"slug": "background",
+					"color": "#ffffff",
+					"name": "Background"
+				},
+				{
+					"slug": "primary",
+					"color": "#0B51C2",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#C4FF47",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#F9FAFE",
+					"name": "Tertiary"
+				},
+				{
+					"slug": "foreground-alt",
+					"color": "#333333",
+					"name": "foreground Alt"
+				}
+			]
+		},
+		"custom": {
+			"elements": {
+				"button": {
+					"color": {
+						"background": "var(--wp--preset--color--secondary)",
+						"text": "var(--wp--preset--color--foreground)"
+					},
+					":hover": {
+						"color": {
+							"background": "var(--wp--preset--color--foreground)",
+							"text": "var(--wp--preset--color--background)"
+						}
+					},
+					":focus": {
+						"color": {
+							"background": "var(--wp--preset--color--foreground)",
+							"text": "var(--wp--preset--color--background)"
+						}
+					}
+				},
+				"input": {
+					"border": {
+						"color": "var(--wp--preset--color--foreground)"
+					},
+					"color": {
+						"background": "var(--wp--preset--color--background)",
+						"text": "var(--wp--preset--color--foreground)"
+					}
+				}
+			}
+		}
+	},
+	"styles": {
+		"color": {
+			"text": "var(--wp--preset--color--foreground-alt)"
+		},
+		"elements": {
+			"heading": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,67 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Porto",
+	"version": 3,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#4D4848", "#F8FAF9"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#F8FAF9", "#4D4848"],
+					"slug": "background-and-foreground",
+					"name": "Background and foreground"
+				},
+				{
+					"colors": ["#854836", "#0D1B1E"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#854836", "#4D4848"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				}
+			],
+			"palette": [
+				{
+					"slug": "foreground",
+					"color": "#4D4848",
+					"name": "Foreground"
+				},
+				{
+					"slug": "background",
+					"color": "#F8FAF9",
+					"name": "Background"
+				},
+				{
+					"slug": "primary",
+					"color": "#854836",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#0D1B1E",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#F8ECEA",
+					"name": "Tertiary"
+				}
+			]
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/pullquote": {
+				"border": {
+					"color": "var(--wp--preset--color--primary)"
+				}
+			}
+		}
+	}
+}

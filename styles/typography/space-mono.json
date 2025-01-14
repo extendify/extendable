@@ -1,0 +1,96 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Space Mono",
+	"version": 3,
+	"slug": "space-mono",
+	"styles": {
+		"blocks": {
+			"core/comments-title": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--x-large)",
+					"fontWeight": "400"
+				}
+			},
+			"core/query-pagination-next": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"core/query-pagination-numbers": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"core/query-pagination-previous": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)",
+					"fontSize": "var(--wp--preset--font-size--large)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
+					"lineHeight": "var(--wp--custom--typography--line-height--tiny)"
+				}
+			}
+		},
+		"elements": {
+			"button": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"textTransform": "uppercase",
+					"letterSpacing": "0.15rem",
+					"fontWeight": "400"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "normal"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "normal"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "normal"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "normal"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "normal"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "normal"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--space-mono)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--space-mono)",
+			"fontSize": "1rem",
+			"fontWeight": "400",
+			"lineHeight": "var(--wp--custom--typography--line-height--large)"
+		}
+	}
+}

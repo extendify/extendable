@@ -1,0 +1,76 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Geom & Roboto Flex",
+	"version": 3,
+	"slug": "geom-roboto-flex",
+	"settings": {
+		"custom": {
+			"typography": {
+				"fontSmoothing": {
+					"moz": "auto",
+					"webkit": "auto"
+				}
+			}
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/comments-title": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--x-large)",
+					"fontWeight": "(--wp--custom--typography--font-weight--semi-bold)"
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
+					"letterSpacing": "0.03em"
+				}
+			}
+		},
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
+					"letterSpacing": "-0.02em"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--light)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--light)",
+					"letterSpacing": "0.04em"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
+					"letterSpacing": "0.01em",
+					"textTransform": "normal"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--geom)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--roboto-flex)"
+		}
+	}
+}

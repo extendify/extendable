@@ -1,0 +1,97 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Thimphu",
+	"version": 3,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#f24139", "#ffebcc"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#ffebcc", "#f24139"],
+					"slug": "background-and-foreground",
+					"name": "Background and foreground"
+				},
+				{
+					"colors": ["#3a312e", "#ffebcc"],
+					"slug": "secondary-and-background",
+					"name": "secondary and background"
+				},
+				{
+					"colors": ["#ffebcc", "#3a312e"],
+					"slug": "background-and-secondary",
+					"name": "Background and secondary"
+				},
+				{
+					"colors": ["#3a312e", "#f24139"],
+					"slug": "secondary-foreground",
+					"name": "secondary and Foreground"
+				}
+			],
+			"palette": [
+				{
+					"slug": "foreground",
+					"color": "#f24139",
+					"name": "Foreground"
+				},
+				{
+					"slug": "background",
+					"color": "#ffebcc",
+					"name": "Background"
+				},
+				{
+					"slug": "primary",
+					"color": "#f24139",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#3a312e",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#ffdda6",
+					"name": "Tertiary"
+				}
+			]
+		},
+		"custom": {
+			"elements": {
+				"button": {
+					"color": {
+						"background": "var(--wp--preset--color--secondary)",
+						"text": "var(--wp--preset--color--background)"
+					},
+					":hover": {
+						"color": {
+							"background": "var(--wp--preset--color--foreground)",
+							"text": "var(--wp--preset--color--background)"
+						}
+					},
+					":focus": {
+						"color": {
+							"background": "var(--wp--preset--color--foreground)",
+							"text": "var(--wp--preset--color--background)"
+						}
+					}
+				}
+			}
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/pullquote": {
+				"border": {
+					"color": "var(--wp--preset--color--primary)"
+				},
+				"color": {
+					"background": "transparent"
+				}
+			}
+		}
+	}
+}

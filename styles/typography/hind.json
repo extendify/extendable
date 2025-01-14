@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Hind",
+	"version": 3,
+	"slug": "hind",
+	"styles": {
+		"blocks": {
+			"core/separator": {
+				"color": {
+					"text": "var(--wp--preset--color--primary)"
+				}
+			}
+		},
+		"elements": {
+			"h1": {
+				"typography": {
+					"letterSpacing": "-0.01em"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontWeight": "900"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--hind)"
+				}
+			}
+		}
+	}
+}

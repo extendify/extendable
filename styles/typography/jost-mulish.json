@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Jost & Mulish",
+	"version": 3,
+	"slug": "jost-mulish",
+	"styles": {
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"heading": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--jost)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--mulish)"
+		}
+	}
+}

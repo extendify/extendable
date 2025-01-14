@@ -1,0 +1,74 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Onyx",
+	"version": 3,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#FFFCFC", "#C4C4C4"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#FFFCFC", "#000000"],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				},
+				{
+					"colors": ["#C4C4C4", "#FFFCFC"],
+					"slug": "secondary-and-primary",
+					"name": "Secondary and primary"
+				},
+				{
+					"colors": ["#010101", "#17181A"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#FFFCFC", "#FFFCFC"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				}
+			],
+			"palette": [
+				{
+					"slug": "foreground",
+					"color": "#FFFCFC",
+					"name": "Foreground"
+				},
+				{
+					"slug": "background",
+					"color": "#17181A",
+					"name": "Background"
+				},
+				{
+					"slug": "primary",
+					"color": "#FFFFFF",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#C4C4C4",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#000000",
+					"name": "Tertiary"
+				}
+			]
+		},
+		"custom": {
+			"elements": {
+				"button": {
+					":hover": {
+						"color": {
+							"background": "var(--wp--preset--color--secondary)"
+						}
+					}
+				}
+			}
+		}
+	}
+}

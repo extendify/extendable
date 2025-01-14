@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Rubik",
+	"version": 3,
+	"slug": "rubik",
+	"styles": {
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--rubik)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--rubik)"
+		}
+	}
+}

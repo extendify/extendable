@@ -271,7 +271,7 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
-							"src": ["file:./assets/fonts/archivo/archivo_wght"]
+							"src": ["file:./assets/fonts/archivo/archivo_wght.woff2"]
 						}
 					],
 					"fontFamily": "\"Archivo\", sans-serif",
@@ -286,7 +286,7 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "400",
-							"src": ["file:./assets/fonts/Arsenal/Arsenal-Regular.woff2"]
+							"src": ["file:./assets/fonts/arsenal/arsenal-regular.woff2"]
 						},
 						{
 							"fontDisplay": "block",
@@ -294,7 +294,7 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "700",
-							"src": ["file:./assets/fonts/Arsenal/Arsenal-Bold.woff2"]
+							"src": ["file:./assets/fonts/arsenal/arsenal-bold.woff2"]
 						}
 					],
 					"fontFamily": "\"Arsenal\", serif",
@@ -329,7 +329,7 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "300 900",
-							"src": ["file:./assets/fonts/Geom/Geom-Variable.woff2"]
+							"src": ["file:./assets/fonts/geom/geom-variable.woff2"]
 						}
 					]
 				},
@@ -356,7 +356,7 @@
 							"fontWeight": "100 900",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"src": ["file:./assets/fonts/Heebo/Heebo-VariableFont_wght.woff2"]
+							"src": ["file:./assets/fonts/heebo/heebo-variable-wght.woff2"]
 						}
 					],
 					"fontFamily": "\"Heebo\", sans-serif",
@@ -374,7 +374,7 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
-							"src": ["file:./assets/fonts/Hind/Hind-Variable.woff2"]
+							"src": ["file:./assets/fonts/hind/hind-variable.woff2"]
 						}
 					]
 				},
@@ -387,7 +387,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "100",
 							"src": [
-								"file:./assets/fonts/ibm-plex-sans/IBMPlexSans-Thin.woff2"
+								"file:./assets/fonts/ibm-plex-sans/ibm-plex-sans-thin.woff2"
 							]
 						},
 						{
@@ -397,7 +397,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "200",
 							"src": [
-								"file:./assets/fonts/ibm-plex-sans/IBMPlexSans-ExtraLight.woff2"
+								"file:./assets/fonts/ibm-plex-sans/ibm-plex-sans-extra-light.woff2"
 							]
 						},
 						{
@@ -407,7 +407,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "300",
 							"src": [
-								"file:./assets/fonts/ibm-plex-sans/IBMPlexSans-Light.woff2"
+								"file:./assets/fonts/ibm-plex-sans/ibm-plex-sans-light.woff2"
 							]
 						},
 						{
@@ -417,7 +417,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "400",
 							"src": [
-								"file:./assets/fonts/ibm-plex-sans/IBMPlexSans-Regular.woff2"
+								"file:./assets/fonts/ibm-plex-sans/ibm-plex-sans-regular.woff2"
 							]
 						},
 						{
@@ -427,7 +427,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "500",
 							"src": [
-								"file:./assets/fonts/ibm-plex-sans/IBMPlexSans-Medium.woff2"
+								"file:./assets/fonts/ibm-plex-sans/ibm-plex-sans-medium.woff2"
 							]
 						},
 						{
@@ -437,7 +437,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "600",
 							"src": [
-								"file:./assets/fonts/ibm-plex-sans/IBMPlexSans-SemiBold.woff2"
+								"file:./assets/fonts/ibm-plex-sans/ibm-plex-sans-semibold.woff2"
 							]
 						},
 						{
@@ -447,7 +447,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "700",
 							"src": [
-								"file:./assets/fonts/ibm-plex-sans/IBMPlexSans-Bold.woff2"
+								"file:./assets/fonts/ibm-plex-sans/ibm-plex-sans-bold.woff2"
 							]
 						}
 					],
@@ -464,7 +464,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
 							"src": [
-								"file:./assets/fonts/Inconsolata/Inconsolata-VariableFont_wdth,wght.woff2"
+								"file:./assets/fonts/inconsolata/inconsolata-variable.woff2"
 							]
 						}
 					],
@@ -479,7 +479,7 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "200 900",
-							"src": ["file:./assets/fonts/inter/InterVariable.woff2"]
+							"src": ["file:./assets/fonts/inter/inter-variable.woff2"]
 						}
 					],
 					"fontFamily": "\"Inter\", sans-serif",
@@ -497,7 +497,7 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 800",
-							"src": ["file:./assets/fonts/Jost/Jost-VariableFont_wght.woff2"]
+							"src": ["file:./assets/fonts/jost/jost-variable.woff2"]
 						}
 					]
 				},
@@ -509,7 +509,7 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
-							"src": ["file:./assets/fonts/Karla/Karla-VariableFont_wght.woff2"]
+							"src": ["file:./assets/fonts/karla/karla.woff2"]
 						}
 					],
 					"fontFamily": "\"Karla\", sans-serif",
@@ -524,7 +524,7 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "400",
-							"src": ["file:./assets/fonts/Koulen/Koulen-Regular.woff2"]
+							"src": ["file:./assets/fonts/koulen/Koulen-Regular.woff2"]
 						}
 					],
 					"fontFamily": "\"Koulen\", sans-serif",
@@ -539,7 +539,7 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "200 800",
-							"src": ["file:./assets/fonts/manrope/manrope_wght.woff2"]
+							"src": ["file:./assets/fonts/manrope/manrope.woff2"]
 						}
 					],
 					"fontFamily": "\"Manrope\", sans-serif",
@@ -572,9 +572,7 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
-							"src": [
-								"file:./assets/fonts/Montserrat/Montserrat-VariableFont_wght.woff2"
-							]
+							"src": ["file:./assets/fonts/montserrat/montserrat.woff2"]
 						}
 					]
 				},
@@ -586,9 +584,7 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 800",
-							"src": [
-								"file:./assets/fonts/Mulish/Mulish-VariableFont_wght.woff2"
-							]
+							"src": ["file:./assets/fonts/mulish/mulish.woff2"]
 						}
 					],
 					"fontFamily": "\"Mulish\", sans-serif",
@@ -607,7 +603,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
 							"src": [
-								"file:./assets/fonts/NotoSerifDisplay/NotoSerifDisplay-VariableFont_wdth,wght.woff2"
+								"file:./assets/fonts/noto-serif-display/noto-serif-display.woff2"
 							]
 						}
 					]
@@ -623,9 +619,7 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "300 700",
-							"src": [
-								"file:./assets/fonts/Oswald/Oswald-VariableFont_wght.woff2"
-							]
+							"src": ["file:./assets/fonts/oswald/oswald.woff2"]
 						}
 					]
 				},
@@ -640,9 +634,7 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "300 700",
-							"src": [
-								"file:./assets/fonts/RadioCanada/RadioCanada-VariableFont_wdth,wght.woff2"
-							]
+							"src": ["file:./assets/fonts/radio-canada/radio-canada.woff2"]
 						}
 					]
 				},
@@ -654,9 +646,7 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
-							"src": [
-								"file:./assets/fonts/RobotoFlex/RobotoFlex-VariableFont_GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght.woff2"
-							]
+							"src": ["file:./assets/fonts/roboto-flex/roboto-flex.woff2"]
 						}
 					],
 					"fontFamily": "\"Roboto Flex\", sans-serif",
@@ -674,7 +664,7 @@
 							"fontWeight": "300 900",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"src": ["file:./assets/fonts/Rubik/Rubik-VariableFont_wght.woff2"]
+							"src": ["file:./assets/fonts/rubik/rubik.woff2"]
 						}
 					]
 				},
@@ -686,7 +676,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "200 900",
 							"src": [
-								"file:./assets/fonts/SourceSerif4/SourceSerif4-VariableFont_opsz,wght.woff2"
+								"file:./assets/fonts/source-serif-pro/source-serif-pro.woff2"
 							]
 						}
 					],
@@ -703,13 +693,13 @@
 							"fontFamily": "Space Mono",
 							"fontStyle": "normal",
 							"fontWeight": "400",
-							"src": ["file:./assets/fonts/SpaceMono/SpaceMono-Regular.woff2"]
+							"src": ["file:./assets/fonts/space-mono/space-mono-regular.woff2"]
 						},
 						{
 							"fontFamily": "Space Mono",
 							"fontStyle": "normal",
 							"fontWeight": "700",
-							"src": ["file:./assets/fonts/SpaceMono/SpaceMono-Bold.woff2"]
+							"src": ["file:./assets/fonts/space-mono/space-mono-bold.woff2"]
 						}
 					]
 				}

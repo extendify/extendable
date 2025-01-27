@@ -1,0 +1,67 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Kampala",
+	"version": 3,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#010110", "#f7f9fe"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#f7f9fe", "#010110"],
+					"slug": "background-and-foreground",
+					"name": "Background and foreground"
+				},
+				{
+					"colors": ["#0B119C", "#c1cbf9"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#0B119C", "#010110"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				}
+			],
+			"palette": [
+				{
+					"slug": "background",
+					"color": "#f7f9fe",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "#010110",
+					"name": "Foreground"
+				},
+				{
+					"slug": "primary",
+					"color": "#0B119C",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#c1cbf9",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#ffffff",
+					"name": "Background Alt"
+				}
+			]
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/separator": {
+				"color": {
+					"text": "var(--wp--preset--color--primary)"
+				}
+			}
+		}
+	}
+}

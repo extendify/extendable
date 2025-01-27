@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Noto Serif Display & Radio Canada",
+	"version": 3,
+	"slug": "noto-serif-display-radio-canada",
+	"settings": {
+		"custom": {
+			"typography": {
+				"fontSmoothing": {
+					"moz": "auto",
+					"webkit": "auto"
+				}
+			}
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/site-title": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"letterSpacing": "-0.02em"
+				}
+			}
+		},
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"letterSpacing": "0"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"letterSpacing": "-0.01em"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--radio-canada)"
+		}
+	}
+}

@@ -1,0 +1,73 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Brisbane",
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#000000", "#ffffff"],
+					"slug": "grayscale",
+					"name": "Grayscale"
+				},
+				{
+					"colors": ["#49697c", "#102e43"],
+					"slug": "primary",
+					"name": "Primary"
+				},
+				{
+					"colors": ["#49697c", "#fcf8f2"],
+					"slug": "secondary",
+					"name": "Secondary"
+				},
+				{
+					"colors": ["#102e43", "#fcf8f2"],
+					"slug": "primary-secondary",
+					"name": "Primary and Secondary"
+				},
+				{
+					"colors": ["#ffffff", "#102e43"],
+					"slug": "foreground-primary",
+					"name": "Foreground and Primary"
+				},
+				{
+					"colors": ["#204f46", "#fcf8f2"],
+					"slug": "tertiary-secondary",
+					"name": "Tertiary and Secondary"
+				},
+				{
+					"colors": ["#F9F6DE", "#f7fafc"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				}
+			],
+			"palette": [
+				{
+					"slug": "foreground",
+					"color": "#f7fafc",
+					"name": "Foreground"
+				},
+				{
+					"slug": "background",
+					"color": "#3f5762",
+					"name": "Background"
+				},
+				{
+					"slug": "primary",
+					"color": "#F9F6DE",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#fcf8f2",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#2d3f47",
+					"name": "Background Alt"
+				}
+			]
+		}
+	}
+}

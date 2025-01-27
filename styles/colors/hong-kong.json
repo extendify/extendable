@@ -1,0 +1,90 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Hong Kong",
+	"version": 3,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#c6120d", "#f1e3e1"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#f1e3e1", "#c6120d"],
+					"slug": "background-and-foreground",
+					"name": "Background and foreground"
+				},
+				{
+					"colors": ["#dc1912", "#edc7c7"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#A30026", "#a40e26"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				}
+			],
+			"palette": [
+				{
+					"slug": "background",
+					"color": "#ffebe9",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "#a40e26",
+					"name": "Foreground"
+				},
+				{
+					"slug": "primary",
+					"color": "#860000",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#ffcecb",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#ffffff",
+					"name": "Background Alt"
+				}
+			]
+		},
+		"custom": {
+			"elements": {
+				"button": {
+					"color": {
+						"background": "var(--wp--preset--color--foreground)",
+						"text": "var(--wp--preset--color--background)"
+					},
+					":hover": {
+						"color": {
+							"background": "var(--wp--preset--color--primary)",
+							"text": "var(--wp--preset--color--background)"
+						}
+					},
+					":focus": {
+						"color": {
+							"background": "var(--wp--preset--color--foreground)",
+							"text": "var(--wp--preset--color--background)"
+						}
+					}
+				}
+			}
+		}
+	},
+	"styles": {
+		"blocks": {
+
+			"core/pullquote": {
+				"border": {
+					"color": "var(--wp--preset--color--primary)"
+				}
+			}
+		}
+	}
+}

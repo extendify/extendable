@@ -1,0 +1,72 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Santa Fe",
+	"version": 3,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#111111", "#ffffff"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#ffffff", "#1f033b"],
+					"slug": "background-and-primary",
+					"name": "Background and primary"
+				},
+				{
+					"colors": ["#1f033b", "#d5dce3"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#1f033b", "#f0ede4"],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				},
+				{
+					"colors": ["#1f033b", "#111111"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				}
+			],
+			"palette": [
+				{
+					"slug": "foreground",
+					"color": "#111111",
+					"name": "Foreground"
+				},
+				{
+					"slug": "background",
+					"color": "#ffffff",
+					"name": "Background"
+				},
+				{
+					"slug": "primary",
+					"color": "#2c0453",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#d5dce3",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#f0ede4",
+					"name": "Tertiary"
+				}
+			]
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/pullquote": {
+				"border": {
+					"color": "var(--wp--preset--color--primary)"
+				}
+			}
+		}
+	}
+}

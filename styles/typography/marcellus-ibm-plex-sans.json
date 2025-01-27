@@ -1,0 +1,55 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Marcellus & IBM Plex Sans",
+	"slug": "marcellus-ibm-plex-sans",
+	"styles": {
+		"elements": {
+			"button": {
+				"typography": {
+					"fontSize": "1.0625rem",
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"lineHeight": "inherit"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontWeight": "400"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--marcellus)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--ibm-plex-sans)"
+		}
+	}
+}

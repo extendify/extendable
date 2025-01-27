@@ -1,0 +1,58 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Orange",
+	"version": 3,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#1A1A1A", "#ffffff"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#ffffff", "#1A1A1A"],
+					"slug": "background-and-foreground",
+					"name": "Background and foreground"
+				},
+				{
+					"colors": ["#DE3707", "#02235B"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#DE3707", "#1A1A1A"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				}
+			],
+			"palette": [
+				{
+					"slug": "background",
+					"color": "#ffffff",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "#1A1A1A",
+					"name": "Foreground"
+				},
+				{
+					"slug": "primary",
+					"color": "#DE3707",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#02235B",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#f2f3f5",
+					"name": "Background Alt"
+				}
+			]
+		}
+	}
+}

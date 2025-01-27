@@ -1,0 +1,81 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Source Serif Pro & Roboto Flex",
+	"version": 3,
+	"slug": "source-serif-pro-roboto-flex",
+	"styles": {
+		"blocks": {
+			"core/comments-title": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
+				}
+			},
+			"core/query-pagination-next": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
+				}
+			},
+			"core/query-pagination-numbers": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
+				}
+			},
+			"core/query-pagination-previous": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--medium)",
+					"letterSpacing": "0.02em"
+				}
+			}
+		},
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
+					"letterSpacing": "-0.01em"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
+					"letterSpacing": "0.01em"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--bold)",
+					"letterSpacing": "0.01em",
+					"textTransform": "normal"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontWeight": "var(--wp--custom--typography--font-weight--black)",
+					"letterSpacing": "0.02em"
+				}
+			},
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-serif-pro)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--roboto-flex)"
+		}
+	}
+}

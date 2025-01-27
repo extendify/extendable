@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Baloo Tamma 2 & Mulish",
+	"version": 3,
+	"slug": "baloo-tamma-2-mulish",
+	"styles": {
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--baloo-tamma-2)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--mulish)"
+		}
+	}
+}

@@ -1,0 +1,73 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Cairo",
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#ffffff", "#393646"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#ffffff", "#F4EEE0"],
+					"slug": "foreground-and-primary",
+					"name": "Foreground and primary"
+				},
+				{
+					"colors": ["#393646", "#F4EEE0"],
+					"slug": "primary-and-background",
+					"name": "Primary and background"
+				},
+				{
+					"colors": ["#F4EEE0", "#331D2C"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#F4EEE0", "#ffffff"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				}
+			],
+			"palette": [
+				{
+					"slug": "foreground",
+					"color": "#ffffff",
+					"name": "Foreground"
+				},
+				{
+					"slug": "background",
+					"color": "#393646",
+					"name": "Background"
+				},
+				{
+					"slug": "primary",
+					"color": "#F4EEE0",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#EFE1D1",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#4F4557",
+					"name": "Tertiary"
+				}
+			]
+		}
+	},
+	"styles": {
+		"blocks": {
+			"core/pullquote": {
+				"border": {
+					"color": "var(--wp--preset--color--primary)",
+					"width": "2px 0"
+				}
+			}
+		}
+	}
+}

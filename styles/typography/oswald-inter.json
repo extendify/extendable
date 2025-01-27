@@ -1,0 +1,29 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Oswald & inter",
+	"version": 3,
+	"slug": "oswald-inter",
+	"settings": {
+		"custom": {
+			"typography": {
+				"fontSmoothing": {
+					"moz": "auto",
+					"webkit": "auto"
+				}
+			}
+		}
+	},
+	"styles": {
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--oswald)",
+					"textTransform": "uppercase"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--inter)"
+		}
+	}
+}

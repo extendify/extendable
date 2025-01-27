@@ -13,6 +13,11 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.17 - 2025-01-28 =
+- New: Add Palette and Typography presets
+- Change: Improve the search page header
+- Add: background-tertiary duotone filter
+
 = 2.0.16 - 2025-01-02 =
 - Fixed: Input overflow issues in WPCF7 forms on mobile.
 

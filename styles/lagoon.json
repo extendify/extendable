@@ -29,6 +29,11 @@
 					"colors": ["#13607E", "#292929"],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
+				},
+				{
+					"colors": ["#ffffff", "#faf7f8"],
+					"slug": "background-tertiary",
+					"name": "Background and Background Alt"
 				}
 			],
 			"palette": [
@@ -57,7 +62,7 @@
 					"color": "#faf7f8",
 					"name": "Tertiary"
 				},
-                {
+				{
 					"slug": "foreground-alt",
 					"color": "#292929",
 					"name": "Foreground Alt"
@@ -71,7 +76,7 @@
 		},
 		"elements": {
 			"heading": {
-                "color": {
+				"color": {
 					"text": "var(--wp--preset--color--foreground)"
 				},
 				"typography": {

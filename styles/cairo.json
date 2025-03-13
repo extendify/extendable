@@ -31,7 +31,7 @@
 					"name": "Primary and Foreground"
 				},
 				{
-					"colors": ["#ffffff", "#4F4557"],
+					"colors": ["#393646", "#4F4557"],
 					"slug": "background-tertiary",
 					"name": "Background and Background Alt"
 				}

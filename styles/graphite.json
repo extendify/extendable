@@ -6,17 +6,17 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#d61935", "#395144"],
+					"colors": ["#292929", "#303030"],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#d61935", "#ffeae6"],
+					"colors": ["#292929", "#E9E8E6"],
 					"slug": "primary-and-tertiary",
 					"name": "Primary and tertiary"
 				},
 				{
-					"colors": ["#395144", "#d61935"],
+					"colors": ["#303030", "#292929"],
 					"slug": "secondary-and-primary",
 					"name": "Secondary and primary"
 				},
@@ -26,7 +26,7 @@
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#014630", "#000000"],
+					"colors": ["#292929", "#000000"],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},

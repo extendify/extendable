@@ -8,6 +8,12 @@
  * @since Extendable 1.0
  */
 
+
+if ( ! defined( 'EXTENDABLE_THEME_VERSION' ) ) {
+	$theme_version = wp_get_theme()->get( 'Version' );
+	define( 'EXTENDABLE_THEME_VERSION', is_string( $theme_version ) ? $theme_version : '1.0.0' );
+}
+
 if ( ! function_exists( 'extendable_support' ) ) :
 
 	/**
@@ -52,14 +58,11 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 	function extendable_styles() {
 
 		// Register theme stylesheet.
-		$theme_version = wp_get_theme()->get( 'Version' );
-
-		$version_string = is_string( $theme_version ) ? $theme_version : false;
 		wp_register_style(
 			'extendable-style',
 			get_template_directory_uri() . '/style.css',
 			array(),
-			$version_string
+			EXTENDABLE_THEME_VERSION
 		);
 
 		// Enqueue theme stylesheet.
@@ -72,7 +75,7 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 				'extendable-deprecate-style',
 				get_template_directory_uri() . '/assets/css/deprecate-style.css',
 				array(),
-				$version_string
+				EXTENDABLE_THEME_VERSION
 			);
 			// Enqueue deprecate stylesheet.
 			wp_enqueue_style( 'extendable-deprecate-style' );
@@ -97,7 +100,7 @@ function extendable_enqueue_block_styles() {
 			'extendable-contact-form-7-style',
 			get_template_directory_uri() . '/assets/css/contact-form-7.css',
 			array(),
-			'1.0.0'
+			EXTENDABLE_THEME_VERSION
 		);
 	}
 
@@ -106,7 +109,7 @@ function extendable_enqueue_block_styles() {
 			'extendable-wpforms-style',
 			get_template_directory_uri() . '/assets/css/wpforms.css',
 			array(),
-			'1.0.0'
+			EXTENDABLE_THEME_VERSION
 		);
 	}
 }
@@ -161,7 +164,7 @@ add_action( 'init', 'extendable_register_pattern_categories', 9 );
  *
  * @return void
  */
-function enqueue_dynamic_duotone_css() {
+function extendable_enqueue_dynamic_duotone_css() {
     $theme_json      = WP_Theme_JSON_Resolver::get_merged_data();
     $duotone_presets = $theme_json->get_settings()['color']['duotone']['theme'] ?? [];
 
@@ -180,4 +183,24 @@ function enqueue_dynamic_duotone_css() {
     ";
     wp_add_inline_style( 'wp-block-library', $css );
 }
-add_action( 'wp_enqueue_scripts', 'enqueue_dynamic_duotone_css' );
+add_action( 'wp_enqueue_scripts', 'extendable_enqueue_dynamic_duotone_css' );
+
+/**
+ * Enqueue custom admin CSS file when WooCommerce is not active.
+ *
+ * @since Extendable 2.0.18
+ *
+ * @return void
+ */
+function extendable_admin_custom_css() {
+    // Only enqueue the stylesheet if WooCommerce is not active.
+    if ( ! class_exists( 'WooCommerce' ) ) {
+        wp_enqueue_style(
+            'my-admin-custom-css',
+            get_stylesheet_directory_uri() . '/assets/css/admin-custom.css',
+            array(),
+            EXTENDABLE_THEME_VERSION
+        );
+    }
+}
+add_action( 'admin_enqueue_scripts', 'extendable_admin_custom_css' );

@@ -8,6 +8,12 @@
  * @since Extendable 1.0
  */
 
+
+if ( ! defined( 'EXTENDABLE_THEME_VERSION' ) ) {
+	$theme_version = wp_get_theme()->get( 'Version' );
+	define( 'EXTENDABLE_THEME_VERSION', is_string( $theme_version ) ? $theme_version : '1.0.0' );
+}
+
 if ( ! function_exists( 'extendable_support' ) ) :
 
 	/**
@@ -52,14 +58,11 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 	function extendable_styles() {
 
 		// Register theme stylesheet.
-		$theme_version = wp_get_theme()->get( 'Version' );
-
-		$version_string = is_string( $theme_version ) ? $theme_version : false;
 		wp_register_style(
 			'extendable-style',
 			get_template_directory_uri() . '/style.css',
 			array(),
-			$version_string
+			EXTENDABLE_THEME_VERSION
 		);
 
 		// Enqueue theme stylesheet.
@@ -72,7 +75,7 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 				'extendable-deprecate-style',
 				get_template_directory_uri() . '/assets/css/deprecate-style.css',
 				array(),
-				$version_string
+				EXTENDABLE_THEME_VERSION
 			);
 			// Enqueue deprecate stylesheet.
 			wp_enqueue_style( 'extendable-deprecate-style' );
@@ -97,7 +100,7 @@ function extendable_enqueue_block_styles() {
 			'extendable-contact-form-7-style',
 			get_template_directory_uri() . '/assets/css/contact-form-7.css',
 			array(),
-			'1.0.0'
+			EXTENDABLE_THEME_VERSION
 		);
 	}
 
@@ -106,7 +109,7 @@ function extendable_enqueue_block_styles() {
 			'extendable-wpforms-style',
 			get_template_directory_uri() . '/assets/css/wpforms.css',
 			array(),
-			'1.0.0'
+			EXTENDABLE_THEME_VERSION
 		);
 	}
 }
@@ -196,7 +199,7 @@ function extendable_admin_custom_css() {
             'my-admin-custom-css',
             get_stylesheet_directory_uri() . '/assets/css/admin-custom.css',
             array(),
-            '1.0.0'
+            EXTENDABLE_THEME_VERSION
         );
     }
 }

@@ -161,7 +161,7 @@ add_action( 'init', 'extendable_register_pattern_categories', 9 );
  *
  * @return void
  */
-function enqueue_dynamic_duotone_css() {
+function extendable_enqueue_dynamic_duotone_css() {
     $theme_json      = WP_Theme_JSON_Resolver::get_merged_data();
     $duotone_presets = $theme_json->get_settings()['color']['duotone']['theme'] ?? [];
 
@@ -180,4 +180,24 @@ function enqueue_dynamic_duotone_css() {
     ";
     wp_add_inline_style( 'wp-block-library', $css );
 }
-add_action( 'wp_enqueue_scripts', 'enqueue_dynamic_duotone_css' );
+add_action( 'wp_enqueue_scripts', 'extendable_enqueue_dynamic_duotone_css' );
+
+/**
+ * Enqueue custom admin CSS file when WooCommerce is not active.
+ *
+ * @since Extendable 2.0.18
+ *
+ * @return void
+ */
+function extendable_admin_custom_css() {
+    // Only enqueue the stylesheet if WooCommerce is not active.
+    if ( ! class_exists( 'WooCommerce' ) ) {
+        wp_enqueue_style(
+            'my-admin-custom-css',
+            get_stylesheet_directory_uri() . '/assets/css/admin-custom.css',
+            array(),
+            '1.0.0'
+        );
+    }
+}
+add_action( 'admin_enqueue_scripts', 'extendable_admin_custom_css' );

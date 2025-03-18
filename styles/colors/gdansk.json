@@ -29,6 +29,11 @@
 					"colors": ["#f5ac8e", "#fcece8"],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
+				},
+				{
+					"colors": ["#0c0c0b", "#50140d"],
+					"slug": "background-tertiary",
+					"name": "Background and Background Alt"
 				}
 			],
 			"palette": [
@@ -62,7 +67,6 @@
 	},
 	"styles": {
 		"blocks": {
-
 			"core/pullquote": {
 				"border": {
 					"color": "var(--wp--preset--color--primary)"

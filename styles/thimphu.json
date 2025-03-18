@@ -31,6 +31,11 @@
 					"name": "secondary and Foreground"
 				},
 				{
+					"colors": ["#f24139", "#f24139"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				},
+				{
 					"colors": ["#ffebcc", "#ffdda6"],
 					"slug": "background-tertiary",
 					"name": "Background and Background Alt"

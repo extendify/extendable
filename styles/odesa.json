@@ -11,7 +11,7 @@
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#ffffff", "#ffc401"],
+					"colors": ["#ffffff", "#070f79"],
 					"slug": "background-and-primary",
 					"name": "Background and primary"
 				},
@@ -21,12 +21,12 @@
 					"name": "Background and secondary"
 				},
 				{
-					"colors": ["#ffc401", "#f3c8cf"],
+					"colors": ["#070f79", "#f3c8cf"],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#ffc401", "#0b0449"],
+					"colors": ["#070f79", "#0b0449"],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},

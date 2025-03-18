@@ -26,7 +26,7 @@
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#FFFCFC", "#FFFCFC"],
+					"colors": ["#FFFFFF", "#FFFCFC"],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},

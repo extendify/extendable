@@ -39,6 +39,11 @@
 					"colors": ["#A89F84", "#ffffff"],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
+				},
+				{
+					"colors": ["#272725", "#32322D"],
+					"slug": "background-tertiary",
+					"name": "Background and Background Alt"
 				}
 			],
 			"palette": [

@@ -196,7 +196,7 @@ function extendable_admin_custom_css() {
     // Only enqueue the stylesheet if WooCommerce is not active.
     if ( ! class_exists( 'WooCommerce' ) ) {
         wp_enqueue_style(
-            'my-admin-custom-css',
+            'extendable-admin-custom-css',
             get_stylesheet_directory_uri() . '/assets/css/admin-custom.css',
             array(),
             EXTENDABLE_THEME_VERSION

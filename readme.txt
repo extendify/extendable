@@ -13,6 +13,11 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.18 - 2025-03-25 =
+- Fix: Incorrect path for Koulen font
+- Fix: Duotone filter color and header logo alignment
+- Fix: Hide WooCommerce templates when WooCommerce is inactive
+
 = 2.0.17 - 2025-01-28 =
 - New: Add Palette and Typography presets
 - Change: Improve the search page header

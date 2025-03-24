@@ -21,17 +21,17 @@
 					"name": "Secondary"
 				},
 				{
-					"colors": ["#102e43", "#fcf8f2"],
+					"colors": ["#F9F6DE", "#fcf8f2"],
 					"slug": "primary-secondary",
 					"name": "Primary and Secondary"
 				},
 				{
-					"colors": ["#ffffff", "#102e43"],
+					"colors": ["#f7fafc", "#F9F6DE"],
 					"slug": "foreground-primary",
 					"name": "Foreground and Primary"
 				},
 				{
-					"colors": ["#204f46", "#fcf8f2"],
+					"colors": ["#2d3f47", "#fcf8f2"],
 					"slug": "tertiary-secondary",
 					"name": "Tertiary and Secondary"
 				},
@@ -39,6 +39,11 @@
 					"colors": ["#F9F6DE", "#f7fafc"],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
+				},
+				{
+					"colors": ["#3f5762", "#2d3f47"],
+					"slug": "background-tertiary",
+					"name": "Background and Background Alt"
 				}
 			],
 			"palette": [

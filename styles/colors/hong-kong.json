@@ -6,12 +6,12 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#c6120d", "#f1e3e1"],
+					"colors": ["#c6120d", "#ffebe9"],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#f1e3e1", "#c6120d"],
+					"colors": ["#ffebe9", "#c6120d"],
 					"slug": "background-and-foreground",
 					"name": "Background and foreground"
 				},
@@ -21,9 +21,14 @@
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#A30026", "#a40e26"],
+					"colors": ["#860000", "#a40e26"],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
+				},
+				{
+					"colors": ["#ffebe9", "#ffffff"],
+					"slug": "background-tertiary",
+					"name": "Background and Background Alt"
 				}
 			],
 			"palette": [
@@ -79,7 +84,6 @@
 	},
 	"styles": {
 		"blocks": {
-
 			"core/pullquote": {
 				"border": {
 					"color": "var(--wp--preset--color--primary)"

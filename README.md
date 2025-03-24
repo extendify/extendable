@@ -11,7 +11,7 @@ To get started with development:
 
 ## Requirements
 
-- WordPress 6.0+
+- WordPress 6.6+
 - PHP 5.6+
 - License: [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html) or later
 

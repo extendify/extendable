@@ -13,6 +13,9 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.20 - 2025-03-26 =
+- Remove: Remove deprecated CSS file
+
 = 2.0.19 - 2025-03-26 =
 - Remove: duplicates noto-serif-display-radio-canada typography style variation file
 

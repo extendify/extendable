@@ -77,7 +77,7 @@
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:social-links {"iconColor":"foreground","iconColorValue":"#0B0620","size":"has-small-icon-size","style":{"spacing":{"blockGap":{"top":"1.5rem","left":"1.5rem"}}},"className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"right"}} -->
 <ul class="wp-block-social-links has-small-icon-size has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"https://www.facebook.com/","service":"facebook"} /-->
 
-<!-- wp:social-link {"url":"https://twitter.com/","service":"twitter"} /-->
+<!-- wp:social-link {"url":"https://x.com/","service":"x"} /-->
 
 <!-- wp:social-link {"url":"https://www.instagram.com/","service":"instagram"} /-->
 

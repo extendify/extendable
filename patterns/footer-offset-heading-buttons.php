@@ -36,7 +36,7 @@
 
 <!-- wp:social-link {"url":"https://www.instagram.com/","service":"instagram"} /-->
 
-<!-- wp:social-link {"url":"https://twitter.com/","service":"twitter"} /--></ul>
+<!-- wp:social-link {"url":"https://x.com/","service":"x"} /--></ul>
 <!-- /wp:social-links --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

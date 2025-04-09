@@ -193,12 +193,8 @@ add_action( 'wp_enqueue_scripts', 'extendable_enqueue_dynamic_duotone_css' );
  */
 
  function extendable_exclude_wc_block_templates( $templates, $query ) {
-	// Only run the filter if WooCommerce is not active.
 	if ( ! class_exists( 'WooCommerce' ) ) {
-		// Define the slugs for WooCommerce-specific templates to exclude.
 		$wc_template_slugs = array( 'checkout', 'single-product', 'archive-product' );
-
-		// Iterate over the templates and remove any that match a WooCommerce template slug.
 		foreach ( $templates as $key => $template ) {
 			if ( isset( $template->slug ) && in_array( $template->slug, $wc_template_slugs, true ) ) {
 				unset( $templates[ $key ] );

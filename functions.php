@@ -186,21 +186,21 @@ function extendable_enqueue_dynamic_duotone_css() {
 add_action( 'wp_enqueue_scripts', 'extendable_enqueue_dynamic_duotone_css' );
 
 /**
- * Enqueue custom admin CSS file when WooCommerce is not active.
+ * Exclude WooCommerce Templates from the Block Editor When WooCommerce Is Inactive
  *
- * @since Extendable 2.0.18
- *
- * @return void
+ * @package Extendable
+ * @since Extendable 2.0.21
  */
-function extendable_admin_custom_css() {
-    // Only enqueue the stylesheet if WooCommerce is not active.
-    if ( ! class_exists( 'WooCommerce' ) ) {
-        wp_enqueue_style(
-            'extendable-admin-custom-css',
-            get_stylesheet_directory_uri() . '/assets/css/admin-custom.css',
-            array(),
-            EXTENDABLE_THEME_VERSION
-        );
-    }
+
+ function extendable_exclude_wc_block_templates( $templates, $query ) {
+	if ( ! class_exists( 'WooCommerce' ) ) {
+		$wc_template_slugs = array( 'checkout', 'single-product', 'archive-product' );
+		foreach ( $templates as $key => $template ) {
+			if ( isset( $template->slug ) && in_array( $template->slug, $wc_template_slugs, true ) ) {
+				unset( $templates[ $key ] );
+			}
+		}
+	}
+	return $templates;
 }
-add_action( 'admin_enqueue_scripts', 'extendable_admin_custom_css' );
+add_filter( 'get_block_templates', 'extendable_exclude_wc_block_templates', 10, 2 );

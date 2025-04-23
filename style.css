@@ -111,7 +111,7 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
 .wp-element-button {
 	transition: background-color 0.15s ease;
 }
-.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background):hover, 
+.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background):hover,
 .wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background):hover {
 	background-color: rgba(159, 159, 159, 0.2);
 }
@@ -171,7 +171,8 @@ blockquote:is(.is-style-plain) {
 
 /* Ensure default logo works well on light and dark backgrounds
 ----------------------------------------------------------*/
-.wp-block-site-logo img[src*="extendify-demo-"] {
+.wp-block-site-logo img[src*="extendify-demo-"],
+.wp-block-site-logo img[src*="ext-custom-logo-"] {
 	filter: var(--wp--preset--duotone--primary-foreground);
 }
 
@@ -206,7 +207,7 @@ input, textarea {
 /*
  * Matching input with outline button style.
  */
-:where(.wp-block-post-comments-form) input:not([type=submit]), 
+:where(.wp-block-post-comments-form) input:not([type=submit]),
 :where(.wp-block-post-comments-form) textarea {
 	background-color: var(--wp--preset--color--background);
 	color: var(--wp--preset--color--foreground);

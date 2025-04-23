@@ -157,7 +157,7 @@ add_action( 'init', 'extendable_register_pattern_categories', 9 );
 
 /**
  * Enqueue dynamic CSS for primary-foreground duotone filter.
- * 
+ *
  * Ensure default logo works well on light and dark backgrounds
  *
  * @since Extendable 2.0.11
@@ -177,7 +177,8 @@ function extendable_enqueue_dynamic_duotone_css() {
     }
     list( $r, $g, $b ) = array_map( fn( $c ) => hexdec( $c ) / 255, sscanf( $primary_color, "#%02x%02x%02x" ) );
     $css = "
-        .wp-block-site-logo img[src*='extendify-demo-'] {
+        .wp-block-site-logo img[src*='extendify-demo-'],
+		.wp-block-site-logo img[src*='ext-custom-logo-'] {
             filter: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"solid-color\"><feColorMatrix color-interpolation-filters=\"sRGB\" type=\"matrix\" values=\"0 0 0 0 {$r} 0 0 0 0 {$g} 0 0 0 0 {$b} 0 0 0 1 0\"/></filter></svg>#solid-color') !important;
         }
     ";

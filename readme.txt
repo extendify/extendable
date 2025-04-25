@@ -13,6 +13,9 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.22 - 2025-04-26 =
+- Update: add new CSS rule for custom default logo
+
 = 2.0.21 - 2025-04-15 =
 - Update: Twitter icon and link to X  
 - Tweak: Hide WooCommerce templates when plugin is inactive

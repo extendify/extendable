@@ -13,7 +13,7 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
-= 2.0.21 - 2025-05-24 =
+= 2.0.23 - 2025-05-24 =
 - Update: Removed a pattern and made some tweaks to others.
 
 = 2.0.22 - 2025-04-26 =

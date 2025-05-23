@@ -40,7 +40,7 @@
 <h3 class="has-medium-font-size">Products</h3>
 <!-- /wp:heading -->
 
-<!-- wp:navigation {"ref":85,"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} /--></div>
+<!-- wp:navigation {"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} /--></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"style":{"spacing":{"blockGap":"1.5rem"}}} -->
@@ -48,7 +48,7 @@
 <h3 class="has-medium-font-size">Articles</h3>
 <!-- /wp:heading -->
 
-<!-- wp:navigation {"ref":85,"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} /--></div>
+<!-- wp:navigation {"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} /--></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"style":{"spacing":{"blockGap":"1.5rem"}}} -->
@@ -56,7 +56,7 @@
 <h3 class="has-medium-font-size">About</h3>
 <!-- /wp:heading -->
 
-<!-- wp:navigation {"ref":85,"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} /--></div>
+<!-- wp:navigation {"overlayMenu":"never","overlayTextColor":"foreground","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.5rem"}}} /--></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 

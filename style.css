@@ -83,6 +83,20 @@ a:active {
     .site-logo-title {
         display:none
     }
+
+	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation-item, 
+	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container, 
+	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-page-list {
+		align-items: flex-start !important;
+	}
+}
+
+ @media (max-width: 600px) {
+	.has-modal-open .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation-item, 
+	.has-modal-open .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container, 
+	.has-modal-open .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-page-list {
+		align-items: flex-start !important;
+	}
 }
 
 .wp-block-navigation__responsive-container.has-modal-open.is-menu-open .site-logo-title {

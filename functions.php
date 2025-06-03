@@ -205,3 +205,38 @@ add_action( 'wp_enqueue_scripts', 'extendable_enqueue_dynamic_duotone_css' );
 	return $templates;
 }
 add_filter( 'get_block_templates', 'extendable_exclude_wc_block_templates', 10, 2 );
+
+/**
+ * Navigation customizations
+ *
+ * @package Extendable
+ * @since Extendable 2.0.23
+ */
+if ( ! function_exists( 'extendable_enqueue_navigation_customizations' ) ) :
+	/**
+	 * Enqueue the JS that fetches logo & site title to customize the mobile navigation.
+	 *
+	 */
+	function extendable_enqueue_navigation_customizations() {
+
+		$logo_id   = get_theme_mod( 'custom_logo' );
+    	$logo_url  = $logo_id ? wp_get_attachment_image_url( $logo_id, 'full' ) : '';
+    	$site_title = get_bloginfo( 'name' );
+
+		wp_enqueue_script(
+			'extendable-navigation_customizations',
+			get_template_directory_uri() . '/assets/js/navigation-customization.js',
+			array(),   // no dependencies; add 'wp-interactivity' if you switch back to that version
+			null,
+			true        // load in footer
+		);
+
+		wp_localize_script( 'extendable-navigation_customizations', 'ExtendableNavData', 
+			array(
+        		'logoUrl'   => $logo_url,
+        		'siteTitle' => $site_title,
+    		) 
+		);
+	}
+endif;
+add_action( 'wp_enqueue_scripts', 'extendable_enqueue_navigation_customizations' );

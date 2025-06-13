@@ -37,12 +37,16 @@
 				}
 			],
 			"palette": [
-				{"slug": "background", "color": "#F3EFEC", "name": "Background"},
-				{"slug": "foreground", "color": "#171511", "name": "Foreground"},
-				{"slug": "primary", "color": "#7A2812", "name": "Primary"},
-				{"slug": "secondary", "color": "#3D4235", "name": "Secondary"},
-				{"slug": "tertiary", "color": "#E2E1DD", "name": "Tertiary"},
-				{"slug": "foreground-alt", "color": "#090703", "name": "Foreground Alt"}
+				{ "slug": "background", "color": "#F3EFEC", "name": "Background" },
+				{ "slug": "foreground", "color": "#171511", "name": "Foreground" },
+				{ "slug": "primary", "color": "#7A2812", "name": "Primary" },
+				{ "slug": "secondary", "color": "#3D4235", "name": "Secondary" },
+				{ "slug": "tertiary", "color": "#E2E1DD", "name": "Tertiary" },
+				{
+					"slug": "foreground-alt",
+					"color": "#090703",
+					"name": "Foreground Alt"
+				}
 			]
 		}
 	},

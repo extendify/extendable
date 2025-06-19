@@ -1,0 +1,80 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Gold",
+	"version": 3,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#F9D548", "#ECB92E"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#F9D548", "#1E2329"],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				},
+				{
+					"colors": ["#ECB92E", "#F9D548"],
+					"slug": "secondary-and-primary",
+					"name": "Secondary and primary"
+				},
+				{
+					"colors": ["#EAECEF", "#181A20"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#F9D548", "#EAECEF"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				},
+				{
+					"colors": ["#181A20", "#1E2329"],
+					"slug": "background-tertiary",
+					"name": "Background and Background Alt"
+				}
+			],
+			"palette": [
+				{ "slug": "foreground", "color": "#EAECEF", "name": "Foreground" },
+				{ "slug": "background", "color": "#181A20", "name": "Background" },
+				{ "slug": "primary", "color": "#F9D548", "name": "Primary" },
+				{ "slug": "secondary", "color": "#ECB92E", "name": "Secondary" },
+				{ "slug": "tertiary", "color": "#1E2329", "name": "Tertiary" },
+				{
+					"slug": "foreground-alt",
+					"color": "#EAECEF",
+					"name": "Foreground Alt"
+				}
+			]
+		},
+		"custom": {
+			"elements": {
+				"button": {
+					"border": {
+						"radius": "0.375rem"
+					}
+				}
+			}
+		}
+	},
+	"styles": {
+		"elements": {
+			"h1": { "typography": { "fontWeight": "500" } },
+			"h2": { "typography": { "fontWeight": "500" } },
+			"h3": { "typography": { "fontWeight": "500" } },
+			"h4": { "typography": { "fontWeight": "500" } },
+			"h5": { "typography": { "fontWeight": "500" } },
+			"h6": { "typography": { "fontWeight": "500" } },
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--marcellus)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--karla)"
+		}
+	}
+}

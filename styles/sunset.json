@@ -1,0 +1,78 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Sunset",
+	"version": 3,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#F88149", "#B3B1DF"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#F88149", "#191A1A"],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				},
+				{
+					"colors": ["#B3B1DF", "#F88149"],
+					"slug": "secondary-and-primary",
+					"name": "Secondary and primary"
+				},
+				{
+					"colors": ["#F4E0D9", "#000000"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#F88149", "#F4E0D9"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				},
+				{
+					"colors": ["#000000", "#191A1A"],
+					"slug": "background-tertiary",
+					"name": "Background and Background Alt"
+				}
+			],
+			"palette": [
+				{ "slug": "foreground", "color": "#F4E0D9", "name": "Foreground" },
+				{ "slug": "background", "color": "#000000", "name": "Background" },
+				{ "slug": "primary", "color": "#F88149", "name": "Primary" },
+				{ "slug": "secondary", "color": "#B3B1DF", "name": "Secondary" },
+				{ "slug": "tertiary", "color": "#191A1A", "name": "Tertiary" },
+				{
+					"slug": "foreground-alt",
+					"color": "#191A1A",
+					"name": "Foreground Alt"
+				}
+			]
+		},
+		"custom": {
+			"elements": {
+				"button": {
+					"border": { "radius": "0.375rem" }
+				}
+			}
+		}
+	},
+	"styles": {
+		"elements": {
+			"h1": { "typography": { "fontWeight": "500" } },
+			"h2": { "typography": { "fontWeight": "500" } },
+			"h3": { "typography": { "fontWeight": "500" } },
+			"h4": { "typography": { "fontWeight": "500" } },
+			"h5": { "typography": { "fontWeight": "500" } },
+			"h6": { "typography": { "fontWeight": "500" } },
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--marcellus)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--radio-canada)"
+		}
+	}
+}

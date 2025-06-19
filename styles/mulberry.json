@@ -1,0 +1,78 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Mulberry",
+	"version": 3,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#772F48", "#3D3828"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#772F48", "#DADAD1"],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				},
+				{
+					"colors": ["#3D3828", "#772F48"],
+					"slug": "secondary-and-primary",
+					"name": "Secondary and primary"
+				},
+				{
+					"colors": ["#0F0814", "#F6F1EE"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#772F48", "#0F0814"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				},
+				{
+					"colors": ["#F6F1EE", "#DADAD1"],
+					"slug": "background-tertiary",
+					"name": "Background and Background Alt"
+				}
+			],
+			"palette": [
+				{ "slug": "foreground", "color": "#0F0814", "name": "Foreground" },
+				{ "slug": "background", "color": "#F6F1EE", "name": "Background" },
+				{ "slug": "primary", "color": "#772F48", "name": "Primary" },
+				{ "slug": "secondary", "color": "#3D3828", "name": "Secondary" },
+				{ "slug": "tertiary", "color": "#DADAD1", "name": "Tertiary" },
+				{
+					"slug": "foreground-alt",
+					"color": "#0F0814",
+					"name": "Foreground Alt"
+				}
+			]
+		},
+		"custom": {
+			"elements": {
+				"button": {
+					"border": { "radius": "0.375rem" }
+				}
+			}
+		}
+	},
+	"styles": {
+		"elements": {
+			"h1": { "typography": { "fontWeight": "500" } },
+			"h2": { "typography": { "fontWeight": "500" } },
+			"h3": { "typography": { "fontWeight": "500" } },
+			"h4": { "typography": { "fontWeight": "500" } },
+			"h5": { "typography": { "fontWeight": "500" } },
+			"h6": { "typography": { "fontWeight": "500" } },
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--gotu)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--ibm-plex-sans)"
+		}
+	}
+}

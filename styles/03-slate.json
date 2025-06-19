@@ -1,0 +1,78 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Slate",
+	"version": 3,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#292928", "#40403E"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#292928", "#DBDBD0"],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				},
+				{
+					"colors": ["#40403E", "#292928"],
+					"slug": "secondary-and-primary",
+					"name": "Secondary and primary"
+				},
+				{
+					"colors": ["#43413F", "#EFEEE7"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#292928", "#43413F"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				},
+				{
+					"colors": ["#EFEEE7", "#DBDBD0"],
+					"slug": "background-tertiary",
+					"name": "Background and Background Alt"
+				}
+			],
+			"palette": [
+				{ "slug": "foreground", "color": "#43413F", "name": "Foreground" },
+				{ "slug": "background", "color": "#EFEEE7", "name": "Background" },
+				{ "slug": "primary", "color": "#292928", "name": "Primary" },
+				{ "slug": "secondary", "color": "#40403E", "name": "Secondary" },
+				{ "slug": "tertiary", "color": "#DBDBD0", "name": "Tertiary" },
+				{
+					"slug": "foreground-alt",
+					"color": "#43413F",
+					"name": "Foreground Alt"
+				}
+			]
+		},
+		"custom": {
+			"elements": {
+				"button": {
+					"border": { "radius": "20rem" }
+				}
+			}
+		}
+	},
+	"styles": {
+		"elements": {
+			"h1": { "typography": { "fontWeight": "500" } },
+			"h2": { "typography": { "fontWeight": "500" } },
+			"h3": { "typography": { "fontWeight": "500" } },
+			"h4": { "typography": { "fontWeight": "500" } },
+			"h5": { "typography": { "fontWeight": "500" } },
+			"h6": { "typography": { "fontWeight": "500" } },
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--geom)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--heebo)"
+		}
+	}
+}

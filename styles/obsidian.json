@@ -1,0 +1,94 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Obsidian",
+	"version": 3,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#111111", "#333333"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#111111", "#F9D9A7"],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				},
+				{
+					"colors": ["#333333", "#111111"],
+					"slug": "secondary-and-primary",
+					"name": "Secondary and primary"
+				},
+				{
+					"colors": ["#000000", "#F8F4EC"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#111111", "#000000"],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				},
+				{
+					"colors": ["#F8F4EC", "#F9D9A7"],
+					"slug": "background-tertiary",
+					"name": "Background and Background Alt"
+				}
+			],
+			"palette": [
+				{ "slug": "foreground", "color": "#000000", "name": "Foreground" },
+				{ "slug": "background", "color": "#F8F4EC", "name": "Background" },
+				{ "slug": "primary", "color": "#111111", "name": "Primary" },
+				{ "slug": "secondary", "color": "#333333", "name": "Secondary" },
+				{ "slug": "tertiary", "color": "#F9D9A7", "name": "Tertiary" },
+				{
+					"slug": "foreground-alt",
+					"color": "#000000",
+					"name": "Foreground Alt"
+				}
+			]
+		},
+		"custom": {
+			"elements": {
+				"button": {
+					"border": { "radius": "0" },
+					"color": {
+						"background": "#FEB854",
+						"text": "var(--wp--preset--color--foreground)"
+					},
+					":hover": {
+						"color": {
+							"background": "var(--wp--preset--color--foreground)",
+							"text": "var(--wp--preset--color--background)"
+						}
+					},
+					":focus": {
+						"color": {
+							"background": "#FEB854",
+							"text": "var(--wp--preset--color--background)"
+						}
+					}
+				}
+			}
+		}
+	},
+	"styles": {
+		"elements": {
+			"h1": { "typography": { "fontWeight": "500" } },
+			"h2": { "typography": { "fontWeight": "500" } },
+			"h3": { "typography": { "fontWeight": "500" } },
+			"h4": { "typography": { "fontWeight": "500" } },
+			"h5": { "typography": { "fontWeight": "500" } },
+			"h6": { "typography": { "fontWeight": "500" } },
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--radio-canada)"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--manrope)"
+		}
+	}
+}

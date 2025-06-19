@@ -1,0 +1,65 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Mulberry",
+	"version": 3,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#772F48", "#3D3828"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#772F48", "#DADAD1"],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				},
+				{
+					"colors": ["#3D3828", "#772F48"],
+					"slug": "secondary-and-primary",
+					"name": "Secondary and primary"
+				},
+				{
+					"colors": ["#0F0814", "#F6F1EE"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#772F48", "#0F0814"],
+					"slug": "Primary and Foreground",
+					"name": "Primary and Foreground"
+				},
+				{
+					"colors": ["#F6F1EE", "#DADAD1"],
+					"slug": "Background and Background Alt",
+					"name": "Background and Background Alt"
+				}
+			],
+			"palette": [
+				{ "slug": "background", "color": "#F6F1EE", "name": "Background" },
+				{ "slug": "foreground", "color": "#0F0814", "name": "Foreground" },
+				{ "slug": "primary", "color": "#772F48", "name": "Primary" },
+				{ "slug": "secondary", "color": "#3D3828", "name": "Secondary" },
+				{ "slug": "tertiary", "color": "#DADAD1", "name": "Tertiary" },
+				{
+					"slug": "foreground-alt",
+					"color": "#0F0814",
+					"name": "Foreground Alt"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"text": "var(--wp--preset--color--foreground-alt)"
+		},
+		"elements": {
+			"heading": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				}
+			}
+		}
+	}
+}

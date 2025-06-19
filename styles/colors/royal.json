@@ -1,0 +1,65 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"title": "Royal",
+	"version": 3,
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": ["#FFDA5A", "#F1F1F1"],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": ["#FFDA5A", "#4E6CCA"],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				},
+				{
+					"colors": ["#F1F1F1", "#FFDA5A"],
+					"slug": "secondary-and-primary",
+					"name": "Secondary and primary"
+				},
+				{
+					"colors": ["#FFFFFF", "#243B8C"],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": ["#FFDA5A", "#FFFFFF"],
+					"slug": "Primary and Foreground",
+					"name": "Primary and Foreground"
+				},
+				{
+					"colors": ["#243B8C", "#4E6CCA"],
+					"slug": "Background and Background Alt",
+					"name": "Background and Background Alt"
+				}
+			],
+			"palette": [
+				{ "slug": "background", "color": "#243B8C", "name": "Background" },
+				{ "slug": "foreground", "color": "#FFFFFF", "name": "Foreground" },
+				{ "slug": "primary", "color": "#FFDA5A", "name": "Primary" },
+				{ "slug": "secondary", "color": "#F1F1F1", "name": "Secondary" },
+				{ "slug": "tertiary", "color": "#4E6CCA", "name": "Tertiary" },
+				{
+					"slug": "foreground-alt",
+					"color": "#FFFFFF",
+					"name": "Foreground Alt"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"text": "var(--wp--preset--color--foreground-alt)"
+		},
+		"elements": {
+			"heading": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				}
+			}
+		}
+	}
+}

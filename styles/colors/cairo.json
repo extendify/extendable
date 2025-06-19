@@ -64,15 +64,5 @@
 				}
 			]
 		}
-	},
-	"styles": {
-		"blocks": {
-			"core/pullquote": {
-				"border": {
-					"color": "var(--wp--preset--color--primary)",
-					"width": "2px 0"
-				}
-			}
-		}
 	}
 }

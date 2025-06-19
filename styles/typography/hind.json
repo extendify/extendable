@@ -4,13 +4,6 @@
 	"version": 3,
 	"slug": "hind",
 	"styles": {
-		"blocks": {
-			"core/separator": {
-				"color": {
-					"text": "var(--wp--preset--color--primary)"
-				}
-			}
-		},
 		"elements": {
 			"h1": {
 				"typography": {

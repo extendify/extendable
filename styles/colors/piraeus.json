@@ -95,8 +95,7 @@
 		"blocks": {
 			"core/pullquote": {
 				"border": {
-					"color": "var(--wp--preset--color--primary)",
-					"width": "6px 0"
+					"color": "var(--wp--preset--color--primary)"
 				}
 			}
 		}

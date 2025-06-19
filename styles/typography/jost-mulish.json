@@ -36,9 +36,6 @@
 				}
 			},
 			"heading": {
-				"color": {
-					"text": "var(--wp--preset--color--foreground)"
-				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--jost)"
 				}

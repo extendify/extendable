@@ -258,3 +258,25 @@ if ( ! function_exists( 'extendable_enqueue_navigation_customizations' ) ) :
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'extendable_enqueue_navigation_customizations' );
+
+/**
+ * Force the block editor to use page-with-title
+ * as the default template for new Pages.
+ *
+ * @since Extendable 2.0.24
+ * @return void
+ */
+add_action( 'enqueue_block_editor_assets', function () {
+    $screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+
+    if ( $screen && $screen->is_block_editor() && 'page' === $screen->post_type ) {
+        wp_enqueue_script(
+            'extendable-default-page-template',
+            get_template_directory_uri() . '/assets/js/default-page-template.js',
+            array( 'wp-data', 'wp-editor' ),
+            EXTENDABLE_THEME_VERSION,
+            true
+        );
+    }
+} );
+

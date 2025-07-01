@@ -13,6 +13,9 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.25 - 2025-07-01 =
+- Fix update issue
+
 = 2.0.24 - 2025-07-01 =
 - New: Added new style variations
 - New: Introduced a new page template: page-with-title

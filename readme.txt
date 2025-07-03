@@ -13,8 +13,8 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
-= 2.0.26 - 2025-07-04 =  
-Change: Method of setting default template for new pages
+= 2.0.26 - 2025-07-04 =
+- Change: Method of setting default template for new pages
 
 = 2.0.25 - 2025-07-01 =
 - Fix update issue

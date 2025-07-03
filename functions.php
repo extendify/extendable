@@ -266,17 +266,24 @@ add_action( 'wp_enqueue_scripts', 'extendable_enqueue_navigation_customizations'
  * @since Extendable 2.0.24
  * @return void
  */
-add_action( 'enqueue_block_editor_assets', function () {
-    $screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+function extendable_set_default_template_for_new_pages( WP_REST_Response $response, WP_Post $post ) {
+	
+	if ( 'page' !== $post->post_type ) {
+		return $response;
+	}
+	
+	if ( 'auto-draft' !== $post->post_status ) {
+		return $response;
+	}
 
-    if ( $screen && $screen->is_block_editor() && 'page' === $screen->post_type ) {
-        wp_enqueue_script(
-            'extendable-default-page-template',
-            get_template_directory_uri() . '/assets/js/default-page-template.js',
-            array( 'wp-data', 'wp-editor' ),
-            EXTENDABLE_THEME_VERSION,
-            true
-        );
-    }
-} );
+	$current_template = isset( $response->data['template'] ) ? $response->data['template'] : '';
 
+	if ( ! empty( $current_template ) && 'page' !== $current_template ) {
+		return $response;
+	}
+
+	$response->data['template'] = 'page-with-title';
+
+	return $response;
+}
+add_filter( 'rest_prepare_page', 'extendable_set_default_template_for_new_pages', 10, 2 );

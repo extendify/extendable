@@ -88,15 +88,6 @@
 							"text": "var(--wp--preset--color--background)"
 						}
 					}
-				},
-				"input": {
-					"border": {
-						"color": "var(--wp--preset--color--foreground)"
-					},
-					"color": {
-						"background": "var(--wp--preset--color--background)",
-						"text": "var(--wp--preset--color--foreground)"
-					}
 				}
 			}
 		}

@@ -1,6 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"title": "Mulberry",
+	"slug": "mulberry",
 	"version": 3,
 	"settings": {
 		"color": {

@@ -1,6 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"title": "Rosewood",
+	"slug": "rosewood",
 	"version": 3,
 	"settings": {
 		"color": {

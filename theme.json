@@ -1152,6 +1152,16 @@
 			"name": "footer-with-site-description-and-menu",
 			"title": "Footer with Site Description and Menu",
 			"area": "footer"
+		},
+		{
+			"name": "footer-with-nav",
+			"title": "Footer with Menu",
+			"area": "footer"
+		},
+		{
+			"name": "footer-with-center-logo-social-nav",
+			"title": "Footer with Center Logo, Social, and Menu",
+			"area": "footer"
 		}
 	]
 }

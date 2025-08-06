@@ -1,6 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"title": "Lime",
+	"slug": "lime",
 	"version": 3,
 	"settings": {
 		"color": {

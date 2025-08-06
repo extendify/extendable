@@ -1,6 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"title": "Royal",
+	"slug": "royal",
 	"version": 3,
 	"settings": {
 		"color": {

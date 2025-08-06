@@ -1,6 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"title": "Kampala",
+	"slug": "kampala",
 	"version": 3,
 	"settings": {
 		"color": {
@@ -98,6 +99,9 @@
 					"fontFamily": "var(--wp--preset--font-family--hind)"
 				}
 			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--inter)"
 		}
 	}
 }

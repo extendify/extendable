@@ -27,7 +27,7 @@
 				},
 				{
 					"colors": ["#F88149", "#F4E0D9"],
-					"slug": "Primary and Foreground",
+					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
@@ -44,10 +44,32 @@
 				{ "slug": "tertiary", "color": "#191A1A", "name": "Tertiary" },
 				{
 					"slug": "foreground-alt",
-					"color": "#191A1A",
+					"color": "#F4E0D9",
 					"name": "Foreground Alt"
 				}
 			]
+		},
+		"custom": {
+			"elements": {
+				"button": {
+					"color": {
+						"background": "var(--wp--preset--color--primary)",
+						"text": "var(--wp--preset--color--background)"
+					},
+					":hover": {
+						"color": {
+							"background": "var(--wp--preset--color--foreground)",
+							"text": "var(--wp--preset--color--background)"
+						}
+					},
+					":focus": {
+						"color": {
+							"background": "var(--wp--preset--color--primary)",
+							"text": "var(--wp--preset--color--background)"
+						}
+					}
+				}
+			}
 		}
 	},
 	"styles": {

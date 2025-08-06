@@ -71,8 +71,35 @@
 					"slug": "tertiary",
 					"color": "#2d3f47",
 					"name": "Background Alt"
+				},
+				{
+					"slug": "foreground-alt",
+					"color": "#f7fafc",
+					"name": "Foreground Alt"
 				}
 			]
+		},
+		"custom": {
+			"elements": {
+				"button": {
+					"color": {
+						"background": "var(--wp--preset--color--primary)",
+						"text": "var(--wp--preset--color--background)"
+					},
+					":hover": {
+						"color": {
+							"background": "var(--wp--preset--color--foreground)",
+							"text": "var(--wp--preset--color--background)"
+						}
+					},
+					":focus": {
+						"color": {
+							"background": "var(--wp--preset--color--primary)",
+							"text": "var(--wp--preset--color--background)"
+						}
+					}
+				}
+			}
 		}
 	}
 }

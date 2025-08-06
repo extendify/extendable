@@ -71,6 +71,11 @@
 					"slug": "tertiary",
 					"color": "#2d3f47",
 					"name": "Background Alt"
+				},
+				{
+					"slug": "foreground-alt",
+					"color": "#f7fafc",
+					"name": "Foreground Alt"
 				}
 			]
 		},

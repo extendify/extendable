@@ -27,7 +27,7 @@
 				},
 				{
 					"colors": ["#111111", "#000000"],
-					"slug": "Primary and Foreground",
+					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
@@ -48,6 +48,28 @@
 					"name": "Foreground Alt"
 				}
 			]
+		},
+		"custom": {
+			"elements": {
+				"button": {
+					"color": {
+						"background": "#FEB854",
+						"text": "var(--wp--preset--color--foreground)"
+					},
+					":hover": {
+						"color": {
+							"background": "var(--wp--preset--color--foreground)",
+							"text": "var(--wp--preset--color--background)"
+						}
+					},
+					":focus": {
+						"color": {
+							"background": "#FEB854",
+							"text": "var(--wp--preset--color--background)"
+						}
+					}
+				}
+			}
 		}
 	},
 	"styles": {

@@ -11,7 +11,7 @@
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#832422", "#F9E6F4"],
+					"colors": ["#832422", "#FFDAEC"],
 					"slug": "primary-and-tertiary",
 					"name": "Primary and tertiary"
 				},
@@ -27,11 +27,11 @@
 				},
 				{
 					"colors": ["#832422", "#844955"],
-					"slug": "Primary and Foreground",
+					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
-					"colors": ["#FBE6F6", "#F9E6F4"],
+					"colors": ["#FBE6F6", "#FFDAEC"],
 					"slug": "Background and Background Alt",
 					"name": "Background and Background Alt"
 				}
@@ -41,13 +41,35 @@
 				{ "slug": "foreground", "color": "#844955", "name": "Foreground" },
 				{ "slug": "primary", "color": "#832422", "name": "Primary" },
 				{ "slug": "secondary", "color": "#744F39", "name": "Secondary" },
-				{ "slug": "tertiary", "color": "#F9E6F4", "name": "Tertiary" },
+				{ "slug": "tertiary", "color": "#FFDAEC", "name": "Tertiary" },
 				{
 					"slug": "foreground-alt",
 					"color": "#703055",
 					"name": "Foreground Alt"
 				}
 			]
+		},
+		"custom": {
+			"elements": {
+				"button": {
+					"color": {
+						"background": "var(--wp--preset--color--primary)",
+						"text": "var(--wp--preset--color--background)"
+					},
+					":hover": {
+						"color": {
+							"background": "var(--wp--preset--color--foreground)",
+							"text": "var(--wp--preset--color--background)"
+						}
+					},
+					":focus": {
+						"color": {
+							"background": "var(--wp--preset--color--primary)",
+							"text": "var(--wp--preset--color--background)"
+						}
+					}
+				}
+			}
 		}
 	},
 	"styles": {

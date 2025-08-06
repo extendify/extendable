@@ -13,6 +13,11 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.27 - 2025-08-06 =
+- Fix: Issues related to color presets
+- Change: Improved default word-break wrapping
+- New: Added two new footers - footer-with-nav and footer-with-center-logo-social-nav
+
 = 2.0.26 - 2025-07-04 =
 - Change: Method of setting default template for new pages
 

@@ -260,14 +260,13 @@ endif;
 add_action( 'wp_enqueue_scripts', 'extendable_enqueue_navigation_customizations' );
 
 /**
- * Force the block editor to use page-with-title
- * as the default template for new Pages.
+ * Set default template for new pages in the block editor (auto-drafts)
  *
  * @since Extendable 2.0.26
  * @return void
  */
-function extendable_set_default_template_for_new_pages( WP_REST_Response $response, WP_Post $post ) {
-	
+function extendable_set_default_template_for_auto_drafts( WP_REST_Response $response, WP_Post $post ) {
+
 	if ( 'page' !== $post->post_type ) {
 		return $response;
 	}
@@ -286,4 +285,36 @@ function extendable_set_default_template_for_new_pages( WP_REST_Response $respon
 
 	return $response;
 }
-add_filter( 'rest_prepare_page', 'extendable_set_default_template_for_new_pages', 10, 2 );
+add_filter( 'rest_prepare_page', 'extendable_set_default_template_for_auto_drafts', 10, 2 );
+ 
+/**
+ * Set default template for new pages when saved/published
+ *
+ * @since Extendable 2.0.28
+ * @param int     $post_id Post ID.
+ * @param WP_Post $post    Post object.
+ * @param bool    $update  Whether this is an existing post being updated.
+ * @return void
+ */
+function extendable_set_default_template_for_new_pages( $post_id, $post, $update ) {
+
+	if ( 'page' !== $post->post_type ) {
+		return;
+	}
+
+	if ( $update ) {
+		return;
+	}
+
+	if ( 'revision' === $post->post_status ) {
+		return;
+	}
+
+	$current_template = get_page_template_slug( $post_id );
+    
+	// If no template is set or it's the default template, set our default
+	if ( empty( $current_template ) || 'page' === $current_template ) {
+		update_post_meta( $post_id, '_wp_page_template', 'page-with-title' );
+	}
+}
+add_action( 'wp_insert_post', 'extendable_set_default_template_for_new_pages', 10, 3 );

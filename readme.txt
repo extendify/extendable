@@ -13,6 +13,9 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.29 - 2025-09-09 =
+- Fix: WPForms compatibility with updated CSS variable system to properly inherit theme styling
+
 = 2.0.28 - 2025-08-16 =
 - Fix: Default page template now properly persists when publishing pages
 

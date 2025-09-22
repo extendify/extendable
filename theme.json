@@ -111,7 +111,11 @@
 					"slug": "diagonal-background-to-tertiary",
 					"gradient": "linear-gradient(to bottom right,var(--wp--preset--color--background) 50%,var(--wp--preset--color--tertiary) 50%)",
 					"name": "Diagonal background to tertiary"
-				}
+				}, {
+          "slug": "hero-soft-red",
+          "name": "Hero • Soft Red Glow",
+          "gradient": "radial-gradient(circle at center, rgba(255,211,182,1) 0%, rgba(255,170,165,0.9) 40%, rgba(252,136,123,0.7) 65%, rgba(255,104,104,0.4) 85%, rgba(255,104,104,0) 100%)"
+        }
 			],
 			"palette": [
 				{

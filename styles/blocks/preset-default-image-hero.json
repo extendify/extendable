@@ -1,0 +1,11 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+	"version": 3,
+	"title": "Default Image Hero",
+	"slug": "preset-default-image-hero",
+	"blockTypes": ["core/image"],	"styles": {
+		"border": {
+			"radius": "0px"
+		}
+	}
+}

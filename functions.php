@@ -104,14 +104,14 @@ function extendable_enqueue_block_styles() {
 		);
 	}
 
-	if ( has_block( 'wpforms/form-selector' ) ) {
-		wp_enqueue_style(
-			'extendable-wpforms-style',
-			get_template_directory_uri() . '/assets/css/wpforms.css',
-			array(),
-			EXTENDABLE_THEME_VERSION
-		);
-	}
+	// if ( has_block( 'wpforms/form-selector' ) ) {
+	// 	wp_enqueue_style(
+	// 		'extendable-wpforms-style',
+	// 		get_template_directory_uri() . '/assets/css/wpforms.css',
+	// 		array(),
+	// 		EXTENDABLE_THEME_VERSION
+	// 	);
+	// }
 }
 
 add_action( 'enqueue_block_assets', 'extendable_enqueue_block_styles' );

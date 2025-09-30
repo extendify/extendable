@@ -20,6 +20,9 @@
 					"fontFamily": "var(--wp--preset--font-family--hind)"
 				}
 			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--hind)"
 		}
 	}
 }

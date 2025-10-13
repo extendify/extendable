@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Organic 1 Content Below of Image",
+	"slug": "ext-preset--image--organic-1--image-1--content-bottom",
+	"blockTypes": ["core/image", "core/cover"],
+	"styles": {
+		"border": {
+			"radius": {
+				"topLeft": "9999px",
+				"topRight": "9999px",
+				"bottomRight": "0",
+				"bottomLeft": "0"
+			}
+		}
+	}
+}

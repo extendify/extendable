@@ -111,11 +111,12 @@
 					"slug": "diagonal-background-to-tertiary",
 					"gradient": "linear-gradient(to bottom right,var(--wp--preset--color--background) 50%,var(--wp--preset--color--tertiary) 50%)",
 					"name": "Diagonal background to tertiary"
-				}, {
-          "slug": "hero-soft-red",
-          "name": "Hero • Soft Red Glow",
-          "gradient": "radial-gradient(circle at center, rgba(255,211,182,1) 0%, rgba(255,170,165,0.9) 40%, rgba(252,136,123,0.7) 65%, rgba(255,104,104,0.4) 85%, rgba(255,104,104,0) 100%)"
-        }
+				},
+				{
+					"slug": "hero-soft-red",
+					"name": "Hero • Soft Red Glow",
+					"gradient": "radial-gradient(circle at center, rgba(255,211,182,1) 0%, rgba(255,170,165,0.9) 40%, rgba(252,136,123,0.7) 65%, rgba(255,104,104,0.4) 85%, rgba(255,104,104,0) 100%)"
+				}
 			],
 			"palette": [
 				{
@@ -240,39 +241,39 @@
 			"defaultSpacingSizes": false,
 			"spacingSizes": [
 				{
-					"size": "1rem",
 					"slug": "20",
-					"name": "0.9"
+					"name": "X-Small",
+					"size": "1rem"
 				},
 				{
-					"size": "min(2rem, 5vw)",
 					"slug": "30",
-					"name": "1"
+					"name": "Small",
+					"size": "clamp(1.5rem, 6vw, 2rem)"
 				},
 				{
-					"size": "min(3rem, 6vw)",
 					"slug": "40",
-					"name": "2"
+					"name": "Medium",
+					"size": "clamp(2rem, 8vw, 3rem)"
 				},
 				{
-					"size": "min(4rem, 7vw)",
 					"slug": "50",
-					"name": "3"
+					"name": "Large",
+					"size": "clamp(2.5rem, 8vw, 4rem)"
 				},
 				{
-					"size": "min(6rem, 8vw)",
+					"slug": "55",
+					"name": "X-Large",
+					"size": "clamp(3rem, 12vw, 5rem)"
+				},
+				{
 					"slug": "60",
-					"name": "4"
+					"name": "XX-Large",
+					"size": "clamp(3.5rem, 10vw, 6rem)"
 				},
 				{
-					"size": "min(7rem, 10vw)",
 					"slug": "70",
-					"name": "5"
-				},
-				{
-					"size": "min(8rem, 12vw)",
-					"slug": "80",
-					"name": "6"
+					"name": "Huge",
+					"size": "clamp(4rem, 15vw, 7rem)"
 				}
 			],
 			"units": ["%", "px", "em", "rem", "vh", "vw"]
@@ -759,6 +760,20 @@
 				}
 			],
 			"writingMode": true
+		},
+		"shadow": {
+			"presets": [
+				{
+					"name": "Brutalism",
+					"slug": "brutalism",
+					"shadow": "6px 6px 0 var(--wp--preset--color--foreground)"
+				},
+				{
+					"name": "Brutalism Small",
+					"slug": "brutalism-small",
+					"shadow": "4px 4px 0 var(--wp--preset--color--foreground)"
+				}
+			]
 		},
 		"useRootPaddingAwareAlignments": true
 	},

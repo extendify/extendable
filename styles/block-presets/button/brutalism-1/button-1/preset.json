@@ -1,0 +1,13 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Brutalism 1 Button 1",
+	"slug": "ext-preset--button--brutalism-1--button-1",
+	"blockTypes": ["core/button"],
+	"styles": {
+		"border": {
+			"radius": "16px"
+		},
+		"shadow": "var(--wp--preset--shadow--brutalism-small)"
+	}
+}

@@ -24,8 +24,7 @@ toplevelFiles=$(ls *.{txt,php,png,css})
 themeJson=$(ls theme.json)
 patterns=$(ls patterns/*.php)
 templates=$(ls templates/*.html)
-styles=$(ls styles/*.json)
-stylesPresets=$(ls styles/**/*.json)
+styles=$(find styles -name "*.json")
 parts=$(ls parts/*.html)
 assets=$(ls assets/css/*.css)
 fonts=$(ls assets/fonts/**/*.{woff2,txt})
@@ -39,7 +38,6 @@ zip -r ./build/extendable.zip \
 	$templates \
 	$parts \
 	$styles \
-	$stylesPresets \
 	$assets \
 	$fonts \
 	$tribeEvents \

@@ -31,6 +31,6 @@
 				}
 			}
 		},
-		"css": " & { overflow: hidden; },  & .wp-block-media-text__content { padding-right:0 !important; padding-left:0 !important; }"
+		"css": "& { overflow: hidden; height: 100%;} & .wp-block-media-text__content { padding-right:0 !important; padding-left:0 !important; }"
 	}
 }

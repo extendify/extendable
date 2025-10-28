@@ -1,106 +1,57 @@
-/* Override WPForms CSS Variables to match theme.json */
-.wpforms-block.wpforms-container {
-    /* Colors */
-    --wpforms-label-color: var(--wp--preset--color--foreground) !important;
-    --wpforms-label-sublabel-color: var(--wp--preset--color--foreground) !important;
-    --wpforms-label-error-color: #d63637 !important;
-    --wpforms-field-text-color: var(--wp--preset--color--foreground) !important;
-    --wpforms-field-background-color: var(--wp--preset--color--background) !important;
-    --wpforms-field-border-color: currentColor !important;
-    --wpforms-field-menu-color: var(--wp--preset--color--background) !important;
-    --wpforms-background-color: transparent !important;
-    
-    /* Button colors */
-    --wpforms-button-background-color: var(--wp--custom--elements--button--color--background) !important;
-    --wpforms-button-text-color: var(--wp--custom--elements--button--color--text) !important;
-    --wpforms-button-border-color: var(--wp--custom--elements--button--color--background) !important;
-    
-    /* Typography */
-    --wpforms-label-size-font-size: inherit !important;
-    --wpforms-label-size-line-height: var(--wp--custom--typography--line-height--body, 1.5) !important;
-    --wpforms-field-size-font-size: var(--wp--preset--font-size--medium, 1rem) !important;
-    --wpforms-field-size-line-height: var(--wp--custom--typography--line-height--body, 1.5) !important;
-    
-    /* Field sizing */
-    --wpforms-field-size-input-height: 48px !important;
-    --wpforms-field-size-input-spacing: 15px !important;
-    --wpforms-field-size-padding-h: calc(0.667em + 1px) !important;
-    --wpforms-field-size-checkbox-size: 16px !important;
-    --wpforms-field-size-sublabel-spacing: 5px !important;
-    --wpforms-field-size-icon-size: 1 !important;
-    
-    /* Label sizing */
-    --wpforms-label-size-sublabel-font-size: 14px !important;
-    --wpforms-label-size-sublabel-line-height: 17px !important;
-    
-    /* Button sizing */
-    --wpforms-button-size-font-size: var(--wp--preset--font-size--medium, 1rem) !important;
-    --wpforms-button-size-height: auto !important;
-    --wpforms-button-size-padding-h: calc(1.333em + 2px) !important;
-    --wpforms-button-size-margin-top: 1rem !important;
-    
-    /* Borders and spacing */ 
-    --wpforms-field-border-size: 1px !important;
-    --wpforms-field-border-style: solid !important;
-    --wpforms-container-padding: 0 !important;
-    
-    /* Button styling */
-    --wpforms-button-border-radius: var(--wp--custom--elements--button--border--radius) !important;
-    --wpforms-button-border-size: 0 !important;
-}
-
 .wpforms-block.wpforms-container .wpforms-field-label {
-    font-weight: inherit !important;
-    margin-bottom: 0.25em !important;
+	font-weight: inherit;
+	margin-bottom: 0.25em;
 }
-
 .wpforms-block input:where(:not([type="submit"]):not([type="checkbox"])) {
-    border: 1px solid !important;
-    line-height: inherit !important;
-    font-size: inherit !important;
+	border: 1px solid;
+	line-height: inherit;
+	font-size: inherit;
 }
-
 .wpforms-block input:where(:not([type="submit"]):not([type="checkbox"])),
 .wpforms-block textarea {
-    padding: calc(0.667em + 1px) !important;
-    width: 100% !important;
-    background-color: var(--wp--preset--color--background) !important;
-    color: var(--wp--preset--color--foreground) !important;
-    border-color: inherit !important;
+	padding: calc(0.667em + 1px);
+	width: 100%;
+	background-color: var(--wp--preset--color--background);
+	color: var(--wp--preset--color--foreground);
+	border-color: inherit;
 }
-
 .wpforms-field-sublabel {
-    opacity: 0.8 !important;
+	opacity: 0.8;
 }
 
 .wpforms-block button.wpforms-submit {
-    background-color: var(--wp--custom--elements--button--color--background) !important;
-    color: var(--wp--custom--elements--button--color--text) !important;
-    border-radius: var(--wp--custom--elements--button--border--radius) !important;
-    border-width: 0 !important;
-    font-family: inherit !important;
-    font-size: inherit !important;
-    font-weight: var(--wp--custom--typography--font-weight--medium) !important;
-    line-height: inherit !important;
-    padding-top: calc(0.667em + 2px) !important;
-    padding-right: calc(1.333em + 2px) !important;
-    padding-bottom: calc(0.667em + 2px) !important;
-    padding-left: calc(1.333em + 2px) !important;
-    height: auto !important;
-    text-decoration: none !important;
-    cursor: pointer !important;
+	background-color: var(--wp--custom--elements--button--color--background);
+	color: var(--wp--custom--elements--button--color--text);
+	border-radius: var(--wp--custom--elements--button--border--radius);
+	border-width: 0;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: var(--wp--custom--typography--font-weight--medium);
+	line-height: inherit;
+	padding-top: calc(0.667em + 2px);
+	padding-right: calc(1.333em + 2px);
+	padding-bottom: calc(0.667em + 2px);
+	padding-left: calc(1.333em + 2px);
+	text-decoration: none;
+	cursor: pointer;
+	margin-top: 1rem;
 }
 
 .wpforms-block button.wpforms-submit:hover {
-    background-color: var(--wp--custom--elements--button--hover--color--background) !important;
-    color: var(--wp--custom--elements--button--hover--color--text) !important;
+	background-color: var(
+		--wp--custom--elements--button--hover--color--background
+	);
+	color: var(--wp--custom--elements--button--hover--color--text);
 }
 
 .wpforms-block button.wpforms-submit:focus {
-    background-color: var(--wp--custom--elements--button--focus--color--background) !important;
-    color: var(--wp--custom--elements--button--focus--color--text) !important;
-    outline-color: var(--wp--custom--elements--button--focus--color--background) !important;
-    outline-offset: 2px !important;
-    outline-width: 2px !important;
-    outline-style: solid !important;
-} 
+	background-color: var(
+		--wp--custom--elements--button--focus--color--background
+	);
+	color: var(--wp--custom--elements--button--focus--color--text);
+	outline-color: var(--wp--custom--elements--button--focus--color--background);
+	offset: 2px;
+	outline-width: 2px;
+	outline-offset: 2px;
+	outline-style: solid;
+}

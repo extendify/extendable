@@ -1,22 +1,21 @@
 {
 	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
 	"version": 3,
-	"title": "Natural 1 Item Card 1 Align Center",
-	"slug": "ext-preset--group--natural-1--item-card-1--align-center",
+	"title": "Item Card 1",
+	"slug": "ext-preset-group-natural-1-item-card-1",
 	"blockTypes": ["core/group"],
 	"styles": {
 		"blocks": {
 			"core/group": {
 				"spacing": {
 					"margin": {
-						"top": "var:preset|spacing|30"
+						"top": "16px"
 					}
 				}
 			},
 			"core/heading": {
 				"typography": {
-					"fontSize": "1.5rem",
-					"textAlign": "center"
+					"fontSize": "1.5rem"
 				},
 				"spacing": {
 					"margin": {
@@ -26,8 +25,7 @@
 			},
 			"core/paragraph": {
 				"typography": {
-					"fontSize": "var:preset|font-size|small",
-					"textAlign": "center"
+					"fontSize": "var:preset|font-size|small"
 				},
 				"spacing": {
 					"margin": {

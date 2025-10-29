@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
 	"version": 3,
-	"title": "Natural 1 Item Card 1",
+	"title": "Item Card 1",
 	"slug": "ext-preset--media-text--natural-1--card-1",
 	"blockTypes": ["core/media-text"],
 	"styles": {

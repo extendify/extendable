@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
 	"version": 3,
-	"title": "Natural 1 Overlay 1",
+	"title": "Overlay 1",
 	"slug": "ext-preset--cover--natural-1--cover-overlay-1",
 	"blockTypes": ["core/cover"],
 	"styles": {

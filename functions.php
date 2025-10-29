@@ -104,14 +104,14 @@ function extendable_enqueue_block_styles() {
 		);
 	}
 
-	// if ( has_block( 'wpforms/form-selector' ) ) {
-	// 	wp_enqueue_style(
-	// 		'extendable-wpforms-style',
-	// 		get_template_directory_uri() . '/assets/css/wpforms.css',
-	// 		array(),
-	// 		EXTENDABLE_THEME_VERSION
-	// 	);
-	// }
+	if ( has_block( 'wpforms/form-selector' ) ) {
+		wp_enqueue_style(
+			'extendable-wpforms-style',
+			get_template_directory_uri() . '/assets/css/wpforms.css',
+			array(),
+			EXTENDABLE_THEME_VERSION
+		);
+	}
 }
 
 add_action( 'enqueue_block_assets', 'extendable_enqueue_block_styles' );
@@ -318,3 +318,50 @@ function extendable_set_default_template_for_new_pages( $post_id, $post, $update
 	}
 }
 add_action( 'wp_insert_post', 'extendable_set_default_template_for_new_pages', 10, 3 );
+
+/**
+ * Hide block style variations from editor UI while keeping them registered
+ */
+function extendable_hide_block_style_variations() {
+	$css = '
+		.block-editor-block-styles__item[aria-label*="Brutalism 1"],
+		.block-editor-block-styles__item[aria-label*="Organic 1"],
+		.block-editor-block-styles__item[aria-label*="Soft 1"] {
+			display: none !important;
+		}
+	';
+	
+	wp_add_inline_style('wp-edit-blocks', $css);
+}
+add_action( 'enqueue_block_editor_assets', 'extendable_hide_block_style_variations' );
+
+/**
+ * Hide block style variations from site editor style panel
+ */
+function extendable_hide_site_editor_block_style_variations() {
+	$css = '
+		/* Hide specific design aesthetic variations in site editor */
+		.components-navigator-button[id*="brutalism-1--"],
+		.components-navigator-button[id*="organic-1--"],
+		.components-navigator-button[id*="soft-1--"] {
+			display: none !important;
+		}
+		
+		/* Hide the Style Variations heading if all variations are hidden */
+		.components-h-stack:has(.components-navigator-button[id*="ext-preset--"]:not([style*="display: none"])) .edit-site-global-styles-subtitle:contains("Style Variations") {
+			display: none !important;
+		}
+		
+		/* Alternative approach - hide the entire Style Variations section */
+		.edit-site-global-styles-subtitle:contains("Style Variations") + .components-item-group {
+			display: none !important;
+		}
+		
+		.edit-site-global-styles-subtitle:contains("Style Variations") {
+			display: none !important;
+		}
+	';
+	
+	wp_add_inline_style('wp-edit-site', $css);
+}
+add_action( 'admin_enqueue_scripts', 'extendable_hide_site_editor_block_style_variations' );

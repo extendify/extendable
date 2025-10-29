@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
 	"version": 3,
-	"title": "Natural 1 Item Card 1 Align Start",
+	"title": "Item Card 1 Align Start",
 	"slug": "ext-preset--group--natural-1--item-card-1--align-start",
 	"blockTypes": ["core/group"],
 	"styles": {

@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Soft 1 Content Anywhere of Image",
+	"slug": "ext-preset--image--soft-1--image-1--content-any",
+	"blockTypes": ["core/image", "core/cover"],
+	"styles": {
+		"border": {
+			"radius": "32px"
+		}
+	}
+}

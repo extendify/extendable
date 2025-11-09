@@ -355,3 +355,21 @@ input, textarea {
  .sticky-header-offset-container .entry-content > .wp-block-group {
 	scroll-margin-top: var(--wp--preset--spacing--60);
 }
+
+/*
+ * utilities
+ */
+
+.z-0 {
+	z-index: 0;
+}
+
+.z-10 {
+	z-index: 10;
+}
+.z-20 {
+	z-index: 20;
+}
+.z-30 {
+	z-index: 30;
+}

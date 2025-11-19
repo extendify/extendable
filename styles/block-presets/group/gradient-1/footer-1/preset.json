@@ -1,0 +1,10 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Gradient 1 Footer 1",
+	"slug": "ext-preset--group--gradient-1--footer-1",
+	"blockTypes": ["core/group"],
+	"styles": {
+		"css": "& {background: linear-gradient( 180deg, color-mix(in srgb, var(--wp--preset--color--primary) 15%, var(--wp--preset--color--tertiary)) 0%, color-mix(in srgb, var(--wp--preset--color--tertiary) 90%, var(--wp--preset--color--background)) 100% );}"
+	}
+}

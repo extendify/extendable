@@ -361,15 +361,54 @@ input, textarea {
  */
 
 .z-0 {
-	z-index: 0;
+	z-index: 0 !important;
 }
 
 .z-10 {
-	z-index: 10;
+	z-index: 10 !important;
 }
 .z-20 {
-	z-index: 20;
+	z-index: 20 !important;
 }
 .z-30 {
-	z-index: 30;
+	z-index: 30 !important;
+}
+
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .sm-d-none {
+    display: none;
+  }
+
+  .sm-d-block {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .md-d-none {
+    display: none;
+  }
+
+  .md-d-block {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg-d-none {
+    display: none;
+  }
+
+  .lg-d-block {
+    display: block;
+  }
 }

@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Footer 1",
+	"slug": "ext-preset--group--natural-1--footer-1",
+	"blockTypes": ["core/group"],
+	"styles": {
+		"spacing": {
+			"blockGap": "var(--wp--preset--spacing--30)"
+		}
+	}
+}

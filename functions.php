@@ -326,7 +326,8 @@ function extendable_hide_block_style_variations() {
 	$css = '
 		.block-editor-block-styles__item[aria-label*="Brutalism 1"],
 		.block-editor-block-styles__item[aria-label*="Organic 1"],
-		.block-editor-block-styles__item[aria-label*="Soft 1"] {
+		.block-editor-block-styles__item[aria-label*="Soft 1"],
+		.block-editor-block-styles__item[aria-label*="Gradient 1"] {
 			display: none !important;
 		}
 	';
@@ -343,7 +344,8 @@ function extendable_hide_site_editor_block_style_variations() {
 		/* Hide specific design aesthetic variations in site editor */
 		.components-navigator-button[id*="brutalism-1--"],
 		.components-navigator-button[id*="organic-1--"],
-		.components-navigator-button[id*="soft-1--"] {
+		.components-navigator-button[id*="soft-1--"],
+		.components-navigator-button[id*="gradient-1--"] {
 			display: none !important;
 		}
 		

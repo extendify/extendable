@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Gradient 1 Button 1",
+	"slug": "ext-preset--button--gradient-1--button-1",
+	"blockTypes": ["core/button"],
+	"styles": {
+		"border": {
+			"radius": "8px"
+		}
+	}
+}

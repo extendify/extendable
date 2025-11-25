@@ -53,6 +53,6 @@
 				}
 			}
 		},
-		"css": " & { overflow: hidden; }"
+		"css": "& { overflow: hidden; }"
 	}
 }

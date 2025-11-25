@@ -357,8 +357,23 @@ input, textarea {
 }
 
 /*
+ * Avoids parent/child color collision when child has no custom background.
+ */
+
+.has-tertiary-background-color.has-background 
+    [class*='is-style-ext-preset--group--'][class*='item-card-1']:not(.has-background),
+.has-tertiary-background-color.has-background 
+    [class*='is-style-ext-preset--media-text--'][class*='card-1']:not(.has-background) {
+    background-color: var(--wp--preset--color--background);
+}
+
+/*
  * utilities
  */
+
+ .m-0 {
+	margin: 0 !important;
+}
 
 .z-0 {
 	z-index: 0 !important;

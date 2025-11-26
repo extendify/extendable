@@ -361,9 +361,12 @@ input, textarea {
  */
 
 .has-tertiary-background-color.has-background 
-    [class*='is-style-ext-preset--group--'][class*='item-card-1']:not(.has-background),
+[class*='is-style-ext-preset--group--'][class*='item-card-1']:not(.has-background):not([class*='natural-1']) {
+    background-color: var(--wp--preset--color--background);
+}
+
 .has-tertiary-background-color.has-background 
-    [class*='is-style-ext-preset--media-text--'][class*='card-1']:not(.has-background) {
+[class*='is-style-ext-preset--media-text--'][class*='card-1']:not(.has-background):not([class*='natural-1']) {
     background-color: var(--wp--preset--color--background);
 }
 

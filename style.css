@@ -348,6 +348,10 @@ input, textarea {
 	visibility: hidden;
 }
 
+.wp-site-blocks .wp-block-group.woocommerce.product {
+	margin-top: 0;
+	margin-bottom: 0; 
+}
 /*
  * Adds offset for sticky header overlap
  */

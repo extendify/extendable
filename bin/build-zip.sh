@@ -26,6 +26,8 @@ patterns=$(ls patterns/*.php)
 templates=$(ls templates/*.html)
 styles=$(ls styles/*.json)
 stylesPresets=$(find styles -path "*/block-presets/*" -name "*.json")
+colorsPresets=$(find styles -path "*/colors/*" -name "*.json")
+typographyPresets=$(find styles -path "*/typography/*" -name "*.json")
 parts=$(ls parts/*.html)
 assets=$(ls assets/css/*.css)
 fonts=$(ls assets/fonts/**/*.{woff2,txt})
@@ -40,6 +42,8 @@ zip -r ./build/extendable.zip \
 	$parts \
 	$styles \
 	$stylesPresets \
+	$colorsPresets \
+	$typographyPresets \
 	$assets \
 	$fonts \
 	$tribeEvents \

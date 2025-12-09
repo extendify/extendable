@@ -28,6 +28,7 @@ Extendable therefore is also distributed under the terms of the GNU GPL.
 	--wp--custom--spacing--medium: var(--wp--preset--spacing--50, clamp(2.5rem, 8vw, 4rem));
 	--wp--custom--spacing--large: var(--wp--preset--spacing--60, clamp(2.5rem, 8vw, 6rem));
 	--wp--custom--spacing--outer: max(1.25rem, 4vw);
+    --wp--preset--spacing--80: min(8rem, 12vw);
 }
 
 /*
@@ -347,10 +348,91 @@ input, textarea {
 	visibility: hidden;
 }
 
+.wp-site-blocks .wp-block-group.woocommerce.product {
+	margin-top: 0;
+	margin-bottom: 0; 
+}
 /*
  * Adds offset for sticky header overlap
  */
 
  .sticky-header-offset-container .entry-content > .wp-block-group {
 	scroll-margin-top: var(--wp--preset--spacing--60);
+}
+
+/*
+ * Avoids parent/child color collision when child has no custom background.
+ */
+
+:not(.block-editor-block-preview__content-iframe)
+.has-tertiary-background-color.has-background 
+[class*='is-style-ext-preset--group--'][class*='item-card-1']:not(.has-background):not(.has-background)
+ {
+    background-color: var(--wp--preset--color--background);
+}
+
+.block-editor-block-preview__content-iframe 
+[class*='is-style-ext-preset--group--natural-1'][class*='item-card-1'] {
+    background-color: transparent !important;
+}
+
+/*
+ * utilities
+ */
+
+ .m-0 {
+	margin: 0 !important;
+}
+
+.z-0 {
+	z-index: 0 !important;
+}
+
+.z-10 {
+	z-index: 10 !important;
+}
+.z-20 {
+	z-index: 20 !important;
+}
+.z-30 {
+	z-index: 30 !important;
+}
+
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .sm-d-none {
+    display: none;
+  }
+
+  .sm-d-block {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .md-d-none {
+    display: none;
+  }
+
+  .md-d-block {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg-d-none {
+    display: none;
+  }
+
+  .lg-d-block {
+    display: block;
+  }
 }

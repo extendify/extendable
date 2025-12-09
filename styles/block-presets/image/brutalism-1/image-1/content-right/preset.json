@@ -1,0 +1,16 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Brutalism 1 Content Right of Image",
+	"slug": "ext-preset--image--brutalism-1--image-1--content-right",
+	"blockTypes": ["core/image", "core/cover"],
+	"styles": {
+		"border": {
+			"radius": "16px",
+            "style": "solid",
+            "width": "1px",
+            "color": "var:preset|color|foreground"
+		},
+        "shadow": "var(--wp--preset--shadow--brutalism)"
+	}
+}

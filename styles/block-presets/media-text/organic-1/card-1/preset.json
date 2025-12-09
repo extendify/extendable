@@ -1,0 +1,41 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Organic 1 Item Card 1",
+	"slug": "ext-preset--media-text--organic-1--card-1",
+	"blockTypes": ["core/media-text"],
+	"styles": {
+		"color": {
+			"background": "var:preset|color|tertiary"
+		},
+		"border": {
+			"radius": {
+				"topLeft": "48px",
+				"topRight": "8px",
+				"bottomRight": "48px",
+				"bottomLeft": "8px"
+			}
+		},
+		"spacing": {
+			"padding": {
+				"top": "0",
+				"right": "0",
+				"bottom": "0",
+				"left": "0"
+			}
+		},
+		"blocks": {
+			"core/group": {
+				"spacing": {
+					"padding": {
+						"top": "var:preset|spacing|40",
+						"right": "var:preset|spacing|40",
+						"left": "var:preset|spacing|40",
+						"bottom": "var:preset|spacing|40"
+					}
+				}
+			}
+		},
+		"css": "& { overflow: hidden; height: 100%;}  & .wp-block-media-text__content { padding-right:0 !important; padding-left:0 !important; } "
+	}
+}

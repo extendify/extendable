@@ -1,7 +1,9 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","style":{"spacing":{"blockGap":"3rem","padding":{"top":"var(--wp--custom--spacing--medium)","bottom":"var(--wp--custom--spacing--medium)"},"margin":{"top":"0px","bottom":"0px"}}}} -->
-<main class="wp-block-group" style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--custom--spacing--medium);padding-bottom:var(--wp--custom--spacing--medium)">
+<!-- wp:group {"tagName":"main","className":"is-style-ext-preset\u002d\u002dgroup\u002d\u002dnatural-1\u002d\u002dtemplate","style":{"spacing":{"blockGap":"3rem","padding":{"top":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002dmedium)","bottom":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002dmedium)"},"margin":{"top":"0px","bottom":"0px"}}}} -->
+<main
+  class="wp-block-group is-style-ext-preset--group--natural-1--template"
+  style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--custom--spacing--medium);padding-bottom:var(--wp--custom--spacing--medium)">
 	<!-- wp:group {"style":{"spacing":{"blockGap":"2.5rem"}},"layout":{"inherit":true}} -->
 	<div class="wp-block-group">
 		<!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}},"layout":{"inherit":true}} -->
@@ -12,7 +14,11 @@
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","align":"wide"} /-->
+		<!-- wp:group {"metadata":{"name":"Featured Image"},"align":"wide","className":"is-style-ext-preset\u002d\u002dgroup\u002d\u002dnatural-1\u002d\u002ditem-card-1\u002d\u002dalign-start","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}},"layout":{"type":"constrained"}} -->
+			<div class="wp-block-group alignwide is-style-ext-preset--group--natural-1--item-card-1--align-start" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+				<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","align":"wide"} /-->
+			</div>
+		<!-- /wp:group -->
 	</div>
 	<!-- /wp:group -->
 

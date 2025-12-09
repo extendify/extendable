@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Overlay 1",
+	"slug": "ext-preset--cover--natural-1--cover-overlay-1",
+	"blockTypes": ["core/cover"],
+	"styles": {
+		"color": {
+			"text": "#FEFEFE"
+		},
+		"blocks": {
+			"core/heading": {
+				"color": {
+					"text": "#FEFEFE"
+				}
+			},
+			"core/paragraph": {
+				"color": {
+					"text": "#FEFEFE"
+				}
+			},
+			"core/button": {
+				"color": {
+					"text": "#010101",
+					"background": "#FEFEFE"
+				}
+			}
+		}
+	}
+}

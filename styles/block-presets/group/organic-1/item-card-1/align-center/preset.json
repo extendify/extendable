@@ -1,0 +1,61 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Organic 1 Item Card 1 Align Center",
+	"slug": "ext-preset--group--organic-1--item-card-1--align-center",
+	"blockTypes": ["core/group"],
+	"styles": {
+		"color": {
+			"background": "var:preset|color|tertiary"
+		},
+		"border": {
+			"radius": {
+				"topLeft": "9999px",
+				"topRight": "9999px",
+				"bottomRight": "8px",
+				"bottomLeft": "8px"
+			}
+		},
+		"dimensions": {
+			"minHeight": "100%"
+		},
+		"blocks": {
+			"core/group": {
+				"spacing": {
+					"margin": {
+						"top": "0"
+					},
+					"padding": {
+						"top": "var:preset|spacing|30",
+						"right": "var:preset|spacing|30",
+						"left": "var:preset|spacing|30",
+						"bottom": "var:preset|spacing|30"
+					}
+				}
+			},
+			"core/heading": {
+				"typography": {
+					"fontSize": "1.5rem",
+					"textAlign": "center"
+				},
+				"spacing": {
+					"margin": {
+						"top": "16px"
+					}
+				}
+			},
+			"core/paragraph": {
+				"typography": {
+					"fontSize": "var:preset|font-size|small",
+					"textAlign": "center"
+				},
+				"spacing": {
+					"margin": {
+						"top": "16px"
+					}
+				}
+			}
+		},
+		"css": "& { overflow: hidden; }"
+	}
+}

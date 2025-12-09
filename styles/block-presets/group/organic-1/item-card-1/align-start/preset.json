@@ -1,0 +1,59 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Organic 1 Item Card 1 Align Start",
+	"slug": "ext-preset--group--organic-1--item-card-1--align-start",
+	"blockTypes": ["core/group"],
+	"styles": {
+		"color": {
+			"background": "var:preset|color|tertiary"
+		},
+		"border": {
+			"radius": {
+				"topLeft": "48px",
+				"topRight": "8px",
+				"bottomRight": "48px",
+				"bottomLeft": "8px"
+			}
+		},
+		"dimensions": {
+			"minHeight": "100%"
+		},
+		"blocks": {
+			"core/group": {
+				"spacing": {
+					"margin": {
+						"top": "0"
+					},
+					"padding": {
+						"top": "var:preset|spacing|30",
+						"right": "var:preset|spacing|30",
+						"left": "var:preset|spacing|30",
+						"bottom": "var:preset|spacing|30"
+					}
+				}
+			},
+			"core/heading": {
+				"typography": {
+					"fontSize": "1.5rem"
+				},
+				"spacing": {
+					"margin": {
+						"top": "16px"
+					}
+				}
+			},
+			"core/paragraph": {
+				"typography": {
+					"fontSize": "var:preset|font-size|small"
+				},
+				"spacing": {
+					"margin": {
+						"top": "16px"
+					}
+				}
+			}
+		},
+		"css": "& { overflow: hidden; }"
+	}
+}

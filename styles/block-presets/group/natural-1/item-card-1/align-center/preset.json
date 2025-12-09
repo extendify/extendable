@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Item Card 1 Align Center",
+	"slug": "ext-preset--group--natural-1--item-card-1--align-center",
+	"blockTypes": ["core/group"],
+	"styles": {
+		"color": {
+			"background": "transparent !important"
+		},
+		"blocks": {
+			"core/group": {
+				"spacing": {
+					"margin": {
+						"top": "16px"
+					}
+				}
+			},
+			"core/heading": {
+				"typography": {
+					"fontSize": "1.5rem",
+					"textAlign": "center"
+				},
+				"spacing": {
+					"margin": {
+						"top": "16px"
+					}
+				}
+			},
+			"core/paragraph": {
+				"typography": {
+					"fontSize": "var:preset|font-size|small",
+					"textAlign": "center"
+				},
+				"spacing": {
+					"margin": {
+						"top": "16px"
+					}
+				}
+			}
+		}
+	}
+}

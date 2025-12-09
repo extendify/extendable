@@ -211,7 +211,7 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Copyright ==
 
-Extendable WordPress Theme, 2021-2022 Extendify Inc.
+Extendable WordPress Theme, 2021-2025 Extendify Inc.
 Extendable is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify

@@ -13,6 +13,11 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.31 - 2025-12-09 =
+- Add: Block style variations
+- Add: New spacing unit and spacing label tweaks
+- Change: Update Woo templates
+
 = 2.0.30 - 2025-10-09 =
 - Add: Body font to all typography presets
 - Change: Make WPForms inherit theme styles only when base style is selected

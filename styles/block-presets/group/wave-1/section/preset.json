@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Wave 1 Section 1",
+	"slug": "ext-preset--group--wave-1--section",
+	"blockTypes": ["core/group"],
+	"styles": {
+		"spacing": {
+			"blockGap": "var(--wp--preset--spacing--30)"
+		},
+"css": "&.has-tertiary-background-color{position:relative;--wave-h:clamp(32px,calc(100vw*114/1440),280px);--wave-mask:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 114'%3E%3Cpath fill='white' d='M312 85.9675C503.25 85.9676 577.125 -53.4458 772.875 22.8019C968.625 99.0496 1135.12 59.0567 1250.62 59.0567C1366.12 59.0567 1440 114 1440 114H0V22.802C0 22.802 120.75 85.9675 312 85.9675Z'/%3E%3C/svg%3E\");margin-block:var(--wave-h)!important;}&.has-tertiary-background-color::before{content:\"\";position:absolute;width:100vw;left:50%;height:var(--wave-h);background-color:var(--wp--preset--color--tertiary);-webkit-mask:var(--wave-mask) no-repeat center/100% 100%;mask:var(--wave-mask) no-repeat center/100% 100%;bottom:100%;transform:translateX(-50%);pointer-events:none;}&.has-tertiary-background-color::after{content:\"\";position:absolute;width:100vw;left:50%;height:var(--wave-h);background-color:var(--wp--preset--color--tertiary);-webkit-mask:var(--wave-mask) no-repeat center/100% 100%;mask:var(--wave-mask) no-repeat center/100% 100%;top:100%;transform:translateX(-50%) scaleY(-1);pointer-events:none;}" }
+}

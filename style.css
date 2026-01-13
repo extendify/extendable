@@ -371,6 +371,12 @@ input, textarea {
     background-color: var(--wp--preset--color--background);
 }
 
+:not(.block-editor-block-preview__content-iframe)
+.has-tertiary-background-color.has-background 
+[class*='is-style-ext-preset--group--'][class*='item-card-1']:not(.has-background)::before {
+    background-color: var(--wp--preset--color--background);
+}
+
 .block-editor-block-preview__content-iframe 
 [class*='is-style-ext-preset--group--natural-1'][class*='item-card-1'] {
     background-color: transparent !important;

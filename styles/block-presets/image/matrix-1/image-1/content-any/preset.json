@@ -16,6 +16,6 @@
 				"left": "16px"
 			}
 		},
-		"css": "border:solid 1px color-mix(in srgb, var(--wp--preset--color--foreground) 8%, transparent);}"
+		"css": "border:solid 1px color-mix(in srgb, var(--wp--preset--color--foreground) 8%, transparent);"
 	}
 }

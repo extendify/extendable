@@ -260,6 +260,117 @@ endif;
 add_action( 'wp_enqueue_scripts', 'extendable_enqueue_navigation_customizations' );
 
 /**
+ * Animations
+ *
+ * @since Extendable 2.0.34
+ * @return void
+ */
+function extendable_enqueue_animations() {
+
+	$animation_option = get_option( 'extendable_animation_type', "fade" );
+	
+	if ( is_admin() || 
+		 ! apply_filters( 'extendable_enable_animations', true ) ||
+		 false === $animation_option || 
+		 empty( $animation_option ) ) {
+		return;
+	}
+
+	$config_file = get_template_directory() . '/assets/config/animations.json';
+	
+	if ( ! file_exists( $config_file ) || ! is_readable( $config_file ) ) {
+		return;
+	}
+	
+	$config = json_decode( file_get_contents( $config_file ), true );
+	
+	if ( ! is_array( $config ) ) {
+		return;
+	}
+	
+	$type = sanitize_key( $animation_option );
+	
+	if ( ! isset( $config['types'][ $type ] ) ) {
+		$type = 'fade';
+	}
+	
+	$mappings = $config['types'][ $type ]['mappings'] ?? array();
+	$defaults = $config['defaults'] ?? array();
+	$css_config = $config['css'] ?? array();
+
+	$sanitized = array();
+	foreach ( $mappings as $selector => $animation ) {
+		$clean_selector = sanitize_text_field( trim( $selector ) );
+		$clean_animation = sanitize_key( trim( $animation ) );
+		
+		if ( ! empty( $clean_selector ) && ! empty( $clean_animation ) ) {
+			$sanitized[ $clean_selector ] = $clean_animation;
+		}
+	}
+	
+	if ( empty( $sanitized ) ) {
+		return;
+	}
+
+	$gsap_path = get_template_directory() . '/assets/vendor/gsap/';
+	$gsap_uri = get_template_directory_uri() . '/assets/vendor/gsap/';
+	
+	$gsap_scripts = array(
+		'extendable-gsap' => array(
+			'file' => 'gsap.min.js',
+			'deps' => array()
+		),
+		'extendable-gsap-scrolltrigger' => array(
+			'file' => 'ScrollTrigger.min.js',
+			'deps' => array( 'extendable-gsap' )
+		)
+	);
+	
+	foreach ( $gsap_scripts as $handle => $script_config ) {
+		$file_path = $gsap_path . $script_config['file'];
+		
+		if ( file_exists( $file_path ) ) {
+			wp_enqueue_script( 
+				$handle, 
+				$gsap_uri . $script_config['file'], 
+				$script_config['deps'], 
+				filemtime( $file_path ), 
+				true 
+			);
+		}
+	}
+	
+	wp_enqueue_script( 
+		'extendable-animations', 
+		get_template_directory_uri() . '/assets/js/animations.js', 
+		array( 'extendable-gsap-scrolltrigger' ), 
+		EXTENDABLE_THEME_VERSION, 
+		true 
+	);
+
+	wp_localize_script( 'extendable-animations', 'ExtendableAnimations', array(
+		'map' => $sanitized,
+		'defaults' => array_map( 'sanitize_text_field', $defaults ),
+	));
+
+	// Generate FOUC prevention CSS
+	$animation_css = '';
+	foreach ( $sanitized as $selector => $animation ) {
+		$css_rule = isset( $css_config[ $animation ] ) && ! empty( $css_config[ $animation ] )
+			? sanitize_text_field( $css_config[ $animation ] )
+			: 'opacity: 0;';
+			
+		$animation_css .= sprintf( '%s { %s } ', esc_attr( $selector ), $css_rule );
+	}
+	
+	if ( ! empty( $animation_css ) ) {
+		wp_add_inline_style( 'extendable-style', $animation_css );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'extendable_enqueue_animations' );
+
+
+/**
  * Set default template for new pages in the block editor (auto-drafts)
  *
  * @since Extendable 2.0.26

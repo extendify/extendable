@@ -1,0 +1,48 @@
+{
+  "defaults": {
+    "duration": 1,
+    "ease": "power2.out",
+    "distance": 24,
+    "stagger": 0.2
+  },
+  "css": {
+    "fade": "opacity: 0;",
+    "fade-up": "opacity: 0;",
+    "fade-down": "opacity: 0;",
+    "fade-left": "opacity: 0;",
+    "fade-right": "opacity: 0;",
+    "zoom-in": "opacity: 0; transform: scale(0.8);"
+  },
+  "types": {
+    "fade": {
+      "mappings": {
+        "[class*=\"is-style-ext-preset--image--natural-1--image-\"]": "fade",
+        "[class*=\"is-style-ext-preset--group--natural-1--item-card-1--\"]": "fade",
+        "[class*=\"is-style-ext-preset--button--natural-1--button-\"]": "fade",
+        "[class*=\"is-style-ext-preset--group--natural-1--header-1\"]": "fade",
+        "[class*=\"is-style-ext-preset--group--natural-1--footer-1\"]": "fade",
+        "[class*=\"is-style-ext-preset--media-text--natural-1\"]": "fade"
+      }
+    },
+    "fade-up": {
+      "mappings": {
+        "[class*=\"is-style-ext-preset--image--natural-1--image-\"]": "fade-up",
+        "[class*=\"is-style-ext-preset--group--natural-1--item-card-1--\"]": "fade-up",
+        "[class*=\"is-style-ext-preset--button--natural-1--button-\"]": "fade-up",
+        "[class*=\"is-style-ext-preset--group--natural-1--header-1\"]": "fade-up",
+        "[class*=\"is-style-ext-preset--group--natural-1--footer-1\"]": "fade-up",
+        "[class*=\"is-style-ext-preset--media-text--natural-1\"]": "fade-up"
+      }
+    },
+    "zoom-in": {
+      "mappings": {
+        "[class*=\"is-style-ext-preset--image--natural-1--image-\"]": "zoom-in",
+        "[class*=\"is-style-ext-preset--group--natural-1--item-card-1--\"]": "zoom-in",
+        "[class*=\"is-style-ext-preset--button--natural-1--button-\"]": "zoom-in",
+        "[class*=\"is-style-ext-preset--group--natural-1--header-1\"]": "fade",
+        "[class*=\"is-style-ext-preset--group--natural-1--footer-1\"]": "fade",
+        "[class*=\"is-style-ext-preset--media-text--natural-1\"]": "zoom-in"
+      }
+    }
+  }
+}

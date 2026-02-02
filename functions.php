@@ -267,13 +267,14 @@ add_action( 'wp_enqueue_scripts', 'extendable_enqueue_navigation_customizations'
  */
 function extendable_enqueue_animations() {
 
-	$animation_option = get_option( 'ext_animation_type', "fade-up" );
+	$animation_option = get_option( 'ext_animation_type', "none" );
 	
 	if ( is_admin() || 
-		 ! apply_filters( 'extendable_enable_animations', true ) ||
-		 false === $animation_option || 
-		 empty( $animation_option ) ) {
-		return;
+	     ! apply_filters( 'extendable_enable_animations', true ) ||
+	     false === $animation_option || 
+	     empty( $animation_option ) ||
+	     'none' === $animation_option ) {
+	    return;
 	}
 
 	$config_file = get_template_directory() . '/assets/config/animations.json';

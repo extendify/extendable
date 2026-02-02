@@ -6,8 +6,6 @@
         const trimmed = selector.trim();
         if (!trimmed) return null;
 
-        // If the DB stores plain class names like "is-style-fade-up",
-        // treat them as classes. If user stores ".foo" or "#bar", keep as-is.
         if (trimmed.startsWith('.') || trimmed.startsWith('#') || trimmed.startsWith('[')) {
             return trimmed;
         }
@@ -80,7 +78,6 @@
 
         const props = buildAnimationProps(animationKey, defaults);
 
-        // Set initial state once.
         gsap.set(element, props.from);
 
         const ScrollTrigger = window.ScrollTrigger;
@@ -91,7 +88,7 @@
                 ...props.to,
                 scrollTrigger: {
                     trigger: element,
-                    start: 'top 85%',
+                    start: 'top 95%',
                     once: true,
                 },
             });
@@ -100,7 +97,6 @@
             return;
         }
 
-        // Fallback without ScrollTrigger: IntersectionObserver.
         if ('IntersectionObserver' in window) {
             const io = new IntersectionObserver(
                 (entries) => {
@@ -118,7 +114,6 @@
             return;
         }
 
-        // Last resort: animate immediately.
         gsap.to(element, props.to);
         element.dataset.extendableAnimated = '1';
     }
@@ -126,7 +121,6 @@
     function run() {
         const { map, defaults } = getConfig();
 
-        // Nothing configured: do nothing.
         const keys = Object.keys(map);
         if (!keys.length) return;
 

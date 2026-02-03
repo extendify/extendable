@@ -13,6 +13,9 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.0.33 - 2026-02-04 =
+- Change: Remove `word-break: keep-all` rule for `ja` and `zh` languages
+
 = 2.0.31 - 2025-12-09 =
 - Add: Block style variations
 - Add: New spacing unit and spacing label tweaks

@@ -267,7 +267,7 @@ add_action( 'wp_enqueue_scripts', 'extendable_enqueue_navigation_customizations'
  */
 function extendable_enqueue_animations() {
 
-	$animation_option = get_option( 'ext_animation_type', "none" );
+	$animation_option = get_option( 'ext_animation_type', "fade" );
 	
 	if ( is_admin() || 
 	     ! apply_filters( 'extendable_enable_animations', true ) ||
@@ -313,42 +313,24 @@ function extendable_enqueue_animations() {
 		return;
 	}
 
-	$gsap_path = get_template_directory() . '/assets/vendor/gsap/';
-	$gsap_uri = get_template_directory_uri() . '/assets/vendor/gsap/';
-	
-	$gsap_scripts = array(
-		'extendable-gsap' => array(
-			'file' => 'gsap.min.js',
-			'deps' => array()
-		),
-		'extendable-gsap-scrolltrigger' => array(
-			'file' => 'ScrollTrigger.min.js',
-			'deps' => array( 'extendable-gsap' )
-		)
+	// Enqueue animation CSS
+	wp_enqueue_style(
+		'extendable-animations',
+		get_template_directory_uri() . '/assets/css/animations.css',
+		array( 'extendable-style' ),
+		EXTENDABLE_THEME_VERSION
 	);
-	
-	foreach ( $gsap_scripts as $handle => $script_config ) {
-		$file_path = $gsap_path . $script_config['file'];
-		
-		if ( file_exists( $file_path ) ) {
-			wp_enqueue_script( 
-				$handle, 
-				$gsap_uri . $script_config['file'], 
-				$script_config['deps'], 
-				filemtime( $file_path ), 
-				true 
-			);
-		}
-	}
-	
+
+	// Enqueue animation JavaScript
 	wp_enqueue_script( 
 		'extendable-animations', 
-		get_template_directory_uri() . '/assets/js/animations.js', 
-		array( 'extendable-gsap-scrolltrigger' ), 
+		get_template_directory_uri() . '/assets/js/animations-interactivity.js', 
+		array(), 
 		EXTENDABLE_THEME_VERSION, 
 		true 
 	);
 
+	// Pass configuration to JavaScript
 	wp_localize_script( 'extendable-animations', 'ExtendableAnimations', array(
 		'map' => $sanitized,
 		'defaults' => array_map( 'sanitize_text_field', $defaults ),

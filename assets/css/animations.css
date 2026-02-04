@@ -1,0 +1,110 @@
+/**
+ * Animation CSS for Extendable Theme
+ * Pure CSS animations without GSAP dependency
+ */
+
+/* Animation keyframes */
+@keyframes ext-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes ext-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ext-fade-down {
+    from {
+        opacity: 0;
+        transform: translateY(-24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ext-fade-left {
+    from {
+        opacity: 0;
+        transform: translateX(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes ext-fade-right {
+    from {
+        opacity: 0;
+        transform: translateX(-24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes ext-zoom-in {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Base animation states */
+.ext-animate {
+    opacity: 0;
+}
+
+/* Active animation classes */
+.ext-animate.ext-animated-fade {
+    animation: ext-fade-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.ext-animate.ext-animated-fade-up {
+    animation: ext-fade-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.ext-animate.ext-animated-fade-down {
+    animation: ext-fade-down 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.ext-animate.ext-animated-fade-left {
+    animation: ext-fade-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.ext-animate.ext-animated-fade-right {
+    animation: ext-fade-right 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.ext-animate.ext-animated-zoom-in {
+    animation: ext-zoom-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Stagger delays applied dynamically via JavaScript */
+
+/* Reduce motion support */
+@media (prefers-reduced-motion: reduce) {
+    .ext-animate {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

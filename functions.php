@@ -268,6 +268,7 @@ add_action( 'wp_enqueue_scripts', 'extendable_enqueue_navigation_customizations'
 function extendable_enqueue_animations() {
 
 	$animation_option = get_option( 'ext_animation_type', "fade" );
+	$animation_speed = get_option( 'ext_animation_speed', 'slow' );
 	
 	if ( is_admin() || 
 	     ! apply_filters( 'extendable_enable_animations', true ) ||
@@ -334,6 +335,7 @@ function extendable_enqueue_animations() {
 	wp_localize_script( 'extendable-animations', 'ExtendableAnimations', array(
 		'map' => $sanitized,
 		'defaults' => array_map( 'sanitize_text_field', $defaults ),
+		'speed' => sanitize_key( $animation_speed ),
 	));
 
 	// Generate FOUC prevention CSS

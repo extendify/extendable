@@ -1,47 +1,41 @@
-/**
- * Extendable Theme Animations
- * Pure CSS animations with IntersectionObserver
- * No GSAP or external dependencies
- */
 (function() {
     'use strict';
 
-    // Get configuration from PHP
     const config = window.ExtendableAnimations || { map: {}, defaults: {} };
-    const staggerDelay = parseFloat(config.defaults?.stagger) || 0.08;
-    const maxStagger = 0.6; // Cap total stagger time
+    const staggerDelay = parseFloat(config.defaults && config.defaults.stagger) || 0.08;
+    const maxStagger = 0.6;
+    let observer = null;
+    let trackedElements = [];
+    
+    const speeds = {
+        slow: 1.2,
+        medium: 0.7,
+        fast: 0.4
+    };
+    let currentSpeed = speeds[config.speed] ? config.speed : 'medium';
 
     function initAnimations() {
-        // Check if IntersectionObserver is supported
         if (!('IntersectionObserver' in window)) {
-            console.warn('IntersectionObserver not supported, animations disabled');
-            // Fallback: immediately show all elements
             Object.keys(config.map || {}).forEach(selector => {
                 try {
-                    const elements = document.querySelectorAll(selector);
-                    elements.forEach(element => {
-                        element.style.opacity = '1';
-                    });
-                } catch (e) {
-                    console.warn('Invalid selector:', selector, e);
-                }
+                    document.querySelectorAll(selector).forEach(el => el.style.opacity = '1');
+                } catch (e) {}
             });
             return;
         }
 
-        // Create IntersectionObserver
-        const observer = new IntersectionObserver((entries) => {
+        if (observer) {
+            observer.disconnect();
+        }
+
+        observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const element = entry.target;
                     const animationType = element.dataset.extAnimate;
                     
                     if (animationType) {
-                        // Add the animated class to trigger CSS animation
                         element.classList.add(`ext-animated-${animationType}`);
-                        
-                        // Stop observing this element (one-time animation)
-                        observer.unobserve(element);
                     }
                 }
             });
@@ -50,42 +44,81 @@
             rootMargin: '0px 0px -5% 0px'
         });
 
-        // Find and observe all animation targets
-        const selectors = Object.keys(config.map || {});
+        trackedElements = [];
         
-        selectors.forEach(selector => {
+        Object.keys(config.map || {}).forEach(selector => {
             try {
                 const elements = document.querySelectorAll(selector);
                 const animationType = config.map[selector];
                 
-                // Apply stagger to all matching elements (like GSAP did)
                 elements.forEach((element, index) => {
-                    // Add base animation class
                     element.classList.add('ext-animate');
-                    
-                    // Store animation type as data attribute
                     element.dataset.extAnimate = animationType;
                     
-                    // Apply stagger delay (capped at maxStagger)
                     const delay = Math.min(index * staggerDelay, maxStagger);
+                    const duration = speeds[currentSpeed];
+                    
+                    element.style.animationDuration = `${duration}s`;
                     if (delay > 0) {
                         element.style.animationDelay = `${delay}s`;
                     }
                     
-                    // Observe the element
                     observer.observe(element);
+                    trackedElements.push(element);
                 });
-            } catch (e) {
-                console.warn('Invalid selector:', selector, e);
-            }
+            } catch (e) {}
         });
     }
 
-    // Initialize on DOMContentLoaded
+    function resetAnimations() {
+        trackedElements.forEach(element => {
+            element.classList.remove(
+                'ext-animated-fade',
+                'ext-animated-fade-up',
+                'ext-animated-fade-down',
+                'ext-animated-fade-left',
+                'ext-animated-fade-right',
+                'ext-animated-zoom-in'
+            );
+        });
+        
+        requestAnimationFrame(() => {
+            trackedElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                
+                if (isVisible) {
+                    const animationType = element.dataset.extAnimate;
+                    if (animationType) {
+                        element.classList.add(`ext-animated-${animationType}`);
+                    }
+                }
+            });
+        });
+        
+        return true;
+    }
+
+    function setSpeed(speed) {
+        if (!speeds[speed]) {
+            speed = 'medium';
+        }
+        currentSpeed = speed;
+        
+        trackedElements.forEach(element => {
+            element.style.animationDuration = `${speeds[currentSpeed]}s`;
+        });
+        
+        return true;
+    }
+
+    window.ExtendableAnimations = window.ExtendableAnimations || {};
+    window.ExtendableAnimations.reset = resetAnimations;
+    window.ExtendableAnimations.setSpeed = setSpeed;
+
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initAnimations);
     } else {
-        // DOM already loaded
         initAnimations();
     }
 })();

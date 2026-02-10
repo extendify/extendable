@@ -386,6 +386,32 @@ input, textarea {
 }
 
 /*
+ * CSS related to wave vibe
+ */
+
+.is-style-ext-preset--group--natural-1--section.has-tertiary-background-color:has(
+  + .has-background-background-color > .wp-block-cover.alignfull
+)::after {
+  content: none !important;
+}
+
+.is-style-ext-preset--group--natural-1--section.has-tertiary-background-color:has(
+  + .has-background-background-color > .wp-block-cover.alignfull
+) {
+  margin-bottom: 0 !important;
+}
+
+.is-style-ext-preset--group--natural-1--section.has-background-background-color:has(.wp-block-cover.alignfull)
++ .has-tertiary-background-color::before {
+  content: none !important;
+}
+
+.is-style-ext-preset--group--natural-1--section.has-background-background-color:has(.wp-block-cover.alignfull)
++ .has-tertiary-background-color {
+  margin-top: 0 !important;
+}
+
+/*
  * utilities
  */
 

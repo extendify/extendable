@@ -46,6 +46,6 @@
 				}
 			}
 		},
-		"css": "overflow: hidden;--clip:32px; --border:1px; position:relative; background:rgba(34, 34, 34, 0.4) !important; padding:1px; clip-path:polygon(0 0, calc(100% - var(--clip)) 0, 100% var(--clip), 100% 100%, var(--clip) 100%, 0 calc(100% - var(--clip))); &::before { content: \"\"; position: absolute; inset: var(--border); background: var(--wp--preset--color--tertiary); clip-path: polygon(0 0, calc(100% - var(--clip)) 0, 100% var(--clip), 100% 100%, var(--clip) 100%, 0 calc(100% - var(--clip))); z-index:-1;} "
+		"css": "overflow: hidden;--clip:32px; --border:1px; position:relative; background:rgba(34, 34, 34, 0.4) !important; padding:1px !important; clip-path:polygon(0 0, calc(100% - var(--clip)) 0, 100% var(--clip), 100% 100%, var(--clip) 100%, 0 calc(100% - var(--clip))); &::before { content: \"\"; position: absolute; inset: var(--border); background: var(--wp--preset--color--tertiary); clip-path: polygon(0 0, calc(100% - var(--clip)) 0, 100% var(--clip), 100% 100%, var(--clip) 100%, 0 calc(100% - var(--clip))); z-index:-1;} & > * { clip-path: inherit; overflow: hidden; } "
 	}
 }

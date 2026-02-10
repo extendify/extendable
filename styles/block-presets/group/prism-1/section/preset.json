@@ -7,7 +7,6 @@
 	"styles": {
 		"spacing": {
 			"blockGap": "var(--wp--preset--spacing--30)"
-		},
-		"css": "&.has-tertiary-background-color { clip-path: polygon( 48px 0, 0 48px, 0 calc(100% - 48px), 48px 100%, calc(100% - 48px) 100%, 100% calc(100% - 48px), 100% 48px, calc(100% - 48px) 0 ); }"
+		}
 	}
 }

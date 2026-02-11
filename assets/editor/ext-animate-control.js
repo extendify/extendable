@@ -76,11 +76,11 @@
 							createElement(
 								ToggleGroupControl,
 								{
-									label: __( 'Animation override', 'extendable' ),
+									label: __( 'Animation', 'extendable' ),
 									value: mode,
 									onChange: onChangeMode,
 									isBlock: true,
-									help: __( 'Auto follows theme settings. On/Off overrides for this block only.', 'extendable' ),
+									help: __( 'Auto follows global settings. On or Off applies to this block only.', 'extendable' ),
 								},
 								OPTIONS.map( function ( opt ) {
 									return createElement( ToggleGroupControlOption, {

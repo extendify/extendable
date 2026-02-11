@@ -52,6 +52,10 @@
                 const animationType = config.map[selector];
                 
                 elements.forEach((element, index) => {
+                    if (element.classList.contains('ext-animate--off')) {
+                        return;
+                    }
+                    
                     element.classList.add('ext-animate');
                     element.dataset.extAnimate = animationType;
                     

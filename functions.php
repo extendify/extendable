@@ -267,14 +267,19 @@ add_action( 'wp_enqueue_scripts', 'extendable_enqueue_navigation_customizations'
  */
 function extendable_enqueue_animations() {
 
-	$animation_option = get_option( 'ext_animation_type', "fade" );
-	$animation_speed = get_option( 'ext_animation_speed', 'slow' );
+	$animation_settings = get_option( 'ext_animation_settings', array(
+		'type' => 'fade-up',
+		'speed' => 'medium'
+	));
+	
+	$animation_type = isset( $animation_settings['type'] ) ? $animation_settings['type'] : 'none';
+	$animation_speed = isset( $animation_settings['speed'] ) ? $animation_settings['speed'] : 'medium';
 	
 	if ( is_admin() || 
 	     ! apply_filters( 'extendable_enable_animations', true ) ||
-	     false === $animation_option || 
-	     empty( $animation_option ) ||
-	     'none' === $animation_option ) {
+	     false === $animation_type || 
+	     empty( $animation_type ) ||
+	     'none' === $animation_type ) {
 	    return;
 	}
 
@@ -290,7 +295,7 @@ function extendable_enqueue_animations() {
 		return;
 	}
 	
-	$type = sanitize_key( $animation_option );
+	$type = sanitize_key( $animation_type );
 	
 	if ( ! isset( $config['types'][ $type ] ) ) {
 		$type = 'fade';
@@ -338,14 +343,14 @@ function extendable_enqueue_animations() {
 		'speed' => sanitize_key( $animation_speed ),
 	));
 
-	// Generate FOUC prevention CSS
+	// Generate FOUC prevention CSS (respects override classes)
 	$animation_css = '';
 	foreach ( $sanitized as $selector => $animation ) {
 		$css_rule = isset( $css_config[ $animation ] ) && ! empty( $css_config[ $animation ] )
 			?  $css_config[ $animation ] 
 			: 'opacity: 0;';
-			
-		$animation_css .= $selector . ' { ' . $css_rule . ' } ';
+		
+		$animation_css .= $selector . ':not(.ext-animate--off) { ' . $css_rule . ' } ';
 	}
 	
 	if ( ! empty( $animation_css ) ) {
@@ -353,6 +358,23 @@ function extendable_enqueue_animations() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'extendable_enqueue_animations' );
+
+/**
+ * Enqueue animation control for block editor
+ *
+ * @since Extendable 2.0.33
+ * @return void
+ */
+function extendable_enqueue_animation_editor_control() {
+	wp_enqueue_script(
+		'extendable-animate-control',
+		get_template_directory_uri() . '/assets/editor/ext-animate-control.js',
+		array( 'wp-blocks', 'wp-element', 'wp-components', 'wp-block-editor', 'wp-compose', 'wp-hooks', 'wp-i18n' ),
+		EXTENDABLE_THEME_VERSION,
+		true
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'extendable_enqueue_animation_editor_control' );
 
 
 /**

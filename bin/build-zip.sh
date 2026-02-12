@@ -35,6 +35,7 @@ tribeEvents=$(ls tribe-events/*.css)
 assetsJs=$(ls assets/js/*.js)
 vendorJs=$(find assets/vendor -type f -name "*.js" 2>/dev/null || true)
 configJson=$(find assets/config -type f -name "*.json" 2>/dev/null || true)
+assetsEditor=$(find assets/editor -type f 2>/dev/null || true)
 
 zip -r ./build/extendable.zip \
 	$toplevelFiles \
@@ -52,6 +53,7 @@ zip -r ./build/extendable.zip \
 	$assetsJs \
 	$vendorJs \
 	$configJson \
+	$assetsEditor \
 
 unzip ./build/extendable.zip -d "./build/extendable/"
 

@@ -366,6 +366,17 @@ add_action( 'wp_enqueue_scripts', 'extendable_enqueue_animations' );
  * @return void
  */
 function extendable_enqueue_animation_editor_control() {
+	
+	$animation_settings = get_option( 'ext_animation_settings', array(
+		'type' => 'none',
+		'speed' => 'medium'
+	));
+	
+	$animation_type = isset( $animation_settings['type'] ) ? $animation_settings['type'] : 'none';
+	$is_enabled = apply_filters( 'extendable_enable_animations', true ) && 
+	              ! empty( $animation_type ) && 
+	              'none' !== $animation_type;
+
 	wp_enqueue_script(
 		'extendable-animate-control',
 		get_template_directory_uri() . '/assets/editor/ext-animate-control.js',
@@ -373,6 +384,10 @@ function extendable_enqueue_animation_editor_control() {
 		EXTENDABLE_THEME_VERSION,
 		true
 	);
+
+	wp_localize_script( 'extendable-animate-control', 'ExtendableAnimateControl', array(
+		'enabled' => $is_enabled ? '1' : '0',
+	) );
 }
 add_action( 'enqueue_block_editor_assets', 'extendable_enqueue_animation_editor_control' );
 

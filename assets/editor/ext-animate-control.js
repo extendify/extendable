@@ -12,6 +12,8 @@
 		__experimentalToggleGroupControlOption: ToggleGroupControlOption,
 	} = wp.components;
 
+	const ANIMATIONS_ENABLED = window.ExtendableAnimateControl && window.ExtendableAnimateControl.enabled === '1';
+	console.log( 'Animations enabled:', ANIMATIONS_ENABLED );
 	const CLASS_ON = 'ext-animate--on';
 	const CLASS_OFF = 'ext-animate--off';
 	const OPTIONS = [
@@ -47,11 +49,12 @@
 
 				const className = attributes.className || '';
 				const hasPreset = hasPresetClass( className );
-				const mode = className.includes( CLASS_ON ) || hasPreset
-					? 'on'
-					: className.includes( CLASS_OFF )
-						? 'off'
-						: '';
+				const hasOffClass = className.includes( CLASS_OFF );
+				const mode = hasOffClass
+					? 'off'
+					: ( className.includes( CLASS_ON ) || hasPreset )
+						? 'on'
+						: 'off';
 
 				const onChangeMode = function ( nextMode ) {
 					let newClassName = ( attributes.className || '' )
@@ -91,7 +94,9 @@
 									value: mode,
 									onChange: onChangeMode,
 									isBlock: true,
-									help: __( 'Enable or disable animation for this block.', 'extendable' ),
+									help: ANIMATIONS_ENABLED
+										? __( 'Enable or disable animation for this block.', 'extendable' )
+										: __( 'To use this option, first enable animations globally. Ask the AI Agent to turn them on.', 'extendable' ),
 								},
 								OPTIONS.map( function ( opt ) {
 									return createElement( ToggleGroupControlOption, {
@@ -99,6 +104,7 @@
 										value: opt.value,
 										label: opt.label,
 										showTooltip: true,
+										disabled: ! ANIMATIONS_ENABLED,
 									} );
 								} )
 							)

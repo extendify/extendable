@@ -268,7 +268,7 @@ add_action( 'wp_enqueue_scripts', 'extendable_enqueue_navigation_customizations'
 function extendable_enqueue_animations() {
 
 	$animation_settings = get_option( 'ext_animation_settings', array(
-		'type' => 'fade-up',
+		'type' => 'none',
 		'speed' => 'medium'
 	));
 	

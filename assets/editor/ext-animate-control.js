@@ -15,51 +15,62 @@
 	const CLASS_ON = 'ext-animate--on';
 	const CLASS_OFF = 'ext-animate--off';
 	const OPTIONS = [
-		{ value: 'auto', label: __( 'Auto', 'extendable' ) },
 		{ value: 'on', label: __( 'On', 'extendable' ) },
 		{ value: 'off', label: __( 'Off', 'extendable' ) },
 	];
 
-	function addAnimationAttribute( settings, name ) {
-		if ( name !== 'core/group' ) {
-			return settings;
-		}
-		return Object.assign( {}, settings, {
-			attributes: Object.assign( {}, settings.attributes, {
-				extAnimateMode: { type: 'string', default: 'auto' },
-			} ),
+	// Class patterns from animations.json that auto-enable animation
+	const PRESET_PATTERNS = [
+		'is-style-ext-preset--image--natural-1--image-',
+		'is-style-ext-preset--group--natural-1--item-card-1--',
+		'is-style-ext-preset--button--natural-1--button-',
+		'is-style-ext-preset--group--natural-1--header-1',
+		'is-style-ext-preset--group--natural-1--footer-1',
+		'is-style-ext-preset--media-text--natural-1',
+		'is-style-ext-preset--cover--natural-1--cover-overlay-1',
+	];
+
+	function hasPresetClass( className ) {
+		return PRESET_PATTERNS.some( function ( pattern ) {
+			return className.includes( pattern );
 		} );
 	}
-
-	addFilter( 'blocks.registerBlockType', 'ext/animate-attribute', addAnimationAttribute, 10 );
 
 	const withExtAnimateControl = createHigherOrderComponent(
 		function ( BlockEdit ) {
 			return function ( props ) {
 				const { name, attributes, setAttributes, isSelected } = props;
 
-				if ( name !== 'core/group' ) {
+				if ( ! name.startsWith( 'core/' ) ) {
 					return createElement( BlockEdit, props );
 				}
 
-				const mode = attributes.extAnimateMode || 'auto';
+				const className = attributes.className || '';
+				const hasPreset = hasPresetClass( className );
+				const mode = className.includes( CLASS_ON ) || hasPreset
+					? 'on'
+					: className.includes( CLASS_OFF )
+						? 'off'
+						: '';
 
 				const onChangeMode = function ( nextMode ) {
-					let className = ( attributes.className || '' )
+					let newClassName = ( attributes.className || '' )
 						.replace( CLASS_ON, '' )
 						.replace( CLASS_OFF, '' )
 						.replace( /\s+/g, ' ' )
 						.trim();
 
 					if ( nextMode === 'on' ) {
-						className = className ? className + ' ' + CLASS_ON : CLASS_ON;
+						// Only add ext-animate--on if block doesn't have a preset class
+						if ( ! hasPreset ) {
+							newClassName = newClassName ? newClassName + ' ' + CLASS_ON : CLASS_ON;
+						}
 					} else if ( nextMode === 'off' ) {
-						className = className ? className + ' ' + CLASS_OFF : CLASS_OFF;
+						newClassName = newClassName ? newClassName + ' ' + CLASS_OFF : CLASS_OFF;
 					}
 
 					setAttributes( {
-						extAnimateMode: nextMode,
-						className: className || undefined,
+						className: newClassName || undefined,
 					} );
 				};
 
@@ -80,7 +91,7 @@
 									value: mode,
 									onChange: onChangeMode,
 									isBlock: true,
-									help: __( 'Auto follows global settings. On or Off applies to this block only.', 'extendable' ),
+									help: __( 'Enable or disable animation for this block.', 'extendable' ),
 								},
 								OPTIONS.map( function ( opt ) {
 									return createElement( ToggleGroupControlOption, {

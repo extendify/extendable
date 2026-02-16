@@ -96,7 +96,7 @@
 									isBlock: true,
 									help: ANIMATIONS_ENABLED
 										? __( 'Enable or disable animation for this block.', 'extendable' )
-										: __( 'To use this option, first enable animations globally. Ask the AI Agent to turn them on.', 'extendable' ),
+										: __( 'To use this option, first enable animations globally. Open the Plugins panel and find "Animation Settings".', 'extendable' ),
 								},
 								OPTIONS.map( function ( opt ) {
 									return createElement( ToggleGroupControlOption, {

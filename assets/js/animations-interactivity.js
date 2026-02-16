@@ -12,9 +12,16 @@
         medium: 0.7,
         fast: 0.4
     };
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let currentSpeed = speeds[config.speed] ? config.speed : 'medium';
 
     function initAnimations() {
+        // Early return for reduced motion preference - do nothing, elements stay visible
+        if (prefersReducedMotion.matches) {
+            return;
+        }
+        
+        // Early return for unsupported browsers - make elements visible
         if (!('IntersectionObserver' in window)) {
             Object.keys(config.map || {}).forEach(selector => {
                 try {
@@ -75,6 +82,11 @@
     }
 
     function resetAnimations() {
+        // Early return for reduced motion - nothing to reset
+        if (prefersReducedMotion.matches) {
+            return true;
+        }
+        
         trackedElements.forEach(element => {
             element.classList.remove(
                 'ext-animated-fade',
@@ -104,6 +116,11 @@
     }
 
     function setSpeed(speed) {
+        // Early return for reduced motion - speed changes are irrelevant
+        if (prefersReducedMotion.matches) {
+            return true;
+        }
+        
         if (!speeds[speed]) {
             speed = 'medium';
         }

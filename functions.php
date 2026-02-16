@@ -154,6 +154,10 @@ function extendable_register_pattern_categories() {
 }
 add_action( 'init', 'extendable_register_pattern_categories', 9 );
 
+/**
+ * Include animation functionality
+ */
+require_once get_template_directory() . '/inc/animations.php';
 
 /**
  * Add primary-foreground duotone to extendify demo Site Logo block.
@@ -258,139 +262,6 @@ if ( ! function_exists( 'extendable_enqueue_navigation_customizations' ) ) :
 	}
 endif;
 add_action( 'wp_enqueue_scripts', 'extendable_enqueue_navigation_customizations' );
-
-/**
- * Animations
- *
- * @since Extendable 2.0.33
- * @return void
- */
-function extendable_enqueue_animations() {
-
-	$animation_settings = get_option( 'ext_animation_settings', array(
-		'type' => 'none',
-		'speed' => 'medium'
-	));
-	
-	$animation_type = isset( $animation_settings['type'] ) ? $animation_settings['type'] : 'none';
-	$animation_speed = isset( $animation_settings['speed'] ) ? $animation_settings['speed'] : 'medium';
-	
-	if ( is_admin() || 
-	     ! apply_filters( 'extendable_enable_animations', true ) ||
-	     false === $animation_type || 
-	     empty( $animation_type ) ||
-	     'none' === $animation_type ) {
-	    return;
-	}
-
-	$config_file = get_template_directory() . '/assets/config/animations.json';
-	
-	if ( ! file_exists( $config_file ) || ! is_readable( $config_file ) ) {
-		return;
-	}
-	
-	$config = json_decode( file_get_contents( $config_file ), true );
-	
-	if ( ! is_array( $config ) ) {
-		return;
-	}
-	
-	$type = sanitize_key( $animation_type );
-	
-	if ( ! isset( $config['types'][ $type ] ) ) {
-		$type = 'fade';
-	}
-	
-	$mappings = $config['types'][ $type ]['mappings'] ?? array();
-	$defaults = $config['defaults'] ?? array();
-	$css_config = $config['css'] ?? array();
-
-	$sanitized = array();
-	foreach ( $mappings as $selector => $animation ) {
-		$clean_selector = sanitize_text_field( trim( $selector ) );
-		$clean_animation = sanitize_key( trim( $animation ) );
-		
-		if ( ! empty( $clean_selector ) && ! empty( $clean_animation ) ) {
-			$sanitized[ $clean_selector ] = $clean_animation;
-		}
-	}
-	
-	if ( empty( $sanitized ) ) {
-		return;
-	}
-
-	// Enqueue animation CSS
-	wp_enqueue_style(
-		'extendable-animations',
-		get_template_directory_uri() . '/assets/css/animations.css',
-		array( 'extendable-style' ),
-		EXTENDABLE_THEME_VERSION
-	);
-
-	// Enqueue animation JavaScript
-	wp_enqueue_script( 
-		'extendable-animations', 
-		get_template_directory_uri() . '/assets/js/animations-interactivity.js', 
-		array(), 
-		EXTENDABLE_THEME_VERSION, 
-		true 
-	);
-
-	// Pass configuration to JavaScript
-	wp_localize_script( 'extendable-animations', 'ExtendableAnimations', array(
-		'map' => $sanitized,
-		'defaults' => array_map( 'sanitize_text_field', $defaults ),
-		'speed' => sanitize_key( $animation_speed ),
-	));
-
-	// Generate FOUC prevention CSS (respects override classes)
-	$animation_css = '';
-	foreach ( $sanitized as $selector => $animation ) {
-		$css_rule = isset( $css_config[ $animation ] ) && ! empty( $css_config[ $animation ] )
-			?  $css_config[ $animation ] 
-			: 'opacity: 0;';
-		
-		$animation_css .= $selector . ':not(.ext-animate--off) { ' . $css_rule . ' } ';
-	}
-	
-	if ( ! empty( $animation_css ) ) {
-		wp_add_inline_style( 'extendable-style', $animation_css );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'extendable_enqueue_animations' );
-
-/**
- * Enqueue animation control for block editor
- *
- * @since Extendable 2.0.33
- * @return void
- */
-function extendable_enqueue_animation_editor_control() {
-	
-	$animation_settings = get_option( 'ext_animation_settings', array(
-		'type' => 'none',
-		'speed' => 'medium'
-	));
-	
-	$animation_type = isset( $animation_settings['type'] ) ? $animation_settings['type'] : 'none';
-	$is_enabled = apply_filters( 'extendable_enable_animations', true ) && 
-	              ! empty( $animation_type ) && 
-	              'none' !== $animation_type;
-
-	wp_enqueue_script(
-		'extendable-animate-control',
-		get_template_directory_uri() . '/assets/editor/ext-animate-control.js',
-		array( 'wp-blocks', 'wp-element', 'wp-components', 'wp-block-editor', 'wp-compose', 'wp-hooks', 'wp-i18n' ),
-		EXTENDABLE_THEME_VERSION,
-		true
-	);
-
-	wp_localize_script( 'extendable-animate-control', 'ExtendableAnimateControl', array(
-		'enabled' => $is_enabled ? '1' : '0',
-	) );
-}
-add_action( 'enqueue_block_editor_assets', 'extendable_enqueue_animation_editor_control' );
-
 
 /**
  * Set default template for new pages in the block editor (auto-drafts)

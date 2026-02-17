@@ -192,7 +192,7 @@ function extendable_enqueue_animation_editor_control() {
 
 	wp_enqueue_script(
 		'extendable-animate-control',
-		get_template_directory_uri() . '/assets/editor/ext-animate-control.js',
+		get_template_directory_uri() . '/assets/editor/block-animate-control.js',
 		array( 'wp-blocks', 'wp-element', 'wp-components', 'wp-block-editor', 'wp-compose', 'wp-hooks', 'wp-i18n' ),
 		EXTENDABLE_THEME_VERSION,
 		true

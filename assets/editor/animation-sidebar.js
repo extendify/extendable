@@ -11,7 +11,7 @@
 		Card,
 		CardBody
 	} = wp.components;
-	const { gear } = wp.components.Icon;
+	const { swatch } = wp.components.Icon;
 	
 	const { PluginSidebar, PluginSidebarMoreMenuItem } = wp.editSite || {};
 	
@@ -116,14 +116,14 @@
 			wp.element.createElement(Fragment, {},
 				wp.element.createElement(PluginSidebarMoreMenuItem, {
 					target: 'extendable-animation-sidebar',
-					icon: gear,
-                    isPinnable: false,
+					icon: 'controls-play',
+					isPinnable: false,
 				}, __('Animation Settings', 'extendable')),
 
 				wp.element.createElement(PluginSidebar, {
 					name: 'extendable-animation-sidebar',
 					title: __('Animation Settings', 'extendable'),
-					icon: gear,
+					icon: 'controls-play',
 					isPinnable: false
 				},
 					wp.element.createElement(Card, {},

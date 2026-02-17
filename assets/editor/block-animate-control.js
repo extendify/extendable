@@ -13,7 +13,7 @@
 	} = wp.components;
 
 	const ANIMATIONS_ENABLED = window.ExtendableAnimateControl && window.ExtendableAnimateControl.enabled === '1';
-	console.log( 'Animations enabled:', ANIMATIONS_ENABLED );
+	const EXTENDIFY_ACTIVE = window.ExtendableAnimateControl && window.ExtendableAnimateControl.extendify_active === '1';
 	const CLASS_ON = 'ext-animate--on';
 	const CLASS_OFF = 'ext-animate--off';
 	const OPTIONS = [
@@ -96,6 +96,8 @@
 									isBlock: true,
 									help: ANIMATIONS_ENABLED
 										? __( 'Enable or disable animation for this block.', 'extendable' )
+								: EXTENDIFY_ACTIVE
+									? __( 'To use this option, you need to enable animation globally. Ask the AI agent to enable this.', 'extendable' )
 									: __( 'To use this option, animations must be enabled globally first. Open the Site Editor → Options (three-dot menu) → Animation Settings.', 'extendable' ),
 								},
 								OPTIONS.map( function ( opt ) {

@@ -200,6 +200,7 @@ function extendable_enqueue_animation_editor_control() {
 
 	wp_localize_script( 'extendable-animate-control', 'ExtendableAnimateControl', array(
 		'enabled' => $is_enabled ? '1' : '0',
+		'extendify_active' => class_exists( 'Extendify' ) ? '1' : '0',
 	) );
 }
 add_action( 'enqueue_block_editor_assets', 'extendable_enqueue_animation_editor_control' );

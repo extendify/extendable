@@ -158,6 +158,15 @@
 							style: { textAlign: 'center', padding: '20px' }
 						}, wp.element.createElement(Spinner)) : wp.element.createElement(Fragment, {},
 
+							wp.element.createElement('p', {
+								style: { 
+									marginTop: '0',
+									marginBottom: '24px',
+									color: '#757575',
+									lineHeight: '1.5'
+								}
+							}, __('Enable animations across your site. Once enabled, you can manage animations for individual blocks.', 'extendable')),
+
 							wp.element.createElement(SelectControl, {
 								label: __('Animation Type', 'extendable'),
 								value: settings.type,

@@ -127,12 +127,12 @@
 										: createElement(
 											'span',
 											null,
-											__( 'Animations must be enabled globally before using this option.', 'extendable' ),
+											__( 'Animations are currently disabled.', 'extendable' ),
 											createElement(
 												'a',
 												{
 													href: '#',
-													style: { textDecoration: 'underline', cursor: 'pointer' },
+													style: { textDecoration: 'underline', cursor: 'pointer', marginInlineStart: '2px' },
 													onClick: function(e) {
 														e.preventDefault();
 														if (window.extendableOpenAnimationModal) {
@@ -140,7 +140,7 @@
 														}
 													}
 												},
-												__( 'Click here to open Animation Settings.', 'extendable' )
+												__( 'Open Animation Settings.', 'extendable' )
 											)
 										),
 								},

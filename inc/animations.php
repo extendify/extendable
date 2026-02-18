@@ -218,7 +218,7 @@ function extendable_enqueue_animation_sidebar() {
 	
 	wp_enqueue_script(
 		'extendable-animation-sidebar',
-		get_template_directory_uri() . '/assets/editor/animation-sidebar.js',
+		get_template_directory_uri() . '/assets/editor/animation-settings-modal.js',
 		array( 'wp-plugins', 'wp-element', 'wp-components', 'wp-data', 'wp-api-fetch', 'wp-i18n' ),
 		EXTENDABLE_THEME_VERSION,
 		true

@@ -18,7 +18,10 @@
 		{ value: 'off', label: __( 'Off', 'extendable' ) },
 	];
 
-	// Class patterns from animations.json that auto-enable animation
+	/**
+	 * Preset class patterns that automatically enable animation
+	 * These are specific block styles that include animation by default
+	 */
 	const PRESET_PATTERNS = [
 		'is-style-ext-preset--image--natural-1--image-',
 		'is-style-ext-preset--group--natural-1--item-card-1--',
@@ -29,18 +32,28 @@
 		'is-style-ext-preset--cover--natural-1--cover-overlay-1',
 	];
 
+	/**
+	 * Check if element has a preset animation class
+	 * 
+	 * @param {string} className - The className string to check
+	 * @return {boolean} True if className contains a preset pattern
+	 */
 	function hasPresetClass( className ) {
 		return PRESET_PATTERNS.some( function ( pattern ) {
 			return className.includes( pattern );
 		} );
 	}
 
+	/**
+	 * Higher-order component that adds animation control to block inspector
+	 * Adds animation toggle UI to all core blocks in the editor
+	 */
 	const withExtAnimateControl = createHigherOrderComponent(
 		function ( BlockEdit ) {
 			return function ( props ) {
 				const { name, attributes, setAttributes, isSelected } = props;
 
-				// Track animation enabled state dynamically
+				// Track animation enabled state dynamically via custom events
 				const initialEnabled = window.ExtendableAnimateControl && window.ExtendableAnimateControl.enabled === '1';
 				const [ animationsEnabled, setAnimationsEnabled ] = useState( initialEnabled );
 
@@ -137,7 +150,7 @@
 										value: opt.value,
 										label: opt.label,
 										showTooltip: true,
-									disabled: ! animationsEnabled,
+										disabled: ! animationsEnabled,
 									} );
 								} )
 							)

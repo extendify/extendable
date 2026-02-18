@@ -29,7 +29,12 @@
 		{ label: __( 'Fast', 'extendable' ), value: 'fast' },
 	];
 
-
+	/**
+	 * Animation Settings Modal Component
+	 * Provides UI for managing global animation settings
+	 * 
+	 * @return {wp.element.Element|null} Modal component or null if not supported
+	 */
 	function AnimationSidebar() {
 		const [settings, setSettings] = useState({
 			type: 'none',
@@ -41,15 +46,7 @@
 		const [successMessage, setSuccessMessage] = useState(null);
 		const [isModalOpen, setIsModalOpen] = useState(false);
 
-		// Expose function to open modal globally
-		useEffect(() => {
-			window.extendableOpenAnimationModal = () => setIsModalOpen(true);
-			return () => {
-				delete window.extendableOpenAnimationModal;
-			};
-		}, []);
-
-		// Expose function to open modal globally
+		// Expose function to open modal globally for external triggers
 		useEffect(() => {
 			window.extendableOpenAnimationModal = () => setIsModalOpen(true);
 			return () => {
@@ -131,6 +128,7 @@
 
 		const isAnimationsEnabled = settings.type && settings.type !== 'none';
 
+		// Ensure required components are available
 		if (!PluginSidebarMoreMenuItem) {
 			return null;
 		}

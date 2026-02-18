@@ -3,7 +3,7 @@
  * Animation functionality for Extendable theme
  *
  * @package Extendable
- * @since Extendable 2.0.34
+ * @since Extendable 2.0.33
  */
 
 // Prevent direct access
@@ -13,8 +13,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Register animation settings with WordPress Settings API
+ * Registers REST API endpoint for managing animation preferences
  * 
- * @since Extendable 2.0.34
+ * @since Extendable 2.0.33
+ * @return void
  */
 function extendable_register_animation_settings() {
 	register_setting( 'extendable_animations', 'ext_animation_settings', array(
@@ -45,10 +47,11 @@ add_action( 'rest_api_init', 'extendable_register_animation_settings' );
 
 /**
  * Sanitize animation settings
+ * Validates and sanitizes user input for animation configuration
  * 
- * @since Extendable 2.0.34
- * @param array $settings Animation settings to sanitize
- * @return array Sanitized settings
+ * @since Extendable 2.0.33
+ * @param mixed $settings Animation settings to sanitize
+ * @return array Sanitized settings with type and speed keys
  */
 function extendable_sanitize_animation_settings( $settings ) {
 	$valid_types = array( 'none', 'fade', 'fade-up', 'zoom-in' );
@@ -75,7 +78,8 @@ function extendable_sanitize_animation_settings( $settings ) {
 }
 
 /**
- * Animations
+ * Enqueue animations on frontend
+ * Loads animation CSS/JS and configures based on user settings
  *
  * @since Extendable 2.0.33
  * @return void
@@ -87,8 +91,8 @@ function extendable_enqueue_animations() {
 		'speed' => 'medium'
 	));
 	
-	$animation_type = isset( $animation_settings['type'] ) ? $animation_settings['type'] : 'none';
-	$animation_speed = isset( $animation_settings['speed'] ) ? $animation_settings['speed'] : 'medium';
+	$animation_type = $animation_settings['type'] ?? 'none';
+	$animation_speed = $animation_settings['speed'] ?? 'medium';
 	
 	if ( is_admin() || 
 	     ! apply_filters( 'extendable_enable_animations', true ) ||
@@ -185,7 +189,7 @@ function extendable_enqueue_animation_editor_control() {
 		'speed' => 'medium'
 	));
 	
-	$animation_type = isset( $animation_settings['type'] ) ? $animation_settings['type'] : 'none';
+	$animation_type = $animation_settings['type'] ?? 'none';
 	$is_enabled = apply_filters( 'extendable_enable_animations', true ) && 
 	              ! empty( $animation_type ) && 
 	              'none' !== $animation_type;
@@ -207,7 +211,7 @@ add_action( 'enqueue_block_editor_assets', 'extendable_enqueue_animation_editor_
 /**
  * Enqueue animation settings sidebar for site editor
  *
- * @since Extendable 2.0.34
+ * @since Extendable 2.0.33
  * @return void
  */
 function extendable_enqueue_animation_sidebar() {

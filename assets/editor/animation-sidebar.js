@@ -13,7 +13,8 @@
 	} = wp.components;
 	const { swatch } = wp.components.Icon;
 	
-	const { PluginSidebar, PluginSidebarMoreMenuItem } = wp.editSite || {};
+	const { PluginSidebarMoreMenuItem } = wp.editSite || wp.editPost || {};
+	const { Modal, Button } = wp.components;
 	
 	const ANIMATION_TYPES = [
 		{ label: __( 'None', 'extendable' ), value: 'none' },
@@ -28,6 +29,7 @@
 		{ label: __( 'Fast', 'extendable' ), value: 'fast' },
 	];
 
+
 	function AnimationSidebar() {
 		const [settings, setSettings] = useState({
 			type: 'none',
@@ -37,6 +39,23 @@
 		const [isSaving, setIsSaving] = useState(false);
 		const [error, setError] = useState(null);
 		const [successMessage, setSuccessMessage] = useState(null);
+		const [isModalOpen, setIsModalOpen] = useState(false);
+
+		// Expose function to open modal globally
+		useEffect(() => {
+			window.extendableOpenAnimationModal = () => setIsModalOpen(true);
+			return () => {
+				delete window.extendableOpenAnimationModal;
+			};
+		}, []);
+
+		// Expose function to open modal globally
+		useEffect(() => {
+			window.extendableOpenAnimationModal = () => setIsModalOpen(true);
+			return () => {
+				delete window.extendableOpenAnimationModal;
+			};
+		}, []);
 
 		useEffect(() => {
 			if (window.ExtendableAnimationSettings && window.ExtendableAnimationSettings.current) {
@@ -84,6 +103,10 @@
 				setSettings(newSettings);
 				setSuccessMessage(__('Animation settings saved!', 'extendable'));
 
+				window.dispatchEvent(new CustomEvent('extendableAnimationSettingsChanged', {
+					detail: { settings: newSettings }
+				}));
+
 				setTimeout(() => {
 					setSuccessMessage(null);
 				}, 5000);
@@ -107,74 +130,76 @@
 		};
 
 		const isAnimationsEnabled = settings.type && settings.type !== 'none';
-		
-		if (!PluginSidebar || !PluginSidebarMoreMenuItem) {
+
+		if (!PluginSidebarMoreMenuItem) {
 			return null;
 		}
 
 		return (
 			wp.element.createElement(Fragment, {},
 				wp.element.createElement(PluginSidebarMoreMenuItem, {
-					target: 'extendable-animation-sidebar',
+					target: 'extendable-animation-modal',
 					icon: 'controls-play',
 					isPinnable: false,
+					onClick: () => setIsModalOpen(true)
 				}, __('Animation Settings', 'extendable')),
 
-				wp.element.createElement(PluginSidebar, {
-					name: 'extendable-animation-sidebar',
-					title: __('Animation Settings', 'extendable'),
-					icon: 'controls-play',
-					isPinnable: false
-				},
-					wp.element.createElement(Card, {},
-						wp.element.createElement(CardBody, {},
-							isLoading ? wp.element.createElement('div', {
-								style: { textAlign: 'center', padding: '20px' }
-							}, wp.element.createElement(Spinner)) : wp.element.createElement(Fragment, {},
+					isModalOpen && wp.element.createElement(Modal, {
+						title: __('Animation Settings', 'extendable'),
+						onRequestClose: () => setIsModalOpen(false),
+						shouldCloseOnClickOutside: true,
+						style: {
+							width: '480px',
+							maxWidth: '90vw',
+							minHeight: '350px',
+							maxHeight: '90vh',
+							overflowY: 'auto'
+						}
+					},
+						isLoading ? wp.element.createElement('div', {
+							style: { textAlign: 'center', padding: '20px' }
+						}, wp.element.createElement(Spinner)) : wp.element.createElement(Fragment, {},
 
-								wp.element.createElement(SelectControl, {
-									label: __('Animation Type', 'extendable'),
-									value: settings.type,
-									options: ANIMATION_TYPES,
-									onChange: handleTypeChange,
-									disabled: isSaving,
-									help: __('Choose the animation style.', 'extendable')
-								}),
+							wp.element.createElement(SelectControl, {
+								label: __('Animation Type', 'extendable'),
+								value: settings.type,
+								options: ANIMATION_TYPES,
+								onChange: handleTypeChange,
+								disabled: isSaving,
+								help: __('Choose the animation style.', 'extendable')
+							}),
 
-								isAnimationsEnabled && wp.element.createElement(SelectControl, {
-									label: __('Animation Speed', 'extendable'),
-									value: settings.speed,
-									options: ANIMATION_SPEEDS,
-									onChange: handleSpeedChange,
-									disabled: isSaving,
-									help: __('Control how fast animations play.', 'extendable')
-								}),
+							isAnimationsEnabled && wp.element.createElement(SelectControl, {
+								label: __('Animation Speed', 'extendable'),
+								value: settings.speed,
+								options: ANIMATION_SPEEDS,
+								onChange: handleSpeedChange,
+								disabled: isSaving,
+								help: __('Control how fast animations play.', 'extendable')
+							}),
 
-								error && wp.element.createElement(Notice, {
-									status: 'error',
-									isDismissible: false
-								}, error),
+							error && wp.element.createElement(Notice, {
+								status: 'error',
+								isDismissible: false
+							}, error),
 
-								successMessage && wp.element.createElement(Notice, {
-									status: 'success',
-									isDismissible: false
-								}, successMessage),
-							),
+							successMessage && wp.element.createElement(Notice, {
+								status: 'success',
+								isDismissible: false
+							}, successMessage),
+						),
 
-							isSaving && wp.element.createElement('div', {
-								style: { textAlign: 'center', marginTop: '10px' }
-							}, 
-								wp.element.createElement(Spinner),
-								wp.element.createElement('p', { style: { margin: '5px 0 0 0' } }, __('Saving...', 'extendable'))
-							)
+						isSaving && wp.element.createElement('div', {
+							style: { textAlign: 'center', marginTop: '10px' }
+						},
+							wp.element.createElement(Spinner),
+							wp.element.createElement('p', { style: { margin: '5px 0 0 0' } }, __('Saving...', 'extendable'))
 						)
 					)
-				)
 			)
 		);
 	}
 
-	// Register the plugin
 	registerPlugin('extendable-animation-sidebar', {
 		render: AnimationSidebar
 	});

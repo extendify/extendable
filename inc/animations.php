@@ -200,29 +200,22 @@ function extendable_enqueue_animation_editor_control() {
 
 	wp_localize_script( 'extendable-animate-control', 'ExtendableAnimateControl', array(
 		'enabled' => $is_enabled ? '1' : '0',
-		'extendify_active' => class_exists( 'Extendify' ) ? '1' : '0',
 	) );
 }
 add_action( 'enqueue_block_editor_assets', 'extendable_enqueue_animation_editor_control' );
 
 /**
  * Enqueue animation settings sidebar for site editor
- * Only show if Extendify plugin is not active
  *
  * @since Extendable 2.0.34
  * @return void
  */
 function extendable_enqueue_animation_sidebar() {
 	
-	// Only show animation settings if Extendify plugin is not active
-	if ( class_exists( 'Extendify' ) ) {
-		return;
-	}
-	
 	wp_enqueue_script(
 		'extendable-animation-sidebar',
 		get_template_directory_uri() . '/assets/editor/animation-sidebar.js',
-		array( 'wp-plugins', 'wp-edit-site', 'wp-element', 'wp-components', 'wp-data', 'wp-api-fetch', 'wp-i18n' ),
+		array( 'wp-plugins', 'wp-element', 'wp-components', 'wp-data', 'wp-api-fetch', 'wp-i18n' ),
 		EXTENDABLE_THEME_VERSION,
 		true
 	);

@@ -3,7 +3,7 @@
 
 	const { addFilter } = wp.hooks;
 	const { createHigherOrderComponent } = wp.compose;
-	const { Fragment, createElement } = wp.element;
+	const { Fragment, createElement, useState, useEffect } = wp.element;
 	const { __ } = wp.i18n;
 	const { InspectorControls } = wp.blockEditor || wp.editor;
 	const {
@@ -11,9 +11,6 @@
 		__experimentalToggleGroupControl: ToggleGroupControl,
 		__experimentalToggleGroupControlOption: ToggleGroupControlOption,
 	} = wp.components;
-
-	const ANIMATIONS_ENABLED = window.ExtendableAnimateControl && window.ExtendableAnimateControl.enabled === '1';
-	const EXTENDIFY_ACTIVE = window.ExtendableAnimateControl && window.ExtendableAnimateControl.extendify_active === '1';
 	const CLASS_ON = 'ext-animate--on';
 	const CLASS_OFF = 'ext-animate--off';
 	const OPTIONS = [
@@ -42,6 +39,24 @@
 		function ( BlockEdit ) {
 			return function ( props ) {
 				const { name, attributes, setAttributes, isSelected } = props;
+
+				// Track animation enabled state dynamically
+				const initialEnabled = window.ExtendableAnimateControl && window.ExtendableAnimateControl.enabled === '1';
+				const [ animationsEnabled, setAnimationsEnabled ] = useState( initialEnabled );
+
+				useEffect( function () {
+					const handleSettingsChange = function ( event ) {
+						const settings = event.detail.settings;
+						const isEnabled = settings && settings.type && settings.type !== 'none';
+						setAnimationsEnabled( isEnabled );
+					};
+
+					window.addEventListener( 'extendableAnimationSettingsChanged', handleSettingsChange );
+
+					return function () {
+						window.removeEventListener( 'extendableAnimationSettingsChanged', handleSettingsChange );
+					};
+				}, [] );
 
 				if ( ! name.startsWith( 'core/' ) ) {
 					return createElement( BlockEdit, props );
@@ -94,11 +109,27 @@
 									value: mode,
 									onChange: onChangeMode,
 									isBlock: true,
-									help: ANIMATIONS_ENABLED
+									help: animationsEnabled
 										? __( 'Enable or disable animation for this block.', 'extendable' )
-								: EXTENDIFY_ACTIVE
-									? __( 'To use this option, you need to enable animation globally. Ask the AI agent to enable this.', 'extendable' )
-									: __( 'To use this option, animations must be enabled globally first. Open the Site Editor → Options (three-dot menu) → Animation Settings.', 'extendable' ),
+										: createElement(
+											'span',
+											null,
+											__( 'Animations must be enabled globally before using this option.', 'extendable' ),
+											createElement(
+												'a',
+												{
+													href: '#',
+													style: { textDecoration: 'underline', cursor: 'pointer' },
+													onClick: function(e) {
+														e.preventDefault();
+														if (window.extendableOpenAnimationModal) {
+															window.extendableOpenAnimationModal();
+														}
+													}
+												},
+												__( 'Click here to open Animation Settings.', 'extendable' )
+											)
+										),
 								},
 								OPTIONS.map( function ( opt ) {
 									return createElement( ToggleGroupControlOption, {
@@ -106,7 +137,7 @@
 										value: opt.value,
 										label: opt.label,
 										showTooltip: true,
-										disabled: ! ANIMATIONS_ENABLED,
+									disabled: ! animationsEnabled,
 									} );
 								} )
 							)

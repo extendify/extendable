@@ -3,9 +3,10 @@
 
 	const { addFilter } = wp.hooks;
 	const { createHigherOrderComponent } = wp.compose;
-	const { Fragment, createElement, useState, useEffect } = wp.element;
+	const { Fragment, createElement, useState, useEffect, useCallback, useMemo, useRef } = wp.element;
 	const { __ } = wp.i18n;
 	const { InspectorControls } = wp.blockEditor || wp.editor;
+	const { select } = wp.data;
 	const {
 		PanelBody,
 		__experimentalToggleGroupControl: ToggleGroupControl,
@@ -18,9 +19,33 @@
 		{ value: 'off', label: __( 'Off', 'extendable' ) },
 	];
 
+	let currentGlobalAnimationState = window.ExtendableAnimateControl && window.ExtendableAnimateControl.enabled === '1';
+	const existingBlocks = new Set();
+	
+	// Mark all existing blocks on initial load, so we only auto-enable animation for truly new blocks added
+	let hasInitializedExistingBlocks = false;
+	function initializeExistingBlocks() {
+		if ( hasInitializedExistingBlocks ) {
+			return;
+		}
+		hasInitializedExistingBlocks = true;
+		
+		const allBlocks = select( 'core/block-editor' ).getBlocks();
+		function addBlockIds( blocks ) {
+			blocks.forEach( function( block ) {
+				existingBlocks.add( block.clientId );
+				if ( block.innerBlocks && block.innerBlocks.length > 0 ) {
+					addBlockIds( block.innerBlocks );
+				}
+			} );
+		}
+		addBlockIds( allBlocks );
+	}
+
 	/**
 	 * Preset class patterns that automatically enable animation
 	 * These are specific block styles that include animation by default
+	 * It will be remove in future 
 	 */
 	const PRESET_PATTERNS = [
 		'is-style-ext-preset--image--natural-1--image-',
@@ -32,35 +57,62 @@
 		'is-style-ext-preset--cover--natural-1--cover-overlay-1',
 	];
 
-	/**
-	 * Check if element has a preset animation class
-	 * 
-	 * @param {string} className - The className string to check
-	 * @return {boolean} True if className contains a preset pattern
-	 */
 	function hasPresetClass( className ) {
 		return PRESET_PATTERNS.some( function ( pattern ) {
 			return className.includes( pattern );
 		} );
 	}
 
-	/**
-	 * Higher-order component that adds animation control to block inspector
-	 * Adds animation toggle UI to all core blocks in the editor
-	 */
+	function hasClass( classNameString, targetClass ) {
+		if ( ! classNameString ) {
+			return false;
+		}
+		const classes = classNameString.split( /\s+/ );
+		return classes.includes( targetClass );
+	}
+
+	function addClass( classNameString, classToAdd ) {
+		const current = classNameString || '';
+		if ( hasClass( current, classToAdd ) ) {
+			return current;
+		}
+		return current ? current + ' ' + classToAdd : classToAdd;
+	}
+
+	function removeClass( classNameString, classToRemove ) {
+		if ( ! classNameString ) {
+			return '';
+		}
+		return classNameString
+			.split( /\s+/ )
+			.filter( function ( cls ) {
+				return cls !== classToRemove;
+			} )
+			.join( ' ' )
+			.trim();
+	}
+
 	const withExtAnimateControl = createHigherOrderComponent(
 		function ( BlockEdit ) {
 			return function ( props ) {
-				const { name, attributes, setAttributes, isSelected } = props;
+				const { attributes, setAttributes, isSelected, clientId } = props;
 
-				// Track animation enabled state dynamically via custom events
-				const initialEnabled = window.ExtendableAnimateControl && window.ExtendableAnimateControl.enabled === '1';
-				const [ animationsEnabled, setAnimationsEnabled ] = useState( initialEnabled );
+				const [ animationsEnabled, setAnimationsEnabled ] = useState( currentGlobalAnimationState );
+				const hasAutoEnabled = useRef( false );
 
+				// Sync with global state when block becomes selected
+				useEffect( function () {
+					if ( isSelected ) {
+						setAnimationsEnabled( currentGlobalAnimationState );
+					}
+				}, [ isSelected ] );
+
+				// Listen to global animation settings changes
 				useEffect( function () {
 					const handleSettingsChange = function ( event ) {
 						const settings = event.detail.settings;
 						const isEnabled = settings && settings.type && settings.type !== 'none';
+						currentGlobalAnimationState = isEnabled;
 						setAnimationsEnabled( isEnabled );
 					};
 
@@ -71,39 +123,82 @@
 					};
 				}, [] );
 
-				if ( ! name.startsWith( 'core/' ) ) {
-					return createElement( BlockEdit, props );
-				}
+				// Auto-enable animation for newly added blocks (run once per block)
+				useEffect( function () {
+					if ( hasAutoEnabled.current ) {
+						return;
+					}
+					hasAutoEnabled.current = true;
+					initializeExistingBlocks();
+
+					if ( ! animationsEnabled ) {
+						return;
+					}
+
+					const className = attributes.className || '';
+					const hasAnimationClass = hasClass( className, CLASS_ON ) || hasClass( className, CLASS_OFF );
+					const hasPreset = hasPresetClass( className );
+					const isOldBlock = existingBlocks.has( clientId );
+
+					// Only add animation class to new blocks without any animation class
+					if ( ! isOldBlock && ! hasAnimationClass && ! hasPreset ) {
+						const newClassName = addClass( className, CLASS_ON );
+						setAttributes( {
+							className: newClassName,
+						} );
+					}
+				}, [ clientId, attributes.className, animationsEnabled, setAttributes ] );
 
 				const className = attributes.className || '';
-				const hasPreset = hasPresetClass( className );
-				const hasOffClass = className.includes( CLASS_OFF );
-				const mode = hasOffClass
-					? 'off'
-					: ( className.includes( CLASS_ON ) || hasPreset )
-						? 'on'
-						: 'off';
+				
+				const hasPreset = useMemo( function () {
+					return hasPresetClass( className );
+				}, [ className ] );
 
-				const onChangeMode = function ( nextMode ) {
-					let newClassName = ( attributes.className || '' )
-						.replace( CLASS_ON, '' )
-						.replace( CLASS_OFF, '' )
-						.replace( /\s+/g, ' ' )
-						.trim();
+				const mode = useMemo( function () {
+					const hasOffClass = hasClass( className, CLASS_OFF );
+					if ( hasOffClass ) {
+						return 'off';
+					}
+					if ( hasClass( className, CLASS_ON ) || hasPreset ) {
+						return 'on';
+					}
+					return 'off';
+				}, [ className, hasPreset ] );
+
+				const onChangeMode = useCallback( function ( nextMode ) {
+					let newClassName = removeClass( removeClass( attributes.className || '', CLASS_ON ), CLASS_OFF );
 
 					if ( nextMode === 'on' ) {
 						// Only add ext-animate--on if block doesn't have a preset class
 						if ( ! hasPreset ) {
-							newClassName = newClassName ? newClassName + ' ' + CLASS_ON : CLASS_ON;
+							newClassName = addClass( newClassName, CLASS_ON );
 						}
 					} else if ( nextMode === 'off' ) {
-						newClassName = newClassName ? newClassName + ' ' + CLASS_OFF : CLASS_OFF;
+						newClassName = addClass( newClassName, CLASS_OFF );
 					}
 
 					setAttributes( {
 						className: newClassName || undefined,
 					} );
-				};
+				}, [ attributes.className, hasPreset, setAttributes ] );
+
+				const settingsLink = useMemo( function () {
+					return createElement(
+						'a',
+						{
+							href: '#',
+							style: { textDecoration: 'underline', cursor: 'pointer', marginInlineStart: '2px' },
+							onClick: function( e ) {
+								e.preventDefault();
+								if ( window.extendableOpenAnimationModal ) {
+									window.extendableOpenAnimationModal();
+								}
+							}
+						},
+						__( 'Open Animation Global Settings.', 'extendable' )
+					);
+				}, [] );
 
 				return createElement(
 					Fragment,
@@ -123,25 +218,17 @@
 									onChange: onChangeMode,
 									isBlock: true,
 									help: animationsEnabled
-										? __( 'Enable or disable animation for this block.', 'extendable' )
+										? createElement(
+											'span',
+											null,
+											__( 'Enable or disable animation for this block.', 'extendable' ),
+											settingsLink
+										)
 										: createElement(
 											'span',
 											null,
 											__( 'Animations are currently disabled.', 'extendable' ),
-											createElement(
-												'a',
-												{
-													href: '#',
-													style: { textDecoration: 'underline', cursor: 'pointer', marginInlineStart: '2px' },
-													onClick: function(e) {
-														e.preventDefault();
-														if (window.extendableOpenAnimationModal) {
-															window.extendableOpenAnimationModal();
-														}
-													}
-												},
-												__( 'Open Animation Settings.', 'extendable' )
-											)
+											settingsLink
 										),
 								},
 								OPTIONS.map( function ( opt ) {

@@ -42,26 +42,7 @@
 		addBlockIds( allBlocks );
 	}
 
-	/**
-	 * Preset class patterns that automatically enable animation
-	 * These are specific block styles that include animation by default
-	 * It will be remove in future 
-	 */
-	const PRESET_PATTERNS = [
-		'is-style-ext-preset--image--natural-1--image-',
-		'is-style-ext-preset--group--natural-1--item-card-1--',
-		'is-style-ext-preset--button--natural-1--button-',
-		'is-style-ext-preset--group--natural-1--header-1',
-		'is-style-ext-preset--group--natural-1--footer-1',
-		'is-style-ext-preset--media-text--natural-1',
-		'is-style-ext-preset--cover--natural-1--cover-overlay-1',
-	];
 
-	function hasPresetClass( className ) {
-		return PRESET_PATTERNS.some( function ( pattern ) {
-			return className.includes( pattern );
-		} );
-	}
 
 	function hasClass( classNameString, targetClass ) {
 		if ( ! classNameString ) {
@@ -137,12 +118,11 @@
 
 					const className = attributes.className || '';
 					const hasAnimationClass = hasClass( className, CLASS_ON ) || hasClass( className, CLASS_OFF );
-					const hasPreset = hasPresetClass( className );
-					const isOldBlock = existingBlocks.has( clientId );
+			const isOldBlock = existingBlocks.has( clientId );
 
-					// Only add animation class to new blocks without any animation class
-					if ( ! isOldBlock && ! hasAnimationClass && ! hasPreset ) {
-						const newClassName = addClass( className, CLASS_ON );
+			// Only add animation class to new blocks without any animation class
+			if ( ! isOldBlock && ! hasAnimationClass ) {
+				const newClassName = addClass( className, CLASS_ON );
 						setAttributes( {
 							className: newClassName,
 						} );
@@ -150,101 +130,94 @@
 				}, [ clientId, attributes.className, animationsEnabled, setAttributes ] );
 
 				const className = attributes.className || '';
-				
-				const hasPreset = useMemo( function () {
-					return hasPresetClass( className );
-				}, [ className ] );
 
-				const mode = useMemo( function () {
-					const hasOffClass = hasClass( className, CLASS_OFF );
-					if ( hasOffClass ) {
-						return 'off';
-					}
-					if ( hasClass( className, CLASS_ON ) || hasPreset ) {
-						return 'on';
-					}
+			const mode = useMemo( function () {
+				const hasOffClass = hasClass( className, CLASS_OFF );
+				if ( hasOffClass ) {
 					return 'off';
-				}, [ className, hasPreset ] );
+				}
+				if ( hasClass( className, CLASS_ON ) ) {
+					return 'on';
+				}
+				return 'off';
+			}, [ className ] );
 
-				const onChangeMode = useCallback( function ( nextMode ) {
-					let newClassName = removeClass( removeClass( attributes.className || '', CLASS_ON ), CLASS_OFF );
+			const onChangeMode = useCallback( function ( nextMode ) {
+				let newClassName = removeClass( removeClass( attributes.className || '', CLASS_ON ), CLASS_OFF );
 
-					if ( nextMode === 'on' ) {
-						// Only add ext-animate--on if block doesn't have a preset class
-						if ( ! hasPreset ) {
-							newClassName = addClass( newClassName, CLASS_ON );
+				if ( nextMode === 'on' ) {
+					newClassName = addClass( newClassName, CLASS_ON );
+				} else if ( nextMode === 'off' ) {
+					newClassName = addClass( newClassName, CLASS_OFF );
+				}
+
+				setAttributes( {
+					className: newClassName || undefined,
+				} );
+			}, [ attributes.className, setAttributes ] );
+
+			const settingsLink = useMemo( function () {
+			return createElement(
+				'a',
+				{
+					href: '#',
+					style: { textDecoration: 'underline', cursor: 'pointer', marginInlineStart: '2px' },
+					onClick: function( e ) {
+						e.preventDefault();
+						if ( window.extendableOpenAnimationModal ) {
+							window.extendableOpenAnimationModal();
 						}
-					} else if ( nextMode === 'off' ) {
-						newClassName = addClass( newClassName, CLASS_OFF );
 					}
+				},
+				__( 'Open Animation Global Settings.', 'extendable' )
+			);
+		}, [] );
 
-					setAttributes( {
-						className: newClassName || undefined,
-					} );
-				}, [ attributes.className, hasPreset, setAttributes ] );
-
-				const settingsLink = useMemo( function () {
-					return createElement(
-						'a',
+		return createElement(
+			Fragment,
+			null,
+			createElement( BlockEdit, props ),
+			isSelected && createElement(
+				InspectorControls,
+				null,
+				createElement(
+					PanelBody,
+					{ title: __( 'Animation', 'extendable' ), initialOpen: false },
+					createElement(
+						ToggleGroupControl,
 						{
-							href: '#',
-							style: { textDecoration: 'underline', cursor: 'pointer', marginInlineStart: '2px' },
-							onClick: function( e ) {
-								e.preventDefault();
-								if ( window.extendableOpenAnimationModal ) {
-									window.extendableOpenAnimationModal();
-								}
-							}
+							label: __( 'Animation', 'extendable' ),
+							value: mode,
+							onChange: onChangeMode,
+							isBlock: true,
+							help: animationsEnabled
+								? createElement(
+									'span',
+									null,
+									__( 'Enable or disable animation for this block.', 'extendable' ),
+									settingsLink
+								)
+								: createElement(
+									'span',
+									null,
+									__( 'Animations are currently disabled.', 'extendable' ),
+									settingsLink
+								),
 						},
-						__( 'Open Animation Global Settings.', 'extendable' )
-					);
-				}, [] );
-
-				return createElement(
-					Fragment,
-					null,
-					createElement( BlockEdit, props ),
-					isSelected && createElement(
-						InspectorControls,
-						null,
-						createElement(
-							PanelBody,
-							{ title: __( 'Animation', 'extendable' ), initialOpen: false },
-							createElement(
-								ToggleGroupControl,
-								{
-									label: __( 'Animation', 'extendable' ),
-									value: mode,
-									onChange: onChangeMode,
-									isBlock: true,
-									help: animationsEnabled
-										? createElement(
-											'span',
-											null,
-											__( 'Enable or disable animation for this block.', 'extendable' ),
-											settingsLink
-										)
-										: createElement(
-											'span',
-											null,
-											__( 'Animations are currently disabled.', 'extendable' ),
-											settingsLink
-										),
-								},
-								OPTIONS.map( function ( opt ) {
-									return createElement( ToggleGroupControlOption, {
-										key: opt.value,
-										value: opt.value,
-										label: opt.label,
-										showTooltip: true,
-										disabled: ! animationsEnabled,
-									} );
-								} )
-							)
-						)
+				OPTIONS.map( function ( opt ) {
+							return createElement( ToggleGroupControlOption, {
+								key: opt.value,
+								value: opt.value,
+								label: opt.label,
+								showTooltip: true,
+								disabled: ! animationsEnabled,
+							} );
+						} )
 					)
-				);
-			};
+				)
+			)
+		);
+	};
 		},
 		'withExtAnimateControl'
 	);

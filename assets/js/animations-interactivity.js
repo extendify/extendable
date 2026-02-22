@@ -18,7 +18,7 @@
         fast: 0.4
     });
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    let currentSpeed = speeds[config.speed] || 'medium';
+    let currentSpeed = config.speed || 'medium';
 
     function initAnimations() {
         if (prefersReducedMotion.matches) {
@@ -61,24 +61,34 @@
                 const elements = document.querySelectorAll(selector);
                 const animationType = config.map[selector];
                 
-                elements.forEach((element, index) => {
+                // Group elements by parent for proper stagger
+                const elementsByParent = new Map();
+                elements.forEach(element => {
                     if (element.classList.contains('ext-animate--off')) {
                         return;
                     }
-                    
-                    element.classList.add('ext-animate');
-                    element.dataset.extAnimate = animationType;
-                    
-                    const delay = Math.min(index * staggerDelay, maxStagger);
-                    const duration = speeds[currentSpeed];
-                    
-                    element.style.animationDuration = `${duration}s`;
-                    if (delay > 0) {
-                        element.style.animationDelay = `${delay}s`;
+                    const parent = element.parentElement;
+                    if (!elementsByParent.has(parent)) {
+                        elementsByParent.set(parent, []);
                     }
-                    
-                    observer.observe(element);
-                    trackedElements.push(element);
+                    elementsByParent.get(parent).push(element);
+                });
+                
+                // Apply stagger within each parent group
+                elementsByParent.forEach(siblingElements => {
+                    siblingElements.forEach((element, index) => {
+                        element.classList.add('ext-animate');
+                        element.dataset.extAnimate = animationType;
+                        
+                        const delay = Math.min(index * staggerDelay, maxStagger);
+                        const duration = speeds[currentSpeed];
+                        
+                        element.style.animationDuration = `${duration}s`;
+                        element.style.animationDelay = `${delay}s`;
+                        
+                        observer.observe(element);
+                        trackedElements.push(element);
+                    });
                 });
             } catch (e) {}
         });

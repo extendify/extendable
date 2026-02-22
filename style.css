@@ -436,3 +436,11 @@ input, textarea {
     display: block;
   }
 }
+
+/* RTL-only fix for Gutenberg Group left justification */
+
+[dir="rtl"] [class*="wp-container-core-group-is-layout-"].ext-is-logical-start.is-content-justification-left
+	> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+	margin-inline-start: 0 !important;
+	margin-inline-end: auto !important;
+}

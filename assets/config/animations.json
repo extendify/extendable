@@ -14,38 +14,16 @@
   "types": {
     "fade": {
       "mappings": {
-        "[class*=\"is-style-ext-preset--image--natural-1--image-\"]": "fade",
-        "[class*=\"is-style-ext-preset--group--natural-1--item-card-1--\"]": "fade",
-        "[class*=\"is-style-ext-preset--button--natural-1--button-\"]": "fade",
-        "[class*=\"is-style-ext-preset--group--natural-1--header-1\"] > *": "fade",
-        "[class*=\"is-style-ext-preset--group--natural-1--footer-1\"] > *": "fade",
-        "[class*=\"is-style-ext-preset--media-text--natural-1\"]": "fade",
-        "[class*=\"is-style-ext-preset--cover--natural-1--cover-overlay-1\"]": "fade",
         ".ext-animate--on": "fade"
-        
       }
     },
     "fade-up": {
       "mappings": {
-        "[class*=\"is-style-ext-preset--image--natural-1--image-\"]": "fade-up",
-        "[class*=\"is-style-ext-preset--group--natural-1--item-card-1--\"]": "fade-up",
-        "[class*=\"is-style-ext-preset--button--natural-1--button-\"]": "fade-up",
-        "[class*=\"is-style-ext-preset--group--natural-1--header-1\"] > *": "fade",
-        "[class*=\"is-style-ext-preset--group--natural-1--footer-1\"] > *": "fade",
-        "[class*=\"is-style-ext-preset--media-text--natural-1\"]": "fade-up",
-        "[class*=\"is-style-ext-preset--cover--natural-1--cover-overlay-1\"]": "fade-up",
         ".ext-animate--on": "fade-up"
       }
     },
     "zoom-in": {
       "mappings": {
-        "[class*=\"is-style-ext-preset--image--natural-1--image-\"]": "zoom-in",
-        "[class*=\"is-style-ext-preset--group--natural-1--item-card-1--\"]": "zoom-in",
-        "[class*=\"is-style-ext-preset--button--natural-1--button-\"]": "zoom-in",
-        "[class*=\"is-style-ext-preset--group--natural-1--header-1\"] > *": "fade",
-        "[class*=\"is-style-ext-preset--group--natural-1--footer-1\"] > *": "fade",
-        "[class*=\"is-style-ext-preset--media-text--natural-1\"]": "zoom-in",
-        "[class*=\"is-style-ext-preset--cover--natural-1--cover-overlay-1\"]": "fade",
         ".ext-animate--on": "zoom-in"
       }
     }

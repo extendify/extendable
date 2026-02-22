@@ -352,6 +352,12 @@ input, textarea {
 	margin-top: 0;
 	margin-bottom: 0; 
 }
+.wc-block-product-template__responsive {
+	grid-row-gap: 2rem;
+}
+.wc-block-components-product-button__button {
+	z-index: 1;
+}
 /*
  * Adds offset for sticky header overlap
  */

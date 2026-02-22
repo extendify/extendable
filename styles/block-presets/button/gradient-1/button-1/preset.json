@@ -3,7 +3,7 @@
 	"version": 3,
 	"title": "Gradient 1 Button 1",
 	"slug": "ext-preset--button--gradient-1--button-1",
-	"blockTypes": ["core/button"],
+	"blockTypes": ["core/button", "woocommerce/product-button"],
 	"styles": {
 		"border": {
 			"radius": "8px"

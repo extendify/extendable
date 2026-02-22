@@ -3,7 +3,7 @@
 	"version": 3,
 	"title": "Button 1",
 	"slug": "ext-preset--button--natural-1--button-1",
-	"blockTypes": ["core/button"],
+	"blockTypes": ["core/button", "woocommerce/product-button"],
 	"styles": {
 		"typography": {
 			"fontSize": "inherit"

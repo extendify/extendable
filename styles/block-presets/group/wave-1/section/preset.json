@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Wave 1 Section 1",
+	"slug": "ext-preset--group--wave-1--section",
+	"blockTypes": ["core/group"],
+	"styles": {
+		"spacing": {
+			"blockGap": "var(--wp--preset--spacing--30)"
+		},
+		"css": "& { --wave-h: clamp(32px, calc(100vw*80/1440), 280px); --wave-mask: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80'%3E%3Cpath fill='white' d='M312 60.3281C503.25 60.3281 577.125 -37.5058 772.875 16.0013C968.625 69.5085 1135.12 41.4433 1250.62 41.4433C1366.12 41.4433 1440 80 1440 80H0V16.0014C0 16.0014 120.75 60.3281 312 60.3281Z'/%3E%3C/svg%3E\"); } &.has-tertiary-background-color { position: relative; overflow-x: clip; margin-block: var(--wave-h) !important; } &.has-tertiary-background-color::before { content: \"\"; position: absolute; width: 100vw; left: 50%; height: var(--wave-h); background-color: var(--wp--preset--color--tertiary); -webkit-mask: var(--wave-mask) no-repeat center/100% 100%; mask: var(--wave-mask) no-repeat center/100% 100%; bottom: calc(100% - 1px); transform: translateX(-50%); pointer-events: none; } &.has-tertiary-background-color::after { content: \"\"; position: absolute; width: 100vw; left: 50%; height: var(--wave-h); background-color: var(--wp--preset--color--tertiary); -webkit-mask: var(--wave-mask) no-repeat center/100% 100%; mask: var(--wave-mask) no-repeat center/100% 100%; top: calc(100% - 1px); transform: translateX(-50%) scaleY(-1); pointer-events: none; }" }
+}

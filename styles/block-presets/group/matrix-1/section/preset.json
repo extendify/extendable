@@ -1,0 +1,13 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Matrix 1 Section 1",
+	"slug": "ext-preset--group--matrix-1--section",
+	"blockTypes": ["core/group"],
+	"styles": {
+		"spacing": {
+			"blockGap": "var(--wp--preset--spacing--30)"
+		},
+		"css": "&.has-background-background-color { background-color: var(--wp--preset--color--background) !important; background-image: linear-gradient( 180deg, var(--wp--preset--color--background) -4%, color-mix(in srgb, var(--wp--preset--color--background) 35%, transparent) 50%, var(--wp--preset--color--background) 104% ), var(--grid-vector-bg) !important; background-size: cover !important; background-position: center !important; }  &.has-tertiary-background-color { background-color: var(--wp--preset--color--tertiary) !important; background-image: linear-gradient( 180deg, var(--wp--preset--color--tertiary) -4%, color-mix(in srgb, var(--wp--preset--color--tertiary) 35%, transparent) 50%, var(--wp--preset--color--tertiary) 104% ), var(--grid-vector-bg) !important; }"
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Matrix 1 Content Above of Image",
+	"slug": "ext-preset--image--matrix-1--image-1--content-top",
+	"blockTypes": ["core/image", "core/cover"],
+	"styles": {
+		"color": {
+			"background": "var:preset|color|tertiary"
+		},
+		"spacing": {
+			"padding": {
+				"top": "16px",
+				"right": "16px",
+				"bottom": "16px",
+				"left": "16px"
+			}
+		},
+		"css": "border:solid 1px color-mix(in srgb, var(--wp--preset--color--foreground) 8%, transparent);"
+	}
+}

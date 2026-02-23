@@ -3,7 +3,7 @@
 	"version": 3,
 	"title": "Soft 1 Button 1",
 	"slug": "ext-preset--button--soft-1--button-1",
-	"blockTypes": ["core/button"],
+	"blockTypes": ["core/button", "woocommerce/product-button"],
 	"styles": {
 		"border": {
 			"radius": "16px"

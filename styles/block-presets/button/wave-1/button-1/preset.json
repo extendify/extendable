@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Wave 1 Button 1",
+	"slug": "ext-preset--button--wave-1--button-1",
+	"blockTypes": ["core/button", "woocommerce/product-button"],
+	"styles": {
+		"border": {
+			"radius": "4px"
+		}
+	}
+}

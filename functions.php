@@ -331,7 +331,10 @@ function extendable_hide_block_style_variations() {
 		.block-editor-block-styles__item[aria-label*="Brutalism 1"],
 		.block-editor-block-styles__item[aria-label*="Organic 1"],
 		.block-editor-block-styles__item[aria-label*="Soft 1"],
-		.block-editor-block-styles__item[aria-label*="Gradient 1"] {
+		.block-editor-block-styles__item[aria-label*="Gradient 1"],
+		.block-editor-block-styles__item[aria-label*="Matrix 1"],
+		.block-editor-block-styles__item[aria-label*="Prism 1"],
+		.block-editor-block-styles__item[aria-label*="Wave 1"] {
 			display: none !important;
 		}
 	';
@@ -349,7 +352,10 @@ function extendable_hide_site_editor_block_style_variations() {
 		.components-navigator-button[id*="brutalism-1--"],
 		.components-navigator-button[id*="organic-1--"],
 		.components-navigator-button[id*="soft-1--"],
-		.components-navigator-button[id*="gradient-1--"] {
+		.components-navigator-button[id*="gradient-1--"],
+		.components-navigator-button[id*="matrix-1--"],
+		.components-navigator-button[id*="prism-1--"],
+		.components-navigator-button[id*="wave-1--"] {
 			display: none !important;
 		}
 		
@@ -371,3 +377,72 @@ function extendable_hide_site_editor_block_style_variations() {
 	wp_add_inline_style('wp-edit-site', $css);
 }
 add_action( 'admin_enqueue_scripts', 'extendable_hide_site_editor_block_style_variations' );
+
+// Temporary fix: Hide matrix-1, prism-1, wave-1 variations when Extendify < 2.4.0
+function extendable_filter_global_styles_rest_response( $response, $handler, $request ) {
+	$route = $request->get_route();
+	if ( strpos( $route, '/wp/v2/global-styles/themes/' ) === false ) {
+		return $response;
+	}
+
+	if ( ! function_exists( 'get_plugins' ) ) {
+		require_once ABSPATH . 'wp-admin/includes/plugin.php';
+	}
+
+	$plugins       = get_plugins();
+	$should_filter = false;
+
+	foreach ( $plugins as $plugin_file => $plugin_data ) {
+		if ( 'extendify-local' === $plugin_data['TextDomain'] && is_plugin_active( $plugin_file ) ) {
+			if ( version_compare( $plugin_data['Version'], '2.4.0', '<' ) ) {
+				$should_filter = true;
+			}
+			break;
+		}
+	}
+
+	if ( ! $should_filter ) {
+		return $response;
+	}
+
+	$patterns = array( 'matrix-1', 'prism-1', 'wave-1' );
+	$data     = $response->get_data();
+
+	if ( isset( $data['styles']['blocks'] ) && is_array( $data['styles']['blocks'] ) ) {
+		foreach ( $data['styles']['blocks'] as $block_name => $block_data ) {
+			if ( isset( $block_data['variations'] ) && is_array( $block_data['variations'] ) ) {
+				foreach ( $block_data['variations'] as $variation_slug => $variation_data ) {
+					foreach ( $patterns as $pattern ) {
+						if ( strpos( $variation_slug, $pattern ) !== false ) {
+							unset( $data['styles']['blocks'][ $block_name ]['variations'][ $variation_slug ] );
+							break;
+						}
+					}
+				}
+				if ( empty( $data['styles']['blocks'][ $block_name ]['variations'] ) ) {
+					unset( $data['styles']['blocks'][ $block_name ]['variations'] );
+				}
+			}
+		}
+	}
+
+	if ( isset( $data['_links']['wp:block-style-variations'] ) ) {
+		$data['_links']['wp:block-style-variations'] = array_filter(
+			$data['_links']['wp:block-style-variations'],
+			function( $variation ) use ( $patterns ) {
+				$href = $variation['href'] ?? '';
+				foreach ( $patterns as $pattern ) {
+					if ( strpos( $href, $pattern ) !== false ) {
+						return false;
+					}
+				}
+				return true;
+			}
+		);
+		$data['_links']['wp:block-style-variations'] = array_values( $data['_links']['wp:block-style-variations'] );
+	}
+
+	$response->set_data( $data );
+	return $response;
+}
+add_filter( 'rest_post_dispatch', 'extendable_filter_global_styles_rest_response', 10, 3 );

@@ -20,29 +20,57 @@
 	];
 
 	let currentGlobalAnimationState = window.ExtendableAnimateControl && window.ExtendableAnimateControl.enabled === '1';
-	const existingBlocks = new Set();
-	
-	// Mark all existing blocks on initial load, so we only auto-enable animation for truly new blocks added
-	let hasInitializedExistingBlocks = false;
-	function initializeExistingBlocks() {
-		if ( hasInitializedExistingBlocks ) {
-			return;
-		}
-		hasInitializedExistingBlocks = true;
-		
-		const allBlocks = select( 'core/block-editor' ).getBlocks();
-		function addBlockIds( blocks ) {
-			blocks.forEach( function( block ) {
-				existingBlocks.add( block.clientId );
-				if ( block.innerBlocks && block.innerBlocks.length > 0 ) {
-					addBlockIds( block.innerBlocks );
+	const userInsertedBlockIds = new Set();
+	wp.data.use( function( registry ) {
+		return {
+			dispatch: function( namespace ) {
+				const actions = registry.dispatch( namespace );
+				if ( namespace !== 'core/block-editor' ) {
+					return actions;
 				}
-			} );
-		}
-		addBlockIds( allBlocks );
-	}
-
-
+				
+				return Object.assign( {}, actions, {
+					insertBlocks: function( blocks, index, rootClientId, updateSelection, meta ) {
+						function markBlocks( blockList ) {
+							if ( ! blockList ) return;
+							( Array.isArray( blockList ) ? blockList : [ blockList ] ).forEach( function( block ) {
+								if ( block && block.clientId ) {
+									userInsertedBlockIds.add( block.clientId );
+								}
+								if ( block && block.innerBlocks ) {
+									markBlocks( block.innerBlocks );
+								}
+							} );
+						}
+						markBlocks( blocks );
+						return actions.insertBlocks( blocks, index, rootClientId, updateSelection, meta );
+					},
+					insertBlock: function( block, index, rootClientId, updateSelection, meta ) {
+						if ( block && block.clientId ) {
+							userInsertedBlockIds.add( block.clientId );
+						}
+						return actions.insertBlock( block, index, rootClientId, updateSelection, meta );
+					},
+					replaceBlocks: function( clientIds, blocks, indexToSelect, initialPosition, meta ) {
+						function markBlocks( blockList ) {
+							if ( ! blockList ) return;
+							( Array.isArray( blockList ) ? blockList : [ blockList ] ).forEach( function( block ) {
+								if ( block && block.clientId ) {
+									userInsertedBlockIds.add( block.clientId );
+								}
+								if ( block && block.innerBlocks ) {
+									markBlocks( block.innerBlocks );
+								}
+							} );
+						}
+						markBlocks( blocks );
+						
+						return actions.replaceBlocks( clientIds, blocks, indexToSelect, initialPosition, meta );
+					}
+				} );
+			}
+		};
+	}, {} );
 
 	function hasClass( classNameString, targetClass ) {
 		if ( ! classNameString ) {
@@ -79,7 +107,7 @@
 				const { attributes, setAttributes, isSelected, clientId } = props;
 
 				const [ animationsEnabled, setAnimationsEnabled ] = useState( currentGlobalAnimationState );
-				const hasAutoEnabled = useRef( false );
+				const hasAutoInitialized = useRef( false );
 
 				// Sync with global state when block becomes selected
 				useEffect( function () {
@@ -104,30 +132,45 @@
 					};
 				}, [] );
 
-				// Auto-enable animation for newly added blocks (run once per block)
+				// Auto-enable animation for newly inserted blocks
 				useEffect( function () {
-					if ( hasAutoEnabled.current ) {
+					if ( hasAutoInitialized.current ) {
 						return;
 					}
-					hasAutoEnabled.current = true;
-					initializeExistingBlocks();
-
-					if ( ! animationsEnabled ) {
+					hasAutoInitialized.current = true;
+					if ( ! userInsertedBlockIds.has( clientId ) ) {
 						return;
 					}
-
 					const className = attributes.className || '';
 					const hasAnimationClass = hasClass( className, CLASS_ON ) || hasClass( className, CLASS_OFF );
-			const isOldBlock = existingBlocks.has( clientId );
+					let isInsideTemplateBlock = false;
+					let currentParentId = select( 'core/block-editor' ).getBlockRootClientId( clientId );
+					
+					while ( currentParentId ) {
+						const parentBlock = select( 'core/block-editor' ).getBlock( currentParentId );
+						if ( parentBlock ) {
+							const parentBlockName = parentBlock.name;
+							if ( 
+								parentBlockName === 'core/query' ||
+								parentBlockName === 'core/post-template' ||
+								parentBlockName === 'core/query-pagination' ||
+								parentBlockName === 'woocommerce/product-collection' ||
+								parentBlockName === 'core/template-part'
+							) {
+								isInsideTemplateBlock = true;
+								break;
+							}
+						}
+						currentParentId = select( 'core/block-editor' ).getBlockRootClientId( currentParentId );
+					}
+					const shouldAddClass = animationsEnabled && ! hasAnimationClass && ! isInsideTemplateBlock;
 
-			// Only add animation class to new blocks without any animation class
-			if ( ! isOldBlock && ! hasAnimationClass ) {
-				const newClassName = addClass( className, CLASS_ON );
+					if ( shouldAddClass ) {
 						setAttributes( {
-							className: newClassName,
+							className: addClass( className, CLASS_ON ),
 						} );
 					}
-				}, [ clientId, attributes.className, animationsEnabled, setAttributes ] );
+				}, [ clientId, animationsEnabled ] );
 
 				const className = attributes.className || '';
 

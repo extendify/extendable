@@ -1,3 +1,8 @@
+:root {
+    --ext-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ext-duration: 0.7s;
+}
+
 @keyframes ext-fade-in {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -32,28 +37,34 @@
     opacity: 0;
 }
 
+.ext-animate.ext-animation-complete {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+}
+
 .ext-animate.ext-animated-fade {
-    animation: ext-fade-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation: ext-fade-in var(--ext-duration) var(--ext-ease) forwards;
 }
 
 .ext-animate.ext-animated-fade-up {
-    animation: ext-fade-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation: ext-fade-up var(--ext-duration) var(--ext-ease) forwards;
 }
 
 .ext-animate.ext-animated-fade-down {
-    animation: ext-fade-down 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation: ext-fade-down var(--ext-duration) var(--ext-ease) forwards;
 }
 
 .ext-animate.ext-animated-fade-left {
-    animation: ext-fade-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation: ext-fade-left var(--ext-duration) var(--ext-ease) forwards;
 }
 
 .ext-animate.ext-animated-fade-right {
-    animation: ext-fade-right 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation: ext-fade-right var(--ext-duration) var(--ext-ease) forwards;
 }
 
 .ext-animate.ext-animated-zoom-in {
-    animation: ext-zoom-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation: ext-zoom-in var(--ext-duration) var(--ext-ease) forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -50,8 +50,8 @@
                 }
             });
         }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -5% 0px'
+            threshold: 0.01,
+            rootMargin: '0px'
         });
 
         trackedElements = [];
@@ -86,6 +86,19 @@
                         element.style.animationDuration = `${duration}s`;
                         element.style.animationDelay = `${delay}s`;
                         
+                        // Clear stacking context after animation completes
+                        element.addEventListener('animationend', () => {
+                            element.classList.add('ext-animation-complete');
+                        }, { once: true });
+                        
+                        // Elements already in viewport (like headers) - trigger immediately
+                        const rect = element.getBoundingClientRect();
+                        if (rect.top < window.innerHeight && rect.bottom > 0) {
+                            requestAnimationFrame(() => {
+                                element.classList.add(`ext-animated-${animationType}`);
+                            });
+                        }
+                        
                         observer.observe(element);
                         trackedElements.push(element);
                     });
@@ -107,7 +120,8 @@
                 'ext-animated-fade-down',
                 'ext-animated-fade-left',
                 'ext-animated-fade-right',
-                'ext-animated-zoom-in'
+                'ext-animated-zoom-in',
+                'ext-animation-complete'
             );
         });
         

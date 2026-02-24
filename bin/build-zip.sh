@@ -29,10 +29,14 @@ stylesPresets=$(find styles -path "*/block-presets/*" -name "*.json")
 colorsPresets=$(find styles -path "*/colors/*" -name "*.json")
 typographyPresets=$(find styles -path "*/typography/*" -name "*.json")
 parts=$(ls parts/*.html)
+incFiles=$(ls inc/*.php)
 assets=$(ls assets/css/*.css)
 fonts=$(ls assets/fonts/**/*.{woff2,txt})
 tribeEvents=$(ls tribe-events/*.css)
 assetsJs=$(ls assets/js/*.js)
+vendorJs=$(find assets/vendor -type f -name "*.js" 2>/dev/null || true)
+configJson=$(find assets/config -type f -name "*.json" 2>/dev/null || true)
+assetsEditor=$(find assets/editor -type f 2>/dev/null || true)
 
 zip -r ./build/extendable.zip \
 	$toplevelFiles \
@@ -40,6 +44,7 @@ zip -r ./build/extendable.zip \
 	$patterns \
 	$templates \
 	$parts \
+	$incFiles \
 	$styles \
 	$stylesPresets \
 	$colorsPresets \
@@ -48,6 +53,9 @@ zip -r ./build/extendable.zip \
 	$fonts \
 	$tribeEvents \
 	$assetsJs \
+	$vendorJs \
+	$configJson \
+	$assetsEditor \
 
 unzip ./build/extendable.zip -d "./build/extendable/"
 

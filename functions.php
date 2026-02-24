@@ -154,6 +154,10 @@ function extendable_register_pattern_categories() {
 }
 add_action( 'init', 'extendable_register_pattern_categories', 9 );
 
+/**
+ * Include animation functionality
+ */
+require_once get_template_directory() . '/inc/animations.php';
 
 /**
  * Add primary-foreground duotone to extendify demo Site Logo block.

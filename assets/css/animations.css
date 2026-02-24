@@ -1,0 +1,76 @@
+:root {
+    --ext-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ext-duration: 0.7s;
+}
+
+@keyframes ext-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes ext-fade-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ext-fade-down {
+    from { opacity: 0; transform: translateY(-16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ext-fade-left {
+    from { opacity: 0; transform: translateX(16px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes ext-fade-right {
+    from { opacity: 0; transform: translateX(-16px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes ext-zoom-in {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.ext-animate {
+    opacity: 0;
+}
+
+.ext-animate.ext-animation-complete {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+}
+
+.ext-animate.ext-animated-fade {
+    animation: ext-fade-in var(--ext-duration) var(--ext-ease) forwards;
+}
+
+.ext-animate.ext-animated-fade-up {
+    animation: ext-fade-up var(--ext-duration) var(--ext-ease) forwards;
+}
+
+.ext-animate.ext-animated-fade-down {
+    animation: ext-fade-down var(--ext-duration) var(--ext-ease) forwards;
+}
+
+.ext-animate.ext-animated-fade-left {
+    animation: ext-fade-left var(--ext-duration) var(--ext-ease) forwards;
+}
+
+.ext-animate.ext-animated-fade-right {
+    animation: ext-fade-right var(--ext-duration) var(--ext-ease) forwards;
+}
+
+.ext-animate.ext-animated-zoom-in {
+    animation: ext-zoom-in var(--ext-duration) var(--ext-ease) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ext-animate {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

@@ -1,0 +1,31 @@
+{
+  "defaults": {
+    "duration": 0.6,
+    "stagger": 0.1
+  },
+  "css": {
+    "fade": "opacity: 0;",
+    "fade-up": "opacity: 0;",
+    "fade-down": "opacity: 0;",
+    "fade-left": "opacity: 0;",
+    "fade-right": "opacity: 0;",
+    "zoom-in": "opacity: 0; transform: scale(0.8);"
+  },
+  "types": {
+    "fade": {
+      "mappings": {
+        ".ext-animate--on": "fade"
+      }
+    },
+    "fade-up": {
+      "mappings": {
+        ".ext-animate--on": "fade-up"
+      }
+    },
+    "zoom-in": {
+      "mappings": {
+        ".ext-animate--on": "zoom-in"
+      }
+    }
+  }
+}

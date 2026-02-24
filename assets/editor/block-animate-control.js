@@ -20,57 +20,40 @@
 	];
 
 	let currentGlobalAnimationState = window.ExtendableAnimateControl && window.ExtendableAnimateControl.enabled === '1';
+	
+	// Track blocks that are newly inserted by user actions
 	const userInsertedBlockIds = new Set();
-	wp.data.use( function( registry ) {
-		return {
-			dispatch: function( namespace ) {
-				const actions = registry.dispatch( namespace );
-				if ( namespace !== 'core/block-editor' ) {
-					return actions;
-				}
-				
-				return Object.assign( {}, actions, {
-					insertBlocks: function( blocks, index, rootClientId, updateSelection, meta ) {
-						function markBlocks( blockList ) {
-							if ( ! blockList ) return;
-							( Array.isArray( blockList ) ? blockList : [ blockList ] ).forEach( function( block ) {
-								if ( block && block.clientId ) {
-									userInsertedBlockIds.add( block.clientId );
-								}
-								if ( block && block.innerBlocks ) {
-									markBlocks( block.innerBlocks );
-								}
-							} );
-						}
-						markBlocks( blocks );
-						return actions.insertBlocks( blocks, index, rootClientId, updateSelection, meta );
-					},
-					insertBlock: function( block, index, rootClientId, updateSelection, meta ) {
-						if ( block && block.clientId ) {
-							userInsertedBlockIds.add( block.clientId );
-						}
-						return actions.insertBlock( block, index, rootClientId, updateSelection, meta );
-					},
-					replaceBlocks: function( clientIds, blocks, indexToSelect, initialPosition, meta ) {
-						function markBlocks( blockList ) {
-							if ( ! blockList ) return;
-							( Array.isArray( blockList ) ? blockList : [ blockList ] ).forEach( function( block ) {
-								if ( block && block.clientId ) {
-									userInsertedBlockIds.add( block.clientId );
-								}
-								if ( block && block.innerBlocks ) {
-									markBlocks( block.innerBlocks );
-								}
-							} );
-						}
-						markBlocks( blocks );
-						
-						return actions.replaceBlocks( clientIds, blocks, indexToSelect, initialPosition, meta );
-					}
-				} );
+	const originalInsertBlocks = wp.data.dispatch( 'core/block-editor' ).insertBlocks;
+	const originalInsertBlock = wp.data.dispatch( 'core/block-editor' ).insertBlock;
+	const originalReplaceBlocks = wp.data.dispatch( 'core/block-editor' ).replaceBlocks;
+
+	function markBlocksAsUserInserted( blocks ) {
+		if ( ! blocks ) return;
+		const blockList = Array.isArray( blocks ) ? blocks : [ blocks ];
+		blockList.forEach( function( block ) {
+			if ( block && block.clientId ) {
+				userInsertedBlockIds.add( block.clientId );
 			}
-		};
-	}, {} );
+			if ( block && block.innerBlocks ) {
+				markBlocksAsUserInserted( block.innerBlocks );
+			}
+		} );
+	}
+
+	wp.data.dispatch( 'core/block-editor' ).insertBlocks = function( blocks, index, rootClientId, updateSelection, meta ) {
+		markBlocksAsUserInserted( blocks );
+		return originalInsertBlocks( blocks, index, rootClientId, updateSelection, meta );
+	};
+
+	wp.data.dispatch( 'core/block-editor' ).insertBlock = function( block, index, rootClientId, updateSelection, meta ) {
+		markBlocksAsUserInserted( block );
+		return originalInsertBlock( block, index, rootClientId, updateSelection, meta );
+	};
+
+	wp.data.dispatch( 'core/block-editor' ).replaceBlocks = function( clientIds, blocks, indexToSelect, initialPosition, meta ) {
+		markBlocksAsUserInserted( blocks );
+		return originalReplaceBlocks( clientIds, blocks, indexToSelect, initialPosition, meta );
+	};
 
 	function hasClass( classNameString, targetClass ) {
 		if ( ! classNameString ) {
@@ -108,6 +91,8 @@
 
 				const [ animationsEnabled, setAnimationsEnabled ] = useState( currentGlobalAnimationState );
 				const hasAutoInitialized = useRef( false );
+				
+				const isUserInsertedBlock = useRef( userInsertedBlockIds.has( clientId ) );
 
 				// Sync with global state when block becomes selected
 				useEffect( function () {
@@ -137,12 +122,24 @@
 					if ( hasAutoInitialized.current ) {
 						return;
 					}
-					hasAutoInitialized.current = true;
-					if ( ! userInsertedBlockIds.has( clientId ) ) {
+					
+					if ( ! animationsEnabled ) {
 						return;
 					}
+					
+					hasAutoInitialized.current = true;
+					
+					// Skip if this is a pre-existing block
+					if ( ! isUserInsertedBlock.current ) {
+						return;
+					}
+					userInsertedBlockIds.delete( clientId );
 					const className = attributes.className || '';
 					const hasAnimationClass = hasClass( className, CLASS_ON ) || hasClass( className, CLASS_OFF );
+					if ( hasAnimationClass ) {
+						return;
+					}
+					
 					let isInsideTemplateBlock = false;
 					let currentParentId = select( 'core/block-editor' ).getBlockRootClientId( clientId );
 					
@@ -163,104 +160,102 @@
 						}
 						currentParentId = select( 'core/block-editor' ).getBlockRootClientId( currentParentId );
 					}
-					const shouldAddClass = animationsEnabled && ! hasAnimationClass && ! isInsideTemplateBlock;
 
-					if ( shouldAddClass ) {
+					if ( ! isInsideTemplateBlock ) {
 						setAttributes( {
 							className: addClass( className, CLASS_ON ),
 						} );
 					}
-				}, [ clientId, animationsEnabled ] );
+				}, [ animationsEnabled ] );
 
 				const className = attributes.className || '';
 
-			const mode = useMemo( function () {
-				const hasOffClass = hasClass( className, CLASS_OFF );
-				if ( hasOffClass ) {
-					return 'off';
-				}
-				if ( hasClass( className, CLASS_ON ) ) {
-					return 'on';
-				}
-				return 'off';
-			}, [ className ] );
-
-			const onChangeMode = useCallback( function ( nextMode ) {
-				let newClassName = removeClass( removeClass( attributes.className || '', CLASS_ON ), CLASS_OFF );
-
-				if ( nextMode === 'on' ) {
-					newClassName = addClass( newClassName, CLASS_ON );
-				} else if ( nextMode === 'off' ) {
-					newClassName = addClass( newClassName, CLASS_OFF );
-				}
-
-				setAttributes( {
-					className: newClassName || undefined,
-				} );
-			}, [ attributes.className, setAttributes ] );
-
-			const settingsLink = useMemo( function () {
-			return createElement(
-				'a',
-				{
-					href: '#',
-					style: { textDecoration: 'underline', cursor: 'pointer', marginInlineStart: '2px' },
-					onClick: function( e ) {
-						e.preventDefault();
-						if ( window.extendableOpenAnimationModal ) {
-							window.extendableOpenAnimationModal();
-						}
+				const mode = useMemo( function () {
+					if ( hasClass( className, CLASS_OFF ) ) {
+						return 'off';
 					}
-				},
-				__( 'Open Animation Global Settings.', 'extendable' )
-			);
-		}, [] );
+					if ( hasClass( className, CLASS_ON ) ) {
+						return 'on';
+					}
+					return 'off';
+				}, [ className ] );
 
-		return createElement(
-			Fragment,
-			null,
-			createElement( BlockEdit, props ),
-			isSelected && createElement(
-				InspectorControls,
-				null,
-				createElement(
-					PanelBody,
-					{ title: __( 'Animation', 'extendable' ), initialOpen: false },
-					createElement(
-						ToggleGroupControl,
+				const onChangeMode = useCallback( function ( nextMode ) {
+					let newClassName = removeClass( removeClass( attributes.className || '', CLASS_ON ), CLASS_OFF );
+
+					if ( nextMode === 'on' ) {
+						newClassName = addClass( newClassName, CLASS_ON );
+					} else if ( nextMode === 'off' ) {
+						newClassName = addClass( newClassName, CLASS_OFF );
+					}
+
+					setAttributes( {
+						className: newClassName || undefined,
+					} );
+				}, [ attributes.className, setAttributes ] );
+
+				const settingsLink = useMemo( function () {
+					return createElement(
+						'a',
 						{
-							label: __( 'Animation', 'extendable' ),
-							value: mode,
-							onChange: onChangeMode,
-							isBlock: true,
-							help: animationsEnabled
-								? createElement(
-									'span',
-									null,
-									__( 'Enable or disable animation for this block.', 'extendable' ),
-									settingsLink
-								)
-								: createElement(
-									'span',
-									null,
-									__( 'Animations are currently disabled.', 'extendable' ),
-									settingsLink
-								),
+							href: '#',
+							style: { textDecoration: 'underline', cursor: 'pointer', marginInlineStart: '2px' },
+							onClick: function( e ) {
+								e.preventDefault();
+								if ( window.extendableOpenAnimationModal ) {
+									window.extendableOpenAnimationModal();
+								}
+							}
 						},
-				OPTIONS.map( function ( opt ) {
-							return createElement( ToggleGroupControlOption, {
-								key: opt.value,
-								value: opt.value,
-								label: opt.label,
-								showTooltip: true,
-								disabled: ! animationsEnabled,
-							} );
-						} )
+						__( 'Open Animation Global Settings.', 'extendable' )
+					);
+				}, [] );
+
+				return createElement(
+					Fragment,
+					null,
+					createElement( BlockEdit, props ),
+					isSelected && createElement(
+						InspectorControls,
+						null,
+						createElement(
+							PanelBody,
+							{ title: __( 'Animation', 'extendable' ), initialOpen: false },
+							createElement(
+								ToggleGroupControl,
+								{
+									label: __( 'Animation', 'extendable' ),
+									value: mode,
+									onChange: onChangeMode,
+									isBlock: true,
+									help: animationsEnabled
+										? createElement(
+											'span',
+											null,
+											__( 'Enable or disable animation for this block.', 'extendable' ),
+											settingsLink
+										)
+										: createElement(
+											'span',
+											null,
+											__( 'Animations are currently disabled.', 'extendable' ),
+											settingsLink
+										),
+								},
+								OPTIONS.map( function ( opt ) {
+									return createElement( ToggleGroupControlOption, {
+										key: opt.value,
+										value: opt.value,
+										label: opt.label,
+										showTooltip: true,
+										disabled: ! animationsEnabled,
+									} );
+								} )
+							)
+						)
 					)
-				)
-			)
-		);
-	};
+				);
+			};
 		},
 		'withExtAnimateControl'
 	);

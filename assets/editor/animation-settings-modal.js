@@ -8,13 +8,10 @@
 		SelectControl,
 		Notice,
 		Spinner,
-		Card,
-		CardBody
+		Modal
 	} = wp.components;
-	const { swatch } = wp.components.Icon;
 	
 	const { PluginSidebarMoreMenuItem } = wp.editSite || wp.editPost || {};
-	const { Modal, Button } = wp.components;
 	
 	const ANIMATION_TYPES = [
 		{ label: __( 'None', 'extendable' ), value: 'none' },
@@ -29,12 +26,6 @@
 		{ label: __( 'Fast', 'extendable' ), value: 'fast' },
 	];
 
-	/**
-	 * Animation Settings Modal Component
-	 * Provides UI for managing global animation settings
-	 * 
-	 * @return {wp.element.Element|null} Modal component or null if not supported
-	 */
 	function AnimationSidebar() {
 		const [settings, setSettings] = useState({
 			type: 'none',

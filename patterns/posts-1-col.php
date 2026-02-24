@@ -10,8 +10,8 @@
 <!-- wp:query {"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"align":"wide","layout":{"inherit":true}} -->
 <div class="wp-block-query alignwide">
     <!-- wp:post-template {"align":"wide"} -->
-    <!-- wp:group {"style":{"spacing":{"blockGap":"2.5rem"}},"layout":{"inherit":true}} -->
-    <div class="wp-block-group">
+    <!-- wp:group {"className":"ext-animate\u002d\u002don","style":{"spacing":{"blockGap":"2.5rem"}},"layout":{"inherit":true}} -->
+    <div class="wp-block-group ext-animate--on">
 		<!-- wp:group {"metadata":{"name":"Featured Image"},"align":"wide","className":"is-style-ext-preset\u002d\u002dgroup\u002d\u002dnatural-1\u002d\u002ditem-card-1\u002d\u002dalign-start","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group alignwide is-style-ext-preset--group--natural-1--item-card-1--align-start" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 				<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","align":"wide"} /-->

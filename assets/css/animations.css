@@ -4,22 +4,22 @@
 }
 
 @keyframes ext-fade-up {
-    from { opacity: 0; transform: translateY(24px); }
+    from { opacity: 0; transform: translateY(16px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes ext-fade-down {
-    from { opacity: 0; transform: translateY(-24px); }
+    from { opacity: 0; transform: translateY(-16px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes ext-fade-left {
-    from { opacity: 0; transform: translateX(24px); }
+    from { opacity: 0; transform: translateX(16px); }
     to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes ext-fade-right {
-    from { opacity: 0; transform: translateX(-24px); }
+    from { opacity: 0; transform: translateX(-16px); }
     to { opacity: 1; transform: translateX(0); }
 }
 

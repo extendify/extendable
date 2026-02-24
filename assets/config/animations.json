@@ -1,7 +1,7 @@
 {
   "defaults": {
-    "duration": 0.7,
-    "stagger": 0.08
+    "duration": 0.6,
+    "stagger": 0.1
   },
   "css": {
     "fade": "opacity: 0;",

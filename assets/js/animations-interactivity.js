@@ -13,9 +13,9 @@
     let trackedElements = [];
 
     const speeds = Object.freeze({
-        slow: 1.2,
-        medium: 0.7,
-        fast: 0.4
+        slow: 1,
+        medium: 0.6,
+        fast: 0.45
     });
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let currentSpeed = config.speed || 'medium';

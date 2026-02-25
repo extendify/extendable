@@ -5,7 +5,9 @@
 	"slug": "ext-preset--group--natural-1--item-card-1--align-center",
 	"blockTypes": ["core/group"],
 	"styles": {
-
+		"color": {
+			"background": "transparent !important"
+		},
 		"blocks": {
 			"core/group": {
 				"spacing": {

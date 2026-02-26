@@ -97,6 +97,12 @@ function extendable_enqueue_animations() {
 	if ( ! apply_filters( 'extendable_enable_animations', true ) ) {
 	    return;
 	}
+	
+    // Skip loading for visitors when animations disabled
+    // Logged-in users need JS for real-time switching in agent UI
+	if ( 'none' === $animation_type && ! is_user_logged_in() ) {
+        return;
+    }
 
 	$config_file = get_template_directory() . '/assets/config/animations.json';
 	

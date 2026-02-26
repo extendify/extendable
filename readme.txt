@@ -13,6 +13,9 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.1.2 - 2026-02-27 =
+- Fixed: Dynamic animation type switching
+
 = 2.1.1 - 2026-02-25 =
 - Fixed: Natrual vibe card background issue
 

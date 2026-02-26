@@ -63,8 +63,8 @@
 					path: '/wp/v2/settings',
 				});
 
-				if (response.ext_animation_settings) {
-					setSettings(response.ext_animation_settings);
+				if (response.extendify_animation_settings) {
+					setSettings(response.extendify_animation_settings);
 				}
 			} catch (err) {
 				setError(__('Failed to load animation settings.', 'extendable'));
@@ -84,7 +84,7 @@
 					path: '/wp/v2/settings',
 					method: 'POST',
 					data: {
-						ext_animation_settings: newSettings
+						extendify_animation_settings: newSettings
 					},
 				});
 

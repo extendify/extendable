@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return void
  */
 function extendable_register_animation_settings() {
-	register_setting( 'extendable_animations', 'ext_animation_settings', array(
+	register_setting( 'extendable_animations', 'extendify_animation_settings', array(
 		'type' => 'object',
 		'default' => array(
 			'type' => 'none',
@@ -86,7 +86,7 @@ function extendable_sanitize_animation_settings( $settings ) {
  */
 function extendable_enqueue_animations() {
 
-	$animation_settings = get_option( 'ext_animation_settings', array(
+	$animation_settings = get_option( 'extendify_animation_settings', array(
 		'type' => 'none',
 		'speed' => 'medium'
 	));
@@ -94,13 +94,15 @@ function extendable_enqueue_animations() {
 	$animation_type = $animation_settings['type'] ?? 'none';
 	$animation_speed = $animation_settings['speed'] ?? 'medium';
 	
-	if ( is_admin() || 
-	     ! apply_filters( 'extendable_enable_animations', true ) ||
-	     false === $animation_type || 
-	     empty( $animation_type ) ||
-	     'none' === $animation_type ) {
+	if ( ! apply_filters( 'extendable_enable_animations', true ) ) {
 	    return;
 	}
+	
+    // Skip loading for visitors when animations disabled
+    // Logged-in users need JS for real-time switching in agent UI
+	if ( 'none' === $animation_type && ! is_user_logged_in() ) {
+        return;
+    }
 
 	$config_file = get_template_directory() . '/assets/config/animations.json';
 	
@@ -123,6 +125,23 @@ function extendable_enqueue_animations() {
 	$mappings = $config['types'][ $type ]['mappings'] ?? array();
 	$defaults = $config['defaults'] ?? array();
 	$css_config = $config['css'] ?? array();
+
+	$all_types = array();
+	foreach ( $config['types'] as $type_key => $type_config ) {
+		$type_mappings = array();
+		if ( isset( $type_config['mappings'] ) && is_array( $type_config['mappings'] ) ) {
+			foreach ( $type_config['mappings'] as $selector => $animation ) {
+				$clean_selector = sanitize_text_field( trim( $selector ) );
+				$clean_animation = sanitize_key( trim( $animation ) );
+				if ( ! empty( $clean_selector ) && ! empty( $clean_animation ) ) {
+					$type_mappings[ $clean_selector ] = $clean_animation;
+				}
+			}
+		}
+		if ( ! empty( $type_mappings ) ) {
+			$all_types[ sanitize_key( $type_key ) ] = $type_mappings;
+		}
+	}
 
 	$sanitized = array();
 	foreach ( $mappings as $selector => $animation ) {
@@ -155,11 +174,18 @@ function extendable_enqueue_animations() {
 
 	wp_localize_script( 'extendable-animations', 'ExtendableAnimations', array(
 		'map' => $sanitized,
+		'allTypes' => $all_types,
 		'defaults' => array_map( 'sanitize_text_field', $defaults ),
 		'speed' => sanitize_key( $animation_speed ),
+		'type' => sanitize_key( $animation_type ),
 	));
 
 	// Generate FOUC prevention CSS (respects override classes and reduced motion preference)
+	
+	if ( 'none' === $animation_type ) {
+        return;
+    }
+
 	$animation_css = '';
 	foreach ( $sanitized as $selector => $animation ) {
 		$css_rule = isset( $css_config[ $animation ] ) && ! empty( $css_config[ $animation ] )
@@ -184,7 +210,7 @@ add_action( 'wp_enqueue_scripts', 'extendable_enqueue_animations' );
  */
 function extendable_enqueue_animation_editor_control() {
 	
-	$animation_settings = get_option( 'ext_animation_settings', array(
+	$animation_settings = get_option( 'extendify_animation_settings', array(
 		'type' => 'none',
 		'speed' => 'medium'
 	));
@@ -224,7 +250,7 @@ function extendable_enqueue_animation_sidebar() {
 		true
 	);
 
-	$animation_settings = get_option( 'ext_animation_settings', array(
+	$animation_settings = get_option( 'extendify_animation_settings', array(
 		'type' => 'none',
 		'speed' => 'medium'
 	));

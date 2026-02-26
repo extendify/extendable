@@ -19,14 +19,17 @@
     });
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let currentSpeed = config.speed || 'medium';
+    let currentType = config.type || 'none';
+    let currentMap = config.map || {};
+    const initialType = config.type || 'none'; // Track if PHP added FOUC CSS
 
     function initAnimations() {
-        if (prefersReducedMotion.matches) {
+        if (currentType === 'none' || prefersReducedMotion.matches) {
             return;
         }
     
         if (!('IntersectionObserver' in window)) {
-            Object.keys(config.map || {}).forEach(selector => {
+            Object.keys(currentMap).forEach(selector => {
                 try {
                     document.querySelectorAll(selector).forEach(el => el.style.opacity = '1');
                 } catch (e) {}
@@ -56,10 +59,10 @@
 
         trackedElements = [];
         
-        Object.keys(config.map || {}).forEach(selector => {
+        Object.keys(currentMap).forEach(selector => {
             try {
                 const elements = document.querySelectorAll(selector);
-                const animationType = config.map[selector];
+                const animationType = currentMap[selector];
                 
                 // Group elements by parent for proper stagger
                 const elementsByParent = new Map();
@@ -160,9 +163,87 @@
         return true;
     }
 
+    function setType(type) {
+        currentType = type || 'none';
+        
+        if (initialType === 'none') {
+            const existingStyle = document.getElementById('ext-fouc-styles');
+            if (existingStyle) {
+                existingStyle.remove();
+            }
+        }
+        
+        trackedElements.forEach(element => {
+            element.classList.remove(
+                'ext-animate',
+                'ext-animated-fade',
+                'ext-animated-fade-up',
+                'ext-animated-fade-down',
+                'ext-animated-fade-left',
+                'ext-animated-fade-right',
+                'ext-animated-zoom-in',
+                'ext-animation-complete'
+            );
+            element.style.opacity = '';
+            element.style.transform = '';
+            element.style.animationDuration = '';
+            element.style.animationDelay = '';
+        });
+        
+        trackedElements = [];
+        
+        if (observer) {
+            observer.disconnect();
+        }
+        
+        if (currentType === 'none') {
+            // Force elements visible (override PHP FOUC CSS)
+            Object.keys(config.allTypes?.['fade'] || currentMap || {}).forEach(selector => {
+                try {
+                    document.querySelectorAll(selector).forEach(el => {
+                        el.style.opacity = '1';
+                        el.style.transform = 'none';
+                    });
+                } catch (e) {}
+            });
+            return true;
+        }
+        
+        if (config.allTypes && config.allTypes[currentType]) {
+            currentMap = config.allTypes[currentType];
+        }
+        
+        Object.keys(currentMap).forEach(selector => {
+            try {
+                document.querySelectorAll(selector).forEach(el => {
+                    el.style.opacity = '';
+                });
+            } catch (e) {}
+        });
+        
+        // Only inject FOUC CSS if PHP didn't add it
+        if (initialType === 'none') {
+            const styleEl = document.createElement('style');
+            styleEl.id = 'ext-fouc-styles';
+            let css = '';
+            Object.keys(currentMap).forEach(selector => {
+                css += `@media (prefers-reduced-motion: no-preference) { ${selector}:not(.ext-animate--off) { opacity: 0; } } `;
+            });
+            styleEl.textContent = css;
+            document.head.appendChild(styleEl);
+        }
+        
+        requestAnimationFrame(() => {
+            initAnimations();
+        });
+        
+        return true;
+    }
+
     window.ExtendableAnimations = window.ExtendableAnimations || {};
     window.ExtendableAnimations.reset = resetAnimations;
     window.ExtendableAnimations.setSpeed = setSpeed;
+    window.ExtendableAnimations.setType = setType;
 
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initAnimations);

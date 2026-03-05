@@ -37,7 +37,7 @@
     opacity: 0;
 }
 
-.ext-animate.ext-animation-complete {
+.ext-animate[data-ext-animated] {
     opacity: 1 !important;
     transform: none !important;
     animation: none !important;

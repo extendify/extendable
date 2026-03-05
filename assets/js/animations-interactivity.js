@@ -91,7 +91,7 @@
                         
                         // Clear stacking context after animation completes
                         element.addEventListener('animationend', () => {
-                            element.classList.add('ext-animation-complete');
+                            element.dataset.extAnimated = 'true';
                         }, { once: true });
                         
                         // Elements already in viewport (like headers) - trigger immediately
@@ -123,9 +123,9 @@
                 'ext-animated-fade-down',
                 'ext-animated-fade-left',
                 'ext-animated-fade-right',
-                'ext-animated-zoom-in',
-                'ext-animation-complete'
+                'ext-animated-zoom-in'
             );
+            delete element.dataset.extAnimated;
         });
         
         requestAnimationFrame(() => {
@@ -181,9 +181,9 @@
                 'ext-animated-fade-down',
                 'ext-animated-fade-left',
                 'ext-animated-fade-right',
-                'ext-animated-zoom-in',
-                'ext-animation-complete'
+                'ext-animated-zoom-in'
             );
+            delete element.dataset.extAnimated;
             element.style.opacity = '';
             element.style.transform = '';
             element.style.animationDuration = '';

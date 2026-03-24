@@ -1118,6 +1118,11 @@
 			"area": "header"
 		},
 		{
+            "area": "navigation-overlay",
+            "name": "navigation-overlay",
+            "title": "Navigation Overlay"
+        },
+		{
 			"name": "footer",
 			"title": "Footer",
 			"area": "footer"

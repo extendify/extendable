@@ -28,18 +28,8 @@ if ( ! function_exists( 'extendable_support' ) ) :
 		// Add support for block styles.
 		add_theme_support( 'wp-block-styles' );
 
-		global $wp_version;
-		// Add style for WordPress older versions.
-		if ( version_compare( $wp_version, '6.0.2', '<=' ) ) {
-			$editor_style = array(
-				'style.css',
-				'/assets/css/deprecate-style.css',
-			);
-		} else {
-			$editor_style = 'style.css';
-		}
 		// Enqueue editor styles.
-		add_editor_style( $editor_style );
+		add_editor_style( 'style.css' );
 	}
 
 endif;
@@ -67,19 +57,6 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 
 		// Enqueue theme stylesheet.
 		wp_enqueue_style( 'extendable-style' );
-
-		global $wp_version;
-		if ( version_compare( $wp_version, '6.0.2', '<=' ) ) {
-			// Register deprecate stylesheet.
-			wp_register_style(
-				'extendable-deprecate-style',
-				get_template_directory_uri() . '/assets/css/deprecate-style.css',
-				array(),
-				EXTENDABLE_THEME_VERSION
-			);
-			// Enqueue deprecate stylesheet.
-			wp_enqueue_style( 'extendable-deprecate-style' );
-		}
 	}
 
 endif;
@@ -240,6 +217,17 @@ if ( ! function_exists( 'extendable_enqueue_navigation_customizations' ) ) :
 	 *
 	 */
 	function extendable_enqueue_navigation_customizations() {
+		// Skip on WordPress 7.0+ which has native nav overlay support.
+		if ( version_compare( get_bloginfo( 'version' ), '7.0-alpha1', '>=' ) ) {
+			return;
+		}
+
+		wp_enqueue_style(
+			'extendable-deprecate-style',
+			get_template_directory_uri() . '/assets/css/deprecate-style.css',
+			array(),
+			EXTENDABLE_THEME_VERSION
+		);
 
 		$logo_id   = get_theme_mod( 'custom_logo' );
     	$logo_url  = $logo_id ? wp_get_attachment_image_url( $logo_id, 'full' ) : '';

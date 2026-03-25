@@ -1,6 +1,23 @@
 (function () {
     'use strict';
 
+    function hasDisableOverlay() {
+        const header = document.querySelector('.wp-site-blocks > header.wp-block-template-part');
+        if (!header) return false;
+        return !!header.querySelector('.disable-default-overlay');
+    }
+
+    function loadDeprecateStyles() {
+        if (!window.ExtendableNavData?.deprecateStyleUrl) return;
+        if (document.querySelector('link[data-extendable-deprecate-style]')) return;
+
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = window.ExtendableNavData.deprecateStyleUrl;
+        link.setAttribute('data-extendable-deprecate-style', 'true');
+        document.head.appendChild(link);
+    }
+
     function injectSiteLogoTitle() {
         const container = document.querySelector('.wp-block-navigation__responsive-dialog');
         if (!container) return;
@@ -21,9 +38,17 @@
         container.prepend(wrapper);
     }
 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', injectSiteLogoTitle);
-    } else {
+    function init() {
+        console.log(hasDisableOverlay());
+        if (hasDisableOverlay()) return;
+
+        loadDeprecateStyles();
         injectSiteLogoTitle();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
     }
 })();

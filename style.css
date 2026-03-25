@@ -80,12 +80,12 @@ a:active {
  * Navigation Block
  */
 
-.extendable-nav-overlay ul.wp-block-navigation__container {
+.extendable-nav-overlay ul.wp-block-navigation__container, .extendable-nav-overlay .wp-block-page-list {
     width: -webkit-fill-available;
   	max-width: 100%;
 }
 
-.extendable-nav-overlay ul.wp-block-navigation__container > li.wp-block-navigation-item:not(.wp-block-navigation__submenu-container) {
+.extendable-nav-overlay ul.wp-block-navigation__container > li.wp-block-navigation-item:not(.wp-block-navigation__submenu-container), .extendable-nav-overlay .wp-block-page-list > li {
 	border-bottom: 1px solid #8080801d;
 	width: -webkit-fill-available;
 	max-width: 100%;

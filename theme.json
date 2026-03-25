@@ -1119,8 +1119,8 @@
 		},
 		{
             "area": "navigation-overlay",
-            "name": "navigation-overlay",
-            "title": "Navigation Overlay"
+            "name": "navigation-overlay-align-start",
+            "title": "Navigation Overlay Align Start"
         },
 		{
 			"name": "footer",

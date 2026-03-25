@@ -217,17 +217,6 @@ if ( ! function_exists( 'extendable_enqueue_navigation_customizations' ) ) :
 	 *
 	 */
 	function extendable_enqueue_navigation_customizations() {
-		// Skip on WordPress 7.0+ which has native nav overlay support.
-		if ( version_compare( get_bloginfo( 'version' ), '7.0-alpha1', '>=' ) ) {
-			return;
-		}
-
-		wp_enqueue_style(
-			'extendable-deprecate-style',
-			get_template_directory_uri() . '/assets/css/deprecate-style.css',
-			array(),
-			EXTENDABLE_THEME_VERSION
-		);
 
 		$logo_id   = get_theme_mod( 'custom_logo' );
     	$logo_url  = $logo_id ? wp_get_attachment_image_url( $logo_id, 'full' ) : '';
@@ -236,15 +225,16 @@ if ( ! function_exists( 'extendable_enqueue_navigation_customizations' ) ) :
 		wp_enqueue_script(
 			'extendable-navigation_customizations',
 			get_template_directory_uri() . '/assets/js/navigation-customization.js',
-			array(),   // no dependencies; add 'wp-interactivity' if you switch back to that version
-			null,
-			true        // load in footer
+			array(),
+			EXTENDABLE_THEME_VERSION,
+			true
 		);
 
 		wp_localize_script( 'extendable-navigation_customizations', 'ExtendableNavData', 
 			array(
-        		'logoUrl'   => $logo_url,
-        		'siteTitle' => $site_title,
+        		'logoUrl'            => $logo_url,
+        		'siteTitle'          => $site_title,
+        		'deprecateStyleUrl'  => get_template_directory_uri() . '/assets/css/deprecate-style.css?ver=' . EXTENDABLE_THEME_VERSION,
     		) 
 		);
 	}

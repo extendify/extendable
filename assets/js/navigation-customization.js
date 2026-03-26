@@ -39,7 +39,6 @@
     }
 
     function init() {
-        console.log(hasDisableOverlay());
         if (hasDisableOverlay()) return;
 
         loadDeprecateStyles();

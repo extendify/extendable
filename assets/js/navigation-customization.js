@@ -2,7 +2,7 @@
     'use strict';
 
     function hasDisableOverlay() {
-        const header = document.querySelector('.wp-site-blocks > header.wp-block-template-part');
+        const header = document.querySelector('header.wp-block-template-part');
         if (!header) return false;
         return !!header.querySelector('.disable-default-overlay');
     }

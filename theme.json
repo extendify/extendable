@@ -739,7 +739,7 @@
 				},
 				{
 					"fluid": {
-						"min": "1.85rem",
+						"min": "1.5rem",
 						"max": "3rem"
 					},
 					"size": "3rem",
@@ -747,7 +747,7 @@
 				},
 				{
 					"fluid": {
-						"min": "2.25rem",
+						"min": "1.85rem",
 						"max": "3.75rem"
 					},
 					"size": "3.75rem",

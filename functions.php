@@ -28,18 +28,8 @@ if ( ! function_exists( 'extendable_support' ) ) :
 		// Add support for block styles.
 		add_theme_support( 'wp-block-styles' );
 
-		global $wp_version;
-		// Add style for WordPress older versions.
-		if ( version_compare( $wp_version, '6.0.2', '<=' ) ) {
-			$editor_style = array(
-				'style.css',
-				'/assets/css/deprecate-style.css',
-			);
-		} else {
-			$editor_style = 'style.css';
-		}
 		// Enqueue editor styles.
-		add_editor_style( $editor_style );
+		add_editor_style( 'style.css' );
 	}
 
 endif;
@@ -67,19 +57,6 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 
 		// Enqueue theme stylesheet.
 		wp_enqueue_style( 'extendable-style' );
-
-		global $wp_version;
-		if ( version_compare( $wp_version, '6.0.2', '<=' ) ) {
-			// Register deprecate stylesheet.
-			wp_register_style(
-				'extendable-deprecate-style',
-				get_template_directory_uri() . '/assets/css/deprecate-style.css',
-				array(),
-				EXTENDABLE_THEME_VERSION
-			);
-			// Enqueue deprecate stylesheet.
-			wp_enqueue_style( 'extendable-deprecate-style' );
-		}
 	}
 
 endif;
@@ -248,15 +225,16 @@ if ( ! function_exists( 'extendable_enqueue_navigation_customizations' ) ) :
 		wp_enqueue_script(
 			'extendable-navigation_customizations',
 			get_template_directory_uri() . '/assets/js/navigation-customization.js',
-			array(),   // no dependencies; add 'wp-interactivity' if you switch back to that version
-			null,
-			true        // load in footer
+			array(),
+			EXTENDABLE_THEME_VERSION,
+			true
 		);
 
 		wp_localize_script( 'extendable-navigation_customizations', 'ExtendableNavData', 
 			array(
-        		'logoUrl'   => $logo_url,
-        		'siteTitle' => $site_title,
+        		'logoUrl'            => $logo_url,
+        		'siteTitle'          => $site_title,
+        		'deprecateStyleUrl'  => get_template_directory_uri() . '/assets/css/deprecate-style.css?ver=' . EXTENDABLE_THEME_VERSION,
     		) 
 		);
 	}

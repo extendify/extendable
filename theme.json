@@ -1118,6 +1118,11 @@
 			"area": "header"
 		},
 		{
+            "area": "navigation-overlay",
+            "name": "navigation-overlay-align-start",
+            "title": "Navigation Overlay Align Start"
+        },
+		{
 			"name": "footer",
 			"title": "Footer",
 			"area": "footer"

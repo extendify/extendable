@@ -536,7 +536,7 @@ input, textarea {
     background-color: var(--wp--preset--color--background);
     -webkit-mask: var(--wave-mask) no-repeat center / 100% 100%;
     mask: var(--wave-mask) no-repeat center / 100% 100%;
-    bottom: -0.5px;
+    bottom: -1px;
     pointer-events: none;
     z-index: 1;
 }
@@ -550,7 +550,7 @@ input, textarea {
     background-color: var(--wp--preset--color--background);
     -webkit-mask: var(--wave-mask) no-repeat center / 100% 100%;
     mask: var(--wave-mask) no-repeat center / 100% 100%;
-    top: -0.5px;
+    top: -1px;
     pointer-events: none;
     z-index: 1;
 }

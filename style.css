@@ -505,6 +505,10 @@ input, textarea {
 	margin-inline-end: auto !important;
 }
 
+.no-underline, .no-underline a {
+  text-decoration: none;
+}
+
 /* CSS for extendify-agent vibe previews */
 
 .extendify-agent .preview-is-style-ext-preset--group--matrix-1--section .preview-is-style-ext-preset--group--matrix-1--item-card-1--align-center {

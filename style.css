@@ -504,3 +504,7 @@ input, textarea {
 	margin-inline-start: 0 !important;
 	margin-inline-end: auto !important;
 }
+
+.no-underline, .no-underline a {
+  text-decoration: none;
+}

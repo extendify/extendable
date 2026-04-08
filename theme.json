@@ -1118,6 +1118,11 @@
 			"area": "header"
 		},
 		{
+			"name": "header-center-nav-with-phone",
+			"title": "Header with Center Nav and Phone",
+			"area": "header"
+		},
+		{
 			"name": "footer",
 			"title": "Footer",
 			"area": "footer"

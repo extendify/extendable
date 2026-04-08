@@ -508,3 +508,49 @@ input, textarea {
 .no-underline, .no-underline a {
   text-decoration: none;
 }
+
+/* CSS for extendify-agent vibe previews */
+
+.extendify-agent .preview-is-style-ext-preset--group--matrix-1--section .preview-is-style-ext-preset--group--matrix-1--item-card-1--align-center {
+    border: solid 6px color-mix(in oklab, var(--wp--preset--color--foreground) 10%, transparent) !important;
+}
+
+
+.extendify-agent .preview-is-style-ext-preset--group--wave-1--section {
+    --wave-ratio: 1440 / 80;
+    overflow: visible;
+}
+
+.extendify-agent .preview-is-style-ext-preset--group--wave-1--section .preview-is-style-ext-preset--group--wave-1--item-card-1--align-center {
+    position: relative;
+    overflow: visible;
+}
+
+.extendify-agent .preview-is-style-ext-preset--group--wave-1--section .preview-is-style-ext-preset--group--wave-1--item-card-1--align-center::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    left: 50%;
+    transform: translateX(-35%);
+    aspect-ratio: var(--wave-ratio);
+    background-color: var(--wp--preset--color--background);
+    -webkit-mask: var(--wave-mask) no-repeat center / 100% 100%;
+    mask: var(--wave-mask) no-repeat center / 100% 100%;
+    bottom: -1px;
+    pointer-events: none;
+    z-index: 1;
+}
+.extendify-agent .preview-is-style-ext-preset--group--wave-1--section .preview-is-style-ext-preset--group--wave-1--item-card-1--align-center::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    left: 50%;
+    transform: translateX(-65%) scale(-1, -1);
+    aspect-ratio: var(--wave-ratio);
+    background-color: var(--wp--preset--color--background);
+    -webkit-mask: var(--wave-mask) no-repeat center / 100% 100%;
+    mask: var(--wave-mask) no-repeat center / 100% 100%;
+    top: -1px;
+    pointer-events: none;
+    z-index: 1;
+}

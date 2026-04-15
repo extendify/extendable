@@ -567,7 +567,7 @@ input, textarea {
 	--ext-header-blur-start: 8px;
 	--ext-header-blur-end: 12px;
 	--ext-header-bg-opacity-start: 0.75;
-	--ext-header-bg-opacity-end: 0.95;
+	--ext-header-bg-opacity-end: 0.85;
 	--ext-header-shadow: 0 4px 20px;
 	--ext-header-padding: 1.5rem;
 	--ext-header-animation-distance: 100px;
@@ -651,6 +651,7 @@ body:has(.header-overlay-sticky.header-atlas-beacon) .ext-hero-section.ext-hero-
 	to {
 		background-color: oklch(from var(--wp--preset--color--background) l c h / var(--ext-header-bg-opacity-end));
 		backdrop-filter: blur(var(--ext-header-blur-end));
+		box-shadow: var(--ext-header-shadow) oklch(from var(--wp--preset--color--foreground) l c h / 0.1);
 	}
 }
 
@@ -663,7 +664,7 @@ body:has(.header-overlay-sticky.header-atlas-beacon) .ext-hero-section.ext-hero-
 		translate: 0 0;
 	}
 	to {
-		background-color: oklch(from var(--wp--preset--color--background) l c h / 0.85);
+		background-color: oklch(from var(--wp--preset--color--background) l c h / var(--ext-header-bg-opacity-end));
 		backdrop-filter: blur(var(--ext-header-blur-end));
 		padding-inline: var(--ext-header-padding);
 		box-shadow: var(--ext-header-shadow) oklch(from var(--wp--preset--color--foreground) l c h / 0.1);

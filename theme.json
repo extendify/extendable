@@ -1088,6 +1088,11 @@
 			"area": "header"
 		},
 		{
+			"name": "header-atlas-beacon",
+			"title": "Header Atlas Beacon",
+			"area": "header"
+		},
+		{
 			"name": "header-title-nav-button",
 			"title": "Header with Button",
 			"area": "header"

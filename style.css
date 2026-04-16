@@ -557,8 +557,21 @@ input, textarea {
 
 /*
  * --------------------------------------------------------
- *  Overlay Sticky Header with Scroll-Driven Animation - header-atlas-beacon
+ *  Modular Header System: Sticky, Overlay & Header-Specific Styles
  * --------------------------------------------------------
+ *
+ *  Base Utility Classes (work on any header):
+ *    - .ext-header-sticky   → position: sticky + admin-bar handling
+ *    - .ext-header-overlay  → hero section overlap (negative margin)
+ *
+ *  Header-Specific Modifier Classes (optional customizations):
+ *    - .ext-header-atlas-beacon → glassmorphism animation on first-child
+ *
+ *  Usage Examples:
+ *    - ext-header-sticky                                    → just sticky
+ *    - ext-header-overlay                                   → just overlay, scrolls away
+ *    - ext-header-sticky ext-header-overlay                 → sticky + overlay (base)
+ *    - ext-header-sticky ext-header-overlay ext-header-atlas-beacon → full glassmorphism
  */
 
 :root {
@@ -577,73 +590,115 @@ body {
 	timeline-scope: --ext-hero-timeline;
 }
 
-header.wp-block-template-part:has(.header-overlay-sticky.header-atlas-beacon) {
+/* Base: Sticky Header Positioning
+----------------------------------------------------------*/
+header.wp-block-template-part:has(.ext-header-sticky) {
 	position: sticky;
 	top: 0;
 	z-index: 12;
+	border-bottom: 1px solid  oklch(from var(--wp--preset--color--foreground) l c h / 0.05);
+}
 
-	body.admin-bar & {
-		top: var(--wp-admin--admin-bar--height, 32px);
-	}
+header.wp-block-template-part.ext-header-sticky:not(.has-background) {
+	background-color: var(--wp--preset--color--background);
+}
 
-	body:has(.ext-hero-section.ext-hero-section--full-screen) & {
-		top: var(--ext-header-offset);
-	}
+body.admin-bar header.wp-block-template-part:has(.ext-header-sticky) {
+	top: var(--wp-admin--admin-bar--height, 32px);
+}
 
-	body.admin-bar:has(.ext-hero-section.ext-hero-section--full-screen) & {
-		top: calc(var(--ext-header-offset) + var(--wp-admin--admin-bar--height, 32px));
-	}
-
-	@media (width <= 782px) {
-		body.admin-bar & {
-			top: var(--wp-admin--admin-bar--height, 46px);
-		}
-
-		body.admin-bar:has(.ext-hero-section.ext-hero-section--full-screen) & {
-			top: calc(var(--ext-header-offset) + var(--wp-admin--admin-bar--height, 46px));
-		}
+@media (max-width: 782px) {
+	body.admin-bar header.wp-block-template-part:has(.ext-header-sticky) {
+		top: var(--wp-admin--admin-bar--height, 46px);
 	}
 }
 
-body:has(.header-overlay-sticky.header-atlas-beacon) .ext-hero-section.ext-hero-section--full-screen {
+/* Base: Overlay Header - Hero Section Overlap
+----------------------------------------------------------*/
+body:has(.ext-hero-section.ext-hero-section--full-screen) header.wp-block-template-part:has(.ext-header-overlay) {
+	position: relative;
+    top: 0;
+    z-index: 12;
+
+			background-color: oklch(from var(--wp--preset--color--background) l c h / var(--ext-header-bg-opacity-end));
+}
+
+header.wp-block-template-part.ext-header-overlay:not(.has-background) {
+	background-color: oklch(from var(--wp--preset--color--background) l c h / 0.90);
+}
+
+body:has(.ext-header-overlay) .ext-hero-section.ext-hero-section--full-screen {
 	margin-top: calc(-1 * var(--ext-header-height)) !important;
 	position: relative;
 	z-index: 0;
-
-	& > * {
-		position: relative;
-		z-index: 1;
-	}
 }
 
+/* Base: Hero Timeline for Scroll-Driven Animations
+----------------------------------------------------------*/
 @supports (animation-timeline: scroll()) {
 	.ext-hero-section.ext-hero-section--full-screen {
 		view-timeline: --ext-hero-timeline block;
 	}
+}
 
-	.header-atlas-beacon > :first-child {
-		header.wp-block-template-part:has(.header-overlay-sticky.header-atlas-beacon) &.ext-animate {
-			opacity: 1 !important;
-		}
+/*  Header-Specific: Atlas Beacon (ext-header-atlas-beacon)
+----------------------------------------------------------*/
 
-		body:has(.ext-hero-section.ext-hero-section--full-screen) header.wp-block-template-part:has(.header-overlay-sticky.header-atlas-beacon) & {
+	header.wp-block-template-part .ext-header-atlas-beacon.ext-animate {
+		opacity: 1 !important;
+	}
+
+header.wp-block-template-part:has(.ext-header-sticky.ext-header-atlas-beacon) {
+	position: sticky;
+	top: 0;
+	z-index: 12;
+	border-bottom: none;
+}
+
+body:has(.ext-hero-section.ext-hero-section--full-screen) header.wp-block-template-part:has(.ext-header-overlay.ext-header-atlas-beacon) {
+	top: var(--ext-header-offset);
 			background-color: oklch(from var(--wp--preset--color--background) l c h / var(--ext-header-bg-opacity-start));
-			backdrop-filter: blur(var(--ext-header-blur-start));
-			padding-inline: var(--ext-header-padding) !important;
-			animation: ext-header-fade-in linear both !important;
-			animation-timeline: --ext-hero-timeline !important;
-			animation-range: exit 0% exit 80% !important;
-		}
+		backdrop-filter: blur(var(--ext-header-blur-start));		max-width: var(--wp--style--global--wide-size);
+    	margin-left: auto;
+    	margin-right: auto;
+		border-radius: 1rem;
+}
 
-		body:not(:has(.ext-hero-section.ext-hero-section--full-screen)) header.wp-block-template-part:has(.header-overlay-sticky.header-atlas-beacon) & {
-			animation: ext-header-fade-in-no-hero linear forwards !important;
-			animation-timeline: scroll() !important;
-			animation-range: 0px var(--ext-header-animation-distance) !important;
-		}
+
+
+body.admin-bar:has(.ext-hero-section.ext-hero-section--full-screen) header.wp-block-template-part:has(.ext-header-sticky.ext-header-atlas-beacon) {
+	top: calc(var(--ext-header-offset) + var(--wp-admin--admin-bar--height, 32px));
+}
+
+@media (max-width: 782px) {
+	body.admin-bar:has(.ext-hero-section.ext-hero-section--full-screen) header.wp-block-template-part:has(.ext-header-sticky.ext-header-atlas-beacon) {
+		top: calc(var(--ext-header-offset) + var(--wp-admin--admin-bar--height, 46px));
 	}
 }
 
-@keyframes ext-header-fade-in {
+@supports (animation-timeline: scroll()) {
+
+
+	body:has(.ext-hero-section.ext-hero-section--full-screen) header.wp-block-template-part:has(.ext-header-sticky.ext-header-atlas-beacon) .ext-header-atlas-beacon {
+
+		animation: ext-header-atlas-beacon-fade-in linear both !important;
+		animation-timeline: --ext-hero-timeline !important;
+		animation-range: exit 0% exit 80% !important; 
+
+	}
+
+	body:not(:has(.ext-hero-section.ext-hero-section--full-screen)) header.wp-block-template-part:has(.ext-header-sticky.ext-header-atlas-beacon) .ext-header-atlas-beacon {
+		animation: ext-header-atlas-beacon-fade-in-no-hero linear forwards !important;
+		animation-timeline: scroll() !important;
+		animation-range: 0px var(--ext-header-animation-distance) !important;
+		max-width: var(--wp--style--global--wide-size);
+    	margin-left: auto;
+    	margin-right: auto;
+		border-radius: 1rem;
+	}
+}
+
+@keyframes ext-header-atlas-beacon-fade-in {
 	from {
 		background-color: oklch(from var(--wp--preset--color--background) l c h / var(--ext-header-bg-opacity-start));
 		backdrop-filter: blur(var(--ext-header-blur-start));
@@ -655,9 +710,9 @@ body:has(.header-overlay-sticky.header-atlas-beacon) .ext-hero-section.ext-hero-
 	}
 }
 
-@keyframes ext-header-fade-in-no-hero {
+@keyframes ext-header-atlas-beacon-fade-in-no-hero {
 	from {
-		background-color: transparent;
+		background-color: oklch(from var(--wp--preset--color--background) l c h / var(--ext-header-bg-opacity-start));
 		backdrop-filter: blur(0);
 		padding-inline: 0;
 		box-shadow: none;

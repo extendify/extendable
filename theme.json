@@ -716,6 +716,21 @@
 							"src": ["file:./assets/fonts/space-mono/space-mono-bold.woff2"]
 						}
 					]
+				},
+				{
+					"fontFamily": "\"Hind\", sans-serif",
+					"name": "Hind",
+					"slug": "hind",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Hind",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "100 900",
+							"src": ["file:./assets/fonts/hind/hind-variable.woff2"]
+						}
+					]
 				}
 			],
 			"fontSizes": [

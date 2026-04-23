@@ -622,15 +622,13 @@ header.wp-block-template-part.ext-header-sticky:not(.has-background) {
 }
 
 body.admin-bar header.wp-block-template-part:has(.ext-header-sticky) {
-	top:
- var(--wp-admin--admin-bar--position-offset, var(--wp-admin--admin-bar--height, 32px));
+	top: var(--wp-admin--admin-bar--position-offset, var(--wp-admin--admin-bar--height, 32px));
 }
 
 @media (max-width: 782px) {
 
 	body.admin-bar header.wp-block-template-part:has(.ext-header-sticky) {
-		top:
- var(--wp-admin--admin-bar--position-offset, var(--wp-admin--admin-bar--height, 46px));
+		top: var(--wp-admin--admin-bar--position-offset, var(--wp-admin--admin-bar--height, 46px));
 	}
 }
 
@@ -656,6 +654,7 @@ body:has(.ext-header-overlay) .entry-content > .ext-hero-section.ext-hero-sectio
 /* Base: Hero Timeline for Scroll-Driven Animations
 ----------------------------------------------------------*/
 @supports (animation-timeline: scroll()) {
+
 	.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child {
 		view-timeline: --ext-hero-timeline block;
 	}
@@ -700,6 +699,7 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 }
 
 @media (max-width: 782px) {
+
 	body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--scroll-animated) {
 		top:
 			calc(var(--ext-header-offset) +
@@ -708,6 +708,7 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 }
 
 @supports (animation-timeline: scroll()) {
+
 	body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--scroll-animated) .ext-header-sticky.ext-header-sticky--scroll-animated {
 		animation: ext-header-sticky--scroll-animated-fade-in linear both !important;
 		animation-timeline: --ext-hero-timeline !important;
@@ -739,9 +740,7 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 	to {
 		background-color: oklch(from var(--wp--preset--color--background) l c h / var(--ext-header-bg-opacity-end));
 		backdrop-filter: blur(var(--ext-header-blur-end));
-		box-shadow:
-	0 14px 28px -10px oklch(from var(--wp--preset--color--foreground) l c h / 0.14),
-	0 -14px 28px -10px oklch(from var(--wp--preset--color--foreground) l c h / 0.14);
+		box-shadow: 0 14px 28px -10px oklch(from var(--wp--preset--color--foreground) l c h / 0.14), 0 -14px 28px -10px oklch(from var(--wp--preset--color--foreground) l c h / 0.14);
 
 
 
@@ -755,16 +754,14 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 		backdrop-filter: blur(var(--ext-header-blur-start));
 		box-shadow: none;
 		translate: 0 0;
-		max-width:100%;
-		margin-inline:auto;
+		max-width: 100%;
+		margin-inline: auto;
 	}
 
 	to {
 		background-color: oklch(from var(--wp--preset--color--background) l c h / var(--ext-header-bg-opacity-end));
 		backdrop-filter: blur(var(--ext-header-blur-end));
-		box-shadow:
-	0 14px 28px -10px oklch(from var(--wp--preset--color--foreground) l c h / 0.14),
-	0 -14px 28px -10px oklch(from var(--wp--preset--color--foreground) l c h / 0.14);
+		box-shadow: 0 14px 28px -10px oklch(from var(--wp--preset--color--foreground) l c h / 0.14), 0 -14px 28px -10px oklch(from var(--wp--preset--color--foreground) l c h / 0.14);
 
 		translate: 0 var(--ext-header-offset);
 		max-width: var(--wp--style--global--wide-size);

@@ -576,21 +576,28 @@ textarea {
 
 /*
  * --------------------------------------------------------
- *  Modular Header System: Sticky, Overlay & Header-Specific Styles
+ *  Modular Header System
  * --------------------------------------------------------
  *
- *  Base Utility Classes (work on any header):
- *    - .ext-header-sticky   → position: sticky + admin-bar handling
- *    - .ext-header-overlay  → hero section overlap (negative margin)
+ *  Layout (positioning):
+ *    - .ext-header-sticky    → position: sticky + admin-bar handling
+ *    - .ext-header-overlay   → hero section overlap (negative margin)
  *
- *  Header-Specific Modifier Classes (optional customizations):
- *    - .ext-header-sticky--scroll-animated → glassmorphism animation on first-child
+ *  Appearance:
+ *    - .ext-header-glass     → static glassmorphism (bg + blur + radius)
+ *    - .ext-header--dark     → dark color scheme: white text + dark scrim/glass tint
  *
- *  Usage Examples:
- *    - ext-header-sticky                                    → just sticky
- *    - ext-header-overlay                                   → just overlay, scrolls away
- *    - ext-header-sticky ext-header-overlay                 → sticky + overlay (base)
- *    - ext-header-sticky ext-header-overlay ext-header-sticky--scroll-animated → full glassmorphism
+ *  Behavior:
+ *    - .ext-header-sticky--floating-pill → scroll-driven intensification of glass + layout shift
+ *
+ *  Compositions:
+ *    - ext-header-sticky                                                                          → just sticky, theme bg
+ *    - ext-header-overlay                                                                         → overlay, transparent
+ *    - ext-header-overlay ext-header--dark                                                        → overlay + dark scrim + white text
+ *    - ext-header-sticky ext-header-glass                                                         → static glass header
+ *    - ext-header-sticky ext-header-glass ext-header--dark                                        → static dark glass
+ *    - ext-header-sticky ext-header-overlay ext-header-glass ext-header-sticky--floating-pill   → animated glass over hero
+ *    - + ext-header--dark on the above                                                            → animated DARK glass over hero
  */
 
 :root {
@@ -602,22 +609,26 @@ textarea {
 	--ext-header-bg-opacity-end: 0.95;
 	--ext-header-padding: 1.5rem;
 	--ext-header-animation-distance: 100px;
+	--ext-header-glass-tint-dark: #ffffff;
+	--ext-header-dark-logo-filter: brightness(0) invert(1);
 }
 
 body {
 	timeline-scope: --ext-hero-timeline;
 }
 
-/* Base: Sticky Header Positioning
-----------------------------------------------------------*/
+/* ===========================================================
+   Layout: ext-header-sticky
+   =========================================================== */
 header.wp-block-template-part:has(.ext-header-sticky) {
 	position: sticky;
 	top: 0;
 	z-index: 12;
-	border-bottom: 1px solid  oklch(from var(--wp--preset--color--foreground) l c h / 0.05);
 }
 
-header.wp-block-template-part.ext-header-sticky:not(.has-background) {
+/* Default bg for sticky headers without glass.
+   Glass headers leave the wrapper transparent so the inner glass element shows through. */
+header.wp-block-template-part:has(.ext-header-sticky):not(:has(.ext-header-glass)):not(.has-background) {
 	background-color: var(--wp--preset--color--background);
 }
 
@@ -636,17 +647,13 @@ html:has(.ext-header-sticky) {
 	scroll-padding-top: var(--ext-header-height);
 }
 
-/* Base: Overlay Header - Hero Section Overlap
-----------------------------------------------------------*/
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-overlay) {
+/* ===========================================================
+   Layout: ext-header-overlay (hero overlap)
+   =========================================================== */
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-overlay):not(:has(.ext-header-sticky)) {
 	position: relative;
 	top: 0;
 	z-index: 12;
-	background-color: oklch(from var(--wp--preset--color--background) l c h / var(--ext-header-bg-opacity-end));
-}
-
-header.wp-block-template-part.ext-header-overlay:not(.has-background) {
-	background-color: oklch(from var(--wp--preset--color--background) l c h / 0.9);
 }
 
 body:has(.ext-header-overlay) .entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child {
@@ -655,8 +662,142 @@ body:has(.ext-header-overlay) .entry-content > .ext-hero-section.ext-hero-sectio
 	z-index: 0;
 }
 
-/* Base: Hero Timeline for Scroll-Driven Animations
-----------------------------------------------------------*/
+/* Overlay over hero: wrapper goes transparent so the hero shows through.
+   Reverts to default theme bg once .is-past-hero is added or on subpages without a hero. */
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-overlay):not(.is-past-hero):not(:has(.ext-header-glass)) {
+	background-color: transparent;
+}
+
+/* ===========================================================
+   Appearance: ext-header-glass (static glassmorphism)
+   - --ext-header-glass-color-start: tint during the frosted/initial state
+   - --ext-header-glass-color-end: tint at the solid/scrolled state
+   - Static glass shows the end state (most readable)
+   =========================================================== */
+.ext-header-glass {
+	--ext-header-glass-color-start: var(--wp--preset--color--background);
+	--ext-header-glass-color-end: var(--wp--preset--color--background);
+}
+
+header.wp-block-template-part:has(.ext-header-glass) .ext-header-glass {
+	background-color: oklch(from var(--ext-header-glass-color-end) l c h / var(--ext-header-bg-opacity-end));
+	backdrop-filter: blur(var(--ext-header-blur-end));
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+/* ===========================================================
+   Color: ext-header--dark
+   - Sets shared scrim/glass color variable
+   - Wrapper gets white text when used with overlay or glass
+   - Inner blocks reset their colors to inherit
+   =========================================================== */
+.ext-header--dark {
+	--ext-header-scrim-color: var(--wp--preset--color--foreground);
+}
+
+/* Dark variant only takes effect on pages with a fullscreen hero.
+   On subpages, dark+glass falls back to the light glass defaults. */
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) .ext-header-glass.ext-header--dark {
+	--ext-header-glass-color-start: var(--ext-header-glass-tint-dark);
+	--ext-header-glass-color-end: var(--wp--preset--color--foreground);
+	--ext-header-bg-opacity-start: 0.06;
+	--ext-header-bg-opacity-end: 0.85;
+	--ext-header-blur-start: 16px;
+	--ext-header-blur-end: 24px;
+}
+
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) .ext-header-glass {
+	border: 1px solid rgb(255 255 255 / 0.12);
+}
+
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) {
+	color: #fff;
+	background-image: linear-gradient(
+		to bottom,
+		oklch(from var(--ext-header-scrim-color) l c h / 0.5),
+		oklch(from var(--ext-header-scrim-color) l c h / 0)
+	);
+}
+
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) {
+	color: #fff;
+}
+
+/* Inner-block dark overrides — fire only on hero pages with a dark backdrop.
+   Overlay+dark drops out at .is-past-hero (header has reverted to default theme).
+   Glass+dark keeps firing past-hero because the glass stays dark via its own animation. */
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :where(a, button, .wp-block-site-title),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :where(a, button, .wp-block-site-title) {
+	color: inherit;
+}
+
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) .wp-social-link,
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) .wp-social-link {
+	color: #fff !important;
+}
+
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) svg,
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) svg {
+	fill: currentColor;
+}
+
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) .wp-block-site-logo,
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) .wp-block-site-logo {
+	filter: var(--ext-header-dark-logo-filter);
+}
+
+/* Sticky non-glass headers: smooth shadow/bg transitions (toggle on .is-scrolled / .is-past-hero) */
+header.wp-block-template-part:has(.ext-header-sticky):not(:has(.ext-header-glass)) {
+	transition: background-color 300ms ease, box-shadow 300ms ease;
+}
+
+/* Subpage elevation shadow: appears when user scrolls (no hero on the page) */
+body:not(:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child)) header.wp-block-template-part.is-scrolled:has(.ext-header-sticky):not(:has(.ext-header-glass)) {
+	box-shadow: 0 4px 24px -8px oklch(from var(--wp--preset--color--foreground) l c h / 0.08);
+}
+
+/* Smart sticky transitions: smooth color/filter changes when toggling .is-past-hero */
+header.wp-block-template-part:has(.ext-header--dark) {
+	transition: background-color 300ms ease, color 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+header.wp-block-template-part:has(.ext-header--dark) :where(a, button, .wp-block-site-title, .wp-social-link) {
+	transition: color 300ms ease;
+}
+
+header.wp-block-template-part:has(.ext-header--dark) .wp-block-site-logo {
+	transition: filter 300ms ease;
+}
+
+/* Past-hero: any sticky+overlay gets solid theme bg + elevation shadow.
+   Glass headers are excluded — they manage their own scroll visuals. */
+header.wp-block-template-part.is-past-hero:has(.ext-header-sticky.ext-header-overlay):not(:has(.ext-header-glass)) {
+	background-image: none;
+	background-color: var(--wp--preset--color--background);
+	box-shadow: 0 4px 24px -8px oklch(from var(--wp--preset--color--foreground) l c h / 0.08);
+}
+
+/* Past-hero on dark variant: also revert white text / inverted logo / forced social color */
+header.wp-block-template-part.is-past-hero:has(.ext-header-overlay.ext-header--dark):not(:has(.ext-header-glass)) {
+	color: var(--wp--preset--color--foreground);
+}
+
+header.wp-block-template-part.is-past-hero:has(.ext-header-overlay.ext-header--dark):not(:has(.ext-header-glass)) :where(a, button, .wp-block-site-title) {
+	color: inherit;
+}
+
+header.wp-block-template-part.is-past-hero:has(.ext-header-overlay.ext-header--dark):not(:has(.ext-header-glass)) .wp-social-link {
+	color: var(--wp--preset--color--foreground) !important;
+}
+
+header.wp-block-template-part.is-past-hero:has(.ext-header-overlay.ext-header--dark):not(:has(.ext-header-glass)) .wp-block-site-logo {
+	filter: brightness(1) invert(0);
+}
+
+/* ===========================================================
+   Hero timeline (for scroll-driven animations)
+   =========================================================== */
 @supports (animation-timeline: scroll()) {
 
 	.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child {
@@ -664,21 +805,23 @@ body:has(.ext-header-overlay) .entry-content > .ext-hero-section.ext-hero-sectio
 	}
 }
 
-/*  ext-header-sticky--scroll-animated
-----------------------------------------------------------*/
-
-header.wp-block-template-part .ext-header-sticky--scroll-animated.ext-animate {
+/* ===========================================================
+   Behavior: ext-header-sticky--floating-pill
+   - Layout shift: header wrapper goes transparent + constrained width
+   - When combined with .ext-header-glass, animates glass intensity
+   =========================================================== */
+header.wp-block-template-part .ext-header-sticky--floating-pill.ext-animate {
 	opacity: 1 !important;
 }
 
-header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--scroll-animated) {
+header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill) {
 	position: sticky;
 	top: 0;
 	z-index: 12;
 	border-bottom: none;
 }
 
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--scroll-animated) {
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill) {
 	position: sticky;
 	top: var(--ext-header-offset);
 	max-width: var(--wp--style--global--wide-size);
@@ -688,14 +831,13 @@ body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-
 	padding-inline: var(--wp--style--root--padding-right) var(--wp--style--root--padding-left);
 }
 
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--scroll-animated) .ext-header-sticky.ext-header-sticky--scroll-animated {
-	background-color: oklch(from var(--wp--preset--color--background) l c h / var(--ext-header-bg-opacity-start));
+/* Initial glass state (over hero): override static glass-end with start values */
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill.ext-header-glass) .ext-header-sticky.ext-header-sticky--floating-pill.ext-header-glass {
+	background-color: oklch(from var(--ext-header-glass-color-start) l c h / var(--ext-header-bg-opacity-start));
 	backdrop-filter: blur(var(--ext-header-blur-start));
-	border-radius: 1rem;
-	overflow: hidden;
 }
 
-body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--scroll-animated) {
+body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill) {
 	top:
 		calc(var(--ext-header-offset) +
 		var(--wp-admin--admin-bar--position-offset, var(--wp-admin--admin-bar--height, 32px)));
@@ -704,7 +846,7 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 
 @media (max-width: 782px) {
 
-	body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--scroll-animated) {
+	body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill) {
 		top:
 			calc(var(--ext-header-offset) +
 			var(--wp-admin--admin-bar--position-offset, var(--wp-admin--admin-bar--height, 46px)));
@@ -713,50 +855,46 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 
 @supports (animation-timeline: scroll()) {
 
-	body:not(:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child)) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--scroll-animated) {
+	body:not(:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child)) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill) {
 		max-width: calc(var(--wp--style--global--wide-size) + var(--wp--style--root--padding-right) + var(--wp--style--root--padding-left));
 		margin-left: auto;
 		margin-right: auto;
 	}
 
-	body:not(:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child)) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--scroll-animated) .ext-header-sticky.ext-header-sticky--scroll-animated {
-		border-radius: 1rem;
-	}
-
 	@media (prefers-reduced-motion: no-preference) {
 
-		body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--scroll-animated) .ext-header-sticky.ext-header-sticky--scroll-animated {
-			animation: ext-header-sticky--scroll-animated-fade-in linear both !important;
+		body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill.ext-header-glass) .ext-header-sticky.ext-header-sticky--floating-pill.ext-header-glass {
+			animation: ext-header-glass-intensify linear both !important;
 			animation-timeline: --ext-hero-timeline !important;
 			animation-range: exit 0% exit 80% !important;
 		}
 
-		body:not(:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child)) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--scroll-animated) .ext-header-sticky.ext-header-sticky--scroll-animated {
-			animation: ext-header-sticky--scroll-animated-fade-in-no-hero linear forwards !important;
+		body:not(:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child)) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill.ext-header-glass) .ext-header-sticky.ext-header-sticky--floating-pill.ext-header-glass {
+			animation: ext-header-glass-intensify-no-hero linear forwards !important;
 			animation-timeline: scroll() !important;
 			animation-range: 0 var(--ext-header-animation-distance) !important;
 		}
 	}
 }
 
-@keyframes ext-header-sticky--scroll-animated-fade-in {
+@keyframes ext-header-glass-intensify {
 
 	from {
-		background-color: oklch(from var(--wp--preset--color--background) l c h / var(--ext-header-bg-opacity-start));
+		background-color: oklch(from var(--ext-header-glass-color-start) l c h / var(--ext-header-bg-opacity-start));
 		backdrop-filter: blur(var(--ext-header-blur-start));
 	}
 
 	to {
-		background-color: oklch(from var(--wp--preset--color--background) l c h / var(--ext-header-bg-opacity-end));
+		background-color: oklch(from var(--ext-header-glass-color-end) l c h / var(--ext-header-bg-opacity-end));
 		backdrop-filter: blur(var(--ext-header-blur-end));
 		box-shadow: 0 14px 28px -10px oklch(from var(--wp--preset--color--foreground) l c h / 0.14), 0 -14px 28px -10px oklch(from var(--wp--preset--color--foreground) l c h / 0.14);
 	}
 }
 
-@keyframes ext-header-sticky--scroll-animated-fade-in-no-hero {
+@keyframes ext-header-glass-intensify-no-hero {
 
 	from {
-		background-color: oklch(from var(--wp--preset--color--background) l c h / var(--ext-header-bg-opacity-start));
+		background-color: oklch(from var(--ext-header-glass-color-start) l c h / var(--ext-header-bg-opacity-start));
 		backdrop-filter: blur(var(--ext-header-blur-start));
 		box-shadow: none;
 		translate: 0 0;
@@ -765,7 +903,7 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 	}
 
 	to {
-		background-color: oklch(from var(--wp--preset--color--background) l c h / var(--ext-header-bg-opacity-end));
+		background-color: oklch(from var(--ext-header-glass-color-end) l c h / var(--ext-header-bg-opacity-end));
 		backdrop-filter: blur(var(--ext-header-blur-end));
 		box-shadow: 0 14px 28px -10px oklch(from var(--wp--preset--color--foreground) l c h / 0.14), 0 -14px 28px -10px oklch(from var(--wp--preset--color--foreground) l c h / 0.14);
 

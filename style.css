@@ -692,10 +692,6 @@ header.wp-block-template-part:has(.ext-header-glass) .ext-header-glass {
    - Wrapper gets white text when used with overlay or glass
    - Inner blocks reset their colors to inherit
    =========================================================== */
-.ext-header--dark {
-	--ext-header-scrim-color: var(--wp--preset--color--foreground);
-}
-
 /* Dark variant only takes effect on pages with a fullscreen hero.
    On subpages, dark+glass falls back to the light glass defaults. */
 body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) .ext-header-glass.ext-header--dark {
@@ -713,11 +709,25 @@ body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-
 
 body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) {
 	color: #fff;
-	background-image: linear-gradient(
+}
+
+/* Top-fade scrim on the hero's cover block — softer falloff than a header-bound gradient.
+   Flat (non-nested) :has() check on body so the rule reliably matches on hero pages
+   that use an overlay+dark header. */
+body:has(.ext-header-overlay.ext-header--dark) .ext-hero-section--full-screen .wp-block-cover::after {
+	content: "";
+	position: absolute;
+	inset: 0 0 auto 0;
+	height: calc(var(--ext-header-height) * 3);
+	background: linear-gradient(
 		to bottom,
-		oklch(from var(--ext-header-scrim-color) l c h / 0.5),
-		oklch(from var(--ext-header-scrim-color) l c h / 0)
+		rgb(0 0 0 / 0.50) 0%,
+		rgb(0 0 0 / 0.25) 50%,
+		rgb(0 0 0 / 0.05) 80%,
+		rgb(0 0 0 / 0) 100%
 	);
+	pointer-events: none;
+	z-index: 1;
 }
 
 body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) {
@@ -773,7 +783,6 @@ header.wp-block-template-part:has(.ext-header--dark) .wp-block-site-logo {
 /* Past-hero: any sticky+overlay gets solid theme bg + elevation shadow.
    Glass headers are excluded — they manage their own scroll visuals. */
 header.wp-block-template-part.is-past-hero:has(.ext-header-sticky.ext-header-overlay):not(:has(.ext-header-glass)) {
-	background-image: none;
 	background-color: var(--wp--preset--color--background);
 	box-shadow: 0 4px 24px -8px oklch(from var(--wp--preset--color--foreground) l c h / 0.08);
 }

@@ -713,12 +713,15 @@ body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-
 
 /* Top-fade scrim on the hero's cover block — softer falloff than a header-bound gradient.
    Flat (non-nested) :has() check on body so the rule reliably matches on hero pages
-   that use an overlay+dark header. */
+   that use an overlay+dark header.
+   Fades out via opacity once the smart-sticky JS adds .is-past-hero on the header,
+   in sync with the header reverting to its default theme appearance. */
 body:has(.ext-header-overlay.ext-header--dark) .ext-hero-section--full-screen .wp-block-cover::after {
 	content: "";
 	position: absolute;
 	inset: 0 0 auto 0;
 	height: calc(var(--ext-header-height) * 3);
+	transition: opacity 300ms ease;
 	background: linear-gradient(
 		to bottom,
 		rgb(0 0 0 / 0.50) 0%,
@@ -730,6 +733,12 @@ body:has(.ext-header-overlay.ext-header--dark) .ext-hero-section--full-screen .w
 	z-index: 1;
 }
 
+/* Past-hero: fade the scrim out so the hero image returns to its natural look,
+   matching the header reverting to default theme bg + colors. */
+body:has(header.wp-block-template-part.is-past-hero) .ext-hero-section--full-screen .wp-block-cover::after {
+	opacity: 0;
+}
+
 body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) {
 	color: #fff;
 }
@@ -737,8 +746,8 @@ body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-
 /* Inner-block dark overrides — fire only on hero pages with a dark backdrop.
    Overlay+dark drops out at .is-past-hero (header has reverted to default theme).
    Glass+dark keeps firing past-hero because the glass stays dark via its own animation. */
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :where(a, button, .wp-block-site-title),
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :where(a, button, .wp-block-site-title) {
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :where(a, button, .wp-block-site-title):not(.has-background, .wp-block-button__link),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :where(a, button, .wp-block-site-title):not(.has-background, .wp-block-button__link) {
 	color: inherit;
 }
 
@@ -747,14 +756,30 @@ body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-
 	color: #fff !important;
 }
 
+/* Phone CTA: force white over the dark hero. Needed because the paragraph carries
+   WP's wp-elements-* link-color rule (preset primary), which beats .has-text-color
+   inheritance on the inner <a>. Drops out at .is-past-hero so the phone reverts to theme. */
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :is(.ext-nav-extras-phone, .ext-nav-extras-phone a),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :is(.ext-nav-extras-phone, .ext-nav-extras-phone a) {
+	color: #fff !important;
+}
+
 body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) svg,
 body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) svg {
 	fill: currentColor;
 }
 
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) .wp-block-site-logo,
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) .wp-block-site-logo {
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :is(.wp-block-site-logo, .wp-duotone-primary-foreground),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :is(.wp-block-site-logo, .wp-duotone-primary-foreground) {
 	filter: var(--ext-header-dark-logo-filter);
+}
+
+/* Nav-extras CTA: white pill + dark text for contrast against the dark hero scrim.
+   Drops out at .is-past-hero so the button returns to its preset styling. */
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) .ext-nav-extras-btn .wp-block-button__link,
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) .ext-nav-extras-btn .wp-block-button__link {
+	background-color: #fefefe !important;
+	color: #060606 !important;
 }
 
 /* Sticky non-glass headers: smooth shadow/bg transitions (toggle on .is-scrolled / .is-past-hero) */
@@ -792,7 +817,7 @@ header.wp-block-template-part.is-past-hero:has(.ext-header-overlay.ext-header--d
 	color: var(--wp--preset--color--foreground);
 }
 
-header.wp-block-template-part.is-past-hero:has(.ext-header-overlay.ext-header--dark):not(:has(.ext-header-glass)) :where(a, button, .wp-block-site-title) {
+header.wp-block-template-part.is-past-hero:has(.ext-header-overlay.ext-header--dark):not(:has(.ext-header-glass)) :where(a, button, .wp-block-site-title):not(.has-background, .wp-block-button__link) {
 	color: inherit;
 }
 
@@ -921,4 +946,24 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 		margin-inline: var(--wp--style--root--padding-right) var(--wp--style--root--padding-left);
 		border-radius: 1rem;
 	}
+}
+
+/* ===========================================================
+   Vibe/gradient fix
+   -----------------------------------------------------------
+   Vibe block-style variations (e.g. is-style-ext-preset--group--*--header-1--N)
+   paint a background gradient on the header. That gradient fights every
+   over-hero / glass-tint / dark-scrim treatment we apply to overlay or glass
+   headers, because the glass and overlay rules set background-COLOR while the
+   variation sets a background-IMAGE that paints on top.
+   Override the variation's background-image specifically (not the whole
+   `background:` shorthand). That lets each header keep working in its
+   natural design:
+     - overlay non-glass: gets transparent bg over hero, theme bg past hero
+     - glass: gets the glass tint (light by default, dark when --dark is set)
+   On non-overlay / non-glass headers the variation gradient stays as-is.
+   =========================================================== */
+.ext-header-overlay[class*="is-style-ext-preset--"],
+.ext-header-glass[class*="is-style-ext-preset--"] {
+	background-image: none !important;
 }

@@ -189,6 +189,81 @@ a:active {
 	font-size: 1rem !important;
 }
 
+/*
+ * When the responsive navigation modal opens (WordPress sets .has-modal-open
+ * on <html>), suppress every property on the modal's ancestor chain that
+ * creates a containing block for position:fixed descendants — otherwise
+ * the modal is trapped inside the header instead of overlaying the viewport.
+ *
+ * Two rules here:
+ *
+ * 1) Broad ancestor coverage — the header itself plus any element inside
+ *    it that contains the responsive dialog. Handles transform/filter on
+ *    any header variant (overlay, glass, floating-pill, future ones).
+ *
+ * 2) Animation override — mirrors the selectors used by the floating-pill
+ *    scroll animations so we can match their specificity. Those animations
+ *    use !important + a deep selector to apply translate/backdrop-filter
+ *    via keyframes; without a same-or-higher-specificity override our broad
+ *    rule loses the cascade and the animation keeps trapping the modal.
+ */
+html.has-modal-open header.wp-block-template-part,
+html.has-modal-open header.wp-block-template-part :has(.wp-block-navigation__responsive-dialog) {
+	backdrop-filter: none !important;
+	transform: none !important;
+	translate: none !important;
+	filter: none !important;
+	animation: none !important;
+}
+
+html.has-modal-open body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill.ext-header-glass) .ext-header-sticky.ext-header-sticky--floating-pill.ext-header-glass,
+html.has-modal-open body:not(:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child)) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill.ext-header-glass) .ext-header-sticky.ext-header-sticky--floating-pill.ext-header-glass {
+	animation: none !important;
+	backdrop-filter: none !important;
+	translate: none !important;
+}
+
+/*
+ * Mobile nav-extras: cloned by navigation-customization.js into the
+ * responsive menu dialog so phone / CTA / social aren't visible in the
+ * cramped top bar on small screens. We target the specific modifier
+ * classes (.ext-nav-extras-phone, -btn, -social) rather than the
+ * .ext-nav-extras wrapper, because some header parts use the wrapper
+ * class around the nav block itself.
+ *
+ * On desktop the dialog is rendered inline (it's only "modal-shaped"
+ * when the hamburger opens it), so the cloned extras must stay hidden
+ * until WordPress sets .has-modal-open on <html>.
+ */
+@media (max-width: 781px) {
+
+	header.wp-block-template-part :is(.ext-nav-extras-phone, .ext-nav-extras-btn, .ext-nav-extras-social):not(.ext-nav-extras-mobile *) {
+		display: none;
+	}
+}
+
+.ext-nav-extras-mobile {
+	display: none;
+}
+
+.has-modal-open .wp-block-navigation__responsive-dialog .ext-nav-extras-mobile {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: var(--wp--preset--spacing--20);
+	margin-top: var(--wp--preset--spacing--30);
+}
+
+.has-modal-open .wp-block-navigation__responsive-dialog .ext-nav-extras-mobile .wp-block-button {
+	width: 100%;
+}
+
+.has-modal-open .wp-block-navigation__responsive-dialog .ext-nav-extras-mobile .wp-block-button__link {
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+
 .wp-block-navigation .wp-block-navigation-item a:hover,
 .wp-block-navigation .wp-block-navigation-item a:focus {
 	text-decoration: underline;

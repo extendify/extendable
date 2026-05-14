@@ -240,6 +240,14 @@ html.has-modal-open body:not(:has(.entry-content > .ext-hero-section.ext-hero-se
 	header.wp-block-template-part :is(.ext-nav-extras-phone, .ext-nav-extras-btn, .ext-nav-extras-social):not(.ext-nav-extras-mobile *) {
 		display: none;
 	}
+
+	/* Collapse the .ext-nav-extras wrapper too when its only children are the
+	   extras (no nav inside) — otherwise the empty wrapper holds a flex slot
+	   and the hamburger stays stuck in the middle instead of moving to the
+	   end of the row. */
+	header.wp-block-template-part .ext-nav-extras:not(:has(nav, .wp-block-navigation)) {
+		display: none;
+	}
 }
 
 .ext-nav-extras-mobile {
@@ -368,6 +376,7 @@ blockquote:is(.is-style-plain) {
 .wp-block-site-logo img[src*="extendify-demo-"],
 .wp-block-site-logo img[src*="ext-custom-logo-"] {
 	filter: var(--wp--preset--duotone--primary-foreground);
+	min-width: 40px;
 }
 
 
@@ -714,7 +723,7 @@ body.admin-bar header.wp-block-template-part:has(.ext-header-sticky) {
 @media (max-width: 782px) {
 
 	body.admin-bar header.wp-block-template-part:has(.ext-header-sticky) {
-		top: var(--wp-admin--admin-bar--position-offset, var(--wp-admin--admin-bar--height, 46px));
+		top:0;
 	}
 }
 
@@ -821,38 +830,38 @@ body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-
 /* Inner-block dark overrides — fire only on hero pages with a dark backdrop.
    Overlay+dark drops out at .is-past-hero (header has reverted to default theme).
    Glass+dark keeps firing past-hero because the glass stays dark via its own animation. */
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :where(a, button, .wp-block-site-title):not(.has-background, .wp-block-button__link),
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :where(a, button, .wp-block-site-title):not(.has-background, .wp-block-button__link) {
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :where(a, button, .wp-block-site-title):not(.has-background, .wp-block-button__link, .cloned-for-mobile, .cloned-for-mobile *),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :where(a, button, .wp-block-site-title):not(.has-background, .wp-block-button__link, .cloned-for-mobile, .cloned-for-mobile *) {
 	color: inherit;
 }
 
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) .wp-social-link,
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) .wp-social-link {
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) .wp-social-link:not(.cloned-for-mobile, .cloned-for-mobile *),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) .wp-social-link:not(.cloned-for-mobile, .cloned-for-mobile *) {
 	color: #fff !important;
 }
 
 /* Phone CTA: force white over the dark hero. Needed because the paragraph carries
    WP's wp-elements-* link-color rule (preset primary), which beats .has-text-color
    inheritance on the inner <a>. Drops out at .is-past-hero so the phone reverts to theme. */
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :is(.ext-nav-extras-phone, .ext-nav-extras-phone a),
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :is(.ext-nav-extras-phone, .ext-nav-extras-phone a) {
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :is(.ext-nav-extras-phone, .ext-nav-extras-phone a):not(.cloned-for-mobile, .cloned-for-mobile *),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :is(.ext-nav-extras-phone, .ext-nav-extras-phone a):not(.cloned-for-mobile, .cloned-for-mobile *) {
 	color: #fff !important;
 }
 
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) svg,
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) svg {
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) svg:not(.cloned-for-mobile *),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) svg:not(.cloned-for-mobile *) {
 	fill: currentColor;
 }
 
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :is(.wp-block-site-logo, .wp-duotone-primary-foreground),
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :is(.wp-block-site-logo, .wp-duotone-primary-foreground) {
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :is(.wp-block-site-logo, .wp-duotone-primary-foreground):not(.cloned-for-mobile, .cloned-for-mobile *),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :is(.wp-block-site-logo, .wp-duotone-primary-foreground):not(.cloned-for-mobile, .cloned-for-mobile *) {
 	filter: var(--ext-header-dark-logo-filter);
 }
 
 /* Nav-extras CTA: white pill + dark text for contrast against the dark hero scrim.
    Drops out at .is-past-hero so the button returns to its preset styling. */
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) .ext-nav-extras-btn .wp-block-button__link,
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) .ext-nav-extras-btn .wp-block-button__link {
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) .ext-nav-extras-btn:not(.cloned-for-mobile, .cloned-for-mobile *) .wp-block-button__link,
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) .ext-nav-extras-btn:not(.cloned-for-mobile, .cloned-for-mobile *) .wp-block-button__link {
 	background-color: #fefefe !important;
 	color: #060606 !important;
 }

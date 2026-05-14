@@ -13,7 +13,7 @@
         const hasSiteTitle = !!document.querySelector('header.wp-block-template-part .wp-block-site-title');
 
         const wrapper = document.createElement('div');
-        wrapper.className = 'site-logo-title wp-block-site-logo';
+        wrapper.className = 'site-logo-title wp-block-site-logo cloned-for-mobile';
         wrapper.innerHTML = `
             ${logoUrl ? `<img src="${logoUrl}" alt="Site Logo" class="mobile-logo" />` : ''}
             ${hasSiteTitle ? `<span class="site-title">${siteTitle || ''}</span>` : ''}
@@ -39,7 +39,7 @@
         if (extras.length === 0) return;
 
         const container = document.createElement('div');
-        container.className = 'ext-nav-extras-mobile';
+        container.className = 'ext-nav-extras-mobile cloned-for-mobile';
 
         extras.forEach((el) => {
             const clone = el.cloneNode(true);
@@ -52,6 +52,16 @@
                     node.removeAttribute('data-extendify-part-block-id');
                     node.removeAttribute('data-extendify-part-slug');
                     node.removeAttribute('data-extendify-part');
+                });
+            // Force left alignment via inline style: WP generates a
+            // wp-container-* class for each layout block with its own
+            // justify-content rule, which has higher specificity than
+            // swapping .is-content-justification-right/left classes can fight.
+            [clone, ...clone.querySelectorAll('*')]
+                .filter((node) => node.classList?.contains('is-content-justification-right')
+                    || node.classList?.contains('is-content-justification-center'))
+                .forEach((node) => {
+                    node.style.justifyContent = 'flex-start';
                 });
             container.appendChild(clone);
         });

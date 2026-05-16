@@ -272,6 +272,25 @@ html.has-modal-open body:not(:has(.entry-content > .ext-hero-section.ext-hero-se
 	width: 100%;
 }
 
+/* Match the nav-link typography (see rule above) on the cloned phone CTA. */
+.has-modal-open .wp-block-navigation__responsive-dialog .ext-nav-extras-mobile .ext-nav-extras-phone,
+.has-modal-open .wp-block-navigation__responsive-dialog .ext-nav-extras-mobile .ext-nav-extras-phone a,
+.has-modal-open .wp-block-navigation__responsive-dialog .ext-nav-extras-mobile .ext-nav-extras-phone p {
+	font-size: 1.25rem !important;
+	font-weight: 600 !important;
+}
+
+/* Bigger, more tappable social icons in the menu. */
+.has-modal-open .wp-block-navigation__responsive-dialog .ext-nav-extras-mobile .wp-block-social-link {
+	width: 32px;
+	height: 32px;
+}
+
+.has-modal-open .wp-block-navigation__responsive-dialog .ext-nav-extras-mobile .wp-social-link svg {
+	width: 28px;
+	height: 28px;
+}
+
 .wp-block-navigation .wp-block-navigation-item a:hover,
 .wp-block-navigation .wp-block-navigation-item a:focus {
 	text-decoration: underline;
@@ -295,6 +314,15 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
 	padding-bottom: var(--wp--preset--spacing--30);
 	padding-right: var(--wp--preset--spacing--30);
 	padding-left: var(--wp--preset--spacing--30);
+}
+
+/* Temporary: WP core ships this padding as a 4-value clamp() shorthand
+   that some browsers fail to parse — re-declare as individual props. */
+.wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) {
+	padding-top: clamp(1rem, var(--wp--style--root--padding-top), 20rem);
+	padding-right: clamp(1rem, var(--wp--style--root--padding-right), 20rem);
+	padding-bottom: clamp(1rem, var(--wp--style--root--padding-bottom), 20rem);
+	padding-left: clamp(1rem, var(--wp--style--root--padding-left), 20rem);
 }
 
 /*
@@ -871,6 +899,12 @@ header.wp-block-template-part:has(.ext-header-sticky):not(:has(.ext-header-glass
 	transition: background-color 300ms ease, box-shadow 300ms ease;
 }
 
+/* Floating-pill: smooth the top change when .is-scrolled toggles, so the
+   header doesn't snap up when scrolling past the admin bar. */
+header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill) {
+	transition: top 300ms ease;
+}
+
 /* Subpage elevation shadow: appears when user scrolls (no hero on the page) */
 body:not(:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child)) header.wp-block-template-part.is-scrolled:has(.ext-header-sticky):not(:has(.ext-header-glass)) {
 	box-shadow: 0 4px 24px -8px oklch(from var(--wp--preset--color--foreground) l c h / 0.08);
@@ -963,13 +997,17 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 }
 
 @media (max-width: 782px) {
-
 	body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill) {
 		top:
 			calc(var(--ext-header-offset) +
 			var(--wp-admin--admin-bar--position-offset, var(--wp-admin--admin-bar--height, 46px)));
 	}
+
+	body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part.is-scrolled:has(.ext-header-sticky.ext-header-sticky--floating-pill) {
+		top:var(--ext-header-offset);
+	}
 }
+
 
 @supports (animation-timeline: scroll()) {
 

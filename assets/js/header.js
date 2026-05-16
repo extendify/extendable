@@ -28,7 +28,7 @@
 		}
 
 		const sentinel = document.createElement( 'div' );
-		sentinel.style.cssText = 'position:absolute;top:0;left:0;height:1px;width:1px;pointer-events:none;';
+		sentinel.style.cssText = 'position:absolute;top:0;left:0;height:16px;width:1px;pointer-events:none;';
 		document.body.prepend( sentinel );
 
 		const scrollObs = new IntersectionObserver( function ( entries ) {

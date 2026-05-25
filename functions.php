@@ -229,6 +229,23 @@ add_filter( 'render_block_data', 'extendable_add_duotone_to_extendify_demo_site_
 add_filter( 'get_block_templates', 'extendable_exclude_wc_block_templates', 10, 2 );
 
 /**
+ * Header helper.
+ *
+ * @package Extendable
+ * @since Extendable 2.1.5
+ */
+function extendable_enqueue_header_scripts() {
+	wp_enqueue_script(
+		'extendable-header',
+		get_template_directory_uri() . '/assets/js/header.js',
+		array(),
+		EXTENDABLE_THEME_VERSION,
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', 'extendable_enqueue_header_scripts' );
+
+/**
  * Navigation customizations
  *
  * @package Extendable
@@ -253,11 +270,11 @@ if ( ! function_exists( 'extendable_enqueue_navigation_customizations' ) ) :
 			true        // load in footer
 		);
 
-		wp_localize_script( 'extendable-navigation_customizations', 'ExtendableNavData', 
+		wp_localize_script( 'extendable-navigation_customizations', 'ExtendableNavData',
 			array(
         		'logoUrl'   => $logo_url,
         		'siteTitle' => $site_title,
-    		) 
+    		)
 		);
 	}
 endif;

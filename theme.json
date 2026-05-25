@@ -1103,6 +1103,26 @@
 			"area": "header"
 		},
 		{
+			"name": "header-ember-harbor",
+			"title": "Header Ember Harbor",
+			"area": "header"
+		},
+		{
+			"name": "header-atlas-beacon",
+			"title": "Header Atlas Beacon",
+			"area": "header"
+		},
+		{
+			"name": "header-catalina-skyline",
+			"title": "Header Catalina Skyline",
+			"area": "header"
+		},
+		{
+			"name": "header-ceadar-peak",
+			"title": "Header Ceadar Peak",
+			"area": "header"
+		},
+		{
 			"name": "header-title-nav-button",
 			"title": "Header with Button",
 			"area": "header"

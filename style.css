@@ -5,7 +5,7 @@ Author: Extendify
 Author URI: https://extendify.com
 Description: Extendable is a distinct, dynamic block theme designed as a canvas for your next online venture. Sporting multiple style variations, Extendable is the most expressive block theme yet. Go fresh, bold, bohemian or minimal — with a single click.
 Requires at least: 6.6
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 7.4
 Version: 2.1.4
 License: GNU General Public License v2 or later
@@ -86,18 +86,18 @@ a:active {
 		display: none;
 	}
 
-	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation-item,
-	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container,
-	.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-page-list {
+	.wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navigation__responsive-container-content .wp-block-navigation-item,
+	.wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navigation__responsive-container-content .wp-block-navigation__container,
+	.wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navigation__responsive-container-content .wp-block-page-list {
 		align-items: flex-start !important;
 	}
 }
 
 @media (max-width: 600px) {
 
-	.has-modal-open .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation-item,
-	.has-modal-open .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container,
-	.has-modal-open .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-page-list {
+	.has-modal-open .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navigation__responsive-container-content .wp-block-navigation-item,
+	.has-modal-open .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navigation__responsive-container-content .wp-block-navigation__container,
+	.has-modal-open .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navigation__responsive-container-content .wp-block-page-list {
 		align-items: flex-start !important;
 	}
 }
@@ -140,7 +140,7 @@ a:active {
 	line-height: 1.15;
 }
 
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+.wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navigation__responsive-container-content {
 	padding-top: var(--wp--preset--spacing--30);
 }
 
@@ -151,19 +151,19 @@ a:active {
 	top: -2.5px !important;
 }
 
-.has-modal-open .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
+.has-modal-open .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
 	gap: 0 !important;
 	width: 100%;
 }
 
-.has-modal-open .wp-block-navrigation__containe,
-.has-modal-open .wp-block-navigation__container ul {
+.has-modal-open .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navrigation__containe,
+.has-modal-open .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navigation__container ul {
 	row-gap: 0.75rem !important;
 	width: -webkit-fill-available;
 	max-width: 100%;
 }
 
-.has-modal-open .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content > ul.wp-block-navigation__container > li.wp-block-navigation-item:not(.wp-block-navigation__submenu-container) {
+.has-modal-open .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navigation__responsive-container-content > ul.wp-block-navigation__container > li.wp-block-navigation-item:not(.wp-block-navigation__submenu-container) {
 	border-bottom: 1px solid #8080801d;
 	padding-top: 0.75rem;
 	padding-bottom: 0.75rem;
@@ -171,21 +171,21 @@ a:active {
 	max-width: 100%;
 }
 
-.has-modal-open .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container {
+.has-modal-open .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container {
 	padding: 0.75rem 0.75rem 0 0.75rem !important;
 	gap: 0.75rem !important;
 }
 
-.has-modal-open .wp-block-navigation__responsive-dialog ul.wp-block-navigation__container > li:not(.wp-block-navigation__submenu-container) > a.wp-block-navigation-item__content {
+.has-modal-open .wp-block-navigation__responsive-container:not(.disable-default-overlay) .wp-block-navigation__responsive-dialog ul.wp-block-navigation__container > li:not(.wp-block-navigation__submenu-container) > a.wp-block-navigation-item__content {
 	font-size: 1.25rem;
 	font-weight: 600;
 }
 
-.has-modal-open .wp-block-navigation__submenu-container {
+.has-modal-open .wp-block-navigation__responsive-container:not(.disable-default-overlay) .wp-block-navigation__submenu-container {
 	padding-top: 0.75rem !important;
 }
 
-.has-modal-open .wp-block-navigation__responsive-dialog ul.wp-block-navigation__container .wp-block-navigation-submenu .wp-block-navigation-item a {
+.has-modal-open .wp-block-navigation__responsive-container:not(.disable-default-overlay) .wp-block-navigation__responsive-dialog ul.wp-block-navigation__container .wp-block-navigation-submenu .wp-block-navigation-item a {
 	font-size: 1rem !important;
 }
 
@@ -237,7 +237,7 @@ html.has-modal-open body:not(:has(.entry-content > .ext-hero-section.ext-hero-se
  */
 @media (max-width: 781px) {
 
-	header.wp-block-template-part :is(.ext-nav-extras-phone, .ext-nav-extras-btn, .ext-nav-extras-social):not(.ext-nav-extras-mobile *) {
+	body:not(:has(.wp-block-navigation__responsive-container.disable-default-overlay)) header.wp-block-template-part :is(.ext-nav-extras-phone, .ext-nav-extras-btn, .ext-nav-extras-social):not(.ext-nav-extras-mobile *) {
 		display: none;
 	}
 
@@ -309,7 +309,7 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
  * the Block Editor in the future.
  */
 
-.wp-block-navigation__responsive-container.is-menu-open {
+.wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) {
 	padding-top: var(--wp--preset--spacing--30);
 	padding-bottom: var(--wp--preset--spacing--30);
 	padding-right: var(--wp--preset--spacing--30);

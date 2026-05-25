@@ -69,7 +69,13 @@
         dialog.appendChild(container);
     }
 
+    function hasNewNavOverlay() {
+        return !!document.querySelector('.wp-block-navigation__responsive-container.disable-default-overlay');
+    }
+
     function init() {
+        if (hasNewNavOverlay()) return;
+
         injectSiteLogoTitle();
         injectNavExtras();
     }

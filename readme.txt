@@ -1,7 +1,7 @@
 === Extendable ===
 Contributors: extendify, richtabor, colorful-tones
 Requires at least: 6.6
-Tested up to: 6.8
+Tested up to: 7.0
 Requires PHP: 7.4
 Stable tag: 2.1.4
 License: GPLv2 or later

@@ -18,7 +18,6 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 - Fixed: Font typo
 - Fixed: Custom mobile navigation styles
 
-
 = 2.1.4 - 2026-04-09 =
 - Added: Header with Center Nav and Phone 
 - Fixed: Gotu font family typo

@@ -4,11 +4,12 @@
 	const header = document.querySelector( 'header.wp-block-template-part' );
 	if ( ! header ) return;
 
-	// Temporary: when our header is wrapped in another <header> (e.g. via the
-	// no-title-sticky-header.html template part), strip the overlay-system
-	// classes so none of our CSS rules fire on it — the outer wrapper handles
-	// layout natively. Remove once the upstream template stops wrapping.
-	if ( header.parentElement?.tagName === 'HEADER' ) {
+	// Temporary: when our header is rendered inside a wrapping template part
+	// that opts in by carrying .ext-header-wrapper (e.g. no-title-sticky-
+	// header.html in the agent plugin), strip the overlay-system classes so
+	// none of our CSS rules fire — the outer wrapper handles layout natively.
+	// Remove once the upstream template stops wrapping.
+	if ( header.closest( '.ext-header-wrapper' ) ) {
 		const overlay = header.querySelector( '.ext-header-overlay' );
 		if ( overlay ) {
 			overlay.classList.remove(

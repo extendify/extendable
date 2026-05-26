@@ -4,6 +4,24 @@
 	const header = document.querySelector( 'header.wp-block-template-part' );
 	if ( ! header ) return;
 
+	// Temporary: when our header is rendered inside a wrapping template part
+	// that opts in by carrying .ext-header-wrapper (e.g. no-title-sticky-
+	// header.html in the agent plugin), strip the overlay-system classes so
+	// none of our CSS rules fire — the outer wrapper handles layout natively.
+	// Remove once the upstream template stops wrapping.
+	if ( header.closest( '.ext-header-wrapper' ) ) {
+		const overlay = header.querySelector( '.ext-header-overlay' );
+		if ( overlay ) {
+			overlay.classList.remove(
+				'ext-header-overlay',
+				'ext-header-glass',
+				'ext-header-sticky',
+				'ext-header-sticky--floating-pill',
+				'ext-header--dark'
+			);
+		}
+	}
+
 	const findHero = () => document.querySelector(
 		'.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child'
 	);

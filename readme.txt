@@ -13,6 +13,9 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.1.6 - 2026-05-27 =
+- Fixed: no-title-sticky-header template conflict with Overlay headers
+
 = 2.1.5 - 2026-05-25 =
 - Added: Four new headers
 - Fixed: Font typo

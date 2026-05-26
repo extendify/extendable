@@ -1089,3 +1089,15 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 .ext-header-glass[class*="is-style-ext-preset--"] {
 	background-image: none !important;
 }
+
+/* Temporary: a few template parts (e.g. no-title-sticky-header.html) wrap our
+   header in another sticky <header>. Scope the fix to the three new headers
+   (atlas-beacon, catalina-skyline, ceadar-peak) — they're the only ones
+   using .ext-header-overlay, so older headers that intentionally rely on
+   the wrapper's positioning aren't affected. display: contents removes the
+   wrapper from layout entirely so its bg/border/sticky/box-shadow/
+   wp-container-* styles don't apply. Remove once the upstream template
+   stops wrapping. */
+header:has(> header.wp-block-template-part :where(.ext-header-overlay)) {
+	display: contents;
+}

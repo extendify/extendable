@@ -58,12 +58,16 @@
         });
 
         trackedElements = [];
-        
+
+        // Read every element's geometry before any class/style write. Interleaving
+        // getBoundingClientRect with writes forces a synchronous layout per element
+        // (layout thrash) - expensive on pages with many animated blocks.
+        const pending = [];
         Object.keys(currentMap).forEach(selector => {
             try {
                 const elements = document.querySelectorAll(selector);
                 const animationType = currentMap[selector];
-                
+
                 // Group elements by parent for proper stagger
                 const elementsByParent = new Map();
                 elements.forEach(element => {
@@ -76,37 +80,43 @@
                     }
                     elementsByParent.get(parent).push(element);
                 });
-                
-                // Apply stagger within each parent group
+
                 elementsByParent.forEach(siblingElements => {
                     siblingElements.forEach((element, index) => {
-                        element.classList.add('ext-animate');
-                        element.dataset.extAnimate = animationType;
-                        
-                        const delay = Math.min(index * staggerDelay, maxStagger);
-                        const duration = speeds[currentSpeed];
-                        
-                        element.style.animationDuration = `${duration}s`;
-                        element.style.animationDelay = `${delay}s`;
-                        
-                        // Clear stacking context after animation completes
-                        element.addEventListener('animationend', () => {
-                            element.dataset.extAnimated = 'true';
-                        }, { once: true });
-                        
-                        // Elements already in viewport (like headers) - trigger immediately
                         const rect = element.getBoundingClientRect();
-                        if (rect.top < window.innerHeight && rect.bottom > 0) {
-                            requestAnimationFrame(() => {
-                                element.classList.add(`ext-animated-${animationType}`);
-                            });
-                        }
-                        
-                        observer.observe(element);
-                        trackedElements.push(element);
+                        pending.push({
+                            element,
+                            animationType,
+                            delay: Math.min(index * staggerDelay, maxStagger),
+                            // Elements already in viewport (like headers) - reveal immediately
+                            inViewport: rect.top < window.innerHeight && rect.bottom > 0,
+                        });
                     });
                 });
             } catch (e) {}
+        });
+
+        // Batch all writes into one frame so layout happens once, not once per element.
+        const duration = speeds[currentSpeed];
+        requestAnimationFrame(() => {
+            pending.forEach(({ element, animationType, delay, inViewport }) => {
+                element.classList.add('ext-animate');
+                element.dataset.extAnimate = animationType;
+                element.style.animationDuration = `${duration}s`;
+                element.style.animationDelay = `${delay}s`;
+
+                // Clear stacking context after animation completes
+                element.addEventListener('animationend', () => {
+                    element.dataset.extAnimated = 'true';
+                }, { once: true });
+
+                if (inViewport) {
+                    element.classList.add(`ext-animated-${animationType}`);
+                }
+
+                observer.observe(element);
+                trackedElements.push(element);
+            });
         });
     }
 
@@ -129,19 +139,22 @@
         });
         
         requestAnimationFrame(() => {
-            trackedElements.forEach(element => {
+            const visible = trackedElements.map(element => {
                 const rect = element.getBoundingClientRect();
-                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-                
-                if (isVisible) {
-                    const animationType = element.dataset.extAnimate;
-                    if (animationType) {
-                        element.classList.add(`ext-animated-${animationType}`);
-                    }
+                return rect.top < window.innerHeight && rect.bottom > 0;
+            });
+
+            trackedElements.forEach((element, index) => {
+                if (!visible[index]) {
+                    return;
+                }
+                const animationType = element.dataset.extAnimate;
+                if (animationType) {
+                    element.classList.add(`ext-animated-${animationType}`);
                 }
             });
         });
-        
+
         return true;
     }
 

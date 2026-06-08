@@ -59,16 +59,11 @@
 
         trackedElements = [];
 
-        // Read every element's geometry before any class/style write. Interleaving
-        // getBoundingClientRect with writes forces a synchronous layout per element
-        // (layout thrash) - expensive on pages with many animated blocks.
         const pending = [];
         Object.keys(currentMap).forEach(selector => {
             try {
                 const elements = document.querySelectorAll(selector);
                 const animationType = currentMap[selector];
-
-                // Group elements by parent for proper stagger
                 const elementsByParent = new Map();
                 elements.forEach(element => {
                     if (element.classList.contains('ext-animate--off')) {

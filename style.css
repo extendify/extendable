@@ -795,7 +795,6 @@ header.wp-block-template-part:has(.ext-header-glass) .ext-header-glass {
 	background-color: oklch(from var(--ext-header-glass-color-end) l c h / var(--ext-header-bg-opacity-end));
 	backdrop-filter: blur(var(--ext-header-blur-end));
 	border-radius: 1rem;
-	overflow: hidden;
 }
 
 /* ===========================================================

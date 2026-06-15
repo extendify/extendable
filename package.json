@@ -16,14 +16,22 @@
 		"node": ">=20.10.0",
 		"npm": ">=10.2.3"
 	},
+	"prettier": "@wordpress/prettier-config",
 	"devDependencies": {
+		"@wordpress/prettier-config": "^4.48.0",
+		"@wordpress/scripts": "^32.4.0",
+		"@wordpress/stylelint-config": "^23.40.0",
+		"globals": "^17.6.0",
 		"replace-in-files-cli": "^1.0.0",
-		"@wordpress/stylelint-config": "^22.6.0",
-		"stylelint": "^14.16.1"
+		"stylelint": "^16.26.1"
 	},
 	"scripts": {
-		"lint:css": "stylelint **/*.css -i .gitignore",
-		"lint:css:fix": "stylelint **/*.css -i .gitignore --fix",
+		"format": "prettier --write \"templates/**/*.html\" \"parts/**/*.html\"",
+		"format:check": "prettier --check \"templates/**/*.html\" \"parts/**/*.html\"",
+		"lint:js": "wp-scripts lint-js assets",
+		"lint:js:fix": "wp-scripts lint-js assets --fix",
+		"lint:css": "wp-scripts lint-style \"**/*.css\"",
+		"lint:css:fix": "wp-scripts lint-style \"**/*.css\" --fix",
 		"lint:php": "composer run-script lint",
 		"lint:php:fix": "composer run-script format",
 		"build": "NO_CHECKS=true bash ./bin/build-zip.sh",

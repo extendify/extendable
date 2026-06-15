@@ -1,37 +1,44 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
 <!-- wp:group {"className":"ext-animate\u002d\u002don is-style-ext-preset\u002d\u002dgroup\u002d\u002dnatural-1\u002d\u002dtemplate","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"inherit":true,"type":"constrained"}} -->
-<div class="wp-block-group ext-animate--on is-style-ext-preset--group--natural-1--template" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)">
-    
-    <!-- wp:woocommerce/breadcrumbs /-->
+<div
+	class="wp-block-group ext-animate--on is-style-ext-preset--group--natural-1--template"
+	style="
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: var(--wp--preset--spacing--50);
+		padding-bottom: var(--wp--preset--spacing--50);
+	"
+>
+	<!-- wp:woocommerce/breadcrumbs /-->
 
-    <!-- wp:query-title {"type":"archive","showPrefix":false,"align":"wide","style":{"spacing":{"margin":{"top":"1rem"}}}} /-->
+	<!-- wp:query-title {"type":"archive","showPrefix":false,"align":"wide","style":{"spacing":{"margin":{"top":"1rem"}}}} /-->
 
-    <!-- wp:woocommerce/store-notices /-->
+	<!-- wp:woocommerce/store-notices /-->
 
-    <!-- wp:group {"className":"alignwide","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-    <div class="wp-block-group alignwide"><!-- wp:woocommerce/product-results-count /-->
+	<!-- wp:group {"className":"alignwide","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+	<div class="wp-block-group alignwide">
+		<!-- wp:woocommerce/product-results-count /-->
 
-        <!-- wp:woocommerce/catalog-sorting /-->
-    </div>
-    <!-- /wp:group -->
+		<!-- wp:woocommerce/catalog-sorting /-->
+	</div>
+	<!-- /wp:group -->
 
-    <!-- wp:woocommerce/product-collection {"queryId":0,"query":{"woocommerceAttributes":[],"woocommerceStockStatus":["instock","outofstock","onbackorder"],"woocommerceOnSale":false,"woocommerceHandPickedProducts":[],"taxQuery":[],"isProductCollectionBlock":true,"perPage":9,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","author":"","search":"","exclude":[],"sticky":"","inherit":true,"featured":false},"tagName":"div","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"queryContextIncludes":["collection"],"align":"wide"} -->
-    <div class="wp-block-woocommerce-product-collection alignwide">
-        <!-- wp:woocommerce/product-template {"layout":{"type":"default"}} -->
-            <!-- wp:pattern {"slug":"extendable/hidden-shop-product"} /-->
-        <!-- /wp:woocommerce/product-template -->
-        <!-- wp:query-pagination {"style":{"typography":{"lineHeight":"3"}},"layout":{"type":"flex","justifyContent":"center"}} -->
-        <!-- wp:query-pagination-previous /-->
+	<!-- wp:woocommerce/product-collection {"queryId":0,"query":{"woocommerceAttributes":[],"woocommerceStockStatus":["instock","outofstock","onbackorder"],"woocommerceOnSale":false,"woocommerceHandPickedProducts":[],"taxQuery":[],"isProductCollectionBlock":true,"perPage":9,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","author":"","search":"","exclude":[],"sticky":"","inherit":true,"featured":false},"tagName":"div","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"queryContextIncludes":["collection"],"align":"wide"} -->
+	<div class="wp-block-woocommerce-product-collection alignwide">
+		<!-- wp:woocommerce/product-template {"layout":{"type":"default"}} -->
+		<!-- wp:pattern {"slug":"extendable/hidden-shop-product"} /-->
+		<!-- /wp:woocommerce/product-template -->
+		<!-- wp:query-pagination {"style":{"typography":{"lineHeight":"3"}},"layout":{"type":"flex","justifyContent":"center"}} -->
+		<!-- wp:query-pagination-previous /-->
 
-        <!-- wp:query-pagination-numbers /-->
+		<!-- wp:query-pagination-numbers /-->
 
-        <!-- wp:query-pagination-next /-->
-        <!-- /wp:query-pagination -->
-        <!-- wp:pattern {"slug":"extendable/hidden-no-products"} /-->
-
-    </div>
-    <!-- /wp:woocommerce/product-collection -->
+		<!-- wp:query-pagination-next /-->
+		<!-- /wp:query-pagination -->
+		<!-- wp:pattern {"slug":"extendable/hidden-no-products"} /-->
+	</div>
+	<!-- /wp:woocommerce/product-collection -->
 </div>
 <!-- /wp:group -->
 

@@ -13,6 +13,12 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.1.7 - 2026-06-15 =
+- Fixed: Single product template block validation error
+- Fixed: Glass header dropdown menu being clipped
+- Fixed: Contrast on the glass dark style variation
+- Fixed: Animation performance by batching reads/writes to avoid layout thrash
+
 = 2.1.6 - 2026-05-27 =
 - Fixed: no-title-sticky-header template conflict with Overlay headers
 

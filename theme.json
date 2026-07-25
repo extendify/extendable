@@ -886,51 +886,6 @@
 			],
 			"fontSizes": [
 				{
-					"slug": "heading-1",
-					"name": "Heading 1",
-					"size": "clamp(2.25rem, 1.939rem + 1.326vw, 3rem)"
-				},
-				{
-					"slug": "heading-2",
-					"name": "Heading 2",
-					"size": "clamp(1.75rem, 1.543rem + 0.884vw, 2.25rem)"
-				},
-				{
-					"slug": "heading-3",
-					"name": "Heading 3",
-					"size": "clamp(1.5rem, 1.345rem + 0.663vw, 1.875rem)"
-				},
-				{
-					"slug": "heading-4",
-					"name": "Heading 4",
-					"size": "clamp(1.25rem, 1.146rem + 0.442vw, 1.5rem)"
-				},
-				{
-					"slug": "heading-5",
-					"name": "Heading 5",
-					"size": "clamp(1.125rem, 1.073rem + 0.221vw, 1.25rem)"
-				},
-				{
-					"slug": "heading-6",
-					"name": "Heading 6",
-					"size": "clamp(1rem, 0.948rem + 0.221vw, 1.125rem)"
-				},
-				{
-					"slug": "regular",
-					"name": "Regular",
-					"size": "1rem"
-				},
-				{
-					"slug": "tiny",
-					"name": "Tiny",
-					"size": "0.75rem"
-				},
-				{
-					"slug": "eyebrow",
-					"name": "Eyebrow",
-					"size": "0.875rem"
-				},
-				{
 					"fluid": false,
 					"size": "1rem",
 					"slug": "small"

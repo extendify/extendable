@@ -147,6 +147,9 @@
 			]
 		},
 		"custom": {
+			"space-snug": "calc(8px * var(--wp--custom--space-scale, 1))",
+			"space-cozy": "calc(24px * var(--wp--custom--space-scale, 1))",
+			"space-block": "calc(56px * var(--wp--custom--space-scale, 1))",
 			"color": {
 				"neutral-50": "color-mix(in oklab, #F7F7F7, var(--wp--preset--color--primary, #1A1A1A) 6%)",
 				"neutral-100": "color-mix(in oklab, #ECECEC, var(--wp--preset--color--primary, #1A1A1A) 6%)",

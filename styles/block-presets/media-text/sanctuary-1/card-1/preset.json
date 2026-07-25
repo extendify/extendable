@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Sanctuary 1 Item Card 1",
+	"slug": "ext-preset--media-text--sanctuary-1--card-1",
+	"blockTypes": [
+		"core/media-text"
+	],
+	"styles": {
+		"color": {
+			"background": "var:preset|color|tertiary"
+		},
+		"border": {
+			"radius": {
+				"topLeft": "999px",
+				"topRight": "999px",
+				"bottomRight": "0px",
+				"bottomLeft": "0px"
+			}
+		},
+		"spacing": {
+			"padding": {
+				"top": "0",
+				"right": "0",
+				"bottom": "0",
+				"left": "0"
+			}
+		},
+		"blocks": {
+			"core/group": {
+				"spacing": {
+					"margin": {
+						"top": "0"
+					}
+				},
+				"dimensions": {
+					"minHeight": "100%"
+				}
+			}
+		},
+		"css": "& { overflow: hidden; height: 100%; }  & .wp-block-media-text__content { padding-right:0 !important; padding-left:0 !important; } & .ext-card-body { padding-left: 24px; padding-right: 24px; } & .ext-card-footer { padding-left: 24px; padding-right: 24px; padding-bottom: 24px; } & .ext-card-body:first-child { padding-top: 24px; } & .ext-card-body:last-child { padding-bottom: 24px; } &:where(:not(.ext-card)) > .wp-block-group { padding: var(--wp--preset--spacing--30); }"
+	}
+}

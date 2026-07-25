@@ -115,6 +115,26 @@
 			],
 			"palette": [
 				{
+					"slug": "background-base",
+					"name": "Background base",
+					"color": "var(--wp--custom--color--background-base)"
+				},
+				{
+					"slug": "text-strong",
+					"name": "Text strong",
+					"color": "var(--wp--custom--color--text-strong)"
+				},
+				{
+					"slug": "text-weak",
+					"name": "Text weak",
+					"color": "var(--wp--custom--color--text-weak)"
+				},
+				{
+					"slug": "text-brand",
+					"name": "Text brand",
+					"color": "var(--wp--custom--color--text-brand)"
+				},
+				{
 					"slug": "background",
 					"color": "#ffffff",
 					"name": "Background"
@@ -206,8 +226,8 @@
 				"base-white": "#FFFFFF",
 				"base-black": "#000000",
 				"base-yellow": "#FFC72E",
-				"text-strong": "var(--wp--custom--color--neutral-900)",
-				"text-weak": "var(--wp--custom--color--neutral-700)",
+				"text-strong": "var(--wp--preset--color--foreground)",
+				"text-weak": "color-mix(in oklab, var(--wp--preset--color--foreground) 72%, var(--wp--preset--color--background))",
 				"text-weaker": "var(--wp--custom--color--neutral-500)",
 				"text-disabled": "var(--wp--custom--color--neutral-400)",
 				"text-brand": "color-mix(in oklab, var(--wp--preset--color--primary, #1A1A1A), #000000 10%)",
@@ -219,8 +239,8 @@
 				"text-inverse-strong": "var(--wp--custom--color--base-white)",
 				"text-inverse-weak": "var(--wp--custom--color--neutral-200)",
 				"text-inverse-disabled": "rgba(255, 255, 255, 0.45)",
-				"stroke-strong": "var(--wp--custom--color--neutral-500)",
-				"stroke-weak": "var(--wp--custom--color--neutral-200)",
+				"stroke-strong": "color-mix(in oklab, var(--wp--preset--color--foreground) 45%, var(--wp--preset--color--background))",
+				"stroke-weak": "color-mix(in oklab, var(--wp--preset--color--foreground) 18%, var(--wp--preset--color--background))",
 				"stroke-weaker": "var(--wp--custom--color--neutral-100)",
 				"stroke-focus": "var(--wp--preset--color--primary, #1A1A1A)",
 				"stroke-brand": "var(--wp--preset--color--primary, #1A1A1A)",
@@ -261,7 +281,7 @@
 				"fill-inverse-weak": "rgba(255, 255, 255, 0.12)",
 				"fill-white": "var(--wp--custom--color--base-white)",
 				"fill-yellow": "var(--wp--custom--color--base-yellow)",
-				"background-base": "var(--wp--custom--color--base-white)",
+				"background-base": "var(--wp--preset--color--background)",
 				"background-sunken": "var(--wp--custom--color--neutral-50)",
 				"background-raised": "var(--wp--custom--color--base-white)",
 				"background-overlay": "var(--wp--custom--color--base-white)",

@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Haven 1 Section Intro 1",
+	"slug": "ext-preset--group--haven-1--section-intro-1",
+	"blockTypes": [
+		"core/group"
+	],
+	"styles": {
+		"typography": {
+			"textAlign": "center"
+		},
+		"css": "& .wp-block-buttons { justify-content: center; }"
+	}
+}

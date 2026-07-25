@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Citrus 1 Tagline 1",
+	"slug": "ext-preset--paragraph--citrus-1--tagline-1",
+	"blockTypes": [
+		"core/paragraph"
+	],
+	"styles": {
+		"typography": {
+			"fontWeight": "600",
+			"textTransform": "uppercase",
+			"letterSpacing": "0.05em"
+		},
+		"color": {
+			"background": "var:preset|color|tertiary",
+			"text": "var:preset|color|foreground"
+		},
+		"border": {
+			"radius": "9999px"
+		},
+		"spacing": {
+			"padding": {
+				"top": "4px",
+				"bottom": "4px",
+				"left": "12px",
+				"right": "12px"
+			}
+		},
+		"css": "& { display: inline-block; width: fit-content; }"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Sanctuary 1 Tagline 1",
+	"slug": "ext-preset--paragraph--sanctuary-1--tagline-1",
+	"blockTypes": [
+		"core/paragraph"
+	],
+	"styles": {
+		"typography": {
+			"fontWeight": "600"
+		},
+		"color": {
+			"text": "var:preset|color|foreground-alt"
+		}
+	}
+}

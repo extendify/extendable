@@ -1,0 +1,14 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Haven 1 Template",
+	"slug": "ext-preset--group--haven-1--template",
+	"blockTypes": [
+		"core/group"
+	],
+	"styles": {
+		"spacing": {
+			"blockGap": "var(--wp--preset--spacing--30)"
+		}
+	}
+}

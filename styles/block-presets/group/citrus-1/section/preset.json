@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Citrus 1 Section",
+	"slug": "ext-preset--group--citrus-1--section",
+	"blockTypes": [
+		"core/group"
+	],
+	"styles": {
+		"spacing": {
+			"blockGap": "var(--wp--preset--spacing--30)"
+		},
+		"css": "& .ext-section-intro { text-align: center; } & .ext-card-body { text-align: center; } & .ext-card-footer { align-self: stretch; } & .ext-card-footer .wp-block-buttons { justify-content: center; } & .ext-stat { text-align: center; }"
+	}
+}

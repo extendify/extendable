@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Atelier 1 Panel 1",
+	"slug": "ext-preset--group--atelier-1--panel-1",
+	"blockTypes": [
+		"core/group"
+	],
+	"styles": {
+		"color": {
+			"background": "var:preset|color|base"
+		},
+		"border": {
+			"radius": "0px"
+		},
+		"css": "& { overflow: hidden; }"
+	}
+}

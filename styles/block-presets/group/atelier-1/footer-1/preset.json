@@ -1,0 +1,14 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Atelier 1 Footer 1",
+	"slug": "ext-preset--group--atelier-1--footer-1",
+	"blockTypes": [
+		"core/group"
+	],
+	"styles": {
+		"spacing": {
+			"blockGap": "var(--wp--preset--spacing--30)"
+		}
+	}
+}

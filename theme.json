@@ -115,26 +115,6 @@
 			],
 			"palette": [
 				{
-					"slug": "background-base",
-					"name": "Background base",
-					"color": "var(--wp--custom--color--background-base)"
-				},
-				{
-					"slug": "text-strong",
-					"name": "Text strong",
-					"color": "var(--wp--custom--color--text-strong)"
-				},
-				{
-					"slug": "text-weak",
-					"name": "Text weak",
-					"color": "var(--wp--custom--color--text-weak)"
-				},
-				{
-					"slug": "text-brand",
-					"name": "Text brand",
-					"color": "var(--wp--custom--color--text-brand)"
-				},
-				{
 					"slug": "background",
 					"color": "#ffffff",
 					"name": "Background"

@@ -1,0 +1,131 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Lattice · Marmalade",
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": [
+						"#38266E",
+						"#4C3D87"
+					],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": [
+						"#38266E",
+						"#F3EEFB"
+					],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				},
+				{
+					"colors": [
+						"#4C3D87",
+						"#38266E"
+					],
+					"slug": "secondary-and-primary",
+					"name": "Secondary and primary"
+				},
+				{
+					"colors": [
+						"#38266E",
+						"#FDFBF7"
+					],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": [
+						"#38266E",
+						"#38266E"
+					],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				},
+				{
+					"colors": [
+						"#FDFBF7",
+						"#F3EEFB"
+					],
+					"slug": "background-tertiary",
+					"name": "Background and Background Alt"
+				}
+			],
+			"palette": [
+				{
+					"slug": "background",
+					"color": "var(--wp--custom--color--background-base)",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "var(--wp--custom--color--text-strong)",
+					"name": "Foreground"
+				},
+				{
+					"slug": "primary",
+					"color": "#38266E",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#4C3D87",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "var(--wp--custom--color--background-sunken)",
+					"name": "Tertiary"
+				},
+				{
+					"slug": "foreground-alt",
+					"color": "var(--wp--custom--color--text-weak)",
+					"name": "Foreground Alt"
+				}
+			]
+		},
+		"custom": {
+			"color": {
+				"text-strong": "#38266E",
+				"background-base": "#FDFBF7",
+				"text-weak": "#6759A6",
+				"background-sunken": "#F3EEFB"
+			},
+			"elements": {
+				"button": {
+					"color": {
+						"background": "#38266E",
+						"text": "#FDFBF7"
+					},
+					":hover": {
+						"color": {
+							"background": "#4C3D87",
+							"text": "#FDFBF7"
+						}
+					},
+					":focus": {
+						"color": {
+							"background": "#38266E",
+							"text": "#FDFBF7"
+						}
+					}
+				}
+			}
+		}
+	},
+	"styles": {
+		"color": {
+			"text": "var(--wp--preset--color--foreground)"
+		},
+		"elements": {
+			"heading": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				}
+			}
+		}
+	}
+}

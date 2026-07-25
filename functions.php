@@ -361,33 +361,6 @@ function extendable_hide_block_style_variations() {
 add_action( 'enqueue_block_editor_assets', 'extendable_hide_block_style_variations' );
 
 /**
- * Lattice (Task 107): hide the four semantic color swatches — Background base,
- * Text strong, Text weak, Text brand — from the editor color picker while keeping
- * them registered in settings.color.palette so compiled Lattice patterns still
- * resolve them. Sibling of extendable_hide_block_style_variations() above: same
- * editor-CSS approach, here targeting the color-picker options by their palette
- * labels so the user sees only the six stock swatches (no duplicate base/tag colors).
- */
-function lattice_hide_semantic_color_swatches() {
-	$css = '
-		.components-circular-option-picker__option-wrapper:has([aria-label*="Background base"]),
-		.components-circular-option-picker__option-wrapper:has([aria-label*="Text strong"]),
-		.components-circular-option-picker__option-wrapper:has([aria-label*="Text weak"]),
-		.components-circular-option-picker__option-wrapper:has([aria-label*="Text brand"]),
-		.components-circular-option-picker__option[aria-label*="Background base"],
-		.components-circular-option-picker__option[aria-label*="Text strong"],
-		.components-circular-option-picker__option[aria-label*="Text weak"],
-		.components-circular-option-picker__option[aria-label*="Text brand"] {
-			display: none !important;
-		}
-	';
-
-	wp_add_inline_style('wp-edit-blocks', $css);
-	wp_add_inline_style('wp-edit-site', $css);
-}
-add_action( 'enqueue_block_editor_assets', 'lattice_hide_semantic_color_swatches' );
-
-/**
  * Hide block style variations from site editor style panel
  */
 function extendable_hide_site_editor_block_style_variations() {

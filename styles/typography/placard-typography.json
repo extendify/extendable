@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Placard",
+	"slug": "ext-placard",
+	"styles": {
+		"typography": {
+			"fontFamily": "'Inter', 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "'Oswald', 'Arial Narrow', 'Helvetica Neue Condensed', system-ui, sans-serif",
+					"fontWeight": "600"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "-0.01em",
+					"lineHeight": "1.05"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "-0.01em",
+					"lineHeight": "1.05"
+				}
+			}
+		}
+	}
+}

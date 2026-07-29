@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Atelier",
+	"slug": "ext-atelier",
+	"styles": {
+		"typography": {
+			"fontFamily": "'Inter', 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "'Source Serif Pro', 'Source Serif 4', Georgia, 'Times New Roman', serif",
+					"fontWeight": "500"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "500",
+					"letterSpacing": "0em",
+					"fontStyle": "italic",
+					"lineHeight": "1.15"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "500",
+					"letterSpacing": "0em",
+					"fontStyle": "italic",
+					"lineHeight": "1.15"
+				}
+			}
+		}
+	}
+}

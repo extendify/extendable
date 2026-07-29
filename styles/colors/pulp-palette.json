@@ -1,0 +1,150 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Newsprint",
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": [
+						"#AD0B00",
+						"#C93323"
+					],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": [
+						"#AD0B00",
+						"#EDE5CE"
+					],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				},
+				{
+					"colors": [
+						"#C93323",
+						"#AD0B00"
+					],
+					"slug": "secondary-and-primary",
+					"name": "Secondary and primary"
+				},
+				{
+					"colors": [
+						"#171512",
+						"#F4EDDA"
+					],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": [
+						"#AD0B00",
+						"#171512"
+					],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				},
+				{
+					"colors": [
+						"#F4EDDA",
+						"#EDE5CE"
+					],
+					"slug": "background-tertiary",
+					"name": "Background and Background Alt"
+				}
+			],
+			"palette": [
+				{
+					"slug": "background",
+					"color": "var(--wp--custom--color--background-base)",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "var(--wp--custom--color--text-strong)",
+					"name": "Foreground"
+				},
+				{
+					"slug": "primary",
+					"color": "#AD0B00",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#C93323",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "var(--wp--custom--color--background-sunken)",
+					"name": "Tertiary"
+				},
+				{
+					"slug": "foreground-alt",
+					"color": "var(--wp--custom--color--text-weak)",
+					"name": "Foreground Alt"
+				},
+				{
+					"slug": "background-tint-1",
+					"color": "var(--wp--custom--color--background-tint-1)",
+					"name": "Card 1"
+				},
+				{
+					"slug": "background-tint-2",
+					"color": "var(--wp--custom--color--background-tint-2)",
+					"name": "Card 2"
+				}
+			]
+		},
+		"custom": {
+			"color": {
+				"text-strong": "#171512",
+				"background-base": "#F4EDDA",
+				"text-weak": "#54514E",
+				"background-sunken": "#EDE5CE",
+				"background-tint-1": "#FEC743",
+				"background-tint-2": "#F4EDDA",
+				"background-tint-3": "#B3D8B2",
+				"background-tint-1-ink": "#171512",
+				"background-tint-1-weak": "#171512",
+				"background-tint-2-ink": "#171512",
+				"background-tint-2-weak": "#171512",
+				"background-tint-3-ink": "#171512",
+				"background-tint-3-weak": "#201E1B"
+			},
+			"elements": {
+				"button": {
+					"color": {
+						"background": "#AD0B00",
+						"text": "#F4EDDA"
+					},
+					":hover": {
+						"color": {
+							"background": "#C93323",
+							"text": "#F4EDDA"
+						}
+					},
+					":focus": {
+						"color": {
+							"background": "#AD0B00",
+							"text": "#F4EDDA"
+						}
+					}
+				}
+			}
+		}
+	},
+	"styles": {
+		"color": {
+			"text": "var(--wp--preset--color--foreground)"
+		},
+		"elements": {
+			"heading": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				}
+			}
+		}
+	}
+}

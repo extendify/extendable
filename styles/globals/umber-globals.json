@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Umber Globals",
+	"slug": "ext-umber-globals",
+	"settings": {
+		"custom": {
+			"space-scale": "0.85"
+		}
+	},
+	"styles": {
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontSize": "clamp(1.943rem, 1.943rem + ((1vw - 0.2rem) * 3.325), 3.938rem)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "clamp(1.575rem, 1.575rem + ((1vw - 0.2rem) * 2.625), 3.15rem)"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,163 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Butterscotch",
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": [
+						"#422922",
+						"#583E36"
+					],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": [
+						"#422922",
+						"#FFEBB8"
+					],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				},
+				{
+					"colors": [
+						"#583E36",
+						"#422922"
+					],
+					"slug": "secondary-and-primary",
+					"name": "Secondary and primary"
+				},
+				{
+					"colors": [
+						"#302C2A",
+						"#FCF9E6"
+					],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": [
+						"#422922",
+						"#302C2A"
+					],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				},
+				{
+					"colors": [
+						"#FCF9E6",
+						"#FFEBB8"
+					],
+					"slug": "background-tertiary",
+					"name": "Background and Background Alt"
+				}
+			],
+			"palette": [
+				{
+					"slug": "background",
+					"color": "var(--wp--custom--color--background-base)",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "var(--wp--custom--color--text-strong)",
+					"name": "Foreground"
+				},
+				{
+					"slug": "primary",
+					"color": "#422922",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#583E36",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "var(--wp--custom--color--background-sunken)",
+					"name": "Tertiary"
+				},
+				{
+					"slug": "foreground-alt",
+					"color": "var(--wp--custom--color--text-weak)",
+					"name": "Foreground Alt"
+				},
+				{
+					"slug": "background-tint-1",
+					"color": "var(--wp--custom--color--background-tint-1)",
+					"name": "Card 1"
+				},
+				{
+					"slug": "background-tint-2",
+					"color": "var(--wp--custom--color--background-tint-2)",
+					"name": "Card 2"
+				},
+				{
+					"slug": "background-tint-3",
+					"color": "var(--wp--custom--color--background-tint-3)",
+					"name": "Card 3"
+				},
+				{
+					"slug": "background-tint-4",
+					"color": "var(--wp--custom--color--background-tint-4)",
+					"name": "Card 4"
+				}
+			]
+		},
+		"custom": {
+			"color": {
+				"text-strong": "#302C2A",
+				"background-base": "#FCF9E6",
+				"text-weak": "#66615F",
+				"background-sunken": "#FFEBB8",
+				"background-tint-1": "#FAB5EE",
+				"background-tint-2": "#F0E3A9",
+				"background-tint-3": "#5A3828",
+				"background-tint-1-ink": "#13100E",
+				"background-tint-1-weak": "#13100E",
+				"background-tint-2-ink": "#302C2A",
+				"background-tint-2-weak": "#302C2A",
+				"background-tint-3-ink": "#FCF9E6",
+				"background-tint-3-weak": "#E1DECC",
+				"background-tint-4": "#B5DAD5",
+				"background-tint-4-ink": "#2B2725",
+				"background-tint-4-weak": "#2B2725"
+			},
+			"elements": {
+				"button": {
+					"color": {
+						"background": "#422922",
+						"text": "#FCF9E6"
+					},
+					":hover": {
+						"color": {
+							"background": "#583E36",
+							"text": "#FCF9E6"
+						}
+					},
+					":focus": {
+						"color": {
+							"background": "#422922",
+							"text": "#FCF9E6"
+						}
+					}
+				}
+			}
+		}
+	},
+	"styles": {
+		"color": {
+			"text": "var(--wp--preset--color--foreground)"
+		},
+		"elements": {
+			"heading": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				}
+			}
+		}
+	}
+}

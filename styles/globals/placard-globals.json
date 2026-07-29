@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Placard Globals",
+	"slug": "ext-placard-globals",
+	"settings": {
+		"custom": {
+			"space-scale": "0.65",
+			"gap-scale": "0.125"
+		}
+	},
+	"styles": {
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontSize": "clamp(2.405rem, 2.405rem + ((1vw - 0.2rem) * 4.117), 4.875rem)",
+					"textTransform": "uppercase"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "clamp(1.95rem, 1.95rem + ((1vw - 0.2rem) * 3.25), 3.9rem)",
+					"textTransform": "uppercase"
+				}
+			}
+		}
+	}
+}

@@ -147,10 +147,28 @@
 			]
 		},
 		"custom": {
+			"gap-scale": "var(--wp--custom--space-scale, 1)",
+			"gap-snug": "max(4px, calc(8px * var(--wp--custom--gap-scale, 1)))",
+			"gap-tight": "max(4px, calc(16px * var(--wp--custom--gap-scale, 1)))",
+			"gap-cozy": "max(4px, calc(24px * var(--wp--custom--gap-scale, 1)))",
+			"gap-loose": "max(4px, calc(32px * var(--wp--custom--gap-scale, 1)))",
+			"gap-block": "max(4px, calc(clamp(3rem, 12vw, 5rem) * var(--wp--custom--gap-scale, 1)))",
 			"space-snug": "calc(8px * var(--wp--custom--space-scale, 1))",
 			"space-cozy": "calc(24px * var(--wp--custom--space-scale, 1))",
 			"space-block": "calc(56px * var(--wp--custom--space-scale, 1))",
 			"color": {
+				"background-tint-1-ink": "var(--wp--preset--color--foreground)",
+				"background-tint-1-weak": "color-mix(in oklab, var(--wp--preset--color--foreground) 72%, var(--wp--custom--color--background-tint-1))",
+				"background-tint-2-ink": "var(--wp--preset--color--foreground)",
+				"background-tint-2-weak": "color-mix(in oklab, var(--wp--preset--color--foreground) 72%, var(--wp--custom--color--background-tint-2))",
+				"background-tint-3-ink": "var(--wp--preset--color--foreground)",
+				"background-tint-3-weak": "color-mix(in oklab, var(--wp--preset--color--foreground) 72%, var(--wp--custom--color--background-tint-3))",
+				"background-tint-4-ink": "var(--wp--preset--color--foreground)",
+				"background-tint-4-weak": "color-mix(in oklab, var(--wp--preset--color--foreground) 72%, var(--wp--custom--color--background-tint-3))",
+				"background-tint-4": "var(--wp--custom--color--background-tint-3)",
+				"background-tint-1": "color-mix(in oklab, var(--wp--preset--color--background), var(--wp--preset--color--primary, #1A1A1A) 4%)",
+				"background-tint-2": "color-mix(in oklab, var(--wp--preset--color--background), var(--wp--preset--color--primary, #1A1A1A) 8%)",
+				"background-tint-3": "color-mix(in oklab, var(--wp--preset--color--background), var(--wp--preset--color--primary, #1A1A1A) 14%)",
 				"neutral-50": "color-mix(in oklab, #F7F7F7, var(--wp--preset--color--primary, #1A1A1A) 6%)",
 				"neutral-100": "color-mix(in oklab, #ECECEC, var(--wp--preset--color--primary, #1A1A1A) 6%)",
 				"neutral-200": "color-mix(in oklab, #DADADA, var(--wp--preset--color--primary, #1A1A1A) 6%)",
@@ -1256,7 +1274,7 @@
 			}
 		},
 		"spacing": {
-			"blockGap": "var(--wp--preset--spacing--30)",
+			"blockGap": "max(4px, calc(clamp(1.5rem, 6vw, 2rem) * var(--wp--custom--gap-scale, 1)))",
 			"padding": {
 				"top": "0",
 				"right": "var(--wp--preset--spacing--30)",

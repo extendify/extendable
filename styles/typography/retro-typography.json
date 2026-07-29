@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Retro",
+	"slug": "ext-retro",
+	"styles": {
+		"typography": {
+			"fontFamily": "'DM Sans', 'DM Sans Variable', system-ui, -apple-system, 'Segoe UI', sans-serif"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "'Fraunces', 'Fraunces Variable', Georgia, 'Times New Roman', serif",
+					"fontWeight": "800"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "900",
+					"letterSpacing": "0.01em",
+					"lineHeight": "1.05"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "900",
+					"letterSpacing": "0.01em",
+					"lineHeight": "1.05"
+				}
+			}
+		}
+	}
+}

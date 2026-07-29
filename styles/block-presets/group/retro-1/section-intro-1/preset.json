@@ -7,9 +7,6 @@
 		"core/group"
 	],
 	"styles": {
-		"typography": {
-			"textAlign": "center"
-		},
-		"css": "& .wp-block-buttons { justify-content: center; }"
+		"css": "&.ext-section-intro { text-align: left; } &.ext-section-intro > :where(:not(.alignleft):not(.alignright):not(.alignfull)) { margin-left: 0 !important; } &.ext-section-intro .wp-block-buttons { justify-content: flex-start; } &.ext-section-intro:is(.ext-split *) { text-align: left; } &.ext-section-intro:is(.wp-block-column *) { text-align: left; } &.ext-section-intro:is(.ext-split *) > :where(:not(.alignleft):not(.alignright):not(.alignfull)) { margin-left: 0 !important; } &.ext-section-intro:is(.wp-block-column *) > :where(:not(.alignleft):not(.alignright):not(.alignfull)) { margin-left: 0 !important; } &.ext-section-intro:is(.ext-split *) .wp-block-buttons { justify-content: flex-start; } &.ext-section-intro:is(.wp-block-column *) .wp-block-buttons { justify-content: flex-start; }"
 	}
 }

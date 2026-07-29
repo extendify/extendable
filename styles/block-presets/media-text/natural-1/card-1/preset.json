@@ -3,11 +3,10 @@
 	"version": 3,
 	"title": "Item Card 1",
 	"slug": "ext-preset--media-text--natural-1--card-1",
-	"blockTypes": ["core/media-text"],
+	"blockTypes": [
+		"core/media-text"
+	],
 	"styles": {
-		"color": {
-			"background": "var:preset|color|tertiary"
-		},
 		"spacing": {
 			"padding": {
 				"top": "0",
@@ -19,11 +18,8 @@
 		"blocks": {
 			"core/group": {
 				"spacing": {
-					"padding": {
-						"top": "var:preset|spacing|40",
-						"right": "var:preset|spacing|40",
-						"left": "var:preset|spacing|40",
-						"bottom": "var:preset|spacing|40"
+					"margin": {
+						"top": "0"
 					}
 				},
 				"dimensions": {
@@ -31,6 +27,6 @@
 				}
 			}
 		},
-		"css": "& { overflow: hidden; height: 100%; }  & .wp-block-media-text__content { padding-right:0 !important; padding-left:0 !important; } "
+		"css": "& { overflow: hidden; height: 100%; }  & .wp-block-media-text__content { padding-right:0 !important; padding-left:0 !important; } & .ext-card-content { padding: var(--wp--custom--space-cozy); } & :where(:not(.ext-card-content)) > .ext-card-body { padding-left: var(--wp--custom--space-cozy); padding-right: var(--wp--custom--space-cozy); } & :where(:not(.ext-card-content)) > .ext-card-footer { padding-left: var(--wp--custom--space-cozy); padding-right: var(--wp--custom--space-cozy); padding-bottom: var(--wp--custom--space-cozy); } & :where(:not(.ext-card-content)) > .ext-card-body:first-child { padding-top: var(--wp--custom--space-cozy); } & :where(:not(.ext-card-content)) > .ext-card-body:last-child { padding-bottom: var(--wp--custom--space-cozy); } &:where(:not(.ext-card)) .wp-block-group { padding: var(--wp--preset--spacing--30); }"
 	}
 }

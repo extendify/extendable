@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Vitreous",
+	"slug": "ext-vitreous",
+	"styles": {
+		"typography": {
+			"fontFamily": "'Manrope', 'Manrope Variable', system-ui, -apple-system, sans-serif"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif",
+					"fontWeight": "500"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "500",
+					"letterSpacing": "-0.02em",
+					"lineHeight": "1.1"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "500",
+					"letterSpacing": "-0.02em",
+					"lineHeight": "1.1"
+				}
+			}
+		}
+	}
+}

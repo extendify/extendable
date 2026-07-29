@@ -13,8 +13,8 @@
 			"letterSpacing": "0.05em"
 		},
 		"color": {
-			"background": "var:preset|color|tertiary",
-			"text": "var:preset|color|foreground"
+			"background": "var(--wp--custom--color--chip-surface)",
+			"text": "var(--wp--custom--color--chip-ink)"
 		},
 		"border": {
 			"radius": "9999px"

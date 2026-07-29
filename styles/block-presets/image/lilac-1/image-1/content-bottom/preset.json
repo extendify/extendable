@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Lilac 1 Image 1 Content Bottom",
+	"slug": "ext-preset--image--lilac-1--image-1--content-bottom",
+	"blockTypes": [
+		"core/image",
+		"core/cover"
+	],
+	"styles": {
+		"border": {
+			"radius": "6px"
+		}
+	}
+}

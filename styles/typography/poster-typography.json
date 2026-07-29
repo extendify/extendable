@@ -1,0 +1,34 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Poster",
+	"slug": "ext-poster",
+	"styles": {
+		"typography": {
+			"fontFamily": "'Inter', 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif",
+			"fontWeight": "450"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "'Montserrat', 'Arial Narrow', system-ui, sans-serif",
+					"fontWeight": "700"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "0.02em",
+					"lineHeight": "1.05"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "0.02em",
+					"lineHeight": "1.05"
+				}
+			}
+		}
+	}
+}

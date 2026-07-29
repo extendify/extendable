@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Vitreous 1 Panel 1",
+	"slug": "ext-preset--group--vitreous-1--panel-1",
+	"blockTypes": [
+		"core/group"
+	],
+	"styles": {
+		"color": {
+			"background": "var:preset|color|tertiary"
+		},
+		"border": {
+			"radius": "6px"
+		},
+		"css": "& { overflow: hidden; }"
+	}
+}

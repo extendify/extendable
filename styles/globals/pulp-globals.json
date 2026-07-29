@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Pulp Globals",
+	"slug": "ext-pulp-globals",
+	"settings": {
+		"custom": {
+			"space-scale": "0.85"
+		}
+	},
+	"styles": {
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontSize": "clamp(2.313rem, 2.313rem + ((1vw - 0.2rem) * 3.959), 4.688rem)",
+					"textTransform": "uppercase"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "clamp(1.875rem, 1.875rem + ((1vw - 0.2rem) * 3.125), 3.75rem)",
+					"textTransform": "uppercase"
+				}
+			}
+		}
+	}
+}

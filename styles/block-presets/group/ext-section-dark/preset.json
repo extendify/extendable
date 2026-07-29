@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Section Dark",
+	"slug": "ext-section-dark",
+	"blockTypes": [
+		"core/group"
+	],
+	"styles": {
+		"color": {
+			"background": "var:preset|color|foreground",
+			"text": "var:preset|color|background"
+		},
+		"blocks": {
+			"core/heading": {
+				"color": {
+					"text": "var:preset|color|background"
+				}
+			},
+			"core/paragraph": {
+				"color": {
+					"text": "var:preset|color|background"
+				}
+			},
+			"core/button": {
+				"color": {
+					"background": "var:preset|color|background",
+					"text": "var:preset|color|foreground"
+				}
+			}
+		}
+	}
+}

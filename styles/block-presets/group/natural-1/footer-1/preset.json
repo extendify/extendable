@@ -3,10 +3,10 @@
 	"version": 3,
 	"title": "Footer 1",
 	"slug": "ext-preset--group--natural-1--footer-1",
-	"blockTypes": ["core/group"],
+	"blockTypes": [
+		"core/group"
+	],
 	"styles": {
-		"spacing": {
-			"blockGap": "var(--wp--preset--spacing--30)"
-		}
+		"css": "&.ext-section.has-background { padding-top: 0; padding-bottom: 0; } &.has-tertiary-background-color { --wp--custom--color--text-weak: color-mix(in oklab, var(--wp--preset--color--foreground) 72%, var(--wp--preset--color--tertiary)); --wp--custom--color--background-base: var(--wp--preset--color--tertiary); --wp--custom--color--stroke-strong: color-mix(in oklab, var(--wp--preset--color--foreground) 45%, var(--wp--preset--color--tertiary)); --wp--custom--color--stroke-weak: color-mix(in oklab, var(--wp--preset--color--foreground) 18%, var(--wp--preset--color--tertiary)); } &.ext-tint-1 { --wp--custom--color--text-weak: color-mix(in oklab, var(--wp--preset--color--foreground) 78%, var(--wp--custom--color--background-tint-1)); --wp--custom--color--background-base: var(--wp--custom--color--background-tint-1); --wp--custom--color--stroke-strong: color-mix(in oklab, var(--wp--preset--color--foreground) 45%, var(--wp--custom--color--background-tint-1)); --wp--custom--color--stroke-weak: color-mix(in oklab, var(--wp--preset--color--foreground) 18%, var(--wp--custom--color--background-tint-1)); } &.ext-tint-2 { --wp--custom--color--text-weak: color-mix(in oklab, var(--wp--preset--color--foreground) 83%, var(--wp--custom--color--background-tint-2)); --wp--custom--color--background-base: var(--wp--custom--color--background-tint-2); --wp--custom--color--stroke-strong: color-mix(in oklab, var(--wp--preset--color--foreground) 45%, var(--wp--custom--color--background-tint-2)); --wp--custom--color--stroke-weak: color-mix(in oklab, var(--wp--preset--color--foreground) 18%, var(--wp--custom--color--background-tint-2)); } &.ext-tint-3 { --wp--custom--color--text-weak: color-mix(in oklab, var(--wp--preset--color--foreground) 92%, var(--wp--custom--color--background-tint-3)); --wp--custom--color--background-base: var(--wp--custom--color--background-tint-3); --wp--custom--color--stroke-strong: color-mix(in oklab, var(--wp--preset--color--foreground) 45%, var(--wp--custom--color--background-tint-3)); --wp--custom--color--stroke-weak: color-mix(in oklab, var(--wp--preset--color--foreground) 18%, var(--wp--custom--color--background-tint-3)); }"
 	}
 }

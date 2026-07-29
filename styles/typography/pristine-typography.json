@@ -1,0 +1,29 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Pristine",
+	"slug": "ext-pristine",
+	"styles": {
+		"typography": {
+			"fontFamily": "'Noto Serif Display', 'Source Serif Pro', Georgia, serif"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "'Karla', 'Segoe UI', system-ui, -apple-system, sans-serif",
+					"fontWeight": "500"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			}
+		}
+	}
+}

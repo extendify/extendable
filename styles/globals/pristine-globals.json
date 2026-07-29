@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Pristine Globals",
+	"slug": "ext-pristine-globals",
+	"settings": {
+		"custom": {
+			"space-scale": "1.5"
+		}
+	},
+	"styles": {
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontSize": "clamp(1.758rem, 1.758rem + ((1vw - 0.2rem) * 3.009), 3.563rem)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "clamp(1.425rem, 1.425rem + ((1vw - 0.2rem) * 2.375), 2.85rem)"
+				}
+			}
+		}
+	}
+}

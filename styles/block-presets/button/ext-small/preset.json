@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Small",
+	"slug": "ext-small",
+	"blockTypes": [
+		"core/button"
+	],
+	"styles": {
+		"typography": {
+			"fontSize": "var:preset|font-size|small"
+		},
+		"spacing": {
+			"padding": {
+				"top": "8px",
+				"right": "16px",
+				"bottom": "8px",
+				"left": "16px"
+			}
+		}
+	}
+}

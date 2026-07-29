@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Pulp 1 Button 1",
+	"slug": "ext-preset--button--pulp-1--button-1",
+	"blockTypes": [
+		"core/button",
+		"woocommerce/product-button"
+	],
+	"styles": {
+		"typography": {
+			"fontSize": "inherit"
+		},
+		"border": {
+			"radius": "0px"
+		},
+		"shadow": "0 0 0 3px var(--wp--custom--color--text-strong), 6px 6px 0 0 var(--wp--custom--color--text-strong)"
+	}
+}

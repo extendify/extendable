@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Datasheet",
+	"slug": "ext-datasheet",
+	"styles": {
+		"typography": {
+			"fontFamily": "'Inter', 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "'Inter', 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif",
+					"fontWeight": "600"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "500",
+					"letterSpacing": "-0.01em",
+					"lineHeight": "1.05"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "500",
+					"letterSpacing": "-0.01em",
+					"lineHeight": "1.05"
+				}
+			}
+		}
+	}
+}

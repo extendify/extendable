@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Retro Globals",
+	"slug": "ext-retro-globals",
+	"styles": {
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontSize": "clamp(2.035rem, 2.035rem + ((1vw - 0.2rem) * 3.484), 4.125rem)",
+					"textTransform": "uppercase"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "clamp(1.65rem, 1.65rem + ((1vw - 0.2rem) * 2.75), 3.3rem)",
+					"textTransform": "uppercase"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Atelier Globals",
+	"slug": "ext-atelier-globals",
+	"settings": {
+		"custom": {
+			"space-scale": "1.5"
+		}
+	},
+	"styles": {
+		"elements": {}
+	}
+}

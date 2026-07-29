@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Sanctuary Globals",
+	"slug": "ext-sanctuary-globals",
+	"settings": {
+		"custom": {
+			"space-scale": "1.5"
+		}
+	},
+	"styles": {
+		"elements": {
+			"h1": {
+				"typography": {
+					"textTransform": "uppercase"
+				}
+			},
+			"h2": {
+				"typography": {
+					"textTransform": "uppercase"
+				}
+			}
+		}
+	}
+}

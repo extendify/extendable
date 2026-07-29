@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Pristine 1 Icon Small 1",
+	"slug": "ext-preset--image--pristine-1--icon-small-1",
+	"blockTypes": [
+		"core/image"
+	],
+	"styles": {
+		"css": "& img { color: var(--wp--custom--color--chip-ink); background: var(--wp--custom--color--chip-surface); border-radius: 999px; padding: 4px; box-sizing: content-box; }"
+	}
+}

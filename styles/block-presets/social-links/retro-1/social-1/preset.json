@@ -10,6 +10,6 @@
 		"spacing": {
 			"blockGap": "12px"
 		},
-		"css": "& .wp-social-link { color: var(--wp--custom--color--chip-ink) !important; background: var(--wp--custom--color--chip-surface); border-radius: 999px; padding: 8px; }"
+		"css": "& .wp-social-link { color: var(--wp--custom--color--icon-ink) !important; background-color: var(--wp--custom--color--icon-surface) !important; border-radius: 999px; padding: 8px !important; box-sizing: content-box; }"
 	}
 }

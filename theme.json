@@ -157,6 +157,8 @@
 			"space-cozy": "calc(24px * var(--wp--custom--space-scale, 1))",
 			"space-block": "calc(56px * var(--wp--custom--space-scale, 1))",
 			"color": {
+				"icon-surface": "color-mix(in oklab, var(--wp--preset--color--background), var(--wp--preset--color--primary, #1A1A1A) 6%)",
+				"icon-ink": "var(--wp--preset--color--foreground)",
 				"background-tint-1-ink": "var(--wp--preset--color--foreground)",
 				"background-tint-1-weak": "color-mix(in oklab, var(--wp--preset--color--foreground) 72%, var(--wp--custom--color--background-tint-1))",
 				"background-tint-2-ink": "var(--wp--preset--color--foreground)",

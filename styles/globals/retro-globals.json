@@ -7,14 +7,12 @@
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontSize": "clamp(2.035rem, 2.035rem + ((1vw - 0.2rem) * 3.484), 4.125rem)",
-					"textTransform": "uppercase"
+					"fontSize": "clamp(2.405rem, 2.405rem + ((1vw - 0.2rem) * 4.117), 4.875rem)"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontSize": "clamp(1.65rem, 1.65rem + ((1vw - 0.2rem) * 2.75), 3.3rem)",
-					"textTransform": "uppercase"
+					"fontSize": "clamp(1.95rem, 1.95rem + ((1vw - 0.2rem) * 3.25), 3.9rem)"
 				}
 			}
 		}

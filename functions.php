@@ -160,6 +160,13 @@ add_action( 'init', 'extendable_register_pattern_categories', 9 );
 require_once get_template_directory() . '/inc/animations.php';
 
 /**
+ * Vibe globals: the read endpoint for this theme's per-vibe global theme.json settings
+ * (inc/ext-vibe-globals.json). Deliberately not under styles/, which WordPress auto-reads
+ * as selectable style variations.
+ */
+require_once get_template_directory() . '/inc/ext-vibe-globals.php';
+
+/**
  * Add primary-foreground duotone to extendify demo Site Logo block.
  * 
  * @param array $parsed_block Parsed block data.

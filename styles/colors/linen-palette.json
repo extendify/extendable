@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Slate Mist",
+	"title": "Heath",
 	"settings": {
 		"color": {
 			"duotone": [
@@ -16,7 +16,7 @@
 				{
 					"colors": [
 						"#22231F",
-						"#C9D2D6"
+						"#EDE8D8"
 					],
 					"slug": "primary-and-tertiary",
 					"name": "Primary and tertiary"
@@ -32,7 +32,7 @@
 				{
 					"colors": [
 						"#22231F",
-						"#F1F0EC"
+						"#F5F1E4"
 					],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
@@ -47,8 +47,8 @@
 				},
 				{
 					"colors": [
-						"#F1F0EC",
-						"#C9D2D6"
+						"#F5F1E4",
+						"#EDE8D8"
 					],
 					"slug": "background-tertiary",
 					"name": "Background and Background Alt"
@@ -94,41 +94,56 @@
 					"slug": "background-tint-2",
 					"color": "var(--wp--custom--color--background-tint-2)",
 					"name": "Card 2"
+				},
+				{
+					"slug": "background-tint-3",
+					"color": "var(--wp--custom--color--background-tint-3)",
+					"name": "Card 3"
+				},
+				{
+					"slug": "background-tint-4",
+					"color": "var(--wp--custom--color--background-tint-4)",
+					"name": "Card 4"
 				}
 			]
 		},
 		"custom": {
 			"color": {
 				"text-strong": "#22231F",
-				"background-base": "#F1F0EC",
+				"background-base": "#F5F1E4",
 				"text-weak": "#565752",
-				"background-sunken": "#C9D2D6",
-				"background-tint-1": "#C9D2D6",
-				"background-tint-2": "#E1CBAD",
-				"background-tint-3": "#DBD5C7",
-				"background-tint-1-ink": "#22231F",
-				"background-tint-1-weak": "#22231F",
-				"background-tint-2-ink": "#1D1E1A",
-				"background-tint-2-weak": "#1D1E1A",
-				"background-tint-3-ink": "#22231F",
-				"background-tint-3-weak": "#2C2D29"
+				"icon-surface": "#EDE9DC",
+				"icon-ink": "#22231F",
+				"background-sunken": "#EDE8D8",
+				"background-tint-1": "#C1D4BF",
+				"background-tint-2": "#DDD5C0",
+				"background-tint-3": "#D1C6D2",
+				"background-tint-1-ink": "#1D1E1A",
+				"background-tint-1-weak": "#1D1E1A",
+				"background-tint-2-ink": "#22231F",
+				"background-tint-2-weak": "#22231F",
+				"background-tint-3-ink": "#000100",
+				"background-tint-3-weak": "#000100",
+				"background-tint-4": "#26231E",
+				"background-tint-4-ink": "#F5F1E4",
+				"background-tint-4-weak": "#D4D0C4"
 			},
 			"elements": {
 				"button": {
 					"color": {
 						"background": "#22231F",
-						"text": "#F1F0EC"
+						"text": "#F5F1E4"
 					},
 					":hover": {
 						"color": {
 							"background": "#363733",
-							"text": "#F1F0EC"
+							"text": "#F5F1E4"
 						}
 					},
 					":focus": {
 						"color": {
 							"background": "#22231F",
-							"text": "#F1F0EC"
+							"text": "#F5F1E4"
 						}
 					}
 				}

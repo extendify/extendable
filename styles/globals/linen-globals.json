@@ -3,16 +3,21 @@
 	"version": 3,
 	"title": "Linen Globals",
 	"slug": "ext-linen-globals",
+	"settings": {
+		"custom": {
+			"space-scale": "1.5"
+		}
+	},
 	"styles": {
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontSize": "clamp(1.758rem, 1.758rem + ((1vw - 0.2rem) * 3.009), 3.563rem)"
+					"fontSize": "clamp(2.035rem, 2.035rem + ((1vw - 0.2rem) * 3.484), 4.125rem)"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontSize": "clamp(1.425rem, 1.425rem + ((1vw - 0.2rem) * 2.375), 2.85rem)"
+					"fontSize": "clamp(1.65rem, 1.65rem + ((1vw - 0.2rem) * 2.75), 3.3rem)"
 				}
 			}
 		}

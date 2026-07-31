@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Linen",
+	"title": "Linen · Inter / Manrope",
 	"slug": "ext-linen",
 	"styles": {
 		"typography": {
@@ -10,18 +10,22 @@
 		"elements": {
 			"heading": {
 				"typography": {
-					"fontFamily": "'Karla', 'Segoe UI', system-ui, -apple-system, sans-serif",
-					"fontWeight": "500"
+					"fontFamily": "'Inter', 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif",
+					"fontWeight": "600"
 				}
 			},
 			"h1": {
 				"typography": {
-					"fontWeight": "500"
+					"fontWeight": "500",
+					"letterSpacing": "-0.01em",
+					"lineHeight": "1.1"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontWeight": "500"
+					"fontWeight": "500",
+					"letterSpacing": "-0.01em",
+					"lineHeight": "1.1"
 				}
 			}
 		}

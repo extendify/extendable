@@ -4,19 +4,61 @@
 		"linen-1": {
 			"settings": {
 				"layout": {
-					"wideSize": "72rem"
+					"contentSize": "56rem",
+					"wideSize": "120rem"
+				},
+				"typography": {
+					"fontSizes": [
+						{
+							"slug": "small",
+							"size": "1.125rem",
+							"fluid": false
+						},
+						{
+							"slug": "medium",
+							"size": "1.25rem",
+							"fluid": false
+						},
+						{
+							"slug": "large",
+							"size": "2.25rem",
+							"fluid": {
+								"min": "1.5rem",
+								"max": "2.25rem"
+							}
+						},
+						{
+							"slug": "x-large",
+							"size": "2.8125rem",
+							"fluid": {
+								"min": "1.8125rem",
+								"max": "2.8125rem"
+							}
+						},
+						{
+							"slug": "xx-large",
+							"size": "3.5rem",
+							"fluid": {
+								"min": "2.1875rem",
+								"max": "3.5rem"
+							}
+						}
+					],
+					"fluid": {
+						"maxViewportWidth": "80rem"
+					}
 				}
 			},
 			"styles": {
 				"elements": {
 					"h1": {
 						"typography": {
-							"fontSize": "clamp(2.035rem, 2.035rem + ((1vw - 0.2rem) * 3.484), 4.125rem)"
+							"fontSize": "var(--wp--preset--font-size--xx-large)"
 						}
 					},
 					"h2": {
 						"typography": {
-							"fontSize": "clamp(1.65rem, 1.65rem + ((1vw - 0.2rem) * 2.75), 3.3rem)"
+							"fontSize": "var(--wp--preset--font-size--x-large)"
 						}
 					}
 				}

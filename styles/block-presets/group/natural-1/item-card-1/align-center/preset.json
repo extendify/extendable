@@ -7,7 +7,7 @@
 		"core/group"
 	],
 	"styles": {
-		"css": "& :where(.ext-card-body:not(.is-layout-flex) .wp-block-group) { margin-top: 16px; } & :where(.ext-card-body.is-layout-flex > .wp-block-group) { margin-top: 0; }",
+		"css": "& :where(.ext-card-body:not(.is-layout-flex) .wp-block-group) { margin-top: 16px; } & :where(.ext-card-body.is-layout-flex > .wp-block-group) { margin-top: 0; } &.ext-card-mark-corner .ext-card-icon { order: 1; align-self: flex-end; } & .ext-card-avatar img { border-radius: 9999px; }",
 		"blocks": {
 			"core/heading": {
 				"typography": {

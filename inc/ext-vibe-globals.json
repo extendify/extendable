@@ -66,6 +66,10 @@
 		},
 		"retro-1": {
 			"settings": {
+				"layout": {
+					"contentSize": "56rem",
+					"wideSize": "120rem"
+				},
 				"typography": {
 					"fontSizes": [
 						{

@@ -111,15 +111,15 @@
 				"icon-surface": "#F5E9DF",
 				"icon-ink": "#1B3A8C",
 				"background-sunken": "#FBDCC4",
-				"background-tint-1": "#FAD3B7",
-				"background-tint-2": "#FFC0A9",
-				"background-tint-3": "#DCE4F7",
-				"background-tint-1-ink": "#112E7F",
-				"background-tint-1-weak": "#112E7F",
-				"background-tint-2-ink": "#01055A",
-				"background-tint-2-weak": "#01055A",
-				"background-tint-3-ink": "#1B3A8C",
-				"background-tint-3-weak": "#1B3A8C"
+				"background-tint-1": "#F7D0B7",
+				"background-tint-2": "#FBCBD1",
+				"background-tint-3": "#C6DAFE",
+				"background-tint-1-ink": "#0D2879",
+				"background-tint-1-weak": "#0D2879",
+				"background-tint-2-ink": "#0D2879",
+				"background-tint-2-weak": "#0D2879",
+				"background-tint-3-ink": "#0D2879",
+				"background-tint-3-weak": "#0D2879"
 			},
 			"elements": {
 				"button": {

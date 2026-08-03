@@ -1,0 +1,20 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Playdate 1 Image 1 Content Bottom",
+	"slug": "ext-preset--image--playdate-1--image-1--content-bottom",
+	"blockTypes": [
+		"core/image",
+		"core/cover"
+	],
+	"styles": {
+		"border": {
+			"radius": {
+				"topLeft": "32px",
+				"topRight": "32px",
+				"bottomRight": "0",
+				"bottomLeft": "0"
+			}
+		}
+	}
+}

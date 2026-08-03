@@ -1,0 +1,55 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Playdate 1 Item Card 1 Align Center",
+	"slug": "ext-preset--group--playdate-1--item-card-1--align-center",
+	"blockTypes": [
+		"core/group"
+	],
+	"styles": {
+		"color": {
+			"background": "var:preset|color|tertiary"
+		},
+		"border": {
+			"radius": "32px",
+			"width": "1px",
+			"style": "solid",
+			"color": "var(--wp--custom--color--stroke-weak)"
+		},
+		"dimensions": {
+			"minHeight": "100%"
+		},
+		"blocks": {
+			"core/group": {
+				"spacing": {
+					"margin": {
+						"top": "0"
+					}
+				}
+			},
+			"core/heading": {
+				"typography": {
+					"fontSize": "1.5rem",
+					"textAlign": "center"
+				},
+				"spacing": {
+					"margin": {
+						"top": "16px"
+					}
+				}
+			},
+			"core/paragraph": {
+				"typography": {
+					"fontSize": "var:preset|font-size|small",
+					"textAlign": "center"
+				},
+				"spacing": {
+					"margin": {
+						"top": "16px"
+					}
+				}
+			}
+		},
+		"css": "& { background-color: var:preset|color|tertiary !important; overflow: hidden; } & > .ext-card-content { padding: var(--wp--custom--space-cozy); } & > .ext-card-content:not(:first-child) { padding-top: 0; } & > .ext-card-body { padding-left: var(--wp--custom--space-cozy); padding-right: var(--wp--custom--space-cozy); } & > .ext-card-footer { padding-left: var(--wp--custom--space-cozy); padding-right: var(--wp--custom--space-cozy); padding-bottom: var(--wp--custom--space-cozy); } & > .ext-card-body:first-child { padding-top: var(--wp--custom--space-cozy); } & > .ext-card-body:last-child { padding-bottom: var(--wp--custom--space-cozy); } &:where(:not(.ext-card)) > .wp-block-group { padding: var(--wp--preset--spacing--30); } &.ext-card-mark-corner .ext-card-icon { order: 1; align-self: flex-end; } & .ext-card-avatar img { border-radius: 9999px; } & { --wp--custom--color--text-weak: color-mix(in oklab, var(--wp--preset--color--foreground) 72%, var(--wp--preset--color--tertiary)); --wp--custom--color--background-base: var(--wp--preset--color--tertiary); --wp--custom--color--stroke-strong: color-mix(in oklab, var(--wp--preset--color--foreground) 45%, var(--wp--preset--color--tertiary)); --wp--custom--color--stroke-weak: color-mix(in oklab, var(--wp--preset--color--foreground) 18%, var(--wp--preset--color--tertiary)); } &:nth-child(3n + 1) { background-color: var(--wp--custom--color--background-tint-1) !important; --wp--preset--color--foreground: var(--wp--custom--color--background-tint-1-ink); --wp--preset--color--foreground-alt: var(--wp--custom--color--background-tint-1-weak); --wp--custom--color--text-strong: var(--wp--custom--color--background-tint-1-ink); --wp--custom--color--text-weak: var(--wp--custom--color--background-tint-1-weak); --wp--custom--color--background-base: var(--wp--custom--color--background-tint-1); --wp--custom--color--stroke-strong: color-mix(in oklab, var(--wp--custom--color--background-tint-1-ink) 45%, var(--wp--custom--color--background-tint-1)); --wp--custom--color--stroke-weak: color-mix(in oklab, var(--wp--custom--color--background-tint-1-ink) 18%, var(--wp--custom--color--background-tint-1)); } &:nth-child(3n + 2) { background-color: var(--wp--custom--color--background-tint-2) !important; --wp--preset--color--foreground: var(--wp--custom--color--background-tint-2-ink); --wp--preset--color--foreground-alt: var(--wp--custom--color--background-tint-2-weak); --wp--custom--color--text-strong: var(--wp--custom--color--background-tint-2-ink); --wp--custom--color--text-weak: var(--wp--custom--color--background-tint-2-weak); --wp--custom--color--background-base: var(--wp--custom--color--background-tint-2); --wp--custom--color--stroke-strong: color-mix(in oklab, var(--wp--custom--color--background-tint-2-ink) 45%, var(--wp--custom--color--background-tint-2)); --wp--custom--color--stroke-weak: color-mix(in oklab, var(--wp--custom--color--background-tint-2-ink) 18%, var(--wp--custom--color--background-tint-2)); } &:nth-child(3n + 3) { background-color: var(--wp--custom--color--background-tint-3) !important; --wp--preset--color--foreground: var(--wp--custom--color--background-tint-3-ink); --wp--preset--color--foreground-alt: var(--wp--custom--color--background-tint-3-weak); --wp--custom--color--text-strong: var(--wp--custom--color--background-tint-3-ink); --wp--custom--color--text-weak: var(--wp--custom--color--background-tint-3-weak); --wp--custom--color--background-base: var(--wp--custom--color--background-tint-3); --wp--custom--color--stroke-strong: color-mix(in oklab, var(--wp--custom--color--background-tint-3-ink) 45%, var(--wp--custom--color--background-tint-3)); --wp--custom--color--stroke-weak: color-mix(in oklab, var(--wp--custom--color--background-tint-3-ink) 18%, var(--wp--custom--color--background-tint-3)); }"
+	}
+}

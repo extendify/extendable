@@ -1,0 +1,10 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"version": 3,
+	"title": "Playdate 1 Icon Small 1",
+	"slug": "ext-preset--image--playdate-1--icon-small-1",
+	"blockTypes": [
+		"core/image"
+	],
+	"styles": {}
+}

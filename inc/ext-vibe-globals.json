@@ -64,6 +64,65 @@
 				}
 			}
 		},
+		"playdate-1": {
+			"settings": {
+				"typography": {
+					"fontSizes": [
+						{
+							"slug": "small",
+							"size": "1.125rem",
+							"fluid": false
+						},
+						{
+							"slug": "medium",
+							"size": "1.375rem",
+							"fluid": false
+						},
+						{
+							"slug": "large",
+							"size": "3rem",
+							"fluid": {
+								"min": "1.75rem",
+								"max": "3rem"
+							}
+						},
+						{
+							"slug": "x-large",
+							"size": "4rem",
+							"fluid": {
+								"min": "2.125rem",
+								"max": "4rem"
+							}
+						},
+						{
+							"slug": "xx-large",
+							"size": "5.25rem",
+							"fluid": {
+								"min": "2.625rem",
+								"max": "5.25rem"
+							}
+						}
+					],
+					"fluid": {
+						"maxViewportWidth": "80rem"
+					}
+				}
+			},
+			"styles": {
+				"elements": {
+					"h1": {
+						"typography": {
+							"fontSize": "var(--wp--preset--font-size--xx-large)"
+						}
+					},
+					"h2": {
+						"typography": {
+							"fontSize": "var(--wp--preset--font-size--x-large)"
+						}
+					}
+				}
+			}
+		},
 		"retro-1": {
 			"settings": {
 				"layout": {

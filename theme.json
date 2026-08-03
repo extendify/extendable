@@ -5,22 +5,34 @@
 		{
 			"name": "blank",
 			"title": "Blank",
-			"postTypes": ["page", "post"]
+			"postTypes": [
+				"page",
+				"post"
+			]
 		},
 		{
 			"name": "no-title",
 			"title": "No Title",
-			"postTypes": ["page", "post"]
+			"postTypes": [
+				"page",
+				"post"
+			]
 		},
 		{
 			"name": "no-title-sticky-header",
 			"title": "No Title Sticky Header",
-			"postTypes": ["page", "post"]
+			"postTypes": [
+				"page",
+				"post"
+			]
 		},
 		{
 			"name": "page-with-title",
 			"title": "Page with Title",
-			"postTypes": ["page", "post"]
+			"postTypes": [
+				"page",
+				"post"
+			]
 		}
 	],
 	"settings": {
@@ -31,42 +43,66 @@
 			"defaultDuotone": false,
 			"duotone": [
 				{
-					"colors": ["#000000", "#ffffff"],
+					"colors": [
+						"#000000",
+						"#ffffff"
+					],
 					"slug": "grayscale",
 					"name": "Grayscale"
 				},
 				{
-					"colors": ["#ffffff", "#381d92"],
+					"colors": [
+						"#ffffff",
+						"#381d92"
+					],
 					"slug": "primary",
 					"name": "Primary"
 				},
 				{
-					"colors": ["#ffffff", "#1C0A63"],
+					"colors": [
+						"#ffffff",
+						"#1C0A63"
+					],
 					"slug": "secondary",
 					"name": "Secondary"
 				},
 				{
-					"colors": ["#381d92", "#1C0A63"],
+					"colors": [
+						"#381d92",
+						"#1C0A63"
+					],
 					"slug": "primary-secondary",
 					"name": "Primary and Secondary"
 				},
 				{
-					"colors": ["#0B0620", "#381d92"],
+					"colors": [
+						"#0B0620",
+						"#381d92"
+					],
 					"slug": "foreground-primary",
 					"name": "Foreground and Primary"
 				},
 				{
-					"colors": ["#0B0620", "#1C0A63"],
+					"colors": [
+						"#0B0620",
+						"#1C0A63"
+					],
 					"slug": "foreground-secondary",
 					"name": "Foreground and Secondary"
 				},
 				{
-					"colors": ["#381d92", "#0B0620"],
+					"colors": [
+						"#381d92",
+						"#0B0620"
+					],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
-					"colors": ["#ffffff", "#F2F2FA"],
+					"colors": [
+						"#ffffff",
+						"#F2F2FA"
+					],
 					"slug": "background-tertiary",
 					"name": "Background and Background Alt"
 				}
@@ -442,7 +478,14 @@
 					"size": "calc(clamp(4rem, 15vw, 7rem) * var(--wp--custom--space-scale, 1))"
 				}
 			],
-			"units": ["%", "px", "em", "rem", "vh", "vw"]
+			"units": [
+				"%",
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw"
+			]
 		},
 		"typography": {
 			"defaultFontSizes": false,
@@ -456,7 +499,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
-							"src": ["file:./assets/fonts/archivo/archivo_wght.woff2"]
+							"src": [
+								"file:./assets/fonts/archivo/archivo_wght.woff2"
+							]
 						}
 					],
 					"fontFamily": "\"Archivo\", sans-serif",
@@ -471,7 +516,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "400",
-							"src": ["file:./assets/fonts/arsenal/arsenal-regular.woff2"]
+							"src": [
+								"file:./assets/fonts/arsenal/arsenal-regular.woff2"
+							]
 						},
 						{
 							"fontDisplay": "block",
@@ -479,7 +526,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "700",
-							"src": ["file:./assets/fonts/arsenal/arsenal-bold.woff2"]
+							"src": [
+								"file:./assets/fonts/arsenal/arsenal-bold.woff2"
+							]
 						}
 					],
 					"fontFamily": "\"Arsenal\", serif",
@@ -514,7 +563,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "300 900",
-							"src": ["file:./assets/fonts/geom/geom-variable.woff2"]
+							"src": [
+								"file:./assets/fonts/geom/geom-variable.woff2"
+							]
 						}
 					]
 				},
@@ -526,7 +577,9 @@
 							"fontWeight": "400",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"src": ["file:./assets/fonts/gotu/gotu-regular.woff2"]
+							"src": [
+								"file:./assets/fonts/gotu/gotu-regular.woff2"
+							]
 						}
 					],
 					"fontFamily": "\"Gotu\", sans-serif",
@@ -541,7 +594,9 @@
 							"fontWeight": "100 900",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"src": ["file:./assets/fonts/heebo/heebo-variable-wght.woff2"]
+							"src": [
+								"file:./assets/fonts/heebo/heebo-variable-wght.woff2"
+							]
 						}
 					],
 					"fontFamily": "\"Heebo\", sans-serif",
@@ -559,7 +614,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
-							"src": ["file:./assets/fonts/hind/hind-variable.woff2"]
+							"src": [
+								"file:./assets/fonts/hind/hind-variable.woff2"
+							]
 						}
 					]
 				},
@@ -664,7 +721,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "200 900",
-							"src": ["file:./assets/fonts/inter/inter-variable.woff2"]
+							"src": [
+								"file:./assets/fonts/inter/inter-variable.woff2"
+							]
 						}
 					],
 					"fontFamily": "\"Inter\", sans-serif",
@@ -682,7 +741,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 800",
-							"src": ["file:./assets/fonts/jost/jost-variable.woff2"]
+							"src": [
+								"file:./assets/fonts/jost/jost-variable.woff2"
+							]
 						}
 					]
 				},
@@ -694,7 +755,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
-							"src": ["file:./assets/fonts/karla/karla.woff2"]
+							"src": [
+								"file:./assets/fonts/karla/karla.woff2"
+							]
 						}
 					],
 					"fontFamily": "\"Karla\", sans-serif",
@@ -709,7 +772,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "400",
-							"src": ["file:./assets/fonts/koulen/koulen-regular.woff2"]
+							"src": [
+								"file:./assets/fonts/koulen/koulen-regular.woff2"
+							]
 						}
 					],
 					"fontFamily": "\"Koulen\", sans-serif",
@@ -724,7 +789,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "200 800",
-							"src": ["file:./assets/fonts/manrope/manrope.woff2"]
+							"src": [
+								"file:./assets/fonts/manrope/manrope.woff2"
+							]
 						}
 					],
 					"fontFamily": "\"Manrope\", sans-serif",
@@ -739,7 +806,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "400",
-							"src": ["file:./assets/fonts/marcellus/marcellus_wght.woff2"]
+							"src": [
+								"file:./assets/fonts/marcellus/marcellus_wght.woff2"
+							]
 						}
 					],
 					"fontFamily": "'Marcellus', serif",
@@ -757,7 +826,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
-							"src": ["file:./assets/fonts/montserrat/montserrat.woff2"]
+							"src": [
+								"file:./assets/fonts/montserrat/montserrat.woff2"
+							]
 						}
 					]
 				},
@@ -769,7 +840,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 800",
-							"src": ["file:./assets/fonts/mulish/mulish.woff2"]
+							"src": [
+								"file:./assets/fonts/mulish/mulish.woff2"
+							]
 						}
 					],
 					"fontFamily": "\"Mulish\", sans-serif",
@@ -804,7 +877,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "300 700",
-							"src": ["file:./assets/fonts/oswald/oswald.woff2"]
+							"src": [
+								"file:./assets/fonts/oswald/oswald.woff2"
+							]
 						}
 					]
 				},
@@ -819,7 +894,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "300 700",
-							"src": ["file:./assets/fonts/radio-canada/radio-canada.woff2"]
+							"src": [
+								"file:./assets/fonts/radio-canada/radio-canada.woff2"
+							]
 						}
 					]
 				},
@@ -831,7 +908,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
-							"src": ["file:./assets/fonts/roboto-flex/roboto-flex.woff2"]
+							"src": [
+								"file:./assets/fonts/roboto-flex/roboto-flex.woff2"
+							]
 						}
 					],
 					"fontFamily": "\"Roboto Flex\", sans-serif",
@@ -849,7 +928,9 @@
 							"fontWeight": "300 900",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
-							"src": ["file:./assets/fonts/rubik/rubik.woff2"]
+							"src": [
+								"file:./assets/fonts/rubik/rubik.woff2"
+							]
 						}
 					]
 				},
@@ -878,13 +959,17 @@
 							"fontFamily": "Space Mono",
 							"fontStyle": "normal",
 							"fontWeight": "400",
-							"src": ["file:./assets/fonts/space-mono/space-mono-regular.woff2"]
+							"src": [
+								"file:./assets/fonts/space-mono/space-mono-regular.woff2"
+							]
 						},
 						{
 							"fontFamily": "Space Mono",
 							"fontStyle": "normal",
 							"fontWeight": "700",
-							"src": ["file:./assets/fonts/space-mono/space-mono-bold.woff2"]
+							"src": [
+								"file:./assets/fonts/space-mono/space-mono-bold.woff2"
+							]
 						}
 					]
 				},
@@ -899,7 +984,9 @@
 							"fontStretch": "normal",
 							"fontStyle": "normal",
 							"fontWeight": "100 900",
-							"src": ["file:./assets/fonts/hind/hind-variable.woff2"]
+							"src": [
+								"file:./assets/fonts/hind/hind-variable.woff2"
+							]
 						}
 					]
 				}
@@ -1290,7 +1377,7 @@
 			"fontWeight": "400",
 			"lineHeight": "var(--wp--custom--typography--line-height--normal)"
 		},
-		"css": ".wp-block-heading { overflow-wrap: break-word; hyphens: auto; text-wrap: balance; } .wp-block-heading:lang(ko), .wp-block-heading:lang(th), .wp-block-heading:lang(lo), .wp-block-heading:lang(my), .wp-block-heading:lang(km), .wp-block-heading:lang(ar), .wp-block-heading:lang(ur) { word-break: keep-all; hyphens: manual; }"
+		"css": ".wp-block-heading { overflow-wrap: break-word; hyphens: auto; text-wrap: balance; } .wp-block-heading:lang(ko), .wp-block-heading:lang(th), .wp-block-heading:lang(lo), .wp-block-heading:lang(my), .wp-block-heading:lang(km), .wp-block-heading:lang(ar), .wp-block-heading:lang(ur) { word-break: keep-all; hyphens: manual; } @keyframes ext-object-drift { from { transform: translateY(10px); } to { transform: translateY(-10px); } } @media (prefers-reduced-motion: reduce) { @keyframes ext-object-drift { from { transform: none; } to { transform: none; } } }"
 	},
 	"templateParts": [
 		{

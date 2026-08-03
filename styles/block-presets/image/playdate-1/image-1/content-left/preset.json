@@ -9,12 +9,7 @@
 	],
 	"styles": {
 		"border": {
-			"radius": {
-				"topLeft": "0",
-				"topRight": "32px",
-				"bottomRight": "32px",
-				"bottomLeft": "0"
-			}
+			"radius": "32px"
 		}
 	}
 }

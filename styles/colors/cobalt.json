@@ -16,6 +16,11 @@
 					"name": "Primary and tertiary"
 				},
 				{
+					"colors": ["#0036F7", "#FFFFFF"],
+					"slug": "primary-and-background",
+					"name": "Primary and background"
+				},
+				{
 					"colors": ["#363C4F", "#0036F7"],
 					"slug": "secondary-and-primary",
 					"name": "Secondary and primary"

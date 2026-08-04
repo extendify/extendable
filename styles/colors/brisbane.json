@@ -6,6 +6,11 @@
 		"color": {
 			"duotone": [
 				{
+					"colors": ["#F9F6DE", "#3f5762"],
+					"slug": "primary-and-background",
+					"name": "Primary and background"
+				},
+				{
 					"colors": ["#000000", "#ffffff"],
 					"slug": "grayscale",
 					"name": "Grayscale"

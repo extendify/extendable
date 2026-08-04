@@ -6,6 +6,11 @@
 		"color": {
 			"duotone": [
 				{
+					"colors": ["#070f79", "#ffffff"],
+					"slug": "primary-and-background",
+					"name": "Primary and background"
+				},
+				{
 					"colors": ["#0b0449", "#ffffff"],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"

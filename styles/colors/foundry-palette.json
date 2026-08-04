@@ -25,7 +25,7 @@
 				{
 					"colors": [
 						"#111113",
-						"#F2F2F0"
+						"#E7E7E7"
 					],
 					"slug": "primary-and-background",
 					"name": "Primary and background"
@@ -41,7 +41,7 @@
 				{
 					"colors": [
 						"#111113",
-						"#F2F2F0"
+						"#E7E7E7"
 					],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
@@ -56,7 +56,7 @@
 				},
 				{
 					"colors": [
-						"#F2F2F0",
+						"#E7E7E7",
 						"#E4E4E0"
 					],
 					"slug": "background-tertiary",
@@ -114,9 +114,9 @@
 		"custom": {
 			"color": {
 				"text-strong": "#111113",
-				"background-base": "#F2F2F0",
-				"text-weak": "#57575A",
-				"icon-surface": "#EAEAE8",
+				"background-base": "#E7E7E7",
+				"text-weak": "#4C4C4F",
+				"icon-surface": "#DFDFDF",
 				"icon-ink": "#111113",
 				"background-sunken": "#E4E4E0",
 				"background-tint-1": "#FFBFA7",
@@ -133,18 +133,18 @@
 				"button": {
 					"color": {
 						"background": "#111113",
-						"text": "#F2F2F0"
+						"text": "#E7E7E7"
 					},
 					":hover": {
 						"color": {
 							"background": "#232326",
-							"text": "#F2F2F0"
+							"text": "#E7E7E7"
 						}
 					},
 					":focus": {
 						"color": {
 							"background": "#111113",
-							"text": "#F2F2F0"
+							"text": "#E7E7E7"
 						}
 					}
 				}

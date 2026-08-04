@@ -9,7 +9,9 @@
 	],
 	"styles": {
 		"typography": {
-			"fontSize": "inherit"
+			"fontSize": "inherit",
+			"textTransform": "uppercase",
+			"letterSpacing": "0.06em"
 		},
 		"border": {
 			"radius": "0px"

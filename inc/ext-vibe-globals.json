@@ -2,6 +2,12 @@
 	"version": 1,
 	"vibes": {
 		"foundry-1": {
+			"settings": {
+				"layout": {
+					"contentSize": "56rem",
+					"wideSize": "120rem"
+				}
+			},
 			"styles": {
 				"elements": {
 					"h1": {
@@ -12,6 +18,18 @@
 					"h2": {
 						"typography": {
 							"fontSize": "clamp(1.875rem, 1.875rem + ((1vw - 0.2rem) * 3.125), 3.75rem)"
+						}
+					}
+				},
+				"blocks": {
+					"core/image": {
+						"filter": {
+							"duotone": "var:preset|duotone|primary-and-background"
+						}
+					},
+					"core/cover": {
+						"filter": {
+							"duotone": "var:preset|duotone|primary-and-background"
 						}
 					}
 				}

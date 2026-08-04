@@ -1,5 +1,5 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"title": "Linen 1 Overlay 1",
 	"slug": "ext-preset--cover--linen-1--cover-overlay-1",

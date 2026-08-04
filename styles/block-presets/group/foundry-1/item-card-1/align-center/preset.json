@@ -1,5 +1,5 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"title": "Foundry 1 Item Card 1 Align Center",
 	"slug": "ext-preset--group--foundry-1--item-card-1--align-center",

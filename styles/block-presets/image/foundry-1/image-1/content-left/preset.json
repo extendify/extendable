@@ -1,5 +1,5 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"title": "Foundry 1 Image 1 Content Left",
 	"slug": "ext-preset--image--foundry-1--image-1--content-left",
@@ -11,7 +11,7 @@
 		"border": {
 			"radius": "0px"
 		},
-		"color": {
+		"filter": {
 			"duotone": "var:preset|duotone|primary-and-background"
 		}
 	}

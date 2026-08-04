@@ -1,5 +1,5 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"title": "Foundry 1 Overlay 1",
 	"slug": "ext-preset--cover--foundry-1--cover-overlay-1",
@@ -8,7 +8,7 @@
 	],
 	"styles": {
 		"color": {
-			"duotone": "var:preset|duotone|primary-and-background"
+			"text": "#FEFEFE"
 		},
 		"blocks": {
 			"core/heading": {
@@ -27,6 +27,9 @@
 					"background": "#FEFEFE"
 				}
 			}
+		},
+		"filter": {
+			"duotone": "var:preset|duotone|primary-and-background"
 		}
 	}
 }

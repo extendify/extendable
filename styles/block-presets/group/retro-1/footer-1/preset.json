@@ -1,5 +1,5 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"title": "Retro 1 Footer 1",
 	"slug": "ext-preset--group--retro-1--footer-1",

@@ -1,9 +1,12 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"title": "Button 1",
 	"slug": "ext-preset--button--natural-1--button-1",
-	"blockTypes": ["core/button", "woocommerce/product-button"],
+	"blockTypes": [
+		"core/button",
+		"woocommerce/product-button"
+	],
 	"styles": {
 		"typography": {
 			"fontSize": "inherit"

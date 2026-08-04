@@ -1,6 +1,22 @@
 {
 	"version": 1,
 	"vibes": {
+		"foundry-1": {
+			"styles": {
+				"elements": {
+					"h1": {
+						"typography": {
+							"fontSize": "clamp(2.313rem, 2.313rem + ((1vw - 0.2rem) * 3.959), 4.688rem)"
+						}
+					},
+					"h2": {
+						"typography": {
+							"fontSize": "clamp(1.875rem, 1.875rem + ((1vw - 0.2rem) * 3.125), 3.75rem)"
+						}
+					}
+				}
+			}
+		},
 		"linen-1": {
 			"settings": {
 				"layout": {

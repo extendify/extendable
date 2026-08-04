@@ -24,6 +24,14 @@
 				},
 				{
 					"colors": [
+						"#422922",
+						"#FCF9E6"
+					],
+					"slug": "primary-and-background",
+					"name": "Primary and background"
+				},
+				{
+					"colors": [
 						"#583E36",
 						"#422922"
 					],

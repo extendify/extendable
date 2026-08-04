@@ -1,63 +1,63 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Heath",
-	"slug": "heath",
+	"title": "Signal",
+	"slug": "signal",
 	"settings": {
 		"color": {
 			"duotone": [
 				{
 					"colors": [
-						"#1F1F23",
-						"#333337"
+						"#111113",
+						"#232326"
 					],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
 					"colors": [
-						"#1F1F23",
-						"#E9E5D9"
+						"#111113",
+						"#E4E4E0"
 					],
 					"slug": "primary-and-tertiary",
 					"name": "Primary and tertiary"
 				},
 				{
 					"colors": [
-						"#1F1F23",
-						"#F8F5E9"
+						"#111113",
+						"#F2F2F0"
 					],
 					"slug": "primary-and-background",
 					"name": "Primary and background"
 				},
 				{
 					"colors": [
-						"#333337",
-						"#1F1F23"
+						"#232326",
+						"#111113"
 					],
 					"slug": "secondary-and-primary",
 					"name": "Secondary and primary"
 				},
 				{
 					"colors": [
-						"#1F1F23",
-						"#F8F5E9"
+						"#111113",
+						"#F2F2F0"
 					],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
 					"colors": [
-						"#1F1F23",
-						"#1F1F23"
+						"#111113",
+						"#111113"
 					],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
 					"colors": [
-						"#F8F5E9",
-						"#E9E5D9"
+						"#F2F2F0",
+						"#E4E4E0"
 					],
 					"slug": "background-tertiary",
 					"name": "Background and Background Alt"
@@ -76,12 +76,12 @@
 				},
 				{
 					"slug": "primary",
-					"color": "#1F1F23",
+					"color": "#111113",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#333337",
+					"color": "#232326",
 					"name": "Secondary"
 				},
 				{
@@ -113,38 +113,38 @@
 		},
 		"custom": {
 			"color": {
-				"text-strong": "#1F1F23",
-				"background-base": "#F8F5E9",
-				"text-weak": "#5D5D62",
-				"icon-surface": "#F0EDE1",
-				"icon-ink": "#1F1F23",
-				"background-sunken": "#E9E5D9",
-				"background-tint-1": "#C1D3C7",
-				"background-tint-2": "#DDD5C0",
-				"background-tint-3": "#D1C6D2",
-				"background-tint-1-ink": "#1F1F23",
-				"background-tint-1-weak": "#1F1F23",
-				"background-tint-2-ink": "#1F1F23",
-				"background-tint-2-weak": "#1F1F23",
-				"background-tint-3-ink": "#000001",
-				"background-tint-3-weak": "#000002"
+				"text-strong": "#111113",
+				"background-base": "#F2F2F0",
+				"text-weak": "#57575A",
+				"icon-surface": "#EAEAE8",
+				"icon-ink": "#111113",
+				"background-sunken": "#E4E4E0",
+				"background-tint-1": "#FFBFA7",
+				"background-tint-2": "#BFD9EE",
+				"background-tint-3": "#EFE63A",
+				"background-tint-1-ink": "#111113",
+				"background-tint-1-weak": "#111113",
+				"background-tint-2-ink": "#111113",
+				"background-tint-2-weak": "#111113",
+				"background-tint-3-ink": "#111113",
+				"background-tint-3-weak": "#111113"
 			},
 			"elements": {
 				"button": {
 					"color": {
-						"background": "#1F1F23",
-						"text": "#F8F5E9"
+						"background": "#111113",
+						"text": "#F2F2F0"
 					},
 					":hover": {
 						"color": {
-							"background": "#333337",
-							"text": "#F8F5E9"
+							"background": "#232326",
+							"text": "#F2F2F0"
 						}
 					},
 					":focus": {
 						"color": {
-							"background": "#1F1F23",
-							"text": "#F8F5E9"
+							"background": "#111113",
+							"text": "#F2F2F0"
 						}
 					}
 				}

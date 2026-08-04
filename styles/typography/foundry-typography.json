@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Foundry · Montserrat / Inter",
+	"slug": "ext-foundry",
+	"styles": {
+		"typography": {
+			"fontFamily": "'Inter', 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif",
+			"lineHeight": "1.6"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "'Montserrat', 'Arial Narrow', system-ui, sans-serif",
+					"fontWeight": "700"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "-0.01em",
+					"lineHeight": "1.05",
+					"textTransform": "uppercase"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "700",
+					"letterSpacing": "-0.01em",
+					"lineHeight": "1.05",
+					"textTransform": "uppercase"
+				}
+			}
+		}
+	}
+}

@@ -185,6 +185,27 @@
 					}
 				}
 			}
+		},
+		"stipple-1": {
+			"settings": {
+				"custom": {
+					"space-scale": "1.5"
+				}
+			},
+			"styles": {
+				"elements": {
+					"h1": {
+						"typography": {
+							"fontSize": "clamp(1.943rem, 1.943rem + ((1vw - 0.2rem) * 3.325), 3.938rem)"
+						}
+					},
+					"h2": {
+						"typography": {
+							"fontSize": "clamp(1.575rem, 1.575rem + ((1vw - 0.2rem) * 2.625), 3.15rem)"
+						}
+					}
+				}
+			}
 		}
 	}
 }

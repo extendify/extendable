@@ -1,0 +1,34 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Stipple · Inter",
+	"slug": "ext-stipple",
+	"styles": {
+		"typography": {
+			"fontFamily": "'Inter', 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif",
+			"lineHeight": "1.6"
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "'Inter', 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif",
+					"fontWeight": "500"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "500",
+					"letterSpacing": "-0.01em",
+					"lineHeight": "1.2"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "500",
+					"letterSpacing": "-0.01em",
+					"lineHeight": "1.2"
+				}
+			}
+		}
+	}
+}

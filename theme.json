@@ -41,6 +41,11 @@
 					"name": "Primary"
 				},
 				{
+					"colors": ["#381d92", "#ffffff"],
+					"slug": "primary-and-background",
+					"name": "Primary and background"
+				},
+				{
 					"colors": ["#ffffff", "#1C0A63"],
 					"slug": "secondary",
 					"name": "Secondary"

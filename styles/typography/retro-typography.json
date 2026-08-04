@@ -11,7 +11,8 @@
 			"heading": {
 				"typography": {
 					"fontFamily": "'Fraunces', 'Fraunces Variable', Georgia, 'Times New Roman', serif",
-					"fontWeight": "800"
+					"fontWeight": "800",
+					"textTransform": "uppercase"
 				}
 			},
 			"h1": {
@@ -27,11 +28,6 @@
 					"fontWeight": "900",
 					"letterSpacing": "0.01em",
 					"lineHeight": "1.05",
-					"textTransform": "uppercase"
-				}
-			},
-			"h3": {
-				"typography": {
 					"textTransform": "uppercase"
 				}
 			}

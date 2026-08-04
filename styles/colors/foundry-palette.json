@@ -17,7 +17,7 @@
 				{
 					"colors": [
 						"#111113",
-						"#E4E4E0"
+						"#D5D5D0"
 					],
 					"slug": "primary-and-tertiary",
 					"name": "Primary and tertiary"
@@ -57,7 +57,7 @@
 				{
 					"colors": [
 						"#E7E7E7",
-						"#E4E4E0"
+						"#D5D5D0"
 					],
 					"slug": "background-tertiary",
 					"name": "Background and Background Alt"
@@ -118,7 +118,7 @@
 				"text-weak": "#4C4C4F",
 				"icon-surface": "#DFDFDF",
 				"icon-ink": "#111113",
-				"background-sunken": "#E4E4E0",
+				"background-sunken": "#D5D5D0",
 				"background-tint-1": "#FFBFA7",
 				"background-tint-2": "#BFD9EE",
 				"background-tint-3": "#EFE63A",

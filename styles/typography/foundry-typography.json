@@ -12,8 +12,7 @@
 			"heading": {
 				"typography": {
 					"fontFamily": "'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace",
-					"fontWeight": "400",
-					"textTransform": "uppercase"
+					"fontWeight": "400"
 				}
 			},
 			"h1": {
@@ -29,6 +28,11 @@
 					"fontWeight": "400",
 					"letterSpacing": "0.01em",
 					"lineHeight": "1.15",
+					"textTransform": "uppercase"
+				}
+			},
+			"h3": {
+				"typography": {
 					"textTransform": "uppercase"
 				}
 			}

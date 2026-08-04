@@ -1,5 +1,5 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"$schema": "https://schemas.wp.org/wp/7.0/theme.json",
 	"version": 3,
 	"title": "Foundry 1 Image 1 Content Right",
 	"slug": "ext-preset--image--foundry-1--image-1--content-right",

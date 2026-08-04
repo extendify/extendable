@@ -10,9 +10,6 @@
 	"styles": {
 		"border": {
 			"radius": "0px"
-		},
-		"filter": {
-			"duotone": "var:preset|duotone|primary-and-background"
 		}
 	}
 }

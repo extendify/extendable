@@ -27,9 +27,6 @@
 					"background": "#FEFEFE"
 				}
 			}
-		},
-		"filter": {
-			"duotone": "var:preset|duotone|primary-and-background"
 		}
 	}
 }

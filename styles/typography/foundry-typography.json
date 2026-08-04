@@ -12,7 +12,8 @@
 			"heading": {
 				"typography": {
 					"fontFamily": "'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace",
-					"fontWeight": "400"
+					"fontWeight": "400",
+					"textTransform": "uppercase"
 				}
 			},
 			"h1": {

@@ -8,7 +8,7 @@
 	],
 	"styles": {
 		"color": {
-			"text": "#FEFEFE"
+			"duotone": "var:preset|duotone|primary-and-background"
 		},
 		"blocks": {
 			"core/heading": {

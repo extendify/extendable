@@ -9,6 +9,9 @@
 	"styles": {
 		"border": {
 			"radius": "0px"
+		},
+		"color": {
+			"duotone": "var:preset|duotone|primary-and-background"
 		}
 	}
 }

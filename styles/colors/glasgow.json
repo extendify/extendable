@@ -6,47 +6,74 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#3b2300", "#dbd3ce"],
+					"colors": [
+						"#3b2300",
+						"#dbd3ce"
+					],
 					"slug": "primary-and-background",
 					"name": "Primary and background"
 				},
 				{
-					"colors": ["#000000", "#ffffff"],
+					"colors": [
+						"#000000",
+						"#ffffff"
+					],
 					"slug": "grayscale",
 					"name": "Grayscale"
 				},
 				{
-					"colors": ["#dbd3ce", "#3b2300"],
+					"colors": [
+						"#dbd3ce",
+						"#3b2300"
+					],
 					"slug": "primary",
 					"name": "Primary"
 				},
 				{
-					"colors": ["#dbd3ce", "#d4a72c"],
+					"colors": [
+						"#dbd3ce",
+						"#d4a72c"
+					],
 					"slug": "secondary",
 					"name": "Secondary"
 				},
 				{
-					"colors": ["#3b2300", "#d4a72c"],
+					"colors": [
+						"#3b2300",
+						"#d4a72c"
+					],
 					"slug": "primary-secondary",
 					"name": "Primary and Secondary"
 				},
 				{
-					"colors": ["#13100f", "#3b2300"],
+					"colors": [
+						"#13100f",
+						"#3b2300"
+					],
 					"slug": "foreground-primary",
 					"name": "Foreground and Primary"
 				},
 				{
-					"colors": ["#13100f", "#d4a72c"],
+					"colors": [
+						"#13100f",
+						"#d4a72c"
+					],
 					"slug": "foreground-secondary",
 					"name": "Foreground and Secondary"
 				},
 				{
-					"colors": ["#3b2300", "#13100f"],
+					"colors": [
+						"#3b2300",
+						"#13100f"
+					],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
-					"colors": ["#dbd3ce", "#c6b6ac"],
+					"colors": [
+						"#dbd3ce",
+						"#c6b6ac"
+					],
 					"slug": "background-tertiary",
 					"name": "Background and Background Alt"
 				}
@@ -104,6 +131,17 @@
 						}
 					}
 				}
+			},
+			"color": {
+				"background-tint-1": "#DACDC6",
+				"background-tint-1-ink": "#13100F",
+				"background-tint-1-weak": "#262221",
+				"background-tint-2": "#DBCCC2",
+				"background-tint-2-ink": "#13100F",
+				"background-tint-2-weak": "#211E1C",
+				"background-tint-3": "#DAC8BB",
+				"background-tint-3-ink": "#13100F",
+				"background-tint-3-weak": "#13100F"
 			}
 		}
 	}

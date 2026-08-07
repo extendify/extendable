@@ -6,47 +6,88 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#9EFF34", "#B6FF67"],
+					"colors": [
+						"#9EFF34",
+						"#B6FF67"
+					],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#9EFF34", "#062122"],
+					"colors": [
+						"#9EFF34",
+						"#062122"
+					],
 					"slug": "primary-and-tertiary",
 					"name": "Primary and tertiary"
 				},
 				{
-					"colors": ["#9EFF34", "#09292C"],
+					"colors": [
+						"#9EFF34",
+						"#09292C"
+					],
 					"slug": "primary-and-background",
 					"name": "Primary and background"
 				},
 				{
-					"colors": ["#B6FF67", "#9EFF34"],
+					"colors": [
+						"#B6FF67",
+						"#9EFF34"
+					],
 					"slug": "secondary-and-primary",
 					"name": "Secondary and primary"
 				},
 				{
-					"colors": ["#F4E0D9", "#09292C"],
+					"colors": [
+						"#F4E0D9",
+						"#09292C"
+					],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#9EFF34", "#F4E0D9"],
+					"colors": [
+						"#9EFF34",
+						"#F4E0D9"
+					],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
-					"colors": ["#09292C", "#062122"],
+					"colors": [
+						"#09292C",
+						"#062122"
+					],
 					"slug": "Background and Background Alt",
 					"name": "Background and Background Alt"
 				}
 			],
 			"palette": [
-				{ "slug": "background", "color": "#09292C", "name": "Background" },
-				{ "slug": "foreground", "color": "#F4E0D9", "name": "Foreground" },
-				{ "slug": "primary", "color": "#9EFF34", "name": "Primary" },
-				{ "slug": "secondary", "color": "#B6FF67", "name": "Secondary" },
-				{ "slug": "tertiary", "color": "#062122", "name": "Tertiary" },
+				{
+					"slug": "background",
+					"color": "#09292C",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "#F4E0D9",
+					"name": "Foreground"
+				},
+				{
+					"slug": "primary",
+					"color": "#9EFF34",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#B6FF67",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#062122",
+					"name": "Tertiary"
+				},
 				{
 					"slug": "foreground-alt",
 					"color": "#F4E0D9",
@@ -74,6 +115,17 @@
 						}
 					}
 				}
+			},
+			"color": {
+				"background-tint-1": "#004040",
+				"background-tint-1-ink": "#F4E0D9",
+				"background-tint-1-weak": "#EDD9D2",
+				"background-tint-2": "#00544F",
+				"background-tint-2-ink": "#F4E0D9",
+				"background-tint-2-weak": "#F4E0D9",
+				"background-tint-3": "#006D5F",
+				"background-tint-3-ink": "#FFEEE8",
+				"background-tint-3-weak": "#FFEEE8"
 			}
 		}
 	},

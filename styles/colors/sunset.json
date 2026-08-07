@@ -6,47 +6,88 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#F88149", "#B3B1DF"],
+					"colors": [
+						"#F88149",
+						"#B3B1DF"
+					],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#F88149", "#191A1A"],
+					"colors": [
+						"#F88149",
+						"#191A1A"
+					],
 					"slug": "primary-and-tertiary",
 					"name": "Primary and tertiary"
 				},
 				{
-					"colors": ["#F88149", "#000000"],
+					"colors": [
+						"#F88149",
+						"#000000"
+					],
 					"slug": "primary-and-background",
 					"name": "Primary and background"
 				},
 				{
-					"colors": ["#B3B1DF", "#F88149"],
+					"colors": [
+						"#B3B1DF",
+						"#F88149"
+					],
 					"slug": "secondary-and-primary",
 					"name": "Secondary and primary"
 				},
 				{
-					"colors": ["#F4E0D9", "#000000"],
+					"colors": [
+						"#F4E0D9",
+						"#000000"
+					],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#F88149", "#F4E0D9"],
+					"colors": [
+						"#F88149",
+						"#F4E0D9"
+					],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
-					"colors": ["#000000", "#191A1A"],
+					"colors": [
+						"#000000",
+						"#191A1A"
+					],
 					"slug": "Background and Background Alt",
 					"name": "Background and Background Alt"
 				}
 			],
 			"palette": [
-				{ "slug": "background", "color": "#000000", "name": "Background" },
-				{ "slug": "foreground", "color": "#F4E0D9", "name": "Foreground" },
-				{ "slug": "primary", "color": "#F88149", "name": "Primary" },
-				{ "slug": "secondary", "color": "#B3B1DF", "name": "Secondary" },
-				{ "slug": "tertiary", "color": "#191A1A", "name": "Tertiary" },
+				{
+					"slug": "background",
+					"color": "#000000",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "#F4E0D9",
+					"name": "Foreground"
+				},
+				{
+					"slug": "primary",
+					"color": "#F88149",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#B3B1DF",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#191A1A",
+					"name": "Tertiary"
+				},
 				{
 					"slug": "foreground-alt",
 					"color": "#F4E0D9",
@@ -74,6 +115,17 @@
 						}
 					}
 				}
+			},
+			"color": {
+				"background-tint-1": "#050100",
+				"background-tint-1-ink": "#F4E0D9",
+				"background-tint-1-weak": "#E0CCC6",
+				"background-tint-2": "#190802",
+				"background-tint-2-ink": "#F4E0D9",
+				"background-tint-2-weak": "#E0CCC6",
+				"background-tint-3": "#361709",
+				"background-tint-3-ink": "#F4E0D9",
+				"background-tint-3-weak": "#E0CCC6"
 			}
 		}
 	},

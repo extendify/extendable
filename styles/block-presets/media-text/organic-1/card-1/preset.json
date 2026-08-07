@@ -3,7 +3,9 @@
 	"version": 3,
 	"title": "Organic 1 Item Card 1",
 	"slug": "ext-preset--media-text--organic-1--card-1",
-	"blockTypes": ["core/media-text"],
+	"blockTypes": [
+		"core/media-text"
+	],
 	"styles": {
 		"color": {
 			"background": "var:preset|color|tertiary"
@@ -24,18 +26,6 @@
 				"left": "0"
 			}
 		},
-		"blocks": {
-			"core/group": {
-				"spacing": {
-					"padding": {
-						"top": "var:preset|spacing|40",
-						"right": "var:preset|spacing|40",
-						"left": "var:preset|spacing|40",
-						"bottom": "var:preset|spacing|40"
-					}
-				}
-			}
-		},
-		"css": "& { overflow: hidden; height: 100%;}  & .wp-block-media-text__content { padding-right:0 !important; padding-left:0 !important; } "
+		"css": "& { overflow: hidden; height: 100%;}  & .wp-block-media-text__content { padding-right:0 !important; padding-left:0 !important; } & .ext-card-content { padding: var(--wp--preset--spacing--40); } & :where(:not(.ext-card-content)) > .ext-card-body { padding-left: var(--wp--preset--spacing--40); padding-right: var(--wp--preset--spacing--40); } & :where(:not(.ext-card-content)) > .ext-card-footer { padding-left: var(--wp--preset--spacing--40); padding-right: var(--wp--preset--spacing--40); padding-bottom: var(--wp--preset--spacing--40); } & :where(:not(.ext-card-content)) > .ext-card-body:first-child { padding-top: var(--wp--preset--spacing--40); } & :where(:not(.ext-card-content)) > .ext-card-body:last-child { padding-bottom: var(--wp--preset--spacing--40); } &:where(:not(.ext-card)) .wp-block-group { padding: var(--wp--preset--spacing--40); }"
 	}
 }

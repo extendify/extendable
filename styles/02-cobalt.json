@@ -7,42 +7,80 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#0036F7", "#363C4F"],
+					"colors": [
+						"#0036F7",
+						"#363C4F"
+					],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#0036F7", "#F9FAFC"],
+					"colors": [
+						"#0036F7",
+						"#F9FAFC"
+					],
 					"slug": "primary-and-tertiary",
 					"name": "Primary and tertiary"
 				},
 				{
-					"colors": ["#363C4F", "#0036F7"],
+					"colors": [
+						"#363C4F",
+						"#0036F7"
+					],
 					"slug": "secondary-and-primary",
 					"name": "Secondary and primary"
 				},
 				{
-					"colors": ["#12141D", "#FFFFFF"],
+					"colors": [
+						"#12141D",
+						"#FFFFFF"
+					],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#0036F7", "#12141D"],
+					"colors": [
+						"#0036F7",
+						"#12141D"
+					],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
-					"colors": ["#FFFFFF", "#F9FAFC"],
+					"colors": [
+						"#FFFFFF",
+						"#F9FAFC"
+					],
 					"slug": "background-tertiary",
 					"name": "Background and Background Alt"
 				}
 			],
 			"palette": [
-				{ "slug": "foreground", "color": "#12141D", "name": "Foreground" },
-				{ "slug": "background", "color": "#FFFFFF", "name": "Background" },
-				{ "slug": "primary", "color": "#0036F7", "name": "Primary" },
-				{ "slug": "secondary", "color": "#363C4F", "name": "Secondary" },
-				{ "slug": "tertiary", "color": "#F9FAFC", "name": "Tertiary" },
+				{
+					"slug": "foreground",
+					"color": "#12141D",
+					"name": "Foreground"
+				},
+				{
+					"slug": "background",
+					"color": "#FFFFFF",
+					"name": "Background"
+				},
+				{
+					"slug": "primary",
+					"color": "#0036F7",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#363C4F",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#F9FAFC",
+					"name": "Tertiary"
+				},
 				{
 					"slug": "foreground-alt",
 					"color": "#4B4B4B",
@@ -57,17 +95,52 @@
 						"radius": "0"
 					}
 				}
+			},
+			"color": {
+				"background-tint-1": "#E0EBFF",
+				"background-tint-1-ink": "#12141D",
+				"background-tint-1-weak": "#4D505B",
+				"background-tint-2": "#C7DAFF",
+				"background-tint-2-ink": "#12141D",
+				"background-tint-2-weak": "#333640",
+				"background-tint-3": "#B2CCFF",
+				"background-tint-3-ink": "#12141D",
+				"background-tint-3-weak": "#12141D"
 			}
 		}
 	},
 	"styles": {
 		"elements": {
-			"h1": { "typography": { "fontWeight": "500" } },
-			"h2": { "typography": { "fontWeight": "500" } },
-			"h3": { "typography": { "fontWeight": "500" } },
-			"h4": { "typography": { "fontWeight": "500" } },
-			"h5": { "typography": { "fontWeight": "500" } },
-			"h6": { "typography": { "fontWeight": "500" } },
+			"h1": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontWeight": "500"
+				}
+			},
 			"heading": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--montserrat)"

@@ -1,8 +1,8 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Linen · Heath",
-	"slug": "linen-·-heath",
+	"title": "Linen",
+	"slug": "ext-linen",
 	"settings": {
 		"color": {
 			"duotone": [
@@ -149,6 +149,51 @@
 					}
 				}
 			}
+		},
+		"layout": {
+			"contentSize": "56rem",
+			"wideSize": "120rem"
+		},
+		"typography": {
+			"fontSizes": [
+				{
+					"slug": "small",
+					"size": "1.125rem",
+					"fluid": false
+				},
+				{
+					"slug": "medium",
+					"size": "1.25rem",
+					"fluid": false
+				},
+				{
+					"slug": "large",
+					"size": "2.25rem",
+					"fluid": {
+						"min": "1.5rem",
+						"max": "2.25rem"
+					}
+				},
+				{
+					"slug": "x-large",
+					"size": "2.8125rem",
+					"fluid": {
+						"min": "1.8125rem",
+						"max": "2.8125rem"
+					}
+				},
+				{
+					"slug": "xx-large",
+					"size": "3.5rem",
+					"fluid": {
+						"min": "2.1875rem",
+						"max": "3.5rem"
+					}
+				}
+			],
+			"fluid": {
+				"maxViewportWidth": "80rem"
+			}
 		}
 	},
 	"styles": {
@@ -159,8 +204,31 @@
 			"heading": {
 				"color": {
 					"text": "var(--wp--preset--color--foreground)"
+				},
+				"typography": {
+					"fontFamily": "'Inter', 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif",
+					"fontWeight": "600"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "500",
+					"letterSpacing": "-0.01em",
+					"lineHeight": "1.1",
+					"fontSize": "var(--wp--preset--font-size--xx-large)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "500",
+					"letterSpacing": "-0.01em",
+					"lineHeight": "1.1",
+					"fontSize": "var(--wp--preset--font-size--x-large)"
 				}
 			}
+		},
+		"typography": {
+			"fontFamily": "'Manrope', 'Manrope Variable', system-ui, -apple-system, sans-serif"
 		}
 	}
 }

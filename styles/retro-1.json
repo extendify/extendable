@@ -1,8 +1,8 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Retro · Butterscotch",
-	"slug": "retro-·-butterscotch",
+	"title": "Retro",
+	"slug": "ext-retro",
 	"settings": {
 		"color": {
 			"duotone": [
@@ -144,6 +144,51 @@
 					}
 				}
 			}
+		},
+		"layout": {
+			"contentSize": "56rem",
+			"wideSize": "120rem"
+		},
+		"typography": {
+			"fontSizes": [
+				{
+					"slug": "small",
+					"size": "1.125rem",
+					"fluid": false
+				},
+				{
+					"slug": "medium",
+					"size": "1.375rem",
+					"fluid": false
+				},
+				{
+					"slug": "large",
+					"size": "3rem",
+					"fluid": {
+						"min": "1.75rem",
+						"max": "3rem"
+					}
+				},
+				{
+					"slug": "x-large",
+					"size": "4rem",
+					"fluid": {
+						"min": "2.125rem",
+						"max": "4rem"
+					}
+				},
+				{
+					"slug": "xx-large",
+					"size": "5.25rem",
+					"fluid": {
+						"min": "2.625rem",
+						"max": "5.25rem"
+					}
+				}
+			],
+			"fluid": {
+				"maxViewportWidth": "80rem"
+			}
 		}
 	},
 	"styles": {
@@ -154,8 +199,38 @@
 			"heading": {
 				"color": {
 					"text": "var(--wp--preset--color--foreground)"
+				},
+				"typography": {
+					"fontFamily": "'Fraunces', 'Fraunces Variable', Georgia, 'Times New Roman', serif",
+					"fontWeight": "800"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "900",
+					"letterSpacing": "0.01em",
+					"lineHeight": "1.05",
+					"textTransform": "uppercase",
+					"fontSize": "var(--wp--preset--font-size--xx-large)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "900",
+					"letterSpacing": "0.01em",
+					"lineHeight": "1.05",
+					"textTransform": "uppercase",
+					"fontSize": "var(--wp--preset--font-size--x-large)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"textTransform": "uppercase"
 				}
 			}
+		},
+		"typography": {
+			"fontFamily": "'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif"
 		}
 	}
 }

@@ -1,8 +1,8 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Foundry · Signal",
-	"slug": "foundry-·-signal",
+	"title": "Foundry",
+	"slug": "ext-foundry",
 	"settings": {
 		"color": {
 			"duotone": [
@@ -149,6 +149,10 @@
 					}
 				}
 			}
+		},
+		"layout": {
+			"contentSize": "56rem",
+			"wideSize": "120rem"
 		}
 	},
 	"styles": {
@@ -159,6 +163,50 @@
 			"heading": {
 				"color": {
 					"text": "var(--wp--preset--color--foreground)"
+				},
+				"typography": {
+					"fontFamily": "'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace",
+					"fontWeight": "400",
+					"textTransform": "uppercase"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "400",
+					"letterSpacing": "0.01em",
+					"lineHeight": "1.15",
+					"textTransform": "uppercase",
+					"fontSize": "clamp(2.313rem, 2.313rem + ((1vw - 0.2rem) * 3.959), 4.688rem)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "400",
+					"letterSpacing": "0.01em",
+					"lineHeight": "1.15",
+					"textTransform": "uppercase",
+					"fontSize": "clamp(1.875rem, 1.875rem + ((1vw - 0.2rem) * 3.125), 3.75rem)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"textTransform": "uppercase"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "'Manrope', 'Manrope Variable', system-ui, -apple-system, sans-serif",
+			"lineHeight": "1.6"
+		},
+		"blocks": {
+			"core/image": {
+				"filter": {
+					"duotone": "var:preset|duotone|primary-and-background"
+				}
+			},
+			"core/cover": {
+				"filter": {
+					"duotone": "var:preset|duotone|primary-and-background"
 				}
 			}
 		}

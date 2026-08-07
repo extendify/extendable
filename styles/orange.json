@@ -7,27 +7,42 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#1A1A1A", "#ffffff"],
+					"colors": [
+						"#1A1A1A",
+						"#ffffff"
+					],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#ffffff", "#1A1A1A"],
+					"colors": [
+						"#ffffff",
+						"#1A1A1A"
+					],
 					"slug": "background-and-foreground",
 					"name": "Background and foreground"
 				},
 				{
-					"colors": ["#DE3707", "#02235B"],
+					"colors": [
+						"#DE3707",
+						"#02235B"
+					],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#DE3707", "#1A1A1A"],
+					"colors": [
+						"#DE3707",
+						"#1A1A1A"
+					],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
-					"colors": ["#ffffff", "#f2f3f5"],
+					"colors": [
+						"#ffffff",
+						"#f2f3f5"
+					],
 					"slug": "background-tertiary",
 					"name": "Background and Background Alt"
 				}
@@ -72,6 +87,17 @@
 						"radius": "2px"
 					}
 				}
+			},
+			"color": {
+				"background-tint-1": "#FFE9E4",
+				"background-tint-1-ink": "#1A1A1A",
+				"background-tint-1-weak": "#525252",
+				"background-tint-2": "#FED7CE",
+				"background-tint-2-ink": "#1A1A1A",
+				"background-tint-2-weak": "#3C3C3C",
+				"background-tint-3": "#FCC1B3",
+				"background-tint-3-ink": "#1A1A1A",
+				"background-tint-3-weak": "#1F1F1F"
 			}
 		},
 		"typography": {

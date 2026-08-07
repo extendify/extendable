@@ -7,32 +7,50 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#fcece8", "#0c0c0b"],
+					"colors": [
+						"#fcece8",
+						"#0c0c0b"
+					],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#0c0c0b", "#FBCBCB"],
+					"colors": [
+						"#0c0c0b",
+						"#FBCBCB"
+					],
 					"slug": "background-and-primary",
 					"name": "Background and primary"
 				},
 				{
-					"colors": ["#0c0c0b", "#a53915"],
+					"colors": [
+						"#0c0c0b",
+						"#a53915"
+					],
 					"slug": "background-and-secondary",
 					"name": "Background and secondary"
 				},
 				{
-					"colors": ["#0c0c0b", "#083021"],
+					"colors": [
+						"#0c0c0b",
+						"#083021"
+					],
 					"slug": "background-and-tertiary",
 					"name": "Background and tertiary"
 				},
 				{
-					"colors": ["#f5ac8e", "#fcece8"],
+					"colors": [
+						"#f5ac8e",
+						"#fcece8"
+					],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
-					"colors": ["#0c0c0b", "#50140d"],
+					"colors": [
+						"#0c0c0b",
+						"#50140d"
+					],
 					"slug": "background-tertiary",
 					"name": "Background and Background Alt"
 				}
@@ -69,6 +87,19 @@
 					"name": "Foreground Alt"
 				}
 			]
+		},
+		"custom": {
+			"color": {
+				"background-tint-1": "#1F1E16",
+				"background-tint-1-ink": "#fcece8",
+				"background-tint-1-weak": "#DBCBC7",
+				"background-tint-2": "#312D20",
+				"background-tint-2-ink": "#fcece8",
+				"background-tint-2-weak": "#E1D2CE",
+				"background-tint-3": "#4A402C",
+				"background-tint-3-ink": "#fcece8",
+				"background-tint-3-weak": "#EFDFDB"
+			}
 		}
 	},
 	"styles": {

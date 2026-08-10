@@ -117,15 +117,15 @@
 				}
 			},
 			"color": {
-				"background-tint-1": "#E0E8E4",
+				"background-tint-1": "#EBFAF3",
 				"background-tint-1-ink": "#000000",
 				"background-tint-1-weak": "#292929",
-				"background-tint-2": "#C7D4CE",
+				"background-tint-2": "#F5EDF9",
 				"background-tint-2-ink": "#000000",
-				"background-tint-2-weak": "#242424",
-				"background-tint-3": "#BCD0C6",
+				"background-tint-2-weak": "#292929",
+				"background-tint-3": "#EDF3F8",
 				"background-tint-3-ink": "#000000",
-				"background-tint-3-weak": "#121212"
+				"background-tint-3-weak": "#292929"
 			}
 		}
 	},

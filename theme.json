@@ -147,6 +147,8 @@
 			]
 		},
 		"custom": {
+			"space-panel-block": "calc(64px * var(--wp--custom--space-scale, 1))",
+			"space-panel-inline": "calc(48px * var(--wp--custom--space-scale, 1))",
 			"gap-scale": "var(--wp--custom--space-scale, 1)",
 			"gap-snug": "max(4px, calc(8px * var(--wp--custom--gap-scale, 1)))",
 			"gap-tight": "max(4px, calc(16px * var(--wp--custom--gap-scale, 1)))",

@@ -69,6 +69,14 @@
 					],
 					"slug": "background-tertiary",
 					"name": "Background and Background Alt"
+				},
+				{
+					"colors": [
+						"#f7fafc",
+						"#3f5762"
+					],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
 				}
 			],
 			"palette": [
@@ -115,15 +123,15 @@
 				}
 			},
 			"color": {
-				"background-tint-1": "#4E6A70",
+				"background-tint-1": "#5F5C45",
 				"background-tint-1-ink": "#f7fafc",
-				"background-tint-1-weak": "#F0F3F5",
-				"background-tint-2": "#577476",
-				"background-tint-2-ink": "#F6F9FB",
-				"background-tint-2-weak": "#F6F9FB",
-				"background-tint-3": "#587571",
-				"background-tint-3-ink": "#F6F9FB",
-				"background-tint-3-weak": "#F6F9FB"
+				"background-tint-1-weak": "#EAEDEF",
+				"background-tint-2": "#516172",
+				"background-tint-2-ink": "#f7fafc",
+				"background-tint-2-weak": "#F0F3F5",
+				"background-tint-3": "#49645D",
+				"background-tint-3-ink": "#f7fafc",
+				"background-tint-3-weak": "#F0F3F5"
 			}
 		}
 	},

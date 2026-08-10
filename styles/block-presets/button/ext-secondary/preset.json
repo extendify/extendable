@@ -4,7 +4,8 @@
 	"title": "Secondary",
 	"slug": "ext-secondary",
 	"blockTypes": [
-		"core/button"
+		"core/button",
+		"woocommerce/product-button"
 	],
 	"styles": {
 		"color": {
@@ -28,6 +29,7 @@
 			"color": {
 				"background": "var:preset|color|tertiary"
 			}
-		}
+		},
+		"css": "& { border-style: solid !important; }"
 	}
 }

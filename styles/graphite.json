@@ -32,7 +32,7 @@
 				},
 				{
 					"colors": [
-						"#010101",
+						"#000000",
 						"#ffffff"
 					],
 					"slug": "foreground-and-background",
@@ -113,15 +113,15 @@
 				}
 			},
 			"color": {
-				"background-tint-1": "#E2E2E2",
+				"background-tint-1": "#FAF6E8",
 				"background-tint-1-ink": "#000000",
 				"background-tint-1-weak": "#292929",
-				"background-tint-2": "#CBCBCB",
+				"background-tint-2": "#E6F2FC",
 				"background-tint-2-ink": "#000000",
-				"background-tint-2-weak": "#121212",
-				"background-tint-3": "#CDCDCD",
+				"background-tint-2-weak": "#292929",
+				"background-tint-3": "#EDF4F1",
 				"background-tint-3-ink": "#000000",
-				"background-tint-3-weak": "#1B1B1B"
+				"background-tint-3-weak": "#292929"
 			}
 		}
 	},

@@ -503,6 +503,38 @@ textarea {
 	background-color: var(--wp--preset--color--background);
 }
 
+/*
+ * ...and the padding that fill implies. The rule above rescues the COLOUR only, which left a card
+ * filled to its own edges with the copy touching them (owner report, natural-1 on a tertiary band).
+ *
+ * A fill and its inset are one surface: every vibe's item-card preset declares them together
+ * (background: tertiary + a padding rule on .ext-card-content). natural-1 is the one vibe that
+ * declares NEITHER — its cards are bare by design — so when the rescue above paints one, no preset
+ * follows with the inset.
+ *
+ * SPECIFICITY IS DELIBERATELY ZERO. Everything is wrapped in :where(), so a vibe that sets its own
+ * card padding always wins: WordPress compiles block-style-variation CSS as `:root :where(...)`,
+ * which scores (0,1,0), and this scores (0,0,0). So this only fills the gap where nothing else
+ * declares padding, and cannot override a vibe that uses a different rung. Purely additive — an
+ * existing site keeps the look it has and gains the inset it was missing.
+ *
+ * The :not(:first-child) reset mirrors the vibe presets: a card whose media sits above the content
+ * keeps that photo flush to the top edge.
+ */
+:where(:not(.block-editor-block-preview__content-iframe)
+.has-tertiary-background-color.has-background
+[class*="is-style-ext-preset--group--"][class*="item-card-1"]:not(.has-background))
+> :where(.ext-card-content) {
+	padding: var(--wp--preset--spacing--30);
+}
+
+:where(:not(.block-editor-block-preview__content-iframe)
+.has-tertiary-background-color.has-background
+[class*="is-style-ext-preset--group--"][class*="item-card-1"]:not(.has-background))
+> :where(.ext-card-content:not(:first-child)) {
+	padding-top: 0;
+}
+
 :not(.block-editor-block-preview__content-iframe)
 .has-tertiary-background-color.has-background
 [class*="is-style-ext-preset--group--"][class*="item-card-1"]:not(.has-background)::before {

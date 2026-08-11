@@ -94,17 +94,6 @@
 					"moz": "auto",
 					"webkit": "auto"
 				}
-			},
-			"color": {
-				"background-tint-1": "#FFF2F2",
-				"background-tint-1-ink": "#010101",
-				"background-tint-1-weak": "#3A3A3A",
-				"background-tint-2": "#E5F5EF",
-				"background-tint-2-ink": "#010101",
-				"background-tint-2-weak": "#3A3A3A",
-				"background-tint-3": "#F4F3EC",
-				"background-tint-3-ink": "#010101",
-				"background-tint-3-weak": "#3A3A3A"
 			}
 		}
 	},

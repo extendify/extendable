@@ -115,17 +115,6 @@
 						}
 					}
 				}
-			},
-			"color": {
-				"background-tint-1": "#EAF9FF",
-				"background-tint-1-ink": "#083141",
-				"background-tint-1-weak": "#3C6274",
-				"background-tint-2": "#FCECED",
-				"background-tint-2-ink": "#083141",
-				"background-tint-2-weak": "#365C6E",
-				"background-tint-3": "#F3F1F8",
-				"background-tint-3-ink": "#083141",
-				"background-tint-3-weak": "#365C6E"
 			}
 		}
 	},

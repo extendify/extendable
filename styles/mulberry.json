@@ -95,17 +95,6 @@
 						"radius": "0.375rem"
 					}
 				}
-			},
-			"color": {
-				"background-tint-1": "#F4E4E8",
-				"background-tint-1-ink": "#0F0814",
-				"background-tint-1-weak": "#4F4756",
-				"background-tint-2": "#DBE7DE",
-				"background-tint-2-ink": "#0F0814",
-				"background-tint-2-weak": "#4A4151",
-				"background-tint-3": "#E9E5DF",
-				"background-tint-3-ink": "#0F0814",
-				"background-tint-3-weak": "#4F4756"
 			}
 		}
 	},

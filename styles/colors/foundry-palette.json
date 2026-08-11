@@ -118,7 +118,16 @@
 				"text-weak": "#4C4C4F",
 				"icon-surface": "#DFDFDF",
 				"icon-ink": "#111113",
-				"background-sunken": "#D5D5D0"
+				"background-sunken": "#D5D5D0",
+				"background-tint-1": "#FFBFA7",
+				"background-tint-2": "#ADD5F4",
+				"background-tint-3": "#EFE63A",
+				"background-tint-1-ink": "#111113",
+				"background-tint-1-weak": "#111113",
+				"background-tint-2-ink": "#111113",
+				"background-tint-2-weak": "#111113",
+				"background-tint-3-ink": "#111113",
+				"background-tint-3-weak": "#111113"
 			},
 			"elements": {
 				"button": {

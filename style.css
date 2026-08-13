@@ -32,6 +32,14 @@ Extendable therefore is also distributed under the terms of the GNU GPL.
 }
 
 /*
+ * A color-scheme meta otherwise lets OS dark mode restyle inputs and scrollbars.
+ */
+
+:root {
+	color-scheme: only light;
+}
+
+/*
  * Smooth scrolling
  */
 

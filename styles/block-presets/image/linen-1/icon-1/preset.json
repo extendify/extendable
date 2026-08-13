@@ -7,6 +7,6 @@
 		"core/image"
 	],
 	"styles": {
-		"css": "& img { width: 96px; height: 96px; } &:not(:has(img[style*=\"width\"])) { margin-bottom: var(--wp--custom--gap-block) !important; }"
+		"css": "&:not(:is(.ext-card-icon-row *)) img { width: 96px; height: 96px; } &:not(:is(.ext-card-icon-row *)) { margin-bottom: var(--wp--custom--gap-block) !important; }"
 	}
 }

@@ -10,6 +10,7 @@
 	"styles": {
 		"border": {
 			"radius": "0px"
-		}
+		},
+		"css": "& img { filter: grayscale(1) contrast(1.1); }"
 	}
 }

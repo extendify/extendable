@@ -5,7 +5,7 @@ Author: Extendify
 Author URI: https://extendify.com
 Description: Extendable is a distinct, dynamic block theme designed as a canvas for your next online venture. Sporting multiple style variations, Extendable is the most expressive block theme yet. Go fresh, bold, bohemian or minimal — with a single click.
 Requires at least: 6.6
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
 Version: 2.1.7
 License: GNU General Public License v2 or later
@@ -29,6 +29,14 @@ Extendable therefore is also distributed under the terms of the GNU GPL.
 	--wp--custom--spacing--large: var(--wp--preset--spacing--60, clamp(2.5rem, 8vw, 6rem));
 	--wp--custom--spacing--outer: max(1.25rem, 4vw);
 	--wp--preset--spacing--80: min(8rem, 12vw);
+}
+
+/*
+ * A color-scheme meta otherwise lets OS dark mode restyle inputs and scrollbars.
+ */
+
+:root {
+	color-scheme: only light;
 }
 
 /*

@@ -1,7 +1,7 @@
 === Extendable ===
 Contributors: extendify, richtabor, colorful-tones
 Requires at least: 6.6
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
 Stable tag: 2.1.7
 License: GPLv2 or later
@@ -12,6 +12,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Extendable is a distinct, dynamic block theme designed as a canvas for your next online venture. Sporting multiple style variations, Extendable is the most expressive block theme yet. Go fresh, bold, bohemian or minimal — with a single click.
 
 == Changelog ==
+
+= 2.1.8 - 2026-08-12 =
+- Added: Design-token layer in theme.json — background tint ladder, text and icon roles — the stable names vibes and color palettes target now that they are served as data
 
 = 2.1.7 - 2026-06-15 =
 - Fixed: Single product template block validation error

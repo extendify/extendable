@@ -109,9 +109,9 @@
 				}
 			},
 			"color": {
-				"background-tint-1": "#ECCC9A",
-				"background-tint-2": "#D4D59D",
-				"background-tint-3": "#FAC3A7"
+				"background-tint-1": "#F1EBDE",
+				"background-tint-2": "#E8DFC8",
+				"background-tint-3": "#EEEAE2"
 			}
 		}
 	},

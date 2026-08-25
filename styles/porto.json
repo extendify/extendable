@@ -82,9 +82,9 @@
 		},
 		"custom": {
 			"color": {
-				"background-tint-1": "#FFC0AD",
-				"background-tint-2": "#8AE4DB",
-				"background-tint-3": "#ABD6FF"
+				"background-tint-1": "#F2EDE8",
+				"background-tint-2": "#E8DDD6",
+				"background-tint-3": "#E3E8E6"
 			}
 		}
 	},

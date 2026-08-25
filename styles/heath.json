@@ -146,7 +146,7 @@
 					"text": "var(--wp--preset--color--foreground)"
 				},
 				"typography": {
-					"fontFamily": "'Inter', 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif",
+					"fontFamily": "var(--wp--preset--font-family--inter)",
 					"fontWeight": "600"
 				}
 			},
@@ -168,7 +168,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "'Manrope', 'Manrope Variable', system-ui, -apple-system, sans-serif"
+			"fontFamily": "var(--wp--preset--font-family--manrope)"
 		}
 	}
 }

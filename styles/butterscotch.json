@@ -146,7 +146,7 @@
 					"text": "var(--wp--preset--color--foreground)"
 				},
 				"typography": {
-					"fontFamily": "'Fraunces', 'Fraunces Variable', Georgia, 'Times New Roman', serif",
+					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)",
 					"fontWeight": "800"
 				}
 			},
@@ -175,7 +175,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "'Heebo', system-ui, -apple-system, 'Segoe UI', sans-serif"
+			"fontFamily": "var(--wp--preset--font-family--heebo)"
 		}
 	}
 }

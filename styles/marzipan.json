@@ -146,7 +146,7 @@
 					"text": "var(--wp--preset--color--foreground)"
 				},
 				"typography": {
-					"fontFamily": "'Source Serif Pro', 'Source Serif 4', Georgia, 'Times New Roman', serif",
+					"fontFamily": "var(--wp--preset--font-family--source-serif-pro)",
 					"fontWeight": "700"
 				}
 			},
@@ -168,7 +168,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "'Manrope', 'Manrope Variable', system-ui, -apple-system, sans-serif"
+			"fontFamily": "var(--wp--preset--font-family--manrope)"
 		}
 	}
 }

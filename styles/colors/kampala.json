@@ -6,27 +6,42 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#010110", "#f7f9fe"],
+					"colors": [
+						"#010110",
+						"#f7f9fe"
+					],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#f7f9fe", "#010110"],
+					"colors": [
+						"#f7f9fe",
+						"#010110"
+					],
 					"slug": "background-and-foreground",
 					"name": "Background and foreground"
 				},
 				{
-					"colors": ["#0B119C", "#c1cbf9"],
+					"colors": [
+						"#0B119C",
+						"#c1cbf9"
+					],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#0B119C", "#010110"],
+					"colors": [
+						"#0B119C",
+						"#010110"
+					],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
-					"colors": ["#f7f9fe", "#ffffff"],
+					"colors": [
+						"#f7f9fe",
+						"#ffffff"
+					],
 					"slug": "background-tertiary",
 					"name": "Background and Background Alt"
 				}
@@ -84,6 +99,11 @@
 						}
 					}
 				}
+			},
+			"color": {
+				"background-tint-1": "#BCD1FF",
+				"background-tint-2": "#FFC298",
+				"background-tint-3": "#CDDB7E"
 			}
 		}
 	},

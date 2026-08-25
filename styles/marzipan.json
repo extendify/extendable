@@ -104,7 +104,13 @@
 				"background-sunken": "#FBDCC4",
 				"background-tint-1": "#F7D0B7",
 				"background-tint-2": "#FBCBD1",
-				"background-tint-3": "#C6DAFE"
+				"background-tint-3": "#C6DAFE",
+				"background-tint-1-ink": "#0D2879",
+				"background-tint-1-weak": "#0D2879",
+				"background-tint-2-ink": "#0D2879",
+				"background-tint-2-weak": "#0D2879",
+				"background-tint-3-ink": "#0D2879",
+				"background-tint-3-weak": "#0D2879"
 			},
 			"elements": {
 				"button": {

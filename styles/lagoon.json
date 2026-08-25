@@ -33,7 +33,7 @@
 				{
 					"colors": [
 						"#292929",
-						"#17181A"
+						"#ffffff"
 					],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
@@ -92,7 +92,13 @@
 			"color": {
 				"background-tint-1": "#E8F4F8",
 				"background-tint-2": "#F2F0EB",
-				"background-tint-3": "#E3EDE8"
+				"background-tint-3": "#E3EDE8",
+				"background-tint-1-ink": "#292929",
+				"background-tint-1-weak": "#585858",
+				"background-tint-2-ink": "#292929",
+				"background-tint-2-weak": "#585858",
+				"background-tint-3-ink": "#292929",
+				"background-tint-3-weak": "#4D4D4D"
 			}
 		}
 	},

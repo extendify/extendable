@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Retro · Butterscotch",
+	"title": "Butterscotch",
 	"slug": "butterscotch",
 	"settings": {
 		"color": {
@@ -66,12 +66,12 @@
 			"palette": [
 				{
 					"slug": "background",
-					"color": "var(--wp--custom--color--background-base)",
+					"color": "#FCF9E6",
 					"name": "Background"
 				},
 				{
 					"slug": "foreground",
-					"color": "var(--wp--custom--color--text-strong)",
+					"color": "#302C2A",
 					"name": "Foreground"
 				},
 				{
@@ -86,12 +86,12 @@
 				},
 				{
 					"slug": "tertiary",
-					"color": "var(--wp--custom--color--background-sunken)",
+					"color": "#FFEBB8",
 					"name": "Tertiary"
 				},
 				{
 					"slug": "foreground-alt",
-					"color": "var(--wp--custom--color--text-weak)",
+					"color": "#66615F",
 					"name": "Foreground Alt"
 				}
 			]
@@ -100,19 +100,11 @@
 			"color": {
 				"text-strong": "#302C2A",
 				"background-base": "#FCF9E6",
-				"text-weak": "#66615F",
 				"icon-surface": "#F4F1DE",
-				"icon-ink": "#302C2A",
 				"background-sunken": "#FFEBB8",
 				"background-tint-1": "#FAB5EE",
 				"background-tint-2": "#F0E3A9",
-				"background-tint-3": "#D8CBB8",
-				"background-tint-1-ink": "#13100E",
-				"background-tint-1-weak": "#13100E",
-				"background-tint-2-ink": "#302C2A",
-				"background-tint-2-weak": "#302C2A",
-				"background-tint-3-ink": "#1D1917",
-				"background-tint-3-weak": "#1D1917"
+				"background-tint-3": "#D8CBB8"
 			},
 			"elements": {
 				"button": {

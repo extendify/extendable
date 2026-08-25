@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Foundry",
+	"title": "Signal",
 	"slug": "signal",
 	"settings": {
 		"color": {
@@ -66,12 +66,12 @@
 			"palette": [
 				{
 					"slug": "background",
-					"color": "var(--wp--custom--color--background-base)",
+					"color": "#E7E7E7",
 					"name": "Background"
 				},
 				{
 					"slug": "foreground",
-					"color": "var(--wp--custom--color--text-strong)",
+					"color": "#111113",
 					"name": "Foreground"
 				},
 				{
@@ -86,12 +86,12 @@
 				},
 				{
 					"slug": "tertiary",
-					"color": "var(--wp--custom--color--background-sunken)",
+					"color": "#D5D5D0",
 					"name": "Tertiary"
 				},
 				{
 					"slug": "foreground-alt",
-					"color": "var(--wp--custom--color--text-weak)",
+					"color": "#4C4C4F",
 					"name": "Foreground Alt"
 				}
 			]
@@ -100,19 +100,11 @@
 			"color": {
 				"text-strong": "#111113",
 				"background-base": "#E7E7E7",
-				"text-weak": "#4C4C4F",
 				"icon-surface": "#DFDFDF",
-				"icon-ink": "#111113",
 				"background-sunken": "#D5D5D0",
 				"background-tint-1": "#FFBFA7",
 				"background-tint-2": "#ADD5F4",
-				"background-tint-3": "#EFE63A",
-				"background-tint-1-ink": "#111113",
-				"background-tint-1-weak": "#111113",
-				"background-tint-2-ink": "#111113",
-				"background-tint-2-weak": "#111113",
-				"background-tint-3-ink": "#111113",
-				"background-tint-3-weak": "#111113"
+				"background-tint-3": "#EFE63A"
 			},
 			"elements": {
 				"button": {
@@ -147,31 +139,17 @@
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--space-mono)",
-					"fontWeight": "400",
-					"textTransform": "uppercase"
+					"fontWeight": "400"
 				}
 			},
 			"h1": {
 				"typography": {
-					"fontWeight": "400",
-					"letterSpacing": "0.01em",
-					"lineHeight": "1.15",
-					"textTransform": "uppercase",
-					"fontSize": "clamp(2.313rem, 2.313rem + ((1vw - 0.2rem) * 3.959), 4.688rem)"
+					"fontWeight": "400"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontWeight": "400",
-					"letterSpacing": "0.01em",
-					"lineHeight": "1.15",
-					"textTransform": "uppercase",
-					"fontSize": "clamp(1.875rem, 1.875rem + ((1vw - 0.2rem) * 3.125), 3.75rem)"
-				}
-			},
-			"h3": {
-				"typography": {
-					"textTransform": "uppercase"
+					"fontWeight": "400"
 				}
 			}
 		},

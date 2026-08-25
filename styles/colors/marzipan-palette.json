@@ -66,12 +66,12 @@
 			"palette": [
 				{
 					"slug": "background",
-					"color": "var(--wp--custom--color--background-base)",
+					"color": "#FDF1E7",
 					"name": "Background"
 				},
 				{
 					"slug": "foreground",
-					"color": "var(--wp--custom--color--text-strong)",
+					"color": "#1B3A8C",
 					"name": "Foreground"
 				},
 				{
@@ -86,12 +86,12 @@
 				},
 				{
 					"slug": "tertiary",
-					"color": "var(--wp--custom--color--background-sunken)",
+					"color": "#FBDCC4",
 					"name": "Tertiary"
 				},
 				{
 					"slug": "foreground-alt",
-					"color": "var(--wp--custom--color--text-weak)",
+					"color": "#3558AC",
 					"name": "Foreground Alt"
 				}
 			]
@@ -100,19 +100,11 @@
 			"color": {
 				"text-strong": "#1B3A8C",
 				"background-base": "#FDF1E7",
-				"text-weak": "#3558AC",
 				"icon-surface": "#F5E9DF",
-				"icon-ink": "#1B3A8C",
 				"background-sunken": "#FBDCC4",
 				"background-tint-1": "#F7D0B7",
 				"background-tint-2": "#FBCBD1",
-				"background-tint-3": "#C6DAFE",
-				"background-tint-1-ink": "#0D2879",
-				"background-tint-1-weak": "#0D2879",
-				"background-tint-2-ink": "#0D2879",
-				"background-tint-2-weak": "#0D2879",
-				"background-tint-3-ink": "#0D2879",
-				"background-tint-3-weak": "#0D2879"
+				"background-tint-3": "#C6DAFE"
 			},
 			"elements": {
 				"button": {

@@ -13,6 +13,10 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.1.9 - 2026-08-26 =
+- Added: Four color palettes with matching style variations — Heath, Signal, Marzipan and Butterscotch
+- Changed: Card tints in the Brick, Evergreen, Kampala, Lagoon, Obsidian and Porto palettes are now chosen per palette instead of derived from the background, giving cards three distinct surfaces
+
 = 2.1.8 - 2026-08-12 =
 - Added: Design-token layer in theme.json — background tint ladder, text and icon roles — the stable names vibes and color palettes target now that they are served as data
 

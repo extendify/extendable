@@ -100,8 +100,8 @@
 			"color": {
 				"text-strong": "#111113",
 				"background-base": "#E7E7E7",
-				"icon-surface": "#DFDFDF",
-				"background-sunken": "#D5D5D0",
+				"icon-surface": "#D8D8D8",
+				"background-sunken": "#E7E7E7",
 				"background-tint-1": "#FFBFA7",
 				"background-tint-2": "#ADD5F4",
 				"background-tint-3": "#EFE63A",
@@ -110,7 +110,8 @@
 				"background-tint-2-ink": "#111113",
 				"background-tint-2-weak": "#232326",
 				"background-tint-3-ink": "#111113",
-				"background-tint-3-weak": "#424244"
+				"background-tint-3-weak": "#424244",
+				"icon-ink": "#111113"
 			},
 			"elements": {
 				"button": {

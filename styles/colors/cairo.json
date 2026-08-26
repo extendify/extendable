@@ -117,7 +117,12 @@
 				"background-tint-2-weak": "#DEDEDE",
 				"background-tint-3": "#35473E",
 				"background-tint-3-ink": "#FFFFFF",
-				"background-tint-3-weak": "#DEDEDE"
+				"background-tint-3-weak": "#DEDEDE",
+				"background-base": "#393646",
+				"background-sunken": "#F7F6F6",
+				"text-strong": "#FFFFFF",
+				"icon-surface": "#43404E",
+				"icon-ink": "#FFFFFF"
 			}
 		}
 	}

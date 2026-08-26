@@ -193,7 +193,7 @@ function extendable_enqueue_animations() {
 			: 'opacity: 0;';
 		
 		// Only hide elements if reduced motion is not preferred
-		$animation_css .= '@media (prefers-reduced-motion: no-preference) { ' . $selector . ':not(.ext-animate--off) { ' . $css_rule . ' } } ';
+		$animation_css .= '@media (prefers-reduced-motion: no-preference) { ' . $selector . ':not(.ext-animate--off):not([data-ext-animated]) { ' . $css_rule . ' } } ';
 	}
 	
 	if ( ! empty( $animation_css ) ) {

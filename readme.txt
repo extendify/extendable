@@ -17,6 +17,7 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 - Added: Four color palettes with matching style variations — Heath, Signal, Marzipan and Butterscotch
 - Changed: Every color palette now sets its own card tints and the text color that reads on them, instead of deriving both from the page background
 - Fixed: Cards on the dark palettes — Brisbane, Cairo, Coral, Gdansk, Gold, Lime, Limepop, Onyx, Piraeus, Royal and Sunset — showed near-white text on a light card, leaving it unreadable
+- Fixed: Switching color palettes could leave a few colors behind from the previous palette, because not every palette set the same colors
 - Fixed: Header logos in the Atlas Beacon, Catalina Skyline and Cedar Peak headers were pinned to a fixed width, which squashed tall or square logos
 
 = 2.1.8 - 2026-08-12 =

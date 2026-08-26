@@ -1,54 +1,63 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"title": "Clay",
 	"version": 3,
+	"title": "Heath",
+	"slug": "heath",
 	"settings": {
 		"color": {
 			"duotone": [
 				{
 					"colors": [
-						"#212023",
-						"#744F39"
+						"#1F1F23",
+						"#333337"
 					],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
 					"colors": [
-						"#212023",
-						"#F9F8F1"
+						"#1F1F23",
+						"#E9E5D9"
 					],
 					"slug": "primary-and-tertiary",
 					"name": "Primary and tertiary"
 				},
 				{
 					"colors": [
-						"#744F39",
-						"#212023"
+						"#1F1F23",
+						"#F8F5E9"
+					],
+					"slug": "primary-and-background",
+					"name": "Primary and background"
+				},
+				{
+					"colors": [
+						"#333337",
+						"#1F1F23"
 					],
 					"slug": "secondary-and-primary",
 					"name": "Secondary and primary"
 				},
 				{
 					"colors": [
-						"#582A2F",
-						"#FBEBE1"
+						"#1F1F23",
+						"#F8F5E9"
 					],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
 					"colors": [
-						"#212023",
-						"#582A2F"
+						"#1F1F23",
+						"#1F1F23"
 					],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
 					"colors": [
-						"#FBEBE1",
-						"#F9F8F1"
+						"#F8F5E9",
+						"#E9E5D9"
 					],
 					"slug": "background-tertiary",
 					"name": "Background and Background Alt"
@@ -57,78 +66,78 @@
 			"palette": [
 				{
 					"slug": "background",
-					"color": "#FBEBE1",
+					"color": "#F8F5E9",
 					"name": "Background"
 				},
 				{
 					"slug": "foreground",
-					"color": "#582A2F",
+					"color": "#1F1F23",
 					"name": "Foreground"
 				},
 				{
 					"slug": "primary",
-					"color": "#212023",
+					"color": "#1F1F23",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#744F39",
+					"color": "#333337",
 					"name": "Secondary"
 				},
 				{
 					"slug": "tertiary",
-					"color": "#F9F8F1",
+					"color": "#E9E5D9",
 					"name": "Tertiary"
 				},
 				{
 					"slug": "foreground-alt",
-					"color": "#4C3B35",
+					"color": "#5D5D62",
 					"name": "Foreground Alt"
 				}
 			]
 		},
 		"custom": {
+			"color": {
+				"text-strong": "#1F1F23",
+				"background-base": "#F8F5E9",
+				"icon-surface": "#E9E6DC",
+				"background-sunken": "#E8E8E9",
+				"background-tint-1": "#C1D3C7",
+				"background-tint-2": "#DDD5C0",
+				"background-tint-3": "#D1C6D2",
+				"background-tint-1-ink": "#1F1F23",
+				"background-tint-1-weak": "#1F1F23",
+				"background-tint-2-ink": "#1F1F23",
+				"background-tint-2-weak": "#2E2E32",
+				"background-tint-3-ink": "#000000",
+				"background-tint-3-weak": "#000000",
+				"icon-ink": "#1F1F23"
+			},
 			"elements": {
 				"button": {
 					"color": {
-						"background": "var(--wp--preset--color--primary)",
-						"text": "var(--wp--preset--color--background)"
+						"background": "#1F1F23",
+						"text": "#F8F5E9"
 					},
 					":hover": {
 						"color": {
-							"background": "var(--wp--preset--color--foreground)",
-							"text": "var(--wp--preset--color--background)"
+							"background": "#333337",
+							"text": "#F8F5E9"
 						}
 					},
 					":focus": {
 						"color": {
-							"background": "var(--wp--preset--color--primary)",
-							"text": "var(--wp--preset--color--background)"
+							"background": "#1F1F23",
+							"text": "#F8F5E9"
 						}
 					}
 				}
-			},
-			"color": {
-				"background-tint-1": "#E7E2F2",
-				"background-tint-1-ink": "#582A2F",
-				"background-tint-1-weak": "#6A3A3E",
-				"background-tint-2": "#E5E0D0",
-				"background-tint-2-ink": "#582A2F",
-				"background-tint-2-weak": "#5E2F34",
-				"background-tint-3": "#F0DCDD",
-				"background-tint-3-ink": "#582A2F",
-				"background-tint-3-weak": "#5E2F34",
-				"background-base": "#FBEBE1",
-				"background-sunken": "#E8E8E9",
-				"text-strong": "#582A2F",
-				"icon-surface": "#ECDDD4",
-				"icon-ink": "#582A2F"
 			}
 		}
 	},
 	"styles": {
 		"color": {
-			"text": "var(--wp--preset--color--foreground-alt)"
+			"text": "var(--wp--preset--color--foreground)"
 		},
 		"elements": {
 			"heading": {

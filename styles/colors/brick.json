@@ -6,42 +6,80 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#7A2812", "#3D4235"],
+					"colors": [
+						"#7A2812",
+						"#3D4235"
+					],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#7A2812", "#E2E1DD"],
+					"colors": [
+						"#7A2812",
+						"#E2E1DD"
+					],
 					"slug": "primary-and-tertiary",
 					"name": "Primary and tertiary"
 				},
 				{
-					"colors": ["#3D4235", "#7A2812"],
+					"colors": [
+						"#3D4235",
+						"#7A2812"
+					],
 					"slug": "secondary-and-primary",
 					"name": "Secondary and primary"
 				},
 				{
-					"colors": ["#171511", "#F3EFEC"],
+					"colors": [
+						"#171511",
+						"#F3EFEC"
+					],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#7A2812", "#171511"],
+					"colors": [
+						"#7A2812",
+						"#171511"
+					],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
-					"colors": ["#F3EFEC", "#E2E1DD"],
+					"colors": [
+						"#F3EFEC",
+						"#E2E1DD"
+					],
 					"slug": "background-tertiary",
 					"name": "Background and Background Alt"
 				}
 			],
 			"palette": [
-				{ "slug": "background", "color": "#F3EFEC", "name": "Background" },
-				{ "slug": "foreground", "color": "#171511", "name": "Foreground" },
-				{ "slug": "primary", "color": "#7A2812", "name": "Primary" },
-				{ "slug": "secondary", "color": "#3D4235", "name": "Secondary" },
-				{ "slug": "tertiary", "color": "#E2E1DD", "name": "Tertiary" },
+				{
+					"slug": "background",
+					"color": "#F3EFEC",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "#171511",
+					"name": "Foreground"
+				},
+				{
+					"slug": "primary",
+					"color": "#7A2812",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#3D4235",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#E2E1DD",
+					"name": "Tertiary"
+				},
 				{
 					"slug": "foreground-alt",
 					"color": "#090703",
@@ -69,6 +107,22 @@
 						}
 					}
 				}
+			},
+			"color": {
+				"background-tint-1": "#F5E6DF",
+				"background-tint-2": "#EDE4D8",
+				"background-tint-3": "#E6E8E0",
+				"background-tint-1-ink": "#171511",
+				"background-tint-1-weak": "#4E4C47",
+				"background-tint-2-ink": "#171511",
+				"background-tint-2-weak": "#494642",
+				"background-tint-3-ink": "#171511",
+				"background-tint-3-weak": "#4E4C47",
+				"background-base": "#F3EFEC",
+				"background-sunken": "#F0EAE8",
+				"text-strong": "#171511",
+				"icon-surface": "#ECE3DE",
+				"icon-ink": "#171511"
 			}
 		}
 	},

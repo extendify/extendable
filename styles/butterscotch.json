@@ -1,0 +1,167 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Butterscotch",
+	"slug": "butterscotch",
+	"settings": {
+		"color": {
+			"duotone": [
+				{
+					"colors": [
+						"#422922",
+						"#583E36"
+					],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": [
+						"#422922",
+						"#FFEBB8"
+					],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				},
+				{
+					"colors": [
+						"#422922",
+						"#FCF9E6"
+					],
+					"slug": "primary-and-background",
+					"name": "Primary and background"
+				},
+				{
+					"colors": [
+						"#583E36",
+						"#422922"
+					],
+					"slug": "secondary-and-primary",
+					"name": "Secondary and primary"
+				},
+				{
+					"colors": [
+						"#302C2A",
+						"#FCF9E6"
+					],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": [
+						"#422922",
+						"#302C2A"
+					],
+					"slug": "primary-foreground",
+					"name": "Primary and Foreground"
+				},
+				{
+					"colors": [
+						"#FCF9E6",
+						"#FFEBB8"
+					],
+					"slug": "background-tertiary",
+					"name": "Background and Background Alt"
+				}
+			],
+			"palette": [
+				{
+					"slug": "background",
+					"color": "#FCF9E6",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "#302C2A",
+					"name": "Foreground"
+				},
+				{
+					"slug": "primary",
+					"color": "#422922",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#583E36",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#FFEBB8",
+					"name": "Tertiary"
+				},
+				{
+					"slug": "foreground-alt",
+					"color": "#66615F",
+					"name": "Foreground Alt"
+				}
+			]
+		},
+		"custom": {
+			"color": {
+				"text-strong": "#302C2A",
+				"background-base": "#FCF9E6",
+				"icon-surface": "#F0EBD9",
+				"background-sunken": "#EBE9E9",
+				"background-tint-1": "#FAB5EE",
+				"background-tint-2": "#F0E3A9",
+				"background-tint-3": "#D8CBB8",
+				"background-tint-1-ink": "#13100E",
+				"background-tint-1-weak": "#13100E",
+				"background-tint-2-ink": "#302C2A",
+				"background-tint-2-weak": "#45403E",
+				"background-tint-3-ink": "#1D1917",
+				"background-tint-3-weak": "#1D1917",
+				"icon-ink": "#302C2A"
+			},
+			"elements": {
+				"button": {
+					"color": {
+						"background": "#422922",
+						"text": "#FCF9E6"
+					},
+					":hover": {
+						"color": {
+							"background": "#583E36",
+							"text": "#FCF9E6"
+						}
+					},
+					":focus": {
+						"color": {
+							"background": "#422922",
+							"text": "#FCF9E6"
+						}
+					}
+				}
+			}
+		}
+	},
+	"styles": {
+		"color": {
+			"text": "var(--wp--preset--color--foreground)"
+		},
+		"elements": {
+			"heading": {
+				"color": {
+					"text": "var(--wp--preset--color--foreground)"
+				},
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--noto-serif-display)",
+					"fontWeight": "800"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontWeight": "900"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontWeight": "900"
+				}
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--heebo)"
+		}
+	}
+}

@@ -6,32 +6,50 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": ["#ffffff", "#393646"],
+					"colors": [
+						"#ffffff",
+						"#393646"
+					],
 					"slug": "foreground-and-background",
 					"name": "Foreground and background"
 				},
 				{
-					"colors": ["#ffffff", "#F4EEE0"],
+					"colors": [
+						"#ffffff",
+						"#F4EEE0"
+					],
 					"slug": "foreground-and-primary",
 					"name": "Foreground and primary"
 				},
 				{
-					"colors": ["#393646", "#F4EEE0"],
+					"colors": [
+						"#393646",
+						"#F4EEE0"
+					],
 					"slug": "primary-and-background",
 					"name": "Primary and background"
 				},
 				{
-					"colors": ["#F4EEE0", "#331D2C"],
+					"colors": [
+						"#F4EEE0",
+						"#331D2C"
+					],
 					"slug": "primary-and-secondary",
 					"name": "Primary and secondary"
 				},
 				{
-					"colors": ["#F4EEE0", "#ffffff"],
+					"colors": [
+						"#F4EEE0",
+						"#ffffff"
+					],
 					"slug": "primary-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
-					"colors": ["#393646", "#4F4557"],
+					"colors": [
+						"#393646",
+						"#4F4557"
+					],
 					"slug": "background-tertiary",
 					"name": "Background and Background Alt"
 				}
@@ -89,6 +107,22 @@
 						}
 					}
 				}
+			},
+			"color": {
+				"background-tint-1": "#463F2F",
+				"background-tint-1-ink": "#FFFFFF",
+				"background-tint-1-weak": "#DEDEDE",
+				"background-tint-2": "#364751",
+				"background-tint-2-ink": "#FFFFFF",
+				"background-tint-2-weak": "#DEDEDE",
+				"background-tint-3": "#35473E",
+				"background-tint-3-ink": "#FFFFFF",
+				"background-tint-3-weak": "#DEDEDE",
+				"background-base": "#393646",
+				"background-sunken": "#F7F6F6",
+				"text-strong": "#FFFFFF",
+				"icon-surface": "#43404E",
+				"icon-ink": "#FFFFFF"
 			}
 		}
 	}

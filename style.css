@@ -732,6 +732,23 @@ textarea {
 	--ext-header-glass-tint-dark: #ffffff;
 	--ext-header-glass-tint-dark-end: #101010;
 	--ext-header-dark-logo-filter: brightness(0) invert(1);
+	--ext-header-logo-plate-bg: rgb(255 255 255 / 0.92);
+	--ext-header-logo-plate-padding: 0.375rem 0.625rem;
+	--ext-header-logo-plate-radius: 0.25rem;
+}
+
+/* Tint the logo plate with the palette instead of a flat white, so it sits in
+   the site's own warmth rather than reading as a foreign sticker. Lightness is
+   forced up rather than taken as-is: a dark variation like onyx (#17181A)
+   would otherwise paint a near-black plate and put the dark logo straight back
+   where it started. Guarded because an unsupported browser would compute the
+   custom property as invalid and drop the plate entirely — the same relative
+   colour syntax the glass tints already rely on. */
+@supports (color: oklch(from red l c h)) {
+
+	:root {
+		--ext-header-logo-plate-bg: oklch(from var(--wp--preset--color--background) clamp(0.94, l, 1) c h / 0.92);
+	}
 }
 
 body {
@@ -889,9 +906,38 @@ body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-
 	fill: currentColor;
 }
 
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :is(.wp-block-site-logo, .wp-duotone-primary-foreground):not(.cloned-for-mobile, .cloned-for-mobile *),
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :is(.wp-block-site-logo, .wp-duotone-primary-foreground):not(.cloned-for-mobile, .cloned-for-mobile *) {
+/* The white-knockout filter only suits a logo we generated: those are single
+   colour on transparency, so brightness(0) invert(1) is a clean knockout. It
+   ruins anything else — an opaque logo turns into a solid white slab (which is
+   the blank logo partners report), and a multi-colour one loses its brand. So
+   the knockout is scoped to the two prefixes functions.php already treats as
+   ours, and every other logo gets the plate rule below instead. */
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :is(.wp-block-site-logo, .wp-duotone-primary-foreground):has(img[src*="extendify-demo-"], img[src*="ext-custom-logo-"]):not(.cloned-for-mobile, .cloned-for-mobile *),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :is(.wp-block-site-logo, .wp-duotone-primary-foreground):has(img[src*="extendify-demo-"], img[src*="ext-custom-logo-"]):not(.cloned-for-mobile, .cloned-for-mobile *) {
 	filter: var(--ext-header-dark-logo-filter);
+}
+
+/* Contrast plate for a logo we didn't make. Without the knockout it has to
+   read on its own, and glass+dark gives it nothing to read against — that
+   variant stays dark past the hero, so there is no scroll state where a dark
+   logo recovers. The plate guarantees legibility while leaving brand colour
+   alone. Tuned via the tokens on :root.
+
+   Split in two on purpose. The box is reserved in every state, including past
+   the hero and on subpages, so the logo never moves; only the fill comes and
+   goes. Painting and sizing in the same rule made the padding vanish with the
+   background and shifted the logo mid-scroll. */
+header.wp-block-template-part:has(.ext-header--dark) .wp-block-site-logo:not(:has(img[src*="extendify-demo-"], img[src*="ext-custom-logo-"])):not(.cloned-for-mobile, .cloned-for-mobile *) {
+	display: inline-flex;
+	align-items: center;
+	background-color: transparent;
+	padding: var(--ext-header-logo-plate-padding);
+	border-radius: var(--ext-header-logo-plate-radius);
+}
+
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) .wp-block-site-logo:not(:has(img[src*="extendify-demo-"], img[src*="ext-custom-logo-"])):not(.cloned-for-mobile, .cloned-for-mobile *),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) .wp-block-site-logo:not(:has(img[src*="extendify-demo-"], img[src*="ext-custom-logo-"])):not(.cloned-for-mobile, .cloned-for-mobile *) {
+	background-color: var(--ext-header-logo-plate-bg);
 }
 
 /* Nav-extras CTA: white pill + dark text for contrast against the dark hero scrim.
@@ -928,7 +974,7 @@ header.wp-block-template-part:has(.ext-header--dark) :where(a, button, .wp-block
 }
 
 header.wp-block-template-part:has(.ext-header--dark) .wp-block-site-logo {
-	transition: filter 300ms ease;
+	transition: filter 300ms ease, background-color 300ms ease;
 }
 
 /* Past-hero: any sticky+overlay gets solid theme bg + elevation shadow.

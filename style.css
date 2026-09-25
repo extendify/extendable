@@ -31,6 +31,23 @@ Extendable therefore is also distributed under the terms of the GNU GPL.
 	--wp--preset--spacing--80: min(8rem, 12vw);
 }
 
+/* Spacing tokens saved content still uses; html:root beats core's default 50/60.
+---------------------------------------------------------------------------- */
+html:root {
+	--wp--preset--spacing--50: calc(clamp(2.5rem, 8vw, 4rem) * var(--wp--custom--space-scale, 1));
+	--wp--preset--spacing--55: calc(clamp(3rem, 12vw, 5rem) * var(--wp--custom--space-scale, 1));
+	--wp--preset--spacing--60: calc(clamp(3.5rem, 10vw, 6rem) * var(--wp--custom--space-scale, 1));
+	--wp--custom--gap-snug: max(4px, calc(8px * var(--wp--custom--gap-scale, 1)));
+	--wp--custom--gap-tight: max(4px, calc(16px * var(--wp--custom--gap-scale, 1)));
+	--wp--custom--gap-cozy: max(4px, calc(24px * var(--wp--custom--gap-scale, 1)));
+	--wp--custom--gap-loose: max(4px, calc(32px * var(--wp--custom--gap-scale, 1)));
+	--wp--custom--gap-block: max(4px, calc(clamp(3rem, 12vw, 5rem) * var(--wp--custom--gap-scale, 1)));
+	--wp--custom--space-snug: calc(8px * var(--wp--custom--space-scale, 1));
+	--wp--custom--space-cozy: calc(24px * var(--wp--custom--space-scale, 1));
+	--wp--custom--space-panel-block: calc(64px * var(--wp--custom--space-scale, 1));
+	--wp--custom--space-panel-inline: calc(48px * var(--wp--custom--space-scale, 1));
+}
+
 /*
  * A color-scheme meta otherwise lets OS dark mode restyle inputs and scrollbars.
  */

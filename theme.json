@@ -147,17 +147,7 @@
 			]
 		},
 		"custom": {
-			"space-panel-block": "calc(64px * var(--wp--custom--space-scale, 1))",
-			"space-panel-inline": "calc(48px * var(--wp--custom--space-scale, 1))",
 			"gap-scale": "var(--wp--custom--space-scale, 1)",
-			"gap-snug": "max(4px, calc(8px * var(--wp--custom--gap-scale, 1)))",
-			"gap-tight": "max(4px, calc(16px * var(--wp--custom--gap-scale, 1)))",
-			"gap-cozy": "max(4px, calc(24px * var(--wp--custom--gap-scale, 1)))",
-			"gap-loose": "max(4px, calc(32px * var(--wp--custom--gap-scale, 1)))",
-			"gap-block": "max(4px, calc(clamp(3rem, 12vw, 5rem) * var(--wp--custom--gap-scale, 1)))",
-			"space-snug": "calc(8px * var(--wp--custom--space-scale, 1))",
-			"space-cozy": "calc(24px * var(--wp--custom--space-scale, 1))",
-			"space-block": "calc(56px * var(--wp--custom--space-scale, 1))",
 			"color": {
 				"icon-surface": "color-mix(in oklab, var(--wp--preset--color--background), var(--wp--preset--color--primary, #1A1A1A) 6%)",
 				"icon-ink": "var(--wp--preset--color--foreground)",
@@ -409,34 +399,34 @@
 			"defaultSpacingSizes": false,
 			"spacingSizes": [
 				{
+					"slug": "10",
+					"name": "Tiny",
+					"size": "calc(0.5rem * var(--wp--custom--space-scale, 1))"
+				},
+				{
 					"slug": "20",
-					"name": "X-Small",
+					"name": "Tight",
 					"size": "calc(1rem * var(--wp--custom--space-scale, 1))"
 				},
 				{
+					"slug": "25",
+					"name": "Normal",
+					"size": "calc(clamp(1.25rem, 3.125vw, 1.5rem) * var(--wp--custom--space-scale, 1))"
+				},
+				{
 					"slug": "30",
-					"name": "Small",
+					"name": "Relaxed",
 					"size": "calc(clamp(1.5rem, 6vw, 2rem) * var(--wp--custom--space-scale, 1))"
 				},
 				{
 					"slug": "40",
-					"name": "Medium",
+					"name": "Roomy",
 					"size": "calc(clamp(2rem, 8vw, 3rem) * var(--wp--custom--space-scale, 1))"
 				},
 				{
-					"slug": "50",
-					"name": "Large",
-					"size": "calc(clamp(2.5rem, 8vw, 4rem) * var(--wp--custom--space-scale, 1))"
-				},
-				{
-					"slug": "55",
-					"name": "X-Large",
-					"size": "calc(clamp(3rem, 12vw, 5rem) * var(--wp--custom--space-scale, 1))"
-				},
-				{
-					"slug": "60",
-					"name": "XX-Large",
-					"size": "calc(clamp(3.5rem, 10vw, 6rem) * var(--wp--custom--space-scale, 1))"
+					"slug": "64",
+					"name": "Spacious",
+					"size": "calc(clamp(3rem, 9.375vw, 4.5rem) * var(--wp--custom--space-scale, 1))"
 				},
 				{
 					"slug": "70",

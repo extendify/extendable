@@ -22,7 +22,8 @@ Extendable therefore is also distributed under the terms of the GNU GPL.
 
 /* retired-names:start */
 /*
- * Retired design names, kept so saved content still renders. Each line is dated.
+ * Retired design names, kept so saved content still renders, and stand-ins for what
+ * WordPress before 6.9 cannot print. Each line is dated.
  * Generated; edit the source, not this block.
  */
 :where(:root) {
@@ -66,6 +67,14 @@ Extendable therefore is also distributed under the terms of the GNU GPL.
 	--wp--custom--spacing--large: var(--wp--preset--spacing--60, clamp(2.5rem, 8vw, 6rem)); /* 2022-10-03 */
 	--wp--custom--spacing--outer: max(1.25rem, 4vw); /* 2022-10-03 */
 	--wp--preset--spacing--80: min(8rem, 12vw); /* 2025-10-13 */
+	--wp--preset--border-radius--0: 0; /* 2026-10-15 */
+	--wp--preset--border-radius--1: 4px; /* 2026-10-15 */
+	--wp--preset--border-radius--2: 8px; /* 2026-10-15 */
+	--wp--preset--border-radius--3: 12px; /* 2026-10-15 */
+	--wp--preset--border-radius--4: 16px; /* 2026-10-15 */
+	--wp--preset--border-radius--5: 24px; /* 2026-10-15 */
+	--wp--preset--border-radius--6: 32px; /* 2026-10-15 */
+	--wp--preset--border-radius--full: 9999px; /* 2026-10-15 */
 }
 
 html:root {
@@ -81,6 +90,11 @@ html:root {
 	--wp--custom--space-cozy: calc(24px * var(--wp--custom--space-scale, 1)); /* 2026-09-25 */
 	--wp--custom--space-panel-block: calc(64px * var(--wp--custom--space-scale, 1)); /* 2026-09-25 */
 	--wp--custom--space-panel-inline: calc(48px * var(--wp--custom--space-scale, 1)); /* 2026-09-25 */
+}
+
+:where(.wp-element-button:focus-visible, .wp-block-button__link:focus-visible) {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus); /* 2026-10-15 */
+	outline-offset: var(--wp--custom--focus-ring--offset);
 }
 /* retired-names:end */
 
@@ -430,7 +444,7 @@ blockquote:is(.is-style-plain) {
 ----------------------------------------------------------*/
 :where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) {
 	border-color: var(--wp--custom--elements--input--border--color);
-	border-radius: var(--wp--custom--elements--button--border--radius);
+	border-radius: var(--wp--custom--radius--control);
 	border-width: var(--wp--custom--elements--input--border--width);
 }
 
@@ -439,7 +453,7 @@ blockquote:is(.is-style-plain) {
 }
 
 .wp-block-search .wp-block-search__input {
-	border-radius: var(--wp--custom--elements--button--border--radius);
+	border-radius: var(--wp--custom--radius--control);
 }
 
 /* Image

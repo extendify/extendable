@@ -285,8 +285,8 @@
 				"text-on-status": "var(--wp--custom--color--base-white)"
 			},
 			"radius": {
-				"control": "var(--wp--preset--border-radius--6)",
-				"input": "var(--wp--preset--border-radius--1)",
+				"control": "var(--wp--custom--elements--button--border--radius)",
+				"input": "var(--wp--custom--elements--input--border--radius)",
 				"chip": "var(--wp--preset--border-radius--0)",
 				"card": "var(--wp--preset--border-radius--0)",
 				"media": "var(--wp--preset--border-radius--0)",
@@ -1094,8 +1094,7 @@
 					}
 				}
 			],
-			"writingMode": true,
-			"defaultTextShadowPresets": false
+			"writingMode": true
 		},
 		"shadow": {
 			"presets": [

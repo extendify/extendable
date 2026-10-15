@@ -155,6 +155,34 @@ function extendable_register_pattern_categories() {
 add_action( 'init', 'extendable_register_pattern_categories', 9 );
 
 /**
+ * Registers the button styles theme.json styles; WordPress drops a variation with no registered style.
+ *
+ * @since Extendable 2.1.10
+ *
+ * @return void
+ */
+function extendable_register_button_styles() {
+	$button_styles = array(
+		'ext-secondary'   => __( 'Secondary', 'extendable' ),
+		'ext-soft'        => __( 'Soft', 'extendable' ),
+		'ext-ghost'       => __( 'Ghost', 'extendable' ),
+		'ext-link'        => __( 'Link', 'extendable' ),
+		'ext-destructive' => __( 'Destructive', 'extendable' ),
+	);
+
+	foreach ( $button_styles as $name => $label ) {
+		register_block_style(
+			'core/button',
+			array(
+				'name'  => $name,
+				'label' => $label,
+			)
+		);
+	}
+}
+add_action( 'init', 'extendable_register_button_styles' );
+
+/**
  * Include animation functionality
  */
 require_once get_template_directory() . '/inc/animations.php';

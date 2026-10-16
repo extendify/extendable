@@ -1,13 +1,12 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"$schema": "https://schemas.wp.org/wp/7.0/theme.json",
 	"version": 3,
 	"title": "Item Card 1",
 	"slug": "ext-preset--media-text--natural-1--card-1",
-	"blockTypes": ["core/media-text"],
+	"blockTypes": [
+		"core/media-text"
+	],
 	"styles": {
-		"color": {
-			"background": "var:preset|color|tertiary"
-		},
 		"spacing": {
 			"padding": {
 				"top": "0",
@@ -18,19 +17,39 @@
 		},
 		"blocks": {
 			"core/group": {
-				"spacing": {
-					"padding": {
-						"top": "var:preset|spacing|40",
-						"right": "var:preset|spacing|40",
-						"left": "var:preset|spacing|40",
-						"bottom": "var:preset|spacing|40"
-					}
-				},
 				"dimensions": {
 					"minHeight": "100%"
 				}
+			},
+			"core/heading": {
+				"typography": {
+					"fontSize": "var(--wp--custom--text--heading-4--font-size)",
+					"fontWeight": "var(--wp--custom--text--heading-4--font-weight)",
+					"lineHeight": "var(--wp--custom--text--heading-4--line-height)",
+					"letterSpacing": "var(--wp--custom--text--heading-4--letter-spacing)",
+					"textTransform": "var(--wp--custom--text--heading-4--text-transform)"
+				}
+			},
+			"core/post-title": {
+				"typography": {
+					"fontSize": "var(--wp--custom--text--heading-4--font-size)",
+					"fontWeight": "var(--wp--custom--text--heading-4--font-weight)",
+					"lineHeight": "var(--wp--custom--text--heading-4--line-height)",
+					"letterSpacing": "var(--wp--custom--text--heading-4--letter-spacing)",
+					"textTransform": "var(--wp--custom--text--heading-4--text-transform)"
+				}
+			},
+			"core/paragraph": {
+				"typography": {
+					"fontSize": "var:preset|font-size|small"
+				}
+			},
+			"core/post-excerpt": {
+				"typography": {
+					"fontSize": "var:preset|font-size|small"
+				}
 			}
 		},
-		"css": "& { overflow: hidden; height: 100%; }  & .wp-block-media-text__content { padding-right:0 !important; padding-left:0 !important; } "
+		"css": "& { overflow: hidden; height: 100%; }  & .wp-block-media-text__content { padding-right:0 !important; padding-left:0 !important; } & .ext-card-content { padding: var(--wp--preset--spacing--25, clamp(1.25rem, 3.125vw, 1.5rem)); } & :where(:not(.ext-card-content)) > .ext-card-body { padding-left: var(--wp--preset--spacing--25, clamp(1.25rem, 3.125vw, 1.5rem)); padding-right: var(--wp--preset--spacing--25, clamp(1.25rem, 3.125vw, 1.5rem)); } & :where(:not(.ext-card-content)) > .ext-card-footer { padding-left: var(--wp--preset--spacing--25, clamp(1.25rem, 3.125vw, 1.5rem)); padding-right: var(--wp--preset--spacing--25, clamp(1.25rem, 3.125vw, 1.5rem)); padding-bottom: var(--wp--preset--spacing--25, clamp(1.25rem, 3.125vw, 1.5rem)); } & :where(:not(.ext-card-content)) > .ext-card-body:first-child { padding-top: var(--wp--preset--spacing--25, clamp(1.25rem, 3.125vw, 1.5rem)); } & :where(:not(.ext-card-content)) > .ext-card-body:last-child { padding-bottom: var(--wp--preset--spacing--25, clamp(1.25rem, 3.125vw, 1.5rem)); } &:where(:not(.ext-card)) .wp-block-group { padding: var(--wp--preset--spacing--30); } & :where(.wp-block-group:not(:is(.ext-stack *)):not([class*=\"wp-container-core-group\"] > *)) { margin-top: 0; } & :where(.wp-block-heading:not(:is(.ext-stack *)):not([class*=\"wp-container-core-group\"] > *)) { margin-top: var(--wp--preset--spacing--20, 1rem); } & :where(.wp-block-post-title:not(:is(.ext-stack *)):not([class*=\"wp-container-core-group\"] > *)) { margin-top: var(--wp--preset--spacing--20, 1rem); } & :where(p:not(:is(.ext-stack *)):not([class*=\"wp-container-core-group\"] > *)) { margin-top: var(--wp--preset--spacing--20, 1rem); } & :where(.wp-block-post-excerpt:not(:is(.ext-stack *)):not([class*=\"wp-container-core-group\"] > *)) { margin-top: var(--wp--preset--spacing--20, 1rem); } & .ext-card-avatar img { width: var(--wp--custom--icon--xl); height: var(--wp--custom--icon--xl); object-fit: cover; border-radius: var(--wp--preset--border-radius--full); } & .ext-card-image { overflow: hidden; } & .ext-card-image > a { display: block; height: 100%; }"
 	}
 }

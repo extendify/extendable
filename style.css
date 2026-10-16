@@ -44,15 +44,15 @@ Extendable therefore is also distributed under the terms of the GNU GPL.
 	--wp--custom--color--button-secondary-stroke: var(--wp--custom--color--stroke-strong); /* 2026-10-14 */
 	--wp--custom--color--button-ghost-text: var(--wp--custom--color--text-brand); /* 2026-10-14 */
 	--wp--custom--color--button-ghost-bg-hover: var(--wp--custom--color--fill-brand-weak); /* 2026-10-14 */
-	--wp--custom--color--button-destructive-bg: var(--wp--custom--color--red-600); /* 2026-10-14 */
-	--wp--custom--color--button-destructive-bg-hover: var(--wp--custom--color--red-700); /* 2026-10-14 */
+	--wp--custom--color--button-destructive-bg: var(--wp--custom--color--fill-error-strong); /* 2026-10-14 */
+	--wp--custom--color--button-destructive-bg-hover: var(--wp--custom--color--fill-error-strong); /* 2026-10-14 */
 	--wp--custom--color--button-disabled-bg: var(--wp--custom--color--fill-disabled); /* 2026-10-14 */
 	--wp--custom--color--button-disabled-text: var(--wp--custom--color--text-disabled); /* 2026-10-14 */
 	--wp--custom--color--cover-scrim-uniform: rgba(44, 44, 48, 0.5); /* 2026-10-14 */
 	--wp--custom--color--cover-scrim-start: linear-gradient(to right, rgba(44, 44, 48, 0.82), rgba(44, 44, 48, 0.55) 45%, rgba(44, 44, 48, 0.12)); /* 2026-10-14 */
 	--wp--custom--color--cover-scrim-end: linear-gradient(to left, rgba(44, 44, 48, 0.82), rgba(44, 44, 48, 0.55) 45%, rgba(44, 44, 48, 0.12)); /* 2026-10-14 */
 	--wp--custom--color--cover-scrim-bottom: linear-gradient(to top, rgba(44, 44, 48, 0.85), rgba(44, 44, 48, 0.4) 38%, rgba(44, 44, 48, 0) 78%); /* 2026-10-14 */
-	--wp--custom--color--button-on-media-bg: var(--wp--custom--color--base-white); /* 2026-10-14 */
+	--wp--custom--color--button-on-media-bg: var(--wp--custom--color--fill-white); /* 2026-10-14 */
 	--wp--custom--color--button-on-media-bg-hover: rgba(255, 255, 255, 0.9); /* 2026-10-14 */
 	--wp--custom--color--button-on-media-text: var(--wp--custom--color--neutral-950); /* 2026-10-14 */
 	--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2); /* 2026-10-14 */
@@ -62,6 +62,54 @@ Extendable therefore is also distributed under the terms of the GNU GPL.
 	--wp--preset--shadow--crisp: 6px 6px 0 rgb(0, 0, 0); /* 2026-10-14 */
 	--wp--custom--radius--md: var(--wp--preset--border-radius--2); /* 2026-10-14 */
 	--wp--custom--radius--lg: var(--wp--preset--border-radius--3); /* 2026-10-14 */
+	--wp--custom--color--red-50: #FFF5F3; /* 2026-10-15 */
+	--wp--custom--color--red-100: #FFE5E2; /* 2026-10-15 */
+	--wp--custom--color--red-200: #FFCCC5; /* 2026-10-15 */
+	--wp--custom--color--red-300: #FFA99F; /* 2026-10-15 */
+	--wp--custom--color--red-400: #F97C70; /* 2026-10-15 */
+	--wp--custom--color--red-500: #EA4F46; /* 2026-10-15 */
+	--wp--custom--color--red-600: #DA2B2A; /* 2026-10-15 */
+	--wp--custom--color--red-700: #BC0F18; /* 2026-10-15 */
+	--wp--custom--color--red-800: #9B0B12; /* 2026-10-15 */
+	--wp--custom--color--red-900: #791313; /* 2026-10-15 */
+	--wp--custom--color--red-950: #560D0C; /* 2026-10-15 */
+	--wp--custom--color--amber-50: #FEF6ED; /* 2026-10-15 */
+	--wp--custom--color--amber-100: #FBECDC; /* 2026-10-15 */
+	--wp--custom--color--amber-200: #F6DCBF; /* 2026-10-15 */
+	--wp--custom--color--amber-300: #F0C697; /* 2026-10-15 */
+	--wp--custom--color--amber-400: #E6AB65; /* 2026-10-15 */
+	--wp--custom--color--amber-500: #D9922F; /* 2026-10-15 */
+	--wp--custom--color--amber-600: #CB8100; /* 2026-10-15 */
+	--wp--custom--color--amber-700: #A56800; /* 2026-10-15 */
+	--wp--custom--color--amber-800: #835200; /* 2026-10-15 */
+	--wp--custom--color--amber-900: #653E00; /* 2026-10-15 */
+	--wp--custom--color--amber-950: #412600; /* 2026-10-15 */
+	--wp--custom--color--green-50: #EFFBF3; /* 2026-10-15 */
+	--wp--custom--color--green-100: #DEF4E6; /* 2026-10-15 */
+	--wp--custom--color--green-200: #C2E9D1; /* 2026-10-15 */
+	--wp--custom--color--green-300: #9BDAB5; /* 2026-10-15 */
+	--wp--custom--color--green-400: #68C794; /* 2026-10-15 */
+	--wp--custom--color--green-500: #2AB475; /* 2026-10-15 */
+	--wp--custom--color--green-600: #00A265; /* 2026-10-15 */
+	--wp--custom--color--green-700: #008552; /* 2026-10-15 */
+	--wp--custom--color--green-800: #006A40; /* 2026-10-15 */
+	--wp--custom--color--green-900: #005331; /* 2026-10-15 */
+	--wp--custom--color--green-950: #00371F; /* 2026-10-15 */
+	--wp--custom--color--teal-50: #EFFAFA; /* 2026-10-15 */
+	--wp--custom--color--teal-100: #DEF3F2; /* 2026-10-15 */
+	--wp--custom--color--teal-200: #C3E7E7; /* 2026-10-15 */
+	--wp--custom--color--teal-300: #9BD9D8; /* 2026-10-15 */
+	--wp--custom--color--teal-400: #68C6C5; /* 2026-10-15 */
+	--wp--custom--color--teal-500: #29B2B2; /* 2026-10-15 */
+	--wp--custom--color--teal-600: #00A1A2; /* 2026-10-15 */
+	--wp--custom--color--teal-700: #008484; /* 2026-10-15 */
+	--wp--custom--color--teal-800: #006969; /* 2026-10-15 */
+	--wp--custom--color--teal-900: #005151; /* 2026-10-15 */
+	--wp--custom--color--teal-950: #003435; /* 2026-10-15 */
+	--wp--custom--color--base-white: #FFFFFF; /* 2026-10-15 */
+	--wp--custom--color--base-black: #000000; /* 2026-10-15 */
+	--wp--custom--color--base-yellow: #FFC72E; /* 2026-10-15 */
+	--wp--custom--space-block: calc(56px * var(--wp--custom--space-scale, 1)); /* 2026-10-16 */
 	--wp--custom--spacing--small: var(--wp--preset--spacing--30, clamp(1.5rem, 5vw, 2rem)); /* 2022-10-03 */
 	--wp--custom--spacing--medium: var(--wp--preset--spacing--50, clamp(2.5rem, 8vw, 4rem)); /* 2022-10-03 */
 	--wp--custom--spacing--large: var(--wp--preset--spacing--60, clamp(2.5rem, 8vw, 6rem)); /* 2022-10-03 */
@@ -96,6 +144,203 @@ html:root {
 	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus); /* 2026-10-15 */
 	outline-offset: var(--wp--custom--focus-ring--offset);
 }
+
+/* A 6.x-saved button names its size on the wrapper, and a sized container on itself, so both get the button's own presets. */
+:where(.wp-block-buttons, .wp-block-button) {
+	--wp--preset--font-size--small: var(--wp--custom--control-label--sm); /* 2026-10-16 */
+	--wp--preset--font-size--medium: var(--wp--custom--control-label--md); /* 2026-10-16 */
+	--wp--preset--font-size--large: var(--wp--custom--control-label--lg); /* 2026-10-16 */
+}
+
+/* Retired: a saved is-style-ext-small button is small; a size class still wins. */
+:where(.wp-block-button.is-style-ext-small) {
+	--wp--custom--button--label: var(--wp--custom--control-label--sm); /* 2026-10-15 */
+	--wp--custom--button--height: var(--wp--custom--control--sm); /* 2026-10-15 */
+	--wp--custom--button--icon: var(--wp--custom--control-icon--sm); /* 2026-10-15 */
+}
+
+:root :where(.wp-block-button:not(.is-style-ext-link) > .wp-block-button__link.has-small-font-size, .wp-block-button:not(.is-style-ext-link).has-small-font-size > .wp-block-button__link, .wp-block-buttons.has-small-font-size > .wp-block-button:not(.is-style-ext-link):not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size)) {
+	padding-top: calc((var(--wp--custom--control--sm) - 1.2em) / 2 - var(--wp--custom--border-width--1));
+	padding-bottom: calc((var(--wp--custom--control--sm) - 1.2em) / 2 - var(--wp--custom--border-width--1));
+}
+
+:root :where(.wp-block-button:not(.is-style-ext-link) > .wp-block-button__link.has-medium-font-size, .wp-block-button:not(.is-style-ext-link).has-medium-font-size > .wp-block-button__link, .wp-block-buttons.has-medium-font-size > .wp-block-button:not(.is-style-ext-link):not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size)) {
+	padding-top: calc((var(--wp--custom--control--md) - 1.2em) / 2 - var(--wp--custom--border-width--1));
+	padding-bottom: calc((var(--wp--custom--control--md) - 1.2em) / 2 - var(--wp--custom--border-width--1));
+}
+
+:root :where(.wp-block-button:not(.is-style-ext-link) > .wp-block-button__link.has-large-font-size, .wp-block-button:not(.is-style-ext-link).has-large-font-size > .wp-block-button__link, .wp-block-buttons.has-large-font-size > .wp-block-button:not(.is-style-ext-link):not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size)) {
+	padding-top: calc((var(--wp--custom--control--lg) - 1.2em) / 2 - var(--wp--custom--border-width--1));
+	padding-bottom: calc((var(--wp--custom--control--lg) - 1.2em) / 2 - var(--wp--custom--border-width--1));
+}
+
+:root :where(.wp-block-button.ext-icon-only > .wp-block-button__link) {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 1;
+	padding: 0;
+	min-height: var(--wp--custom--button--height);
+}
+
+:root :where(.wp-block-button.ext-icon-only > .wp-block-button__link.has-small-font-size, .wp-block-button.ext-icon-only.has-small-font-size > .wp-block-button__link, .wp-block-buttons.has-small-font-size > .wp-block-button.ext-icon-only:not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size)) {
+	min-height: var(--wp--custom--control--sm);
+}
+
+:root :where(.wp-block-button.ext-icon-only > .wp-block-button__link.has-medium-font-size, .wp-block-button.ext-icon-only.has-medium-font-size > .wp-block-button__link, .wp-block-buttons.has-medium-font-size > .wp-block-button.ext-icon-only:not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size)) {
+	min-height: var(--wp--custom--control--md);
+}
+
+:root :where(.wp-block-button.ext-icon-only > .wp-block-button__link.has-large-font-size, .wp-block-button.ext-icon-only.has-large-font-size > .wp-block-button__link, .wp-block-buttons.has-large-font-size > .wp-block-button.ext-icon-only:not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size)) {
+	min-height: var(--wp--custom--control--lg);
+}
+
+:root :where(.wp-block-button__link:is(:disabled, [aria-disabled="true"]), .wp-element-button:is(:disabled, [aria-disabled="true"])) {
+	color: var(--wp--custom--color--text-disabled);
+	background-color: var(--wp--custom--color--fill-disabled);
+	border-color: transparent;
+	box-shadow: none;
+	cursor: not-allowed;
+}
+
+:root :where(.wp-block-button:is(.is-style-ext-secondary, .is-style-outline) .wp-block-button__link:is(:disabled, [aria-disabled="true"])) {
+	background-color: transparent;
+	border-color: var(--wp--custom--color--stroke-weak);
+}
+
+:root :where(.wp-block-button:is(.is-style-ext-ghost, .is-style-ext-link) .wp-block-button__link:is(:disabled, [aria-disabled="true"])) {
+	background-color: transparent;
+}
+
+:where(.wp-block-button.ext-icon-only svg) {
+	width: var(--wp--custom--button--icon);
+	height: var(--wp--custom--button--icon);
+}
+
+:where(.wp-block-button.ext-icon-only > .wp-block-button__link.has-small-font-size svg, .wp-block-button.ext-icon-only.has-small-font-size > .wp-block-button__link svg, .wp-block-buttons.has-small-font-size > .wp-block-button.ext-icon-only:not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size) svg) {
+	width: var(--wp--custom--control-icon--sm);
+	height: var(--wp--custom--control-icon--sm);
+}
+
+:where(.wp-block-button.ext-icon-only > .wp-block-button__link.has-medium-font-size svg, .wp-block-button.ext-icon-only.has-medium-font-size > .wp-block-button__link svg, .wp-block-buttons.has-medium-font-size > .wp-block-button.ext-icon-only:not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size) svg) {
+	width: var(--wp--custom--control-icon--md);
+	height: var(--wp--custom--control-icon--md);
+}
+
+:where(.wp-block-button.ext-icon-only > .wp-block-button__link.has-large-font-size svg, .wp-block-button.ext-icon-only.has-large-font-size > .wp-block-button__link svg, .wp-block-buttons.has-large-font-size > .wp-block-button.ext-icon-only:not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size) svg) {
+	width: var(--wp--custom--control-icon--lg);
+	height: var(--wp--custom--control-icon--lg);
+}
+
+/* What theme.json has no hook for: the control sizes, the textInput/select focus ring,
+   placeholder, disabled and invalid states, the label element (no released WordPress has one),
+   accent-color on native checkbox/radio/range, ::selection, a link on a coloured section, a
+   quote's citation, and the generic focus ring every other interactive element gets on
+   :focus-visible. Hand-authored, not generated. */
+
+:where(label) {
+	font-size: var(--wp--custom--text--label--font-size);
+	font-weight: var(--wp--custom--text--label--font-weight);
+	line-height: var(--wp--custom--text--label--line-height);
+	letter-spacing: var(--wp--custom--text--label--letter-spacing);
+}
+
+:where(input[type="checkbox"], input[type="radio"], input[type="range"]) {
+	accent-color: var(--wp--custom--color--stroke-brand);
+}
+
+:where(*)::selection {
+	background-color: var(--wp--custom--color--highlight);
+}
+
+/* Border-box, or native padding and border land a 44px height on 48–50px. A textarea grows
+   with its rows, and a multi-row select would clip to one. */
+:where(input:not([type="checkbox"], [type="radio"], [type="range"], [type="hidden"], [type="file"], [type="color"], [type="image"], [type="submit"], [type="button"], [type="reset"]), select:not([multiple], [size])) {
+	box-sizing: border-box;
+	height: var(--wp--custom--control--md);
+}
+
+/* Under 16px iOS zooms the page on focus; WordPress 6.6 prints no textInput element. */
+:where(input:not([type="checkbox"], [type="radio"], [type="range"], [type="hidden"]), select, textarea) {
+	font-size: var(--wp--custom--form-control--input-value);
+}
+
+:where(input[type="checkbox"], input[type="radio"]) {
+	width: var(--wp--custom--form-control--choice);
+	height: var(--wp--custom--form-control--choice);
+}
+
+/* One pseudo-class, so the theme's `input, textarea { outline-color: inherit }` cannot recolour it. */
+:where(input, select, textarea):focus-visible {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+/* Equal to WordPress 7's textInput and select element styles, which print first. */
+:is(input, select, textarea):where(:disabled) {
+	color: var(--wp--custom--color--text-disabled);
+	background-color: var(--wp--custom--color--fill-weak);
+}
+
+:is(input, select, textarea):where(:user-invalid, [aria-invalid="true"]) {
+	border-color: var(--wp--custom--color--stroke-error);
+}
+
+/* Radix step 10, the step C3 walks to pass on background-base; the UA grey is under 4.5:1. */
+:where(input, textarea)::placeholder {
+	color: var(--wp--custom--color--text-weaker);
+	opacity: 1;
+}
+
+/* Equal to the UI-link block rules, which print first. text-brand is measured only on the
+   page's own grounds, so on a section with its own text colour the link takes that ink and
+   keeps its underline. A link colour set on the block itself still wins. */
+:root :where(.has-text-color a:where(:not(.wp-element-button))) {
+	color: inherit;
+}
+
+/* Equal to the palette's heading colour, which prints first; without it a heading on a block
+   with its own text colour keeps the page ink, invisible on a dark section. */
+:where(.has-text-color) :is(h1, h2, h3, h4, h5, h6) {
+	color: inherit;
+}
+
+/* Equal to core's quote and pullquote citation rules, which print first. WordPress 6.6 writes
+   the pullquote's as .wp-block-pullquote cite; 7.1 prints :where(cite). */
+.wp-block-quote cite, .wp-block-pullquote cite {
+	color: var(--wp--custom--color--text-weak);
+	font-size: var(--wp--custom--text--text-small--font-size);
+	font-weight: var(--wp--custom--text--text-small--font-weight);
+	line-height: var(--wp--custom--text--text-small--line-height);
+	letter-spacing: var(--wp--custom--text--text-small--letter-spacing);
+}
+
+/* One element, so the theme's :where(.wp-site-blocks :focus) loses and a theme.json ring wins. */
+html :where(a:focus-visible, button:focus-visible, [tabindex]:focus-visible) {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+/* What theme.json has no hook for: the navigation submenu's background/radius/shadow/layer,
+   and the active tab's border. Hand-authored, not generated. Each selector is core
+   block-library's own, which prints first, so it wins by load order. */
+
+.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
+	background-color: var(--wp--custom--color--background-overlay);
+}
+
+.wp-block-navigation .has-child .wp-block-navigation__submenu-container {
+	border-radius: var(--wp--custom--radius--overlay);
+	box-shadow: var(--wp--custom--shadow--overlay);
+	z-index: var(--wp--custom--layer--menu);
+}
+
+:where(.wp-block-tab-list button)[aria-selected="true"]::before {
+	border-color: var(--wp--custom--color--stroke-brand);
+}
+
+:where(.has-tertiary-background-color) { --wp--custom--color--text-weak: var(--wp--custom--color--background-sunken-weak, color-mix(in oklab, var(--wp--preset--color--foreground) 72%, var(--wp--preset--color--tertiary))); --wp--custom--color--background-base: var(--wp--preset--color--tertiary); --wp--custom--color--stroke-strong: var(--wp--custom--color--background-sunken-stroke-strong, color-mix(in oklab, var(--wp--preset--color--foreground) 45%, var(--wp--preset--color--tertiary))); --wp--custom--color--stroke-weak: var(--wp--custom--color--background-sunken-stroke-weak, color-mix(in oklab, var(--wp--preset--color--foreground) 18%, var(--wp--preset--color--tertiary))); }
+:where(.has-tertiary-background-color) a:where(:not(.wp-element-button)) { color: var(--wp--custom--color--text-strong); } :where(.has-tertiary-background-color) :where(.is-style-ext-link) .wp-block-button__link { color: var(--wp--custom--color--text-strong); }
 /* retired-names:end */
 
 

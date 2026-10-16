@@ -383,20 +383,6 @@ a {
 	text-underline-offset: var(--wp--custom--elements--link--text-underline-offset, 0.25ch);
 }
 
-a:hover,
-a:focus {
-	text-decoration-style: var(--wp--custom--elements--link--interactive--text-decoration-style, dashed);
-}
-
-:where(.wp-site-blocks *:focus) {
-	outline-width: 1px;
-	outline-style: solid;
-}
-
-a:active {
-	text-decoration: none;
-}
-
 /*
  * Navigation Block
  */
@@ -612,12 +598,6 @@ html.has-modal-open body:not(:has(.entry-content > .ext-hero-section.ext-hero-se
 	height: 28px;
 }
 
-.wp-block-navigation .wp-block-navigation-item a:hover,
-.wp-block-navigation .wp-block-navigation-item a:focus {
-	text-decoration: underline;
-	text-decoration-style: solid;
-}
-
 /* Don't display the homepage in the Page List block, when located inside a navigation element. */
 nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
 	display: none;
@@ -658,11 +638,6 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
 	transition: background-color 0.15s ease;
 }
 
-.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background):hover,
-.wp-block-button.is-style-outline > .wp-block-button__link:not(.has-background):hover {
-	background-color: rgba(159, 159, 159, 0.2);
-}
-
 /* Table
 ----------------------------------------------------------*/
 .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
@@ -689,7 +664,7 @@ blockquote:is(.is-style-plain) {
 ----------------------------------------------------------*/
 :where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) {
 	border-color: var(--wp--custom--elements--input--border--color);
-	border-radius: var(--wp--custom--radius--control);
+	border-radius: var(--wp--custom--radius--input);
 	border-width: var(--wp--custom--elements--input--border--width);
 }
 
@@ -698,7 +673,7 @@ blockquote:is(.is-style-plain) {
 }
 
 .wp-block-search .wp-block-search__input {
-	border-radius: var(--wp--custom--radius--control);
+	border-radius: var(--wp--custom--radius--input);
 }
 
 /* Image
@@ -749,23 +724,9 @@ blockquote:is(.is-style-plain) {
 	}
 }
 
-/*
- * Matching caret and focus outline colors.
- */
 input,
 textarea {
 	caret-color: inherit;
-	outline-color: inherit;
-}
-
-/*
- * Matching input with outline button style.
- */
-:where(.wp-block-post-comments-form) input:not([type="submit"]),
-:where(.wp-block-post-comments-form) textarea {
-	background-color: var(--wp--preset--color--background);
-	color: var(--wp--preset--color--foreground);
-	border-color: inherit;
 }
 
 

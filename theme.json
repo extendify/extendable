@@ -1355,19 +1355,6 @@
 								"textDecoration": "underline"
 							}
 						},
-						":focus": {
-							"typography": {
-								"textDecoration": "underline dashed"
-							}
-						},
-						":active": {
-							"color": {
-								"text": "var(--wp--preset--color--secondary)"
-							},
-							"typography": {
-								"textDecoration": "none"
-							}
-						},
 						"typography": {
 							"textDecoration": "none"
 						},
@@ -1383,19 +1370,6 @@
 						":hover": {
 							"typography": {
 								"textDecoration": "underline"
-							}
-						},
-						":focus": {
-							"typography": {
-								"textDecoration": "underline dashed"
-							}
-						},
-						":active": {
-							"color": {
-								"text": "var(--wp--preset--color--secondary)"
-							},
-							"typography": {
-								"textDecoration": "none"
 							}
 						},
 						"typography": {

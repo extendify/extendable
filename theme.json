@@ -1902,7 +1902,7 @@
 			"letterSpacing": "var(--wp--custom--text--text-regular--letter-spacing)",
 			"textTransform": "var(--wp--custom--text--text-regular--text-transform)"
 		},
-		"css": ".wp-block-heading { overflow-wrap: break-word; hyphens: auto; text-wrap: balance; } .wp-block-heading:lang(ko), .wp-block-heading:lang(th), .wp-block-heading:lang(lo), .wp-block-heading:lang(my), .wp-block-heading:lang(km), .wp-block-heading:lang(ar), .wp-block-heading:lang(ur) { word-break: keep-all; hyphens: manual; } @keyframes ext-object-drift { from { transform: translateY(10px); } to { transform: translateY(-10px); } } @media (prefers-reduced-motion: reduce) { @keyframes ext-object-drift { from { transform: none; } to { transform: none; } } }"
+		"css": ".wp-block-heading { overflow-wrap: break-word; text-wrap: balance; } .wp-block-heading:lang(ko), .wp-block-heading:lang(th), .wp-block-heading:lang(lo), .wp-block-heading:lang(my), .wp-block-heading:lang(km), .wp-block-heading:lang(ar), .wp-block-heading:lang(ur) { word-break: keep-all; } @keyframes ext-object-drift { from { transform: translateY(10px); } to { transform: translateY(-10px); } } @media (prefers-reduced-motion: reduce) { @keyframes ext-object-drift { from { transform: none; } to { transform: none; } } }"
 	},
 	"templateParts": [
 		{

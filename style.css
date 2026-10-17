@@ -264,7 +264,6 @@ html :where(a:focus-visible, button:focus-visible, [tabindex]:focus-visible) {
 }
 
 :root :where(.wp-block-image.alignfull img),
-:root :where(.wp-block-gallery.alignfull .wp-block-image img),
 :root :where(.wp-block-post-featured-image.alignfull img),
 :root :where(.wp-block-cover.alignfull),
 :root :where(.wp-block-media-text.alignfull) {

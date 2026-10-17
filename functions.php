@@ -163,12 +163,11 @@ add_action( 'init', 'extendable_register_pattern_categories', 9 );
  * @return void
  */
 function extendable_hide_block_presets() {
-	wp_enqueue_script(
+	wp_enqueue_style(
 		'extendable-hide-block-presets',
-		get_template_directory_uri() . '/assets/js/hide-block-presets.js',
-		array( 'wp-blocks', 'wp-dom-ready' ),
-		EXTENDABLE_THEME_VERSION,
-		true
+		get_template_directory_uri() . '/assets/css/hide-block-presets.css',
+		array(),
+		EXTENDABLE_THEME_VERSION
 	);
 }
 add_action( 'enqueue_block_editor_assets', 'extendable_hide_block_presets' );

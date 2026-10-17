@@ -394,7 +394,7 @@
 				},
 				"heading-6": {
 					"font-size": "clamp(1.125rem, 1.125rem + ((1vw - 0.2rem) * 0.208), 1.25rem)",
-					"font-weight": "400",
+					"font-weight": "500",
 					"line-height": "1.6",
 					"letter-spacing": "var(--wp--custom--tracking--normal)",
 					"text-transform": "none",

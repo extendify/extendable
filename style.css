@@ -21,6 +21,7 @@ Extendable therefore is also distributed under the terms of the GNU GPL.
 */
 
 /* retired-names:start */
+
 /*
  * Retired design names, kept so saved content still renders, and stand-ins for what
  * WordPress before 6.9 cannot print. Each line is dated.
@@ -193,7 +194,7 @@ html:root {
 	height: var(--wp--custom--form-control--choice);
 }
 
-/* One pseudo-class, so the theme's `input, textarea { outline-color: inherit }` cannot recolour it. */
+/* theme.json has no focus hook on a control; zero specificity, so a block's own outline wins. */
 :where(input, select, textarea):focus-visible {
 	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
 	outline-offset: var(--wp--custom--focus-ring--offset);
@@ -238,14 +239,14 @@ html:root {
 	letter-spacing: var(--wp--custom--text--text-small--letter-spacing);
 }
 
-/* One element, so the theme's :where(.wp-site-blocks :focus) loses and a theme.json ring wins. */
+/* The generic ring; a button's own theme.json ring prints after it and wins. */
 html :where(a:focus-visible, button:focus-visible, [tabindex]:focus-visible) {
 	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
 	outline-offset: var(--wp--custom--focus-ring--offset);
 }
 
 /* What theme.json has no hook for: the navigation submenu's background/radius/shadow/layer,
-   and the active tab's border. Hand-authored, not generated. Each selector is core
+   the active tab's border, and square corners on full-width media. Hand-authored, not generated. Each selector is core
    block-library's own, which prints first, so it wins by load order. */
 
 .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
@@ -262,8 +263,20 @@ html :where(a:focus-visible, button:focus-visible, [tabindex]:focus-visible) {
 	border-color: var(--wp--custom--color--stroke-brand);
 }
 
+:root :where(.wp-block-image.alignfull img),
+:root :where(.wp-block-gallery.alignfull .wp-block-image img),
+:root :where(.wp-block-post-featured-image.alignfull img),
+:root :where(.wp-block-cover.alignfull),
+:root :where(.wp-block-media-text.alignfull) {
+	border-radius: 0;
+}
+
 :where(.has-tertiary-background-color) { --wp--custom--color--text-weak: var(--wp--custom--color--background-sunken-weak, color-mix(in oklab, var(--wp--preset--color--foreground) 72%, var(--wp--preset--color--tertiary))); --wp--custom--color--background-base: var(--wp--preset--color--tertiary); --wp--custom--color--stroke-strong: var(--wp--custom--color--background-sunken-stroke-strong, color-mix(in oklab, var(--wp--preset--color--foreground) 45%, var(--wp--preset--color--tertiary))); --wp--custom--color--stroke-weak: var(--wp--custom--color--background-sunken-stroke-weak, color-mix(in oklab, var(--wp--preset--color--foreground) 18%, var(--wp--preset--color--tertiary))); }
-:where(.has-tertiary-background-color) a:where(:not(.wp-element-button)) { color: var(--wp--custom--color--text-strong); } :where(.has-tertiary-background-color) :where(.is-style-ext-link) .wp-block-button__link { color: var(--wp--custom--color--text-strong); }
+
+:where(.has-tertiary-background-color) a:where(:not(.wp-element-button)) { color: var(--wp--custom--color--text-strong); }
+
+:where(.has-tertiary-background-color) :where(.is-style-ext-link) .wp-block-button__link { color: var(--wp--custom--color--text-strong); }
+
 /* retired-names:end */
 
 
@@ -361,7 +374,7 @@ a {
 }
 
 .wp-block-navigation__responsive-container.has-modal-open.is-menu-open .site-logo-title .site-title {
-	font-size: 1.25rem;
+	font-size: var(--wp--custom--text--text-large--font-size);
 	font-weight: 700;
 	color: var(--wp--preset--color--foreground);
 	text-transform: uppercase;
@@ -407,7 +420,7 @@ a {
 }
 
 .has-modal-open .wp-block-navigation__responsive-container:not(.disable-default-overlay) .wp-block-navigation__responsive-dialog ul.wp-block-navigation__container > li:not(.wp-block-navigation__submenu-container) > a.wp-block-navigation-item__content {
-	font-size: 1.25rem;
+	font-size: var(--wp--custom--text--text-large--font-size);
 	font-weight: 600;
 }
 
@@ -416,7 +429,7 @@ a {
 }
 
 .has-modal-open .wp-block-navigation__responsive-container:not(.disable-default-overlay) .wp-block-navigation__responsive-dialog ul.wp-block-navigation__container .wp-block-navigation-submenu .wp-block-navigation-item a {
-	font-size: 1rem !important;
+	font-size: var(--wp--custom--text--text-regular--font-size) !important;
 }
 
 /*
@@ -506,7 +519,7 @@ html.has-modal-open body:not(:has(.entry-content > .ext-hero-section.ext-hero-se
 .has-modal-open .wp-block-navigation__responsive-dialog .ext-nav-extras-mobile .ext-nav-extras-phone,
 .has-modal-open .wp-block-navigation__responsive-dialog .ext-nav-extras-mobile .ext-nav-extras-phone a,
 .has-modal-open .wp-block-navigation__responsive-dialog .ext-nav-extras-mobile .ext-nav-extras-phone p {
-	font-size: 1.25rem !important;
+	font-size: var(--wp--custom--text--text-large--font-size) !important;
 	font-weight: 600 !important;
 }
 

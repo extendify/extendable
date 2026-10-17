@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.0/theme.json",
+	"version": 3,
+	"title": "Destructive",
+	"slug": "ext-destructive",
+	"blockTypes": [
+		"core/button",
+		"woocommerce/product-button"
+	],
+	"styles": {
+		"color": {
+			"text": "var(--wp--custom--color--text-on-status)",
+			"background": "var(--wp--custom--color--fill-error-strong)"
+		},
+		"border": {
+			"width": "var(--wp--custom--border-width--1)",
+			"style": "solid"
+		},
+		"spacing": {
+			"padding": {
+				"top": "calc((var(--wp--custom--button--height) - 1.2em) / 2 - var(--wp--custom--border-width--1))",
+				"bottom": "calc((var(--wp--custom--button--height) - 1.2em) / 2 - var(--wp--custom--border-width--1))",
+				"left": "1em",
+				"right": "1em"
+			}
+		},
+		":hover": {
+			"color": {
+				"text": "var(--wp--custom--color--text-on-status)",
+				"background": "var(--wp--custom--color--fill-error-strong-hover)"
+			}
+		},
+		":active": {
+			"color": {
+				"text": "var(--wp--custom--color--text-on-status)",
+				"background": "var(--wp--custom--color--fill-error-strong-active)"
+			}
+		}
+	}
+}

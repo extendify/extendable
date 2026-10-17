@@ -155,72 +155,23 @@ function extendable_register_pattern_categories() {
 add_action( 'init', 'extendable_register_pattern_categories', 9 );
 
 /**
- * Registers the button styles theme.json styles; WordPress drops a variation with no registered style.
+ * Hide the system block styles from the style picker. Patterns and design styles set them;
+ * WordPress still registers them, so their CSS prints.
  *
  * @since Extendable 2.1.10
  *
  * @return void
  */
-function extendable_register_button_styles() {
-	$button_styles = array(
-		'ext-secondary'   => __( 'Secondary', 'extendable' ),
-		'ext-soft'        => __( 'Soft', 'extendable' ),
-		'ext-ghost'       => __( 'Ghost', 'extendable' ),
-		'ext-link'        => __( 'Link', 'extendable' ),
-		'ext-destructive' => __( 'Destructive', 'extendable' ),
+function extendable_hide_block_presets() {
+	wp_enqueue_script(
+		'extendable-hide-block-presets',
+		get_template_directory_uri() . '/assets/js/hide-block-presets.js',
+		array( 'wp-blocks', 'wp-dom-ready' ),
+		EXTENDABLE_THEME_VERSION,
+		true
 	);
-
-	foreach ( $button_styles as $name => $label ) {
-		register_block_style(
-			'core/button',
-			array(
-				'name'  => $name,
-				'label' => $label,
-			)
-		);
-	}
 }
-add_action( 'init', 'extendable_register_button_styles' );
-
-/**
- * Register the text styles an editor can pick on a paragraph or a heading.
- *
- * @since Extendable 2.1.10
- *
- * @return void
- */
-function extendable_register_text_styles() {
-	$text_styles = array(
-		'core/paragraph' => array(
-			'ext-text-display'    => __( 'Display', 'extendable' ),
-			'ext-text-tagline'    => __( 'Tagline', 'extendable' ),
-			'ext-text-text-large' => __( 'Large text', 'extendable' ),
-			'ext-text-text-small' => __( 'Small text', 'extendable' ),
-			'ext-text-quote'      => __( 'Quote', 'extendable' ),
-		),
-		'core/heading'   => array(
-			'ext-text-heading-1' => __( 'Heading 1', 'extendable' ),
-			'ext-text-heading-2' => __( 'Heading 2', 'extendable' ),
-			'ext-text-heading-3' => __( 'Heading 3', 'extendable' ),
-			'ext-text-heading-4' => __( 'Heading 4', 'extendable' ),
-			'ext-text-heading-5' => __( 'Heading 5', 'extendable' ),
-			'ext-text-heading-6' => __( 'Heading 6', 'extendable' ),
-		),
-	);
-
-	foreach ( $text_styles as $block => $styles ) {
-		foreach ( $styles as $name => $label ) {
-			register_block_style(
-				$block,
-				array(
-					'name'  => $name,
-					'label' => $label,
-				)
-			);
-		}
-	}
-}
-add_action( 'init', 'extendable_register_text_styles' );
+add_action( 'enqueue_block_editor_assets', 'extendable_hide_block_presets' );
 
 /**
  * Include animation functionality

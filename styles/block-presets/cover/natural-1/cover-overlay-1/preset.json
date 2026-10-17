@@ -7,6 +7,26 @@
 		"core/cover"
 	],
 	"styles": {
-		"css": ""
+		"color": {
+			"text": "#FEFEFE"
+		},
+		"blocks": {
+			"core/heading": {
+				"color": {
+					"text": "#FEFEFE"
+				}
+			},
+			"core/paragraph": {
+				"color": {
+					"text": "#FEFEFE"
+				}
+			},
+			"core/button": {
+				"color": {
+					"text": "#010101",
+					"background": "#FEFEFE"
+				}
+			}
+		}
 	}
 }

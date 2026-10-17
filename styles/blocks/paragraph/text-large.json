@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.0/theme.json",
+	"version": 3,
+	"title": "Large text",
+	"slug": "ext-text-text-large",
+	"blockTypes": [
+		"core/paragraph"
+	],
+	"styles": {
+		"typography": {
+			"fontSize": "var(--wp--custom--text--text-large--font-size)",
+			"fontWeight": "var(--wp--custom--text--text-large--font-weight)",
+			"lineHeight": "var(--wp--custom--text--text-large--line-height)",
+			"letterSpacing": "var(--wp--custom--text--text-large--letter-spacing)",
+			"textTransform": "var(--wp--custom--text--text-large--text-transform)"
+		}
+	}
+}

@@ -104,50 +104,6 @@
 				"icon-surface": "#FFF4F1",
 				"icon-ink": "#1A1A1A"
 			}
-		},
-		"typography": {
-			"fontSizes": [
-				{
-					"fluid": {
-						"min": "1rem",
-						"max": "1rem"
-					},
-					"size": "1rem",
-					"slug": "small"
-				},
-				{
-					"fluid": {
-						"min": "1.125",
-						"max": "1.25rem"
-					},
-					"size": "1.25rem",
-					"slug": "medium"
-				},
-				{
-					"fluid": {
-						"min": "1.875rem",
-						"max": "2.25rem"
-					},
-					"size": "2.25rem",
-					"slug": "large"
-				},
-				{
-					"fluid": {
-						"min": "2.25rem",
-						"max": "3rem"
-					},
-					"size": "3rem",
-					"slug": "x-large"
-				},
-				{
-					"fluid": {
-						"min": "3rem",
-						"max": "3.75rem"
-					},
-					"size": "3.75rem",
-					"slug": "xx-large"
-				}
-			]
 		}
 	},
 	"styles": {

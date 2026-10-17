@@ -155,6 +155,24 @@ function extendable_register_pattern_categories() {
 add_action( 'init', 'extendable_register_pattern_categories', 9 );
 
 /**
+ * Hide the system block styles from the style picker. Patterns and design styles set them;
+ * WordPress still registers them, so their CSS prints.
+ *
+ * @since Extendable 2.1.10
+ *
+ * @return void
+ */
+function extendable_hide_block_presets() {
+	wp_enqueue_style(
+		'extendable-hide-block-presets',
+		get_template_directory_uri() . '/assets/css/hide-block-presets.css',
+		array(),
+		EXTENDABLE_THEME_VERSION
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'extendable_hide_block_presets' );
+
+/**
  * Include animation functionality
  */
 require_once get_template_directory() . '/inc/animations.php';

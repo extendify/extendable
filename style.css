@@ -159,8 +159,8 @@ html:root {
 /* What theme.json has no hook for: the control sizes, the textInput/select focus ring,
    placeholder, disabled and invalid states, the label element (no released WordPress has one),
    accent-color on native checkbox/radio/range, ::selection, a link on a coloured section, a
-   quote's citation, and the generic focus ring every other interactive element gets on
-   :focus-visible. Hand-authored, not generated. */
+   quote's citation, the inline code format, and the generic focus ring every other interactive
+   element gets on :focus-visible. Hand-authored, not generated. */
 
 :where(label) {
 	font-size: var(--wp--custom--text--label--font-size);
@@ -245,9 +245,22 @@ html :where(a:focus-visible, button:focus-visible, [tabindex]:focus-visible) {
 	outline-offset: var(--wp--custom--focus-ring--offset);
 }
 
+/* core/code dresses its own <code> through theme.json; this is every other one. */
+:where(:not(pre) > code) {
+	background-color: var(--wp--custom--color--fill-weak);
+	color: var(--wp--custom--color--text-strong);
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 0.95em;
+	padding: 0.1em 0.25em;
+	border-radius: var(--wp--custom--radius--chip);
+}
+
 /* What theme.json has no hook for: the navigation submenu's background/radius/shadow/layer,
-   the active tab's border, and square corners on full-width media. Hand-authored, not generated. Each selector is core
-   block-library's own, which prints first, so it wins by load order. */
+   the active tab's border, square corners on full-width media, the list, quote inset, table
+   row lines, details, file, video, footnotes, video-embed, playlist, current nav/page-list item, current
+   pagination number and read-more hover/active defaults. Hand-authored, not generated. Each
+   selector is its rival's own (core block-library's or global styles'), which prints first, so
+   it wins by load order, or zero-specificity where nothing else sets it. */
 
 .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
 	background-color: var(--wp--custom--color--background-overlay);
@@ -259,6 +272,12 @@ html :where(a:focus-visible, button:focus-visible, [tabindex]:focus-visible) {
 	z-index: var(--wp--custom--layer--menu);
 }
 
+/* Core lists submenus inline in the open mobile menu but leaves our dropdown shadow on them. */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
+	border-radius: 0;
+	box-shadow: none;
+}
+
 :where(.wp-block-tab-list button)[aria-selected="true"]::before {
 	border-color: var(--wp--custom--color--stroke-brand);
 }
@@ -266,8 +285,240 @@ html :where(a:focus-visible, button:focus-visible, [tabindex]:focus-visible) {
 :root :where(.wp-block-image.alignfull img),
 :root :where(.wp-block-post-featured-image.alignfull img),
 :root :where(.wp-block-cover.alignfull),
+:root :where(.wp-block-video.alignfull),
 :root :where(.wp-block-media-text.alignfull) {
 	border-radius: 0;
+}
+
+/* Global styles round the figure, which does not clip the video inside it. */
+:where(.wp-block-video video) {
+	border-radius: inherit;
+}
+
+/* Logical, so the indent stays on the marker's side on a right-to-left site. */
+:where(.wp-block-list) {
+	padding-inline-start: var(--wp--preset--spacing--25);
+}
+
+/* A list part sets its own rhythm. */
+:where(.wp-block-list:not([class*="is-style-"]) > li + li) {
+	margin-block-start: var(--wp--preset--spacing--10);
+}
+
+:where(.wp-block-list > li)::marker {
+	color: var(--wp--custom--color--text-weak);
+	font-variant-numeric: tabular-nums;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	width: auto;
+}
+
+/* Core's right-to-left sheet mirrors the line, and keeps its own inset on centred,
+   right-aligned and large quotes. */
+:root :where(.wp-block-quote:not(.is-style-large, .is-large, .has-text-align-center, .has-text-align-right)) {
+	padding-inline-start: var(--wp--preset--spacing--20);
+}
+
+.wp-block-quote.is-style-large:where(:not(.is-style-plain)),
+.wp-block-quote.is-large:where(:not(.is-style-plain)) {
+	margin-bottom: 0;
+}
+
+.wp-block-quote.is-style-large:where(:not(.is-style-plain)) p,
+.wp-block-quote.is-large:where(:not(.is-style-plain)) p {
+	font-size: var(--wp--custom--text--quote--font-size);
+	font-weight: var(--wp--custom--text--quote--font-weight);
+	line-height: var(--wp--custom--text--quote--line-height);
+	letter-spacing: var(--wp--custom--text--quote--letter-spacing);
+	text-transform: var(--wp--custom--text--quote--text-transform);
+	font-style: normal;
+}
+
+.wp-block-pullquote :where(cite) {
+	text-transform: none;
+}
+
+/* No layout here, so the browser's 1em paragraph margin would grow with the quote's size. */
+:where(.wp-block-pullquote p:has(+ cite)) {
+	margin-block-end: 0;
+}
+
+:where(.wp-block-pullquote p + cite) {
+	margin-block-start: var(--wp--preset--spacing--20);
+}
+
+.wp-block-table td,
+.wp-block-table th {
+	border-width: 0 0 var(--wp--custom--border-width--1);
+	border-style: solid;
+	border-color: inherit;
+	padding: var(--wp--preset--spacing--10) var(--wp--preset--spacing--20);
+}
+
+:where(.wp-block-table table > *, .wp-block-table tr) {
+	border-color: inherit;
+}
+
+/* The browser centres a th by default; logical, so it flips on a right-to-left site. */
+:where(.wp-block-table th:not([class*="has-text-align"])) {
+	text-align: start;
+}
+
+.wp-block-table thead,
+.wp-block-table tfoot {
+	border-width: 0;
+	border-color: var(--wp--custom--color--stroke-strong);
+}
+
+.wp-block-table tfoot :where(td, th) {
+	border-width: var(--wp--custom--border-width--1) 0 0;
+}
+
+/* Collapsed borders: the row line above the footer would win over the footer's own line. */
+.wp-block-table :where(tbody:has(+ tfoot) > tr:last-child) :is(td, th) {
+	border-bottom-width: 0;
+}
+
+:where(.wp-block-details > summary) {
+	color: var(--wp--custom--color--text-brand);
+	text-decoration: underline;
+}
+
+:where(.wp-block-details > summary:hover) {
+	text-decoration: underline dashed;
+}
+
+:where(.wp-block-details > summary:active) {
+	text-decoration: none;
+}
+
+:where(.has-text-color .wp-block-details > summary, .wp-block-details.has-text-color > summary) {
+	color: inherit;
+}
+
+html :where(.wp-block-details > summary:focus-visible) {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+/* An engine without ::details-content shows the open content unruled. */
+:where(.wp-block-details[open])::details-content {
+	margin-block-start: var(--wp--preset--spacing--10);
+	border-inline-start: var(--wp--custom--border-width--2) solid var(--wp--custom--color--stroke-weak);
+	padding-inline-start: var(--wp--preset--spacing--20);
+}
+
+/* Without it the details' blockGap adds to the space under the summary. */
+:root :where(.wp-block-details > summary + *) {
+	margin-block-start: 0;
+}
+
+.wp-block-file:not(.wp-element-button) {
+	font-size: var(--wp--custom--text--text-regular--font-size);
+}
+
+/* The download button: the ext-secondary role at the small size. Equal to the button
+   element's rules, which print first. */
+:root :where(.wp-block-file__button) {
+	color: var(--wp--custom--color--text-strong);
+	background-color: var(--wp--custom--color--fill-weak);
+	border-color: var(--wp--custom--color--stroke-strong);
+	box-shadow: none;
+	font-size: var(--wp--custom--control-label--sm);
+	padding-top: calc((var(--wp--custom--control--sm) - var(--wp--custom--text--label--line-height) * 1em) / 2 - var(--wp--custom--border-width--1));
+	padding-bottom: calc((var(--wp--custom--control--sm) - var(--wp--custom--text--label--line-height) * 1em) / 2 - var(--wp--custom--border-width--1));
+}
+
+/* Core's file sheet also fades the button to 0.85 on hover. */
+:root :where(.wp-block-file__button:hover) {
+	color: var(--wp--custom--color--text-strong);
+	background-color: var(--wp--custom--color--fill-weak-hover);
+	opacity: 1;
+}
+
+:root :where(.wp-block-file__button:active) {
+	color: var(--wp--custom--color--text-strong);
+	background-color: var(--wp--custom--color--fill-weak-active);
+}
+
+.wp-block-file * + .wp-block-file__button {
+	margin-inline-start: var(--wp--preset--spacing--20);
+}
+
+:where(.wp-block-file__embed) {
+	border: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-weak);
+	border-radius: var(--wp--custom--radius--media);
+}
+
+/* Logical, like the list's indent. */
+:where(.wp-block-footnotes) {
+	padding-inline-start: var(--wp--preset--spacing--25);
+}
+
+:where(.wp-block-footnotes > li + li) {
+	margin-block-start: var(--wp--preset--spacing--10);
+}
+
+:where(.wp-block-footnotes > li)::marker {
+	color: var(--wp--custom--color--text-weak);
+	font-variant-numeric: tabular-nums;
+}
+
+:where(.wp-block-embed.is-type-video .wp-block-embed__wrapper) {
+	overflow: hidden;
+	border-radius: var(--wp--custom--radius--media);
+}
+
+/* Prints after the rule above, in the same file, so the load-order tie wins. */
+:where(.wp-block-embed.is-type-video.alignfull .wp-block-embed__wrapper) {
+	border-radius: 0;
+}
+
+/* Core picks the button from the body's brightness, but the icon from the block's own text. */
+:where(.wp-block-playlist__waveform-player:not([data-waveform-player-color], [data-waveform-player-gradient])) .waveform-btn {
+	color: inherit;
+}
+
+.wp-block-playlist .waveform-btn {
+	border-start-start-radius: var(--wp--custom--radius--input);
+	border-end-start-radius: var(--wp--custom--radius--input);
+}
+
+.wp-block-playlist .waveform-btn:focus-visible,
+.wp-block-playlist .waveform-container:focus-visible {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+.wp-block-playlist-track .wp-block-playlist-track__button .wp-block-playlist-track__image {
+	border-color: var(--wp--custom--color--stroke-weak);
+	border-radius: var(--wp--custom--radius--input);
+}
+
+:where(.wp-block-navigation [aria-current="page"], .wp-block-page-list [aria-current="page"]) {
+	font-weight: var(--wp--custom--text--label--font-weight);
+}
+
+/* Global styles print core/query-pagination's link rule after the numbers' own at equal weight. */
+:root :where(.wp-block-query-pagination-numbers a:where(:not(.wp-element-button))) {
+	color: var(--wp--custom--color--text-weak);
+	padding: var(--wp--preset--spacing--10);
+}
+
+/* The current page is a <span>, which no link rule reaches. */
+:where(.wp-block-query-pagination-numbers .current) {
+	color: var(--wp--custom--color--text-strong);
+	padding: var(--wp--preset--spacing--10);
+}
+
+/* theme.json has no :hover or :active on read-more, and core sets none in every state. */
+.wp-block-read-more:where(:not([style*=text-decoration])):hover {
+	text-decoration: underline dashed;
+}
+
+.wp-block-read-more:where(:not([style*=text-decoration])):active {
+	text-decoration: none;
 }
 
 :where(.has-tertiary-background-color) { --wp--custom--color--text-weak: var(--wp--custom--color--background-sunken-weak, color-mix(in oklab, var(--wp--preset--color--foreground) 72%, var(--wp--preset--color--tertiary))); --wp--custom--color--background-base: var(--wp--preset--color--tertiary); --wp--custom--color--stroke-strong: var(--wp--custom--color--background-sunken-stroke-strong, color-mix(in oklab, var(--wp--preset--color--foreground) 45%, var(--wp--preset--color--tertiary))); --wp--custom--color--stroke-weak: var(--wp--custom--color--background-sunken-stroke-weak, color-mix(in oklab, var(--wp--preset--color--foreground) 18%, var(--wp--preset--color--tertiary))); }

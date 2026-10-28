@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.0/theme.json",
+	"version": 3,
+	"title": "Tagline",
+	"slug": "ext-text-tagline",
+	"blockTypes": [
+		"core/paragraph"
+	],
+	"styles": {
+		"typography": {
+			"fontSize": "var(--wp--custom--text--tagline--font-size)",
+			"fontWeight": "var(--wp--custom--text--tagline--font-weight)",
+			"lineHeight": "var(--wp--custom--text--tagline--line-height)",
+			"letterSpacing": "var(--wp--custom--text--tagline--letter-spacing)",
+			"textTransform": "var(--wp--custom--text--tagline--text-transform)"
+		}
+	}
+}

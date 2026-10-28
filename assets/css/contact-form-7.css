@@ -21,7 +21,7 @@
 .wpcf7 input[type="submit"] {
 	background-color: var(--wp--custom--elements--button--color--background);
 	color: var(--wp--custom--elements--button--color--text);
-	border-radius: var(--wp--custom--elements--button--border--radius);
+	border-radius: var(--wp--custom--radius--control);
 	border-width: 0;
 	font-family: inherit;
 	font-size: inherit;

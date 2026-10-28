@@ -272,6 +272,12 @@ html :where(a:focus-visible, button:focus-visible, [tabindex]:focus-visible) {
 	z-index: var(--wp--custom--layer--menu);
 }
 
+/* Core lists submenus inline in the open mobile menu but leaves our dropdown shadow on them. */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
+	border-radius: 0;
+	box-shadow: none;
+}
+
 :where(.wp-block-tab-list button)[aria-selected="true"]::before {
 	border-color: var(--wp--custom--color--stroke-brand);
 }

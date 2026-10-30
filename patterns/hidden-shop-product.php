@@ -11,7 +11,7 @@
 <!-- /wp:woocommerce/product-image -->
 
 <!-- wp:group {"className":"ext-card-body","style":{"layout":{"selfStretch":"fill"},"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"},"metadata":{"name":"Card Body"}} -->
-<div class="wp-block-group ext-card-body"><!-- wp:post-title {"level":3,"isLink":true,"fontSize":"medium-plus","className":"is-style-ext-preset--card-title"} /-->
+<div class="wp-block-group ext-card-body"><!-- wp:post-title {"level":3,"isLink":true,"className":"is-style-ext-preset--product-name"} /-->
 
 <!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true,"className":"is-style-ext-preset--price"} /--></div>
 <!-- /wp:group -->

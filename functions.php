@@ -38,6 +38,9 @@ if ( ! function_exists( 'extendable_support' ) ) :
 		} else {
 			$editor_style = 'style.css';
 		}
+		if ( class_exists( 'WooCommerce' ) ) {
+			$editor_style = array_merge( (array) $editor_style, array( 'assets/css/woocommerce.css' ) );
+		}
 		// Enqueue editor styles.
 		add_editor_style( $editor_style );
 	}
@@ -67,6 +70,15 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 
 		// Enqueue theme stylesheet.
 		wp_enqueue_style( 'extendable-style' );
+
+		if ( class_exists( 'WooCommerce' ) ) {
+			wp_enqueue_style(
+				'extendable-woocommerce-style',
+				get_template_directory_uri() . '/assets/css/woocommerce.css',
+				array( 'extendable-style' ),
+				EXTENDABLE_THEME_VERSION
+			);
+		}
 
 		global $wp_version;
 		if ( version_compare( $wp_version, '6.0.2', '<=' ) ) {

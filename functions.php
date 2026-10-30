@@ -267,6 +267,18 @@ add_filter( 'render_block_data', 'extendable_add_duotone_to_extendify_demo_site_
 add_filter( 'get_block_templates', 'extendable_exclude_wc_block_templates', 10, 2 );
 
 /**
+ * WooCommerce prints upsells after product-details, which sits in the buy box; the template has its own row.
+ *
+ * @package Extendable
+ */
+function extendable_remove_wc_upsells_hook() {
+	if ( function_exists( 'is_product' ) && is_product() ) {
+		remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+	}
+}
+add_action( 'template_redirect', 'extendable_remove_wc_upsells_hook' );
+
+/**
  * Header helper.
  *
  * @package Extendable

@@ -368,9 +368,9 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	background-color: var(--wp--custom--color--background-base);
 }
 
-/* woocommerce/add-to-cart-form: the classic variations table's space before the chosen variation, a regular step, not 1em. */
+/* woocommerce/add-to-cart-form: the classic variations table's space before the chosen variation and the button, a group step (fields to actions), not 1em. */
 .woocommerce div.product form.cart .variations {
-	margin-bottom: var(--wp--preset--spacing--25);
+	margin-bottom: var(--wp--preset--spacing--30);
 }
 
 /* woocommerce/add-to-cart-form: the variations stack, a regular step between them, instead of Woo's label-beside-select table. */
@@ -457,6 +457,18 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 /* woocommerce/add-to-cart-form: the classic "Clear" link, at text-small, not 0.83em. */
 .woocommerce div.product form.cart .reset_variations {
 	font-size: var(--wp--custom--text--text-small--font-size);
+}
+
+/* woocommerce/add-to-cart-form: the "Clear" link sits at the end of its option's label line; hidden, it held a row of space under the last select. */
+:where(.woocommerce table.variations tr) {
+	position: relative;
+}
+
+/* woocommerce/add-to-cart-form: the same link, out of the stack's flow. */
+:where(.woocommerce table.variations a.reset_variations) {
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline-end: 0;
 }
 
 /* woocommerce/store-notices: Woo prints the area even with no notice; it takes no room until one arrives. */

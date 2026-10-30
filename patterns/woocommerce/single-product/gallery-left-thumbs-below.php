@@ -40,19 +40,27 @@
 
 			<!-- wp:column {"width":"50%"} -->
 			<div class="wp-block-column" style="flex-basis:50%">
-				<!-- wp:group {"className":"is-style-ext-preset--buy-box","style":{"spacing":{"blockGap":"var:preset|spacing|25"}}} -->
+				<!-- wp:group {"className":"is-style-ext-preset--buy-box","style":{"spacing":{"blockGap":"var:preset|spacing|30"}}} -->
 				<div class="wp-block-group is-style-ext-preset--buy-box">
-					<!-- wp:group {"metadata":{"name":"Name"},"style":{"spacing":{"blockGap":"var:preset|spacing|10"}}} -->
+					<!-- wp:group {"metadata":{"name":"Intro"},"style":{"spacing":{"blockGap":"var:preset|spacing|25"}}} -->
 					<div class="wp-block-group">
-						<!-- wp:post-title {"level":1,"fontSize":"large","__woocommerceNamespace":"woocommerce/product-query/product-title"} /-->
+						<!-- wp:group {"metadata":{"name":"Heading"},"style":{"spacing":{"blockGap":"var:preset|spacing|20"}}} -->
+						<div class="wp-block-group">
+							<!-- wp:group {"metadata":{"name":"Name"},"style":{"spacing":{"blockGap":"var:preset|spacing|10"}}} -->
+							<div class="wp-block-group">
+								<!-- wp:post-title {"level":1,"fontSize":"large","__woocommerceNamespace":"woocommerce/product-query/product-title"} /-->
 
-						<!-- wp:woocommerce/product-price {"isDescendentOfSingleProductTemplate":true,"fontSize":"medium-plus","style":{"typography":{"fontWeight":"700"}}} /-->
+								<!-- wp:woocommerce/product-price {"isDescendentOfSingleProductTemplate":true,"fontSize":"medium-plus","style":{"typography":{"fontWeight":"700"}}} /-->
+							</div>
+							<!-- /wp:group -->
+
+							<!-- wp:woocommerce/product-rating {"isDescendentOfSingleProductTemplate":true} /-->
+						</div>
+						<!-- /wp:group -->
+
+						<!-- wp:post-excerpt {"__woocommerceNamespace":"woocommerce/product-query/product-summary"} /-->
 					</div>
 					<!-- /wp:group -->
-
-					<!-- wp:woocommerce/product-rating {"isDescendentOfSingleProductTemplate":true} /-->
-
-					<!-- wp:post-excerpt {"__woocommerceNamespace":"woocommerce/product-query/product-summary"} /-->
 
 					<!-- wp:woocommerce/add-to-cart-form {"quantitySelectorStyle":"stepper"} /-->
 

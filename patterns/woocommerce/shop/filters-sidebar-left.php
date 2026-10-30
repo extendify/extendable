@@ -10,15 +10,13 @@
 <div class="wp-block-group alignwide">
 	<!-- wp:woocommerce/breadcrumbs /-->
 
-	<!-- wp:group {"metadata":{"name":"Title"},"layout":{"type":"constrained","contentSize":"768px"}} -->
+	<!-- wp:group {"metadata":{"name":"Title"},"layout":{"type":"constrained","justifyContent":"left"}} -->
 	<div class="wp-block-group">
 		<!-- wp:query-title {"type":"archive","showPrefix":false} /-->
 
 		<!-- wp:term-description /-->
 	</div>
 	<!-- /wp:group -->
-
-	<!-- wp:woocommerce/store-notices /-->
 
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|64"}}} -->
 	<div class="wp-block-columns alignwide">

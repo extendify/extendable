@@ -17,6 +17,6 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"ext-card-footer","metadata":{"name":"Card Footer"}} -->
-<div class="wp-block-group ext-card-footer"><!-- wp:woocommerce/product-button {"isDescendentOfQueryLoop":true,"className":"is-style-ext-secondary"} /--></div>
+<div class="wp-block-group ext-card-footer"><!-- wp:woocommerce/product-button {"isDescendentOfQueryLoop":true,"className":"is-style-ext-secondary","fontSize":"small"} /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

@@ -235,7 +235,15 @@ add_filter( 'render_block_data', 'extendable_add_duotone_to_extendify_demo_site_
 
  function extendable_exclude_wc_block_templates( $templates, $query ) {
 	if ( ! class_exists( 'WooCommerce' ) ) {
-		$wc_template_slugs = array( 'checkout', 'single-product', 'archive-product' );
+		$wc_template_slugs = array(
+			'archive-product',
+			'single-product',
+			'product-search-results',
+			'page-cart',
+			'page-checkout',
+			'order-confirmation',
+			'checkout',
+		);
 		foreach ( $templates as $key => $template ) {
 			if ( isset( $template->slug ) && in_array( $template->slug, $wc_template_slugs, true ) ) {
 				unset( $templates[ $key ] );

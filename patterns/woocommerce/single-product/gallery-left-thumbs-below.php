@@ -64,6 +64,18 @@
 
 					<!-- wp:woocommerce/add-to-cart-form {"quantitySelectorStyle":"stepper"} /-->
 
+					<!-- wp:woocommerce/product-meta -->
+					<div class="wp-block-woocommerce-product-meta">
+						<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+						<div class="wp-block-group">
+							<!-- wp:woocommerce/product-sku {"isDescendentOfSingleProductTemplate":true} /-->
+
+							<!-- wp:post-terms {"term":"product_cat","prefix":"Category: "} /-->
+						</div>
+						<!-- /wp:group -->
+					</div>
+					<!-- /wp:woocommerce/product-meta -->
+
 					<!-- wp:woocommerce/product-details -->
 					<div class="wp-block-woocommerce-product-details">
 						<!-- wp:accordion {"metadata":{"isDescendantOfProductDetails":true}} -->
@@ -155,18 +167,6 @@
 						<!-- /wp:accordion -->
 					</div>
 					<!-- /wp:woocommerce/product-details -->
-
-					<!-- wp:woocommerce/product-meta -->
-					<div class="wp-block-woocommerce-product-meta">
-						<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-						<div class="wp-block-group">
-							<!-- wp:woocommerce/product-sku {"isDescendentOfSingleProductTemplate":true} /-->
-
-							<!-- wp:post-terms {"term":"product_cat","prefix":"Category: "} /-->
-						</div>
-						<!-- /wp:group -->
-					</div>
-					<!-- /wp:woocommerce/product-meta -->
 				</div>
 				<!-- /wp:group -->
 			</div>

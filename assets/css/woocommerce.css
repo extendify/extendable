@@ -844,34 +844,35 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image i
 	text-decoration: underline dashed;
 }
 
-/* woocommerce/product-template: the grid's gap; no blockGap support, so Woo's own 1.25em stands outside a token. */
+/* woocommerce/product-template: 24px between columns and 48px between rows, so a card's text never reads as the next photo's (owner, 2026-10-30); Woo's own 1.25em stands outside a token. */
 .wc-block-product-template__responsive {
-	gap: var(--wp--preset--spacing--30);
+	column-gap: var(--wp--preset--spacing--25);
+	row-gap: var(--wp--preset--spacing--40);
 }
 
 /* woocommerce/product-template: two tracks beside the gap; Woo's own track math assumes its 1.25em gap. */
 .wc-block-product-template__responsive.columns-2 {
-	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 1 * var(--wp--preset--spacing--30)) / 2)), 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 1 * var(--wp--preset--spacing--25)) / 2)), 1fr));
 }
 
 /* woocommerce/product-template: three tracks beside the gap. */
 .wc-block-product-template__responsive.columns-3 {
-	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 2 * var(--wp--preset--spacing--30)) / 3)), 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 2 * var(--wp--preset--spacing--25)) / 3)), 1fr));
 }
 
 /* woocommerce/product-template: four tracks beside the gap. */
 .wc-block-product-template__responsive.columns-4 {
-	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 3 * var(--wp--preset--spacing--30)) / 4)), 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 3 * var(--wp--preset--spacing--25)) / 4)), 1fr));
 }
 
 /* woocommerce/product-template: five tracks beside the gap. */
 .wc-block-product-template__responsive.columns-5 {
-	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 4 * var(--wp--preset--spacing--30)) / 5)), 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 4 * var(--wp--preset--spacing--25)) / 5)), 1fr));
 }
 
 /* woocommerce/product-template: six tracks beside the gap. */
 .wc-block-product-template__responsive.columns-6 {
-	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 5 * var(--wp--preset--spacing--30)) / 6)), 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 5 * var(--wp--preset--spacing--25)) / 6)), 1fr));
 }
 
 /* woocommerce/product-template: the card's title at the product-name part's size, not its heading level's. */

@@ -13,7 +13,7 @@
 <!-- wp:group {"className":"ext-card-body","style":{"layout":{"selfStretch":"fill"},"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"},"metadata":{"name":"Card Body"}} -->
 <div class="wp-block-group ext-card-body"><!-- wp:post-title {"level":3,"isLink":true,"className":"is-style-ext-preset--product-name"} /-->
 
-<!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true,"className":"is-style-ext-preset--price"} /--></div>
+<!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true,"className":"is-style-ext-preset--price","fontSize":"small"} /--></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"ext-card-footer","metadata":{"name":"Card Footer"}} -->

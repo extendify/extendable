@@ -877,7 +877,7 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image i
 
 /* woocommerce/product-template: the card's title at the product-name part's size, not its heading level's. */
 :where(.wc-block-product) :is(h1, h2, h3, h4, h5, h6):where(.wp-block-post-title) {
-	font-size: var(--wp--custom--text--heading-6--font-size);
+	font-size: var(--wp--preset--font-size--base);
 }
 
 /* woocommerce/product-template: the card's parts sit paired, as heading and text do, in place of Woo's flat 0.75rem. */

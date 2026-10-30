@@ -1285,6 +1285,11 @@ body:has(.ext-header-overlay) .entry-content > .ext-hero-section.ext-hero-sectio
 	z-index: 0;
 }
 
+/* Pulled up under the header, the hero's text would start behind it on a short screen. */
+body:has(.ext-header-overlay) .entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child > .wp-block-cover {
+	padding-top: calc(var(--ext-header-height) + var(--wp--preset--spacing--70)) !important;
+}
+
 /* Overlay over hero: wrapper goes transparent so the hero shows through.
    Reverts to default theme bg once .is-past-hero is added or on subpages without a hero. */
 body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-overlay):not(.is-past-hero):not(:has(.ext-header-glass)) {

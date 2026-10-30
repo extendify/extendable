@@ -363,12 +363,6 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	padding-inline-start: var(--wp--custom--form-control--inset);
 }
 
-/* woocommerce/add-to-cart-form: the space between variation rows, a related step, not the theme's block gap. */
-.woocommerce table.variations tr td,
-.woocommerce table.variations tr th {
-	padding-bottom: var(--wp--preset--spacing--20);
-}
-
 /* woocommerce/add-to-cart-form: the classic variation select's fill, which Woo's chevron shorthand leaves transparent. */
 .woocommerce div.product form.cart .variations select {
 	background-color: var(--wp--custom--color--background-base);
@@ -377,6 +371,82 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 /* woocommerce/add-to-cart-form: the classic variations table's space before the chosen variation, a regular step, not 1em. */
 .woocommerce div.product form.cart .variations {
 	margin-bottom: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/add-to-cart-form: the variations stack, a regular step between them, instead of Woo's label-beside-select table. */
+:where(.woocommerce table.variations tbody) {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/add-to-cart-form: each variation's label sits over its select, a byline step apart. */
+:where(.woocommerce table.variations tr) {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--10);
+}
+
+/* woocommerce/add-to-cart-form: the stacked label and select cells, without the table's cell padding. */
+.woocommerce table.variations tr td,
+.woocommerce table.variations tr th {
+	display: block;
+	padding: 0;
+}
+
+/* woocommerce/add-to-cart-form: the variation select fills the buy box, not Woo's 70% with a 1em margin. */
+.woocommerce div.product form.cart table.variations td select {
+	margin-inline-end: 0;
+	min-width: 0;
+	width: 100%;
+}
+
+/* woocommerce/add-to-cart-form: the chosen variation's price reads as the product's price, not body text. */
+:where(.woocommerce div.product .single_variation_wrap span.price) {
+	font-size: var(--wp--preset--font-size--medium-plus);
+	font-weight: bold;
+}
+
+/* woocommerce/add-to-cart-form: a simple product's quantity beside a button that fills the rest of the row. */
+.wp-block-woocommerce-add-to-cart-form form.cart {
+	grid-template-columns: min-content 1fr;
+}
+
+/* woocommerce/add-to-cart-form: a variable product's quantity beside a button that fills the rest of the row. */
+.wp-block-woocommerce-add-to-cart-form .variations_button {
+	grid-template-columns: min-content 1fr;
+}
+
+/* woocommerce/add-to-cart-form: a simple product's add-to-cart button stretches across its column, not Woo's start. */
+.wp-block-woocommerce-add-to-cart-form form.cart > .single_add_to_cart_button {
+	justify-self: stretch;
+}
+
+/* woocommerce/add-to-cart-form: a variable product's add-to-cart button stretches across its column, not Woo's start. */
+.wp-block-woocommerce-add-to-cart-form .variations_button > .single_add_to_cart_button {
+	justify-self: stretch;
+}
+
+/* woocommerce/product-meta: Woo's meta hook prints a brand or an extension's line after the block, outside its leaf. */
+:where(.wp-block-woocommerce-product-meta ~ :not([class*="wp-block-"])) {
+	color: var(--wp--custom--color--text-weak);
+	font-size: var(--wp--custom--text--text-small--font-size);
+}
+
+/* woocommerce/product-meta: those lines' links read as the meta's links, not body links. */
+.wp-block-woocommerce-product-meta ~ :where(:not([class*="wp-block-"])) :where(a) {
+	color: var(--wp--custom--color--text-weak);
+	text-decoration: none;
+}
+
+/* woocommerce/product-gallery: the photo sits a related step above its thumbnails, not the theme's block gap. */
+.wc-block-product-gallery {
+	gap: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/product-gallery: the thumbnails sit as far apart as the photo sits from them, not Woo's 2%. */
+:where(.wc-block-product-gallery-thumbnails__scrollable) {
+	gap: var(--wp--preset--spacing--20);
 }
 
 /* woocommerce/add-to-cart-form: the classic stock line, at text-small, not 0.92em. */

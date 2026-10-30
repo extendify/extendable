@@ -114,7 +114,7 @@
 				<div role="region" class="wp-block-accordion-panel">
 					<!-- wp:woocommerce/product-reviews -->
 					<div class="wp-block-woocommerce-product-reviews">
-						<!-- wp:woocommerce/product-reviews-title /-->
+						<!-- wp:woocommerce/product-reviews-title {"fontSize":"medium-plus"} /-->
 
 						<!-- wp:woocommerce/product-review-template -->
 						<!-- wp:columns -->

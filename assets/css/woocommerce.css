@@ -369,6 +369,16 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	padding-bottom: var(--wp--preset--spacing--20);
 }
 
+/* woocommerce/add-to-cart-form: the classic variation select's fill, which Woo's chevron shorthand leaves transparent. */
+.woocommerce div.product form.cart .variations select {
+	background-color: var(--wp--custom--color--background-base);
+}
+
+/* woocommerce/add-to-cart-form: the classic variations table's space before the chosen variation, a regular step, not 1em. */
+.woocommerce div.product form.cart .variations {
+	margin-bottom: var(--wp--preset--spacing--25);
+}
+
 /* woocommerce/add-to-cart-form: the classic stock line, at text-small, not 0.92em. */
 .woocommerce div.product p.stock {
 	font-size: var(--wp--custom--text--text-small--font-size);

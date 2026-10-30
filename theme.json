@@ -1813,7 +1813,7 @@
 			},
 			"woocommerce/breadcrumbs": {
 				"color": {
-					"text": "var(--wp--custom--color--text-weak)"
+					"text": "var(--wp--custom--color--text-strong)"
 				},
 				"elements": {
 					"link": {
@@ -1829,6 +1829,13 @@
 							}
 						}
 					}
+				},
+				"typography": {
+					"fontSize": "var(--wp--custom--text--text-small--font-size)",
+					"fontWeight": "var(--wp--custom--text--text-small--font-weight)",
+					"lineHeight": "var(--wp--custom--text--text-small--line-height)",
+					"letterSpacing": "var(--wp--custom--text--text-small--letter-spacing)",
+					"textTransform": "var(--wp--custom--text--text-small--text-transform)"
 				}
 			},
 			"woocommerce/product-results-count": {
@@ -1875,6 +1882,15 @@
 			},
 			"woocommerce/add-to-cart-form": {
 				"css": "& .stock.in-stock { color: var(--wp--custom--color--text-success); } & .stock.out-of-stock { color: var(--wp--custom--color--text-error); } & .stock.available-on-backorder { color: var(--wp--custom--color--text-warning); }"
+			},
+			"woocommerce/product-rating": {
+				"typography": {
+					"fontSize": "var(--wp--custom--text--text-small--font-size)",
+					"fontWeight": "var(--wp--custom--text--text-small--font-weight)",
+					"lineHeight": "var(--wp--custom--text--text-small--line-height)",
+					"letterSpacing": "var(--wp--custom--text--text-small--letter-spacing)",
+					"textTransform": "var(--wp--custom--text--text-small--text-transform)"
+				}
 			}
 		},
 		"color": {

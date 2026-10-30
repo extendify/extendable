@@ -50,7 +50,7 @@
 							<div class="wp-block-group">
 								<!-- wp:post-title {"level":1,"fontSize":"large","__woocommerceNamespace":"woocommerce/product-query/product-title"} /-->
 
-								<!-- wp:woocommerce/product-price {"isDescendentOfSingleProductTemplate":true,"fontSize":"medium-plus","style":{"typography":{"fontWeight":"700"}}} /-->
+								<!-- wp:woocommerce/product-price {"isDescendentOfSingleProductTemplate":true,"fontSize":"medium"} /-->
 							</div>
 							<!-- /wp:group -->
 
@@ -114,7 +114,7 @@
 								<div role="region" class="wp-block-accordion-panel">
 									<!-- wp:woocommerce/product-reviews -->
 									<div class="wp-block-woocommerce-product-reviews">
-										<!-- wp:woocommerce/product-reviews-title {"fontSize":"medium-plus"} /-->
+										<!-- wp:woocommerce/product-reviews-title /-->
 
 										<!-- wp:woocommerce/product-review-template -->
 										<!-- wp:columns -->

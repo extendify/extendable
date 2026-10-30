@@ -373,11 +373,11 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	margin-bottom: var(--wp--preset--spacing--30);
 }
 
-/* woocommerce/add-to-cart-form: the variations stack, a regular step between them, instead of Woo's label-beside-select table. */
+/* woocommerce/add-to-cart-form: the variations stack, a related step between siblings, instead of Woo's label-beside-select table. */
 :where(.woocommerce table.variations tbody) {
 	display: flex;
 	flex-direction: column;
-	gap: var(--wp--preset--spacing--25);
+	gap: var(--wp--preset--spacing--20);
 }
 
 /* woocommerce/add-to-cart-form: each variation's label sits over its select, a byline step apart. */

@@ -1841,6 +1841,13 @@
 			"woocommerce/product-results-count": {
 				"color": {
 					"text": "var(--wp--custom--color--text-weak)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--custom--text--text-small--font-size)",
+					"fontWeight": "var(--wp--custom--text--text-small--font-weight)",
+					"lineHeight": "var(--wp--custom--text--text-small--line-height)",
+					"letterSpacing": "var(--wp--custom--text--text-small--letter-spacing)",
+					"textTransform": "var(--wp--custom--text--text-small--text-transform)"
 				}
 			},
 			"woocommerce/product-sku": {

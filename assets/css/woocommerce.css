@@ -933,12 +933,17 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image i
 	line-height: var(--wp--custom--text--heading-5--line-height);
 }
 
-/* woocommerce/product-filters: each filter's heading. */
+/* woocommerce/product-filters: each filter's heading at the product name's step, a step under the panel title. */
 :where(.wc-block-product-filters) :is(h3, h4, h5, h6) {
-	font-size: var(--wp--custom--text--heading-6--font-size);
-	font-weight: var(--wp--custom--text--heading-6--font-weight);
+	font-size: var(--wp--preset--font-size--base);
+	font-weight: var(--wp--custom--typography--font-weight--medium);
 	letter-spacing: var(--wp--custom--text--heading-6--letter-spacing);
 	line-height: var(--wp--custom--text--heading-6--line-height);
+}
+
+/* woocommerce/product-filters: the filters sit a group step apart, in place of the theme's section-sized block gap. */
+:where(.wc-block-product-filters) {
+	--wc-product-filter-block-spacing: var(--wp--preset--spacing--30);
 }
 
 /* woocommerce/product-filter-chips, woocommerce/add-to-cart-with-options: a picked chip or pill, which falls back to the system's CanvasText; a pale brand falls under 3:1. */
@@ -998,6 +1003,24 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image i
 	--wc-product-filter-checkbox-list-option-element: var(--wp--custom--color--background-base); /* 2026-10-28 */
 	--wc-product-filter-checkbox-list-option-element-border: var(--wp--custom--color--stroke-strong); /* 2026-10-28 */
 	--wc-product-filter-checkbox-list-option-element-selected: var(--wp--custom--color--stroke-focus); /* 2026-10-28 */
+}
+
+/* woocommerce/product-filter-checkbox-list: the options sit related, at a spacing step rather than their line height. */
+:where(.wc-block-product-filter-checkbox-list fieldset > div) {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--10);
+}
+
+/* woocommerce/product-filter-checkbox-list: an option row as tall as its box or its text, with no line box around the label. */
+:where(.wc-block-product-filter-checkbox-list__item) {
+	display: flex;
+}
+
+/* woocommerce/product-filter-checkbox-list: an option reads as text-small, not at the label's heading weight. */
+.wc-block-product-filter-checkbox-list__label {
+	font-weight: var(--wp--custom--text--text-small--font-weight);
+	line-height: var(--wp--custom--text--text-small--line-height);
 }
 
 /* woocommerce/product-filter-checkbox-list: Woo's tint over the box, which the box's own fill replaces. */

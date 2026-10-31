@@ -8,16 +8,6 @@
 
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|30"}}} -->
 <div class="wp-block-group alignwide">
-	<!-- wp:woocommerce/breadcrumbs /-->
-
-	<!-- wp:group {"metadata":{"name":"Title"},"layout":{"type":"constrained","justifyContent":"left"}} -->
-	<div class="wp-block-group">
-		<!-- wp:query-title {"type":"archive","showPrefix":false} /-->
-
-		<!-- wp:term-description /-->
-	</div>
-	<!-- /wp:group -->
-
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|64"}}} -->
 	<div class="wp-block-columns alignwide">
 		<!-- wp:column {"width":"288px"} -->

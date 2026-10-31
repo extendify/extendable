@@ -66,7 +66,7 @@
 
 					<!-- wp:woocommerce/product-meta -->
 					<div class="wp-block-woocommerce-product-meta">
-						<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+						<!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 						<div class="wp-block-group">
 							<!-- wp:woocommerce/product-sku {"isDescendentOfSingleProductTemplate":true} /-->
 

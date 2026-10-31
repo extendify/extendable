@@ -14,6 +14,10 @@
 		<div class="wp-block-column" style="flex-basis:288px">
 			<!-- wp:woocommerce/product-filters -->
 			<div class="wp-block-woocommerce-product-filters wc-block-product-filters">
+				<!-- wp:heading {"style":{"margin":{"top":"0","bottom":"0"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
+				<h2 class="wp-block-heading" style="margin-top:0;margin-bottom:0"><?php echo esc_html_x( 'Filters', 'Heading above the shop sidebar filters', 'extendable' ); ?></h2>
+				<!-- /wp:heading -->
+
 				<!-- wp:woocommerce/product-filter-active -->
 				<div class="wp-block-woocommerce-product-filter-active">
 					<!-- wp:woocommerce/product-filter-removable-chips -->
@@ -30,24 +34,6 @@
 				</div>
 				<!-- /wp:woocommerce/product-filter-active -->
 
-				<!-- wp:heading {"level":3} -->
-				<h3 class="wp-block-heading"><?php echo esc_html_x( 'Filters', 'Heading above the shop sidebar filters', 'extendable' ); ?></h3>
-				<!-- /wp:heading -->
-
-				<!-- wp:woocommerce/product-results-count /-->
-
-				<!-- wp:woocommerce/product-filter-taxonomy {"taxonomy":"product_cat"} -->
-				<div class="wp-block-woocommerce-product-filter-taxonomy">
-					<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"bottom":"0.625rem","top":"0"}}}} -->
-					<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:0.625rem"><?php echo esc_html_x( 'Category', 'Shop sidebar filter heading', 'extendable' ); ?></h3>
-					<!-- /wp:heading -->
-
-					<!-- wp:woocommerce/product-filter-checkbox-list -->
-					<div class="wp-block-woocommerce-product-filter-checkbox-list wc-block-product-filter-checkbox-list"></div>
-					<!-- /wp:woocommerce/product-filter-checkbox-list -->
-				</div>
-				<!-- /wp:woocommerce/product-filter-taxonomy -->
-
 				<!-- wp:woocommerce/product-filter-price -->
 				<div class="wp-block-woocommerce-product-filter-price">
 					<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"bottom":"0.625rem","top":"0"}}}} -->
@@ -60,17 +46,41 @@
 				</div>
 				<!-- /wp:woocommerce/product-filter-price -->
 
-				<!-- wp:woocommerce/product-filter-attribute {"displayStyle":"woocommerce/product-filter-chips"} -->
+				<!-- wp:woocommerce/product-filter-rating -->
+				<div class="wp-block-woocommerce-product-filter-rating">
+					<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"bottom":"0.625rem","top":"0"}}}} -->
+					<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:0.625rem"><?php echo esc_html_x( 'Rating', 'Shop sidebar filter heading', 'extendable' ); ?></h3>
+					<!-- /wp:heading -->
+
+					<!-- wp:woocommerce/product-filter-checkbox-list -->
+					<div class="wp-block-woocommerce-product-filter-checkbox-list wc-block-product-filter-checkbox-list"></div>
+					<!-- /wp:woocommerce/product-filter-checkbox-list -->
+				</div>
+				<!-- /wp:woocommerce/product-filter-rating -->
+
+				<!-- wp:woocommerce/product-filter-attribute -->
 				<div class="wp-block-woocommerce-product-filter-attribute">
 					<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"bottom":"0.625rem","top":"0"}}}} -->
 					<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:0.625rem"><?php echo esc_html_x( 'Color', 'Shop sidebar filter heading', 'extendable' ); ?></h3>
 					<!-- /wp:heading -->
 
-					<!-- wp:woocommerce/product-filter-chips -->
-					<div class="wp-block-woocommerce-product-filter-chips wc-block-product-filter-chips"></div>
-					<!-- /wp:woocommerce/product-filter-chips -->
+					<!-- wp:woocommerce/product-filter-checkbox-list -->
+					<div class="wp-block-woocommerce-product-filter-checkbox-list wc-block-product-filter-checkbox-list"></div>
+					<!-- /wp:woocommerce/product-filter-checkbox-list -->
 				</div>
 				<!-- /wp:woocommerce/product-filter-attribute -->
+
+				<!-- wp:woocommerce/product-filter-taxonomy {"taxonomy":"product_cat"} -->
+				<div class="wp-block-woocommerce-product-filter-taxonomy">
+					<!-- wp:heading {"level":3,"style":{"spacing":{"margin":{"bottom":"0.625rem","top":"0"}}}} -->
+					<h3 class="wp-block-heading" style="margin-top:0;margin-bottom:0.625rem"><?php echo esc_html_x( 'Category', 'Shop sidebar filter heading', 'extendable' ); ?></h3>
+					<!-- /wp:heading -->
+
+					<!-- wp:woocommerce/product-filter-checkbox-list -->
+					<div class="wp-block-woocommerce-product-filter-checkbox-list wc-block-product-filter-checkbox-list"></div>
+					<!-- /wp:woocommerce/product-filter-checkbox-list -->
+				</div>
+				<!-- /wp:woocommerce/product-filter-taxonomy -->
 
 				<!-- wp:woocommerce/product-filter-status -->
 				<div class="wp-block-woocommerce-product-filter-status">
@@ -90,8 +100,10 @@
 
 		<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|25"}}} -->
 		<div class="wp-block-column">
-			<!-- wp:group {"layout":{"type":"flex","justifyContent":"right"}} -->
+			<!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between"}} -->
 			<div class="wp-block-group">
+				<!-- wp:woocommerce/product-results-count /-->
+
 				<!-- wp:woocommerce/catalog-sorting /-->
 			</div>
 			<!-- /wp:group -->

@@ -580,12 +580,13 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	margin-block: 0 var(--wp--preset--spacing--20);
 }
 
-/* woocommerce/classic-shortcode: the sign-in and register forms on the card part's soft look, a single field wide, in place of Woo's ruled box. */
+/* woocommerce/classic-shortcode: the sign-in and register forms on the vibe's filled card, else the soft card, a single field wide, in place of Woo's ruled box. */
 .woocommerce form.login,
 .woocommerce form.register {
-	background-color: var(--wp--custom--color--fill-weaker);
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
-	border-width: 0;
+	box-shadow: var(--wp--custom--shadow--card);
 	margin: 0;
 	max-width: 28rem;
 	padding: var(--wp--preset--spacing--25);
@@ -872,18 +873,21 @@ table.wc-block-cart-items .wc-block-cart-items__header {
 	padding-block-start: 0;
 }
 
-/* woocommerce/checkout-order-summary-block: the summary is the card part's soft look, read-only beside the form, in place of Woo's ruled box. */
+/* woocommerce/checkout-order-summary-block: the summary on the vibe's filled card, else the soft card, read-only beside the form, in place of Woo's ruled box. */
 .wp-block-woocommerce-checkout-order-summary-block {
-	background-color: var(--wp--custom--color--fill-weaker);
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
-	border-width: 0;
+	box-shadow: var(--wp--custom--shadow--card);
 	padding: var(--wp--preset--spacing--25);
 }
 
-/* woocommerce/cart-totals-block: the cart's totals and its checkout button on the same soft card. */
+/* woocommerce/cart-totals-block: the cart's totals and its checkout button on the same card as the checkout summary. */
 :where(.wp-block-woocommerce-cart-totals-block) {
-	background-color: var(--wp--custom--color--fill-weaker);
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
 	padding: var(--wp--preset--spacing--25);
 }
 

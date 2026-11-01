@@ -556,7 +556,13 @@
 					"hover-decoration": "underline"
 				}
 			},
-			"color-scheme": "light"
+			"color-scheme": "light",
+			"store-card": {
+				"background": "var(--wp--custom--color--fill-weaker)",
+				"border-width": "0",
+				"border-style": "solid",
+				"border-color": "var(--wp--custom--color--stroke-weak)"
+			}
 		},
 		"layout": {
 			"contentSize": "42rem",

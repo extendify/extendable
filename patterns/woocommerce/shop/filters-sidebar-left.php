@@ -14,8 +14,8 @@
 		<div class="wp-block-column" style="flex-basis:288px">
 			<!-- wp:woocommerce/product-filters -->
 			<div class="wp-block-woocommerce-product-filters wc-block-product-filters">
-				<!-- wp:heading {"style":{"margin":{"top":"0","bottom":"0"},"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-				<h2 class="wp-block-heading" style="margin-top:0;margin-bottom:0"><?php echo esc_html_x( 'Filters', 'Heading above the shop sidebar filters', 'extendable' ); ?></h2>
+				<!-- wp:heading -->
+				<h2 class="wp-block-heading"><?php echo esc_html_x( 'Filters', 'Heading above the shop sidebar filters', 'extendable' ); ?></h2>
 				<!-- /wp:heading -->
 
 				<!-- wp:woocommerce/product-filter-active -->

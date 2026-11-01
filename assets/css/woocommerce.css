@@ -927,6 +927,7 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image i
 
 /* woocommerce/product-filters: the panel's title as a label, at the results count's size and ink. */
 :where(.wc-block-product-filters) h2 {
+	margin-block: 0;
 	color: var(--wp--custom--color--text-weak);
 	font-size: var(--wp--custom--text--text-small--font-size);
 	font-weight: var(--wp--custom--typography--font-weight--medium);
@@ -942,9 +943,24 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image i
 	line-height: var(--wp--custom--text--heading-6--line-height);
 }
 
-/* woocommerce/product-filters: the filters sit a group step apart, in place of the theme's section-sized block gap. */
+/* woocommerce/product-filter-active: with nothing picked it prints empty, and its gap would double the space under the panel title. */
+:where(.wp-block-woocommerce-product-filter-active:not(:has(.wc-block-product-filter-removable-chips__item))) {
+	display: none;
+}
+
+/* woocommerce/product-filters: the panel title sits a related step over the first filter, in place of the theme's section-sized block gap. */
 :where(.wc-block-product-filters) {
-	--wc-product-filter-block-spacing: var(--wp--preset--spacing--30);
+	--wc-product-filter-block-spacing: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/product-filters: a filter after another sits two related steps from it, so the filters read as groups. */
+:where(.wc-block-product-filters [class*="wp-block-woocommerce-product-filter-"] + [class*="wp-block-woocommerce-product-filter-"]) {
+	margin-block-start: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/product-filter-active: when it is hidden, the first filter still sits a related step under the panel title. */
+:where(.wc-block-product-filters h2 + .wp-block-woocommerce-product-filter-active:not(:has(.wc-block-product-filter-removable-chips__item)) + *) {
+	margin-block-start: 0;
 }
 
 /* woocommerce/product-filter-chips, woocommerce/add-to-cart-with-options: a picked chip or pill, which falls back to the system's CanvasText; a pale brand falls under 3:1. */

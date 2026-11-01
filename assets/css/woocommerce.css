@@ -751,16 +751,31 @@ table.wc-block-cart-items .wc-block-cart-items__header {
 	letter-spacing: var(--wp--custom--tracking--wider);
 }
 
-/* woocommerce/cart-totals-block: the uppercase totals heading, at the caps tracking. */
+/* woocommerce/cart-totals-block: the uppercase totals heading, at the caps tracking, starting at the card's inset. */
 .wc-block-cart .wc-block-cart__totals-title {
 	color: var(--wp--custom--color--text-weak);
 	letter-spacing: var(--wp--custom--tracking--wider);
+	padding-block-start: 0;
 }
 
-/* woocommerce/checkout-order-summary-block: the summary drops its frame, ruled like the cart's totals. */
+/* woocommerce/checkout-order-summary-block: the summary is the card part's soft look, read-only beside the form, in place of Woo's ruled box. */
 .wp-block-woocommerce-checkout-order-summary-block {
+	background-color: var(--wp--custom--color--fill-weaker);
 	border-radius: var(--wp--custom--radius--card);
 	border-width: 0;
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/cart-totals-block: the cart's totals and its checkout button on the same soft card. */
+:where(.wp-block-woocommerce-cart-totals-block) {
+	background-color: var(--wp--custom--color--fill-weaker);
+	border-radius: var(--wp--custom--radius--card);
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/proceed-to-checkout-block: the button ends the card at its inset, without Woo's 16px under it. */
+.wc-block-cart__submit {
+	margin-block-end: 0;
 }
 
 /* woocommerce/checkout-order-summary-block: the summary's inner frame, dropped with the outer one. */
@@ -781,9 +796,14 @@ table.wc-block-cart-items .wc-block-cart-items__header {
 	padding-inline: 0;
 }
 
-/* woocommerce/checkout-order-summary-block: the summary's title at the column's edge. */
+/* woocommerce/checkout-order-summary-block: the summary's title at the card's inset. */
 .wp-block-woocommerce-checkout-order-summary-block .wc-block-components-checkout-order-summary__title .wc-block-components-checkout-order-summary__title-text {
 	margin-inline-start: 0;
+}
+
+/* woocommerce/checkout-order-summary-block: the title starts at the card's top inset, not 16px under it. */
+.wp-block-woocommerce-checkout-order-summary-block .wc-block-components-checkout-order-summary__title {
+	margin-block-start: 0;
 }
 
 /* woocommerce/cart-items-block, woocommerce/checkout: Woo's fine print reads the small preset as 14px; Extendable's small is 16px. */

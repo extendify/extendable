@@ -1621,3 +1621,12 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 header:has(> header.wp-block-template-part :where(.ext-header-overlay)) {
 	display: contents;
 }
+
+/* ===========================================================
+   Empty section band
+   =========================================================== */
+
+/* A band that rendered nothing, such as related products for a product with none, draws no fill or padding. */
+.ext-section:not(:has(*)) {
+	display: none;
+}

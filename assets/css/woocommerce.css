@@ -1064,11 +1064,22 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 	outline-offset: var(--wp--custom--focus-ring--offset);
 }
 
-/* woocommerce/product-filter-price-slider: the range and its handles, which fall back to #fff and #1e1e1e; a pale brand falls under 3:1. */
+/* woocommerce/product-filter-price-slider: the range and its handles at the fields' interactive edge, which fall back to #fff and #1e1e1e; a pale brand falls under 3:1. */
 :where(.wc-block-product-filter-price-slider) {
-	--wc-product-filter-price-slider: var(--wp--custom--color--stroke-focus); /* 2026-10-28 */
+	--wc-product-filter-price-slider: var(--wp--custom--color--stroke-strong); /* 2026-11-01 */
 	--wc-product-filter-price-slider-handle: var(--wp--custom--color--background-base); /* 2026-10-28 */
-	--wc-product-filter-price-slider-handle-border: var(--wp--custom--color--stroke-focus); /* 2026-10-28 */
+	--wc-product-filter-price-slider-handle-border: var(--wp--custom--color--stroke-strong); /* 2026-11-01 */
+}
+
+/* woocommerce/product-filter-rating: the stars read as metadata, in the weak ink, as a product's rating does. */
+:where(.wc-block-product-filter-checkbox-list__stars) {
+	--wc-product-filter-checkbox-list-label-element: var(--wp--custom--color--text-weak);
+}
+
+/* woocommerce/product-filter-rating: the stars at the small icon size beside the 14px options, not Woo's 1.55em. */
+.wc-block-product-filter-checkbox-list__stars,
+.wc-block-product-filter-checkbox-list__stars-svg {
+	height: var(--wp--custom--control-icon--sm);
 }
 
 /* woocommerce/product-filter-price-slider: a handle under the pointer or in focus, which Woo prints #1e1e1e. */

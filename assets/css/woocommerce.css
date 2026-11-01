@@ -498,6 +498,109 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	padding-block-start: 0;
 }
 
+/* woocommerce/classic-shortcode: the account page's menu and content side by side, wrapping to one column on a narrow screen, in place of Woo's floats. */
+:where(.woocommerce-account .woocommerce:has(> .woocommerce-MyAccount-navigation)) {
+	align-items: flex-start;
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--wp--preset--spacing--40) var(--wp--preset--spacing--64);
+}
+
+/* woocommerce/classic-shortcode: Woo's float clearfix, which as flex items would push the menu off the edge. */
+.woocommerce-account .woocommerce::after,
+.woocommerce-account .woocommerce::before {
+	content: none;
+}
+
+/* woocommerce/classic-shortcode: the account menu at the shop sidebar's 288px. */
+.woocommerce-account .woocommerce-MyAccount-navigation {
+	flex: 0 1 18rem;
+	float: none;
+	width: auto;
+}
+
+/* woocommerce/classic-shortcode: the account content takes the rest of the row. */
+.woocommerce-account .woocommerce-MyAccount-content {
+	flex: 1 1 20rem;
+	float: none;
+	min-width: 0;
+	width: auto;
+}
+
+/* woocommerce/classic-shortcode: the menu's items sit related, with no list margin. */
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--10);
+	margin: 0;
+}
+
+/* woocommerce/classic-shortcode: an item's space is its link's padding, not Woo's 1em. */
+.woocommerce-account .woocommerce-MyAccount-navigation li {
+	padding: 0;
+}
+
+/* woocommerce/classic-shortcode: each menu item a ghost row, the neutral hover fill under the pointer. */
+.woocommerce-account .woocommerce-MyAccount-navigation li a {
+	border-radius: var(--wp--custom--radius--control);
+	color: var(--wp--custom--color--text-strong);
+	display: block;
+	padding: var(--wp--preset--spacing--10) var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/classic-shortcode: a menu item under the pointer. */
+:where(.woocommerce-MyAccount-navigation) li a:hover {
+	background-color: var(--wp--custom--color--fill-neutral-hover);
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* woocommerce/classic-shortcode: the current item on the soft fill at the label weight, not Woo's underline. */
+.woocommerce-account .woocommerce-MyAccount-navigation li.is-active a {
+	background-color: var(--wp--custom--color--fill-weak);
+	font-weight: var(--wp--custom--text--label--font-weight);
+	text-decoration: none;
+}
+
+/* woocommerce/classic-shortcode: the sign-in form's heading at heading-5, under the page title. */
+:where(.woocommerce-account .woocommerce) > h2 {
+	font-size: var(--wp--custom--text--heading-5--font-size);
+	font-weight: var(--wp--custom--text--heading-5--font-weight);
+	line-height: var(--wp--custom--text--heading-5--line-height);
+	margin-block: 0 var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/classic-shortcode: the sign-in and register forms on the card part's soft look, a single field wide, in place of Woo's ruled box. */
+.woocommerce form.login,
+.woocommerce form.register {
+	background-color: var(--wp--custom--color--fill-weaker);
+	border-radius: var(--wp--custom--radius--card);
+	border-width: 0;
+	margin: 0;
+	max-width: 28rem;
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/classic-shortcode: Remember me, then the sign-in button across the form, in place of Woo's float. */
+:where(.woocommerce-form-login .form-row:has(> .woocommerce-form-login__submit)) {
+	align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/classic-shortcode: the sign-in button in the column's flow. */
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit {
+	float: none;
+	margin-inline-end: 0;
+}
+
+/* woocommerce/classic-shortcode: Remember me's box centred on its label. */
+.woocommerce .woocommerce-form-login .woocommerce-form-login__rememberme {
+	align-items: center;
+	display: inline-flex;
+	gap: var(--wp--preset--spacing--10);
+}
+
 /* woocommerce/store-notices: Woo prints the area even with no notice; it takes no room until one arrives. */
 :where(.wc-block-store-notices:not(:has(.wc-block-components-notice-banner, .woocommerce-error, .woocommerce-info, .woocommerce-message))) {
 	display: none;

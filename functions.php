@@ -381,8 +381,8 @@ function extendable_set_default_template_for_new_pages( $post_id, $post, $update
 		return;
 	}
 
-	// A page template would replace WooCommerce's page-cart and page-checkout templates on its own pages.
-	if ( has_block( 'woocommerce/cart', $post ) || has_block( 'woocommerce/checkout', $post ) ) {
+	// A page template would replace WooCommerce's cart, checkout and account templates on its own pages.
+	if ( has_block( 'woocommerce/cart', $post ) || has_block( 'woocommerce/checkout', $post ) || has_shortcode( $post->post_content, 'woocommerce_my_account' ) ) {
 		return;
 	}
 

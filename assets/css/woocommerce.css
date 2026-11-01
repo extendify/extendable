@@ -891,6 +891,28 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image i
 	margin-bottom: var(--wp--preset--spacing--25);
 }
 
+/* woocommerce/product-button: View cart, printed after adding, as a small ghost button the height of Add to cart, in place of Woo's underlined link padded 0.5em down. */
+.woocommerce a.added_to_cart {
+	align-items: center;
+	border: var(--wp--custom--border-width--1) solid transparent;
+	border-radius: var(--wp--custom--radius--control);
+	box-sizing: border-box;
+	color: var(--wp--custom--color--text-strong);
+	display: inline-flex;
+	font-size: var(--wp--custom--control-label--sm);
+	font-weight: var(--wp--custom--text--label--font-weight);
+	height: var(--wp--custom--control--sm);
+	padding: 0 1em;
+	text-decoration: none;
+}
+
+/* woocommerce/product-button: View cart under the pointer, on the ghost button's hover fill. */
+:where(.woocommerce) a.added_to_cart:hover {
+	background-color: var(--wp--custom--color--fill-neutral-hover);
+	color: var(--wp--custom--color--text-strong);
+	text-decoration: none;
+}
+
 /* woocommerce/product-button: the button stands a group step below the text above it. */
 :where(.wc-block-product-template .wc-block-product) > :not(:last-child):where(:has(+ .wp-block-woocommerce-product-button)) {
 	margin-bottom: var(--wp--preset--spacing--30);
@@ -899,6 +921,11 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image i
 /* woocommerce/product-collection: the stock line starts like the title and price above it. */
 .wp-block-woocommerce-product-collection .wc-block-components-product-stock-indicator {
 	text-align: start;
+}
+
+/* woocommerce/catalog-sorting: the sort select at the small control height; its 16px value is the size iOS will not zoom on. */
+:where(.wc-block-catalog-sorting) select {
+	height: var(--wp--custom--control--sm);
 }
 
 /* woocommerce/product-filters: the mobile drawer, which falls back to the system's Canvas and CanvasText. */

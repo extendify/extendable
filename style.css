@@ -519,16 +519,17 @@ html :where(.wp-block-details > summary:focus-visible) {
 	text-decoration: none;
 }
 
-/* Previous, the numbers and Next sit in three tracks, so the numbers stay centred when Previous or Next is missing. */
+/* Previous, the numbers and Next sit in three tracks, so the numbers stay centred when Previous or Next is missing; the row sits a tracks step under the posts or products, over their container's gap. */
 .wp-block-query-pagination.is-layout-flex {
 	align-items: center;
 	display: grid;
 	grid-template-columns: 1fr auto 1fr;
+	margin-block-start: var(--wp--preset--spacing--40);
 }
 
-/* Pagination reads at the main control's label size, not body size. */
+/* Pagination reads at the small control's label size, a minor action under body text. */
 :where(.wp-block-query-pagination) {
-	font-size: var(--wp--custom--control-label--md);
+	font-size: var(--wp--custom--control-label--sm);
 }
 
 :where(.wp-block-query-pagination-previous) {
@@ -553,15 +554,15 @@ html :where(.wp-block-details > summary:focus-visible) {
 	gap: var(--wp--preset--spacing--10);
 }
 
-/* Each page number is a main-size control target, on the button's corner. */
+/* Each page number is a small control, the size its 14px label pairs with, on the button's corner. */
 :where(.wp-block-query-pagination-numbers .page-numbers) {
 	align-items: center;
 	border-radius: var(--wp--custom--radius--control);
 	box-sizing: border-box;
 	display: inline-flex;
-	height: var(--wp--custom--control--md);
+	height: var(--wp--custom--control--sm);
 	justify-content: center;
-	min-width: var(--wp--custom--control--md);
+	min-width: var(--wp--custom--control--sm);
 }
 
 /* The current page is a <span>, which no link rule reaches; it sits on the soft fill. */

@@ -26,8 +26,8 @@
 
 					<!-- wp:woocommerce/product-filter-clear-button -->
 					<!-- wp:buttons {"layout":{"type":"flex","verticalAlignment":"stretched"}} -->
-					<div class="wp-block-buttons"><!-- wp:button {"className":"wc-block-product-filter-clear-button is-style-outline","style":{"border":{"width":"1px"},"typography":{"textDecoration":"none"},"outline":"none","fontSize":"medium","spacing":{"padding":{"left":"8px","right":"8px","top":"5px","bottom":"5px"}}}} -->
-					<div class="wp-block-button wc-block-product-filter-clear-button is-style-outline"><a class="wp-block-button__link wp-element-button" style="border-width:1px;padding-top:5px;padding-right:8px;padding-bottom:5px;padding-left:8px;text-decoration:none"><?php echo esc_html_x( 'Clear filters', 'Button clearing every active shop filter', 'extendable' ); ?></a></div>
+					<div class="wp-block-buttons"><!-- wp:button {"className":"wc-block-product-filter-clear-button is-style-ext-secondary","fontSize":"small"} -->
+					<div class="wp-block-button wc-block-product-filter-clear-button is-style-ext-secondary"><a class="wp-block-button__link has-small-font-size has-custom-font-size wp-element-button"><?php echo esc_html_x( 'Clear filters', 'Button clearing every active shop filter', 'extendable' ); ?></a></div>
 					<!-- /wp:button --></div>
 					<!-- /wp:buttons -->
 					<!-- /wp:woocommerce/product-filter-clear-button -->

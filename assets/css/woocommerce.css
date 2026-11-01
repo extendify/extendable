@@ -925,12 +925,13 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image i
 	min-height: var(--wp--custom--control--sm);
 }
 
-/* woocommerce/product-filters: the panel's title, sized for a sidebar rather than by its heading level. */
+/* woocommerce/product-filters: the panel's title as a label, at the results count's size and ink. */
 :where(.wc-block-product-filters) h2 {
-	font-size: var(--wp--custom--text--heading-5--font-size);
-	font-weight: var(--wp--custom--text--heading-5--font-weight);
-	letter-spacing: var(--wp--custom--text--heading-5--letter-spacing);
-	line-height: var(--wp--custom--text--heading-5--line-height);
+	color: var(--wp--custom--color--text-weak);
+	font-size: var(--wp--custom--text--text-small--font-size);
+	font-weight: var(--wp--custom--typography--font-weight--medium);
+	letter-spacing: var(--wp--custom--text--text-small--letter-spacing);
+	line-height: var(--wp--custom--text--text-small--line-height);
 }
 
 /* woocommerce/product-filters: each filter's heading at the product name's step, a step under the panel title. */

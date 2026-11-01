@@ -12,7 +12,7 @@
 
 	<!-- wp:group {"metadata":{"name":"Title"},"layout":{"type":"constrained","justifyContent":"left"}} -->
 	<div class="wp-block-group">
-		<!-- wp:query-title {"type":"search","showPrefix":false,"fontSize":"medium-large"} /-->
+		<!-- wp:query-title {"type":"search","showPrefix":false,"fontSize":"medium-plus"} /-->
 	</div>
 	<!-- /wp:group -->
 </div>

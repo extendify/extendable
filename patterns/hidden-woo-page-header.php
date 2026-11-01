@@ -12,7 +12,7 @@
 
 	<!-- wp:group {"metadata":{"name":"Title"},"layout":{"type":"constrained","justifyContent":"left"}} -->
 	<div class="wp-block-group">
-		<!-- wp:post-title {"level":1,"fontSize":"medium-large"} /-->
+		<!-- wp:post-title {"level":1,"fontSize":"medium-plus"} /-->
 	</div>
 	<!-- /wp:group -->
 </div>

@@ -572,9 +572,8 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	max-width: 28rem;
 }
 
-/* woocommerce/classic-shortcode: the sign-in form's heading at heading-5, centred over the form. */
+/* woocommerce/classic-shortcode: the sign-in form's heading at heading-5, on the form's start edge. */
 :where(.woocommerce-account .woocommerce) > h2 {
-	text-align: center;
 	font-size: var(--wp--custom--text--heading-5--font-size);
 	font-weight: var(--wp--custom--text--heading-5--font-weight);
 	line-height: var(--wp--custom--text--heading-5--line-height);

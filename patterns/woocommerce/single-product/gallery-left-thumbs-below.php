@@ -12,6 +12,8 @@
 	<div class="wp-block-group">
 		<!-- wp:woocommerce/breadcrumbs /-->
 
+		<!-- wp:woocommerce/store-notices /-->
+
 		<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|64"}}} -->
 		<div class="wp-block-columns alignwide">
 			<!-- wp:column {"width":"50%"} -->

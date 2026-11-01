@@ -493,19 +493,19 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	inset-inline-end: 0;
 }
 
+/* woocommerce/checkout: the page's gap spaces the form under its title, so Woo's 24px top padding would add to it. */
+.wp-block-woocommerce-checkout {
+	padding-block-start: 0;
+}
+
 /* woocommerce/store-notices: Woo prints the area even with no notice; it takes no room until one arrives. */
 :where(.wc-block-store-notices:not(:has(.wc-block-components-notice-banner, .woocommerce-error, .woocommerce-info, .woocommerce-message))) {
 	display: none;
 }
 
-/* woocommerce/store-notices: a notice sits a group step above the page, not the section gap between its rows. */
-.wc-block-store-notices + * {
-	margin-block-start: var(--wp--preset--spacing--30);
-}
-
-/* woocommerce/store-notices: an empty notices area would push the container's gap onto the next block. */
-.wc-block-store-notices:where(:not(:has(.wc-block-components-notice-banner, .woocommerce-error, .woocommerce-info, .woocommerce-message))) + * {
-	margin-block-start: 0;
+/* woocommerce/store-notices: the container's gap spaces a page notice, so Woo's 16px banner margin would add to it. */
+.wc-block-store-notices .wc-block-components-notice-banner {
+	margin-block: 0;
 }
 
 /* woocommerce/store-notices, woocommerce/checkout: a notice with no kind. */

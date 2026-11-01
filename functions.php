@@ -381,6 +381,11 @@ function extendable_set_default_template_for_new_pages( $post_id, $post, $update
 		return;
 	}
 
+	// A page template would replace WooCommerce's page-cart and page-checkout templates on its own pages.
+	if ( has_block( 'woocommerce/cart', $post ) || has_block( 'woocommerce/checkout', $post ) ) {
+		return;
+	}
+
 	$current_template = get_page_template_slug( $post_id );
     
 	// If no template is set or it's the default template, set our default

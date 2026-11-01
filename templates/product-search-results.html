@@ -1,16 +1,18 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","className":"ext-animate--on is-style-ext-preset--group--natural-1--template","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"0","bottom":"var:preset|spacing|64"},"blockGap":"var:preset|spacing|40"}},"layout":{"inherit":true,"type":"constrained"}} -->
+<!-- wp:group {"tagName":"main","className":"ext-animate--on is-style-ext-preset--group--natural-1--template","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|64"},"blockGap":"var:preset|spacing|40"}},"layout":{"inherit":true,"type":"constrained"}} -->
 <main
 	class="wp-block-group ext-animate--on is-style-ext-preset--group--natural-1--template"
 	style="
 		margin-top: 0;
 		margin-bottom: 0;
-		padding-top: 0;
+		padding-top: var(--wp--preset--spacing--30);
 		padding-bottom: var(--wp--preset--spacing--64);
 	"
 >
 	<!-- wp:pattern {"slug":"extendable/hidden-shop-search-header"} /-->
+
+	<!-- wp:woocommerce/store-notices /-->
 
 	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|30"}}} -->
 	<div class="wp-block-group alignwide">

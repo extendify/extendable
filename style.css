@@ -989,7 +989,7 @@ textarea {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: start;
-	gap: 1rem;
+	gap: var(--wp--preset--spacing--10);
 }
 
 .wp-block-button.wc-block-components-product-button a.added_to_cart {

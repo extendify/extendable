@@ -581,6 +581,15 @@ html :where(.wp-block-details > summary:focus-visible) {
 	text-decoration: none;
 }
 
+/* A store page header under a vibe payload that predates the part would touch the site header. */
+:where(.is-style-ext-preset--page-header) {
+	padding-top: var(--wp--preset--spacing--30);
+}
+
+:where(.is-style-ext-preset--page-header.has-background) {
+	padding-bottom: var(--wp--preset--spacing--30);
+}
+
 :where(.has-tertiary-background-color) { --wp--custom--color--text-weak: var(--wp--custom--color--background-sunken-weak, color-mix(in oklab, var(--wp--preset--color--foreground) 72%, var(--wp--preset--color--tertiary))); --wp--custom--color--background-base: var(--wp--preset--color--tertiary); --wp--custom--color--stroke-strong: var(--wp--custom--color--background-sunken-stroke-strong, color-mix(in oklab, var(--wp--preset--color--foreground) 45%, var(--wp--preset--color--tertiary))); --wp--custom--color--stroke-weak: var(--wp--custom--color--background-sunken-stroke-weak, color-mix(in oklab, var(--wp--preset--color--foreground) 18%, var(--wp--preset--color--tertiary))); }
 
 :where(.has-tertiary-background-color) a:where(:not(.wp-element-button)) { color: var(--wp--custom--color--text-strong); }

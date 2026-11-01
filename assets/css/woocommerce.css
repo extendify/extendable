@@ -730,12 +730,12 @@ p.demo_store a {
 	padding: 0.125em 0.5em;
 }
 
-/* woocommerce/cart-line-items-block, woocommerce/checkout-order-summary-cart-items-block: the "Save" badge, as the product sale badge. */
+/* woocommerce/cart-line-items-block, woocommerce/checkout-order-summary-cart-items-block: the "Save" badge on the soft fill, so the price leads its row. */
 :where(.wc-block-cart-item__total-price-and-sale-badge-wrapper) .wc-block-components-product-badge {
-	background-color: var(--wp--custom--color--fill-brand-strong);
+	background-color: var(--wp--custom--color--fill-weak);
 	border-radius: var(--wp--custom--radius--chip);
 	border-width: 0;
-	color: var(--wp--custom--color--text-on-brand);
+	color: var(--wp--custom--color--text-strong);
 	font-size: var(--wp--custom--text--text-small--font-size);
 	padding: 0.125em 0.5em;
 }
@@ -747,22 +747,68 @@ p.demo_store a {
 
 /* woocommerce/cart-items-block: the uppercase column headings, at the caps tracking. */
 table.wc-block-cart-items .wc-block-cart-items__header {
+	color: var(--wp--custom--color--text-weak);
 	letter-spacing: var(--wp--custom--tracking--wider);
 }
 
 /* woocommerce/cart-totals-block: the uppercase totals heading, at the caps tracking. */
 .wc-block-cart .wc-block-cart__totals-title {
+	color: var(--wp--custom--color--text-weak);
 	letter-spacing: var(--wp--custom--tracking--wider);
 }
 
-/* woocommerce/checkout-order-summary-block: the summary's frame, a card, not Woo's 5px. */
+/* woocommerce/checkout-order-summary-block: the summary drops its frame, ruled like the cart's totals. */
 .wp-block-woocommerce-checkout-order-summary-block {
 	border-radius: var(--wp--custom--radius--card);
+	border-width: 0;
 }
 
-/* woocommerce/checkout-order-summary-block: the summary's inner frame, on the same corner. */
+/* woocommerce/checkout-order-summary-block: the summary's inner frame, dropped with the outer one. */
 .wp-block-woocommerce-checkout-order-summary-block .checkout-order-summary-block-fill {
 	border-radius: var(--wp--custom--radius--card);
+	border-width: 0;
+}
+
+/* woocommerce/checkout-order-summary-block: with no frame, the rows start at the column's edge, as the cart's totals do. */
+.wc-block-components-sidebar .wc-block-components-panel,
+.wc-block-components-sidebar .wc-block-components-totals-coupon,
+.wc-block-components-sidebar .wc-block-components-totals-item {
+	padding-inline: 0;
+}
+
+/* woocommerce/checkout-order-summary-block: the item list at the column's edge too. */
+.wp-block-woocommerce-checkout-order-summary-block .wc-block-components-order-summary {
+	padding-inline: 0;
+}
+
+/* woocommerce/checkout-order-summary-block: the summary's title at the column's edge. */
+.wp-block-woocommerce-checkout-order-summary-block .wc-block-components-checkout-order-summary__title .wc-block-components-checkout-order-summary__title-text {
+	margin-inline-start: 0;
+}
+
+/* woocommerce/cart-items-block, woocommerce/checkout: Woo's fine print reads the small preset as 14px; Extendable's small is 16px. */
+:where(.wc-block-cart, .wp-block-woocommerce-checkout) {
+	--wp--preset--font-size--small: var(--wp--custom--text--text-small--font-size);
+}
+
+/* woocommerce/checkout: the guest note, the terms and an item's description and unit price are secondary text. */
+:where(.wc-block-checkout__guest-checkout-notice, .wc-block-checkout__terms, .wc-block-components-product-metadata, .wc-block-components-order-summary-item__individual-prices, .wc-block-cart-item__prices) {
+	color: var(--wp--custom--color--text-weak);
+}
+
+/* woocommerce/cart-line-items-block, woocommerce/checkout: an item's unit price at the fine-print size, under its name. */
+:where(.wc-block-components-order-summary-item__individual-prices, .wc-block-cart-item__prices) {
+	font-size: var(--wp--custom--text--text-small--font-size);
+}
+
+/* woocommerce/cart-line-items-block, woocommerce/checkout-order-summary-cart-items-block: a product name is a UI link, underlined only on hover. */
+a.wc-block-components-product-name {
+	text-decoration: none;
+}
+
+/* woocommerce/cart-line-items-block: the product name under the pointer. */
+a.wc-block-components-product-name:hover {
+	text-decoration: underline;
 }
 
 /* woocommerce/cart-order-summary-shipping-block, woocommerce/checkout-order-summary-shipping-block: the "via" note, which Woo shrinks again under the 14px floor. */

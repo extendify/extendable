@@ -561,8 +561,20 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	text-decoration: none;
 }
 
-/* woocommerce/classic-shortcode: the sign-in form's heading at heading-5, under the page title. */
+/* woocommerce/classic-shortcode: the account content at the page's wide width, not Woo's centred 1000px. */
+.woocommerce-account main .woocommerce {
+	max-width: none;
+}
+
+/* woocommerce/classic-shortcode: signed out, the heading and form sit in one centred column a single field wide. */
+.woocommerce-account main .woocommerce:has(> .login) {
+	margin-inline: auto;
+	max-width: 28rem;
+}
+
+/* woocommerce/classic-shortcode: the sign-in form's heading at heading-5, centred over the form. */
 :where(.woocommerce-account .woocommerce) > h2 {
+	text-align: center;
 	font-size: var(--wp--custom--text--heading-5--font-size);
 	font-weight: var(--wp--custom--text--heading-5--font-weight);
 	line-height: var(--wp--custom--text--heading-5--line-height);

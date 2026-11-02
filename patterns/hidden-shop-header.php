@@ -12,11 +12,11 @@
 	<div class="wp-block-group alignwide">
 		<!-- wp:woocommerce/breadcrumbs /-->
 
-		<!-- wp:group {"metadata":{"name":"Title"},"layout":{"type":"constrained","justifyContent":"left"}} -->
+		<!-- wp:group {"metadata":{"name":"Title"},"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"constrained","justifyContent":"left"}} -->
 		<div class="wp-block-group">
 			<!-- wp:query-title {"type":"archive","showPrefix":false,"fontSize":"medium-plus"} /-->
 
-			<!-- wp:term-description /-->
+			<!-- wp:term-description {"style":{"color":{"text":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dcolor\u002d\u002dtext-weak)"}},"fontSize":"small"} /-->
 		</div>
 		<!-- /wp:group -->
 	</div>

@@ -1552,13 +1552,13 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 	gap: var(--wp--preset--spacing--20);
 }
 
-/* woocommerce/product-button: the grid layout's button fills the row beside the quantity stepper, not Woo's shrink-to-fit. */
-.ext-product-layout--grid .wp-block-woocommerce-product-button {
+/* woocommerce/product-button: the grid and mosaic layouts' button fills the row beside the quantity stepper, not Woo's shrink-to-fit. */
+.ext-product-layout--grid .wp-block-woocommerce-product-button, .ext-product-layout--mosaic .wp-block-woocommerce-product-button {
 	flex-grow: 1;
 }
 
 /* woocommerce/product-button: the button itself fills that wider wrapper, not Woo's inline-flex content width. */
-.ext-product-layout--grid .wp-block-button.wc-block-components-product-button .wc-block-components-product-button__button {
+.ext-product-layout--grid .wp-block-button.wc-block-components-product-button .wc-block-components-product-button__button, .ext-product-layout--mosaic .wp-block-button.wc-block-components-product-button .wc-block-components-product-button__button {
 	width: 100%;
 }
 

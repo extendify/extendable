@@ -6,7 +6,7 @@
  */
 ?>
 <!-- wp:group {"className":"ext-card ext-card-media-top is-style-ext-preset--card ext-animate--on","style":{"spacing":{"blockGap":"var:preset|spacing|25"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"},"metadata":{"name":"Product Card"}} -->
-<div class="wp-block-group ext-card ext-card-media-top is-style-ext-preset--card ext-animate--on"><!-- wp:woocommerce/product-image {"showSaleBadge":false,"isDescendentOfQueryLoop":true,"aspectRatio":"1"} -->
+<div class="wp-block-group ext-card ext-card-media-top is-style-ext-preset--card ext-animate--on"><!-- wp:woocommerce/product-image {"showSaleBadge":false,"isDescendentOfQueryLoop":true,"aspectRatio":"1","className":"is-style-ext-preset\u002d\u002dcard-photo"} -->
 <!-- wp:woocommerce/product-sale-badge {"isDescendentOfQueryLoop":true} /-->
 <!-- /wp:woocommerce/product-image -->
 

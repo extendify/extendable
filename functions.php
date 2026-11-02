@@ -417,6 +417,45 @@ function extendable_store_pages_skip_page_with_title( $templates ) {
 add_filter( 'page_template_hierarchy', 'extendable_store_pages_skip_page_with_title' );
 
 /**
+ * WooCommerce saves its own product card into the cart page's cross-sells, out of the
+ * templates' reach, so render the shop's card under the related products heading instead.
+ *
+ * @param array $parsed_block Parsed block data.
+ * @return array Filtered block data.
+ */
+function extendable_cross_sells_use_shop_card( array $parsed_block ) : array {
+	if ( 'woocommerce/product-collection' !== $parsed_block['blockName'] ) {
+		return $parsed_block;
+	}
+	if ( 'woocommerce/product-collection/cross-sells' !== ( $parsed_block['attrs']['collection'] ?? '' ) ) {
+		return $parsed_block;
+	}
+
+	$heading = '';
+	foreach ( $parsed_block['innerBlocks'] as $inner_block ) {
+		if ( 'core/heading' === $inner_block['blockName'] ) {
+			$heading = sprintf(
+				'<!-- wp:heading {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"0"}},"color":{"text":"var(--wp--custom--color--text-weak)"}},"fontSize":"medium-plus"} --><h2 class="wp-block-heading has-text-color has-medium-plus-font-size" style="color:var(--wp--custom--color--text-weak);margin-top:var(--wp--preset--spacing--40);margin-bottom:0">%s</h2><!-- /wp:heading -->',
+				esc_html( trim( wp_strip_all_tags( $inner_block['innerHTML'] ) ) )
+			);
+			break;
+		}
+	}
+
+	$attrs                                 = $parsed_block['attrs'];
+	$attrs['style']['spacing']['blockGap'] = 'var:preset|spacing|30';
+
+	$markup = sprintf(
+		'<!-- wp:woocommerce/product-collection %s --><div class="wp-block-woocommerce-product-collection">%s<!-- wp:woocommerce/product-template --><!-- wp:pattern {"slug":"extendable/hidden-shop-product"} /--><!-- /wp:woocommerce/product-template --></div><!-- /wp:woocommerce/product-collection -->',
+		serialize_block_attributes( $attrs ),
+		$heading
+	);
+
+	return parse_blocks( $markup )[0];
+}
+add_filter( 'render_block_data', 'extendable_cross_sells_use_shop_card' );
+
+/**
  * Hide block style variations from editor UI while keeping them registered
  */
 function extendable_hide_block_style_variations() {

@@ -1589,3 +1589,15 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 .ext-product-layout--grid .wp-block-button.wc-block-components-product-button .wc-block-components-product-button__button {
 	width: 100%;
 }
+
+/* woocommerce/product-gallery-large-image: the stacked layout needs every photo visible, not Woo's one-image clip. */
+.ext-product-layout--stacked .wc-block-product-gallery-large-image {
+	overflow: visible;
+}
+
+/* woocommerce/product-gallery-large-image: the photo list stacks in a column instead of Woo's one-row slider. */
+.ext-product-layout--stacked .wc-block-product-gallery-large-image__container {
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--20);
+	overflow: visible;
+}

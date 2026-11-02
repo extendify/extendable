@@ -396,6 +396,27 @@ function extendable_set_default_template_for_new_pages( $post_id, $post, $update
 add_action( 'wp_insert_post', 'extendable_set_default_template_for_new_pages', 10, 3 );
 
 /**
+ * Render WooCommerce's cart, checkout and account pages with their store templates
+ * even when an older Extendable saved page-with-title on them.
+ *
+ * @param array $templates Template candidates for the page.
+ * @return array
+ */
+function extendable_store_pages_skip_page_with_title( $templates ) {
+	if ( ! function_exists( 'wc_get_page_id' ) ) {
+		return $templates;
+	}
+
+	$store_pages = array( wc_get_page_id( 'cart' ), wc_get_page_id( 'checkout' ), wc_get_page_id( 'myaccount' ) );
+	if ( ! in_array( get_queried_object_id(), $store_pages, true ) ) {
+		return $templates;
+	}
+
+	return array_values( array_diff( $templates, array( 'page-with-title' ) ) );
+}
+add_filter( 'page_template_hierarchy', 'extendable_store_pages_skip_page_with_title' );
+
+/**
  * Hide block style variations from editor UI while keeping them registered
  */
 function extendable_hide_block_style_variations() {

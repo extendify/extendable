@@ -12,24 +12,6 @@
 
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|64"}}} -->
 	<div class="wp-block-columns alignwide">
-		<!-- wp:column {"width":"45%"} -->
-		<div class="wp-block-column" style="flex-basis:45%">
-			<!-- wp:woocommerce/product-gallery {"layout":{"type":"flex","orientation":"vertical"}} -->
-			<div class="wp-block-woocommerce-product-gallery wc-block-product-gallery">
-				<!-- wp:woocommerce/product-gallery-large-image -->
-				<div class="wp-block-woocommerce-product-gallery-large-image wc-block-product-gallery-large-image__inner-blocks">
-					<!-- wp:woocommerce/product-image {"showProductLink":false,"showSaleBadge":false} -->
-					<div class="is-loading"></div>
-					<!-- /wp:woocommerce/product-image -->
-
-					<!-- wp:woocommerce/product-sale-badge {"align":"right"} /-->
-				</div>
-				<!-- /wp:woocommerce/product-gallery-large-image -->
-			</div>
-			<!-- /wp:woocommerce/product-gallery -->
-		</div>
-		<!-- /wp:column -->
-
 		<!-- wp:column {"width":"55%"} -->
 		<div class="wp-block-column" style="flex-basis:55%">
 			<!-- wp:group {"className":"is-style-ext-preset--buy-box","style":{"position":{"type":"sticky","top":"0px"},"spacing":{"blockGap":"var:preset|spacing|30"}}} -->
@@ -143,6 +125,24 @@
 				<!-- /wp:woocommerce/product-details -->
 			</div>
 			<!-- /wp:group -->
+		</div>
+		<!-- /wp:column -->
+
+		<!-- wp:column {"width":"45%"} -->
+		<div class="wp-block-column" style="flex-basis:45%">
+			<!-- wp:woocommerce/product-gallery {"layout":{"type":"flex","orientation":"vertical"}} -->
+			<div class="wp-block-woocommerce-product-gallery wc-block-product-gallery">
+				<!-- wp:woocommerce/product-gallery-large-image -->
+				<div class="wp-block-woocommerce-product-gallery-large-image wc-block-product-gallery-large-image__inner-blocks">
+					<!-- wp:woocommerce/product-image {"showProductLink":false,"showSaleBadge":false} -->
+					<div class="is-loading"></div>
+					<!-- /wp:woocommerce/product-image -->
+
+					<!-- wp:woocommerce/product-sale-badge {"align":"right"} /-->
+				</div>
+				<!-- /wp:woocommerce/product-gallery-large-image -->
+			</div>
+			<!-- /wp:woocommerce/product-gallery -->
 		</div>
 		<!-- /wp:column -->
 	</div>

@@ -1562,6 +1562,11 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 	width: 100%;
 }
 
+/* woocommerce/product-gallery: the buy box leads the markup so phones stack it above the photos; desktop flips it right. */
+.ext-product-layout--stacked > .wp-block-columns {
+	flex-direction: row-reverse;
+}
+
 /* woocommerce/product-gallery-large-image: the stacked layout needs every photo visible, not Woo's one-image clip. */
 .ext-product-layout--stacked .wc-block-product-gallery-large-image {
 	overflow: visible;

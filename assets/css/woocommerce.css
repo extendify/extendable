@@ -1552,34 +1552,6 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 	gap: var(--wp--preset--spacing--20);
 }
 
-/* woocommerce/product-gallery-thumbnails: the grid layout frees the strip's fixed, size-driven aspect ratio. */
-.ext-product-layout--grid .wc-block-product-gallery-thumbnails {
-	aspect-ratio: auto;
-	height: auto;
-}
-
-/* woocommerce/product-gallery-thumbnails: the grid layout's thumbnails as a two-column grid of squares, not Woo's scrolling row. */
-.ext-product-layout--grid .wc-block-product-gallery-thumbnails__scrollable {
-	display: grid;
-	gap: var(--wp--preset--spacing--10);
-	grid-template-columns: repeat(2, 1fr);
-	height: auto;
-	overflow: visible;
-}
-
-/* woocommerce/product-gallery-thumbnails: each cell stays square, not Woo's row height. */
-.ext-product-layout--grid .wc-block-product-gallery-thumbnails__thumbnail {
-	aspect-ratio: 1;
-	height: auto;
-	width: 100%;
-}
-
-/* woocommerce/product-gallery-thumbnails: the thumbnail fills its square cell, not Woo's fit-content row height. */
-.ext-product-layout--grid .wc-block-product-gallery-thumbnails__thumbnail__image {
-	height: 100%;
-	width: 100%;
-}
-
 /* woocommerce/product-button: the grid layout's button fills the row beside the quantity stepper, not Woo's shrink-to-fit. */
 .ext-product-layout--grid .wp-block-woocommerce-product-button {
 	flex-grow: 1;

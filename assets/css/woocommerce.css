@@ -844,7 +844,9 @@ p.demo_store a {
 	border-radius: var(--wp--custom--radius--chip);
 	color: var(--wp--custom--color--text-on-brand);
 	font-size: var(--wp--custom--text--text-small--font-size);
-	line-height: normal;
+	font-weight: var(--wp--custom--typography--font-weight--semi-bold);
+	letter-spacing: var(--wp--custom--text--text-small--letter-spacing);
+	line-height: var(--wp--custom--text--text-small--line-height);
 	min-height: 0;
 	min-width: 0;
 	padding: 0.125em 0.5em;

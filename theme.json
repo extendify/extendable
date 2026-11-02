@@ -1813,7 +1813,10 @@
 				},
 				"typography": {
 					"fontSize": "var(--wp--custom--text--text-small--font-size)",
-					"letterSpacing": "var(--wp--custom--tracking--wider)"
+					"letterSpacing": "var(--wp--custom--text--text-small--letter-spacing)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
+					"lineHeight": "var(--wp--custom--text--text-small--line-height)",
+					"textTransform": "none"
 				},
 				"css": "padding: 0.125em 0.5em;"
 			},

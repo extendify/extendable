@@ -1562,8 +1562,8 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 	width: 100%;
 }
 
-/* woocommerce/product-gallery: the buy box leads the markup so phones stack it above the photos; desktop flips it right. */
-.ext-product-layout--stacked > .wp-block-columns {
+/* woocommerce/product-gallery: the buy box leads the markup so phones stack it first; desktop flips it right. */
+.ext-product-layout--stacked > .wp-block-columns, .ext-product-layout--mosaic > .wp-block-columns {
 	flex-direction: row-reverse;
 }
 

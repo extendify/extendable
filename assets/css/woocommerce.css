@@ -618,6 +618,144 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	color: var(--wp--custom--color--text-error);
 }
 
+/* woocommerce/classic-shortcode: lost/reset password and the email-check form share the sign-in form's card. */
+:where(.woocommerce form.lost_reset_password, form.woocommerce-verify-email) {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	margin: 0;
+	max-width: 28rem;
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/classic-shortcode: section headings in the account content at heading-5, not the page's h2. */
+:where(.woocommerce-MyAccount-content) :is(h2, h3, h4, h5, h6) {
+	font-size: var(--wp--custom--text--heading-5--font-size);
+	font-weight: var(--wp--custom--text--heading-5--font-weight);
+	line-height: var(--wp--custom--text--heading-5--line-height);
+	margin-block-end: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/classic-shortcode: beats Woo's own large, light size for this one title. */
+.woocommerce-customer-details h2.woocommerce-column__title {
+	font-size: var(--wp--custom--text--heading-5--font-size);
+	font-weight: var(--wp--custom--text--heading-5--font-weight);
+	line-height: var(--wp--custom--text--heading-5--line-height);
+}
+
+/* woocommerce/classic-shortcode: each address on the soft card the sign-in form already uses. */
+:where(.woocommerce-Addresses :is(.col-1, .col-2)) {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--10);
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/classic-shortcode: drops the header's box so Edit can reorder with the column's siblings. */
+:where(.woocommerce-Addresses .title) {
+	display: contents;
+}
+
+/* woocommerce/classic-shortcode: no second box now the column is the card; Woo's layout prints it italic. */
+.woocommerce-Addresses address {
+	border: 0;
+	font-style: normal;
+	padding: 0;
+	width: auto;
+}
+
+/* woocommerce/classic-shortcode: order 1 puts Edit after the title and address, both at the default 0. */
+:where(.woocommerce-Addresses .edit) {
+	font-size: var(--wp--custom--text--text-small--font-size);
+	order: 1;
+}
+
+/* woocommerce/classic-shortcode: each on the soft card, like the cart totals. */
+:where(.woocommerce-order-details, .woocommerce-order-downloads, .woocommerce-customer-details) {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/classic-shortcode: drops Woo's shop_table grid for the cart totals' row rhythm. */
+.woocommerce-order-details table,
+.woocommerce-order-downloads table {
+	border: 0;
+	width: 100%;
+}
+
+/* woocommerce/classic-shortcode: each row sits on the separator, not Woo's grid line. */
+.woocommerce-order-details table :is(th, td),
+.woocommerce-order-downloads table :is(th, td) {
+	border: 0;
+	border-block-end: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-weak);
+	padding: var(--wp--preset--spacing--20) 0;
+	text-align: start;
+}
+
+/* woocommerce/classic-shortcode: weak ink, caps tracking — the store's own table-header look. */
+:where(.woocommerce-order-details table thead th, .woocommerce-order-downloads table thead th) {
+	color: var(--wp--custom--color--text-weak);
+	letter-spacing: var(--wp--custom--tracking--wider);
+}
+
+/* woocommerce/classic-shortcode: the small secondary button, not the button element's primary fill. */
+.woocommerce-orders-table__cell-order-actions .button,
+.order-actions-button.button {
+	align-items: center;
+	background-color: var(--wp--custom--color--background-base);
+	border: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--control);
+	box-sizing: border-box;
+	color: var(--wp--custom--color--text-strong);
+	display: inline-flex;
+	font-size: var(--wp--custom--control-label--sm);
+	font-weight: var(--wp--custom--text--label--font-weight);
+	height: var(--wp--custom--control--sm);
+	padding: 0 1em;
+	text-decoration: none;
+}
+
+/* woocommerce/classic-shortcode: the small secondary button; Woo's own .button.alt no longer renders one. */
+:where(.woocommerce-MyAccount-downloads-file) {
+	align-items: center;
+	background-color: var(--wp--custom--color--background-base);
+	border: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--control);
+	box-sizing: border-box;
+	color: var(--wp--custom--color--text-strong);
+	display: inline-flex;
+	font-size: var(--wp--custom--control-label--sm);
+	font-weight: var(--wp--custom--text--label--font-weight);
+	height: var(--wp--custom--control--sm);
+	padding: 0 1em;
+	text-decoration: none;
+}
+
+/* woocommerce/classic-shortcode: the download link under the pointer. */
+:where(.woocommerce-MyAccount-downloads-file:hover) {
+	background-color: var(--wp--custom--color--fill-weak-hover);
+	text-decoration: none;
+}
+
+/* woocommerce/classic-shortcode: the order number reads as the UI link, underlined only on hover. */
+:where(.woocommerce-orders-table__cell a:not(.button)) {
+	text-decoration: none;
+}
+
+/* woocommerce/classic-shortcode: the order number link under the pointer. */
+:where(.woocommerce-orders-table__cell a:not(.button):hover) {
+	text-decoration: underline;
+}
+
 /* woocommerce/store-notices: Woo prints the area even with no notice; it takes no room until one arrives. */
 :where(.wc-block-store-notices:not(:has(.wc-block-components-notice-banner, .woocommerce-error, .woocommerce-info, .woocommerce-message))) {
 	display: none;

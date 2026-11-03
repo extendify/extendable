@@ -1850,10 +1850,41 @@ h2.wc-block-mini-cart__title {
 	line-height: var(--wp--custom--text--heading-5--line-height);
 }
 
-/* woocommerce/mini-cart: the drawer on the page's own background, with the store card's edge, not Woo's #fff. */
+/* woocommerce/mini-cart: the drawer on the page's own background, with the store card's edge, now inset from the viewport instead of flush against it. */
 .wc-block-components-drawer {
 	background-color: var(--wp--custom--color--background-base);
-	border-inline-start: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	bottom: clamp(var(--wp--preset--spacing--20), 4vw, var(--wp--preset--spacing--30));
+	height: auto;
+	overflow: hidden;
+	top: clamp(var(--wp--preset--spacing--20), 4vw, var(--wp--preset--spacing--30));
+	transform: translateX(calc(max(-100%, var(--neg-drawer-width)) - clamp(var(--wp--preset--spacing--20), 4vw, var(--wp--preset--spacing--30))));
+}
+
+/* woocommerce/mini-cart: the content fills the inset drawer, not Woo's own full-viewport 100dvh. */
+.wc-block-components-drawer__content {
+	height: 100%;
+}
+
+/* woocommerce/mini-cart: the close button on a round soft fill, the control's small size. */
+.wc-block-components-button.wc-block-components-drawer__close {
+	align-items: center;
+	background-color: var(--wp--custom--color--fill-weak) !important;
+	border-radius: var(--wp--custom--radius--avatar);
+	box-sizing: border-box;
+	color: var(--wp--custom--color--text-strong) !important;
+	display: flex;
+	height: var(--wp--custom--control--sm);
+	justify-content: center;
+	margin: 0;
+	padding: 0 !important;
+	width: var(--wp--custom--control--sm);
+}
+
+/* woocommerce/mini-cart: the close button's fill, a shade up, under the pointer. */
+.wc-block-components-button.wc-block-components-drawer__close:hover {
+	background-color: var(--wp--custom--color--fill-weak-hover) !important;
 }
 
 /* woocommerce/mini-cart: the title's side space on the page's inline step, not Woo's raw 16px. */
@@ -1881,6 +1912,71 @@ h2.wc-block-mini-cart__title {
 /* woocommerce/mini-cart: the thumbnail on the media corner, capped so the drawer's smaller photo doesn't read as a circle. */
 table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__image img {
 	border-radius: min(var(--wp--custom--radius--media), var(--wp--preset--border-radius--2));
+}
+
+/* woocommerce/mini-cart: rows divided by the weak stroke, which Woo's own rule skips for this table. */
+:where(table.wc-block-mini-cart-items .wc-block-cart-items__row:not(:last-child)) {
+	border-bottom: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-weak);
+}
+
+/* woocommerce/mini-cart: the item's details as a grid, so the price and the stepper share one row. */
+table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__wrap {
+	column-gap: var(--wp--preset--spacing--10);
+	display: grid;
+	grid-template-columns: 1fr auto;
+	row-gap: var(--wp--preset--spacing--10);
+}
+
+/* woocommerce/mini-cart: the name spans its own row in the grid. */
+:where(table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-components-product-name) {
+	grid-column: 1 / -1;
+	grid-row: 1;
+}
+
+/* woocommerce/mini-cart: the description spans its own row in the grid. */
+:where(table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-components-product-metadata) {
+	grid-column: 1 / -1;
+	grid-row: 2;
+}
+
+/* woocommerce/mini-cart: the price takes the grid's first column. */
+:where(table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__prices) {
+	grid-column: 1;
+	grid-row: 3;
+	justify-self: start;
+}
+
+/* woocommerce/mini-cart: the stepper beats Woo's own grid placement, dormant until this wrap became a grid. */
+.is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantity {
+	grid-column: 2;
+	grid-row: 3;
+	justify-self: end;
+}
+
+/* woocommerce/mini-cart: the stepper on the button radius, not the input radius it takes elsewhere. */
+:where(table.wc-block-mini-cart-items) :where(.wc-block-components-quantity-selector:has(input:not([type="hidden"]))) {
+	border-radius: var(--wp--custom--radius--control);
+}
+
+/* woocommerce/mini-cart: the subtotal row larger, at the label's weight, not Woo's fixed 600. */
+.wc-block-mini-cart__footer .wc-block-components-totals-item.wc-block-mini-cart__footer-subtotal {
+	font-size: var(--wp--custom--text--text-large--font-size);
+	font-weight: var(--wp--custom--text--label--font-weight);
+}
+
+/* woocommerce/mini-cart: the shipping note, weak against the subtotal. */
+.wc-block-mini-cart__footer .wc-block-components-totals-item.wc-block-mini-cart__footer-subtotal .wc-block-components-totals-item__description {
+	color: var(--wp--custom--color--text-weak);
+}
+
+/* woocommerce/mini-cart: "Go to checkout" and "View cart" stacked, each full width, not side by side. */
+:where(.wc-block-mini-cart__footer-actions) {
+	flex-direction: column;
+}
+
+/* woocommerce/mini-cart: "Go to checkout" leads, "View cart" follows, over Woo's own markup order. */
+:where(.wp-block-woocommerce-mini-cart-checkout-button-block) {
+	order: -1;
 }
 
 /* woocommerce/handpicked-products, woocommerce/product-best-sellers, woocommerce/product-on-sale, woocommerce/product-top-rated, woocommerce/product-category, woocommerce/products-by-attribute, woocommerce/product-new, woocommerce/all-products: the older grid on product-template's gaps, in place of Woo's transparent-border gutters. */

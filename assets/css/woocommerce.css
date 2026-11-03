@@ -1872,17 +1872,17 @@ h2.wc-block-mini-cart__title {
 	line-height: var(--wp--custom--text--heading-6--line-height);
 }
 
-/* woocommerce/mini-cart: the drawer on the page's own background, with the store card's edge, now inset from the viewport instead of flush against it. */
+/* woocommerce/mini-cart: the drawer on the page's own background, with the store card's edge, a small gap off the viewport's edges. */
 .wc-block-components-drawer {
 	background-color: var(--wp--custom--color--background-base);
 	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
-	bottom: clamp(var(--wp--preset--spacing--20), 4vw, var(--wp--preset--spacing--30));
+	bottom: clamp(var(--wp--preset--spacing--10), 2vw, var(--wp--preset--spacing--20));
 	height: auto;
-	max-width: calc(100% - 2 * clamp(var(--wp--preset--spacing--20), 4vw, var(--wp--preset--spacing--30)));
+	max-width: calc(100% - 2 * clamp(var(--wp--preset--spacing--10), 2vw, var(--wp--preset--spacing--20)));
 	overflow: hidden;
-	top: clamp(var(--wp--preset--spacing--20), 4vw, var(--wp--preset--spacing--30));
-	transform: translateX(calc(max(-100%, var(--neg-drawer-width)) - clamp(var(--wp--preset--spacing--20), 4vw, var(--wp--preset--spacing--30))));
+	top: clamp(var(--wp--preset--spacing--10), 2vw, var(--wp--preset--spacing--20));
+	transform: translateX(calc(max(-100%, var(--neg-drawer-width)) - clamp(var(--wp--preset--spacing--10), 2vw, var(--wp--preset--spacing--20))));
 }
 
 /* woocommerce/mini-cart: the content fills the inset drawer, not Woo's own full-viewport 100dvh. */

@@ -1731,3 +1731,67 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 :where(.wp-block-woocommerce-empty-cart-block > hr) {
 	margin-block: var(--wp--preset--spacing--40);
 }
+
+/* woocommerce/order-confirmation-status: the status heading at medium-plus, the store page title's size, over global styles' own h1. */
+:where(.wc-block-order-confirmation-status) h1 {
+	font-size: var(--wp--preset--font-size--medium-plus);
+}
+
+/* woocommerce/order-confirmation-status: its text under the heading at the body size, which the large preset also reached. */
+:where(.wc-block-order-confirmation-status p) {
+	font-size: var(--wp--custom--text--text-regular--font-size);
+}
+
+/* woocommerce/order-confirmation-summary: the row of label/value pairs on the soft card the sign-in form already uses, not Woo's bare 4px corner. */
+.wc-block-order-confirmation-summary {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/order-confirmation-summary: each pair's key reads as metadata, not Woo's bare bold. */
+:where(.wc-block-order-confirmation-summary-list-item__key) {
+	color: var(--wp--custom--color--text-weak);
+}
+
+/* woocommerce/order-confirmation-totals, woocommerce/order-confirmation-downloads: the table on the store card, like the cart totals, not Woo's 1px/4px box. */
+.wc-block-order-confirmation-totals table,
+.wc-block-order-confirmation-downloads table {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+}
+
+/* woocommerce/order-confirmation-totals, woocommerce/order-confirmation-downloads: weak ink, caps tracking — the store's own table-header look. */
+:where(.wc-block-order-confirmation-totals table thead th, .wc-block-order-confirmation-downloads table thead th) {
+	color: var(--wp--custom--color--text-weak);
+	letter-spacing: var(--wp--custom--tracking--wider);
+}
+
+/* woocommerce/order-confirmation-billing-address, woocommerce/order-confirmation-shipping-address: each on the soft card, side by side on a desktop, one column on a phone through core/columns. */
+.wc-block-order-confirmation-billing-address,
+.wc-block-order-confirmation-shipping-address {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/order-confirmation-totals-wrapper, woocommerce/order-confirmation-downloads-wrapper, woocommerce/order-confirmation-billing-wrapper, woocommerce/order-confirmation-shipping-wrapper: the section heading pattern at heading-5, over Woo's own inline 24px. */
+.wp-block-woocommerce-order-confirmation-totals-wrapper h2,
+.wp-block-woocommerce-order-confirmation-downloads-wrapper h2,
+.wp-block-woocommerce-order-confirmation-billing-wrapper h2,
+.wp-block-woocommerce-order-confirmation-shipping-wrapper h2 {
+	font-size: var(--wp--custom--text--heading-5--font-size) !important;
+}
+
+/* woocommerce/order-confirmation-totals-wrapper, woocommerce/order-confirmation-downloads-wrapper, woocommerce/order-confirmation-billing-wrapper, woocommerce/order-confirmation-shipping-wrapper: the same heading's weight and line-height, and the step under it the sign-in heading has. */
+:where(.wp-block-woocommerce-order-confirmation-totals-wrapper h2, .wp-block-woocommerce-order-confirmation-downloads-wrapper h2, .wp-block-woocommerce-order-confirmation-billing-wrapper h2, .wp-block-woocommerce-order-confirmation-shipping-wrapper h2) {
+	font-weight: var(--wp--custom--text--heading-5--font-weight);
+	line-height: var(--wp--custom--text--heading-5--line-height);
+	margin-block-end: var(--wp--preset--spacing--20);
+}

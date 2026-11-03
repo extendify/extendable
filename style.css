@@ -1030,7 +1030,7 @@ textarea {
 	margin-top: 0;
 }
 
-.woocommerce-checkout.woocommerce-page header.wp-block-template-part nav.wp-block-navigation {
+.woocommerce-checkout.woocommerce-page:not(.woocommerce-order-received, .woocommerce-order-pay) header.wp-block-template-part nav.wp-block-navigation {
 	visibility: hidden;
 }
 

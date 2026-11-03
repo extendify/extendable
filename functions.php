@@ -38,6 +38,9 @@ if ( ! function_exists( 'extendable_support' ) ) :
 		} else {
 			$editor_style = 'style.css';
 		}
+		if ( class_exists( 'WooCommerce' ) ) {
+			$editor_style = array_merge( (array) $editor_style, array( 'assets/css/woocommerce.css' ) );
+		}
 		// Enqueue editor styles.
 		add_editor_style( $editor_style );
 	}
@@ -67,6 +70,15 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 
 		// Enqueue theme stylesheet.
 		wp_enqueue_style( 'extendable-style' );
+
+		if ( class_exists( 'WooCommerce' ) ) {
+			wp_enqueue_style(
+				'extendable-woocommerce-style',
+				get_template_directory_uri() . '/assets/css/woocommerce.css',
+				array( 'extendable-style' ),
+				EXTENDABLE_THEME_VERSION
+			);
+		}
 
 		global $wp_version;
 		if ( version_compare( $wp_version, '6.0.2', '<=' ) ) {
@@ -235,7 +247,15 @@ add_filter( 'render_block_data', 'extendable_add_duotone_to_extendify_demo_site_
 
  function extendable_exclude_wc_block_templates( $templates, $query ) {
 	if ( ! class_exists( 'WooCommerce' ) ) {
-		$wc_template_slugs = array( 'checkout', 'single-product', 'archive-product' );
+		$wc_template_slugs = array(
+			'archive-product',
+			'single-product',
+			'product-search-results',
+			'page-cart',
+			'page-checkout',
+			'order-confirmation',
+			'checkout',
+		);
 		foreach ( $templates as $key => $template ) {
 			if ( isset( $template->slug ) && in_array( $template->slug, $wc_template_slugs, true ) ) {
 				unset( $templates[ $key ] );
@@ -245,6 +265,18 @@ add_filter( 'render_block_data', 'extendable_add_duotone_to_extendify_demo_site_
 	return $templates;
 }
 add_filter( 'get_block_templates', 'extendable_exclude_wc_block_templates', 10, 2 );
+
+/**
+ * WooCommerce prints upsells after product-details, which sits in the buy box; the template has its own row.
+ *
+ * @package Extendable
+ */
+function extendable_remove_wc_upsells_hook() {
+	if ( function_exists( 'is_product' ) && is_product() ) {
+		remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+	}
+}
+add_action( 'template_redirect', 'extendable_remove_wc_upsells_hook' );
 
 /**
  * Header helper.
@@ -349,6 +381,11 @@ function extendable_set_default_template_for_new_pages( $post_id, $post, $update
 		return;
 	}
 
+	// A page template would replace WooCommerce's cart, checkout and account templates on its own pages.
+	if ( has_block( 'woocommerce/cart', $post ) || has_block( 'woocommerce/checkout', $post ) || has_shortcode( $post->post_content, 'woocommerce_my_account' ) ) {
+		return;
+	}
+
 	$current_template = get_page_template_slug( $post_id );
     
 	// If no template is set or it's the default template, set our default
@@ -357,6 +394,144 @@ function extendable_set_default_template_for_new_pages( $post_id, $post, $update
 	}
 }
 add_action( 'wp_insert_post', 'extendable_set_default_template_for_new_pages', 10, 3 );
+
+/**
+ * Render WooCommerce's cart, checkout and account pages with their store templates
+ * even when an older Extendable saved page-with-title on them.
+ *
+ * @param array $templates Template candidates for the page.
+ * @return array
+ */
+function extendable_store_pages_skip_page_with_title( $templates ) {
+	if ( ! function_exists( 'wc_get_page_id' ) ) {
+		return $templates;
+	}
+
+	$store_pages = array( wc_get_page_id( 'cart' ), wc_get_page_id( 'checkout' ), wc_get_page_id( 'myaccount' ) );
+	if ( ! in_array( get_queried_object_id(), $store_pages, true ) ) {
+		return $templates;
+	}
+
+	return array_values( array_diff( $templates, array( 'page-with-title' ) ) );
+}
+add_filter( 'page_template_hierarchy', 'extendable_store_pages_skip_page_with_title' );
+
+/**
+ * WooCommerce saves its own product card into the cart page's cross-sells, out of the
+ * templates' reach, so render the shop's card under the related products heading instead.
+ *
+ * @param array $parsed_block Parsed block data.
+ * @return array Filtered block data.
+ */
+function extendable_cross_sells_use_shop_card( array $parsed_block ) : array {
+	if ( 'woocommerce/product-collection' !== $parsed_block['blockName'] ) {
+		return $parsed_block;
+	}
+	if ( 'woocommerce/product-collection/cross-sells' !== ( $parsed_block['attrs']['collection'] ?? '' ) ) {
+		return $parsed_block;
+	}
+
+	$heading = '';
+	foreach ( $parsed_block['innerBlocks'] as $inner_block ) {
+		if ( 'core/heading' === $inner_block['blockName'] ) {
+			$heading = sprintf(
+				'<!-- wp:heading {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"0"}},"color":{"text":"var(--wp--custom--color--text-weak)"}},"fontSize":"medium-plus"} --><h2 class="wp-block-heading has-text-color has-medium-plus-font-size" style="color:var(--wp--custom--color--text-weak);margin-top:var(--wp--preset--spacing--40);margin-bottom:0">%s</h2><!-- /wp:heading -->',
+				esc_html( trim( wp_strip_all_tags( $inner_block['innerHTML'] ) ) )
+			);
+			break;
+		}
+	}
+
+	$attrs                                 = $parsed_block['attrs'];
+	$attrs['style']['spacing']['blockGap'] = 'var:preset|spacing|30';
+
+	$markup = sprintf(
+		'<!-- wp:woocommerce/product-collection %s --><div class="wp-block-woocommerce-product-collection">%s<!-- wp:woocommerce/product-template --><!-- wp:pattern {"slug":"extendable/hidden-shop-product"} /--><!-- /wp:woocommerce/product-template --></div><!-- /wp:woocommerce/product-collection -->',
+		serialize_block_attributes( $attrs ),
+		$heading
+	);
+
+	return parse_blocks( $markup )[0];
+}
+add_filter( 'render_block_data', 'extendable_cross_sells_use_shop_card' );
+
+/**
+ * Only $parent_block says this is the empty cart's own copy, so mark it here
+ * before the swap below would otherwise hit every Newest Products block.
+ *
+ * @param array         $parsed_block Parsed block data.
+ * @param array         $source_block Unmodified copy of $parsed_block, as parsed from the source.
+ * @param WP_Block|null $parent_block The parent block instance, if this one is nested.
+ * @return array Filtered block data.
+ */
+function extendable_mark_empty_cart_product_new( array $parsed_block, array $source_block, $parent_block = null ) : array {
+	if ( 'woocommerce/product-new' !== $parsed_block['blockName'] ) {
+		return $parsed_block;
+	}
+	if ( ! $parent_block instanceof WP_Block || 'woocommerce/empty-cart-block' !== $parent_block->name ) {
+		return $parsed_block;
+	}
+
+	$parsed_block['attrs']['__extendableEmptyCart'] = true;
+
+	return $parsed_block;
+}
+add_filter( 'render_block_data', 'extendable_mark_empty_cart_product_new', 10, 3 );
+
+/**
+ * WooCommerce also saves its own grid block into the cart page's empty-cart content, out of
+ * the templates' reach, so render the shop's card there too, the same fix already used for
+ * the cart's cross-sells list.
+ *
+ * @param string $block_content Rendered block content.
+ * @param array  $parsed_block  Parsed block data.
+ * @return string Filtered block content.
+ */
+function extendable_empty_cart_new_products_use_shop_card( string $block_content, array $parsed_block ) : string {
+	if ( empty( $parsed_block['attrs']['__extendableEmptyCart'] ) ) {
+		return $block_content;
+	}
+
+	$columns = (int) ( $parsed_block['attrs']['columns'] ?? 4 );
+	$rows    = (int) ( $parsed_block['attrs']['rows'] ?? 1 );
+
+	$markup = sprintf(
+		'<!-- wp:woocommerce/product-collection %s --><div class="wp-block-woocommerce-product-collection"><!-- wp:woocommerce/product-template --><!-- wp:pattern {"slug":"extendable/hidden-shop-product"} /--><!-- /wp:woocommerce/product-template --></div><!-- /wp:woocommerce/product-collection -->',
+		serialize_block_attributes(
+			array(
+				'queryId'       => 0,
+				'query'         => array(
+					'woocommerceAttributes'         => array(),
+					'woocommerceStockStatus'        => array( 'instock', 'outofstock', 'onbackorder' ),
+					'woocommerceOnSale'              => false,
+					'woocommerceHandPickedProducts' => array(),
+					'taxQuery'                      => array(),
+					'isProductCollectionBlock'      => true,
+					'perPage'                       => $columns * $rows,
+					'pages'                         => 1,
+					'offset'                        => 0,
+					'postType'                      => 'product',
+					'order'                         => 'desc',
+					'orderBy'                       => 'date',
+					'search'                        => '',
+					'exclude'                       => array(),
+					'inherit'                       => false,
+					'featured'                      => false,
+				),
+				'tagName'       => 'div',
+				'displayLayout' => array(
+					'type'          => 'flex',
+					'columns'       => $columns,
+					'shrinkColumns' => true,
+				),
+				'style'         => array( 'spacing' => array( 'blockGap' => 'var:preset|spacing|30' ) ),
+			)
+		)
+	);
+
+	return do_blocks( $markup );
+}
+add_filter( 'render_block', 'extendable_empty_cart_new_products_use_shop_card', 10, 2 );
 
 /**
  * Hide block style variations from editor UI while keeping them registered

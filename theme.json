@@ -555,6 +555,13 @@
 					"decoration": "none",
 					"hover-decoration": "underline"
 				}
+			},
+			"color-scheme": "light",
+			"store-card": {
+				"background": "var(--wp--custom--color--fill-weaker)",
+				"border-width": "0",
+				"border-style": "solid",
+				"border-color": "var(--wp--custom--color--stroke-weak)"
 			}
 		},
 		"layout": {
@@ -1774,6 +1781,165 @@
 			"core/gallery": {
 				"spacing": {
 					"blockGap": "var(--wp--preset--spacing--30)"
+				}
+			},
+			"woocommerce/product-sale-badge": {
+				"color": {
+					"background": "var(--wp--custom--color--fill-brand-strong)",
+					"text": "var(--wp--custom--color--text-on-brand)"
+				},
+				"border": {
+					"width": "0",
+					"radius": "var(--wp--custom--radius--chip)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--custom--text--text-small--font-size)",
+					"letterSpacing": "var(--wp--custom--text--text-small--letter-spacing)",
+					"fontWeight": "var(--wp--custom--typography--font-weight--semi-bold)",
+					"lineHeight": "var(--wp--custom--text--text-small--line-height)",
+					"textTransform": "none"
+				},
+				"css": "padding: 0.125em 0.5em;"
+			},
+			"woocommerce/breadcrumbs": {
+				"color": {
+					"text": "var(--wp--custom--color--text-strong)"
+				},
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var(--wp--custom--color--text-weak)"
+						},
+						"typography": {
+							"textDecoration": "none"
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						}
+					}
+				},
+				"typography": {
+					"fontSize": "var(--wp--custom--text--text-small--font-size)",
+					"fontWeight": "var(--wp--custom--text--text-small--font-weight)",
+					"lineHeight": "var(--wp--custom--text--text-small--line-height)",
+					"letterSpacing": "var(--wp--custom--text--text-small--letter-spacing)",
+					"textTransform": "var(--wp--custom--text--text-small--text-transform)"
+				}
+			},
+			"woocommerce/product-results-count": {
+				"color": {
+					"text": "var(--wp--custom--color--text-weak)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--custom--text--text-small--font-size)",
+					"fontWeight": "var(--wp--custom--text--text-small--font-weight)",
+					"lineHeight": "var(--wp--custom--text--text-small--line-height)",
+					"letterSpacing": "var(--wp--custom--text--text-small--letter-spacing)",
+					"textTransform": "var(--wp--custom--text--text-small--text-transform)"
+				}
+			},
+			"woocommerce/product-sku": {
+				"color": {
+					"text": "var(--wp--custom--color--text-weak)"
+				}
+			},
+			"woocommerce/accordion-header": {
+				"typography": {
+					"fontSize": "var(--wp--custom--text--heading-5--font-size)",
+					"fontWeight": "var(--wp--custom--text--heading-5--font-weight)",
+					"lineHeight": "var(--wp--custom--text--heading-5--line-height)",
+					"letterSpacing": "var(--wp--custom--text--heading-5--letter-spacing)",
+					"textTransform": "var(--wp--custom--text--heading-5--text-transform)"
+				}
+			},
+			"woocommerce/product-details": {
+				"css": "& .wp-block-accordion-heading { margin: 0; font-size: var(--wp--custom--text--heading-5--font-size); font-weight: var(--wp--custom--text--heading-5--font-weight); letter-spacing: var(--wp--custom--text--heading-5--letter-spacing); line-height: var(--wp--custom--text--heading-5--line-height); text-transform: var(--wp--custom--text--heading-5--text-transform); } & .wp-block-accordion-heading__toggle { display: flex; inline-size: 100%; align-items: center; justify-content: space-between; gap: var(--wp--preset--spacing--20); padding-block: var(--wp--preset--spacing--20); padding-inline: 0; border: 0; background: none; font: inherit; text-align: start; cursor: pointer; color: var(--wp--custom--color--text-strong); } & .wp-block-accordion-heading__toggle-icon { color: var(--wp--custom--color--text-weak); } & .wp-block-accordion-panel { margin-block-start: 0; padding-block-end: var(--wp--preset--spacing--20); } & .wp-block-accordion-item + .wp-block-accordion-item { margin-block-start: 0; border-block-start: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-weak); } & .wp-block-accordion-item:first-child .wp-block-accordion-heading__toggle { padding-block-start: 0; } & .wp-block-accordion-heading { font-size: var(--wp--custom--text--text-regular--font-size); font-weight: var(--wp--custom--text--heading-6--font-weight); line-height: var(--wp--custom--text--text-regular--line-height); letter-spacing: var(--wp--custom--text--text-regular--letter-spacing); text-transform: var(--wp--custom--text--text-regular--text-transform); } & .wp-block-accordion-panel { font-size: var(--wp--custom--text--text-small--font-size); line-height: var(--wp--custom--text--text-small--line-height); }"
+			},
+			"woocommerce/product-meta": {
+				"css": "& .wp-block-post-terms__prefix { color: var(--wp--custom--color--text-weak); }",
+				"color": {
+					"text": "var(--wp--custom--color--text-weak)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--custom--text--text-small--font-size)",
+					"fontWeight": "var(--wp--custom--text--text-small--font-weight)",
+					"lineHeight": "var(--wp--custom--text--text-small--line-height)",
+					"letterSpacing": "var(--wp--custom--text--text-small--letter-spacing)",
+					"textTransform": "var(--wp--custom--text--text-small--text-transform)"
+				},
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var(--wp--custom--color--text-weak)"
+						},
+						"typography": {
+							"textDecoration": "none"
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						}
+					}
+				}
+			},
+			"woocommerce/add-to-cart-with-options-variation-selector-attribute-name": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"fontWeight": "500",
+					"lineHeight": "1.2",
+					"letterSpacing": "var(--wp--custom--tracking--normal)"
+				}
+			},
+			"woocommerce/add-to-cart-with-options-grouped-product-item-label": {
+				"css": "overflow-wrap: normal; word-break: normal;"
+			},
+			"woocommerce/product-stock-indicator": {
+				"typography": {
+					"fontSize": "var(--wp--custom--text--text-small--font-size)"
+				},
+				"css": "&.wc-block-components-product-stock-indicator--in-stock { color: var(--wp--custom--color--text-success); } &.wc-block-components-product-stock-indicator--out-of-stock { color: var(--wp--custom--color--text-error); } &.wc-block-components-product-stock-indicator--available-on-backorder { color: var(--wp--custom--color--text-warning); }"
+			},
+			"woocommerce/add-to-cart-form": {
+				"css": "& .stock.in-stock { color: var(--wp--custom--color--text-success); } & .stock.out-of-stock { color: var(--wp--custom--color--text-error); } & .stock.available-on-backorder { color: var(--wp--custom--color--text-warning); }"
+			},
+			"woocommerce/product-rating": {
+				"typography": {
+					"fontSize": "var(--wp--custom--text--text-small--font-size)",
+					"fontWeight": "var(--wp--custom--text--text-small--font-weight)",
+					"lineHeight": "var(--wp--custom--text--text-small--line-height)",
+					"letterSpacing": "var(--wp--custom--text--text-small--letter-spacing)",
+					"textTransform": "var(--wp--custom--text--text-small--text-transform)"
+				},
+				"color": {
+					"text": "var(--wp--custom--color--text-weak)"
+				},
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var(--wp--custom--color--text-weak)"
+						}
+					}
+				}
+			},
+			"woocommerce/product-reviews-title": {
+				"color": {
+					"text": "var(--wp--custom--color--text-weak)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--custom--text--text-regular--font-size)",
+					"fontWeight": "var(--wp--custom--text--text-regular--font-weight)",
+					"lineHeight": "var(--wp--custom--text--text-regular--line-height)",
+					"letterSpacing": "var(--wp--custom--text--text-regular--letter-spacing)",
+					"textTransform": "var(--wp--custom--text--text-regular--text-transform)"
+				},
+				"spacing": {
+					"margin": {
+						"top": "0",
+						"bottom": "var(--wp--preset--spacing--25)"
+					}
 				}
 			},
 			"core/comments-pagination-numbers": {

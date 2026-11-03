@@ -1,0 +1,2387 @@
+/*
+ * WooCommerce's blocks on the design system. Loaded only while WooCommerce is active.
+ * Generated; edit the source, not this file.
+ */
+/* What theme.json cannot reach inside WooCommerce's blocks: the form controls, the notices, the
+   button states, the empty stars, the separator colour, the filters, the gallery and the
+   accordion. Hand-authored, not generated, and checked against WooCommerce 11.2.1. Each selector
+   is the WooCommerce rule it replaces, which prints first, so it wins by load order, or
+   zero-specificity where WooCommerce sets nothing; a WooCommerce variable is set at zero
+   specificity, so a colour picked on the block still wins. */
+
+/* woocommerce/cart-totals-block, woocommerce/checkout, woocommerce/mini-cart: the rule between rows, from each element's own stroke. */
+:where(*) {
+	--wc-separator-color: var(--wp--custom--color--stroke-weak); /* 2026-10-28 */
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the text field under its floating label, which needs the large control's height. */
+:is(.wc-block-components-form .wc-block-components-text-input, .wc-block-components-text-input) input:is([type="date"], [type="email"], [type="number"], [type="password"], [type="tel"], [type="text"], [type="url"]) {
+	background-color: var(--wp--custom--color--background-base);
+	border-color: var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--input);
+	color: var(--wp--custom--color--text-strong);
+	height: var(--wp--custom--control--lg);
+	padding-inline: var(--wp--custom--form-control--inset);
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the filled field, whose value Woo pulls 3px left of the empty one's. */
+:is(.wc-block-components-form .wc-block-components-text-input, .wc-block-components-text-input).is-active input:is([type="date"], [type="email"], [type="number"], [type="password"], [type="tel"], [type="text"], [type="url"]) {
+	padding-inline: var(--wp--custom--form-control--inset);
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the filled field in focus, which Woo pulls in again. */
+:is(.wc-block-components-form .wc-block-components-text-input, .wc-block-components-text-input).is-active input:is([type="date"], [type="email"], [type="number"], [type="password"], [type="tel"], [type="text"], [type="url"]):focus-within {
+	padding-inline: var(--wp--custom--form-control--inset);
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the field the browser filled, in focus. */
+:is(.wc-block-components-form .wc-block-components-text-input, .wc-block-components-text-input) input:-webkit-autofill:focus-within {
+	padding-inline: var(--wp--custom--form-control--inset);
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the text field in focus. */
+:is(.wc-block-components-form .wc-block-components-text-input, .wc-block-components-text-input) input:is([type="date"], [type="email"], [type="number"], [type="password"], [type="tel"], [type="text"], [type="url"]):focus-within {
+	background-color: var(--wp--custom--color--background-base);
+	border-color: var(--wp--custom--color--stroke-focus);
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the text field that failed validation. */
+:is(.wc-block-components-form .wc-block-components-text-input, .wc-block-components-text-input).has-error :is(input, input:active, input:focus-within, input:hover) {
+	border-color: var(--wp--custom--color--stroke-error);
+	box-shadow: none;
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: a disabled text field, which the field's own rule keeps looking enabled. */
+:is(.wc-block-components-form .wc-block-components-text-input, .wc-block-components-text-input) input:is([type="date"], [type="email"], [type="number"], [type="password"], [type="tel"], [type="text"], [type="url"]):disabled {
+	background-color: var(--wp--custom--color--fill-weak);
+	color: var(--wp--custom--color--text-disabled);
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the floating label, starting where the value's text does. */
+:is(.wc-block-components-form .wc-block-components-text-input, .wc-block-components-text-input) label {
+	color: var(--wp--custom--color--text-weak);
+	inset-inline-start: calc(var(--wp--custom--form-control--inset) + var(--wp--custom--border-width--1));
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the floated label at the select label's size, not Woo's 0.82 scale. */
+:is(.wc-block-components-form .wc-block-components-text-input, .wc-block-components-text-input).is-active label {
+	font-size: var(--wp--preset--font-size--x-small);
+	transform: none;
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the label of a field that failed validation. */
+:is(.wc-block-components-form .wc-block-components-text-input, .wc-block-components-text-input).has-error label {
+	color: var(--wp--custom--color--text-error);
+}
+
+/* woocommerce/checkout-order-note-block: the order note, capped at step 5 so a pill input does not make it a capsule. */
+.wc-block-components-textarea {
+	background-color: var(--wp--custom--color--background-base);
+	border-color: var(--wp--custom--color--stroke-strong);
+	border-radius: min(var(--wp--custom--radius--input), var(--wp--preset--border-radius--5));
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* woocommerce/checkout-order-note-block: the order note once typed in. */
+.wc-block-components-textarea:not(:placeholder-shown) {
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* woocommerce/checkout-order-note-block: the order note in focus. */
+.wc-block-components-textarea:focus {
+	background-color: var(--wp--custom--color--background-base);
+	border-color: var(--wp--custom--color--stroke-focus);
+	box-shadow: none;
+}
+
+/* woocommerce/checkout-order-note-block: the order note while disabled. */
+.wc-block-components-textarea:disabled {
+	background-color: var(--wp--custom--color--fill-weak);
+	color: var(--wp--custom--color--text-disabled);
+}
+
+/* woocommerce/checkout, woocommerce/add-to-cart-with-options: a field's error message, which Woo prints #cc1818 at its own small size. */
+.wc-block-components-validation-error {
+	color: var(--wp--custom--color--text-error);
+	font-size: var(--wp--custom--text--text-small--font-size);
+}
+
+/* woocommerce/checkout-order-note-block: the order note's placeholder. */
+.wc-block-components-textarea::placeholder {
+	color: var(--wp--custom--color--text-weaker);
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the country and state select's box. */
+.wc-blocks-components-select .wc-blocks-components-select__container {
+	background-color: var(--wp--custom--color--background-base);
+	border-radius: var(--wp--custom--radius--input);
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the country and state select, as tall as the text field beside it. */
+.wc-blocks-components-select .wc-blocks-components-select__select {
+	border-color: var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--input);
+	color: var(--wp--custom--color--text-strong);
+	height: var(--wp--custom--control--lg);
+	padding-inline: var(--wp--custom--form-control--inset);
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the select in focus, which Woo pulls in half a pixel. */
+.wc-blocks-components-select .wc-blocks-components-select__select:focus {
+	border-color: var(--wp--custom--color--stroke-focus);
+	padding-inline: var(--wp--custom--form-control--inset);
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the select while disabled. */
+.wc-blocks-components-select .wc-blocks-components-select__select:disabled {
+	background-color: var(--wp--custom--color--fill-weak);
+	color: var(--wp--custom--color--text-disabled);
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the select's label, which Woo sets at 13px, under the 14px floor, starting where the value does. */
+.wc-blocks-components-select .wc-blocks-components-select__label {
+	color: var(--wp--custom--color--text-weak);
+	font-size: var(--wp--preset--font-size--x-small);
+	inset-inline-start: calc(var(--wp--custom--form-control--inset) + var(--wp--custom--border-width--1));
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the select's chevron. */
+.wc-blocks-components-select .wc-blocks-components-select__expand {
+	fill: var(--wp--custom--color--icon-default);
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the select that failed validation. */
+.has-error .wc-blocks-components-select .wc-blocks-components-select__select {
+	border-color: var(--wp--custom--color--stroke-error);
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the label of a select that failed validation. */
+.has-error .wc-blocks-components-select .wc-blocks-components-select__label {
+	color: var(--wp--custom--color--text-error);
+}
+
+/* woocommerce/checkout, woocommerce/product-filter-checkbox-list: the checkbox, capped at step 1 so it never reads as a radio. */
+.wc-block-components-checkbox .wc-block-components-checkbox__input[type="checkbox"] {
+	background-color: var(--wp--custom--color--background-base);
+	border-color: var(--wp--custom--color--stroke-strong);
+	border-radius: min(var(--wp--custom--radius--input), var(--wp--preset--border-radius--1));
+}
+
+/* woocommerce/checkout: the ticked checkbox, filled on a name that holds 3:1 where a pale brand does not. */
+.wc-block-components-checkbox .wc-block-components-checkbox__input[type="checkbox"]:checked {
+	background-color: var(--wp--custom--color--stroke-focus);
+	border-color: var(--wp--custom--color--stroke-focus);
+}
+
+/* woocommerce/checkout, woocommerce/product-filter-checkbox-list: the checkbox in focus. */
+.wc-block-components-checkbox .wc-block-components-checkbox__input[type="checkbox"]:focus {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+/* woocommerce/checkout: the tick, in the page colour on its fill. */
+.wc-block-components-checkbox .wc-block-components-checkbox__mark {
+	fill: var(--wp--custom--color--background-base);
+}
+
+/* woocommerce/checkout: a required checkbox left unticked. */
+.wc-block-components-checkbox.has-error {
+	color: var(--wp--custom--color--text-error);
+}
+
+/* woocommerce/checkout: the link in a required checkbox's label. */
+.wc-block-components-checkbox.has-error a {
+	color: var(--wp--custom--color--text-error);
+}
+
+/* woocommerce/checkout: the box of a required checkbox left unticked. */
+.wc-block-components-checkbox.has-error :is(.wc-block-components-checkbox__input, .wc-block-components-checkbox__input:active, .wc-block-components-checkbox__input:focus, .wc-block-components-checkbox__input:hover) {
+	border-color: var(--wp--custom--color--stroke-error);
+}
+
+/* woocommerce/checkout: a required checkbox in focus. */
+.wc-block-components-checkbox.has-error .wc-block-components-checkbox__input:focus {
+	outline-color: var(--wp--custom--color--stroke-error);
+}
+
+/* woocommerce/checkout-shipping-methods-block, woocommerce/checkout-payment-block: the radio. */
+.wc-block-components-radio-control .wc-block-components-radio-control__input {
+	background-color: var(--wp--custom--color--background-base);
+	border-color: var(--wp--custom--color--stroke-strong);
+}
+
+/* woocommerce/checkout-shipping-methods-block, woocommerce/checkout-payment-block: the picked radio; a pale brand stroke falls under 3:1. */
+.wc-block-components-radio-control .wc-block-components-radio-control__input:checked {
+	border-color: var(--wp--custom--color--stroke-focus);
+}
+
+/* woocommerce/checkout-shipping-methods-block, woocommerce/checkout-payment-block: the picked radio's dot, on the same 3:1 name. */
+.wc-block-components-radio-control .wc-block-components-radio-control__input:checked::before {
+	background-color: var(--wp--custom--color--stroke-focus);
+}
+
+/* woocommerce/checkout-shipping-methods-block, woocommerce/checkout-payment-block: the option's label, at the label weight a checkbox's has. */
+.wc-block-components-radio-control__label {
+	font-weight: var(--wp--custom--text--label--font-weight);
+}
+
+/* woocommerce/checkout-shipping-methods-block, woocommerce/checkout-payment-block: the options' frame, a tall input box, not Woo's 4px. */
+.wc-block-components-radio-control--highlight-checked::after {
+	border-radius: min(var(--wp--custom--radius--input), var(--wp--preset--border-radius--5));
+}
+
+/* woocommerce/checkout-payment-block: the picked payment option's frame, which Woo draws in currentColor. */
+.wc-block-components-radio-control--highlight-checked .wc-block-components-radio-control-accordion-option--checked-option-highlighted {
+	border-radius: min(var(--wp--custom--radius--input), var(--wp--preset--border-radius--5));
+	box-shadow: inset 0 0 0 var(--wp--custom--border-width--2) var(--wp--custom--color--stroke-focus);
+}
+
+/* woocommerce/checkout-shipping-methods-block: the picked shipping option's frame, on the same name. */
+.wc-block-components-radio-control--highlight-checked label.wc-block-components-radio-control__option--checked-option-highlighted {
+	border-radius: min(var(--wp--custom--radius--input), var(--wp--preset--border-radius--5));
+	box-shadow: inset 0 0 0 var(--wp--custom--border-width--2) var(--wp--custom--color--stroke-focus);
+}
+
+/* woocommerce/checkout-shipping-methods-block, woocommerce/checkout-payment-block: the radio in focus. */
+.wc-block-components-radio-control .wc-block-components-radio-control__input:focus {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+/* woocommerce/cart-line-items-block, woocommerce/add-to-cart-form: the quantity stepper. */
+:where(.wc-block-components-quantity-selector:has(input:not([type="hidden"]))) {
+	background-color: var(--wp--custom--color--background-base);
+	border-color: var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--input);
+}
+
+/* woocommerce/add-to-cart-form: the stepper beside the add-to-cart button. */
+div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper form.cart div.wc-block-components-quantity-selector.quantity:where(:has(input:not([type="hidden"]))) {
+	background-color: var(--wp--custom--color--background-base);
+	margin-inline-end: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/add-to-cart-form: the classic stepper's gap to its button, a related step, not Woo's 4px. */
+.woocommerce div.product form.cart div.quantity {
+	margin-inline-end: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/add-to-cart-form: the classic quantity field, whose 0.5em margin would widen that gap. */
+.woocommerce div.product form.cart div.quantity .qty {
+	margin-inline-end: 0;
+}
+
+/* woocommerce/add-to-cart-with-options: the stepper and its button sit related, not at the theme's block gap. */
+.wp-block-group:where(:has(> .wc-block-add-to-cart-with-options__quantity-selector)) {
+	gap: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/add-to-cart-form: the quantity field, whose content box adds Woo's padding to the control height. */
+.wp-block-woocommerce-add-to-cart-form .quantity .qty {
+	box-sizing: border-box;
+}
+
+/* woocommerce/add-to-cart-form: the stepper's quantity field, which Woo pads 0.9rem above and below. */
+div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-components-quantity-selector input[type="number"].input-text.qty.text {
+	padding-block: 0;
+}
+
+/* woocommerce/add-to-cart-form, woocommerce/cart-line-items-block, woocommerce/add-to-cart-with-options: the stepper's field, so the stepper and its edge are the md control, not 46px. */
+.wc-block-components-quantity-selector input.wc-block-components-quantity-selector__input {
+	box-sizing: border-box;
+	height: calc(var(--wp--custom--control--md) - 2 * var(--wp--custom--border-width--1));
+}
+
+/* woocommerce/add-to-cart-form, woocommerce/cart-line-items-block: the stepper's +/− in focus, without Woo's inset shadow. */
+.wc-block-components-quantity-selector .wc-block-components-quantity-selector__button:focus {
+	box-shadow: none;
+}
+
+/* woocommerce/add-to-cart-form, woocommerce/cart-line-items-block: the stepper's +/− on the theme's ring, which Woo's outline: none drops. */
+.wc-block-components-quantity-selector .wc-block-components-quantity-selector__button:focus-visible {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+/* woocommerce/add-to-cart-form, woocommerce/cart-line-items-block: the stepper's field in focus, on the theme's ring, not Woo's 1px inset shadow. */
+.wc-block-components-quantity-selector input.wc-block-components-quantity-selector__input:focus {
+	box-shadow: none;
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+/* woocommerce/add-to-cart-with-options-quantity-selector: the stepper's edge, which Woo prints in currentColor at 30%. */
+:where(.wc-block-add-to-cart-with-options__quantity-selector) {
+	border-color: var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--input);
+}
+
+/* woocommerce/product-button: the core button's line height and edge, which Woo resets to inherit and none, so the button grew past every other. */
+.wp-block-button.wc-block-components-product-button .wc-block-components-product-button__button {
+	border-style: solid;
+	line-height: var(--wp--custom--typography--line-height--small);
+}
+
+/* woocommerce/add-to-cart-with-options: the button while no variation is picked, as the theme's disabled button, not half opacity. */
+:where(.wc-block-add-to-cart-with-options.is-invalid) .wp-block-woocommerce-product-button .wc-block-components-product-button__button {
+	background-color: var(--wp--custom--color--fill-disabled);
+	color: var(--wp--custom--color--text-disabled);
+	opacity: 1;
+}
+
+/* woocommerce/add-to-cart-with-options: the pills reuse the filter chip's markup, not its role. */
+.wp-block-woocommerce-add-to-cart-with-options-variation-selector-attribute .wc-block-product-filter-chips__item {
+	border-radius: var(--wp--custom--radius--input);
+}
+
+/* woocommerce/add-to-cart-form: the classic button before a variation is picked, as the theme's disabled button, not half opacity. */
+.woocommerce button.single_add_to_cart_button.disabled {
+	background-color: var(--wp--custom--color--fill-disabled);
+	color: var(--wp--custom--color--text-disabled);
+	opacity: 1;
+}
+
+/* woocommerce/add-to-cart-form: the same button under the pointer, which Woo halves again. */
+.woocommerce button.single_add_to_cart_button.disabled:hover {
+	background-color: var(--wp--custom--color--fill-disabled);
+	color: var(--wp--custom--color--text-disabled);
+	opacity: 1;
+}
+
+/* woocommerce/add-to-cart-form: the classic variations table's label, at the label weight, not 700. */
+.woocommerce div.product form.cart .variations label {
+	font-weight: var(--wp--custom--text--label--font-weight);
+}
+
+/* woocommerce/add-to-cart-form: the classic variation select, on the theme's select height and inset, not Woo's 3em and 1.1em. */
+.woocommerce table.variations tr td select {
+	font-size: var(--wp--custom--form-control--input-value);
+	height: var(--wp--custom--control--md);
+	padding-block: 0;
+	padding-inline-start: var(--wp--custom--form-control--inset);
+}
+
+/* woocommerce/add-to-cart-form: the classic variation select's fill, which Woo's chevron shorthand leaves transparent. */
+.woocommerce div.product form.cart .variations select {
+	background-color: var(--wp--custom--color--background-base);
+}
+
+/* woocommerce/add-to-cart-form: the classic variations table's space before the chosen variation and the button, a group step (fields to actions), not 1em. */
+.woocommerce div.product form.cart .variations {
+	margin-bottom: var(--wp--preset--spacing--30);
+}
+
+/* woocommerce/add-to-cart-form: the variations stack, a related step between siblings, instead of Woo's label-beside-select table. */
+:where(.woocommerce table.variations tbody) {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/add-to-cart-form: each variation's label sits over its select, a byline step apart. */
+:where(.woocommerce table.variations tr) {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--10);
+}
+
+/* woocommerce/add-to-cart-form: the stacked label and select cells, without the table's cell padding. */
+.woocommerce table.variations tr td,
+.woocommerce table.variations tr th {
+	display: block;
+	padding: 0;
+}
+
+/* woocommerce/add-to-cart-form: the variation select fills the buy box, not Woo's 70% with a 1em margin. */
+.woocommerce div.product form.cart table.variations td select {
+	margin-inline-end: 0;
+	min-width: 0;
+	width: 100%;
+}
+
+/* woocommerce/add-to-cart-form: the chosen variation's price reads as the product's price, at text-large. */
+:where(.woocommerce div.product .single_variation_wrap span.price) {
+	font-size: var(--wp--custom--text--text-large--font-size);
+	font-weight: var(--wp--custom--text--text-large--font-weight);
+}
+
+/* woocommerce/add-to-cart-form: a simple product's quantity beside a button that fills the rest of the row. */
+.wp-block-woocommerce-add-to-cart-form form.cart {
+	grid-template-columns: min-content 1fr;
+}
+
+/* woocommerce/add-to-cart-form: a variable product's quantity beside a button that fills the rest of the row. */
+.wp-block-woocommerce-add-to-cart-form .variations_button {
+	grid-template-columns: min-content 1fr;
+}
+
+/* woocommerce/add-to-cart-form: a simple product's add-to-cart button stretches across its column, not Woo's start. */
+.wp-block-woocommerce-add-to-cart-form form.cart > .single_add_to_cart_button {
+	justify-self: stretch;
+}
+
+/* woocommerce/add-to-cart-form: a variable product's add-to-cart button stretches across its column, not Woo's start. */
+.wp-block-woocommerce-add-to-cart-form .variations_button > .single_add_to_cart_button {
+	justify-self: stretch;
+}
+
+/* woocommerce/product-meta: Woo's meta hook prints a brand or an extension's line after the block, outside its leaf. */
+:where(.wp-block-woocommerce-product-meta ~ :not([class*="wp-block-"])) {
+	color: var(--wp--custom--color--text-weak);
+	font-size: var(--wp--custom--text--text-small--font-size);
+}
+
+/* woocommerce/product-meta: those lines' links read as the meta's links, not body links. */
+.wp-block-woocommerce-product-meta ~ :where(:not([class*="wp-block-"])) :where(a) {
+	color: var(--wp--custom--color--text-weak);
+	text-decoration: none;
+}
+
+/* woocommerce/product-gallery: the photo sits a related step above its thumbnails, not the theme's block gap. */
+.wc-block-product-gallery {
+	gap: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/product-gallery: the thumbnails sit as far apart as the photo sits from them, not Woo's 2%. */
+:where(.wc-block-product-gallery-thumbnails__scrollable) {
+	gap: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/add-to-cart-form: the classic stock line, at text-small, not 0.92em. */
+.woocommerce div.product p.stock {
+	font-size: var(--wp--custom--text--text-small--font-size);
+}
+
+/* woocommerce/product-specifications: the cells start at the panel's edge, a paired step tall, with no row rules, not the table part's inset and lines. */
+.wp-block-woocommerce-product-specifications tr > :is(td, th) {
+	border-block-end-width: 0;
+	padding-block: var(--wp--preset--spacing--10);
+	padding-inline: 0 var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/product-specifications: the table reads at its panel's size, not the table element's text-regular. */
+.wp-block-woocommerce-product-specifications > :where(table) {
+	font-size: inherit;
+}
+
+/* woocommerce/product-specifications: an attribute's values print as a paragraph, whose browser margins double the row. */
+:where(.wp-block-woocommerce-product-specifications td) p {
+	margin: 0;
+}
+
+/* woocommerce/product-specifications: the attribute name at the label weight, not the table head's bold. */
+:where(.wp-block-product-specifications-item__label) {
+	font-weight: var(--wp--custom--text--label--font-weight);
+}
+
+/* woocommerce/add-to-cart-form: the classic "Clear" link, at text-small, not 0.83em. */
+.woocommerce div.product form.cart .reset_variations {
+	font-size: var(--wp--custom--text--text-small--font-size);
+}
+
+/* woocommerce/add-to-cart-form: the "Clear" link sits at the end of its option's label line; hidden, it held a row of space under the last select. */
+:where(.woocommerce table.variations tr) {
+	position: relative;
+}
+
+/* woocommerce/add-to-cart-form: the same link, out of the stack's flow. */
+:where(.woocommerce table.variations a.reset_variations) {
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline-end: 0;
+}
+
+/* woocommerce/checkout: the page's gap spaces the form under its title, so Woo's 24px top padding would add to it. */
+.wp-block-woocommerce-checkout {
+	padding-block-start: 0;
+}
+
+/* woocommerce/classic-shortcode: the account page's menu and content side by side, wrapping to one column on a narrow screen, in place of Woo's floats. */
+:where(.woocommerce-account .woocommerce:has(> .woocommerce-MyAccount-navigation)) {
+	align-items: flex-start;
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--wp--preset--spacing--40) var(--wp--preset--spacing--64);
+}
+
+/* woocommerce/classic-shortcode: Woo's float clearfix, which as flex items would push the menu off the edge. */
+.woocommerce-account .woocommerce::after,
+.woocommerce-account .woocommerce::before {
+	content: none;
+}
+
+/* woocommerce/classic-shortcode: the account menu at the shop sidebar's 288px. */
+.woocommerce-account .woocommerce-MyAccount-navigation {
+	flex: 0 1 18rem;
+	float: none;
+	width: auto;
+}
+
+/* woocommerce/classic-shortcode: the account content takes the rest of the row. */
+.woocommerce-account .woocommerce-MyAccount-content {
+	flex: 1 1 20rem;
+	float: none;
+	min-width: 0;
+	width: auto;
+}
+
+/* woocommerce/classic-shortcode: the menu's items sit related, with no list margin. */
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--10);
+	margin: 0;
+}
+
+/* woocommerce/classic-shortcode: an item's space is its link's padding, not Woo's 1em. */
+.woocommerce-account .woocommerce-MyAccount-navigation li {
+	padding: 0;
+}
+
+/* woocommerce/classic-shortcode: each menu item a ghost row, the neutral hover fill under the pointer. */
+.woocommerce-account .woocommerce-MyAccount-navigation li a {
+	border-radius: var(--wp--custom--radius--control);
+	color: var(--wp--custom--color--text-strong);
+	display: block;
+	padding: var(--wp--preset--spacing--10) var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/classic-shortcode: a menu item under the pointer. */
+:where(.woocommerce-MyAccount-navigation) li a:hover {
+	background-color: var(--wp--custom--color--fill-neutral-hover);
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* woocommerce/classic-shortcode: the current item on the soft fill at the label weight, not Woo's underline. */
+.woocommerce-account .woocommerce-MyAccount-navigation li.is-active a {
+	background-color: var(--wp--custom--color--fill-weak);
+	font-weight: var(--wp--custom--text--label--font-weight);
+	text-decoration: none;
+}
+
+/* woocommerce/classic-shortcode: the account content at the page's wide width, not Woo's centred 1000px. */
+.woocommerce-account main .woocommerce {
+	max-width: none;
+}
+
+/* woocommerce/classic-shortcode: signed out, the heading and form sit in one centred column a single field wide. */
+.woocommerce-account main .woocommerce:has(> .login, > .lost_reset_password) {
+	margin-inline: auto;
+	max-width: 28rem;
+}
+
+/* woocommerce/classic-shortcode: order-pay's email check sits in the same centred column, off the checkout page's own wide form. */
+.woocommerce-checkout main .woocommerce:has(> .woocommerce-verify-email) {
+	margin-inline: auto;
+	max-width: 28rem;
+}
+
+/* woocommerce/order-confirmation-status: order-received's email check and the text above it share that column too. */
+.wc-block-order-confirmation-status-description:has(> .woocommerce-verify-email) {
+	margin-inline: auto;
+	max-width: 28rem;
+}
+
+/* woocommerce/order-confirmation-status: the thank-you line over the email check joins the centred column, not the wide row. */
+.wc-block-order-confirmation-status:has(+ .wc-block-order-confirmation-status-description > .woocommerce-verify-email) {
+	font-weight: var(--wp--custom--typography--font-weight--semi-bold);
+	margin-inline: auto;
+	max-width: 28rem;
+}
+
+/* woocommerce/order-confirmation-status: the text a related step under the thank-you line, not a section's gap. */
+.wc-block-order-confirmation-status-description:has(> .woocommerce-verify-email) {
+	margin-block-start: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/order-confirmation-status: the text's own top margin would add to that step. */
+:where(.wc-block-order-confirmation-status-description > p:first-child) {
+	margin-block-start: 0;
+}
+
+/* woocommerce/order-confirmation-status: the email check's lone field spans the card, not Woo's 50% on a wide screen. */
+.wc-block-order-confirmation-status-description .woocommerce-verify-email #verify-email {
+	width: 100%;
+}
+
+/* woocommerce/classic-shortcode: lost password's lone field spans the card; Woo's 47% half-width is for a paired row. */
+.woocommerce form.lost_reset_password .form-row-first {
+	float: none;
+	width: 100%;
+}
+
+/* woocommerce/classic-shortcode: the sign-in form's heading at heading-5, on the form's start edge. */
+:where(.woocommerce-account .woocommerce) > h2 {
+	font-size: var(--wp--custom--text--heading-5--font-size);
+	font-weight: var(--wp--custom--text--heading-5--font-weight);
+	line-height: var(--wp--custom--text--heading-5--line-height);
+	margin-block: 0 var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/classic-shortcode: the sign-in and register forms on the vibe's filled card, else the soft card, a single field wide, in place of Woo's ruled box. */
+.woocommerce form.login,
+.woocommerce form.register {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	margin: 0;
+	max-width: 28rem;
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/classic-shortcode: Remember me, then the sign-in button across the form, in place of Woo's float. */
+:where(.woocommerce-form-login .form-row:has(> .woocommerce-form-login__submit)) {
+	align-items: stretch;
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/classic-shortcode: the sign-in button in the column's flow. */
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit {
+	float: none;
+	margin-inline-end: 0;
+}
+
+/* woocommerce/classic-shortcode: Remember me's box centred on its label. */
+.woocommerce .woocommerce-form-login .woocommerce-form-login__rememberme {
+	align-items: center;
+	display: inline-flex;
+	gap: var(--wp--preset--spacing--10);
+}
+
+/* woocommerce/classic-shortcode: the required mark in the error ink; Woo's #a00 falls under 3:1 on a dark palette. */
+.woocommerce form .form-row .required {
+	color: var(--wp--custom--color--text-error);
+}
+
+/* woocommerce/classic-shortcode: lost/reset password and the email-check form share the sign-in form's card. */
+:where(.woocommerce form.lost_reset_password, form.woocommerce-verify-email) {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	margin: 0;
+	max-width: 28rem;
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/classic-shortcode: section headings in the account content at heading-5, not the page's h2. */
+:where(.woocommerce-MyAccount-content) :is(h2, h3, h4, h5, h6) {
+	font-size: var(--wp--custom--text--heading-5--font-size);
+	font-weight: var(--wp--custom--text--heading-5--font-weight);
+	line-height: var(--wp--custom--text--heading-5--line-height);
+	margin-block-end: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/classic-shortcode: beats Woo's own large, light size for this one title. */
+.woocommerce-customer-details h2.woocommerce-column__title {
+	font-size: var(--wp--custom--text--heading-5--font-size);
+	font-weight: var(--wp--custom--text--heading-5--font-weight);
+	line-height: var(--wp--custom--text--heading-5--line-height);
+}
+
+/* woocommerce/classic-shortcode: no gap above the card's own title; Woo prints no class on it for order-details/order-downloads, only position. */
+.woocommerce-order-details > h2:first-child,
+.woocommerce-order-downloads > h2:first-child {
+	margin-block-start: 0;
+}
+
+/* woocommerce/classic-shortcode: no gap above a card or form's own title; the theme's heading margin otherwise sits it below the menu's first row. */
+:where(.woocommerce-customer-details h2.woocommerce-column__title, .woocommerce-MyAccount-content form > h2:first-child) {
+	margin-block-start: 0;
+}
+
+/* woocommerce/classic-shortcode: each address on the soft card the sign-in form already uses. */
+:where(.woocommerce-Addresses :is(.col-1, .col-2)) {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--20);
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/classic-shortcode: drops the header's box so Edit can reorder with the column's siblings. */
+:where(.woocommerce-Addresses .title) {
+	display: contents;
+}
+
+/* woocommerce/classic-shortcode: no second box now the column is the card; Woo's layout prints it italic. */
+.woocommerce-Addresses address {
+	border: 0;
+	font-style: normal;
+	padding: 0;
+	width: auto;
+}
+
+/* woocommerce/classic-shortcode: the card's title starts at the card's own padding, and the card's gap alone sets what follows it. */
+.woocommerce-Addresses .title h2 {
+	margin-block: 0;
+}
+
+/* woocommerce/classic-shortcode: order 1 puts Edit after the title and address, both at the default 0. */
+:where(.woocommerce-Addresses .edit) {
+	font-size: var(--wp--custom--text--text-small--font-size);
+	order: 1;
+}
+
+/* woocommerce/classic-shortcode: Edit sits on the card's gap, not Woo's own 1em under it. */
+.woocommerce-account .woocommerce-Addresses .title .edit {
+	margin: 0;
+}
+
+/* woocommerce/classic-shortcode: the header's clearfix boxes would each take a gap of the card, now the header is display: contents. */
+.woocommerce-account .woocommerce-Addresses .title::before,
+.woocommerce-account .woocommerce-Addresses .title::after {
+	display: none;
+}
+
+/* woocommerce/classic-shortcode: each on the soft card, like the cart totals. */
+:where(.woocommerce-order-details, .woocommerce-order-downloads, .woocommerce-customer-details) {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/classic-shortcode: no second box now the column is the card; Woo's layout prints a bordered, rounded box around it. */
+.woocommerce .woocommerce-customer-details address {
+	border: 0;
+	border-radius: 0;
+	padding: 0;
+}
+
+/* woocommerce/classic-shortcode: drops Woo's shop_table grid for the cart totals' row rhythm. */
+.woocommerce-order-details table,
+.woocommerce-order-downloads table {
+	border: 0;
+	width: 100%;
+}
+
+/* woocommerce/classic-shortcode: each row sits on the separator, not Woo's grid line. */
+.woocommerce-order-details table :is(th, td),
+.woocommerce-order-downloads table :is(th, td) {
+	border: 0;
+	border-block-end: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-weak);
+	padding: var(--wp--preset--spacing--20) 0;
+	text-align: start;
+}
+
+/* woocommerce/classic-shortcode: weak ink, caps tracking — the store's own table-header look. */
+:where(.woocommerce-order-details table thead th, .woocommerce-order-downloads table thead th) {
+	color: var(--wp--custom--color--text-weak);
+	letter-spacing: var(--wp--custom--tracking--wider);
+}
+
+/* woocommerce/classic-shortcode: the small secondary button, not the button element's primary fill. */
+.woocommerce-orders-table__cell-order-actions .button,
+.order-actions-button.button {
+	align-items: center;
+	background-color: var(--wp--custom--color--background-base);
+	border: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--control);
+	box-sizing: border-box;
+	color: var(--wp--custom--color--text-strong);
+	display: inline-flex;
+	font-size: var(--wp--custom--control-label--sm);
+	font-weight: var(--wp--custom--text--label--font-weight);
+	height: var(--wp--custom--control--sm);
+	padding: 0 1em;
+	text-decoration: none;
+}
+
+/* woocommerce/classic-shortcode: each action an inline button, label centred; Woo's block theme makes it a 1em-spaced block. */
+.woocommerce-account .woocommerce-orders-table__cell.woocommerce-orders-table__cell-order-actions a.button {
+	display: inline-flex;
+	justify-content: center;
+	margin: 0 var(--wp--preset--spacing--10) 0 0;
+}
+
+/* woocommerce/classic-shortcode: the small secondary button; Woo's own .button.alt no longer renders one. */
+:where(.woocommerce-MyAccount-downloads-file) {
+	align-items: center;
+	background-color: var(--wp--custom--color--background-base);
+	border: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--control);
+	box-sizing: border-box;
+	color: var(--wp--custom--color--text-strong);
+	display: inline-flex;
+	font-size: var(--wp--custom--control-label--sm);
+	font-weight: var(--wp--custom--text--label--font-weight);
+	height: var(--wp--custom--control--sm);
+	padding: 0 1em;
+	text-decoration: none;
+}
+
+/* woocommerce/classic-shortcode: the download link under the pointer. */
+:where(.woocommerce-MyAccount-downloads-file:hover) {
+	background-color: var(--wp--custom--color--fill-weak-hover);
+	text-decoration: none;
+}
+
+/* woocommerce/classic-shortcode: the order number reads as the UI link, underlined only on hover. */
+:where(.woocommerce-orders-table__cell a:not(.button)) {
+	text-decoration: none;
+}
+
+/* woocommerce/classic-shortcode: the order number link under the pointer. */
+:where(.woocommerce-orders-table__cell a:not(.button):hover) {
+	text-decoration: underline;
+}
+
+/* woocommerce/store-notices: Woo prints the area even with no notice; it takes no room until one arrives. */
+:where(.wc-block-store-notices:not(:has(.wc-block-components-notice-banner, .woocommerce-error, .woocommerce-info, .woocommerce-message))) {
+	display: none;
+}
+
+/* woocommerce/store-notices: the container's gap spaces a page notice, so Woo's 16px banner margin would add to it. */
+.wc-block-store-notices .wc-block-components-notice-banner {
+	margin-block: 0;
+}
+
+/* woocommerce/store-notices, woocommerce/checkout: a notice with no kind. */
+.wc-block-components-notice-banner {
+	background-color: var(--wp--custom--color--fill-weak);
+	border-color: var(--wp--custom--color--stroke-weak);
+	border-radius: var(--wp--custom--radius--panel);
+	color: var(--wp--custom--color--text-strong);
+	font-size: var(--wp--custom--text--text-small--font-size);
+	gap: var(--wp--preset--spacing--10);
+}
+
+/* woocommerce/store-notices, woocommerce/checkout: the notice's icon. */
+.wc-block-components-notice-banner > svg {
+	background-color: var(--wp--custom--color--fill-neutral-strong);
+	fill: var(--wp--custom--color--text-on-neutral);
+}
+
+/* woocommerce/store-notices, woocommerce/checkout: the error notice. */
+.wc-block-components-notice-banner.is-error {
+	background-color: var(--wp--custom--color--fill-error-weak);
+	border-color: var(--wp--custom--color--stroke-error-weak);
+	color: var(--wp--custom--color--text-error);
+}
+
+/* woocommerce/store-notices, woocommerce/checkout: the error notice's icon. */
+.wc-block-components-notice-banner.is-error > svg {
+	background-color: var(--wp--custom--color--fill-error-strong);
+	fill: var(--wp--custom--color--text-on-status);
+}
+
+/* woocommerce/store-notices, woocommerce/checkout: the warning notice. */
+.wc-block-components-notice-banner.is-warning {
+	background-color: var(--wp--custom--color--fill-warning-weak);
+	border-color: var(--wp--custom--color--stroke-warning-weak);
+	color: var(--wp--custom--color--text-warning);
+}
+
+/* woocommerce/store-notices, woocommerce/checkout: the warning notice's icon. */
+.wc-block-components-notice-banner.is-warning > svg {
+	background-color: var(--wp--custom--color--fill-warning-strong);
+	fill: var(--wp--custom--color--text-on-status);
+}
+
+/* woocommerce/store-notices, woocommerce/checkout: the success notice. */
+.wc-block-components-notice-banner.is-success {
+	background-color: var(--wp--custom--color--fill-success-weak);
+	border-color: var(--wp--custom--color--stroke-success-weak);
+	color: var(--wp--custom--color--text-success);
+}
+
+/* woocommerce/store-notices, woocommerce/checkout: the success notice's icon. */
+.wc-block-components-notice-banner.is-success > svg {
+	background-color: var(--wp--custom--color--fill-success-strong);
+	fill: var(--wp--custom--color--text-on-status);
+}
+
+/* woocommerce/store-notices, woocommerce/checkout: the info notice. */
+.wc-block-components-notice-banner.is-info {
+	background-color: var(--wp--custom--color--fill-info-weak);
+	border-color: var(--wp--custom--color--stroke-info-weak);
+	color: var(--wp--custom--color--text-info);
+}
+
+/* woocommerce/store-notices, woocommerce/checkout: the info notice's icon. */
+.wc-block-components-notice-banner.is-info > svg {
+	background-color: var(--wp--custom--color--fill-info-strong);
+	fill: var(--wp--custom--color--text-on-status);
+}
+
+/* woocommerce/store-notices: WooCommerce prints the close button's ink !important. */
+.wc-block-components-notice-banner > .wc-block-components-button {
+	color: currentColor !important;
+}
+
+/* woocommerce/store-notices: WooCommerce prints the notice link's ink !important. */
+.wc-block-components-notice-banner > .wc-block-components-notice-banner__content .wc-forward {
+	color: currentColor !important;
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the floating notice. */
+.wc-block-components-notice-banner.wc-block-components-notice-snackbar,
+.wc-block-components-notice-snackbar-list .wc-block-components-notice-banner {
+	box-shadow: var(--wp--custom--shadow--overlay);
+}
+
+/* woocommerce/checkout, woocommerce/cart-totals-block: the floating notice with no kind. */
+.wc-block-components-notice-banner.wc-block-components-notice-snackbar.is-default,
+.wc-block-components-notice-snackbar-list .wc-block-components-notice-banner.is-default {
+	border-color: var(--wp--custom--color--stroke-weak);
+}
+
+/* woocommerce/classic-shortcode: the classic notice, on the block notice's shape. */
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+	border: var(--wp--custom--border-width--1) solid;
+	border-radius: var(--wp--custom--radius--panel);
+	box-sizing: border-box;
+	font-size: var(--wp--custom--text--text-small--font-size);
+	margin-block-end: var(--wp--preset--spacing--20);
+	padding: var(--wp--preset--spacing--20);
+	padding-inline-start: calc(var(--wp--preset--spacing--20) + 1em + var(--wp--preset--spacing--10));
+}
+
+/* woocommerce/classic-shortcode: the classic notice's icon, on the block notice's inset. */
+.woocommerce-error::before,
+.woocommerce-info::before,
+.woocommerce-message::before {
+	inset-inline-start: var(--wp--preset--spacing--20);
+	top: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/classic-shortcode: the classic success notice. */
+.woocommerce-message {
+	background-color: var(--wp--custom--color--fill-success-weak);
+	border-color: var(--wp--custom--color--stroke-success-weak);
+	color: var(--wp--custom--color--text-success);
+}
+
+/* woocommerce/classic-shortcode: the classic success notice's icon. */
+.woocommerce-message::before {
+	color: var(--wp--custom--color--text-success);
+}
+
+/* woocommerce/classic-shortcode: the classic info notice. */
+.woocommerce-info {
+	background-color: var(--wp--custom--color--fill-info-weak);
+	border-color: var(--wp--custom--color--stroke-info-weak);
+	color: var(--wp--custom--color--text-info);
+}
+
+/* woocommerce/classic-shortcode: the classic info notice's icon. */
+.woocommerce-info::before {
+	color: var(--wp--custom--color--text-info);
+}
+
+/* woocommerce/classic-shortcode: the classic error notice. */
+.woocommerce-error {
+	background-color: var(--wp--custom--color--fill-error-weak);
+	border-color: var(--wp--custom--color--stroke-error-weak);
+	color: var(--wp--custom--color--text-error);
+}
+
+/* woocommerce/classic-shortcode: the classic error notice's icon. */
+.woocommerce-error::before {
+	color: var(--wp--custom--color--text-error);
+}
+
+/* The classic store notice WooCommerce prints on every page, as the info notice. */
+.woocommerce-store-notice {
+	background-color: var(--wp--custom--color--fill-info-weak);
+	border-block-start: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-info-weak);
+	color: var(--wp--custom--color--text-info);
+}
+
+/* The classic store notice, in its older markup. */
+p.demo_store {
+	background-color: var(--wp--custom--color--fill-info-weak);
+	border-block-start: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-info-weak);
+	color: var(--wp--custom--color--text-info);
+}
+
+/* The classic store notice's link and dismiss link. */
+.woocommerce-store-notice a {
+	color: inherit;
+}
+
+/* The classic store notice's link, in its older markup. */
+p.demo_store a {
+	color: inherit;
+}
+
+/* woocommerce/proceed-to-checkout-block, woocommerce/checkout, woocommerce/mini-cart: WooCommerce's own blue ring. */
+.wc-block-components-button:not(.is-link):focus {
+	box-shadow: none;
+}
+
+/* woocommerce/proceed-to-checkout-block, woocommerce/checkout, woocommerce/mini-cart: the button's ring. */
+.wc-block-components-button:not(.is-link):focus-visible {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+/* woocommerce/proceed-to-checkout-block, woocommerce/checkout, woocommerce/mini-cart: the disabled button's look, not half opacity. */
+.wc-block-components-button:not(.is-link):disabled,
+.wc-block-components-button:not(.is-link)[aria-disabled="true"] {
+	opacity: 1;
+}
+
+/* woocommerce/cart-cross-sells-block, woocommerce/classic-shortcode: a button adding to the cart. */
+:root :where(.wc-block-components-product-button__button.loading, .woocommerce a.button.loading, .woocommerce button.button.loading) {
+	cursor: progress;
+}
+
+/* woocommerce/cart-cross-sells-block, woocommerce/classic-shortcode: the tick once added. */
+:where(.wc-block-components-product-button__button.added, .woocommerce a.button.added, .woocommerce button.button.added)::after {
+	content: "\2713";
+	margin-inline-start: var(--wp--preset--spacing--10);
+}
+
+/* woocommerce/classic-shortcode, woocommerce/product-details: the empty stars follow the text, as the block's do. */
+.woocommerce .star-rating::before {
+	color: inherit;
+	opacity: 0.5;
+}
+
+/* woocommerce/product-price: the struck-through regular price, muted beside the sale price it sits with. */
+.wc-block-components-product-price del {
+	color: var(--wp--custom--color--text-weak);
+}
+
+/* woocommerce/product-image-gallery: the classic sale badge, as the product sale badge, not Woo's 3.41:1 circle. */
+.woocommerce span.onsale {
+	background-color: var(--wp--custom--color--fill-brand-strong);
+	border-radius: var(--wp--custom--radius--chip);
+	color: var(--wp--custom--color--text-on-brand);
+	font-size: var(--wp--custom--text--text-small--font-size);
+	font-weight: var(--wp--custom--typography--font-weight--semi-bold);
+	letter-spacing: var(--wp--custom--text--text-small--letter-spacing);
+	line-height: var(--wp--custom--text--text-small--line-height);
+	min-height: 0;
+	min-width: 0;
+	padding: 0.125em 0.5em;
+}
+
+/* woocommerce/cart-line-items-block, woocommerce/checkout-order-summary-cart-items-block: the "Save" badge on the soft fill, so the price leads its row. */
+:where(.wc-block-cart-item__total-price-and-sale-badge-wrapper) .wc-block-components-product-badge {
+	background-color: var(--wp--custom--color--fill-weak);
+	border-radius: var(--wp--custom--radius--chip);
+	border-width: 0;
+	color: var(--wp--custom--color--text-strong);
+	font-size: var(--wp--custom--text--text-small--font-size);
+	padding: 0.125em 0.5em;
+}
+
+/* woocommerce/checkout-order-summary-cart-items-block: the count on the item's photo, which Woo reads from a base preset Extendable lacks. */
+.wc-block-components-order-summary .wc-block-components-order-summary-item__quantity span {
+	color: var(--wp--custom--color--background-base);
+}
+
+/* woocommerce/cart-items-block: the uppercase column headings, at the caps tracking. */
+table.wc-block-cart-items .wc-block-cart-items__header {
+	color: var(--wp--custom--color--text-weak);
+	letter-spacing: var(--wp--custom--tracking--wider);
+}
+
+/* woocommerce/cart-totals-block: the uppercase totals heading, at the caps tracking, starting at the card's inset. */
+.wc-block-cart .wc-block-cart__totals-title {
+	color: var(--wp--custom--color--text-weak);
+	letter-spacing: var(--wp--custom--tracking--wider);
+	padding-block-start: 0;
+}
+
+/* woocommerce/checkout-order-summary-block: the summary on the vibe's filled card, else the soft card, read-only beside the form, in place of Woo's ruled box. */
+.wp-block-woocommerce-checkout-order-summary-block {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/cart-totals-block: the cart's totals and its checkout button on the same card as the checkout summary. */
+:where(.wp-block-woocommerce-cart-totals-block) {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/proceed-to-checkout-block: the button ends the card at its inset, without Woo's 16px under it. */
+.wc-block-cart__submit {
+	margin-block-end: 0;
+}
+
+/* woocommerce/checkout-order-summary-block: the summary's inner frame, dropped with the outer one. */
+.wp-block-woocommerce-checkout-order-summary-block .checkout-order-summary-block-fill {
+	border-radius: var(--wp--custom--radius--card);
+	border-width: 0;
+}
+
+/* woocommerce/checkout-order-summary-block: with no frame, the rows start at the column's edge, as the cart's totals do. */
+.wc-block-components-sidebar .wc-block-components-panel,
+.wc-block-components-sidebar .wc-block-components-totals-coupon,
+.wc-block-components-sidebar .wc-block-components-totals-item {
+	padding-inline: 0;
+}
+
+/* woocommerce/checkout-order-summary-block: the item list at the column's edge too. */
+.wp-block-woocommerce-checkout-order-summary-block .wc-block-components-order-summary {
+	padding-inline: 0;
+}
+
+/* woocommerce/checkout-order-summary-block: the summary's title at the card's inset. */
+.wp-block-woocommerce-checkout-order-summary-block .wc-block-components-checkout-order-summary__title .wc-block-components-checkout-order-summary__title-text {
+	margin-inline-start: 0;
+}
+
+/* woocommerce/checkout-order-summary-block: the title starts at the card's top inset, not 16px under it. */
+.wp-block-woocommerce-checkout-order-summary-block .wc-block-components-checkout-order-summary__title {
+	margin-block-start: 0;
+}
+
+/* woocommerce/cart-items-block, woocommerce/checkout: Woo's fine print reads the small preset as 14px; Extendable's small is 16px. */
+:where(.wc-block-cart, .wp-block-woocommerce-checkout) {
+	--wp--preset--font-size--small: var(--wp--custom--text--text-small--font-size);
+}
+
+/* woocommerce/checkout: the guest note, the terms and an item's description and unit price are secondary text. */
+:where(.wc-block-checkout__guest-checkout-notice, .wc-block-checkout__terms, .wc-block-components-product-metadata, .wc-block-components-order-summary-item__individual-prices, .wc-block-cart-item__prices) {
+	color: var(--wp--custom--color--text-weak);
+}
+
+/* woocommerce/cart-line-items-block, woocommerce/checkout: an item's unit price at the fine-print size, under its name. */
+:where(.wc-block-components-order-summary-item__individual-prices, .wc-block-cart-item__prices) {
+	font-size: var(--wp--custom--text--text-small--font-size);
+}
+
+/* woocommerce/cart-line-items-block, woocommerce/checkout-order-summary-cart-items-block: a product name is a UI link, underlined only on hover. */
+a.wc-block-components-product-name {
+	text-decoration: none;
+}
+
+/* woocommerce/cart-line-items-block: the product name under the pointer. */
+a.wc-block-components-product-name:hover {
+	text-decoration: underline;
+}
+
+/* woocommerce/cart-order-summary-shipping-block, woocommerce/checkout-order-summary-shipping-block: the "via" note, which Woo shrinks again under the 14px floor. */
+.wc-block-components-totals-shipping .wc-block-components-totals-shipping__via {
+	font-size: inherit;
+}
+
+/* woocommerce/cart-line-items-block: the line item's photo. */
+table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image img {
+	border-radius: var(--wp--custom--radius--media);
+}
+
+/* woocommerce/checkout-order-summary-cart-items-block: the summary item's photo. */
+.wc-block-components-order-summary .wc-block-components-order-summary-item__image > img {
+	border-radius: var(--wp--custom--radius--media);
+}
+
+/* woocommerce/cart-order-summary-coupon-form-block, woocommerce/checkout-order-summary-coupon-form-block: the applied coupon, as the filter chip, not a second chip look. */
+.wc-block-components-chip {
+	border-color: var(--wp--custom--color--stroke-strong);
+	box-sizing: border-box;
+	min-height: var(--wp--custom--control--sm);
+	padding-inline: var(--wp--custom--form-control--inset);
+}
+
+/* woocommerce/cart-order-summary-coupon-form-block, woocommerce/checkout-order-summary-coupon-form-block: the chip's edge in every state, which Woo resets to currentColor. */
+.wc-block-components-chip:active,
+.wc-block-components-chip:focus,
+.wc-block-components-chip:hover {
+	border-color: var(--wp--custom--color--stroke-strong);
+}
+
+/* woocommerce/cart-order-summary-coupon-form-block, woocommerce/checkout-order-summary-coupon-form-block: the chip's corner, which Woo's size modifiers round to 2em. */
+.wc-block-components-chip.wc-block-components-chip--radius-small,
+.wc-block-components-chip.wc-block-components-chip--radius-medium,
+.wc-block-components-chip.wc-block-components-chip--radius-large {
+	border-radius: var(--wp--custom--radius--chip);
+}
+
+/* woocommerce/cart-order-summary-coupon-form-block, woocommerce/checkout-order-summary-coupon-form-block: the large chip's inset, which Woo sets unevenly. */
+.wc-block-components-chip.wc-block-components-chip--radius-large {
+	padding-inline: var(--wp--custom--form-control--inset);
+}
+
+/* woocommerce/cart-order-summary-coupon-form-block, woocommerce/checkout-order-summary-coupon-form-block: the code, at the chip's size, not under the 14px floor. */
+.wc-block-components-chip .wc-block-components-chip__text {
+	font-size: inherit;
+}
+
+/* woocommerce/cart-order-summary-coupon-form-block, woocommerce/checkout-order-summary-coupon-form-block: the remove button, without Woo's #e0e0e0 disc. */
+.wc-block-components-chip .wc-block-components-chip__remove {
+	background-color: transparent;
+}
+
+/* woocommerce/cart-order-summary-coupon-form-block, woocommerce/checkout-order-summary-coupon-form-block: the remove icon, in the chip's ink, not #1e1e1e. */
+.wc-block-components-chip .wc-block-components-chip__remove-icon {
+	fill: currentColor;
+}
+
+/* woocommerce/cart-order-summary-coupon-form-block, woocommerce/checkout-order-summary-coupon-form-block: the remove button under the pointer or in focus, which Woo prints #949494. */
+.wc-block-components-chip__remove:focus,
+.wc-block-components-chip__remove:hover {
+	background-color: var(--wp--custom--color--fill-weak-hover);
+}
+
+/* woocommerce/cart-order-summary-coupon-form-block, woocommerce/checkout-order-summary-coupon-form-block: its icon, which Woo turns #fff. */
+.wc-block-components-chip__remove:focus .wc-block-components-chip__remove-icon,
+.wc-block-components-chip__remove:hover .wc-block-components-chip__remove-icon {
+	fill: currentColor;
+}
+
+/* woocommerce/checkout-shipping-address-block, woocommerce/checkout-billing-address-block: the "Add apartment" toggle, underlined as an in-text link. */
+.wc-block-components-address-form__address_2-toggle {
+	text-decoration: underline;
+}
+
+/* woocommerce/checkout-shipping-address-block, woocommerce/checkout-billing-address-block: the toggle under the pointer, as an in-text link. */
+.wc-block-components-address-form__address_2-toggle:hover {
+	text-decoration: underline dashed;
+}
+
+/* woocommerce/product-template: 24px between columns and 48px between rows, so a card's text never reads as the next photo's (owner, 2026-10-30); Woo's own 1.25em stands outside a token. */
+.wc-block-product-template__responsive {
+	column-gap: var(--wp--preset--spacing--25);
+	row-gap: var(--wp--preset--spacing--40);
+}
+
+/* woocommerce/product-template: two tracks beside the gap; Woo's own track math assumes its 1.25em gap. */
+.wc-block-product-template__responsive.columns-2 {
+	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 1 * var(--wp--preset--spacing--25)) / 2)), 1fr));
+}
+
+/* woocommerce/product-template: three tracks beside the gap. */
+.wc-block-product-template__responsive.columns-3 {
+	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 2 * var(--wp--preset--spacing--25)) / 3)), 1fr));
+}
+
+/* woocommerce/product-template: four tracks beside the gap. */
+.wc-block-product-template__responsive.columns-4 {
+	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 3 * var(--wp--preset--spacing--25)) / 4)), 1fr));
+}
+
+/* woocommerce/product-template: five tracks beside the gap. */
+.wc-block-product-template__responsive.columns-5 {
+	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 4 * var(--wp--preset--spacing--25)) / 5)), 1fr));
+}
+
+/* woocommerce/product-template: six tracks beside the gap. */
+.wc-block-product-template__responsive.columns-6 {
+	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 5 * var(--wp--preset--spacing--25)) / 6)), 1fr));
+}
+
+/* woocommerce/product-template: the card's title at the product-name part's size and weight, not its heading level's. */
+:where(.wc-block-product) :is(h1, h2, h3, h4, h5, h6):where(.wp-block-post-title) {
+	font-size: var(--wp--preset--font-size--base);
+	font-weight: var(--wp--custom--typography--font-weight--medium);
+}
+
+/* woocommerce/product-template: the card's parts sit paired, as heading and text do, in place of Woo's flat 0.75rem. */
+:where(.wc-block-product-template .wc-block-product) > :not(:last-child) {
+	margin-bottom: var(--wp--preset--spacing--10);
+}
+
+/* woocommerce/product-image: the photo stands a regular step above the title. */
+:where(.wc-block-product-template .wc-block-product) > :not(:last-child):where(.wp-block-woocommerce-product-image) {
+	margin-bottom: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/product-button: View cart, printed after adding, as a small ghost button the height of Add to cart, in place of Woo's underlined link padded 0.5em down. */
+.woocommerce a.added_to_cart {
+	align-items: center;
+	border: var(--wp--custom--border-width--1) solid transparent;
+	border-radius: var(--wp--custom--radius--control);
+	box-sizing: border-box;
+	color: var(--wp--custom--color--text-strong);
+	display: inline-flex;
+	font-size: var(--wp--custom--control-label--sm);
+	font-weight: var(--wp--custom--text--label--font-weight);
+	height: var(--wp--custom--control--sm);
+	padding: 0 1em;
+	text-decoration: none;
+}
+
+/* woocommerce/product-button: View cart under the pointer, on the ghost button's hover fill. */
+:where(.woocommerce) a.added_to_cart:hover {
+	background-color: var(--wp--custom--color--fill-neutral-hover);
+	color: var(--wp--custom--color--text-strong);
+	text-decoration: none;
+}
+
+/* woocommerce/product-button: the button stands a group step below the text above it. */
+:where(.wc-block-product-template .wc-block-product) > :not(:last-child):where(:has(+ .wp-block-woocommerce-product-button)) {
+	margin-bottom: var(--wp--preset--spacing--30);
+}
+
+/* woocommerce/product-collection: the stock line starts like the title and price above it. */
+.wp-block-woocommerce-product-collection .wc-block-components-product-stock-indicator {
+	text-align: start;
+}
+
+/* woocommerce/catalog-sorting: the sort select at the small control height; its 16px value is the size iOS will not zoom on. */
+:where(.wc-block-catalog-sorting) select {
+	height: var(--wp--custom--control--sm);
+}
+
+/* woocommerce/product-filters: the mobile drawer, which falls back to the system's Canvas and CanvasText. */
+:where(.wc-block-product-filters) {
+	--wc-product-filters-background-color: var(--wp--custom--color--background-overlay); /* 2026-10-28 */
+	--wc-product-filters-overlay-background-color: var(--wp--custom--color--background-overlay); /* 2026-10-28 */
+	--wc-product-filters-text-color: var(--wp--custom--color--text-strong); /* 2026-10-28 */
+}
+
+/* woocommerce/product-filters: the backdrop behind the open drawer. */
+:where(.wc-block-product-filters).is-overlay-opened .wc-block-product-filters__overlay {
+	background-color: var(--wp--custom--color--overlay-scrim);
+}
+
+/* woocommerce/product-filters: the drawer's footer, lifted on the overlay shadow. */
+:where(.wc-block-product-filters) .wc-block-product-filters__overlay-footer {
+	box-shadow: var(--wp--custom--shadow--overlay);
+}
+
+/* woocommerce/product-filters: the drawer's open and close buttons, which keep the browser's button font. */
+:where(.wc-block-product-filters) .wc-block-product-filters__close-overlay,
+:where(.wc-block-product-filters) .wc-block-product-filters__open-overlay {
+	font: inherit;
+	min-height: var(--wp--custom--control--sm);
+}
+
+/* woocommerce/product-filters: the panel's title as a label, at the results count's size and ink. */
+:where(.wc-block-product-filters) h2 {
+	margin-block: 0;
+	color: var(--wp--custom--color--text-weak);
+	font-size: var(--wp--custom--text--text-small--font-size);
+	font-weight: var(--wp--custom--typography--font-weight--medium);
+	letter-spacing: var(--wp--custom--text--text-small--letter-spacing);
+	line-height: var(--wp--custom--text--text-small--line-height);
+}
+
+/* woocommerce/product-filters: each filter's heading at the product name's step, a step under the panel title. */
+:where(.wc-block-product-filters) :is(h3, h4, h5, h6) {
+	font-size: var(--wp--preset--font-size--base);
+	font-weight: var(--wp--custom--typography--font-weight--medium);
+	letter-spacing: var(--wp--custom--text--heading-6--letter-spacing);
+	line-height: var(--wp--custom--text--heading-6--line-height);
+}
+
+/* woocommerce/product-filter-active: with nothing picked it prints empty, and its gap would double the space under the panel title. */
+:where(.wp-block-woocommerce-product-filter-active:not(:has(.wc-block-product-filter-removable-chips__item))) {
+	display: none;
+}
+
+/* woocommerce/product-filters: the panel title sits a related step over the first filter, in place of the theme's section-sized block gap. */
+:where(.wc-block-product-filters) {
+	--wc-product-filter-block-spacing: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/product-filters: a filter after another sits two related steps from it, so the filters read as groups. */
+:where(.wc-block-product-filters [class*="wp-block-woocommerce-product-filter-"] + [class*="wp-block-woocommerce-product-filter-"]) {
+	margin-block-start: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/product-filter-active: when it is hidden, the first filter still sits a related step under the panel title. */
+:where(.wc-block-product-filters h2 + .wp-block-woocommerce-product-filter-active:not(:has(.wc-block-product-filter-removable-chips__item)) + *) {
+	margin-block-start: 0;
+}
+
+/* woocommerce/product-filter-chips, woocommerce/add-to-cart-with-options: a picked chip or pill, which falls back to the system's CanvasText; a pale brand falls under 3:1. */
+:where(.wc-block-product-filter-chips) {
+	--wc-product-filter-chips-selected-background: var(--wp--custom--color--stroke-focus); /* 2026-10-29 */
+	--wc-product-filter-chips-selected-border: var(--wp--custom--color--stroke-focus); /* 2026-10-29 */
+	--wc-product-filter-chips-selected-text: var(--wp--custom--color--background-base); /* 2026-10-29 */
+}
+
+/* woocommerce/product-filter-chips, woocommerce/add-to-cart-with-options: the chips in a row sit related, not 4px apart. */
+:where(.wc-block-product-filter-chips__items) {
+	gap: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/product-filter-chips: the chip on the small control, in place of Woo's 0.8em label. */
+.wc-block-product-filter-chips__item {
+	border-color: var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--chip);
+	font-size: var(--wp--custom--control-label--sm);
+	min-height: var(--wp--custom--control--sm);
+	padding-inline: var(--wp--custom--form-control--inset);
+}
+
+/* woocommerce/product-filter-chips: the chip in focus. */
+.wc-block-product-filter-chips__item:focus {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+/* woocommerce/product-filter-removable-chips: an active filter's chip, on the interactive edge the filter chips have. */
+:where(.wc-block-product-filter-removable-chips) {
+	--wc-product-filter-removable-chips-border: var(--wp--custom--color--stroke-strong); /* 2026-10-29 */
+}
+
+/* woocommerce/product-filter-removable-chips: the active filters sit related, not 4px apart. */
+.wc-block-product-filter-removable-chips__items {
+	gap: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/product-filter-removable-chips: the remove icon at the small control's icon size; its 25px SVG made the chip 34px. */
+.wc-block-product-filter-removable-chips__items .wc-block-product-filter-removable-chips__item .wc-block-product-filter-removable-chips__remove .wc-block-product-filter-removable-chips__remove-icon {
+	height: var(--wp--custom--control-icon--sm);
+	width: var(--wp--custom--control-icon--sm);
+}
+
+/* woocommerce/product-filter-removable-chips: the chip on the small control, as the filter chips beside it. */
+.wc-block-product-filter-removable-chips__items .wc-block-product-filter-removable-chips__item {
+	border-radius: var(--wp--custom--radius--chip);
+	box-sizing: border-box;
+	font-size: var(--wp--custom--control-label--sm);
+	min-height: var(--wp--custom--control--sm);
+	padding-inline: var(--wp--custom--form-control--inset);
+}
+
+/* woocommerce/product-filter-checkbox-list: the box, its edge and the tick. */
+:where(.wc-block-product-filter-checkbox-list) {
+	--wc-product-filter-checkbox-list-option-element: var(--wp--custom--color--background-base); /* 2026-10-28 */
+	--wc-product-filter-checkbox-list-option-element-border: var(--wp--custom--color--stroke-strong); /* 2026-10-28 */
+	--wc-product-filter-checkbox-list-option-element-selected: var(--wp--custom--color--stroke-focus); /* 2026-10-28 */
+}
+
+/* woocommerce/product-filter-checkbox-list: the options sit related, at a spacing step rather than their line height. */
+:where(.wc-block-product-filter-checkbox-list fieldset > div) {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--10);
+}
+
+/* woocommerce/product-filter-checkbox-list: an option row as tall as its box or its text, with no line box around the label. */
+:where(.wc-block-product-filter-checkbox-list__item) {
+	display: flex;
+}
+
+/* woocommerce/product-filter-checkbox-list: an option reads as text-small, not at the label's heading weight. */
+.wc-block-product-filter-checkbox-list__label {
+	font-weight: var(--wp--custom--text--text-small--font-weight);
+	line-height: var(--wp--custom--text--text-small--line-height);
+}
+
+/* woocommerce/product-filter-checkbox-list: Woo's tint over the box, which the box's own fill replaces. */
+.wc-block-product-filter-checkbox-list__input-wrapper::before {
+	display: none;
+}
+
+/* woocommerce/product-filter-checkbox-list: the box at the choice size every other checkbox has, capped at step 1 so it never reads as a radio. */
+input[type="checkbox"].wc-block-product-filter-checkbox-list__input {
+	border-radius: min(var(--wp--custom--radius--input), var(--wp--preset--border-radius--1));
+	height: var(--wp--custom--form-control--choice);
+	width: var(--wp--custom--form-control--choice);
+}
+
+/* woocommerce/product-filter-checkbox-list: the tick, sized to the box so it stays centred. */
+svg.wc-block-product-filter-checkbox-list__mark {
+	height: var(--wp--custom--form-control--choice);
+	width: var(--wp--custom--form-control--choice);
+}
+
+/* woocommerce/product-filter-checkbox-list: the box in focus. */
+input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+/* woocommerce/product-filter-price-slider: the range and its handles in the neutral solid, which fall back to #fff and #1e1e1e; a pale brand falls under 3:1. */
+:where(.wc-block-product-filter-price-slider) {
+	--wc-product-filter-price-slider: var(--wp--custom--color--fill-neutral-strong); /* 2026-11-01 */
+	--wc-product-filter-price-slider-handle: var(--wp--custom--color--background-base); /* 2026-10-28 */
+	--wc-product-filter-price-slider-handle-border: var(--wp--custom--color--fill-neutral-strong); /* 2026-11-01 */
+}
+
+/* woocommerce/product-filter-rating: the stars read as metadata, in the weak ink, as a product's rating does. */
+:where(.wc-block-product-filter-checkbox-list__stars) {
+	--wc-product-filter-checkbox-list-label-element: var(--wp--custom--color--text-weak);
+}
+
+/* woocommerce/product-filter-rating: the stars at the small icon size beside the 14px options, not Woo's 1.55em. */
+.wc-block-product-filter-checkbox-list__stars,
+.wc-block-product-filter-checkbox-list__stars-svg {
+	height: var(--wp--custom--control-icon--sm);
+}
+
+/* woocommerce/product-filter-price-slider: a handle under the pointer or in focus, which Woo prints #1e1e1e. */
+.wc-block-product-filter-price-slider__range input[type="range"]::-webkit-slider-thumb:hover,
+.wc-block-product-filter-price-slider__range input[type="range"]:focus::-webkit-slider-thumb {
+	background-color: var(--wp--custom--color--stroke-focus);
+	border-color: var(--wp--custom--color--background-base);
+}
+
+/* woocommerce/product-filter-price-slider: the same handle in Firefox; one list would drop both engines. */
+.wc-block-product-filter-price-slider__range input[type="range"]::-moz-range-thumb:hover,
+.wc-block-product-filter-price-slider__range input[type="range"]:focus::-moz-range-thumb {
+	background-color: var(--wp--custom--color--stroke-focus);
+	border-color: var(--wp--custom--color--background-base);
+}
+
+/* woocommerce/product-filter-price-slider: the lowest and highest price fields, at the 16px value iOS will not zoom on. */
+.wc-block-product-filter-price-slider .text input[type="text"] {
+	background-color: var(--wp--custom--color--background-base);
+	border-color: var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--input);
+	color: var(--wp--custom--color--text-strong);
+	font-size: var(--wp--custom--form-control--input-value);
+	padding-inline: var(--wp--custom--form-control--inset);
+}
+
+/* woocommerce/product-gallery-large-image-next-previous: the arrows sit on the photo; Extendable has no base colour, so Woo's falls to #fff. */
+:where(.wc-block-next-previous-buttons__button) {
+	background-color: var(--wp--custom--color--fill-media-strong);
+	border-radius: var(--wp--custom--radius--control);
+	color: var(--wp--custom--color--text-on-media);
+}
+
+/* woocommerce/product-gallery-large-image-next-previous: an arrow under the pointer. */
+:where(.wc-block-next-previous-buttons__button:hover) {
+	background-color: var(--wp--custom--color--fill-media-strong-hover);
+}
+
+/* woocommerce/product-gallery: the full-screen view, whose base colour falls to #fff. */
+:where(.wc-block-product-gallery-dialog) {
+	background-color: var(--wp--custom--color--background-base);
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* woocommerce/product-gallery: the full-screen view's close icon, whose contrast colour falls to #000. */
+:where(.wc-block-product-gallery-dialog__close-button) {
+	fill: var(--wp--custom--color--icon-default);
+}
+
+/* woocommerce/product-gallery: the play glyph on a video's thumbnail. */
+:where(.wc-block-product-gallery-thumbnails__thumbnail--video)::after {
+	color: var(--wp--custom--color--text-media-strong);
+}
+
+/* woocommerce/product-gallery-thumbnails: each thumbnail, on the media corner the large image has. */
+:where(.wc-block-product-gallery-thumbnails__thumbnail__image) {
+	border-radius: var(--wp--custom--radius--media);
+}
+
+/* woocommerce/product-image-gallery: the classic gallery's photo. */
+.woocommerce div.product div.images img {
+	border-radius: var(--wp--custom--radius--media);
+}
+
+/* woocommerce/product-image-gallery: the classic gallery's thumbnails. */
+.woocommerce div.product div.images .flex-control-thumbs li img {
+	border-radius: var(--wp--custom--radius--media);
+}
+
+/* woocommerce/product-image-gallery: the zoom button sits on the photo, so it takes the media button's colours. */
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger {
+	background-color: var(--wp--custom--color--fill-media-strong);
+}
+
+/* woocommerce/product-image-gallery: the zoom button's lens. */
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger::before {
+	border-color: var(--wp--custom--color--text-on-media);
+}
+
+/* woocommerce/product-image-gallery: the zoom button's handle. */
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger::after {
+	background-color: var(--wp--custom--color--text-on-media);
+}
+
+/* woocommerce/product-image-gallery: the frame round a product with no photo. */
+.woocommerce div.product div.images .woocommerce-product-gallery__image--placeholder {
+	border-color: var(--wp--custom--color--stroke-weak);
+}
+
+/* woocommerce/accordion-header: the question's ring, which Woo prints in the system's focus colour. */
+.accordion-item__toggle:focus-visible {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+/* woocommerce/accordion-header: the plus beside the question, as core's accordion part. */
+:where(.accordion-item__toggle-icon) {
+	color: var(--wp--custom--color--text-weak);
+}
+
+/* woocommerce/product-review-form: the form's title at text-regular and the label weight, a related step above its fields, not Woo's medium bold. */
+.wp-block-woocommerce-product-review-form .comment-reply-title {
+	display: block;
+	font-size: var(--wp--custom--text--text-regular--font-size);
+	font-weight: var(--wp--custom--text--label--font-weight);
+	margin-bottom: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/product-review-form: the rating, the review and the button stack a related step apart, as siblings. */
+:where(.wp-block-woocommerce-product-review-form form) {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/product-review-form: the review fields' edge, which Woo prints #949494. */
+:where(.wp-block-woocommerce-product-review-form) input:not([type="submit"]) {
+	border-color: var(--wp--custom--color--stroke-strong);
+}
+
+/* woocommerce/product-review-form: the review's own text, on the same edge, a tall input box capped at step 5. */
+:where(.wp-block-woocommerce-product-review-form) textarea {
+	border-color: var(--wp--custom--color--stroke-strong);
+	border-radius: min(var(--wp--custom--radius--input), var(--wp--preset--border-radius--5));
+}
+
+/* woocommerce/product-review-form: the review's text box, whose 45 columns overflow a phone outside a .woocommerce page; capped at step 5. */
+:where(#review_form) textarea {
+	border-radius: min(var(--wp--custom--radius--input), var(--wp--preset--border-radius--5));
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+/* woocommerce/all-reviews, woocommerce/reviews-by-product: the stars follow the text, as every other rating's do, not Woo's #d18204. */
+.wc-block-components-review-list-item__rating > .wc-block-components-review-list-item__rating__stars span::before {
+	color: inherit;
+}
+
+/* woocommerce/all-reviews, woocommerce/reviews-by-product: the review's date reads as metadata, as core's comment date does. */
+.wc-block-components-review-list-item__published-date {
+	color: var(--wp--custom--color--text-weak);
+	font-size: var(--wp--custom--text--text-small--font-size);
+}
+
+/* woocommerce/all-reviews, woocommerce/reviews-by-product: the reviewer's name on the label style. */
+.wc-block-components-review-list-item__author {
+	font-size: var(--wp--custom--text--label--font-size);
+	font-weight: var(--wp--custom--text--label--font-weight);
+	letter-spacing: var(--wp--custom--text--label--letter-spacing);
+	line-height: var(--wp--custom--text--label--line-height);
+}
+
+/* woocommerce/all-reviews: the reviewer's name beside the product's, which Woo drops to 400. */
+.wc-block-components-review-list-item__product + .wc-block-components-review-list-item__author {
+	font-weight: var(--wp--custom--text--label--font-weight);
+}
+
+/* woocommerce/all-reviews, woocommerce/reviews-by-product: the reviewer's photo, round as an avatar. */
+.wc-block-components-review-list-item__image > img {
+	border-radius: var(--wp--custom--radius--avatar);
+}
+
+/* woocommerce/product-details: the classic review's avatar, which Woo frames in a light grey square. */
+.woocommerce #reviews #comments ol.commentlist li img.avatar {
+	background-color: transparent;
+	border-color: var(--wp--custom--color--stroke-weak);
+	border-radius: var(--wp--custom--radius--avatar);
+}
+
+/* woocommerce/product-details: the classic review's frame, a bright line on a dark palette. */
+.woocommerce #reviews #comments ol.commentlist li .comment-text {
+	border-color: var(--wp--custom--color--stroke-weak);
+	border-radius: var(--wp--custom--radius--panel);
+}
+
+/* woocommerce/product-details: the classic review's author and date, at text-small, not 0.83em. */
+.woocommerce #reviews #comments ol.commentlist li .comment-text p.meta {
+	font-size: var(--wp--custom--text--text-small--font-size);
+}
+
+/* woocommerce/product-details: the classic review's author, at the label weight the block reviews have; its markup is a strong. */
+:where(#reviews .comment-text p.meta) strong {
+	font-weight: var(--wp--custom--text--label--font-weight);
+}
+
+/* woocommerce/product-details: the classic review's date reads as metadata. */
+:where(#reviews .comment-text p.meta time) {
+	color: var(--wp--custom--color--text-weak);
+}
+
+/* woocommerce/product-details: the reviews pagination's current page, and a page under the pointer, which Woo prints at 3.65:1. */
+.woocommerce nav.woocommerce-pagination ul li a:focus,
+.woocommerce nav.woocommerce-pagination ul li a:hover,
+.woocommerce nav.woocommerce-pagination ul li span.current {
+	background-color: var(--wp--custom--color--fill-weak);
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* woocommerce/product-details: the pagination's frame. */
+.woocommerce nav.woocommerce-pagination ul {
+	border-color: var(--wp--custom--color--stroke-weak);
+}
+
+/* woocommerce/product-details: the rule between pages. */
+.woocommerce nav.woocommerce-pagination ul li {
+	border-color: var(--wp--custom--color--stroke-weak);
+}
+
+/* woocommerce/product-details: a classic tab's title, as the Description title, not the h2's 48px. */
+:where(.woocommerce-tabs .panel) h2 {
+	font-size: var(--wp--preset--font-size--medium);
+}
+
+/* woocommerce/product-details: the attribute table's top rule, which Woo prints in a black tint that vanishes on dark. */
+.woocommerce table.shop_attributes {
+	border-top-color: var(--wp--custom--color--stroke-weak);
+}
+
+/* woocommerce/product-details: the rule under each attribute. */
+.woocommerce table.shop_attributes td,
+.woocommerce table.shop_attributes th {
+	border-bottom-color: var(--wp--custom--color--stroke-weak);
+}
+
+/* woocommerce/product-details: an attribute's value, upright, not italic. */
+.woocommerce table.shop_attributes td {
+	font-style: normal;
+}
+
+/* woocommerce/product-details: an attribute's name, at the label weight, not 700. */
+.woocommerce table.shop_attributes th {
+	font-weight: var(--wp--custom--text--label--font-weight);
+}
+
+/* The classic product page's up-sells heading, as the related products heading, not the h2's 48px. */
+:where(.up-sells) > h2 {
+	font-size: var(--wp--preset--font-size--medium);
+}
+
+/* The classic product list's price, at the card's size, not 0.857em. */
+.woocommerce ul.products li.product .price {
+	font-size: inherit;
+}
+
+/* The classic product list's photo, on the media corner. */
+.woocommerce ul.products li.product a img {
+	border-radius: var(--wp--custom--radius--media);
+}
+
+/* woocommerce/add-to-cart-with-options-grouped-product-item: the row's parts sit related, not at the theme's block gap. */
+:where(.wp-block-woocommerce-add-to-cart-with-options-grouped-product-item) > .wp-block-group {
+	gap: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/product-button: the grid and mosaic layouts' button fills the row beside the quantity stepper, not Woo's shrink-to-fit. */
+.ext-product-layout--grid .wp-block-woocommerce-product-button, .ext-product-layout--mosaic .wp-block-woocommerce-product-button {
+	flex-grow: 1;
+}
+
+/* woocommerce/product-button: the button itself fills that wider wrapper, not Woo's inline-flex content width. */
+.ext-product-layout--grid .wp-block-button.wc-block-components-product-button .wc-block-components-product-button__button, .ext-product-layout--mosaic .wp-block-button.wc-block-components-product-button .wc-block-components-product-button__button {
+	width: 100%;
+}
+
+/* woocommerce/product-gallery: the buy box leads the markup so phones stack it first; desktop flips it right. */
+.ext-product-layout--stacked > .wp-block-columns, .ext-product-layout--mosaic > .wp-block-columns {
+	flex-direction: row-reverse;
+}
+
+/* woocommerce/product-gallery-large-image: the stacked layout needs every photo visible, not Woo's one-image clip. */
+.ext-product-layout--stacked .wc-block-product-gallery-large-image {
+	overflow: visible;
+}
+
+/* woocommerce/product-gallery-large-image: the photo list stacks in a column instead of Woo's one-row slider. */
+.ext-product-layout--stacked .wc-block-product-gallery-large-image__container {
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--20);
+	overflow: visible;
+}
+
+/* woocommerce/empty-cart-block: the "New in store" heading at the related products heading's size, not the page's h2. */
+:where(.wp-block-woocommerce-empty-cart-block hr) + h2 {
+	font-size: var(--wp--preset--font-size--medium-plus);
+	margin-block-end: var(--wp--preset--spacing--40);
+}
+
+/* woocommerce/empty-cart-block: the Browse store link a step under the empty-cart heading, not Woo's default paragraph margin. */
+:where(.wp-block-woocommerce-empty-cart-block > p) {
+	margin-block: var(--wp--preset--spacing--20) 0;
+}
+
+/* woocommerce/empty-cart-block: the dots separator a step from the Browse store link and the New in store heading too. */
+:where(.wp-block-woocommerce-empty-cart-block > hr) {
+	margin-block: var(--wp--preset--spacing--40);
+}
+
+/* woocommerce/order-confirmation-status: the status heading at medium-plus, the store page title's size, over global styles' own h1. */
+:where(.wc-block-order-confirmation-status) h1 {
+	font-size: var(--wp--preset--font-size--medium-plus);
+}
+
+/* woocommerce/order-confirmation-status: its text under the heading at the body size, which the large preset also reached. */
+:where(.wc-block-order-confirmation-status p) {
+	font-size: var(--wp--custom--text--text-regular--font-size);
+}
+
+/* woocommerce/order-confirmation-summary: the row of label/value pairs on the soft card the sign-in form already uses, not Woo's bare 4px corner. */
+.wc-block-order-confirmation-summary {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/order-confirmation-summary: each pair's key reads as metadata, not Woo's bare bold. */
+:where(.wc-block-order-confirmation-summary-list-item__key) {
+	color: var(--wp--custom--color--text-weak);
+}
+
+/* woocommerce/order-confirmation-totals, woocommerce/order-confirmation-downloads: the table on the store card, like the cart totals, not Woo's 1px/4px box. */
+.wc-block-order-confirmation-totals table,
+.wc-block-order-confirmation-downloads table {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+}
+
+/* woocommerce/order-confirmation-totals, woocommerce/order-confirmation-downloads: weak ink, caps tracking — the store's own table-header look. */
+:where(.wc-block-order-confirmation-totals table thead th, .wc-block-order-confirmation-downloads table thead th) {
+	color: var(--wp--custom--color--text-weak);
+	letter-spacing: var(--wp--custom--tracking--wider);
+}
+
+/* woocommerce/order-confirmation-billing-address, woocommerce/order-confirmation-shipping-address: each on the soft card, side by side on a desktop, one column on a phone through core/columns. */
+.wc-block-order-confirmation-billing-address,
+.wc-block-order-confirmation-shipping-address {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/order-confirmation-totals-wrapper, woocommerce/order-confirmation-downloads-wrapper, woocommerce/order-confirmation-billing-wrapper, woocommerce/order-confirmation-shipping-wrapper: the section heading pattern at heading-5, over Woo's own inline 24px. */
+.wp-block-woocommerce-order-confirmation-totals-wrapper h2,
+.wp-block-woocommerce-order-confirmation-downloads-wrapper h2,
+.wp-block-woocommerce-order-confirmation-billing-wrapper h2,
+.wp-block-woocommerce-order-confirmation-shipping-wrapper h2 {
+	font-size: var(--wp--custom--text--heading-5--font-size) !important;
+}
+
+/* woocommerce/order-confirmation-totals-wrapper, woocommerce/order-confirmation-downloads-wrapper, woocommerce/order-confirmation-billing-wrapper, woocommerce/order-confirmation-shipping-wrapper: the same heading's weight and line-height, and the step under it the sign-in heading has. */
+:where(.wp-block-woocommerce-order-confirmation-totals-wrapper h2, .wp-block-woocommerce-order-confirmation-downloads-wrapper h2, .wp-block-woocommerce-order-confirmation-billing-wrapper h2, .wp-block-woocommerce-order-confirmation-shipping-wrapper h2) {
+	font-weight: var(--wp--custom--text--heading-5--font-weight);
+	line-height: var(--wp--custom--text--heading-5--line-height);
+	margin-block-end: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/mini-cart: the cart count as the solid badge, not the icon-ink pair Woo sets inline. */
+.wc-block-mini-cart__badge {
+	background-color: var(--wp--custom--color--fill-brand-strong) !important;
+	color: var(--wp--custom--color--text-on-brand) !important;
+}
+
+/* woocommerce/mini-cart: the drawer's title at heading-6, over Woo's own fixed 1.5rem. */
+h2.wc-block-mini-cart__title {
+	font-size: var(--wp--custom--text--heading-6--font-size);
+	font-weight: var(--wp--custom--text--heading-6--font-weight);
+	line-height: var(--wp--custom--text--heading-6--line-height);
+}
+
+/* woocommerce/mini-cart: the drawer on the page's own background, with the store card's edge, a small gap off the viewport's edges. */
+.wc-block-components-drawer {
+	background-color: var(--wp--custom--color--background-base);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	bottom: clamp(var(--wp--preset--spacing--10), 2vw, var(--wp--preset--spacing--20));
+	height: auto;
+	max-width: calc(100% - 2 * clamp(var(--wp--preset--spacing--10), 2vw, var(--wp--preset--spacing--20)));
+	overflow: hidden;
+	top: clamp(var(--wp--preset--spacing--10), 2vw, var(--wp--preset--spacing--20));
+	transform: translateX(calc(max(-100%, var(--neg-drawer-width)) - clamp(var(--wp--preset--spacing--10), 2vw, var(--wp--preset--spacing--20))));
+}
+
+/* woocommerce/mini-cart: the content fills the inset drawer, not Woo's own full-viewport 100dvh. */
+.wc-block-components-drawer__content {
+	height: 100%;
+}
+
+/* woocommerce/mini-cart: the close button on a round soft fill, the control's small size, its end on the content's edge. */
+.wc-block-components-button.wc-block-components-drawer__close {
+	align-items: center;
+	background-color: var(--wp--custom--color--fill-weak) !important;
+	border-radius: var(--wp--custom--radius--avatar);
+	box-sizing: border-box;
+	color: var(--wp--custom--color--text-strong) !important;
+	display: flex;
+	height: var(--wp--custom--control--sm);
+	inset-inline-end: var(--wp--preset--spacing--30);
+	justify-content: center;
+	margin: 0;
+	padding: 0 !important;
+	width: var(--wp--custom--control--sm);
+}
+
+/* woocommerce/mini-cart: the close button's fill, a shade up, under the pointer. */
+.wc-block-components-button.wc-block-components-drawer__close:hover {
+	background-color: var(--wp--custom--color--fill-weak-hover) !important;
+}
+
+/* woocommerce/mini-cart: the title's side space on the page's inline step, not Woo's raw 16px. */
+h2.wc-block-mini-cart__title {
+	margin-inline: var(--wp--preset--spacing--30);
+}
+
+/* woocommerce/mini-cart: the line items' side space on the same step. */
+.wc-block-mini-cart__items {
+	padding-inline: var(--wp--preset--spacing--30);
+}
+
+/* woocommerce/mini-cart: the footer's side space on the same step. */
+.wc-block-mini-cart__footer {
+	padding-inline: var(--wp--preset--spacing--30);
+}
+
+/* woocommerce/mini-cart: each row a related step from the next, not Woo's raw 16px. */
+.is-small table.wc-block-mini-cart-items .wc-block-cart-items__row,
+.is-medium table.wc-block-mini-cart-items .wc-block-cart-items__row,
+.is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row {
+	padding-block: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/mini-cart: the thumbnail on the media corner, capped so the drawer's smaller photo doesn't read as a circle. */
+table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__image img {
+	border-radius: min(var(--wp--custom--radius--media), var(--wp--preset--border-radius--2));
+}
+
+/* woocommerce/mini-cart: rows divided by the weak stroke, which Woo's own rule skips for this table. */
+:where(table.wc-block-mini-cart-items .wc-block-cart-items__row:not(:last-child)) {
+	border-bottom: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-weak);
+}
+
+/* woocommerce/mini-cart: the photo, then the details taking what is left, so a row never outgrows the drawer. */
+.is-small table.wc-block-mini-cart-items .wc-block-cart-items__row,
+.is-medium table.wc-block-mini-cart-items .wc-block-cart-items__row,
+.is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row {
+	grid-template-columns: var(--wp--preset--spacing--64) minmax(0, 1fr);
+}
+
+/* woocommerce/mini-cart: the photo's side space is the row's gap, not Woo's extra 16px. */
+.is-small table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__image,
+.is-medium table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__image,
+.is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__image {
+	padding-right: 0;
+}
+
+/* woocommerce/mini-cart: the details fill the second track, under the line total. */
+.is-small table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__product,
+.is-medium table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__product,
+.is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__product {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+/* woocommerce/mini-cart: the line total at the end of the name's line, over the details' empty corner. */
+.is-small table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__total,
+.is-medium table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__total,
+.is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__total {
+	align-self: start;
+	grid-column: 2;
+	grid-row: 1;
+	justify-self: end;
+}
+
+/* woocommerce/mini-cart: the line total and its sale badge on one line. */
+.wc-block-mini-cart-items .wc-block-cart-item__total-price-and-sale-badge-wrapper {
+	align-items: center;
+	display: flex;
+	flex-direction: row-reverse;
+	gap: var(--wp--preset--spacing--10);
+}
+
+/* woocommerce/mini-cart: the item's details as a grid, so the price and the stepper share one row. */
+table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__wrap {
+	column-gap: var(--wp--preset--spacing--10);
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	row-gap: var(--wp--preset--spacing--10);
+}
+
+/* woocommerce/mini-cart: the name in the first track, clear of the line total. */
+:where(table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-components-product-name) {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+/* woocommerce/mini-cart: the description spans its own row in the grid. */
+:where(table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-components-product-metadata) {
+	grid-column: 1 / -1;
+	grid-row: 2;
+}
+
+/* woocommerce/mini-cart: the price takes the grid's first column. */
+:where(table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__prices) {
+	grid-column: 1;
+	grid-row: 3;
+	justify-self: start;
+}
+
+/* woocommerce/mini-cart: the stepper beats Woo's own grid placement, dormant until this wrap became a grid. */
+.is-small table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantity,
+.is-medium table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantity,
+.is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantity {
+	grid-column: 2;
+	grid-row: 3;
+	justify-self: end;
+}
+
+/* woocommerce/mini-cart: the stepper on the button radius, not the input radius it takes elsewhere. */
+:where(table.wc-block-mini-cart-items) :where(.wc-block-components-quantity-selector:has(input:not([type="hidden"]))) {
+	border-radius: var(--wp--custom--radius--control);
+}
+
+/* woocommerce/mini-cart: the subtotal row larger, at the label's weight, not Woo's fixed 600. */
+.wc-block-mini-cart__footer .wc-block-components-totals-item.wc-block-mini-cart__footer-subtotal {
+	font-size: var(--wp--custom--text--text-large--font-size);
+	font-weight: var(--wp--custom--text--label--font-weight);
+}
+
+/* woocommerce/mini-cart: the shipping note, weak against the subtotal. */
+.wc-block-mini-cart__footer .wc-block-components-totals-item.wc-block-mini-cart__footer-subtotal .wc-block-components-totals-item__description {
+	color: var(--wp--custom--color--text-weak);
+}
+
+/* woocommerce/mini-cart: "Go to checkout" and "View cart" stacked, each full width, not side by side. */
+:where(.wc-block-mini-cart__footer-actions) {
+	flex-direction: column;
+}
+
+/* woocommerce/mini-cart: "Go to checkout" leads, "View cart" follows, over Woo's own markup order. */
+:where(.wp-block-woocommerce-mini-cart-checkout-button-block) {
+	order: -1;
+}
+
+/* woocommerce/handpicked-products, woocommerce/product-best-sellers, woocommerce/product-on-sale, woocommerce/product-top-rated, woocommerce/product-category, woocommerce/products-by-attribute, woocommerce/product-new, woocommerce/all-products: the older grid on product-template's gaps, in place of Woo's transparent-border gutters. */
+.wc-block-grid__products {
+	column-gap: var(--wp--preset--spacing--25);
+	display: grid;
+	margin: 0;
+	row-gap: var(--wp--preset--spacing--40);
+}
+
+/* woocommerce/product-best-sellers and the other older grids: two tracks beside the gap, as product-template's, still a grid on a phone, where Woo drops it to one block. */
+.wc-block-grid.has-2-columns .wc-block-grid__products {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 1 * var(--wp--preset--spacing--25)) / 2)), 1fr));
+}
+
+/* woocommerce/product-best-sellers and the other older grids: three tracks beside the gap. */
+.wc-block-grid.has-3-columns .wc-block-grid__products {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 2 * var(--wp--preset--spacing--25)) / 3)), 1fr));
+}
+
+/* woocommerce/product-best-sellers and the other older grids: four tracks beside the gap. */
+.wc-block-grid.has-4-columns .wc-block-grid__products {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 3 * var(--wp--preset--spacing--25)) / 4)), 1fr));
+}
+
+/* woocommerce/product-best-sellers and the other older grids: five tracks beside the gap. */
+.wc-block-grid.has-5-columns .wc-block-grid__products {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 4 * var(--wp--preset--spacing--25)) / 5)), 1fr));
+}
+
+/* woocommerce/product-best-sellers and the other older grids: six tracks beside the gap. */
+.wc-block-grid.has-6-columns .wc-block-grid__products {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(max(150px, calc((100% - 5 * var(--wp--preset--spacing--25)) / 6)), 1fr));
+}
+
+/* woocommerce/product-best-sellers and the other older grids: each product on the store card, start-aligned; Woo's column cap would keep it a third of its track. */
+.wc-block-grid .wc-block-grid__products > .wc-block-grid__product {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--10);
+	max-width: none;
+	padding-block-end: var(--wp--preset--spacing--25);
+	text-align: start;
+}
+
+/* woocommerce/product-best-sellers and the other older grids: the photo a regular step above the title, as the shop card's photo stands over its body. */
+.wc-block-grid__product .wc-block-grid__product-link {
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/product-best-sellers and the other older grids: the photo's own 12px margin, which would widen the step to the title. */
+.wc-block-grid__product .wc-block-grid__product-image:not(.wc-block-components-product-image) {
+	margin: 0;
+}
+
+/* woocommerce/all-products: its photo sits outside the title's link, so it needs its own step above the title. */
+:where(.wc-block-grid__product > .wc-block-components-product-image) {
+	margin-block-end: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/product-best-sellers and the other older grids: the photo's top corners on the card's, as a card photo's are. */
+.wc-block-grid__product-image img {
+	border-radius: var(--wp--custom--radius--card) var(--wp--custom--radius--card) 0 0;
+}
+
+/* woocommerce/product-best-sellers and the other older grids: the title at the product-name part's size and weight, on the card's inset, not Woo's bold. */
+.wc-block-grid__product .wc-block-grid__product-title {
+	font-size: var(--wp--preset--font-size--base);
+	font-weight: var(--wp--custom--typography--font-weight--medium);
+	margin: 0 var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/product-best-sellers and the other older grids: the title is a UI link, underlined only under the pointer, as a product name is. */
+a.wc-block-grid__product-link {
+	text-decoration: none;
+}
+
+/* woocommerce/product-best-sellers and the other older grids: the title under the pointer. */
+a.wc-block-grid__product-link:hover {
+	text-decoration: underline;
+}
+
+/* woocommerce/product-on-sale and the other older grids: the sale badge as the product sale badge, in sentence case on the photo's corner, not Woo's ruled capitals. */
+.wc-block-grid .wc-block-grid__product-onsale {
+	background-color: var(--wp--custom--color--fill-brand-strong);
+	border: 0;
+	border-radius: var(--wp--custom--radius--chip);
+	color: var(--wp--custom--color--text-on-brand);
+	font-size: var(--wp--custom--text--text-small--font-size);
+	font-weight: var(--wp--custom--typography--font-weight--semi-bold);
+	inset-block-start: var(--wp--preset--spacing--20);
+	inset-inline: var(--wp--preset--spacing--20) auto;
+	letter-spacing: var(--wp--custom--text--text-small--letter-spacing);
+	line-height: var(--wp--custom--text--text-small--line-height);
+	margin: 0;
+	padding: 0.125em 0.5em;
+	text-transform: none;
+}
+
+/* woocommerce/product-best-sellers and the other older grids: the price and the rating on the card's inset, start-aligned, not centred 12px apart. */
+.wc-block-grid__product .wc-block-grid__product-price,
+.wc-block-grid__product .wc-block-grid__product-rating {
+	margin: 0 var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/product-best-sellers and the other older grids: the price at the card's size; Woo shrinks a four-column grid's text to 0.75em. */
+:where(.wc-block-grid__product-price) {
+	font-size: var(--wp--preset--font-size--small);
+}
+
+/* woocommerce/product-on-sale and the other older grids: the struck-through regular price, muted beside the sale price it sits with. */
+:where(.wc-block-grid__product-price del) {
+	color: var(--wp--custom--color--text-weak);
+}
+
+/* woocommerce/product-on-sale and the other older grids: the sale price, without the browser's underline. */
+:where(.wc-block-grid__product-price ins) {
+	text-decoration: none;
+}
+
+/* woocommerce/product-top-rated and the other older grids: the stars start with the text, not centred. */
+.wc-block-grid__product-rating .star-rating,
+.wc-block-grid__product-rating .wc-block-grid__product-rating__stars {
+	margin: 0;
+}
+
+/* woocommerce/product-best-sellers and the other older grids: the button at the card's foot, a group step below the text above it. */
+.wc-block-grid__product .wc-block-grid__product-add-to-cart {
+	margin: auto var(--wp--preset--spacing--25) 0;
+	padding-block-start: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/product-best-sellers and the other older grids: the button on the small control, as the shop card's, not Woo's 1em; a long label wraps inside it. */
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link {
+	align-items: center;
+	box-sizing: border-box;
+	font-size: var(--wp--custom--control-label--sm);
+	font-weight: var(--wp--custom--text--label--font-weight);
+	min-height: var(--wp--custom--control--sm);
+	padding: 0 1em;
+}
+
+/* woocommerce/product-best-sellers and the other older grids: the shop card's secondary button, not the button element's main fill. */
+:where(.wc-block-grid__product-add-to-cart) .wp-block-button__link {
+	background-color: var(--wp--custom--color--fill-weak);
+	border: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-strong);
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* woocommerce/product-best-sellers and the other older grids: the secondary button under the pointer. */
+:where(.wc-block-grid__product-add-to-cart) .wp-block-button__link:hover {
+	background-color: var(--wp--custom--color--fill-weak-hover);
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* woocommerce/featured-product, woocommerce/featured-category: the text and buttons on the photo in the dark overlay's media names, as on a cover. */
+:where(.wp-block-woocommerce-featured-product, .wp-block-woocommerce-featured-category) {
+	--wp--custom--color--text-strong: var(--wp--custom--color--text-media-strong);
+	--wp--custom--color--text-weak: var(--wp--custom--color--text-media-weak);
+	--wp--custom--color--text-brand: var(--wp--custom--color--text-media-strong);
+	--wp--custom--color--stroke-strong: var(--wp--custom--color--stroke-media-strong);
+	--wp--custom--color--stroke-weak: var(--wp--custom--color--stroke-media-weak);
+	--wp--custom--color--stroke-focus: var(--wp--custom--color--text-media-strong);
+	--wp--custom--color--fill-weak: var(--wp--custom--color--fill-media-weak);
+	--wp--custom--color--fill-weak-hover: var(--wp--custom--color--fill-media-weak-hover);
+	--wp--custom--color--fill-weak-active: var(--wp--custom--color--fill-media-weak-active);
+	--wp--custom--color--fill-neutral-hover: var(--wp--custom--color--fill-media-weak);
+	--wp--custom--color--fill-neutral-active: var(--wp--custom--color--fill-media-weak-hover);
+	--wp--custom--elements--button--color--background: var(--wp--custom--color--fill-media-strong);
+	--wp--custom--elements--button--color--text: var(--wp--custom--color--text-on-media);
+	--wp--custom--elements--button--hover--color--background: var(--wp--custom--color--fill-media-strong-hover);
+	--wp--custom--elements--button--hover--color--text: var(--wp--custom--color--text-on-media);
+	--wp--custom--elements--button--active--color--background: var(--wp--custom--color--fill-media-strong-active);
+	--wp--custom--elements--button--active--color--text: var(--wp--custom--color--text-on-media);
+	--wp--custom--elements--button--focus--color--background: var(--wp--custom--color--fill-media-strong);
+	--wp--custom--elements--button--focus--color--text: var(--wp--custom--color--text-on-media);
+}
+
+/* woocommerce/featured-product, woocommerce/featured-category: the text in the media ink, not Woo's #fff. */
+.wp-block-woocommerce-featured-product,
+.wp-block-woocommerce-featured-category {
+	color: var(--wp--custom--color--text-media-strong);
+}
+
+/* woocommerce/product-categories: each category a UI link, underlined only under the pointer. */
+:where(.wc-block-product-categories-list-item) a {
+	text-decoration: none;
+}
+
+/* woocommerce/product-categories: a category under the pointer. */
+:where(.wc-block-product-categories-list-item) a:hover {
+	text-decoration: underline;
+}
+
+/* woocommerce/product-categories: the count reads as metadata beside its name. */
+:where(.wc-block-product-categories-list-item-count) {
+	color: var(--wp--custom--color--text-weak);
+}
+
+/* woocommerce/product-categories: the categories with photos sit related, not Woo's 4px apart. */
+.wc-block-product-categories-list--has-images .wc-block-product-categories-list-item {
+	margin-block: var(--wp--preset--spacing--10);
+}
+
+/* woocommerce/product-categories: each photo on the media corner, framed in the weak stroke, not Woo's #eee. */
+.wc-block-product-categories-list--has-images .wc-block-product-categories-list-item__image {
+	border-color: var(--wp--custom--color--stroke-weak);
+	border-radius: var(--wp--custom--radius--media);
+}
+
+/* woocommerce/product-categories: the photo itself on the media corner, so its corners stay inside its frame's. */
+:where(.wc-block-product-categories-list-item__image img) {
+	border-radius: var(--wp--custom--radius--media);
+}
+
+/* woocommerce/product-categories: the dropdown's select a related step from its button, not 0.5em. */
+.wc-block-product-categories select {
+	margin-right: var(--wp--preset--spacing--10);
+}
+
+/* woocommerce/product-categories: the dropdown's go button as the secondary button, as tall as the select, not the browser's grey button. */
+.wc-block-product-categories__button {
+	background-color: var(--wp--custom--color--fill-weak);
+	border: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--control);
+	box-sizing: border-box;
+	color: var(--wp--custom--color--text-strong);
+	height: var(--wp--custom--control--md);
+}
+
+/* woocommerce/product-categories: the go button under the pointer. */
+.wc-block-product-categories__button:hover {
+	background-color: var(--wp--custom--color--fill-weak-hover);
+}
+
+/* woocommerce/price-filter: the lowest and highest price fields on the theme's field, at the 16px value iOS will not zoom on. */
+.wc-block-components-price-slider__controls .wc-block-components-price-slider__amount {
+	background-color: var(--wp--custom--color--background-base);
+	border-color: var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--input) !important;
+	color: var(--wp--custom--color--text-strong);
+	font-size: var(--wp--custom--form-control--input-value);
+}
+
+/* woocommerce/attribute-filter, woocommerce/stock-filter, woocommerce/rating-filter: the dropdown's field on the page's own base and ink, not Woo's #fff. */
+.wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container {
+	background-color: var(--wp--custom--color--background-base);
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* woocommerce/attribute-filter, woocommerce/stock-filter, woocommerce/rating-filter: the field's text input, which Woo paints #fff again. */
+.wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container input[type=text].components-form-token-field__input {
+	background-color: var(--wp--custom--color--background-base);
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* woocommerce/attribute-filter, woocommerce/stock-filter, woocommerce/rating-filter: the open list of options on the overlay surface, not Woo's #fff. */
+.wc-blocks-components-form-token-field-wrapper .components-form-token-field__suggestions-list {
+	background-color: var(--wp--custom--color--background-overlay);
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* woocommerce/attribute-filter, woocommerce/stock-filter, woocommerce/rating-filter: the dropdown's placeholder in the theme's placeholder ink; Woo's #000 vanishes on a dark palette. */
+.wc-block-attribute-filter .wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container .components-form-token-field__input::placeholder,
+.wc-block-stock-filter .wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container .components-form-token-field__input::placeholder,
+.wc-block-rating-filter .wc-blocks-components-form-token-field-wrapper .components-form-token-field__input-container .components-form-token-field__input::placeholder {
+	color: var(--wp--custom--color--text-weaker);
+}
+
+/* woocommerce/product-review-template: the replies indented a spacing step, as a comment thread's, not Woo's raw 2rem. */
+.wp-block-woocommerce-product-review-template ol {
+	padding-inline-start: var(--wp--preset--spacing--30);
+}
+
+/* woocommerce/product-review-template: a review a group step under the one before it, as a comment is. */
+:where(.wp-block-woocommerce-product-review-template li[id^="comment-"] + li[id^="comment-"]) {
+	margin-block-start: var(--wp--preset--spacing--30);
+}
+
+/* woocommerce/product-review-template: a review's replies a group step under it. */
+:where(.wp-block-woocommerce-product-review-template li[id^="comment-"] > ol) {
+	margin-block-start: var(--wp--preset--spacing--30);
+}
+
+/* woocommerce/product-review-author-name: the reviewer's name on the label style, as a comment's byline. */
+:where(.wp-block-woocommerce-product-review-author-name) {
+	font-weight: var(--wp--custom--text--label--font-weight);
+	letter-spacing: var(--wp--custom--text--label--letter-spacing);
+	line-height: var(--wp--custom--text--label--line-height);
+}
+
+/* woocommerce/product-review-author-name: a reviewer's site link as a UI link, as a comment's byline. */
+:where(.wp-block-woocommerce-product-review-author-name) a {
+	color: var(--wp--custom--link--ui--color);
+	text-decoration: var(--wp--custom--link--ui--decoration);
+}
+
+/* woocommerce/product-review-date: the date reads as metadata, as a comment's date does. */
+:where(.wp-block-woocommerce-product-review-date) {
+	color: var(--wp--custom--color--text-weak);
+}
+
+/* woocommerce/product-review-date: its permalink in the same weak ink, without the link's underline. */
+:where(.wp-block-woocommerce-product-review-date) a {
+	color: var(--wp--custom--color--text-weak);
+	text-decoration: none;
+}
+
+/* woocommerce/single-product: the product's title at the product page title's size, not its heading level's. */
+:where(.wp-block-woocommerce-single-product) :is(h1, h2, h3, h4, h5, h6):where(.wp-block-post-title) {
+	font-size: var(--wp--preset--font-size--large);
+}

@@ -1890,7 +1890,7 @@ h2.wc-block-mini-cart__title {
 	height: 100%;
 }
 
-/* woocommerce/mini-cart: the close button on a round soft fill, the control's small size. */
+/* woocommerce/mini-cart: the close button on a round soft fill, the control's small size, its end on the content's edge. */
 .wc-block-components-button.wc-block-components-drawer__close {
 	align-items: center;
 	background-color: var(--wp--custom--color--fill-weak) !important;
@@ -1899,6 +1899,7 @@ h2.wc-block-mini-cart__title {
 	color: var(--wp--custom--color--text-strong) !important;
 	display: flex;
 	height: var(--wp--custom--control--sm);
+	inset-inline-end: var(--wp--preset--spacing--30);
 	justify-content: center;
 	margin: 0;
 	padding: 0 !important;

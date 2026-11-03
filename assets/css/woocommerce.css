@@ -567,9 +567,27 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 }
 
 /* woocommerce/classic-shortcode: signed out, the heading and form sit in one centred column a single field wide. */
-.woocommerce-account main .woocommerce:has(> .login) {
+.woocommerce-account main .woocommerce:has(> .login, > .lost_reset_password) {
 	margin-inline: auto;
 	max-width: 28rem;
+}
+
+/* woocommerce/classic-shortcode: order-pay's email check sits in the same centred column, off the checkout page's own wide form. */
+.woocommerce-checkout main .woocommerce:has(> .woocommerce-verify-email) {
+	margin-inline: auto;
+	max-width: 28rem;
+}
+
+/* woocommerce/order-confirmation-status: order-received's email check and the text above it share that column too. */
+.wc-block-order-confirmation-status-description:has(> .woocommerce-verify-email) {
+	margin-inline: auto;
+	max-width: 28rem;
+}
+
+/* woocommerce/classic-shortcode: lost password's lone field spans the card; Woo's 47% half-width is for a paired row. */
+.woocommerce form.lost_reset_password .form-row-first {
+	float: none;
+	width: 100%;
 }
 
 /* woocommerce/classic-shortcode: the sign-in form's heading at heading-5, on the form's start edge. */
@@ -644,6 +662,17 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	line-height: var(--wp--custom--text--heading-5--line-height);
 }
 
+/* woocommerce/classic-shortcode: no gap above the card's own title; Woo prints no class on it for order-details/order-downloads, only position. */
+.woocommerce-order-details > h2:first-child,
+.woocommerce-order-downloads > h2:first-child {
+	margin-block-start: 0;
+}
+
+/* woocommerce/classic-shortcode: no gap above a card or form's own title; the theme's heading margin otherwise sits it below the menu's first row. */
+:where(.woocommerce-customer-details h2.woocommerce-column__title, .woocommerce-MyAccount-content form > h2:first-child) {
+	margin-block-start: 0;
+}
+
 /* woocommerce/classic-shortcode: each address on the soft card the sign-in form already uses. */
 :where(.woocommerce-Addresses :is(.col-1, .col-2)) {
 	background-color: var(--wp--custom--store-card--background);
@@ -670,6 +699,11 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	width: auto;
 }
 
+/* woocommerce/classic-shortcode: the card's title starts at the card's own padding, not a heading margin on top of it. */
+.woocommerce-Addresses .title h2 {
+	margin-block-start: 0;
+}
+
 /* woocommerce/classic-shortcode: order 1 puts Edit after the title and address, both at the default 0. */
 :where(.woocommerce-Addresses .edit) {
 	font-size: var(--wp--custom--text--text-small--font-size);
@@ -683,6 +717,13 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	border-radius: var(--wp--custom--radius--card);
 	box-shadow: var(--wp--custom--shadow--card);
 	padding: var(--wp--preset--spacing--25);
+}
+
+/* woocommerce/classic-shortcode: no second box now the column is the card; Woo's layout prints a bordered, rounded box around it. */
+.woocommerce .woocommerce-customer-details address {
+	border: 0;
+	border-radius: 0;
+	padding: 0;
 }
 
 /* woocommerce/classic-shortcode: drops Woo's shop_table grid for the cart totals' row rhythm. */
@@ -1813,6 +1854,33 @@ h2.wc-block-mini-cart__title {
 .wc-block-components-drawer {
 	background-color: var(--wp--custom--color--background-base);
 	border-inline-start: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+}
+
+/* woocommerce/mini-cart: the title's side space on the page's inline step, not Woo's raw 16px. */
+h2.wc-block-mini-cart__title {
+	margin-inline: var(--wp--preset--spacing--30);
+}
+
+/* woocommerce/mini-cart: the line items' side space on the same step. */
+.wc-block-mini-cart__items {
+	padding-inline: var(--wp--preset--spacing--30);
+}
+
+/* woocommerce/mini-cart: the footer's side space on the same step. */
+.wc-block-mini-cart__footer {
+	padding-inline: var(--wp--preset--spacing--30);
+}
+
+/* woocommerce/mini-cart: each row a related step from the next, not Woo's raw 16px. */
+.is-small table.wc-block-mini-cart-items .wc-block-cart-items__row,
+.is-medium table.wc-block-mini-cart-items .wc-block-cart-items__row,
+.is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row {
+	padding-block: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/mini-cart: the thumbnail on the media corner, capped so the drawer's smaller photo doesn't read as a circle. */
+table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__image img {
+	border-radius: min(var(--wp--custom--radius--media), var(--wp--preset--border-radius--2));
 }
 
 /* woocommerce/handpicked-products, woocommerce/product-best-sellers, woocommerce/product-on-sale, woocommerce/product-top-rated, woocommerce/product-category, woocommerce/products-by-attribute, woocommerce/product-new, woocommerce/all-products: the older grid on product-template's gaps, in place of Woo's transparent-border gutters. */

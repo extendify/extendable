@@ -1716,3 +1716,18 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 	gap: var(--wp--preset--spacing--20);
 	overflow: visible;
 }
+
+/* woocommerce/empty-cart-block: the "New in store" heading at the related products heading's size, not the page's h2. */
+:where(.wp-block-woocommerce-empty-cart-block hr + h2) {
+	font-size: var(--wp--preset--font-size--medium-plus);
+}
+
+/* woocommerce/empty-cart-block: the Browse store link a step under the empty-cart heading, not Woo's default paragraph margin. */
+:where(.wp-block-woocommerce-empty-cart-block > p) {
+	margin-block: var(--wp--preset--spacing--20) 0;
+}
+
+/* woocommerce/empty-cart-block: the dots separator a step from the Browse store link and the New in store heading too. */
+:where(.wp-block-woocommerce-empty-cart-block > hr) {
+	margin-block: var(--wp--preset--spacing--40);
+}

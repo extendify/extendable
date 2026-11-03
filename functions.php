@@ -456,6 +456,61 @@ function extendable_cross_sells_use_shop_card( array $parsed_block ) : array {
 add_filter( 'render_block_data', 'extendable_cross_sells_use_shop_card' );
 
 /**
+ * WooCommerce also saves its own grid block into the cart page's empty-cart content, out of
+ * the templates' reach, so render the shop's card there too, the same fix already used for
+ * the cart's cross-sells list.
+ *
+ * @param string $block_content Rendered block content.
+ * @param array  $parsed_block  Parsed block data.
+ * @return string Filtered block content.
+ */
+function extendable_empty_cart_new_products_use_shop_card( string $block_content, array $parsed_block ) : string {
+	if ( 'woocommerce/product-new' !== $parsed_block['blockName'] ) {
+		return $block_content;
+	}
+
+	$columns = (int) ( $parsed_block['attrs']['columns'] ?? 4 );
+	$rows    = (int) ( $parsed_block['attrs']['rows'] ?? 1 );
+
+	$markup = sprintf(
+		'<!-- wp:woocommerce/product-collection %s --><div class="wp-block-woocommerce-product-collection"><!-- wp:woocommerce/product-template --><!-- wp:pattern {"slug":"extendable/hidden-shop-product"} /--><!-- /wp:woocommerce/product-template --></div><!-- /wp:woocommerce/product-collection -->',
+		serialize_block_attributes(
+			array(
+				'queryId'       => 0,
+				'query'         => array(
+					'woocommerceAttributes'         => array(),
+					'woocommerceStockStatus'        => array( 'instock', 'outofstock', 'onbackorder' ),
+					'woocommerceOnSale'              => false,
+					'woocommerceHandPickedProducts' => array(),
+					'taxQuery'                      => array(),
+					'isProductCollectionBlock'      => true,
+					'perPage'                       => $columns * $rows,
+					'pages'                         => 1,
+					'offset'                        => 0,
+					'postType'                      => 'product',
+					'order'                         => 'desc',
+					'orderBy'                       => 'date',
+					'search'                        => '',
+					'exclude'                       => array(),
+					'inherit'                       => false,
+					'featured'                      => false,
+				),
+				'tagName'       => 'div',
+				'displayLayout' => array(
+					'type'          => 'flex',
+					'columns'       => $columns,
+					'shrinkColumns' => true,
+				),
+				'style'         => array( 'spacing' => array( 'blockGap' => 'var:preset|spacing|30' ) ),
+			)
+		)
+	);
+
+	return do_blocks( $markup );
+}
+add_filter( 'render_block', 'extendable_empty_cart_new_products_use_shop_card', 10, 2 );
+
+/**
  * Hide block style variations from editor UI while keeping them registered
  */
 function extendable_hide_block_style_variations() {

@@ -1718,7 +1718,7 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 }
 
 /* woocommerce/empty-cart-block: the "New in store" heading at the related products heading's size, not the page's h2. */
-:where(.wp-block-woocommerce-empty-cart-block hr + h2) {
+:where(.wp-block-woocommerce-empty-cart-block hr) + h2 {
 	font-size: var(--wp--preset--font-size--medium-plus);
 }
 

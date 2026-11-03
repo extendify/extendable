@@ -456,6 +456,29 @@ function extendable_cross_sells_use_shop_card( array $parsed_block ) : array {
 add_filter( 'render_block_data', 'extendable_cross_sells_use_shop_card' );
 
 /**
+ * Only $parent_block says this is the empty cart's own copy, so mark it here
+ * before the swap below would otherwise hit every Newest Products block.
+ *
+ * @param array         $parsed_block Parsed block data.
+ * @param array         $source_block Unmodified copy of $parsed_block, as parsed from the source.
+ * @param WP_Block|null $parent_block The parent block instance, if this one is nested.
+ * @return array Filtered block data.
+ */
+function extendable_mark_empty_cart_product_new( array $parsed_block, array $source_block, $parent_block = null ) : array {
+	if ( 'woocommerce/product-new' !== $parsed_block['blockName'] ) {
+		return $parsed_block;
+	}
+	if ( ! $parent_block instanceof WP_Block || 'woocommerce/empty-cart-block' !== $parent_block->name ) {
+		return $parsed_block;
+	}
+
+	$parsed_block['attrs']['__extendableEmptyCart'] = true;
+
+	return $parsed_block;
+}
+add_filter( 'render_block_data', 'extendable_mark_empty_cart_product_new', 10, 3 );
+
+/**
  * WooCommerce also saves its own grid block into the cart page's empty-cart content, out of
  * the templates' reach, so render the shop's card there too, the same fix already used for
  * the cart's cross-sells list.
@@ -465,7 +488,7 @@ add_filter( 'render_block_data', 'extendable_cross_sells_use_shop_card' );
  * @return string Filtered block content.
  */
 function extendable_empty_cart_new_products_use_shop_card( string $block_content, array $parsed_block ) : string {
-	if ( 'woocommerce/product-new' !== $parsed_block['blockName'] ) {
+	if ( empty( $parsed_block['attrs']['__extendableEmptyCart'] ) ) {
 		return $block_content;
 	}
 

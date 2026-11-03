@@ -586,8 +586,19 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 
 /* woocommerce/order-confirmation-status: the thank-you line over the email check joins the centred column, not the wide row. */
 .wc-block-order-confirmation-status:has(+ .wc-block-order-confirmation-status-description > .woocommerce-verify-email) {
+	font-weight: var(--wp--custom--typography--font-weight--semi-bold);
 	margin-inline: auto;
 	max-width: 28rem;
+}
+
+/* woocommerce/order-confirmation-status: the text a related step under the thank-you line, not a section's gap. */
+.wc-block-order-confirmation-status-description:has(> .woocommerce-verify-email) {
+	margin-block-start: var(--wp--preset--spacing--20);
+}
+
+/* woocommerce/order-confirmation-status: the text's own top margin would add to that step. */
+:where(.wc-block-order-confirmation-status-description > p:first-child) {
+	margin-block-start: 0;
 }
 
 /* woocommerce/order-confirmation-status: the email check's lone field spans the card, not Woo's 50% on a wide screen. */
@@ -785,6 +796,13 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	height: var(--wp--custom--control--sm);
 	padding: 0 1em;
 	text-decoration: none;
+}
+
+/* woocommerce/classic-shortcode: each action an inline button, label centred; Woo's block theme makes it a 1em-spaced block. */
+.woocommerce-account .woocommerce-orders-table__cell.woocommerce-orders-table__cell-order-actions a.button {
+	display: inline-flex;
+	justify-content: center;
+	margin: 0 var(--wp--preset--spacing--10) 0 0;
 }
 
 /* woocommerce/classic-shortcode: the small secondary button; Woo's own .button.alt no longer renders one. */
@@ -1783,6 +1801,7 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 /* woocommerce/empty-cart-block: the "New in store" heading at the related products heading's size, not the page's h2. */
 :where(.wp-block-woocommerce-empty-cart-block hr) + h2 {
 	font-size: var(--wp--preset--font-size--medium-plus);
+	margin-block-end: var(--wp--preset--spacing--40);
 }
 
 /* woocommerce/empty-cart-block: the Browse store link a step under the empty-cart heading, not Woo's default paragraph margin. */

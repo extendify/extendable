@@ -1951,17 +1951,23 @@ table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__im
 }
 
 /* woocommerce/mini-cart: the photo's side space is the row's gap, not Woo's extra 16px. */
+.is-small table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__image,
+.is-medium table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__image,
 .is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__image {
 	padding-right: 0;
 }
 
 /* woocommerce/mini-cart: the details fill the second track, under the line total. */
+.is-small table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__product,
+.is-medium table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__product,
 .is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__product {
 	grid-column: 2;
 	grid-row: 1;
 }
 
 /* woocommerce/mini-cart: the line total at the end of the name's line, over the details' empty corner. */
+.is-small table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__total,
+.is-medium table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__total,
 .is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__total {
 	align-self: start;
 	grid-column: 2;
@@ -2005,6 +2011,8 @@ table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__wr
 }
 
 /* woocommerce/mini-cart: the stepper beats Woo's own grid placement, dormant until this wrap became a grid. */
+.is-small table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantity,
+.is-medium table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantity,
 .is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantity {
 	grid-column: 2;
 	grid-row: 3;

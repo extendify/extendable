@@ -584,6 +584,17 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	max-width: 28rem;
 }
 
+/* woocommerce/order-confirmation-status: the thank-you line over the email check joins the centred column, not the wide row. */
+.wc-block-order-confirmation-status:has(+ .wc-block-order-confirmation-status-description > .woocommerce-verify-email) {
+	margin-inline: auto;
+	max-width: 28rem;
+}
+
+/* woocommerce/order-confirmation-status: the email check's lone field spans the card, not Woo's 50% on a wide screen. */
+.wc-block-order-confirmation-status-description .woocommerce-verify-email #verify-email {
+	width: 100%;
+}
+
 /* woocommerce/classic-shortcode: lost password's lone field spans the card; Woo's 47% half-width is for a paired row. */
 .woocommerce form.lost_reset_password .form-row-first {
 	float: none;
@@ -682,7 +693,7 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	gap: var(--wp--preset--spacing--10);
+	gap: var(--wp--preset--spacing--20);
 	padding: var(--wp--preset--spacing--25);
 }
 
@@ -699,15 +710,26 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	width: auto;
 }
 
-/* woocommerce/classic-shortcode: the card's title starts at the card's own padding, not a heading margin on top of it. */
+/* woocommerce/classic-shortcode: the card's title starts at the card's own padding, and the card's gap alone sets what follows it. */
 .woocommerce-Addresses .title h2 {
-	margin-block-start: 0;
+	margin-block: 0;
 }
 
 /* woocommerce/classic-shortcode: order 1 puts Edit after the title and address, both at the default 0. */
 :where(.woocommerce-Addresses .edit) {
 	font-size: var(--wp--custom--text--text-small--font-size);
 	order: 1;
+}
+
+/* woocommerce/classic-shortcode: Edit sits on the card's gap, not Woo's own 1em under it. */
+.woocommerce-account .woocommerce-Addresses .title .edit {
+	margin: 0;
+}
+
+/* woocommerce/classic-shortcode: the header's clearfix boxes would each take a gap of the card, now the header is display: contents. */
+.woocommerce-account .woocommerce-Addresses .title::before,
+.woocommerce-account .woocommerce-Addresses .title::after {
+	display: none;
 }
 
 /* woocommerce/classic-shortcode: each on the soft card, like the cart totals. */
@@ -1843,11 +1865,11 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 	color: var(--wp--custom--color--text-on-brand) !important;
 }
 
-/* woocommerce/mini-cart: the drawer's title at heading-5, over Woo's own fixed 1.5rem. */
+/* woocommerce/mini-cart: the drawer's title at heading-6, over Woo's own fixed 1.5rem. */
 h2.wc-block-mini-cart__title {
-	font-size: var(--wp--custom--text--heading-5--font-size);
-	font-weight: var(--wp--custom--text--heading-5--font-weight);
-	line-height: var(--wp--custom--text--heading-5--line-height);
+	font-size: var(--wp--custom--text--heading-6--font-size);
+	font-weight: var(--wp--custom--text--heading-6--font-weight);
+	line-height: var(--wp--custom--text--heading-6--line-height);
 }
 
 /* woocommerce/mini-cart: the drawer on the page's own background, with the store card's edge, now inset from the viewport instead of flush against it. */
@@ -1857,6 +1879,7 @@ h2.wc-block-mini-cart__title {
 	border-radius: var(--wp--custom--radius--card);
 	bottom: clamp(var(--wp--preset--spacing--20), 4vw, var(--wp--preset--spacing--30));
 	height: auto;
+	max-width: calc(100% - 2 * clamp(var(--wp--preset--spacing--20), 4vw, var(--wp--preset--spacing--30)));
 	overflow: hidden;
 	top: clamp(var(--wp--preset--spacing--20), 4vw, var(--wp--preset--spacing--30));
 	transform: translateX(calc(max(-100%, var(--neg-drawer-width)) - clamp(var(--wp--preset--spacing--20), 4vw, var(--wp--preset--spacing--30))));
@@ -1919,17 +1942,51 @@ table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__im
 	border-bottom: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-weak);
 }
 
+/* woocommerce/mini-cart: the photo, then the details taking what is left, so a row never outgrows the drawer. */
+.is-small table.wc-block-mini-cart-items .wc-block-cart-items__row,
+.is-medium table.wc-block-mini-cart-items .wc-block-cart-items__row,
+.is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row {
+	grid-template-columns: var(--wp--preset--spacing--64) minmax(0, 1fr);
+}
+
+/* woocommerce/mini-cart: the photo's side space is the row's gap, not Woo's extra 16px. */
+.is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__image {
+	padding-right: 0;
+}
+
+/* woocommerce/mini-cart: the details fill the second track, under the line total. */
+.is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__product {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+/* woocommerce/mini-cart: the line total at the end of the name's line, over the details' empty corner. */
+.is-mobile table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__total {
+	align-self: start;
+	grid-column: 2;
+	grid-row: 1;
+	justify-self: end;
+}
+
+/* woocommerce/mini-cart: the line total and its sale badge on one line. */
+.wc-block-mini-cart-items .wc-block-cart-item__total-price-and-sale-badge-wrapper {
+	align-items: center;
+	display: flex;
+	flex-direction: row-reverse;
+	gap: var(--wp--preset--spacing--10);
+}
+
 /* woocommerce/mini-cart: the item's details as a grid, so the price and the stepper share one row. */
 table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__wrap {
 	column-gap: var(--wp--preset--spacing--10);
 	display: grid;
-	grid-template-columns: 1fr auto;
+	grid-template-columns: minmax(0, 1fr) auto;
 	row-gap: var(--wp--preset--spacing--10);
 }
 
-/* woocommerce/mini-cart: the name spans its own row in the grid. */
+/* woocommerce/mini-cart: the name in the first track, clear of the line total. */
 :where(table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-components-product-name) {
-	grid-column: 1 / -1;
+	grid-column: 1;
 	grid-row: 1;
 }
 

@@ -1795,3 +1795,22 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 	line-height: var(--wp--custom--text--heading-5--line-height);
 	margin-block-end: var(--wp--preset--spacing--20);
 }
+
+/* woocommerce/mini-cart: the cart count as the solid badge, not the icon-ink pair Woo sets inline. */
+.wc-block-mini-cart__badge {
+	background-color: var(--wp--custom--color--fill-brand-strong) !important;
+	color: var(--wp--custom--color--text-on-brand) !important;
+}
+
+/* woocommerce/mini-cart: the drawer's title at heading-5, over Woo's own fixed 1.5rem. */
+h2.wc-block-mini-cart__title {
+	font-size: var(--wp--custom--text--heading-5--font-size);
+	font-weight: var(--wp--custom--text--heading-5--font-weight);
+	line-height: var(--wp--custom--text--heading-5--line-height);
+}
+
+/* woocommerce/mini-cart: the drawer on the page's own background, with the store card's edge, not Woo's #fff. */
+.wc-block-components-drawer {
+	background-color: var(--wp--custom--color--background-base);
+	border-inline-start: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+}

@@ -173,6 +173,28 @@ function extendable_hide_block_presets() {
 add_action( 'enqueue_block_editor_assets', 'extendable_hide_block_presets' );
 
 /**
+ * Turn off the WordPress emoji script, styles and image swaps. Browsers draw emoji
+ * themselves; the fallback loads emoji images from wordpress.org without consent.
+ *
+ * @since Extendable 2.1.10
+ *
+ * @return void
+ */
+function extendable_disable_emojis() {
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'embed_head', 'print_emoji_detection_script' );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+}
+add_action( 'init', 'extendable_disable_emojis' );
+// The admin emoji hooks are added after init.
+add_action( 'admin_init', 'extendable_disable_emojis' );
+
+/**
  * Include animation functionality
  */
 require_once get_template_directory() . '/inc/animations.php';

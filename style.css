@@ -705,6 +705,7 @@ a {
 	padding-bottom: var(--wp--preset--spacing--30);
 	position: relative;
 	padding-inline-end: 52px;
+	min-height: var(--wp--custom--control--md);
 }
 
 .wp-block-navigation__responsive-container.has-modal-open.is-menu-open .site-logo-title::after {
@@ -742,7 +743,6 @@ a {
 	background-color: var(--wp--preset--color--tertiary);
 	padding: 0.625rem;
 	border-radius: 100%;
-	top: -2.5px !important;
 }
 
 .has-modal-open .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
@@ -905,9 +905,10 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
 }
 
 /* Temporary: WP core ships this padding as a 4-value clamp() shorthand
-   that some browsers fail to parse — re-declare as individual props. */
+   that some browsers fail to parse — re-declare as individual props.
+   Top is the 1rem floor: the root's unitless 0 voids the clamp and clips the close button. */
 .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) {
-	padding-top: clamp(1rem, var(--wp--style--root--padding-top), 20rem);
+	padding-top: var(--wp--preset--spacing--20);
 	padding-right: clamp(1rem, var(--wp--style--root--padding-right), 20rem);
 	padding-bottom: clamp(1rem, var(--wp--style--root--padding-bottom), 20rem);
 	padding-left: clamp(1rem, var(--wp--style--root--padding-left), 20rem);

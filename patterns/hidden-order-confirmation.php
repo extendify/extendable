@@ -5,14 +5,14 @@
  * Inserter: no
  */
 ?>
-<!-- wp:group {"tagName":"main","className":"ext-animate\u002d\u002don is-style-ext-preset\u002d\u002dgroup\u002d\u002dnatural-1\u002d\u002dtemplate","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"inherit":true,"type":"constrained"}} -->
+<!-- wp:group {"tagName":"main","className":"ext-animate\u002d\u002don is-style-ext-preset\u002d\u002dgroup\u002d\u002dnatural-1\u002d\u002dtemplate","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|64"}}},"layout":{"inherit":true,"type":"constrained"}} -->
 <main
 	class="wp-block-group ext-animate--on is-style-ext-preset--group--natural-1--template"
 	style="
 		margin-top: 0;
 		margin-bottom: 0;
-		padding-top: var(--wp--preset--spacing--60);
-		padding-bottom: var(--wp--preset--spacing--60);
+		padding-top: var(--wp--preset--spacing--30);
+		padding-bottom: var(--wp--preset--spacing--64);
 	"
 >
 	<!-- wp:woocommerce/order-confirmation-status {"fontSize":"large"} /-->

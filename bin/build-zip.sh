@@ -22,12 +22,9 @@ mkdir -p build
 echo "Creating zip 🤐"
 toplevelFiles=$(ls *.{txt,php,png,css})
 themeJson=$(ls theme.json)
-patterns=$(ls patterns/*.php)
+patterns=$(find patterns -name "*.php")
 templates=$(ls templates/*.html)
-styles=$(ls styles/*.json)
-stylesPresets=$(find styles -path "*/block-presets/*" -name "*.json")
-colorsPresets=$(find styles -path "*/colors/*" -name "*.json")
-typographyPresets=$(find styles -path "*/typography/*" -name "*.json")
+styles=$(find styles -name "*.json")
 parts=$(ls parts/*.html)
 incFiles=$(ls inc/*.php)
 assets=$(ls assets/css/*.css)
@@ -46,9 +43,6 @@ zip -r ./build/extendable.zip \
 	$parts \
 	$incFiles \
 	$styles \
-	$stylesPresets \
-	$colorsPresets \
-	$typographyPresets \
 	$assets \
 	$fonts \
 	$tribeEvents \

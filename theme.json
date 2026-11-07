@@ -1740,7 +1740,7 @@
 					"background": "var(--wp--custom--color--fill-weak)"
 				},
 				"border": {
-					"radius": "var(--wp--custom--radius--input)",
+					"radius": "min(var(--wp--custom--radius--input), var(--wp--preset--border-radius--5))",
 					"style": "none"
 				},
 				"spacing": {

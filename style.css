@@ -216,6 +216,13 @@ html:root {
 	border-color: var(--wp--custom--color--stroke-error);
 }
 
+/* Capped at step 5, or a pill input turns every textarea and listbox into a capsule. Ties
+   WordPress 7's textInput and select elements, which print first. */
+textarea,
+select:where([multiple], [size]:not([size="1"])) {
+	border-radius: min(var(--wp--custom--radius--input), var(--wp--preset--border-radius--5));
+}
+
 /* Radix step 10, the step C3 walks to pass on background-base; the UA grey is under 4.5:1. */
 :where(input, textarea)::placeholder {
 	color: var(--wp--custom--color--text-weaker);

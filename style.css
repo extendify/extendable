@@ -1580,6 +1580,7 @@ header.wp-block-template-part.is-past-hero:has(.ext-header-overlay.ext-header--d
    =========================================================== */
 header.wp-block-template-part .ext-header-sticky--floating-pill.ext-animate {
 	opacity: 1 !important;
+	transform: none !important;
 }
 
 header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill) {

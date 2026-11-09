@@ -923,7 +923,7 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
 /* Button
 ----------------------------------------------------------*/
 .wp-element-button {
-	transition: background-color 0.15s ease;
+	transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 /* Table

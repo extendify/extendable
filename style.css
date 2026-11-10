@@ -1380,7 +1380,7 @@ body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-
 }
 
 header.wp-block-template-part:has(.ext-header-glass) .ext-header-glass {
-	background-color: oklch(from var(--ext-header-glass-color-end) l c h / var(--ext-header-bg-opacity-end));
+	background-color: rgb(from var(--ext-header-glass-color-end) r g b / var(--ext-header-bg-opacity-end));
 	backdrop-filter: blur(var(--ext-header-blur-end));
 	border-radius: 1rem;
 }
@@ -1602,7 +1602,7 @@ body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-
 
 /* Initial glass state (over hero): override static glass-end with start values */
 body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill.ext-header-glass) .ext-header-sticky.ext-header-sticky--floating-pill.ext-header-glass {
-	background-color: oklch(from var(--ext-header-glass-color-start) l c h / var(--ext-header-bg-opacity-start));
+	background-color: rgb(from var(--ext-header-glass-color-start) r g b / var(--ext-header-bg-opacity-start));
 	backdrop-filter: blur(var(--ext-header-blur-start));
 }
 
@@ -1653,12 +1653,12 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 @keyframes ext-header-glass-intensify {
 
 	from {
-		background-color: oklch(from var(--ext-header-glass-color-start) l c h / var(--ext-header-bg-opacity-start));
+		background-color: rgb(from var(--ext-header-glass-color-start) r g b / var(--ext-header-bg-opacity-start));
 		backdrop-filter: blur(var(--ext-header-blur-start));
 	}
 
 	to {
-		background-color: oklch(from var(--ext-header-glass-color-end) l c h / var(--ext-header-bg-opacity-end));
+		background-color: rgb(from var(--ext-header-glass-color-end) r g b / var(--ext-header-bg-opacity-end));
 		backdrop-filter: blur(var(--ext-header-blur-end));
 		box-shadow: 0 14px 28px -10px rgb(0 0 0 / 0.14), 0 -14px 28px -10px rgb(0 0 0 / 0.14);
 	}
@@ -1667,7 +1667,7 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 @keyframes ext-header-glass-intensify-no-hero {
 
 	from {
-		background-color: oklch(from var(--ext-header-glass-color-start) l c h / var(--ext-header-bg-opacity-start));
+		background-color: rgb(from var(--ext-header-glass-color-start) r g b / var(--ext-header-bg-opacity-start));
 		backdrop-filter: blur(var(--ext-header-blur-start));
 		box-shadow: none;
 		translate: 0 0;
@@ -1676,7 +1676,7 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 	}
 
 	to {
-		background-color: oklch(from var(--ext-header-glass-color-end) l c h / var(--ext-header-bg-opacity-end));
+		background-color: rgb(from var(--ext-header-glass-color-end) r g b / var(--ext-header-bg-opacity-end));
 		backdrop-filter: blur(var(--ext-header-blur-end));
 		box-shadow: 0 14px 28px -10px rgb(0 0 0 / 0.14), 0 -14px 28px -10px rgb(0 0 0 / 0.14);
 

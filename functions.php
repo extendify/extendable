@@ -112,6 +112,70 @@ endif;
 
 add_action( 'wp_enqueue_scripts', 'extendable_styles' );
 
+if ( ! function_exists( 'extendable_masteriyo_settable_map' ) ) :
+
+	/**
+	 * Reads masteriyo-settable-colors.json once per request.
+	 *
+	 * @since Extendable 2.2.1
+	 *
+	 * @return array
+	 */
+	function extendable_masteriyo_settable_map() {
+		static $settings = null;
+		if ( null !== $settings ) {
+			return $settings;
+		}
+
+		$settings = array();
+		$map_path = get_template_directory() . '/assets/css/masteriyo-settable-colors.json';
+		if ( ! is_readable( $map_path ) ) {
+			return $settings;
+		}
+
+		$map = wp_json_file_decode( $map_path, array( 'associative' => true ) );
+		if ( ! empty( $map['settings'] ) && is_array( $map['settings'] ) ) {
+			$settings = $map['settings'];
+		}
+
+		return $settings;
+	}
+
+endif;
+
+if ( ! function_exists( 'extendable_masteriyo_settings_at_factory' ) ) :
+
+	/**
+	 * Settings from masteriyo-settable-colors.json still at Masteriyo's factory value.
+	 *
+	 * @since Extendable 2.2.1
+	 *
+	 * @return array
+	 */
+	function extendable_masteriyo_settings_at_factory() {
+		if ( ! function_exists( 'masteriyo_get_setting' ) || ! function_exists( 'masteriyo_get_default_settings' ) || ! function_exists( 'masteriyo_array_get' ) ) {
+			return array();
+		}
+
+		$defaults   = masteriyo_get_default_settings();
+		$at_factory = array();
+
+		foreach ( extendable_masteriyo_settable_map() as $setting ) {
+			if ( empty( $setting['key'] ) ) {
+				continue;
+			}
+			$current = masteriyo_get_setting( $setting['key'] );
+			$factory = masteriyo_array_get( $defaults, $setting['key'] );
+			if ( strtolower( trim( (string) $current ) ) === strtolower( trim( (string) $factory ) ) ) {
+				$at_factory[] = $setting;
+			}
+		}
+
+		return $at_factory;
+	}
+
+endif;
+
 if ( ! function_exists( 'extendable_masteriyo_settable_colors' ) ) :
 
 	/**
@@ -123,33 +187,9 @@ if ( ! function_exists( 'extendable_masteriyo_settable_colors' ) ) :
 	 * @return void
 	 */
 	function extendable_masteriyo_settable_colors() {
-		if ( ! function_exists( 'masteriyo_get_setting' ) || ! function_exists( 'masteriyo_get_default_settings' ) || ! function_exists( 'masteriyo_array_get' ) ) {
-			return;
-		}
-
-		$map_path = get_template_directory() . '/assets/css/masteriyo-settable-colors.json';
-		if ( ! is_readable( $map_path ) ) {
-			return;
-		}
-
-		$map = wp_json_file_decode( $map_path, array( 'associative' => true ) );
-		if ( empty( $map['settings'] ) || ! is_array( $map['settings'] ) ) {
-			return;
-		}
-
-		$defaults = masteriyo_get_default_settings();
-		$css      = '';
-
-		foreach ( $map['settings'] as $setting ) {
-			if ( empty( $setting['key'] ) || empty( $setting['vars'] ) ) {
-				continue;
-			}
-			$current = masteriyo_get_setting( $setting['key'] );
-			$factory = masteriyo_array_get( $defaults, $setting['key'] );
-			if ( strtolower( trim( (string) $current ) ) !== strtolower( trim( (string) $factory ) ) ) {
-				continue;
-			}
-			foreach ( $setting['vars'] as $var ) {
+		$css = '';
+		foreach ( extendable_masteriyo_settings_at_factory() as $setting ) {
+			foreach ( (array) ( $setting['vars'] ?? array() ) as $var ) {
 				$css .= "\t{$var['name']}: {$var['token']};\n";
 			}
 		}
@@ -160,6 +200,33 @@ if ( ! function_exists( 'extendable_masteriyo_settable_colors' ) ) :
 	}
 
 endif;
+
+if ( ! function_exists( 'extendable_masteriyo_factory_body_classes' ) ) :
+
+	/**
+	 * Masteriyo's course_card_styles settings print !important at any value, factory or not.
+	 * Adds a class per setting only while it still holds the factory one.
+	 *
+	 * @since Extendable 2.2.1
+	 *
+	 * @param array $classes The body_class filter's existing classes.
+	 * @return array
+	 */
+	function extendable_masteriyo_factory_body_classes( $classes ) {
+		foreach ( extendable_masteriyo_settings_at_factory() as $setting ) {
+			if ( ! empty( $setting['marker'] ) ) {
+				$classes[] = $setting['marker'];
+			}
+		}
+
+		return $classes;
+	}
+
+endif;
+
+if ( class_exists( 'Masteriyo\Masteriyo' ) ) {
+	add_filter( 'body_class', 'extendable_masteriyo_factory_body_classes' );
+}
 
 /**
  * Enqueue block-specific styles.

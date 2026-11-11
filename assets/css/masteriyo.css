@@ -34,8 +34,14 @@
 	display: none;
 }
 
-/* masteriyo/courses: no switch reaches the row itself, only what prints inside it. */
-.masteriyo-course--content__stats:empty {
+/* masteriyo/courses: always empty at this block's fixed attributes; the archive page's own search keeps it. */
+.masteriyo-search-section:has(+ .masteriyo-w-100.masteriyo-course-list-display-section) {
+	display: none;
+}
+
+/* masteriyo/courses: no switch reaches these rows; each keeps its margin even at zero height. */
+.masteriyo-course--content__stats,
+.masteriyo-course-author-rating-wrapper {
 	display: none;
 }
 
@@ -54,12 +60,14 @@
 	padding: var(--wp--preset--spacing--25);
 }
 
-/* masteriyo/courses: the photo's corners facing the card's text stay square. */
+/* masteriyo/courses: the photo's corners facing the card's text stay square; a square ratio beats Masteriyo's own 230px crop. */
 .masteriyo-course--card .masteriyo-feature-img img {
+	aspect-ratio: 1 / 1 !important;
 	border-radius: var(--wp--custom--radius--card) var(--wp--custom--radius--card) 0 0;
+	height: auto !important;
 }
 
-/* masteriyo/courses, masteriyo/courses-archive, masteriyo/single-course: the wrapper's own two-class rule outranks a bare .masteriyo-course-category--item selector. */
+/* masteriyo/courses: matches the tagline-1 preset's own ink and weight, not an invented eyebrow size. */
 .masteriyo-course-category .masteriyo-course-category--item {
 	background: none;
 	border: 0;
@@ -67,13 +75,35 @@
 	color: var(--wp--preset--color--foreground-alt);
 	font-size: var(--wp--preset--font-size--small);
 	font-weight: var(--wp--custom--typography--font-weight--semi-bold);
-	letter-spacing: var(--wp--custom--tracking--widest);
 	padding: 0;
+	text-transform: none;
 }
 
-/* masteriyo/courses: the title at the card-title look's size; weight and colour stay the heading level's. */
+/* masteriyo/courses: the title's weight, independent of any setting. */
+.masteriyo-course-list-display-section .masteriyo-course--content__title {
+	font-weight: var(--wp--custom--typography--font-weight--semi-bold);
+}
+
+/* masteriyo/courses, masteriyo/courses-archive: beats course_title_font_size only at factory; the owner's size shows once changed. */
+body.ext-masteriyo-factory-course-title-font-size .masteriyo-course-list-display-section .masteriyo-course--content__title {
+	font-size: var(--wp--preset--font-size--medium-plus) !important;
+}
+
+/* masteriyo/courses: 8px, in place of Masteriyo's own uneven 10/12px margins. */
+.masteriyo-course-category,
 .masteriyo-course--content__title {
-	font-size: var(--wp--preset--font-size--medium-plus);
+	margin-bottom: var(--wp--preset--spacing--10) !important;
+}
+
+/* masteriyo/courses: 24px, in place of Masteriyo's own 10px top / 20px bottom margins. */
+.masteriyo-course--content__description {
+	margin-bottom: var(--wp--preset--spacing--25) !important;
+	margin-top: 0 !important;
+}
+
+/* masteriyo/courses: no added gap past the description's own margin-bottom. */
+.masteriyo-course-pricing--wrapper {
+	margin-top: 0 !important;
 }
 
 /* masteriyo/courses: the price at the paragraph's own size, never louder than the title. */
@@ -84,22 +114,30 @@
 	line-height: var(--wp--custom--text--text-regular--line-height);
 }
 
-/* masteriyo/courses, masteriyo/courses-archive, masteriyo/single-course: no wp-element-button class here, so this hand-copies the core button's fill and size. */
+/* masteriyo/courses: hand-copies the core button; colour, edge and size stay ours regardless of any setting. */
 .masteriyo-btn.masteriyo-btn-primary {
 	background-color: var(--wp--custom--color--fill-brand-strong);
 	border-color: transparent;
 	border-style: solid;
 	border-width: var(--wp--custom--border-width--1);
-	border-radius: var(--wp--custom--radius--control);
 	box-shadow: var(--wp--custom--shadow--control);
 	color: var(--wp--custom--color--text-on-brand);
-	font-size: var(--wp--custom--button--label);
 	font-weight: var(--wp--custom--typography--font-weight--medium);
 	letter-spacing: var(--wp--custom--tracking--normal);
 	line-height: var(--wp--custom--typography--line-height--small);
 	max-height: var(--wp--custom--control--md);
 	min-height: var(--wp--custom--control--md);
 	padding: 0 1em;
+}
+
+/* masteriyo/courses, masteriyo/courses-archive, masteriyo/single-course: beats button_radius only at factory; the owner's radius shows once changed. */
+body.ext-masteriyo-factory-button-radius .masteriyo-btn.masteriyo-btn-primary {
+	border-radius: var(--wp--custom--radius--control) !important;
+}
+
+/* masteriyo/courses, masteriyo/courses-archive, masteriyo/single-course: beats button_size only at factory; the owner's size shows once changed. */
+body.ext-masteriyo-factory-button-size .masteriyo-btn.masteriyo-btn-primary {
+	font-size: var(--wp--custom--button--label) !important;
 }
 
 /* masteriyo/courses, masteriyo/courses-archive, masteriyo/single-course: the same button under the pointer, its label ink unchanged. */

@@ -40,8 +40,8 @@
 }
 
 /* masteriyo/courses: no switch reaches these rows; each keeps its margin even at zero height. */
-.masteriyo-course--content__stats,
-.masteriyo-course-author-rating-wrapper {
+.masteriyo-course-list-display-section .masteriyo-course--content__stats,
+.masteriyo-course-list-display-section .masteriyo-course-author-rating-wrapper {
 	display: none;
 }
 

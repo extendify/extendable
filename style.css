@@ -817,6 +817,70 @@ html.has-modal-open body:not(:has(.entry-content > .ext-hero-section.ext-hero-se
 	translate: none !important;
 }
 
+/* The header extras leave the bar up to 782px, so the burger stays until then. */
+
+/* Scoped to our own overlay, so a site owner's overlay keeps core's default burger. */
+@media (min-width: 600px) and (max-width: 782px) {
+
+	header.wp-block-template-part .wp-block-navigation:has(> .disable-default-overlay):has(.ext-mobile-menu) > .wp-block-navigation__responsive-container-open:not(.always-shown) {
+		display: flex;
+	}
+
+	header.wp-block-template-part .wp-block-navigation__responsive-container.disable-default-overlay:has(.ext-mobile-menu):not(.hidden-by-default):not(.is-menu-open) {
+		display: none;
+	}
+}
+
+/* Without a box of its own, an empty or hidden extra leaves no gap. */
+:is(header .ext-nav-extras, .ext-mobile-menu) > .wp-block-template-part:not(.block-editor-block-list__block) {
+	display: contents;
+}
+
+/* Core clears the admin bar only for its default menu. */
+.admin-bar .ext-mobile-menu {
+	margin-top: var(--wp-admin--admin-bar--height);
+}
+
+.ext-mobile-menu .wp-block-button,
+.ext-mobile-menu .wp-block-button__link {
+	width: 100%;
+}
+
+/* Tops the menu's spacing-30 gap up to spacing-40, setting the extra apart. */
+.ext-mobile-menu :is(.ext-nav-extras-btn, .ext-nav-extras-phone, .ext-nav-extras-social) {
+	margin-block-start: calc(var(--wp--preset--spacing--40) - var(--wp--preset--spacing--30));
+}
+
+/* One part serves three headers; show the title only where the bar does. */
+.ext-mobile-menu .wp-block-site-title {
+	display: none;
+}
+
+/* No logo and no title would leave the band empty. */
+.ext-mobile-menu:not(:has(.wp-block-site-logo)) .wp-block-site-title {
+	display: block;
+}
+
+header.wp-block-template-part:has(.wp-block-site-title:not(.ext-mobile-menu *)) .ext-mobile-menu .wp-block-site-title {
+	display: block;
+}
+
+/* Matches the old cloned extras' phone and social-icon sizing. */
+.ext-mobile-menu .ext-nav-extras-phone {
+	font-size: var(--wp--custom--text--text-large--font-size);
+	font-weight: 600;
+}
+
+.ext-mobile-menu .wp-block-social-link {
+	width: 32px;
+	height: 32px;
+}
+
+.ext-mobile-menu .wp-social-link svg {
+	width: 28px;
+	height: 28px;
+}
+
 /*
  * Mobile nav-extras: cloned by navigation-customization.js into the
  * responsive menu dialog so phone / CTA / social aren't visible in the
@@ -1444,27 +1508,28 @@ body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-
 
 /* Inner-block dark overrides — fire only on hero pages with a dark backdrop.
    Overlay+dark drops out at .is-past-hero (header has reverted to default theme).
-   Glass+dark keeps firing past-hero because the glass stays dark via its own animation. */
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :where(a, button, .wp-block-site-title):not(.has-background, .wp-block-button__link, .cloned-for-mobile, .cloned-for-mobile *),
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :where(a, button, .wp-block-site-title):not(.has-background, .wp-block-button__link, .cloned-for-mobile, .cloned-for-mobile *) {
+   Glass+dark keeps firing past-hero because the glass stays dark via its own animation.
+   Excludes .ext-mobile-menu: it sits inside the header but always opens light. */
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :where(a, button, .wp-block-site-title):not(.has-background, .wp-block-button__link, .cloned-for-mobile, .cloned-for-mobile *, .ext-mobile-menu, .ext-mobile-menu *),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :where(a, button, .wp-block-site-title):not(.has-background, .wp-block-button__link, .cloned-for-mobile, .cloned-for-mobile *, .ext-mobile-menu, .ext-mobile-menu *) {
 	color: inherit;
 }
 
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) .wp-social-link:not(.cloned-for-mobile, .cloned-for-mobile *),
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) .wp-social-link:not(.cloned-for-mobile, .cloned-for-mobile *) {
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) .wp-social-link:not(.cloned-for-mobile, .cloned-for-mobile *, .ext-mobile-menu, .ext-mobile-menu *),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) .wp-social-link:not(.cloned-for-mobile, .cloned-for-mobile *, .ext-mobile-menu, .ext-mobile-menu *) {
 	color: #fff !important;
 }
 
 /* Phone CTA: force white over the dark hero. Needed because the paragraph carries
    WP's wp-elements-* link-color rule (preset primary), which beats .has-text-color
    inheritance on the inner <a>. Drops out at .is-past-hero so the phone reverts to theme. */
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :is(.ext-nav-extras-phone, .ext-nav-extras-phone a):not(.cloned-for-mobile, .cloned-for-mobile *),
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :is(.ext-nav-extras-phone, .ext-nav-extras-phone a):not(.cloned-for-mobile, .cloned-for-mobile *) {
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :is(.ext-nav-extras-phone, .ext-nav-extras-phone a):not(.cloned-for-mobile, .cloned-for-mobile *, .ext-mobile-menu, .ext-mobile-menu *),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :is(.ext-nav-extras-phone, .ext-nav-extras-phone a):not(.cloned-for-mobile, .cloned-for-mobile *, .ext-mobile-menu, .ext-mobile-menu *) {
 	color: #fff !important;
 }
 
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) svg:not(.cloned-for-mobile *),
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) svg:not(.cloned-for-mobile *) {
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) svg:not(.cloned-for-mobile *, .ext-mobile-menu *),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) svg:not(.cloned-for-mobile *, .ext-mobile-menu *) {
 	fill: currentColor;
 }
 
@@ -1474,8 +1539,8 @@ body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-
    the blank logo partners report), and a multi-colour one loses its brand. So
    the knockout is scoped to the two prefixes functions.php already treats as
    ours, and every other logo gets the plate rule below instead. */
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :is(.wp-block-site-logo, .wp-duotone-primary-foreground):has(img[src*="extendify-demo-"], img[src*="ext-custom-logo-"]):not(.cloned-for-mobile, .cloned-for-mobile *),
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :is(.wp-block-site-logo, .wp-duotone-primary-foreground):has(img[src*="extendify-demo-"], img[src*="ext-custom-logo-"]):not(.cloned-for-mobile, .cloned-for-mobile *) {
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) :is(.wp-block-site-logo, .wp-duotone-primary-foreground):has(img[src*="extendify-demo-"], img[src*="ext-custom-logo-"]):not(.cloned-for-mobile, .cloned-for-mobile *, .ext-mobile-menu, .ext-mobile-menu *),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) :is(.wp-block-site-logo, .wp-duotone-primary-foreground):has(img[src*="extendify-demo-"], img[src*="ext-custom-logo-"]):not(.cloned-for-mobile, .cloned-for-mobile *, .ext-mobile-menu, .ext-mobile-menu *) {
 	filter: var(--ext-header-dark-logo-filter);
 }
 
@@ -1489,7 +1554,7 @@ body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-
    the hero and on subpages, so the logo never moves; only the fill comes and
    goes. Painting and sizing in the same rule made the padding vanish with the
    background and shifted the logo mid-scroll. */
-header.wp-block-template-part:has(.ext-header--dark) .wp-block-site-logo:not(:has(img[src*="extendify-demo-"], img[src*="ext-custom-logo-"])):not(.cloned-for-mobile, .cloned-for-mobile *) {
+header.wp-block-template-part:has(.ext-header--dark) .wp-block-site-logo:not(:has(img[src*="extendify-demo-"], img[src*="ext-custom-logo-"])):not(.cloned-for-mobile, .cloned-for-mobile *, .ext-mobile-menu, .ext-mobile-menu *) {
 	display: inline-flex;
 	align-items: center;
 	background-color: transparent;
@@ -1497,15 +1562,15 @@ header.wp-block-template-part:has(.ext-header--dark) .wp-block-site-logo:not(:ha
 	border-radius: var(--ext-header-logo-plate-radius);
 }
 
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) .wp-block-site-logo:not(:has(img[src*="extendify-demo-"], img[src*="ext-custom-logo-"])):not(.cloned-for-mobile, .cloned-for-mobile *),
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) .wp-block-site-logo:not(:has(img[src*="extendify-demo-"], img[src*="ext-custom-logo-"])):not(.cloned-for-mobile, .cloned-for-mobile *) {
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) .wp-block-site-logo:not(:has(img[src*="extendify-demo-"], img[src*="ext-custom-logo-"])):not(.cloned-for-mobile, .cloned-for-mobile *, .ext-mobile-menu, .ext-mobile-menu *),
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) .wp-block-site-logo:not(:has(img[src*="extendify-demo-"], img[src*="ext-custom-logo-"])):not(.cloned-for-mobile, .cloned-for-mobile *, .ext-mobile-menu, .ext-mobile-menu *) {
 	background-color: var(--ext-header-logo-plate-bg);
 }
 
 /* Nav-extras CTA: white pill + dark text for contrast against the dark hero scrim.
    Drops out at .is-past-hero so the button returns to its preset styling. */
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) .ext-nav-extras-btn:not(.cloned-for-mobile, .cloned-for-mobile *) .wp-block-button__link,
-body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) .ext-nav-extras-btn:not(.cloned-for-mobile, .cloned-for-mobile *) .wp-block-button__link {
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) .ext-nav-extras-btn:not(.cloned-for-mobile, .cloned-for-mobile *, .ext-mobile-menu, .ext-mobile-menu *) .wp-block-button__link,
+body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) .ext-nav-extras-btn:not(.cloned-for-mobile, .cloned-for-mobile *, .ext-mobile-menu, .ext-mobile-menu *) .wp-block-button__link {
 	background-color: #fefefe !important;
 	color: #060606 !important;
 }

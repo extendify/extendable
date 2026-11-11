@@ -846,6 +846,11 @@ html.has-modal-open body:not(:has(.entry-content > .ext-hero-section.ext-hero-se
 	width: 100%;
 }
 
+/* Tops the menu's spacing-30 gap up to spacing-40, setting the extra apart. */
+.ext-mobile-menu :is(.ext-nav-extras-btn, .ext-nav-extras-phone, .ext-nav-extras-social) {
+	margin-block-start: calc(var(--wp--preset--spacing--40) - var(--wp--preset--spacing--30));
+}
+
 /* One part serves three headers; show the title only where the bar does. */
 .ext-mobile-menu .wp-block-site-title {
 	display: none;

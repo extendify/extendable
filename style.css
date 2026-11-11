@@ -846,6 +846,36 @@ html.has-modal-open body:not(:has(.entry-content > .ext-hero-section.ext-hero-se
 	width: 100%;
 }
 
+/* One part serves three headers; show the title only where the bar does. */
+.ext-mobile-menu .wp-block-site-title {
+	display: none;
+}
+
+/* No logo and no title would leave the band empty. */
+.ext-mobile-menu:not(:has(.wp-block-site-logo)) .wp-block-site-title {
+	display: block;
+}
+
+header.wp-block-template-part:has(.wp-block-site-title:not(.ext-mobile-menu *)) .ext-mobile-menu .wp-block-site-title {
+	display: block;
+}
+
+/* Matches the old cloned extras' phone and social-icon sizing. */
+.ext-mobile-menu .ext-nav-extras-phone {
+	font-size: var(--wp--custom--text--text-large--font-size);
+	font-weight: 600;
+}
+
+.ext-mobile-menu .wp-block-social-link {
+	width: 32px;
+	height: 32px;
+}
+
+.ext-mobile-menu .wp-social-link svg {
+	width: 28px;
+	height: 28px;
+}
+
 /*
  * Mobile nav-extras: cloned by navigation-customization.js into the
  * responsive menu dialog so phone / CTA / social aren't visible in the

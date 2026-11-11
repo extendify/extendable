@@ -1,0 +1,54 @@
+{
+	"$comment": "Masteriyo's four general.styling settable colours (ScriptStyle::load_custom_inline_styles(), Masteriyo 3.5.1), the --masteriyo-* vars each one drives, and the token each stays on while the stored value still equals Masteriyo's own factory default (masteriyo_get_default_settings()). Extendable's PHP reads this file plus Masteriyo's live settings at runtime and prints only the entries that still match; it never writes to Masteriyo's settings. primary_color's two --ext-masteriyo-* entries are lattice's own custom properties, not Masteriyo's — the readable link/icon ink masteriyo.fallback.css's link and icon rules reach for first, falling back to --masteriyo-color-primary (the owner's own colour) once this entry stops printing. Hand-authored, not generated — edit this, not a copy.",
+	"masteriyoVersion": "3.5.1",
+	"settings": [
+		{
+			"key": "general.styling.primary_color",
+			"factory": "#4584FF",
+			"vars": [
+				{
+					"name": "--masteriyo-color-primary",
+					"token": "var(--wp--custom--color--fill-brand-strong)"
+				},
+				{
+					"name": "--masteriyo-color-primary-ink",
+					"token": "var(--wp--custom--color--fill-brand-strong)"
+				},
+				{
+					"name": "--ext-masteriyo-link-ink",
+					"token": "var(--wp--custom--link--ui--color)"
+				},
+				{
+					"name": "--ext-masteriyo-icon-ink",
+					"token": "var(--wp--custom--color--icon-default)"
+				}
+			]
+		},
+		{
+			"key": "general.styling.button_color",
+			"factory": "#4584FF",
+			"vars": [
+				{
+					"name": "--masteriyo-button-primary",
+					"token": "var(--wp--custom--color--fill-brand-strong)"
+				}
+			]
+		},
+		{
+			"key": "general.styling.button_hover_color",
+			"factory": "#1262FF",
+			"vars": [
+				{
+					"name": "--masteriyo-button-primary-hover",
+					"token": "var(--wp--custom--color--fill-brand-strong-hover)"
+				}
+			]
+		},
+		{
+			"key": "general.styling.primary_color_for_learn_page",
+			"factory": "#4584FF",
+			"vars": [],
+			"note": "No --masteriyo-* var: this one is JS-consumed only, fed to the Learn page's React app through its settings localisation (ScriptStyle.php:1905); there is nothing to print."
+		}
+	]
+}

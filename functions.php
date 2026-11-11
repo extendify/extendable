@@ -41,6 +41,9 @@ if ( ! function_exists( 'extendable_support' ) ) :
 		if ( class_exists( 'WooCommerce' ) ) {
 			$editor_style = array_merge( (array) $editor_style, array( 'assets/css/woocommerce.css' ) );
 		}
+		if ( class_exists( 'Masteriyo\Masteriyo' ) ) {
+			$editor_style = array_merge( (array) $editor_style, array( 'assets/css/masteriyo.css' ) );
+		}
 		// Enqueue editor styles.
 		add_editor_style( $editor_style );
 	}
@@ -80,6 +83,17 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 			);
 		}
 
+		if ( class_exists( 'Masteriyo\Masteriyo' ) ) {
+			// Masteriyo enqueues its own CSS late; without this dependency it overrides ours.
+			wp_enqueue_style(
+				'extendable-masteriyo-style',
+				get_template_directory_uri() . '/assets/css/masteriyo.css',
+				array( 'extendable-style', 'masteriyo-public' ),
+				EXTENDABLE_THEME_VERSION
+			);
+			extendable_masteriyo_settable_colors();
+		}
+
 		global $wp_version;
 		if ( version_compare( $wp_version, '6.0.2', '<=' ) ) {
 			// Register deprecate stylesheet.
@@ -97,6 +111,55 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 endif;
 
 add_action( 'wp_enqueue_scripts', 'extendable_styles' );
+
+if ( ! function_exists( 'extendable_masteriyo_settable_colors' ) ) :
+
+	/**
+	 * Gives each Masteriyo colour setting our palette token while it still holds Masteriyo's
+	 * factory value, so a colour the site owner picked always wins.
+	 *
+	 * @since Extendable 2.2.1
+	 *
+	 * @return void
+	 */
+	function extendable_masteriyo_settable_colors() {
+		if ( ! function_exists( 'masteriyo_get_setting' ) || ! function_exists( 'masteriyo_get_default_settings' ) || ! function_exists( 'masteriyo_array_get' ) ) {
+			return;
+		}
+
+		$map_path = get_template_directory() . '/assets/css/masteriyo-settable-colors.json';
+		if ( ! is_readable( $map_path ) ) {
+			return;
+		}
+
+		$map = wp_json_file_decode( $map_path, array( 'associative' => true ) );
+		if ( empty( $map['settings'] ) || ! is_array( $map['settings'] ) ) {
+			return;
+		}
+
+		$defaults = masteriyo_get_default_settings();
+		$css      = '';
+
+		foreach ( $map['settings'] as $setting ) {
+			if ( empty( $setting['key'] ) || empty( $setting['vars'] ) ) {
+				continue;
+			}
+			$current = masteriyo_get_setting( $setting['key'] );
+			$factory = masteriyo_array_get( $defaults, $setting['key'] );
+			if ( strtolower( trim( (string) $current ) ) !== strtolower( trim( (string) $factory ) ) ) {
+				continue;
+			}
+			foreach ( $setting['vars'] as $var ) {
+				$css .= "\t{$var['name']}: {$var['token']};\n";
+			}
+		}
+
+		if ( '' !== $css ) {
+			wp_add_inline_style( 'extendable-masteriyo-style', ":root {\n{$css}}" );
+		}
+	}
+
+endif;
 
 /**
  * Enqueue block-specific styles.

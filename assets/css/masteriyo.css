@@ -1,0 +1,239 @@
+/*
+ * Masteriyo's blocks on the design system. Loaded only while Masteriyo is active.
+ * Generated; edit the source, not this file.
+ */
+/* Masteriyo turns every block support off, so a theme.json leaf has nothing to attach to; the
+   base is CSS instead, pointing its ~40 :root colour variables (assets/css/public.css) at
+   lattice's semantic tokens in one rule, reaching the course-taking app too. Hand-authored, not
+   generated, and checked against Masteriyo 3.5.1. Only variables with no Masteriyo setting go
+   here, always on; the three settable ones move with Extendable's PHP instead, off
+   masteriyo-settable-colors.json, so an owner-chosen colour is never fought over by a rule that
+   can't see what the owner picked. */
+
+/* masteriyo/courses, masteriyo/single-course, the course-taking app. */
+:root {
+	--masteriyo-color-heading: var(--wp--custom--color--text-strong);
+	--masteriyo-color-text: var(--wp--custom--color--text-strong);
+	--masteriyo-color-text-light: var(--wp--custom--color--text-weak);
+	/* A course card's and a related-course card's title link rests on this, not --masteriyo-color-text. */
+	--masteriyo-color-grey-dark: var(--wp--custom--color--text-strong);
+	/* A closed curriculum section's title reads this, not --masteriyo-color-text. */
+	--masteriyo-text-color: var(--wp--custom--color--text-strong);
+	--masteriyo-color-border: var(--wp--custom--color--stroke-weak);
+	--masteriyo-color-white: var(--wp--custom--color--background-base);
+	--masteriyo-color-danger: var(--wp--custom--color--fill-error-strong);
+	--masteriyo-color-info: var(--wp--custom--color--fill-info-strong);
+	--masteriyo-color-success: var(--wp--custom--color--fill-success-strong);
+	--masteriyo-color-warning: var(--wp--custom--color--fill-warning-strong);
+	/* The Courses page's search icon and placeholder read this. */
+	--masteriyo-color-placeholder: var(--wp--custom--color--text-weak);
+}
+
+/* masteriyo/courses: no switch hides the "Select View" toggle it always prints above the grid. */
+.masteriyo-courses-view-mode-section {
+	display: none;
+}
+
+/* masteriyo/courses: no switch reaches the row itself, only what prints inside it. */
+.masteriyo-course--content__stats:empty {
+	display: none;
+}
+
+/* masteriyo/courses: reuses woo's store-card tokens; the first hand-styled card here. */
+.masteriyo-course--card {
+	background-color: var(--wp--custom--store-card--background);
+	border-color: var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	border-style: var(--wp--custom--store-card--border-style);
+	border-width: var(--wp--custom--store-card--border-width);
+	box-shadow: var(--wp--custom--shadow--card);
+}
+
+/* masteriyo/courses: the card's text inset, in place of Masteriyo's own flat 20px. */
+.masteriyo-course--content {
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* masteriyo/courses: the photo's corners facing the card's text stay square. */
+.masteriyo-course--card .masteriyo-feature-img img {
+	border-radius: var(--wp--custom--radius--card) var(--wp--custom--radius--card) 0 0;
+}
+
+/* masteriyo/courses, masteriyo/courses-archive, masteriyo/single-course: the wrapper's own two-class rule outranks a bare .masteriyo-course-category--item selector. */
+.masteriyo-course-category .masteriyo-course-category--item {
+	background: none;
+	border: 0;
+	border-radius: 0;
+	color: var(--wp--preset--color--foreground-alt);
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: var(--wp--custom--typography--font-weight--semi-bold);
+	letter-spacing: var(--wp--custom--tracking--widest);
+	padding: 0;
+}
+
+/* masteriyo/courses: the title at the card-title look's size; weight and colour stay the heading level's. */
+.masteriyo-course--content__title {
+	font-size: var(--wp--preset--font-size--medium-plus);
+}
+
+/* masteriyo/courses: the price at the paragraph's own size, never louder than the title. */
+.masteriyo-course-pricing--wrapper .masteriyo-course-price .current-amount .amount {
+	color: var(--wp--custom--color--text-strong);
+	font-size: var(--wp--custom--text--text-regular--font-size);
+	font-weight: var(--wp--custom--text--text-regular--font-weight);
+	line-height: var(--wp--custom--text--text-regular--line-height);
+}
+
+/* masteriyo/courses, masteriyo/courses-archive, masteriyo/single-course: no wp-element-button class here, so this hand-copies the core button's fill and size. */
+.masteriyo-btn.masteriyo-btn-primary {
+	background-color: var(--wp--custom--color--fill-brand-strong);
+	border-color: transparent;
+	border-style: solid;
+	border-width: var(--wp--custom--border-width--1);
+	border-radius: var(--wp--custom--radius--control);
+	box-shadow: var(--wp--custom--shadow--control);
+	color: var(--wp--custom--color--text-on-brand);
+	font-size: var(--wp--custom--button--label);
+	font-weight: var(--wp--custom--typography--font-weight--medium);
+	letter-spacing: var(--wp--custom--tracking--normal);
+	line-height: var(--wp--custom--typography--line-height--small);
+	max-height: var(--wp--custom--control--md);
+	min-height: var(--wp--custom--control--md);
+	padding: 0 1em;
+}
+
+/* masteriyo/courses, masteriyo/courses-archive, masteriyo/single-course: the same button under the pointer, its label ink unchanged. */
+.masteriyo-btn.masteriyo-btn-primary:hover {
+	background-color: var(--wp--custom--color--fill-brand-strong-hover);
+}
+
+/* masteriyo/single-course: a cohort or password-gated course's lock icon reads as the button's ink, not Masteriyo's white. */
+.masteriyo-btn.masteriyo-btn-primary svg {
+	fill: var(--wp--custom--color--text-on-brand);
+}
+
+/* masteriyo/courses: the button's own size, which Masteriyo prints smaller than every other control. */
+.masteriyo-courses-wrapper.grid-view .masteriyo-col .masteriyo-course--content .masteriyo-course-pricing--wrapper .masteriyo-enroll-btn {
+	box-sizing: border-box;
+	font-size: var(--wp--custom--button--label);
+	font-weight: var(--wp--custom--typography--font-weight--medium);
+	height: var(--wp--custom--control--md);
+	letter-spacing: var(--wp--custom--tracking--normal);
+	line-height: var(--wp--custom--typography--line-height--small);
+	padding: 0 1em;
+}
+
+/* masteriyo/courses: 24px columns, 48px rows, so text never reads as the next photo's. */
+.masteriyo-courses-wrapper.columns-3:not(.list-view) {
+	column-gap: var(--wp--preset--spacing--25);
+	row-gap: var(--wp--preset--spacing--40);
+}
+
+/* masteriyo/courses-archive, masteriyo/single-course: lined up with Extendable's wide width, not Masteriyo's own fixed 1200px. */
+.masteriyo-w-100.masteriyo-container {
+	max-width: var(--wp--style--global--wide-size);
+}
+
+/* masteriyo/courses-archive: the h1, not Masteriyo's own fixed 32px/600. */
+.masteriyo-courses-header__title.page-title {
+	color: var(--wp--custom--color--text-strong);
+	font-size: var(--wp--custom--text--heading-1--font-size);
+	font-weight: var(--wp--custom--text--heading-1--font-weight);
+	line-height: var(--wp--custom--text--heading-1--line-height);
+}
+
+/* masteriyo/courses-archive: the field and button sit apart, not fused into Masteriyo's own cropped pill. */
+.masteriyo-course-search {
+	border-radius: 0;
+	gap: var(--wp--preset--spacing--10);
+	overflow: visible;
+}
+
+/* masteriyo/courses-archive: replaces Masteriyo's transparent field and hardcoded grey text. */
+.masteriyo-course-search .search-field {
+	background-color: var(--wp--custom--color--background-base);
+	border-radius: var(--wp--custom--radius--input);
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* masteriyo/single-course-immersive: the hero's ink reads against the band, as the button already does. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero,
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__title,
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__badges a,
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__badges span,
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__meta,
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__meta-item--difficulty,
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__author-name {
+	color: var(--wp--custom--color--text-on-brand);
+}
+
+/* masteriyo/single-course-immersive: the band's heading and subheading, on the same ink. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-cta-band__heading,
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-cta-band__subheading {
+	color: var(--wp--custom--color--text-on-brand);
+}
+
+/* masteriyo/single-course-immersive: the glow was hardcoded blue, clashing against a non-blue brand fill. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-cta-band {
+	background-image: none;
+}
+
+/* masteriyo/single-course-immersive: an edge, so the button reads against its own band colour. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-cta-band__action .masteriyo-btn,
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-cta-band__action .masteriyo-enroll-btn {
+	border-color: var(--wp--custom--color--text-on-brand);
+}
+
+/* masteriyo/single-course-immersive: a closed section's chevron reads as a neutral icon, not Masteriyo's own hardcoded fill. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-single-body-accordion-icon svg {
+	fill: var(--wp--custom--color--icon-default);
+}
+
+/* masteriyo/single-course-immersive: the open header wears the brand fill; its title and counts take the button's ink. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion.active > .masteriyo-single-body__main--curriculum-content-bottom__accordion--header .masteriyo-single-body__main--curriculum-content-bottom__accordion--header-title,
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion.active > .masteriyo-single-body__main--curriculum-content-bottom__accordion--header .masteriyo-single-body__main--curriculum-content-bottom__accordion--header-misc {
+	color: var(--wp--custom--color--text-on-brand);
+}
+
+/* masteriyo/single-course-immersive: the open section's chevron, on the same ink. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion.active > .masteriyo-single-body__main--curriculum-content-bottom__accordion--header .masteriyo-single-body-accordion-icon svg {
+	fill: var(--wp--custom--color--text-on-brand);
+}
+
+/* masteriyo/single-course-immersive: unreadable at Masteriyo's own hardcoded near-black on a dark palette. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion--header::before {
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* masteriyo/single-course-immersive: our readable ink while the owner's Primary color stays factory, their own colour once changed. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-top--expand-btn {
+	color: var(--ext-masteriyo-link-ink, var(--masteriyo-color-primary));
+}
+
+/* masteriyo/single-course-immersive: the same ink, so the hover-reveal underline follows it too. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-top--expand-btn::before {
+	background: var(--ext-masteriyo-link-ink, var(--masteriyo-color-primary));
+}
+
+/* masteriyo/single-course-immersive: our readable icon ink while the owner's Primary color stays factory, their own colour once changed. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card__includes-item svg,
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card__includes-item svg path {
+	fill: var(--ext-masteriyo-icon-ink, var(--masteriyo-color-primary));
+}
+
+/* masteriyo/course-reviews: our readable link ink while the owner's Primary color stays factory, their own colour once changed. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .course-reviews .masteriyo-login-msg.masteriyo-submit-container p .masteriyo-link-primary {
+	color: var(--ext-masteriyo-link-ink, var(--masteriyo-color-primary));
+	text-decoration-color: var(--ext-masteriyo-link-ink, var(--masteriyo-color-primary));
+}
+
+/* masteriyo/course-reviews: the page's own surface, not Masteriyo's fixed light box. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .course-reviews .masteriyo-login-msg.masteriyo-submit-container {
+	background: var(--wp--custom--color--background-base);
+	border-color: var(--wp--custom--color--stroke-weak);
+}
+
+/* masteriyo/course-reviews: off Masteriyo's hardcoded grey, so it reads against any surface. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .course-reviews .masteriyo-login-msg.masteriyo-submit-container p {
+	color: var(--wp--custom--color--text-weak);
+}

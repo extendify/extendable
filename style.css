@@ -818,13 +818,15 @@ html.has-modal-open body:not(:has(.entry-content > .ext-hero-section.ext-hero-se
 }
 
 /* The header extras leave the bar up to 782px, so the burger stays until then. */
+
+/* Scoped to our own overlay, so a site owner's overlay keeps core's default burger. */
 @media (min-width: 600px) and (max-width: 782px) {
 
-	header.wp-block-template-part .wp-block-navigation:has(> .disable-default-overlay) > .wp-block-navigation__responsive-container-open:not(.always-shown) {
+	header.wp-block-template-part .wp-block-navigation:has(> .disable-default-overlay):has(.ext-mobile-menu) > .wp-block-navigation__responsive-container-open:not(.always-shown) {
 		display: flex;
 	}
 
-	header.wp-block-template-part .wp-block-navigation__responsive-container.disable-default-overlay:not(.hidden-by-default):not(.is-menu-open) {
+	header.wp-block-template-part .wp-block-navigation__responsive-container.disable-default-overlay:has(.ext-mobile-menu):not(.hidden-by-default):not(.is-menu-open) {
 		display: none;
 	}
 }

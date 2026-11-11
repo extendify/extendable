@@ -817,6 +817,33 @@ html.has-modal-open body:not(:has(.entry-content > .ext-hero-section.ext-hero-se
 	translate: none !important;
 }
 
+/* The header extras leave the bar up to 782px, so the burger stays until then. */
+@media (min-width: 600px) and (max-width: 782px) {
+
+	header.wp-block-template-part .wp-block-navigation:has(> .disable-default-overlay) > .wp-block-navigation__responsive-container-open:not(.always-shown) {
+		display: flex;
+	}
+
+	header.wp-block-template-part .wp-block-navigation__responsive-container.disable-default-overlay:not(.hidden-by-default):not(.is-menu-open) {
+		display: none;
+	}
+}
+
+/* Without a box of its own, an empty or hidden extra leaves no gap. */
+:is(header .ext-nav-extras, .ext-mobile-menu) > .wp-block-template-part:not(.block-editor-block-list__block) {
+	display: contents;
+}
+
+/* Core clears the admin bar only for its default menu. */
+.admin-bar .ext-mobile-menu {
+	margin-top: var(--wp-admin--admin-bar--height);
+}
+
+.ext-mobile-menu .wp-block-button,
+.ext-mobile-menu .wp-block-button__link {
+	width: 100%;
+}
+
 /*
  * Mobile nav-extras: cloned by navigation-customization.js into the
  * responsive menu dialog so phone / CTA / social aren't visible in the

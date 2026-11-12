@@ -1,5 +1,5 @@
 {
-	"$comment": "Masteriyo settings Extendable's own rules beat with !important, and the token or body-class marker each stays on while the stored value still equals Masteriyo's own factory default (masteriyo_get_default_settings()), read at runtime; it never writes to Masteriyo's settings. The four general.styling colours (ScriptStyle::load_custom_inline_styles()) carry 'vars', the --masteriyo-* custom properties each drives — primary_color's two --ext-masteriyo-* entries are lattice's own, the readable link/icon ink masteriyo.fallback.css's link and icon rules reach for first, falling back to --masteriyo-color-primary (the owner's own colour) once this entry stops printing. The three course_archive.course_card_styles settings (CourseComponentStyles::get_styles(), always printed !important regardless of value) carry 'marker' instead: a body class Extendable's PHP adds only at factory, which masteriyo.fallback.css's own !important rule requires in its selector, so the owner's changed value shows once the class stops printing. Hand-authored, not generated — edit this, not a copy.",
+	"$comment": "Masteriyo settings Extendable's own rules beat with !important, and the token or body-class marker each stays on while the stored value still equals Masteriyo's own factory default (masteriyo_get_default_settings()), read at runtime; it never writes to Masteriyo's settings. The four general.styling colours (ScriptStyle::load_custom_inline_styles()) carry 'vars', the --masteriyo-* custom properties each drives — the --ext-masteriyo-* entries are lattice's own, the readable link and icon ink and the course card's secondary button that masteriyo.fallback.css reaches for first, falling back to Masteriyo's own variable (the owner's colour) once the entry stops printing. The three course_archive.course_card_styles settings (CourseComponentStyles::get_styles(), always printed !important regardless of value) carry 'marker' instead: a body class Extendable's PHP adds only at factory, which masteriyo.fallback.css's own !important rule requires in its selector, so the owner's changed value shows once the class stops printing. Hand-authored, not generated — edit this, not a copy.",
 	"masteriyoVersion": "3.5.1",
 	"settings": [
 		{
@@ -43,6 +43,18 @@
 				{
 					"name": "--masteriyo-button-primary",
 					"token": "var(--wp--custom--color--fill-brand-strong)"
+				},
+				{
+					"name": "--ext-masteriyo-secondary-fill",
+					"token": "var(--wp--custom--color--fill-weak)"
+				},
+				{
+					"name": "--ext-masteriyo-secondary-edge",
+					"token": "var(--wp--custom--color--stroke-strong)"
+				},
+				{
+					"name": "--ext-masteriyo-secondary-ink",
+					"token": "var(--wp--custom--color--text-strong)"
 				}
 			]
 		},
@@ -53,6 +65,10 @@
 				{
 					"name": "--masteriyo-button-primary-hover",
 					"token": "var(--wp--custom--color--fill-brand-strong-hover)"
+				},
+				{
+					"name": "--ext-masteriyo-secondary-fill-hover",
+					"token": "var(--wp--custom--color--fill-weak-hover)"
 				}
 			]
 		},

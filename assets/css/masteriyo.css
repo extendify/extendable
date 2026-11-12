@@ -27,6 +27,12 @@
 	--masteriyo-color-warning: var(--wp--custom--color--fill-warning-strong);
 	/* The Courses page's search icon and placeholder read this. */
 	--masteriyo-color-placeholder: var(--wp--custom--color--text-weak);
+	/* Tints Masteriyo derives from its factory blue and never reprints, so no setting moves them. */
+	--masteriyo-color-primary-lightest: var(--wp--custom--color--fill-brand-weaker);
+	--masteriyo-color-primary-a10: var(--wp--custom--color--fill-brand-weaker);
+	--masteriyo-color-primary-a20: var(--wp--custom--color--fill-brand-weak);
+	/* A hovered link reads this; the UI link keeps its ink and underlines instead. */
+	--masteriyo-color-primary-a80: var(--wp--custom--color--text-strong);
 }
 
 /* masteriyo/courses: no switch hides the "Select View" toggle it always prints above the grid. */
@@ -111,15 +117,33 @@
 	color: var(--wp--custom--color--text-weak);
 }
 
-/* masteriyo/single-course, masteriyo/course-curriculum: Masteriyo's link reads its brand fill as text; ours while Primary color stays factory, the owner's once changed. */
+/* masteriyo/single-course, masteriyo/course-curriculum: Masteriyo's link reads its brand fill as text, a faded factory blue under the pointer; ours while Primary color stays factory, the owner's once changed. */
 .masteriyo .masteriyo-link-primary,
-.masteriyo-course-curriculum-tabs .masteriyo-tab.active-tab {
+.masteriyo .masteriyo-link-primary:hover {
 	color: var(--ext-masteriyo-link-ink, var(--masteriyo-color-primary));
 }
 
-/* masteriyo/single-course: an idle tab, off Masteriyo's hardcoded near-black. */
-.masteriyo-course-curriculum-tabs .masteriyo-tab {
+/* masteriyo/single-course, masteriyo/course-contents: an idle tab, off Masteriyo's hardcoded near-black, and under the pointer, where Masteriyo turns it the brand fill. */
+.masteriyo-course-curriculum-tabs .masteriyo-tab,
+.masteriyo-course-curriculum-tabs .masteriyo-tab:hover {
 	color: var(--wp--custom--color--text-strong);
+}
+
+/* masteriyo/single-course, masteriyo/course-contents: a hovered tab's underline, a visible stroke before it is chosen. */
+.masteriyo-course-curriculum-tabs .masteriyo-tab:hover {
+	border-bottom-color: var(--wp--custom--color--stroke-strong);
+}
+
+/* masteriyo/single-course, masteriyo/course-contents: the chosen tab's label and underline in our link ink while Primary color stays factory, the owner's once changed; the pale brand fill fails as either. */
+.masteriyo-course-curriculum-tabs .masteriyo-tab.active-tab {
+	border-bottom-color: var(--ext-masteriyo-link-ink, var(--masteriyo-color-primary));
+	color: var(--ext-masteriyo-link-ink, var(--masteriyo-color-primary));
+}
+
+/* masteriyo/single-course, masteriyo/course-contents: Masteriyo strips the keyboard focus outline, leaving no sign of which tab has focus. */
+.masteriyo-course-curriculum-tabs .masteriyo-tab:focus-visible {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
 }
 
 /* masteriyo/single-course, masteriyo/course-curriculum: a closed section's lesson count, off Masteriyo's hardcoded grey. */

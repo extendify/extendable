@@ -21,6 +21,18 @@
 				{
 					"name": "--ext-masteriyo-icon-ink",
 					"token": "var(--wp--custom--color--icon-default)"
+				},
+				{
+					"name": "--masteriyo-color-primary-light",
+					"token": "var(--wp--custom--color--stroke-brand)"
+				},
+				{
+					"name": "--masteriyo-color-primary-dark",
+					"token": "var(--wp--custom--color--text-brand)"
+				},
+				{
+					"name": "--masteriyo-color-btn-blue-hover",
+					"token": "var(--wp--custom--color--text-brand)"
 				}
 			]
 		},

@@ -79,6 +79,74 @@
 	text-transform: none;
 }
 
+/* masteriyo/courses: the card description, off Masteriyo's hardcoded grey, unreadable on a dark palette. */
+.masteriyo-course-highlights--description {
+	color: var(--wp--custom--color--text-weak);
+}
+
+/* masteriyo/courses: the Modern card's title and price, off Masteriyo's hardcoded near-blacks. */
+.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title .masteriyo-course-title,
+.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title .masteriyo-course-title,
+.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--rating-amount .masteriyo-archive-card__content--amount .masteriyo-sale-price,
+.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--rating-amount .masteriyo-archive-card__content--amount .masteriyo-sale-price {
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* masteriyo/courses: the Overlay card's title sits on the photo, so it takes the media ink, not Masteriyo's white, which follows the page. */
+.masteriyo-course-cards .masteriyo-course-card__content--course-title .masteriyo-course-title,
+.masteriyo-course-list-display-section[data-layout=layout_2] .masteriyo-course-cards .masteriyo-course-card__content--course-title:hover .masteriyo-course-title,
+.masteriyo-related-post[data-layout=layout_2] .masteriyo-course-cards .masteriyo-course-card__content--course-title:hover .masteriyo-course-title {
+	color: var(--wp--custom--color--text-media-strong);
+}
+
+/* masteriyo/courses: the same title under the pointer underlines, as a UI link does. */
+.masteriyo-course-list-display-section[data-layout=layout_2] .masteriyo-course-cards .masteriyo-course-card__content--course-title:hover .masteriyo-course-title,
+.masteriyo-related-post[data-layout=layout_2] .masteriyo-course-cards .masteriyo-course-card__content--course-title:hover .masteriyo-course-title {
+	text-decoration: var(--wp--custom--link--ui--hover-decoration);
+}
+
+/* masteriyo/single-course, masteriyo/course-author: the author's name and the course stats, off Masteriyo's hardcoded grey. */
+.masteriyo-course-author a .masteriyo-course-author--name,
+.masteriyo-course-statistics .masteriyo-stats span {
+	color: var(--wp--custom--color--text-weak);
+}
+
+/* masteriyo/single-course, masteriyo/course-curriculum: Masteriyo's link reads its brand fill as text; ours while Primary color stays factory, the owner's once changed. */
+.masteriyo .masteriyo-link-primary,
+.masteriyo-course-curriculum-tabs .masteriyo-tab.active-tab {
+	color: var(--ext-masteriyo-link-ink, var(--masteriyo-color-primary));
+}
+
+/* masteriyo/single-course: an idle tab, off Masteriyo's hardcoded near-black. */
+.masteriyo-course-curriculum-tabs .masteriyo-tab {
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* masteriyo/single-course, masteriyo/course-curriculum: a closed section's lesson count, off Masteriyo's hardcoded grey. */
+.masteriyo-single-course--main__content .tab-content.course-curriculum .masteriyo-stab--citems .masteriyo-cheader .masteriyo-ltc span {
+	color: var(--wp--custom--color--text-weak);
+}
+
+/* masteriyo/single-course, masteriyo/course-curriculum: the open section's header wears the brand fill, so its title and count take the button's ink. */
+.masteriyo-stab--tcurriculum .masteriyo-stab--citems.active .masteriyo-cheader .masteriyo-ctitle,
+.masteriyo-stab--tcurriculum .masteriyo-stab--citems.active .masteriyo-cheader .masteriyo-ltc,
+.masteriyo-single-course--main__content .tab-content.course-curriculum .masteriyo-stab--citems.active .masteriyo-cheader .masteriyo-ltc span {
+	color: var(--wp--custom--color--text-on-brand);
+}
+
+/* masteriyo/single-course, masteriyo/course-curriculum: the open section's chevron, on the same ink as its title. */
+.masteriyo-stab--tcurriculum .masteriyo-stab--citems.active .masteriyo-cplus svg,
+.masteriyo-stab--tcurriculum .masteriyo-stab--citems.active .masteriyo-cminus svg {
+	fill: var(--wp--custom--color--text-on-brand);
+}
+
+/* masteriyo/single-course, masteriyo/course-curriculum, masteriyo/course-stats, masteriyo/single-course-immersive: a lesson's and a course stat's icon, off Masteriyo's hardcoded greys. */
+.masteriyo-single-course--main__content .tab-content.course-curriculum .masteriyo-stab--citems .masteriyo-cbody .masteriyo-lesson-list .masteriyo-lesson-item svg,
+.masteriyo-single-body__main--curriculum-content-bottom__accordion--body-item-icon svg,
+.masteriyo-course-statistics .masteriyo-stats .masteriyo-icon-svg svg {
+	fill: var(--wp--custom--color--icon-default);
+}
+
 /* masteriyo/courses: the title's weight, independent of any setting. */
 .masteriyo-course-list-display-section .masteriyo-course--content__title {
 	font-weight: var(--wp--custom--typography--font-weight--semi-bold);
@@ -140,9 +208,36 @@ body.ext-masteriyo-factory-button-size .masteriyo-btn.masteriyo-btn-primary {
 	font-size: var(--wp--custom--button--label) !important;
 }
 
-/* masteriyo/courses, masteriyo/courses-archive, masteriyo/single-course: the same button under the pointer, its label ink unchanged. */
+/* masteriyo/courses, masteriyo/courses-archive, masteriyo/single-course: the same button under the pointer; Masteriyo's own hover swaps the label to its white and fades it. */
 .masteriyo-btn.masteriyo-btn-primary:hover {
 	background-color: var(--wp--custom--color--fill-brand-strong-hover);
+	color: var(--wp--custom--color--text-on-brand);
+	opacity: 1;
+}
+
+/* masteriyo/courses, masteriyo/single-course: the Modern card's preview button, whose label Masteriyo sets to its white. */
+.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__image-preview-button,
+.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__image-preview-button {
+	color: var(--wp--custom--color--text-on-brand);
+}
+
+/* masteriyo/courses, masteriyo/single-course: the Modern and Overlay preview button's icon, on the same ink. */
+.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__image-preview-button--icon svg,
+.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__image-preview-button--icon svg,
+.masteriyo-course-list-display-section[data-layout=layout_2] .masteriyo-course-cards .masteriyo-course-card__content--container .masteriyo-archive-card__image-preview-button--icon svg,
+.masteriyo-related-post[data-layout=layout_2] .masteriyo-course-cards .masteriyo-course-card__content--container .masteriyo-archive-card__image-preview-button--icon svg {
+	fill: var(--wp--custom--color--text-on-brand);
+}
+
+/* masteriyo/courses, masteriyo/course-categories, masteriyo/single-course: a title link under the pointer underlines as a UI link does; Masteriyo's own turns it the brand fill, unreadable as text. */
+.masteriyo-course--content .masteriyo-course--content__title a:hover,
+.masteriyo-course--content .masteriyo-course--content__title a:focus,
+.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title:hover .masteriyo-course-title,
+.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title:hover .masteriyo-course-title,
+.masteriyo-category-card h2 a:hover,
+.masteriyo-category-card__title a:hover {
+	color: var(--ext-masteriyo-link-ink, var(--masteriyo-color-primary));
+	text-decoration: var(--wp--custom--link--ui--hover-decoration);
 }
 
 /* masteriyo/single-course: a cohort or password-gated course's lock icon reads as the button's ink, not Masteriyo's white. */
@@ -194,14 +289,16 @@ body.ext-masteriyo-factory-button-size .masteriyo-btn.masteriyo-btn-primary {
 	color: var(--wp--custom--color--text-strong);
 }
 
-/* masteriyo/single-course-immersive: the hero's ink reads against the band, as the button already does. */
+/* masteriyo/single-course-immersive: the hero's ink reads against the band, as the button already does, under the pointer too. */
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero,
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__title,
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__badges a,
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__badges span,
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__meta,
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__meta-item--difficulty,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__author-name {
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__author-name,
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__badges a:hover,
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__badges span:hover {
 	color: var(--wp--custom--color--text-on-brand);
 }
 
@@ -229,13 +326,19 @@ body.ext-masteriyo-factory-button-size .masteriyo-btn.masteriyo-btn-primary {
 
 /* masteriyo/single-course-immersive: the open header wears the brand fill; its title and counts take the button's ink. */
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion.active > .masteriyo-single-body__main--curriculum-content-bottom__accordion--header .masteriyo-single-body__main--curriculum-content-bottom__accordion--header-title,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion.active > .masteriyo-single-body__main--curriculum-content-bottom__accordion--header .masteriyo-single-body__main--curriculum-content-bottom__accordion--header-misc {
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion.active > .masteriyo-single-body__main--curriculum-content-bottom__accordion--header .masteriyo-single-body__main--curriculum-content-bottom__accordion--header-misc,
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion.active > .masteriyo-single-body__main--curriculum-content-bottom__accordion--header .masteriyo-single-body__main--curriculum-content-bottom__accordion--header-misc .masteriyo-single-body-accordion-info {
 	color: var(--wp--custom--color--text-on-brand);
 }
 
 /* masteriyo/single-course-immersive: the open section's chevron, on the same ink. */
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion.active > .masteriyo-single-body__main--curriculum-content-bottom__accordion--header .masteriyo-single-body-accordion-icon svg {
 	fill: var(--wp--custom--color--text-on-brand);
+}
+
+/* masteriyo/single-course-immersive: a closed section's lesson count, off Masteriyo's hardcoded grey. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-single-body__main--curriculum-content-bottom__accordion--header-misc .masteriyo-single-body-accordion-info {
+	color: var(--wp--custom--color--text-weak);
 }
 
 /* masteriyo/single-course-immersive: unreadable at Masteriyo's own hardcoded near-black on a dark palette. */
@@ -255,23 +358,35 @@ body.ext-masteriyo-factory-button-size .masteriyo-btn.masteriyo-btn-primary {
 
 /* masteriyo/single-course-immersive: our readable icon ink while the owner's Primary color stays factory, their own colour once changed. */
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card__includes-item svg,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card__includes-item svg path {
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card__includes-item svg path,
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-instructor__stat svg {
 	fill: var(--ext-masteriyo-icon-ink, var(--masteriyo-color-primary));
 }
 
-/* masteriyo/course-reviews: our readable link ink while the owner's Primary color stays factory, their own colour once changed. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .course-reviews .masteriyo-login-msg.masteriyo-submit-container p .masteriyo-link-primary {
+/* masteriyo/course-reviews: our readable link ink while the owner's Primary color stays factory, their own colour once changed, under the pointer too. */
+.course-reviews .masteriyo-login-msg.masteriyo-submit-container p .masteriyo-link-primary,
+.course-reviews .masteriyo-login-msg.masteriyo-submit-container p .masteriyo-link-primary:hover {
 	color: var(--ext-masteriyo-link-ink, var(--masteriyo-color-primary));
 	text-decoration-color: var(--ext-masteriyo-link-ink, var(--masteriyo-color-primary));
 }
 
 /* masteriyo/course-reviews: the page's own surface, not Masteriyo's fixed light box. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .course-reviews .masteriyo-login-msg.masteriyo-submit-container {
+.course-reviews .masteriyo-login-msg.masteriyo-submit-container {
 	background: var(--wp--custom--color--background-base);
 	border-color: var(--wp--custom--color--stroke-weak);
 }
 
+/* masteriyo/course-reviews: the review button under the pointer, its label on the brand fill's own ink, not Masteriyo's white. */
+.masteriyo-single-body__main--review-form-wrapper .review-button:hover {
+	color: var(--wp--custom--color--text-on-brand);
+}
+
+/* masteriyo/course-reviews: the same button's icon, on the same ink. */
+.masteriyo-single-body__main--review-form-wrapper .review-button:hover svg {
+	fill: var(--wp--custom--color--text-on-brand);
+}
+
 /* masteriyo/course-reviews: off Masteriyo's hardcoded grey, so it reads against any surface. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .course-reviews .masteriyo-login-msg.masteriyo-submit-container p {
+.course-reviews .masteriyo-login-msg.masteriyo-submit-container p {
 	color: var(--wp--custom--color--text-weak);
 }

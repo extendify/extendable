@@ -66,9 +66,9 @@
 	padding: var(--wp--preset--spacing--25);
 }
 
-/* masteriyo/courses: the photo's corners facing the card's text stay square; a square ratio beats Masteriyo's own 230px crop. */
+/* masteriyo/courses: the photo's corners facing the card's text stay square; the open card's 4:3 photo beats Masteriyo's own 230px crop. */
 .masteriyo-course--card .masteriyo-feature-img img {
-	aspect-ratio: 1 / 1 !important;
+	aspect-ratio: 4 / 3 !important;
 	border-radius: var(--wp--custom--radius--card) var(--wp--custom--radius--card) 0 0;
 	height: auto !important;
 }
@@ -178,7 +178,7 @@
 
 /* masteriyo/courses, masteriyo/courses-archive: beats course_title_font_size only at factory; the owner's size shows once changed. */
 body.ext-masteriyo-factory-course-title-font-size .masteriyo-course-list-display-section .masteriyo-course--content__title {
-	font-size: var(--wp--preset--font-size--medium-plus) !important;
+	font-size: var(--wp--preset--font-size--medium-large) !important;
 }
 
 /* masteriyo/courses: 8px, in place of Masteriyo's own uneven 10/12px margins. */

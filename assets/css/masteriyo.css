@@ -474,7 +474,7 @@ body.masteriyo-courses-page {
 	background-color: var(--wp--custom--color--background-base);
 }
 
-/* masteriyo/courses-archive: the shop template's side and bottom padding; Masteriyo prints no main. */
+/* masteriyo/courses-archive: one gutter for the row and the grid; Masteriyo prints no main to carry the layout's padding. */
 .masteriyo-w-100.masteriyo-container:has(> .masteriyo-courses-header) {
 	align-items: center;
 	box-sizing: border-box;
@@ -483,7 +483,10 @@ body.masteriyo-courses-page {
 	row-gap: var(--wp--preset--spacing--40);
 	margin: 0;
 	max-width: none;
-	padding: var(--wp--preset--spacing--30) var(--wp--style--root--padding-right) var(--wp--preset--spacing--64) var(--wp--style--root--padding-left);
+	padding-bottom: var(--wp--preset--spacing--64);
+	padding-left: max(var(--wp--style--root--padding-left), calc(50vw - var(--wp--style--global--wide-size) / 2));
+	padding-right: max(var(--wp--style--root--padding-right), calc(50vw - var(--wp--style--global--wide-size) / 2));
+	padding-top: var(--wp--preset--spacing--30);
 }
 
 /* masteriyo/courses-archive: the grid at the wide width, as the shop's rows sit. */

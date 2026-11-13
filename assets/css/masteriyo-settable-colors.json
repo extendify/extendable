@@ -1,5 +1,5 @@
 {
-	"$comment": "Masteriyo settings Extendable's own rules beat with !important, and the token or body-class marker each stays on while the stored value still equals Masteriyo's own factory default (masteriyo_get_default_settings()), read at runtime; it never writes to Masteriyo's settings. The four general.styling colours (ScriptStyle::load_custom_inline_styles()) carry 'vars', the --masteriyo-* custom properties each drives — the --ext-masteriyo-* entries are lattice's own, the readable link and icon ink and the course card's secondary button that masteriyo.fallback.css reaches for first, falling back to Masteriyo's own variable (the owner's colour) once the entry stops printing. The three course_archive.course_card_styles settings (CourseComponentStyles::get_styles(), always printed !important regardless of value) carry 'marker' instead: a body class Extendable's PHP adds only at factory, which masteriyo.fallback.css's own !important rule requires in its selector, so the owner's changed value shows once the class stops printing. Hand-authored, not generated — edit this, not a copy.",
+	"$comment": "Masteriyo settings Extendable's own rules beat with !important, and the token or body-class marker each stays on while the stored value still equals Masteriyo's own factory default (masteriyo_get_default_settings()), read at runtime; it never writes to Masteriyo's settings. The four general.styling colours (ScriptStyle::load_custom_inline_styles()) carry 'vars', the --masteriyo-* custom properties each drives — the --ext-masteriyo-* entries are lattice's own, the readable link and icon ink and the course card's secondary button that masteriyo.fallback.css reaches for first, falling back to Masteriyo's own variable (the owner's colour) once the entry stops printing. The three course_archive.course_card_styles settings (CourseComponentStyles::get_styles(), always printed !important regardless of value) carry 'marker' instead: a body class Extendable's PHP adds only at factory, which masteriyo.fallback.css's own !important rule requires in its selector, so the owner's changed value shows once the class stops printing. Hand-authored, not generated — edit this, not a copy. The three general.styling colours also carry a 'marker', for the account app, whose colours are CSS variables Masteriyo's React app writes on :root: masteriyo.fallback.css sets lattice's values on the page body only under these classes.",
 	"masteriyoVersion": "3.5.1",
 	"settings": [
 		{
@@ -34,7 +34,8 @@
 					"name": "--masteriyo-color-btn-blue-hover",
 					"token": "var(--wp--custom--color--text-brand)"
 				}
-			]
+			],
+			"marker": "ext-masteriyo-factory-primary-color"
 		},
 		{
 			"key": "general.styling.button_color",
@@ -56,7 +57,8 @@
 					"name": "--ext-masteriyo-secondary-ink",
 					"token": "var(--wp--custom--color--text-strong)"
 				}
-			]
+			],
+			"marker": "ext-masteriyo-factory-button-color"
 		},
 		{
 			"key": "general.styling.button_hover_color",
@@ -70,7 +72,8 @@
 					"name": "--ext-masteriyo-secondary-fill-hover",
 					"token": "var(--wp--custom--color--fill-weak-hover)"
 				}
-			]
+			],
+			"marker": "ext-masteriyo-factory-button-hover-color"
 		},
 		{
 			"key": "general.styling.primary_color_for_learn_page",

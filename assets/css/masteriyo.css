@@ -95,6 +95,11 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 	height: auto !important;
 }
 
+/* masteriyo/single-course: Masteriyo caps a related card's photo at 220px, so the 4:3 photo spills over the card's text. */
+body.single-mto-course .masteriyo-related-post .masteriyo-course--card .masteriyo-course--img-wrap {
+	max-height: none;
+}
+
 /* masteriyo/courses, masteriyo/courses-archive: Masteriyo's no-photo placeholder is a fixed lavender image no palette reaches. */
 .masteriyo-course--card .masteriyo-feature-img:has(img[src$="placeholder.jpg"]) {
 	background-color: var(--wp--custom--color--fill-weaker);
@@ -296,6 +301,50 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 	color: var(--wp--custom--color--text-strong);
 }
 
+/* masteriyo/courses, masteriyo/single-course: an enrolled course's "Completed" in the quiet small text, off Masteriyo's hardcoded slate blue. */
+.masteriyo-course-progress-bar .course-progress-box .progress-header .progress-label {
+	color: var(--wp--custom--color--text-weak);
+	font-size: var(--wp--custom--text--text-small--font-size);
+	font-weight: var(--wp--custom--text--text-regular--font-weight);
+	line-height: var(--wp--custom--text--text-small--line-height);
+	margin: 0;
+}
+
+/* masteriyo/courses, masteriyo/single-course: the percentage in the body ink at the price's size, off Masteriyo's hardcoded near-black. */
+.masteriyo-course-progress-bar .course-progress-box .progress-header .progress-percent {
+	color: var(--wp--custom--color--text-strong);
+	font-size: var(--wp--custom--text--text-regular--font-size);
+	font-weight: var(--wp--custom--typography--font-weight--semi-bold);
+	line-height: var(--wp--custom--text--text-regular--line-height);
+}
+
+/* masteriyo/courses, masteriyo/single-course: the track in the weak stroke, visible on filled and outlined cards; Masteriyo hardcodes cool greys. */
+.masteriyo-course-progress-bar .course-progress-box .masteriyo-progress-bar-container.modern-style,
+.masteriyo-course-progress-bar .course-progress-box .masteriyo-progress-bar-container .masteriyo-progress-bar {
+	background-color: var(--wp--custom--color--stroke-weak);
+	border-radius: var(--wp--custom--radius--chip);
+}
+
+/* masteriyo/courses, masteriyo/single-course: the filled part on the same corner. */
+.masteriyo-course-progress-bar .course-progress-box .masteriyo-progress-bar-container .masteriyo-progress-bar .masteriyo-progress-fill {
+	border-radius: var(--wp--custom--radius--chip);
+}
+
+/* masteriyo/courses, masteriyo/single-course: the progress summary's icon in the icon ink. */
+.masteriyo-course-progress-bar .course-progress-box .completed-component .progress-icon svg {
+	fill: var(--wp--custom--color--icon-default);
+}
+
+/* masteriyo/courses, masteriyo/single-course: the icon under the pointer on the soft fill, off Masteriyo's hardcoded #fbfbfb. */
+.masteriyo-course-progress-bar .course-progress-box .completed-component .progress-icon:hover {
+	background-color: var(--wp--custom--color--fill-weak);
+}
+
+/* masteriyo/courses, masteriyo/single-course: the progress a related gap over the button, not Masteriyo's 24px. */
+.masteriyo-single-course-stats .course-progress-box.modern-progress {
+	margin-bottom: var(--wp--preset--spacing--25);
+}
+
 /* masteriyo/courses, masteriyo/courses-archive: the price part's text-regular size, never louder than the title. */
 .masteriyo-courses-wrapper.grid-view .masteriyo-col .masteriyo-course--card .masteriyo-course-pricing--wrapper .masteriyo-course-price .current-amount .amount,
 .masteriyo-courses-wrapper.list-view .masteriyo-col .masteriyo-course--card .masteriyo-course-pricing--wrapper .masteriyo-course-price .current-amount .amount,
@@ -473,11 +522,18 @@ body.masteriyo-courses-page {
 	width: calc(var(--wp--style--global--content-size) / 2);
 }
 
-/* masteriyo/courses-archive: the Courses page keeps its grid or list switch, only a courses block drops it; Masteriyo's auto margin wraps it. */
+/* masteriyo/courses-archive: the Courses page keeps its grid or list switch, ahead of the search; Masteriyo's auto margin wraps it. */
 .masteriyo-w-100.masteriyo-container:has(> .masteriyo-courses-header) .masteriyo-courses-view-mode-section {
 	display: flex;
-	gap: var(--wp--preset--spacing--20);
+	gap: var(--wp--preset--spacing--10);
 	margin: 0;
+	order: -1;
+}
+
+/* masteriyo/courses-archive: the two choices a step apart, without the list's own indent pushing them off the label. */
+.masteriyo-courses-view-mode-section .masteriyo-courses-view-mode-item-lists {
+	gap: var(--wp--preset--spacing--10);
+	padding: 0;
 }
 
 /* masteriyo/courses-archive: the switch's label in the small body text, off Masteriyo's hardcoded slate. */

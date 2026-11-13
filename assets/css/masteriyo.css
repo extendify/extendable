@@ -899,6 +899,69 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 	padding-bottom: var(--wp--preset--spacing--64);
 }
 
+/* masteriyo/courses, masteriyo/single-course: the Modern card on the vibe's card face, in place of Masteriyo's 12px corners and own shadow. */
+.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card,
+.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	display: flex;
+	flex-direction: column;
+	padding: var(--wp--preset--spacing--25);
+}
+
+/* masteriyo/courses, masteriyo/single-course: the inset photo on the panel corner, without Masteriyo's 6px corners and border. */
+.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__image .masteriyo-course-thumbnail,
+.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__image .masteriyo-course-thumbnail {
+	border: 0;
+	border-radius: var(--wp--custom--radius--panel);
+}
+
+/* masteriyo/courses, masteriyo/single-course: the text column fills the card, so the price sinks to its foot. */
+.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__content,
+.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__content {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	padding: 0;
+}
+
+/* masteriyo/courses, masteriyo/single-course: prices line up across a row whose titles wrap unevenly. */
+.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__content--rating-amount,
+.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__content--rating-amount {
+	margin-top: auto;
+}
+
+/* masteriyo/courses, masteriyo/single-course: the tagline a related gap over the title. */
+.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-course-category,
+.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-course-category {
+	margin-bottom: var(--wp--preset--spacing--20);
+}
+
+/* masteriyo/courses, masteriyo/single-course: the title a related gap over the price, not Masteriyo's 16px over and 20px under. */
+.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-course-title-wrapper,
+.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-course-title-wrapper {
+	margin: 0 0 var(--wp--preset--spacing--25);
+}
+
+/* masteriyo/courses, masteriyo/single-course: the Modern title at the card title's medium-plus and heading-4 look, as the Simple card's; no setting reaches it. */
+.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title .masteriyo-course-title,
+.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title .masteriyo-course-title {
+	font-size: var(--wp--preset--font-size--medium-plus);
+	font-weight: var(--wp--custom--text--heading-4--font-weight);
+	letter-spacing: var(--wp--custom--text--heading-4--letter-spacing);
+	line-height: var(--wp--custom--text--heading-4--line-height);
+}
+
+/* masteriyo/courses, masteriyo/single-course: the price part's text-regular size, as the Simple card's. */
+.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--rating-amount .masteriyo-archive-card__content--amount .masteriyo-sale-price .masteriyo-price-amount,
+.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--rating-amount .masteriyo-archive-card__content--amount .masteriyo-sale-price .masteriyo-price-amount {
+	font-size: var(--wp--custom--text--text-regular--font-size);
+	font-weight: var(--wp--custom--text--text-regular--font-weight);
+	line-height: var(--wp--custom--text--text-regular--line-height);
+}
+
 /* masteriyo/courses, masteriyo/courses-archive: the Overlay card on the vibe's card corner and shadow, clipping its photo and scrim. */
 .masteriyo-course-cards .masteriyo-course-card {
 	border-radius: var(--wp--custom--radius--card);

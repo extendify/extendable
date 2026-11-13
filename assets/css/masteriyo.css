@@ -82,6 +82,11 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 	padding: var(--wp--preset--spacing--25) var(--wp--preset--spacing--30) var(--wp--preset--spacing--30);
 }
 
+/* masteriyo/course-feature-image: the course photo on the vibe's media corner, not Masteriyo's 8px; a card's photo rule must still win. */
+.masteriyo-course--img-wrap .masteriyo-feature-img img {
+	border-radius: var(--wp--custom--radius--media);
+}
+
 /* masteriyo/courses: the photo's corners facing the card's text stay square; the open card's 4:3 photo beats Masteriyo's own 230px crop. */
 .masteriyo-course--card .masteriyo-feature-img img {
 	aspect-ratio: 4 / 3 !important;
@@ -249,6 +254,48 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 	padding: 0;
 }
 
+/* masteriyo/courses, masteriyo/courses-archive: the button keeps the row's right edge when a course shows no price, as for an enrolled student. */
+.masteriyo-course--card .masteriyo-course-pricing--wrapper .masteriyo-enroll-btn {
+	margin-left: auto;
+}
+
+/* masteriyo/courses, masteriyo/courses-archive: list view keeps Masteriyo's own column, the price centred over a button as wide as it. */
+.masteriyo-courses-wrapper.list-view .masteriyo-col .masteriyo-course--card .masteriyo-course-pricing--wrapper {
+	align-items: stretch;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--20);
+}
+
+/* masteriyo/courses, masteriyo/courses-archive: the list view's price centred in its column. */
+.masteriyo-courses-wrapper.list-view .masteriyo-col .masteriyo-course--card .masteriyo-course-pricing--wrapper .masteriyo-course-price {
+	align-items: center;
+}
+
+/* masteriyo/courses, masteriyo/courses-archive: the list view's button across its column, as Masteriyo sets it. */
+.masteriyo-courses-wrapper.list-view .masteriyo-col .masteriyo-course--card .masteriyo-course-pricing--wrapper .masteriyo-enroll-btn {
+	justify-content: center;
+	margin-left: 0;
+	width: 100%;
+}
+
+/* masteriyo/single-course: the review form's Cancel as an outlined button at Submit's height, not Masteriyo's hardcoded #f3f4f6 chip. */
+.masteriyo-single-body__main--review-form form .masteriyo-single-form-actions .masteriyo-btn.masteriyo-btn-secondary {
+	background-color: transparent;
+	border: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--control);
+	color: var(--wp--custom--color--text-strong);
+	font-weight: var(--wp--custom--typography--font-weight--medium);
+	min-height: var(--wp--custom--control--md);
+	padding: 0 1em;
+}
+
+/* masteriyo/single-course: Cancel under the pointer on the soft fill; Masteriyo turns it the brand fill. */
+.masteriyo-single-body__main--review-form form .masteriyo-single-form-actions .masteriyo-btn.masteriyo-btn-secondary:hover {
+	background-color: var(--wp--custom--color--fill-weak);
+	border-color: var(--wp--custom--color--stroke-strong);
+	color: var(--wp--custom--color--text-strong);
+}
+
 /* masteriyo/courses, masteriyo/courses-archive: the price part's text-regular size, never louder than the title. */
 .masteriyo-courses-wrapper.grid-view .masteriyo-col .masteriyo-course--card .masteriyo-course-pricing--wrapper .masteriyo-course-price .current-amount .amount,
 .masteriyo-courses-wrapper.list-view .masteriyo-col .masteriyo-course--card .masteriyo-course-pricing--wrapper .masteriyo-course-price .current-amount .amount,
@@ -399,20 +446,85 @@ body.masteriyo-courses-page {
 	max-width: var(--wp--style--global--wide-size);
 }
 
-/* masteriyo/courses-archive: Masteriyo prints its search before the title; the title leads the row. */
+/* masteriyo/courses-archive: the title leads the row Masteriyo prints after the search, and shrinks so the search and switch fit. */
 .masteriyo-w-100.masteriyo-container:has(> .masteriyo-courses-header) > .masteriyo-courses-header {
-	flex: 1 1 auto;
+	flex: 1 1 0;
 	float: none;
+	min-width: 0;
 	order: -1;
 	width: auto;
 }
 
-/* masteriyo/courses-archive: the search beside the title, capped at half the content width, without Masteriyo's rule. */
+/* masteriyo/courses-archive: the search and the grid or list switch beside the title, a row that wraps on a phone, without Masteriyo's rule. */
 .masteriyo-w-100.masteriyo-container:has(> .masteriyo-courses-header) > .masteriyo-search-section {
 	border-bottom: 0;
-	flex: 0 1 calc(var(--wp--style--global--content-size) / 2);
+	flex: 0 1 auto;
+	flex-direction: row;
+	gap: var(--wp--preset--spacing--25);
 	margin: 0;
+	min-width: 0;
 	padding-bottom: 0;
+}
+
+/* masteriyo/courses-archive: the search capped at half the content width; Masteriyo's 100% width pushes the switch to a second line. */
+.masteriyo-w-100.masteriyo-container:has(> .masteriyo-courses-header) > .masteriyo-search-section .masteriyo-search {
+	flex: 0 1 auto;
+	max-width: 100%;
+	width: calc(var(--wp--style--global--content-size) / 2);
+}
+
+/* masteriyo/courses-archive: the Courses page keeps its grid or list switch, only a courses block drops it; Masteriyo's auto margin wraps it. */
+.masteriyo-w-100.masteriyo-container:has(> .masteriyo-courses-header) .masteriyo-courses-view-mode-section {
+	display: flex;
+	gap: var(--wp--preset--spacing--20);
+	margin: 0;
+}
+
+/* masteriyo/courses-archive: the switch's label in the small body text, off Masteriyo's hardcoded slate. */
+.masteriyo-courses-view-mode-section span {
+	color: var(--wp--custom--color--text-strong);
+	font-size: var(--wp--custom--text--text-small--font-size);
+}
+
+/* masteriyo/courses-archive: each choice an outlined icon button at the control height, as the search button beside it. */
+.masteriyo-courses-view-mode-section .masteriyo-courses-view-mode-item-lists .masteriyo-courses-view-mode-item button {
+	background-color: transparent;
+	border: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--control);
+	height: var(--wp--custom--control--md);
+	width: var(--wp--custom--control--md);
+}
+
+/* masteriyo/courses-archive: the icon in the icon ink, off Masteriyo's hardcoded #bababa that fails 3:1. */
+.masteriyo-courses-view-mode-section .masteriyo-courses-view-mode-item-lists .masteriyo-courses-view-mode-item button svg path {
+	fill: var(--wp--custom--color--icon-default);
+}
+
+/* masteriyo/courses-archive: a choice under the pointer on the soft fill; Masteriyo paints it as if chosen. */
+.masteriyo-courses-view-mode-section .masteriyo-courses-view-mode-item-lists .masteriyo-courses-view-mode-item:hover button {
+	background-color: var(--wp--custom--color--fill-weak);
+}
+
+/* masteriyo/courses-archive: the same icon under the pointer. */
+.masteriyo-courses-view-mode-section .masteriyo-courses-view-mode-item-lists .masteriyo-courses-view-mode-item:hover button svg path {
+	fill: var(--wp--custom--color--text-strong);
+}
+
+/* masteriyo/courses-archive: the chosen view on the brand fill, as a pressed button. */
+.masteriyo-courses-view-mode-section .masteriyo-courses-view-mode-item-lists .masteriyo-courses-view-mode-item.active button {
+	background-color: var(--wp--custom--color--fill-brand-strong);
+	border-color: transparent;
+}
+
+/* masteriyo/courses-archive: the chosen view's icon on the brand ink. */
+.masteriyo-courses-view-mode-section .masteriyo-courses-view-mode-item-lists .masteriyo-courses-view-mode-item.active button svg path {
+	fill: var(--wp--custom--color--text-on-brand);
+}
+
+/* masteriyo/courses-archive: Masteriyo strips the focus outline from the switch. */
+.masteriyo-courses-view-mode-section .masteriyo-courses-view-mode-item-lists .masteriyo-courses-view-mode-item button:focus-visible {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
 }
 
 /* masteriyo/courses-archive: a notice, such as the empty-cart one checkout sends back here, takes its own row under the title. */
@@ -722,9 +834,9 @@ body.masteriyo-courses-page {
 	border-radius: var(--wp--custom--radius--card);
 }
 
-/* masteriyo/single-course-immersive: the closing band's heading at the site's section heading size. */
+/* masteriyo/single-course-immersive: the closing band's heading a step under the course title, so the page keeps one top heading. */
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-cta-band__heading {
-	font-size: var(--wp--preset--font-size--x-large);
+	font-size: var(--wp--preset--font-size--large);
 	font-weight: var(--wp--custom--text--heading-2--font-weight);
 	letter-spacing: var(--wp--custom--text--heading-2--letter-spacing);
 	line-height: var(--wp--custom--text--heading-2--line-height);
@@ -1120,6 +1232,11 @@ body.masteriyo-account-page #masteriyo-account-page {
 	padding-top: var(--wp--preset--spacing--64);
 }
 
+/* masteriyo/account: the app's own 16px inset would step it in from the header's edge. */
+body.masteriyo-account-page #masteriyo-account-page > div {
+	padding-inline: 0;
+}
+
 /* masteriyo/account: Masteriyo blanks the page title here, so the template's title band prints empty. */
 body.masteriyo-account-page main > div:not(:has(*)) {
 	display: none;
@@ -1231,6 +1348,81 @@ body.masteriyo-account-page .masteriyo-input:not(.search-field):focus {
 body.masteriyo-account-page .masteriyo-input:not(.search-field):focus-visible {
 	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
 	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+/* masteriyo/course-categories: the category card on the vibe's card face, not Masteriyo's 4px box in a fixed black-10 border. */
+.masteriyo-category-card {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	overflow: hidden;
+}
+
+/* masteriyo/course-categories: the photo meets the card's own corner, not Masteriyo's 3px. */
+.masteriyo-category-card .masteriyo-category-card__image img {
+	border-radius: 0;
+}
+
+/* masteriyo/course-categories: a category with no photo prints a fixed lavender image no palette reaches. */
+.masteriyo-category-card .masteriyo-category-card__image:has(img.masteriyo-placeholder) {
+	background-color: var(--wp--custom--color--fill-weaker);
+}
+
+/* masteriyo/course-categories: the same placeholder, hidden over the surface. */
+.masteriyo-category-card .masteriyo-category-card__image img.masteriyo-placeholder {
+	opacity: 0;
+}
+
+/* masteriyo/course-categories: the course card's insets, in place of Masteriyo's 16px and 20px. */
+.masteriyo-category-card .masteriyo-category-card__detail {
+	padding: var(--wp--preset--spacing--25) var(--wp--preset--spacing--30) var(--wp--preset--spacing--30);
+}
+
+/* masteriyo/course-categories: the name at the card title's look, as the course card's. */
+.masteriyo-category-card .masteriyo-category-card__title {
+	font-size: var(--wp--preset--font-size--medium-plus);
+	font-weight: var(--wp--custom--text--heading-4--font-weight);
+	letter-spacing: var(--wp--custom--text--heading-4--letter-spacing);
+	line-height: var(--wp--custom--text--heading-4--line-height);
+}
+
+/* masteriyo/course-categories: the course count in the quiet small text, off Masteriyo's 13px, under the 14px floor. */
+.masteriyo-category-card .masteriyo-category-card__courses {
+	color: var(--wp--custom--color--text-weak);
+	font-size: var(--wp--custom--text--text-small--font-size);
+	margin-top: var(--wp--preset--spacing--20);
+}
+
+/* masteriyo/course-categories: the description at the card body's small size. */
+.masteriyo-category-card .masteriyo-category-card__description {
+	font-size: var(--wp--preset--font-size--small);
+}
+
+/* masteriyo/course-curriculum, masteriyo/single-course: the curriculum box on the vibe's card corner, not Masteriyo's 4px. */
+.masteriyo-stab--tcurriculum.masteriyo-course--accordion {
+	border-radius: var(--wp--custom--radius--card);
+	overflow: hidden;
+}
+
+/* masteriyo/course-curriculum, masteriyo/single-course: a section's title at the label part, not Masteriyo's 15px. */
+.masteriyo-stab--tcurriculum .masteriyo-stab--citems .masteriyo-cheader .masteriyo-ctitle {
+	font-size: var(--wp--custom--text--label--font-size);
+	font-weight: var(--wp--custom--text--label--font-weight);
+	line-height: var(--wp--custom--text--label--line-height);
+}
+
+/* masteriyo/course-curriculum, masteriyo/single-course: the counts and Collapse All at the small size, off Masteriyo's 14px and 15px. */
+.masteriyo-stab--tcurriculum ul.masteriyo-shortinfo-wrap,
+.masteriyo-single-course--main__content .tab-content.course-curriculum .masteriyo-stab--shortinfo .masteriyo-link-primary {
+	font-size: var(--wp--custom--text--text-small--font-size);
+	line-height: var(--wp--custom--text--text-small--line-height);
+}
+
+/* masteriyo/course-author: the avatar flat, without Masteriyo's white ring and drop shadow. */
+.masteriyo-course-author a img {
+	border: 0;
+	box-shadow: none;
 }
 
 /* masteriyo/checkout: Masteriyo blanks this title too, so the band prints empty. */

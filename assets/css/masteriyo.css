@@ -1041,6 +1041,22 @@ body.ext-masteriyo-factory-button-hover-color.masteriyo-account-page {
 	--chakra-colors-buttonHover: var(--wp--custom--color--fill-brand-strong-hover);
 }
 
+/* masteriyo/account: the signed-in app's corners from the vibe; Chakra's own radii round every tile, field and button. */
+body.masteriyo-account-page {
+	--chakra-radii-base: var(--wp--custom--radius--control);
+	--chakra-radii-lg: var(--wp--custom--radius--card);
+	--chakra-radii-md: var(--wp--custom--radius--control);
+	--chakra-radii-sm: var(--wp--custom--radius--chip);
+	--chakra-radii-xl: var(--wp--custom--radius--card);
+}
+
+/* masteriyo/account: the signed-in app at the shop account page's wide width, with the signed-out forms' space. */
+body.masteriyo-account-page #masteriyo-account-page {
+	max-width: var(--wp--style--global--wide-size);
+	padding-bottom: var(--wp--preset--spacing--70);
+	padding-top: var(--wp--preset--spacing--64);
+}
+
 /* masteriyo/account: Masteriyo blanks the page title here, so the template's title band prints empty. */
 body.masteriyo-account-page main > div:not(:has(*)) {
 	display: none;

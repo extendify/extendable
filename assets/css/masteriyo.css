@@ -1046,6 +1046,114 @@ body.masteriyo-account-page main > div:not(:has(*)) {
 	display: none;
 }
 
+/* masteriyo/account: signed out, sign-in and register as two cards; spaced by padding, as the layout zeroes a first child's top margin. */
+.masteriyo-login-form-wrapper {
+	background-color: transparent;
+	border: 0;
+	border-radius: 0;
+	gap: var(--wp--preset--spacing--40);
+	justify-content: center;
+	max-width: var(--wp--style--global--wide-size);
+	overflow: visible;
+	padding-bottom: var(--wp--preset--spacing--64);
+	padding-top: var(--wp--preset--spacing--30);
+}
+
+/* masteriyo/account: the two cards stay a wrapping row on a phone, where Masteriyo turns the page's blocks to display: block and loses the gap. */
+body.masteriyo .masteriyo-login-form-wrapper:not(.no-signup) {
+	display: flex;
+}
+
+/* masteriyo/account: each card a single field wide on the store card, in place of Masteriyo's halves of one ruled box. */
+.masteriyo-login-form-wrapper > .masteriyo-login,
+.masteriyo-login-form-wrapper > .masteriyo-signup {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	box-sizing: border-box;
+	flex: 0 1 28rem;
+	padding: var(--wp--preset--spacing--30);
+	width: auto;
+}
+
+/* masteriyo/account: sign-up and reset password on the same card and column; Masteriyo's box is 36em with its own 40px inset. */
+.masteriyo-form-container.masteriyo-signup--wrapper,
+.masteriyo-form-container.masteriyo-reset--wrapper {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	box-sizing: border-box;
+	margin-bottom: var(--wp--preset--spacing--64);
+	margin-top: var(--wp--preset--spacing--30);
+	max-width: 28rem;
+	padding: var(--wp--preset--spacing--30);
+	width: 100%;
+}
+
+/* masteriyo/account: each form's title at heading-5, as the shop's sign-in heading; reset password's is a 40px page title. */
+.masteriyo-login--wrapper .masteriyo-title,
+.masteriyo-login-form-wrapper .masteriyo-signup .masteriyo-title,
+.masteriyo-signup .masteriyo-signup--title,
+.masteriyo-reset .masteriyo-reset--title {
+	color: var(--wp--custom--color--text-strong);
+	font-size: var(--wp--custom--text--heading-5--font-size);
+	font-weight: var(--wp--custom--text--heading-5--font-weight);
+	letter-spacing: var(--wp--custom--text--heading-5--letter-spacing);
+	line-height: var(--wp--custom--text--heading-5--line-height);
+	margin-top: 0;
+}
+
+/* masteriyo/account: the reset page's text in the body ink, off Masteriyo's pure black. */
+.masteriyo-reset {
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* masteriyo/account: the register prompt's line in the body ink, off Masteriyo's hardcoded grey. */
+.masteriyo-login-form-wrapper .masteriyo-signup > span {
+	color: var(--wp--custom--color--text-strong);
+	font-size: var(--wp--custom--text--text-regular--font-size);
+}
+
+/* masteriyo/account: the field labels at the checkout's label size, off Masteriyo's 15px and hardcoded #222. */
+.masteriyo-login .masteriyo-label,
+.masteriyo-signup .masteriyo-label,
+.masteriyo-reset .masteriyo-label {
+	color: var(--wp--custom--color--text-strong);
+	font-size: var(--wp--custom--text--text-small--font-size);
+	font-weight: var(--wp--custom--typography--font-weight--medium);
+	line-height: var(--wp--custom--text--text-small--line-height);
+}
+
+/* masteriyo/account: the required mark, off Masteriyo's hardcoded pure red. */
+.masteriyo-signup .masteriyo-text-red {
+	color: var(--wp--custom--color--text-error);
+}
+
+/* masteriyo/account: the shop's text field; Masteriyo's body-wide input rule sets a grey #383838 at 15px. */
+body.masteriyo-account-page .masteriyo-input:not(.search-field) {
+	background-color: var(--wp--custom--color--background-base);
+	border-color: var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--input);
+	color: var(--wp--custom--color--text-strong);
+	font-size: var(--wp--custom--form-control--input-value);
+	min-height: var(--wp--custom--control--lg);
+	padding-inline: var(--wp--custom--form-control--inset);
+}
+
+/* masteriyo/account: the field in focus, on the focus stroke in place of the brand colour. */
+body.masteriyo-account-page .masteriyo-input:not(.search-field):focus {
+	background-color: var(--wp--custom--color--background-base);
+	border-color: var(--wp--custom--color--stroke-focus);
+}
+
+/* masteriyo/account: a field in keyboard focus; Masteriyo removes the outline. */
+body.masteriyo-account-page .masteriyo-input:not(.search-field):focus-visible {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
 /* masteriyo/checkout: Masteriyo blanks this title too, so the band prints empty. */
 body:has(.masteriyo-checkout-container) main > div:not(:has(*)) {
 	display: none;

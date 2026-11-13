@@ -1046,7 +1046,7 @@ body.masteriyo-account-page main > div:not(:has(*)) {
 	display: none;
 }
 
-/* masteriyo/account: signed out, sign-in and register as two cards; spaced by padding, as the layout zeroes a first child's top margin. */
+/* masteriyo/account: signed out, sign-in and register as two cards; padding, as the layout zeroes a first child's top margin. */
 .masteriyo-login-form-wrapper {
 	background-color: transparent;
 	border: 0;
@@ -1055,8 +1055,8 @@ body.masteriyo-account-page main > div:not(:has(*)) {
 	justify-content: center;
 	max-width: var(--wp--style--global--wide-size);
 	overflow: visible;
-	padding-bottom: var(--wp--preset--spacing--64);
-	padding-top: var(--wp--preset--spacing--30);
+	padding-bottom: var(--wp--preset--spacing--70);
+	padding-top: var(--wp--preset--spacing--64);
 }
 
 /* masteriyo/account: the two cards stay a wrapping row on a phone, where Masteriyo turns the page's blocks to display: block and loses the gap. */
@@ -1085,8 +1085,8 @@ body.masteriyo .masteriyo-login-form-wrapper:not(.no-signup) {
 	border-radius: var(--wp--custom--radius--card);
 	box-shadow: var(--wp--custom--shadow--card);
 	box-sizing: border-box;
-	margin-bottom: var(--wp--preset--spacing--64);
-	margin-top: var(--wp--preset--spacing--30);
+	margin-bottom: var(--wp--preset--spacing--70);
+	margin-top: var(--wp--preset--spacing--64);
 	max-width: 28rem;
 	padding: var(--wp--preset--spacing--30);
 	width: 100%;

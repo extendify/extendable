@@ -1250,6 +1250,39 @@ body:has(.masteriyo-checkout-container) main > div:not(:has(*)) {
 	font-size: var(--wp--custom--text--text-small--font-size);
 }
 
+/* masteriyo/checkout: the order-received receipt on the store card; Masteriyo's box sits flush on the title band. */
+body.masteriyo .masteriyo-order.masteriyo-container {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	margin-bottom: var(--wp--preset--spacing--64);
+	margin-top: var(--wp--preset--spacing--40);
+	padding: var(--wp--preset--spacing--30);
+}
+
+/* masteriyo/checkout: the receipt's notice on the shop notice's shape. */
+body.masteriyo .masteriyo-order.masteriyo-container .masteriyo-notice {
+	border-radius: var(--wp--custom--radius--panel);
+	font-size: var(--wp--custom--text--text-small--font-size);
+	font-weight: var(--wp--custom--text--text-regular--font-weight);
+	margin-bottom: var(--wp--preset--spacing--30);
+	padding: var(--wp--preset--spacing--20);
+}
+
+/* masteriyo/checkout: the order-received notice, as the shop's success notice, not page-coloured text on the strong green. */
+body.masteriyo .masteriyo-order.masteriyo-container .masteriyo-notice.masteriyo-notice--success {
+	background-color: var(--wp--custom--color--fill-success-weak);
+	border: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-success-weak);
+	color: var(--wp--custom--color--text-success);
+}
+
+/* masteriyo/checkout: the receipt's account and invoice links read as links; Masteriyo prints them in the body ink, unmarked. */
+body.masteriyo .masteriyo-order.masteriyo-container a {
+	color: var(--wp--custom--color--text-strong);
+	text-decoration: underline;
+}
+
 /* masteriyo/checkout, masteriyo/courses-archive, masteriyo/single-course: a notice on the shop notice's shape; Masteriyo's own reads a fill colour as text. */
 .masteriyo-alert {
 	border-radius: var(--wp--custom--radius--panel);

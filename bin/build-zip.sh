@@ -28,6 +28,8 @@ styles=$(find styles -name "*.json")
 parts=$(ls parts/*.html)
 incFiles=$(ls inc/*.php)
 assets=$(ls assets/css/*.css)
+# Extendable's PHP reads masteriyo-settable-colors.json at runtime; without it Masteriyo keeps its own blue.
+cssData=$(ls assets/css/*.json 2>/dev/null || true)
 fonts=$(ls assets/fonts/**/*.{woff2,txt})
 tribeEvents=$(ls tribe-events/*.css)
 assetsJs=$(ls assets/js/*.js)
@@ -44,6 +46,7 @@ zip -r ./build/extendable.zip \
 	$incFiles \
 	$styles \
 	$assets \
+	$cssData \
 	$fonts \
 	$tribeEvents \
 	$assetsJs \

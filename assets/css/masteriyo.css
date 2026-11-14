@@ -765,22 +765,20 @@ body.masteriyo-courses-page {
 	margin: 0 0 var(--wp--preset--spacing--25);
 }
 
-/* masteriyo/single-course-immersive: the hero's category, the badge part on the photo's media names, not Masteriyo's 13px glass pill. */
+/* masteriyo/single-course-immersive: the hero's category as the badge part, not Masteriyo's 13px pill; the band's ink has to win here. */
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__badges a {
 	background: var(--wp--custom--color--fill-media-weak);
 	border-color: var(--wp--custom--color--stroke-media-weak);
 	border-radius: var(--wp--custom--radius--chip);
-	color: var(--wp--custom--color--text-media-strong);
 	font-size: var(--wp--custom--text--text-small--font-size);
 	font-weight: var(--wp--custom--typography--font-weight--semi-bold);
 	line-height: var(--wp--custom--text--text-small--line-height);
 	padding: 0 var(--wp--preset--spacing--20);
 }
 
-/* masteriyo/single-course-immersive: the meta line and author at the theme's small size, on the photo's weak ink. */
+/* masteriyo/single-course-immersive: the meta line and author at the theme's small size; a photo's white ink is unreadable where the band's wash is pale. */
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__meta,
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__author-name {
-	color: var(--wp--custom--color--text-media-weak);
 	font-size: var(--wp--preset--font-size--small);
 }
 

@@ -622,7 +622,7 @@ body.masteriyo-courses-page {
 	min-height: var(--wp--custom--control--md);
 }
 
-/* masteriyo/single-course-immersive: the hero's ink reads against the band, as the button already does, under the pointer too. */
+/* masteriyo/single-course-immersive: the hero's text in the dark overlay's light ink, the same in every palette, under the pointer too. */
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero,
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__title,
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__badges a,
@@ -632,7 +632,7 @@ body.masteriyo-courses-page {
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__author-name,
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__badges a:hover,
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__badges span:hover {
-	color: var(--wp--custom--color--text-on-brand);
+	color: var(--wp--custom--color--text-media-strong);
 }
 
 /* masteriyo/single-course-immersive: the band's heading and subheading, on the same ink. */
@@ -726,6 +726,16 @@ body.masteriyo-courses-page {
 	line-height: var(--wp--custom--typography--line-height--normal);
 }
 
+/* masteriyo/single-course-immersive: the hero is the dark-overlay part; Masteriyo's brand wash comes out pale on a light brand, under white text. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+/* masteriyo/single-course-immersive: the same scrim over the course photo, in place of the brand wash. */
+.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero--has-image {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), var(--masteriyo-immersive-hero-image);
+}
+
 /* masteriyo/single-course-immersive: the hero on the gutter and wide width; its foot stays Masteriyo's so the enroll card clears the author. */
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__inner {
 	max-width: none;
@@ -765,20 +775,22 @@ body.masteriyo-courses-page {
 	margin: 0 0 var(--wp--preset--spacing--25);
 }
 
-/* masteriyo/single-course-immersive: the hero's category as the badge part, not Masteriyo's 13px pill; the band's ink has to win here. */
+/* masteriyo/single-course-immersive: the hero's category as the badge part on the dark overlay, not Masteriyo's 13px pill. */
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__badges a {
 	background: var(--wp--custom--color--fill-media-weak);
 	border-color: var(--wp--custom--color--stroke-media-weak);
 	border-radius: var(--wp--custom--radius--chip);
+	color: var(--wp--custom--color--text-media-strong);
 	font-size: var(--wp--custom--text--text-small--font-size);
 	font-weight: var(--wp--custom--typography--font-weight--semi-bold);
 	line-height: var(--wp--custom--text--text-small--line-height);
 	padding: 0 var(--wp--preset--spacing--20);
 }
 
-/* masteriyo/single-course-immersive: the meta line and author at the theme's small size; a photo's white ink is unreadable where the band's wash is pale. */
+/* masteriyo/single-course-immersive: the meta line and author at the theme's small size, in the dark overlay's quiet ink. */
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__meta,
 .masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__author-name {
+	color: var(--wp--custom--color--text-media-weak);
 	font-size: var(--wp--preset--font-size--small);
 }
 
@@ -1143,9 +1155,9 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 	border-radius: var(--wp--custom--radius--card);
 }
 
-/* masteriyo/courses, masteriyo/courses-archive: the dark-overlay scrim, full strength behind the text in the lower half; Masteriyo's 30% gradient leaves white text unreadable on a light photo. */
+/* masteriyo/courses, masteriyo/courses-archive: the dark-overlay scrim behind the text; Masteriyo's 30% leaves white text unreadable on a light photo. */
 .masteriyo-course-cards .masteriyo-course-card::before {
-	background: linear-gradient(to bottom, transparent, var(--wp--custom--color--overlay-scrim) 50%);
+	background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7) 50%);
 	border-radius: var(--wp--custom--radius--card);
 	opacity: 1;
 }
@@ -1153,7 +1165,7 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 /* masteriyo/courses, masteriyo/courses-archive: under the pointer or keyboard focus the description and button show, so the whole photo takes the scrim. */
 .masteriyo-course-cards .masteriyo-course-card:hover::before,
 .masteriyo-course-cards .masteriyo-course-card:focus-within::before {
-	background: var(--wp--custom--color--overlay-scrim);
+	background: rgba(0, 0, 0, 0.7);
 	border-radius: var(--wp--custom--radius--card);
 	opacity: 1;
 }

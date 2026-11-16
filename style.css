@@ -20,7 +20,6 @@ Extendable WordPress Theme, Copyright (C) 2021-2025 Extendify Inc.
 Extendable therefore is also distributed under the terms of the GNU GPL.
 */
 
-/* stylelint-disable -- Generated from a design source outside this repo. */
 /* retired-names:start */
 
 /*
@@ -606,11 +605,11 @@ html :where(.wp-block-details > summary:focus-visible) {
 }
 
 /* theme.json has no :hover or :active on read-more, and core sets none in every state. */
-.wp-block-read-more:where(:not([style*=text-decoration])):hover {
+.wp-block-read-more:where(:not([style*="text-decoration"])):hover {
 	text-decoration: underline dashed;
 }
 
-.wp-block-read-more:where(:not([style*=text-decoration])):active {
+.wp-block-read-more:where(:not([style*="text-decoration"])):active {
 	text-decoration: none;
 }
 
@@ -630,7 +629,6 @@ html :where(.wp-block-details > summary:focus-visible) {
 :where(.has-tertiary-background-color) :where(.is-style-ext-link) .wp-block-button__link { color: var(--wp--custom--color--text-strong); }
 
 /* retired-names:end */
-/* stylelint-enable */
 
 
 /*

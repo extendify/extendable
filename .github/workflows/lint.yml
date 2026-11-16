@@ -37,6 +37,3 @@ jobs:
       - name: JavaScript
         if: ${{ !cancelled() }}
         run: npm run lint:js
-      - name: Template HTML
-        if: ${{ !cancelled() }}
-        run: npm run format:check

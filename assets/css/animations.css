@@ -4,32 +4,44 @@
 }
 
 @keyframes ext-fade-in {
+
     from { opacity: 0; }
+
     to { opacity: 1; }
 }
 
 @keyframes ext-fade-up {
+
     from { opacity: 0; transform: translateY(16px); }
+
     to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes ext-fade-down {
+
     from { opacity: 0; transform: translateY(-16px); }
+
     to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes ext-fade-left {
+
     from { opacity: 0; transform: translateX(16px); }
+
     to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes ext-fade-right {
+
     from { opacity: 0; transform: translateX(-16px); }
+
     to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes ext-zoom-in {
+
     from { opacity: 0; transform: scale(0.8); }
+
     to { opacity: 1; transform: scale(1); }
 }
 
@@ -67,6 +79,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .ext-animate {
         animation: none !important;
         opacity: 1 !important;

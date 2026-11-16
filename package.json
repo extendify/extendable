@@ -28,6 +28,7 @@
 	"scripts": {
 		"format": "prettier --write \"templates/**/*.html\" \"parts/**/*.html\"",
 		"format:check": "prettier --check \"templates/**/*.html\" \"parts/**/*.html\"",
+		"lint": "npm run lint:php && npm run lint:css && npm run lint:js && npm run format:check",
 		"lint:js": "wp-scripts lint-js assets",
 		"lint:js:fix": "wp-scripts lint-js assets --fix",
 		"lint:css": "wp-scripts lint-style \"**/*.css\"",

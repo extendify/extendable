@@ -2,11 +2,13 @@
 	font-weight: inherit;
 	margin-bottom: 0.25em;
 }
+
 .wpforms-block input:where(:not([type="submit"]):not([type="checkbox"])) {
 	border: 1px solid;
 	line-height: inherit;
 	font-size: inherit;
 }
+
 .wpforms-block input:where(:not([type="submit"]):not([type="checkbox"])),
 .wpforms-block textarea {
 	padding: calc(0.667em + 1px);
@@ -15,6 +17,7 @@
 	color: var(--wp--preset--color--foreground);
 	border-color: inherit;
 }
+
 .wpforms-field-sublabel {
 	opacity: 0.8;
 }

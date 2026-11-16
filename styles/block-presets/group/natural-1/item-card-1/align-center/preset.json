@@ -1,30 +1,36 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"$schema": "https://schemas.wp.org/wp/7.0/theme.json",
 	"version": 3,
 	"title": "Item Card 1 Align Center",
 	"slug": "ext-preset--group--natural-1--item-card-1--align-center",
-	"blockTypes": ["core/group"],
+	"blockTypes": [
+		"core/group"
+	],
 	"styles": {
-		"color": {
-			"background": "transparent !important"
-		},
+		"css": "&:is(.has-tertiary-background-color.has-background *) { background-color: transparent !important; } &:is(.has-background-background-color.has-background *) { background-color: transparent !important; }",
 		"blocks": {
-			"core/group": {
-				"spacing": {
-					"margin": {
-						"top": "16px"
-					}
-				}
-			},
 			"core/heading": {
 				"typography": {
-					"fontSize": "1.5rem",
+					"fontSize": "var(--wp--custom--text--heading-4--font-size)",
+					"fontWeight": "var(--wp--custom--text--heading-4--font-weight)",
+					"lineHeight": "var(--wp--custom--text--heading-4--line-height)",
+					"letterSpacing": "var(--wp--custom--text--heading-4--letter-spacing)",
+					"textTransform": "var(--wp--custom--text--heading-4--text-transform)",
 					"textAlign": "center"
 				},
 				"spacing": {
 					"margin": {
-						"top": "16px"
+						"top": "var:preset|spacing|20"
 					}
+				}
+			},
+			"core/post-title": {
+				"typography": {
+					"fontSize": "var(--wp--custom--text--heading-4--font-size)",
+					"fontWeight": "var(--wp--custom--text--heading-4--font-weight)",
+					"lineHeight": "var(--wp--custom--text--heading-4--line-height)",
+					"letterSpacing": "var(--wp--custom--text--heading-4--letter-spacing)",
+					"textTransform": "var(--wp--custom--text--heading-4--text-transform)"
 				}
 			},
 			"core/paragraph": {
@@ -34,7 +40,19 @@
 				},
 				"spacing": {
 					"margin": {
-						"top": "16px"
+						"top": "var:preset|spacing|20"
+					}
+				}
+			},
+			"core/post-excerpt": {
+				"typography": {
+					"fontSize": "var:preset|font-size|small"
+				}
+			},
+			"core/group": {
+				"spacing": {
+					"margin": {
+						"top": "var:preset|spacing|20"
 					}
 				}
 			}

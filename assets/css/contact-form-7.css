@@ -3,6 +3,7 @@
 	line-height: inherit;
 	font-size: inherit;
 }
+
 .wpcf7 input:where(:not([type="submit"]):not([type="checkbox"])),
 .wpcf7 textarea {
 	padding: calc(0.667em + 1px);
@@ -21,7 +22,7 @@
 .wpcf7 input[type="submit"] {
 	background-color: var(--wp--custom--elements--button--color--background);
 	color: var(--wp--custom--elements--button--color--text);
-	border-radius: var(--wp--custom--elements--button--border--radius);
+	border-radius: var(--wp--custom--radius--control);
 	border-width: 0;
 	font-family: inherit;
 	font-size: inherit;

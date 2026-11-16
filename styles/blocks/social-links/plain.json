@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.0/theme.json",
+	"version": 3,
+	"title": "Plain icons",
+	"slug": "ext-preset--social-links",
+	"blockTypes": [
+		"core/social-links"
+	],
+	"styles": {
+		"spacing": {
+			"blockGap": "var:preset|spacing|20"
+		},
+		"css": "& .wp-social-link { color: var(--wp--custom--color--text-weak) !important; background-color: transparent !important; } & .wp-social-link a { padding: 0; } & .wp-social-link:hover { color: var(--wp--custom--color--text-strong) !important; }"
+	}
+}

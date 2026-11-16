@@ -7,7 +7,7 @@ Description: Extendable is a distinct, dynamic block theme designed as a canvas 
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Version: 2.1.9
+Version: 2.2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: extendable
@@ -20,33 +20,618 @@ Extendable WordPress Theme, Copyright (C) 2021-2025 Extendify Inc.
 Extendable therefore is also distributed under the terms of the GNU GPL.
 */
 
+/* stylelint-disable -- Generated from a design source outside this repo. */
+/* retired-names:start */
 
-/* Fallback for deprecate variables.
----------------------------------------------------------------------------- */
-:root {
-	--wp--custom--spacing--small: var(--wp--preset--spacing--30, clamp(1.5rem, 5vw, 2rem));
-	--wp--custom--spacing--medium: var(--wp--preset--spacing--50, clamp(2.5rem, 8vw, 4rem));
-	--wp--custom--spacing--large: var(--wp--preset--spacing--60, clamp(2.5rem, 8vw, 6rem));
-	--wp--custom--spacing--outer: max(1.25rem, 4vw);
-	--wp--preset--spacing--80: min(8rem, 12vw);
+/*
+ * Retired design names, kept so saved content still renders, and stand-ins for what
+ * WordPress before 6.9 cannot print. Each line is dated.
+ * Generated; edit the source, not this block.
+ */
+:where(:root) {
+	--wp--custom--color--chip-surface: var(--wp--custom--color--fill-brand-strong); /* 2026-10-14 */
+	--wp--custom--color--chip-ink: var(--wp--custom--color--text-on-brand); /* 2026-10-14 */
+	--wp--custom--color--icon-surface: var(--wp--custom--color--fill-brand-weak); /* 2026-10-14 */
+	--wp--custom--color--icon-ink: var(--wp--custom--color--text-strong); /* 2026-10-14 */
+	--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2); /* 2026-10-14 */
+	--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4); /* 2026-10-14 */
+	--wp--preset--shadow--sharp: 6px 6px 0 rgba(0, 0, 0, 0.2); /* 2026-10-14 */
+	--wp--preset--shadow--outlined: 6px 6px 0 -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0); /* 2026-10-14 */
+	--wp--preset--shadow--crisp: 6px 6px 0 rgb(0, 0, 0); /* 2026-10-14 */
+	--wp--custom--spacing--small: var(--wp--preset--spacing--30, clamp(1.5rem, 5vw, 2rem)); /* 2022-10-03 */
+	--wp--custom--spacing--medium: var(--wp--preset--spacing--50, clamp(2.5rem, 8vw, 4rem)); /* 2022-10-03 */
+	--wp--custom--spacing--large: var(--wp--preset--spacing--60, clamp(2.5rem, 8vw, 6rem)); /* 2022-10-03 */
+	--wp--custom--spacing--outer: max(1.25rem, 4vw); /* 2022-10-03 */
+	--wp--preset--spacing--80: min(8rem, 12vw); /* 2025-10-13 */
+	--wp--preset--border-radius--0: 0; /* 2026-10-15 */
+	--wp--preset--border-radius--1: 4px; /* 2026-10-15 */
+	--wp--preset--border-radius--2: 8px; /* 2026-10-15 */
+	--wp--preset--border-radius--3: 12px; /* 2026-10-15 */
+	--wp--preset--border-radius--4: 16px; /* 2026-10-15 */
+	--wp--preset--border-radius--5: 24px; /* 2026-10-15 */
+	--wp--preset--border-radius--6: 32px; /* 2026-10-15 */
+	--wp--preset--border-radius--full: 9999px; /* 2026-10-15 */
 }
 
-/* Spacing tokens saved content still uses; html:root beats core's default 50/60.
----------------------------------------------------------------------------- */
 html:root {
-	--wp--preset--spacing--50: calc(clamp(2.5rem, 8vw, 4rem) * var(--wp--custom--space-scale, 1));
-	--wp--preset--spacing--55: calc(clamp(3rem, 12vw, 5rem) * var(--wp--custom--space-scale, 1));
-	--wp--preset--spacing--60: calc(clamp(3.5rem, 10vw, 6rem) * var(--wp--custom--space-scale, 1));
-	--wp--custom--gap-snug: max(4px, calc(8px * var(--wp--custom--gap-scale, 1)));
-	--wp--custom--gap-tight: max(4px, calc(16px * var(--wp--custom--gap-scale, 1)));
-	--wp--custom--gap-cozy: max(4px, calc(24px * var(--wp--custom--gap-scale, 1)));
-	--wp--custom--gap-loose: max(4px, calc(32px * var(--wp--custom--gap-scale, 1)));
-	--wp--custom--gap-block: max(4px, calc(clamp(3rem, 12vw, 5rem) * var(--wp--custom--gap-scale, 1)));
-	--wp--custom--space-snug: calc(8px * var(--wp--custom--space-scale, 1));
-	--wp--custom--space-cozy: calc(24px * var(--wp--custom--space-scale, 1));
-	--wp--custom--space-panel-block: calc(64px * var(--wp--custom--space-scale, 1));
-	--wp--custom--space-panel-inline: calc(48px * var(--wp--custom--space-scale, 1));
+	--wp--preset--spacing--50: calc(clamp(2.5rem, 8vw, 4rem) * var(--wp--custom--space-scale, 1)); /* 2026-09-25 */
+	--wp--preset--spacing--55: calc(clamp(3rem, 12vw, 5rem) * var(--wp--custom--space-scale, 1)); /* 2026-09-25 */
+	--wp--preset--spacing--60: calc(clamp(3.5rem, 10vw, 6rem) * var(--wp--custom--space-scale, 1)); /* 2026-09-25 */
+	--wp--custom--gap-snug: max(4px, calc(8px * var(--wp--custom--gap-scale, 1))); /* 2026-09-25 */
+	--wp--custom--gap-tight: max(4px, calc(16px * var(--wp--custom--gap-scale, 1))); /* 2026-09-25 */
+	--wp--custom--gap-cozy: max(4px, calc(24px * var(--wp--custom--gap-scale, 1))); /* 2026-09-25 */
+	--wp--custom--gap-loose: max(4px, calc(32px * var(--wp--custom--gap-scale, 1))); /* 2026-09-25 */
+	--wp--custom--gap-block: max(4px, calc(clamp(3rem, 12vw, 5rem) * var(--wp--custom--gap-scale, 1))); /* 2026-09-25 */
+	--wp--custom--space-cozy: calc(24px * var(--wp--custom--space-scale, 1)); /* 2026-09-25 */
 }
+
+:where(.wp-element-button:focus-visible, .wp-block-button__link:focus-visible) {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus); /* 2026-10-15 */
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+/* A 6.x-saved button names its size on the wrapper, and a sized container on itself, so both get the button's own presets. */
+:where(.wp-block-buttons, .wp-block-button) {
+	--wp--preset--font-size--small: var(--wp--custom--control-label--sm); /* 2026-10-16 */
+	--wp--preset--font-size--medium: var(--wp--custom--control-label--md); /* 2026-10-16 */
+	--wp--preset--font-size--large: var(--wp--custom--control-label--lg); /* 2026-10-16 */
+}
+
+/* Retired: a saved is-style-ext-small button is small; a size class still wins. */
+:where(.wp-block-button.is-style-ext-small) {
+	--wp--custom--button--label: var(--wp--custom--control-label--sm); /* 2026-10-15 */
+	--wp--custom--button--height: var(--wp--custom--control--sm); /* 2026-10-15 */
+	--wp--custom--button--icon: var(--wp--custom--control-icon--sm); /* 2026-10-15 */
+}
+
+:root :where(.wp-block-button:not(.is-style-ext-link) > .wp-block-button__link.has-small-font-size, .wp-block-button:not(.is-style-ext-link).has-small-font-size > .wp-block-button__link, .wp-block-buttons.has-small-font-size > .wp-block-button:not(.is-style-ext-link):not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size)) {
+	padding-top: calc((var(--wp--custom--control--sm) - 1.2em) / 2 - var(--wp--custom--border-width--1));
+	padding-bottom: calc((var(--wp--custom--control--sm) - 1.2em) / 2 - var(--wp--custom--border-width--1));
+}
+
+:root :where(.wp-block-button:not(.is-style-ext-link) > .wp-block-button__link.has-medium-font-size, .wp-block-button:not(.is-style-ext-link).has-medium-font-size > .wp-block-button__link, .wp-block-buttons.has-medium-font-size > .wp-block-button:not(.is-style-ext-link):not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size)) {
+	padding-top: calc((var(--wp--custom--control--md) - 1.2em) / 2 - var(--wp--custom--border-width--1));
+	padding-bottom: calc((var(--wp--custom--control--md) - 1.2em) / 2 - var(--wp--custom--border-width--1));
+}
+
+:root :where(.wp-block-button:not(.is-style-ext-link) > .wp-block-button__link.has-large-font-size, .wp-block-button:not(.is-style-ext-link).has-large-font-size > .wp-block-button__link, .wp-block-buttons.has-large-font-size > .wp-block-button:not(.is-style-ext-link):not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size)) {
+	padding-top: calc((var(--wp--custom--control--lg) - 1.2em) / 2 - var(--wp--custom--border-width--1));
+	padding-bottom: calc((var(--wp--custom--control--lg) - 1.2em) / 2 - var(--wp--custom--border-width--1));
+}
+
+:root :where(.wp-block-button.ext-icon-only > .wp-block-button__link) {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 1;
+	padding: 0;
+	min-height: var(--wp--custom--button--height);
+}
+
+:root :where(.wp-block-button.ext-icon-only > .wp-block-button__link.has-small-font-size, .wp-block-button.ext-icon-only.has-small-font-size > .wp-block-button__link, .wp-block-buttons.has-small-font-size > .wp-block-button.ext-icon-only:not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size)) {
+	min-height: var(--wp--custom--control--sm);
+}
+
+:root :where(.wp-block-button.ext-icon-only > .wp-block-button__link.has-medium-font-size, .wp-block-button.ext-icon-only.has-medium-font-size > .wp-block-button__link, .wp-block-buttons.has-medium-font-size > .wp-block-button.ext-icon-only:not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size)) {
+	min-height: var(--wp--custom--control--md);
+}
+
+:root :where(.wp-block-button.ext-icon-only > .wp-block-button__link.has-large-font-size, .wp-block-button.ext-icon-only.has-large-font-size > .wp-block-button__link, .wp-block-buttons.has-large-font-size > .wp-block-button.ext-icon-only:not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size)) {
+	min-height: var(--wp--custom--control--lg);
+}
+
+:root :where(.wp-block-button__link:is(:disabled, [aria-disabled="true"]), .wp-element-button:is(:disabled, [aria-disabled="true"])) {
+	color: var(--wp--custom--color--text-disabled);
+	background-color: var(--wp--custom--color--fill-disabled);
+	border-color: transparent;
+	box-shadow: none;
+	cursor: not-allowed;
+}
+
+:root :where(.wp-block-button:is(.is-style-ext-secondary, .is-style-outline) .wp-block-button__link:is(:disabled, [aria-disabled="true"])) {
+	background-color: transparent;
+	border-color: var(--wp--custom--color--stroke-weak);
+}
+
+:root :where(.wp-block-button:is(.is-style-ext-ghost, .is-style-ext-link) .wp-block-button__link:is(:disabled, [aria-disabled="true"])) {
+	background-color: transparent;
+}
+
+:where(.wp-block-button.ext-icon-only svg) {
+	width: var(--wp--custom--button--icon);
+	height: var(--wp--custom--button--icon);
+}
+
+:where(.wp-block-button.ext-icon-only > .wp-block-button__link.has-small-font-size svg, .wp-block-button.ext-icon-only.has-small-font-size > .wp-block-button__link svg, .wp-block-buttons.has-small-font-size > .wp-block-button.ext-icon-only:not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size) svg) {
+	width: var(--wp--custom--control-icon--sm);
+	height: var(--wp--custom--control-icon--sm);
+}
+
+:where(.wp-block-button.ext-icon-only > .wp-block-button__link.has-medium-font-size svg, .wp-block-button.ext-icon-only.has-medium-font-size > .wp-block-button__link svg, .wp-block-buttons.has-medium-font-size > .wp-block-button.ext-icon-only:not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size) svg) {
+	width: var(--wp--custom--control-icon--md);
+	height: var(--wp--custom--control-icon--md);
+}
+
+:where(.wp-block-button.ext-icon-only > .wp-block-button__link.has-large-font-size svg, .wp-block-button.ext-icon-only.has-large-font-size > .wp-block-button__link svg, .wp-block-buttons.has-large-font-size > .wp-block-button.ext-icon-only:not(.has-custom-font-size) > .wp-block-button__link:not(.has-custom-font-size) svg) {
+	width: var(--wp--custom--control-icon--lg);
+	height: var(--wp--custom--control-icon--lg);
+}
+
+/* What theme.json has no hook for: the control sizes, the textInput/select focus ring,
+   placeholder, disabled and invalid states, the label element (no released WordPress has one),
+   accent-color on native checkbox/radio/range, ::selection, a link on a coloured section, a
+   quote's citation, the inline code format, and the generic focus ring every other interactive
+   element gets on :focus-visible. Hand-authored, not generated. */
+
+/* Native checkboxes, selects and scrollbars follow the palette's scheme; `only` keeps the
+   browser's forced dark mode off, and (0,1,1) beats Extendable's later :root { color-scheme: only light }. */
+:root:is(html) {
+	color-scheme: var(--wp--custom--color-scheme, light) only;
+}
+
+:where(label) {
+	font-size: var(--wp--custom--text--label--font-size);
+	font-weight: var(--wp--custom--text--label--font-weight);
+	line-height: var(--wp--custom--text--label--line-height);
+	letter-spacing: var(--wp--custom--text--label--letter-spacing);
+}
+
+:where(input[type="checkbox"], input[type="radio"], input[type="range"]) {
+	accent-color: var(--wp--custom--color--stroke-brand);
+}
+
+:where(*)::selection {
+	background-color: var(--wp--custom--color--highlight);
+}
+
+/* Border-box, or native padding and border land a 44px height on 48–50px. A textarea grows
+   with its rows, and a multi-row select would clip to one. */
+:where(input:not([type="checkbox"], [type="radio"], [type="range"], [type="hidden"], [type="file"], [type="color"], [type="image"], [type="submit"], [type="button"], [type="reset"]), select:not([multiple], [size])) {
+	box-sizing: border-box;
+	height: var(--wp--custom--control--md);
+}
+
+/* Under 16px iOS zooms the page on focus; WordPress 6.6 prints no textInput element. */
+:where(input:not([type="checkbox"], [type="radio"], [type="range"], [type="hidden"]), select, textarea) {
+	font-size: var(--wp--custom--form-control--input-value);
+}
+
+:where(input[type="checkbox"], input[type="radio"]) {
+	width: var(--wp--custom--form-control--choice);
+	height: var(--wp--custom--form-control--choice);
+}
+
+/* theme.json has no focus hook on a control; zero specificity, so a block's own outline wins. */
+:where(input, select, textarea):focus-visible {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+/* Equal to WordPress 7's textInput and select element styles, which print first. */
+:is(input, select, textarea):where(:disabled) {
+	color: var(--wp--custom--color--text-disabled);
+	background-color: var(--wp--custom--color--fill-weak);
+}
+
+:is(input, select, textarea):where(:user-invalid, [aria-invalid="true"]) {
+	border-color: var(--wp--custom--color--stroke-error);
+}
+
+/* Capped at step 5, or a pill input turns every textarea and listbox into a capsule. Ties
+   WordPress 7's textInput and select elements, which print first. */
+textarea,
+select:where([multiple], [size]:not([size="1"])) {
+	border-radius: min(var(--wp--custom--radius--input), var(--wp--preset--border-radius--5));
+}
+
+/* Radix step 10, the step C3 walks to pass on background-base; the UA grey is under 4.5:1. */
+:where(input, textarea)::placeholder {
+	color: var(--wp--custom--color--text-weaker);
+	opacity: 1;
+}
+
+/* Equal to the UI-link block rules, which print first. text-brand is measured only on the
+   page's own grounds, so on a section with its own text colour the link takes that ink and
+   keeps its underline. A link colour set on the block itself still wins. */
+:root :where(.has-text-color a:where(:not(.wp-element-button))) {
+	color: inherit;
+}
+
+/* Equal to the palette's heading colour, which prints first; without it a heading on a block
+   with its own text colour keeps the page ink, invisible on a dark section. */
+:where(.has-text-color) :is(h1, h2, h3, h4, h5, h6) {
+	color: inherit;
+}
+
+/* Equal to core's quote and pullquote citation rules, which print first. WordPress 6.6 writes
+   the pullquote's as .wp-block-pullquote cite; 7.1 prints :where(cite). */
+.wp-block-quote cite, .wp-block-pullquote cite {
+	color: var(--wp--custom--color--text-weak);
+	font-size: var(--wp--custom--text--text-small--font-size);
+	font-weight: var(--wp--custom--text--text-small--font-weight);
+	line-height: var(--wp--custom--text--text-small--line-height);
+	letter-spacing: var(--wp--custom--text--text-small--letter-spacing);
+}
+
+/* The generic ring; a button's own theme.json ring prints after it and wins. */
+html :where(a:focus-visible, button:focus-visible, [tabindex]:focus-visible) {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+/* core/code dresses its own <code> through theme.json; this is every other one. */
+:where(:not(pre) > code) {
+	background-color: var(--wp--custom--color--fill-weak);
+	color: var(--wp--custom--color--text-strong);
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: 0.95em;
+	padding: 0.1em 0.25em;
+	border-radius: var(--wp--custom--radius--chip);
+}
+
+/* What theme.json has no hook for: the navigation submenu's background/radius/shadow/layer,
+   the active tab's border, square corners on full-width media, the list, quote inset, table
+   row lines, details, file, video, footnotes, video-embed, playlist, current nav/page-list item, current
+   pagination number and read-more hover/active defaults. Hand-authored, not generated. Each
+   selector is its rival's own (core block-library's or global styles'), which prints first, so
+   it wins by load order, or zero-specificity where nothing else sets it. */
+
+.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
+	background-color: var(--wp--custom--color--background-overlay);
+}
+
+.wp-block-navigation .has-child .wp-block-navigation__submenu-container {
+	border-radius: var(--wp--custom--radius--overlay);
+	box-shadow: var(--wp--custom--shadow--overlay);
+	z-index: var(--wp--custom--layer--menu);
+}
+
+/* Core lists submenus inline in the open mobile menu but leaves our dropdown shadow on them. */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container.wp-block-navigation__submenu-container {
+	border-radius: 0;
+	box-shadow: none;
+}
+
+:where(.wp-block-tab-list button)[aria-selected="true"]::before {
+	border-color: var(--wp--custom--color--stroke-brand);
+}
+
+:root :where(.wp-block-image.alignfull img),
+:root :where(.wp-block-post-featured-image.alignfull img),
+:root :where(.wp-block-cover.alignfull),
+:root :where(.wp-block-video.alignfull),
+:root :where(.wp-block-media-text.alignfull) {
+	border-radius: 0;
+}
+
+/* Global styles round the figure, which does not clip the video inside it. */
+:where(.wp-block-video video) {
+	border-radius: inherit;
+}
+
+/* Logical, so the indent stays on the marker's side on a right-to-left site. */
+:where(.wp-block-list) {
+	padding-inline-start: var(--wp--preset--spacing--25);
+}
+
+/* A list part sets its own rhythm. */
+:where(.wp-block-list:not([class*="is-style-"]) > li + li) {
+	margin-block-start: var(--wp--preset--spacing--10);
+}
+
+:where(.wp-block-list > li)::marker {
+	color: var(--wp--custom--color--text-weak);
+	font-variant-numeric: tabular-nums;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	width: auto;
+}
+
+/* Core's right-to-left sheet mirrors the line, and keeps its own inset on centred,
+   right-aligned and large quotes. */
+:root :where(.wp-block-quote:not(.is-style-large, .is-large, .has-text-align-center, .has-text-align-right)) {
+	padding-inline-start: var(--wp--preset--spacing--20);
+}
+
+.wp-block-quote.is-style-large:where(:not(.is-style-plain)),
+.wp-block-quote.is-large:where(:not(.is-style-plain)) {
+	margin-bottom: 0;
+}
+
+.wp-block-quote.is-style-large:where(:not(.is-style-plain)) p,
+.wp-block-quote.is-large:where(:not(.is-style-plain)) p {
+	font-size: var(--wp--custom--text--quote--font-size);
+	font-weight: var(--wp--custom--text--quote--font-weight);
+	line-height: var(--wp--custom--text--quote--line-height);
+	letter-spacing: var(--wp--custom--text--quote--letter-spacing);
+	text-transform: var(--wp--custom--text--quote--text-transform);
+	font-style: normal;
+}
+
+.wp-block-pullquote :where(cite) {
+	text-transform: none;
+}
+
+/* No layout here, so the browser's 1em paragraph margin would grow with the quote's size. */
+:where(.wp-block-pullquote p:has(+ cite)) {
+	margin-block-end: 0;
+}
+
+:where(.wp-block-pullquote p + cite) {
+	margin-block-start: var(--wp--preset--spacing--20);
+}
+
+.wp-block-table td,
+.wp-block-table th {
+	border-width: 0 0 var(--wp--custom--border-width--1);
+	border-style: solid;
+	border-color: inherit;
+	padding: var(--wp--preset--spacing--10) var(--wp--preset--spacing--20);
+}
+
+:where(.wp-block-table table > *, .wp-block-table tr) {
+	border-color: inherit;
+}
+
+/* The browser centres a th by default; logical, so it flips on a right-to-left site. */
+:where(.wp-block-table th:not([class*="has-text-align"])) {
+	text-align: start;
+}
+
+.wp-block-table thead,
+.wp-block-table tfoot {
+	border-width: 0;
+	border-color: var(--wp--custom--color--stroke-strong);
+}
+
+.wp-block-table tfoot :where(td, th) {
+	border-width: var(--wp--custom--border-width--1) 0 0;
+}
+
+/* Collapsed borders: the row line above the footer would win over the footer's own line. */
+.wp-block-table :where(tbody:has(+ tfoot) > tr:last-child) :is(td, th) {
+	border-bottom-width: 0;
+}
+
+:where(.wp-block-details > summary) {
+	color: var(--wp--custom--color--text-brand);
+	text-decoration: underline;
+}
+
+:where(.wp-block-details > summary:hover) {
+	text-decoration: underline dashed;
+}
+
+:where(.wp-block-details > summary:active) {
+	text-decoration: none;
+}
+
+:where(.has-text-color .wp-block-details > summary, .wp-block-details.has-text-color > summary) {
+	color: inherit;
+}
+
+html :where(.wp-block-details > summary:focus-visible) {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+/* An engine without ::details-content shows the open content unruled. */
+:where(.wp-block-details[open])::details-content {
+	margin-block-start: var(--wp--preset--spacing--10);
+	border-inline-start: var(--wp--custom--border-width--2) solid var(--wp--custom--color--stroke-weak);
+	padding-inline-start: var(--wp--preset--spacing--20);
+}
+
+/* Without it the details' blockGap adds to the space under the summary. */
+:root :where(.wp-block-details > summary + *) {
+	margin-block-start: 0;
+}
+
+.wp-block-file:not(.wp-element-button) {
+	font-size: var(--wp--custom--text--text-regular--font-size);
+}
+
+/* The download button: the ext-secondary role at the small size. Equal to the button
+   element's rules, which print first. */
+:root :where(.wp-block-file__button) {
+	color: var(--wp--custom--color--text-strong);
+	background-color: var(--wp--custom--color--fill-weak);
+	border-color: var(--wp--custom--color--stroke-strong);
+	box-shadow: none;
+	font-size: var(--wp--custom--control-label--sm);
+	padding-top: calc((var(--wp--custom--control--sm) - var(--wp--custom--text--label--line-height) * 1em) / 2 - var(--wp--custom--border-width--1));
+	padding-bottom: calc((var(--wp--custom--control--sm) - var(--wp--custom--text--label--line-height) * 1em) / 2 - var(--wp--custom--border-width--1));
+}
+
+/* Core's file sheet also fades the button to 0.85 on hover. */
+:root :where(.wp-block-file__button:hover) {
+	color: var(--wp--custom--color--text-strong);
+	background-color: var(--wp--custom--color--fill-weak-hover);
+	opacity: 1;
+}
+
+:root :where(.wp-block-file__button:active) {
+	color: var(--wp--custom--color--text-strong);
+	background-color: var(--wp--custom--color--fill-weak-active);
+}
+
+.wp-block-file * + .wp-block-file__button {
+	margin-inline-start: var(--wp--preset--spacing--20);
+}
+
+:where(.wp-block-file__embed) {
+	border: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-weak);
+	border-radius: var(--wp--custom--radius--media);
+}
+
+/* Logical, like the list's indent. */
+:where(.wp-block-footnotes) {
+	padding-inline-start: var(--wp--preset--spacing--25);
+}
+
+:where(.wp-block-footnotes > li + li) {
+	margin-block-start: var(--wp--preset--spacing--10);
+}
+
+:where(.wp-block-footnotes > li)::marker {
+	color: var(--wp--custom--color--text-weak);
+	font-variant-numeric: tabular-nums;
+}
+
+:where(.wp-block-embed.is-type-video .wp-block-embed__wrapper) {
+	overflow: hidden;
+	border-radius: var(--wp--custom--radius--media);
+}
+
+/* Prints after the rule above, in the same file, so the load-order tie wins. */
+:where(.wp-block-embed.is-type-video.alignfull .wp-block-embed__wrapper) {
+	border-radius: 0;
+}
+
+/* Core picks the button from the body's brightness, but the icon from the block's own text. */
+:where(.wp-block-playlist__waveform-player:not([data-waveform-player-color], [data-waveform-player-gradient])) .waveform-btn {
+	color: inherit;
+}
+
+.wp-block-playlist .waveform-btn {
+	border-start-start-radius: var(--wp--custom--radius--input);
+	border-end-start-radius: var(--wp--custom--radius--input);
+}
+
+.wp-block-playlist .waveform-btn:focus-visible,
+.wp-block-playlist .waveform-container:focus-visible {
+	outline: var(--wp--custom--focus-ring--width) solid var(--wp--custom--color--stroke-focus);
+	outline-offset: var(--wp--custom--focus-ring--offset);
+}
+
+.wp-block-playlist-track .wp-block-playlist-track__button .wp-block-playlist-track__image {
+	border-color: var(--wp--custom--color--stroke-weak);
+	border-radius: var(--wp--custom--radius--input);
+}
+
+:where(.wp-block-navigation [aria-current="page"], .wp-block-page-list [aria-current="page"]) {
+	font-weight: var(--wp--custom--text--label--font-weight);
+}
+
+/* Global styles print the wrapper's link rule after the numbers' own at equal weight. */
+:root :where(.wp-block-query-pagination-numbers a:where(:not(.wp-element-button))),
+:root :where(.wp-block-comments-pagination-numbers a:where(:not(.wp-element-button))) {
+	color: var(--wp--custom--color--text-weak);
+	padding: var(--wp--preset--spacing--10);
+}
+
+/* A page number under the pointer takes the neutral hover fill, not the UI link's underline. */
+:root :where(.wp-block-query-pagination-numbers a:where(:not(.wp-element-button)):hover) {
+	background-color: var(--wp--custom--color--fill-neutral-hover);
+	color: var(--wp--custom--color--text-strong);
+	text-decoration: none;
+}
+
+/* Previous, the numbers and Next sit in three tracks, so the numbers stay centred when Previous or Next is missing; the row sits a tracks step under the posts or products, over their container's gap. */
+.wp-block-query-pagination.is-layout-flex {
+	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	margin-block-start: var(--wp--preset--spacing--40);
+}
+
+/* Pagination reads at the small control's label size, a minor action under body text. */
+:where(.wp-block-query-pagination) {
+	font-size: var(--wp--custom--control-label--sm);
+}
+
+:where(.wp-block-query-pagination-previous) {
+	grid-column: 1;
+	justify-self: start;
+}
+
+:where(.wp-block-query-pagination > .wp-block-query-pagination-numbers) {
+	grid-column: 2;
+}
+
+:where(.wp-block-query-pagination-next) {
+	grid-column: 3;
+	justify-self: end;
+}
+
+/* The page numbers sit a related step apart. */
+:where(.wp-block-query-pagination-numbers) {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--wp--preset--spacing--10);
+}
+
+/* Each page number is a small control, the size its 14px label pairs with, on the button's corner. */
+:where(.wp-block-query-pagination-numbers .page-numbers) {
+	align-items: center;
+	border-radius: var(--wp--custom--radius--control);
+	box-sizing: border-box;
+	display: inline-flex;
+	height: var(--wp--custom--control--sm);
+	justify-content: center;
+	min-width: var(--wp--custom--control--sm);
+}
+
+/* The current page is a <span>, which no link rule reaches; it sits on the soft fill. */
+:where(
+	.wp-block-query-pagination-numbers .current,
+	.wp-block-comments-pagination-numbers .current
+) {
+	background-color: var(--wp--custom--color--fill-weak);
+	color: var(--wp--custom--color--text-strong);
+	padding: var(--wp--preset--spacing--10);
+}
+
+/* Core's own reply-list indent is a raw 2rem, not a preset. */
+.wp-block-comment-template ol {
+	padding-inline-start: var(--wp--preset--spacing--30);
+}
+
+:where(.wp-block-comment-template li[id^="comment-"] + li[id^="comment-"]) {
+	margin-block-start: var(--wp--preset--spacing--30);
+}
+
+:where(.wp-block-comment-template li[id^="comment-"] > ol) {
+	margin-block-start: var(--wp--preset--spacing--30);
+}
+
+:root :where(.wp-block-post-content) > :where(h2) {
+	margin-block-start: var(--wp--preset--spacing--40);
+}
+
+:root :where(.wp-block-post-content) > :where(h3, h4, h5, h6) {
+	margin-block-start: var(--wp--preset--spacing--30);
+}
+
+/* theme.json has no :hover or :active on read-more, and core sets none in every state. */
+.wp-block-read-more:where(:not([style*=text-decoration])):hover {
+	text-decoration: underline dashed;
+}
+
+.wp-block-read-more:where(:not([style*=text-decoration])):active {
+	text-decoration: none;
+}
+
+/* A store page header under a vibe payload that predates the part would touch the site header. */
+:where(.is-style-ext-preset--page-header) {
+	padding-top: var(--wp--preset--spacing--30);
+}
+
+:where(.is-style-ext-preset--page-header.has-background) {
+	padding-bottom: var(--wp--preset--spacing--30);
+}
+
+:where(.has-tertiary-background-color) { --wp--custom--color--text-weak: var(--wp--custom--color--background-sunken-weak, color-mix(in oklab, var(--wp--preset--color--foreground) 72%, var(--wp--preset--color--tertiary))); --wp--custom--color--background-base: var(--wp--preset--color--tertiary); --wp--custom--color--stroke-strong: var(--wp--custom--color--background-sunken-stroke-strong, color-mix(in oklab, var(--wp--preset--color--foreground) 45%, var(--wp--preset--color--tertiary))); --wp--custom--color--stroke-weak: var(--wp--custom--color--background-sunken-stroke-weak, color-mix(in oklab, var(--wp--preset--color--foreground) 18%, var(--wp--preset--color--tertiary))); }
+
+:where(.has-tertiary-background-color) a:where(:not(.wp-element-button)) { color: var(--wp--custom--color--text-strong); }
+
+:where(.has-tertiary-background-color) :where(.is-style-ext-link) .wp-block-button__link { color: var(--wp--custom--color--text-strong); }
+
+/* retired-names:end */
+/* stylelint-enable */
+
 
 /*
  * A color-scheme meta otherwise lets OS dark mode restyle inputs and scrollbars.
@@ -87,20 +672,6 @@ a {
 	text-underline-offset: var(--wp--custom--elements--link--text-underline-offset, 0.25ch);
 }
 
-a:hover,
-a:focus {
-	text-decoration-style: var(--wp--custom--elements--link--interactive--text-decoration-style, dashed);
-}
-
-:where(.wp-site-blocks *:focus) {
-	outline-width: 1px;
-	outline-style: solid;
-}
-
-a:active {
-	text-decoration: none;
-}
-
 /*
  * Navigation Block
  */
@@ -136,6 +707,7 @@ a:active {
 	padding-bottom: var(--wp--preset--spacing--30);
 	position: relative;
 	padding-inline-end: 52px;
+	min-height: var(--wp--custom--control--md);
 }
 
 .wp-block-navigation__responsive-container.has-modal-open.is-menu-open .site-logo-title::after {
@@ -156,7 +728,7 @@ a:active {
 }
 
 .wp-block-navigation__responsive-container.has-modal-open.is-menu-open .site-logo-title .site-title {
-	font-size: 1.25rem;
+	font-size: var(--wp--custom--text--text-large--font-size);
 	font-weight: 700;
 	color: var(--wp--preset--color--foreground);
 	text-transform: uppercase;
@@ -173,7 +745,6 @@ a:active {
 	background-color: var(--wp--preset--color--tertiary);
 	padding: 0.625rem;
 	border-radius: 100%;
-	top: -2.5px !important;
 }
 
 .has-modal-open .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) .wp-block-navigation__responsive-container-content .wp-block-navigation__container {
@@ -202,7 +773,7 @@ a:active {
 }
 
 .has-modal-open .wp-block-navigation__responsive-container:not(.disable-default-overlay) .wp-block-navigation__responsive-dialog ul.wp-block-navigation__container > li:not(.wp-block-navigation__submenu-container) > a.wp-block-navigation-item__content {
-	font-size: 1.25rem;
+	font-size: var(--wp--custom--text--text-large--font-size);
 	font-weight: 600;
 }
 
@@ -211,7 +782,7 @@ a:active {
 }
 
 .has-modal-open .wp-block-navigation__responsive-container:not(.disable-default-overlay) .wp-block-navigation__responsive-dialog ul.wp-block-navigation__container .wp-block-navigation-submenu .wp-block-navigation-item a {
-	font-size: 1rem !important;
+	font-size: var(--wp--custom--text--text-regular--font-size) !important;
 }
 
 /*
@@ -301,7 +872,7 @@ html.has-modal-open body:not(:has(.entry-content > .ext-hero-section.ext-hero-se
 .has-modal-open .wp-block-navigation__responsive-dialog .ext-nav-extras-mobile .ext-nav-extras-phone,
 .has-modal-open .wp-block-navigation__responsive-dialog .ext-nav-extras-mobile .ext-nav-extras-phone a,
 .has-modal-open .wp-block-navigation__responsive-dialog .ext-nav-extras-mobile .ext-nav-extras-phone p {
-	font-size: 1.25rem !important;
+	font-size: var(--wp--custom--text--text-large--font-size) !important;
 	font-weight: 600 !important;
 }
 
@@ -314,12 +885,6 @@ html.has-modal-open body:not(:has(.entry-content > .ext-hero-section.ext-hero-se
 .has-modal-open .wp-block-navigation__responsive-dialog .ext-nav-extras-mobile .wp-social-link svg {
 	width: 28px;
 	height: 28px;
-}
-
-.wp-block-navigation .wp-block-navigation-item a:hover,
-.wp-block-navigation .wp-block-navigation-item a:focus {
-	text-decoration: underline;
-	text-decoration-style: solid;
 }
 
 /* Don't display the homepage in the Page List block, when located inside a navigation element. */
@@ -342,9 +907,10 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
 }
 
 /* Temporary: WP core ships this padding as a 4-value clamp() shorthand
-   that some browsers fail to parse — re-declare as individual props. */
+   that some browsers fail to parse — re-declare as individual props.
+   Top is the 1rem floor: the root's unitless 0 voids the clamp and clips the close button. */
 .wp-block-navigation__responsive-container.is-menu-open:not(.disable-default-overlay) {
-	padding-top: clamp(1rem, var(--wp--style--root--padding-top), 20rem);
+	padding-top: var(--wp--preset--spacing--20);
 	padding-right: clamp(1rem, var(--wp--style--root--padding-right), 20rem);
 	padding-bottom: clamp(1rem, var(--wp--style--root--padding-bottom), 20rem);
 	padding-left: clamp(1rem, var(--wp--style--root--padding-left), 20rem);
@@ -359,12 +925,7 @@ nav .wp-block-pages-list__item.wp-block-navigation-item.menu-item-home {
 /* Button
 ----------------------------------------------------------*/
 .wp-element-button {
-	transition: background-color 0.15s ease;
-}
-
-.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background):hover,
-.wp-block-button.is-style-outline > .wp-block-button__link:not(.has-background):hover {
-	background-color: rgba(159, 159, 159, 0.2);
+	transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 /* Table
@@ -393,7 +954,7 @@ blockquote:is(.is-style-plain) {
 ----------------------------------------------------------*/
 :where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) {
 	border-color: var(--wp--custom--elements--input--border--color);
-	border-radius: var(--wp--custom--elements--button--border--radius);
+	border-radius: var(--wp--custom--radius--input);
 	border-width: var(--wp--custom--elements--input--border--width);
 }
 
@@ -402,7 +963,7 @@ blockquote:is(.is-style-plain) {
 }
 
 .wp-block-search .wp-block-search__input {
-	border-radius: var(--wp--custom--elements--button--border--radius);
+	border-radius: var(--wp--custom--radius--input);
 }
 
 /* Image
@@ -453,23 +1014,9 @@ blockquote:is(.is-style-plain) {
 	}
 }
 
-/*
- * Matching caret and focus outline colors.
- */
 input,
 textarea {
 	caret-color: inherit;
-	outline-color: inherit;
-}
-
-/*
- * Matching input with outline button style.
- */
-:where(.wp-block-post-comments-form) input:not([type="submit"]),
-:where(.wp-block-post-comments-form) textarea {
-	background-color: var(--wp--preset--color--background);
-	color: var(--wp--preset--color--foreground);
-	border-color: inherit;
 }
 
 
@@ -486,14 +1033,14 @@ textarea {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: start;
-	gap: 1rem;
+	gap: var(--wp--preset--spacing--10);
 }
 
 .wp-block-button.wc-block-components-product-button a.added_to_cart {
 	margin-top: 0;
 }
 
-.woocommerce-checkout.woocommerce-page header.wp-block-template-part nav.wp-block-navigation {
+.woocommerce-checkout.woocommerce-page:not(.woocommerce-order-received, .woocommerce-order-pay) header.wp-block-template-part nav.wp-block-navigation {
 	visibility: hidden;
 }
 
@@ -555,7 +1102,7 @@ textarea {
 }
 
 :root {
-	--grid-vector-bg: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQ0MCAxMDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxnIG9wYWNpdHk9IjAuMDkiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utb3BhY2l0eT0iMC43IiBzdHJva2Utd2lkdGg9IjEuMjYwNyI+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSI2MjQuOTk1IiB4Mj0iMTQ2MC45NiIgeTI9IjYyNC45OTUiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSI5NDcuNzMzIiB4Mj0iMTQ2MC45NiIgeTI9Ijk0Ny43MzMiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSIzMDIuMjU2IiB4Mj0iMTQ2MC45NiIgeTI9IjMwMi4yNTYiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSI0NjMuNjI0IiB4Mj0iMTQ2MC45NiIgeTI9IjQ2My42MjQiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSI3ODYuMzYyIiB4Mj0iMTQ2MC45NiIgeTI9Ijc4Ni4zNjIiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSIxNDAuODg1IiB4Mj0iMTQ2MC45NiIgeTI9IjE0MC44ODUiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSI1NDQuMzExIiB4Mj0iMTQ2MC45NiIgeTI9IjU0NC4zMTEiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSI4NjcuMDQ5IiB4Mj0iMTQ2MC45NiIgeTI9Ijg2Ny4wNDkiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSIyMjEuNTczIiB4Mj0iMTQ2MC45NiIgeTI9IjIyMS41NzMiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSIzODIuOTQiIHgyPSIxNDYwLjk2IiB5Mj0iMzgyLjk0IiAvPgogICAgPGxpbmUgeDE9Ii01MC42MTcyIiB5MT0iNzA1LjY4MiIgeDI9IjE0NjAuOTYiIHkyPSI3MDUuNjgyIiAvPgogICAgPGxpbmUgeDE9Ii01MC42MTcyIiB5MT0iNjAuMjAxNyIgeDI9IjE0NjAuOTYiIHkyPSI2MC4yMDE3IiAvPgogICAgPGxpbmUgeDE9IjY0Mi4xMzgiIHkxPSItNDguODQ3NyIgeDI9IjY0Mi4xMzgiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjMxOS4zOTgiIHkxPSItNDguODQ3NyIgeDI9IjMxOS4zOTgiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9Ijk2NC44NzQiIHkxPSItNDguODQ3NyIgeDI9Ijk2NC44NzQiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjEyODcuNjEiIHkxPSItNDguODQ3NyIgeDI9IjEyODcuNjEiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjE1OC4wMjgiIHkxPSItNDguODQ3NyIgeDI9IjE1OC4wMjgiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjgwMy41MDQiIHkxPSItNDguODQ3NyIgeDI9IjgwMy41MDQiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjQ4MC43NjgiIHkxPSItNDguODQ3NyIgeDI9IjQ4MC43NjgiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjExMjYuMjQiIHkxPSItNDguODQ3NyIgeDI9IjExMjYuMjQiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9Ijc3LjM0NTIiIHkxPSItNDguODQ3NyIgeDI9Ijc3LjM0NTEiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjcyMi44MjIiIHkxPSItNDguODQ3NyIgeDI9IjcyMi44MjIiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjQwMC4wODEiIHkxPSItNDguODQ3NyIgeDI9IjQwMC4wODEiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjEwNDUuNTYiIHkxPSItNDguODQ3NyIgeDI9IjEwNDUuNTYiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjEzNjguMyIgeTE9Ii00OC44NDc3IiB4Mj0iMTM2OC4zIiB5Mj0iMTExOC41NiIgLz4KICAgIDxsaW5lIHgxPSIyMzguNzE1IiB5MT0iLTQ4Ljg0NzciIHgyPSIyMzguNzE1IiB5Mj0iMTExOC41NiIgLz4KICAgIDxsaW5lIHgxPSI4ODQuMTkyIiB5MT0iLTQ4Ljg0NzciIHgyPSI4ODQuMTkyIiB5Mj0iMTExOC41NiIgLz4KICAgIDxsaW5lIHgxPSI1NjEuNDUxIiB5MT0iLTQ4Ljg0NzciIHgyPSI1NjEuNDUxIiB5Mj0iMTExOC41NiIgLz4KICAgIDxsaW5lIHgxPSIxMjA2LjkzIiB5MT0iLTQ4Ljg0NzciIHgyPSIxMjA2LjkzIiB5Mj0iMTExOC41NiIgLz4KICA8L2c+CiAgPGcgb3BhY2l0eT0iMC41IiBmaWxsPSJjdXJyZW50Q29sb3IiPgogICAgPHJlY3QgeD0iODAzLjU2MyIgeT0iNzg2LjMwNSIgd2lkdGg9IjgwLjIyNjIiIGhlaWdodD0iODAuMjI2MiIgZmlsbC1vcGFjaXR5PSIwLjQiIC8+CiAgICA8cmVjdCB4PSI0MDAuMTQiIHk9Ijc4Ni4zMDUiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9IjgwLjIyNjIiIGZpbGwtb3BhY2l0eT0iMC4xOCIgLz4KICAgIDxyZWN0IHg9IjExMjYuNzYiIHk9IjIyMi40MyIgd2lkdGg9IjgwLjIyNjIiIGhlaWdodD0iNzkuMDgwMSIgZmlsbC1vcGFjaXR5PSIwLjA4IiAvPgogICAgPHJlY3QgeD0iNDgwLjM2NyIgeT0iNDY0LjIwMyIgd2lkdGg9IjgwLjIyNjIiIGhlaWdodD0iNzkuMDgwMSIgZmlsbC1vcGFjaXR5PSIwLjEzIiAvPgogICAgPHJlY3QgeD0iMTA0NS4zOSIgeT0iMzAyLjY1NiIgd2lkdGg9IjgwLjIyNjIiIGhlaWdodD0iNzkuMDgwMSIgZmlsbC1vcGFjaXR5PSIwLjAzIiAvPgogICAgPHJlY3QgeD0iMzk5Ljk5NCIgeT0iMjIyLjQzIiB3aWR0aD0iODAuMjI2MiIgaGVpZ2h0PSI3OS4wODAxIiBmaWxsLW9wYWNpdHk9IjAuMTMiIC8+CiAgICA8cmVjdCB4PSIxMDQ1LjM5IiB5PSIyMjIuNDMiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9Ijc5LjA4MDEiIGZpbGwtb3BhY2l0eT0iMC4wOCIgLz4KICAgIDxyZWN0IHg9IjM5OS45OTQiIHk9IjQ2NC4yMDMiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9Ijc5LjA4MDEiIGZpbGwtb3BhY2l0eT0iMC4xMyIgLz4KICAgIDxyZWN0IHg9IjMxOS45MTQiIHk9Ijc4Ni4zMDUiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9IjgwLjIyNjIiIGZpbGwtb3BhY2l0eT0iMC4xOCIgLz4KICAgIDxyZWN0IHg9IjMxOS45MTQiIHk9Ijg2Ni41MzEiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9IjgxLjM3MjMiIGZpbGwtb3BhY2l0eT0iMC4xOCIgLz4KICAgIDxyZWN0IHg9IjE1OC4zMTUiIHk9IjcwNi4wNzgiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9IjgwLjIyNjIiIGZpbGwtb3BhY2l0eT0iMC4xOCIgLz4KICAgIDxyZWN0IHg9Ijk2NS4xNjIiIHk9IjYwLjgzMiIgd2lkdGg9IjgwLjIyNjIiIGhlaWdodD0iODAuMjI2MiIgZmlsbC1vcGFjaXR5PSIwLjEzIiAvPgogICAgPHJlY3QgeD0iODg0LjA1OSIgeT0iLTE5Ljg1NTUiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9Ijc5LjUwNjIiIGZpbGwtb3BhY2l0eT0iMC4xMyIgLz4KICAgIDxyZWN0IHg9Ijg4NC4wNTkiIHk9IjYwLjQwMjMiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9IjgwLjAyODUiIGZpbGwtb3BhY2l0eT0iMC4xMyIgLz4KICAgIDxyZWN0IHg9IjE1OC4zMTUiIHk9IjEzOS45MSIgd2lkdGg9IjgxLjM3MjMiIGhlaWdodD0iODIuNTE4NCIgZmlsbC1vcGFjaXR5PSIwLjE4IiAvPgogICAgPHJlY3QgeD0iNzYuOTQzNCIgeT0iNTkuNjgzNiIgd2lkdGg9IjgxLjM3MjMiIGhlaWdodD0iODAuMjI2MiIgZmlsbC1vcGFjaXR5PSIwLjE4IiAvPgogICAgPHJlY3QgeD0iLTMuMjgzMiIgeT0iNjAuODI4MSIgd2lkdGg9IjgxLjM3MjMiIGhlaWdodD0iODAuMjI2MiIgZmlsbC1vcGFjaXR5PSIwLjE4IiAvPgogICAgPHJlY3QgeD0iNzYuOTQzNCIgeT0iMTM5LjkxIiB3aWR0aD0iODEuMzcyMyIgaGVpZ2h0PSI4Mi41MTg0IiBmaWxsLW9wYWNpdHk9IjAuMTgiIC8+CiAgICA8cmVjdCB4PSI0MDAuMTQxIiB5PSItMjAuNTQzIiB3aWR0aD0iODEuMzcyMyIgaGVpZ2h0PSI4MC4yMjYyIiBmaWxsLW9wYWNpdHk9IjAuMiIgLz4KICAgIDxyZWN0IHg9IjE1OC4zMTUiIHk9IjMwMS41MDgiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9IjgxLjM3MjMiIGZpbGwtb3BhY2l0eT0iMC4xOCIgLz4KICAgIDxyZWN0IHg9IjExMjYuNzYiIHk9IjcwNi4wNzgiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9IjgwLjIyNjIiIGZpbGwtb3BhY2l0eT0iMC4xMyIgLz4KICAgIDxyZWN0IHg9IjEyMDYuOTkiIHk9Ijc4Ni4zMDUiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9IjgwLjIyNjIiIGZpbGwtb3BhY2l0eT0iMC4xMyIgLz4KICA8L2c+Cjwvc3ZnPg==");
+	--grid-vector-bg: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTQ0MCAxMDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxnIG9wYWNpdHk9IjAuMDkiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utb3BhY2l0eT0iMC43IiBzdHJva2Utd2lkdGg9IjEuMjYwNyI+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSI2MjQuOTk1IiB4Mj0iMTQ2MC45NiIgeTI9IjYyNC45OTUiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSI5NDcuNzMzIiB4Mj0iMTQ2MC45NiIgeTI9Ijk0Ny43MzMiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSIzMDIuMjU2IiB4Mj0iMTQ2MC45NiIgeTI9IjMwMi4yNTYiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSI0NjMuNjI0IiB4Mj0iMTQ2MC45NiIgeTI9IjQ2My42MjQiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSI3ODYuMzYyIiB4Mj0iMTQ2MC45NiIgeTI9Ijc4Ni4zNjIiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSIxNDAuODg1IiB4Mj0iMTQ2MC45NiIgeTI9IjE0MC44ODUiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSI1NDQuMzExIiB4Mj0iMTQ2MC45NiIgeTI9IjU0NC4zMTEiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSI4NjcuMDQ5IiB4Mj0iMTQ2MC45NiIgeTI9Ijg2Ny4wNDkiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSIyMjEuNTczIiB4Mj0iMTQ2MC45NiIgeTI9IjIyMS41NzMiIC8+CiAgICA8bGluZSB4MT0iLTUwLjYxNzIiIHkxPSIzODIuOTQiIHgyPSIxNDYwLjk2IiB5Mj0iMzgyLjk0IiAvPgogICAgPGxpbmUgeDE9Ii01MC42MTcyIiB5MT0iNzA1LjY4MiIgeDI9IjE0NjAuOTYiIHkyPSI3MDUuNjgyIiAvPgogICAgPGxpbmUgeDE9Ii01MC42MTcyIiB5MT0iNjAuMjAxNyIgeDI9IjE0NjAuOTYiIHkyPSI2MC4yMDE3IiAvPgogICAgPGxpbmUgeDE9IjY0Mi4xMzgiIHkxPSItNDguODQ3NyIgeDI9IjY0Mi4xMzgiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjMxOS4zOTgiIHkxPSItNDguODQ3NyIgeDI9IjMxOS4zOTgiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9Ijk2NC44NzQiIHkxPSItNDguODQ3NyIgeDI9Ijk2NC44NzQiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjEyODcuNjEiIHkxPSItNDguODQ3NyIgeDI9IjEyODcuNjEiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjE1OC4wMjgiIHkxPSItNDguODQ3NyIgeDI9IjE1OC4wMjgiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjgwMy41MDQiIHkxPSItNDguODQ3NyIgeDI9IjgwMy41MDQiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjQ4MC43NjgiIHkxPSItNDguODQ3NyIgeDI9IjQ4MC43NjgiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjExMjYuMjQiIHkxPSItNDguODQ3NyIgeDI9IjExMjYuMjQiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9Ijc3LjM0NTIiIHkxPSItNDguODQ3NyIgeDI9Ijc3LjM0NTEiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjcyMi44MjIiIHkxPSItNDguODQ3NyIgeDI9IjcyMi44MjIiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjQwMC4wODEiIHkxPSItNDguODQ3NyIgeDI9IjQwMC4wODEiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjEwNDUuNTYiIHkxPSItNDguODQ3NyIgeDI9IjEwNDUuNTYiIHkyPSIxMTE4LjU2IiAvPgogICAgPGxpbmUgeDE9IjEzNjguMyIgeTE9Ii00OC44NDc3IiB4Mj0iMTM2OC4zIiB5Mj0iMTExOC41NiIgLz4KICAgIDxsaW5lIHgxPSIyMzguNzE1IiB5MT0iLTQ4Ljg0NzciIHgyPSIyMzguNzE1IiB5Mj0iMTExOC41NiIgLz4KICAgIDxsaW5lIHgxPSI4ODQuMTkyIiB5MT0iLTQ4Ljg0NzciIHgyPSI4ODQuMTkyIiB5Mj0iMTExOC41NiIgLz4KICAgIDxsaW5lIHgxPSI1NjEuNDUxIiB5MT0iLTQ4Ljg0NzciIHgyPSI1NjEuNDUxIiB5Mj0iMTExOC41NiIgLz4KICAgIDxsaW5lIHgxPSIxMjA2LjkzIiB5MT0iLTQ4Ljg0NzciIHgyPSIxMjA2LjkzIiB5Mj0iMTExOC41NiIgLz4KICA8L2c+CiAgPGcgb3BhY2l0eT0iMC41IiBmaWxsPSJjdXJyZW50Q29sb3IiPgogICAgPHJlY3QgeD0iODAzLjU2MyIgeT0iNzg2LjMwNSIgd2lkdGg9IjgwLjIyNjIiIGhlaWdodD0iODAuMjI2MiIgZmlsbC1vcGFjaXR5PSIwLjQiIC8+CiAgICA8cmVjdCB4PSI0MDAuMTQiIHk9Ijc4Ni4zMDUiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9IjgwLjIyNjIiIGZpbGwtb3BhY2l0eT0iMC4xOCIgLz4KICAgIDxyZWN0IHg9IjExMjYuNzYiIHk9IjIyMi40MyIgd2lkdGg9IjgwLjIyNjIiIGhlaWdodD0iNzkuMDgwMSIgZmlsbC1vcGFjaXR5PSIwLjA4IiAvPgogICAgPHJlY3QgeD0iNDgwLjM2NyIgeT0iNDY0LjIwMyIgd2lkdGg9IjgwLjIyNjIiIGhlaWdodD0iNzkuMDgwMSIgZmlsbC1vcGFjaXR5PSIwLjEzIiAvPgogICAgPHJlY3QgeD0iMTA0NS4zOSIgeT0iMzAyLjY1NiIgd2lkdGg9IjgwLjIyNjIiIGhlaWdodD0iNzkuMDgwMSIgZmlsbC1vcGFjaXR5PSIwLjAzIiAvPgogICAgPHJlY3QgeD0iMzk5Ljk5NCIgeT0iMjIyLjQzIiB3aWR0aD0iODAuMjI2MiIgaGVpZ2h0PSI3OS4wODAxIiBmaWxsLW9wYWNpdHk9IjAuMTMiIC8+CiAgICA8cmVjdCB4PSIxMDQ1LjM5IiB5PSIyMjIuNDMiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9Ijc5LjA4MDEiIGZpbGwtb3BhY2l0eT0iMC4wOCIgLz4KICAgIDxyZWN0IHg9IjM5OS45OTQiIHk9IjQ2NC4yMDMiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9Ijc5LjA4MDEiIGZpbGwtb3BhY2l0eT0iMC4xMyIgLz4KICAgIDxyZWN0IHg9IjMxOS45MTQiIHk9Ijc4Ni4zMDUiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9IjgwLjIyNjIiIGZpbGwtb3BhY2l0eT0iMC4xOCIgLz4KICAgIDxyZWN0IHg9IjMxOS45MTQiIHk9Ijg2Ni41MzEiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9IjgxLjM3MjMiIGZpbGwtb3BhY2l0eT0iMC4xOCIgLz4KICAgIDxyZWN0IHg9IjE1OC4zMTUiIHk9IjcwNi4wNzgiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9IjgwLjIyNjIiIGZpbGwtb3BhY2l0eT0iMC4xOCIgLz4KICAgIDxyZWN0IHg9Ijk2NS4xNjIiIHk9IjYwLjgzMiIgd2lkdGg9IjgwLjIyNjIiIGhlaWdodD0iODAuMjI2MiIgZmlsbC1vcGFjaXR5PSIwLjEzIiAvPgogICAgPHJlY3QgeD0iODg0LjA1OSIgeT0iLTE5Ljg1NTUiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9Ijc5LjUwNjIiIGZpbGwtb3BhY2l0eT0iMC4xMyIgLz4KICAgIDxyZWN0IHg9Ijg4NC4wNTkiIHk9IjYwLjQwMjMiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9IjgwLjAyODUiIGZpbGwtb3BhY2l0eT0iMC4xMyIgLz4KICAgIDxyZWN0IHg9IjE1OC4zMTUiIHk9IjEzOS45MSIgd2lkdGg9IjgxLjM3MjMiIGhlaWdodD0iODIuNTE4NCIgZmlsbC1vcGFjaXR5PSIwLjE4IiAvPgogICAgPHJlY3QgeD0iNzYuOTQzNCIgeT0iNTkuNjgzNiIgd2lkdGg9IjgxLjM3MjMiIGhlaWdodD0iODAuMjI2MiIgZmlsbC1vcGFjaXR5PSIwLjE4IiAvPgogICAgPHJlY3QgeD0iLTMuMjgzMiIgeT0iNjAuODI4MSIgd2lkdGg9IjgxLjM3MjMiIGhlaWdodD0iODAuMjI2MiIgZmlsbC1vcGFjaXR5PSIwLjE4IiAvPgogICAgPHJlY3QgeD0iNzYuOTQzNCIgeT0iMTM5LjkxIiB3aWR0aD0iODEuMzcyMyIgaGVpZ2h0PSI4Mi41MTg0IiBmaWxsLW9wYWNpdHk9IjAuMTgiIC8+CiAgICA8cmVjdCB4PSI0MDAuMTQxIiB5PSItMjAuNTQzIiB3aWR0aD0iODEuMzcyMyIgaGVpZ2h0PSI4MC4yMjYyIiBmaWxsLW9wYWNpdHk9IjAuMiIgLz4KICAgIDxyZWN0IHg9IjE1OC4zMTUiIHk9IjMwMS41MDgiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9IjgxLjM3MjMiIGZpbGwtb3BhY2l0eT0iMC4xOCIgLz4KICAgIDxyZWN0IHg9IjExMjYuNzYiIHk9IjcwNi4wNzgiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9IjgwLjIyNjIiIGZpbGwtb3BhY2l0eT0iMC4xMyIgLz4KICAgIDxyZWN0IHg9IjEyMDYuOTkiIHk9Ijc4Ni4zMDUiIHdpZHRoPSI4MC4yMjYyIiBoZWlnaHQ9IjgwLjIyNjIiIGZpbGwtb3BhY2l0eT0iMC4xMyIgLz4KICA8L2c+Cjwvc3ZnPg==);
 }
 
 /*
@@ -746,7 +1293,7 @@ textarea {
 	--ext-header-bg-opacity-end: 0.95;
 	--ext-header-padding: 1.5rem;
 	--ext-header-animation-distance: 100px;
-	--ext-header-glass-tint-dark: #ffffff;
+	--ext-header-glass-tint-dark: #fff;
 	--ext-header-glass-tint-dark-end: #101010;
 	--ext-header-dark-logo-filter: brightness(0) invert(1);
 	--ext-header-logo-plate-bg: rgb(255 255 255 / 0.92);
@@ -840,7 +1387,7 @@ body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-
 }
 
 header.wp-block-template-part:has(.ext-header-glass) .ext-header-glass {
-	background-color: oklch(from var(--ext-header-glass-color-end) l c h / var(--ext-header-bg-opacity-end));
+	background-color: rgb(from var(--ext-header-glass-color-end) r g b / var(--ext-header-bg-opacity-end));
 	backdrop-filter: blur(var(--ext-header-blur-end));
 	border-radius: 1rem;
 }
@@ -851,6 +1398,7 @@ header.wp-block-template-part:has(.ext-header-glass) .ext-header-glass {
    - Wrapper gets white text when used with overlay or glass
    - Inner blocks reset their colors to inherit
    =========================================================== */
+
 /* Dark variant only takes effect on pages with a fullscreen hero.
    On subpages, dark+glass falls back to the light glass defaults. */
 body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) .ext-header-glass.ext-header--dark {
@@ -925,7 +1473,7 @@ body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-
 
 body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:not(.is-past-hero):has(.ext-header-overlay.ext-header--dark) svg:not(.cloned-for-mobile *),
 body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-glass.ext-header--dark) svg:not(.cloned-for-mobile *) {
-	fill: currentColor;
+	fill: currentcolor;
 }
 
 /* The white-knockout filter only suits a logo we generated: those are single
@@ -1040,6 +1588,7 @@ header.wp-block-template-part.is-past-hero:has(.ext-header-overlay.ext-header--d
    =========================================================== */
 header.wp-block-template-part .ext-header-sticky--floating-pill.ext-animate {
 	opacity: 1 !important;
+	transform: none !important;
 }
 
 header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill) {
@@ -1061,7 +1610,7 @@ body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-
 
 /* Initial glass state (over hero): override static glass-end with start values */
 body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill.ext-header-glass) .ext-header-sticky.ext-header-sticky--floating-pill.ext-header-glass {
-	background-color: oklch(from var(--ext-header-glass-color-start) l c h / var(--ext-header-bg-opacity-start));
+	background-color: rgb(from var(--ext-header-glass-color-start) r g b / var(--ext-header-bg-opacity-start));
 	backdrop-filter: blur(var(--ext-header-blur-start));
 }
 
@@ -1073,6 +1622,7 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 }
 
 @media (max-width: 782px) {
+
 	body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-sticky.ext-header-sticky--floating-pill) {
 		top:
 			calc(var(--ext-header-offset) +
@@ -1112,12 +1662,12 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 @keyframes ext-header-glass-intensify {
 
 	from {
-		background-color: oklch(from var(--ext-header-glass-color-start) l c h / var(--ext-header-bg-opacity-start));
+		background-color: rgb(from var(--ext-header-glass-color-start) r g b / var(--ext-header-bg-opacity-start));
 		backdrop-filter: blur(var(--ext-header-blur-start));
 	}
 
 	to {
-		background-color: oklch(from var(--ext-header-glass-color-end) l c h / var(--ext-header-bg-opacity-end));
+		background-color: rgb(from var(--ext-header-glass-color-end) r g b / var(--ext-header-bg-opacity-end));
 		backdrop-filter: blur(var(--ext-header-blur-end));
 		box-shadow: 0 14px 28px -10px rgb(0 0 0 / 0.14), 0 -14px 28px -10px rgb(0 0 0 / 0.14);
 	}
@@ -1126,7 +1676,7 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 @keyframes ext-header-glass-intensify-no-hero {
 
 	from {
-		background-color: oklch(from var(--ext-header-glass-color-start) l c h / var(--ext-header-bg-opacity-start));
+		background-color: rgb(from var(--ext-header-glass-color-start) r g b / var(--ext-header-bg-opacity-start));
 		backdrop-filter: blur(var(--ext-header-blur-start));
 		box-shadow: none;
 		translate: 0 0;
@@ -1135,7 +1685,7 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
 	}
 
 	to {
-		background-color: oklch(from var(--ext-header-glass-color-end) l c h / var(--ext-header-bg-opacity-end));
+		background-color: rgb(from var(--ext-header-glass-color-end) r g b / var(--ext-header-bg-opacity-end));
 		backdrop-filter: blur(var(--ext-header-blur-end));
 		box-shadow: 0 14px 28px -10px rgb(0 0 0 / 0.14), 0 -14px 28px -10px rgb(0 0 0 / 0.14);
 
@@ -1176,4 +1726,36 @@ body.admin-bar:has(.entry-content > .ext-hero-section.ext-hero-section--full-scr
    stops wrapping. */
 header:has(> header.wp-block-template-part :where(.ext-header-overlay)) {
 	display: contents;
+}
+
+/* ===========================================================
+   Empty section band
+   =========================================================== */
+
+/* A band that rendered nothing, such as related products for a product with none, draws no fill or padding. */
+.ext-section:not(:has(*)) {
+	display: none;
+}
+
+/* ===========================================================
+   Pagination on a phone
+   =========================================================== */
+
+/* Under 600px three tracks wrap Previous and Next onto three lines, so the numbers take their own row. */
+@media (max-width: 599px) {
+
+	.wp-block-query-pagination.is-layout-flex {
+		grid-template-columns: 1fr 1fr;
+		row-gap: var(--wp--preset--spacing--20);
+	}
+
+	.wp-block-query-pagination > .wp-block-query-pagination-numbers {
+		grid-column: 1 / -1;
+		grid-row: 2;
+		justify-self: center;
+	}
+
+	.wp-block-query-pagination > .wp-block-query-pagination-next {
+		grid-column: 2;
+	}
 }

@@ -2,3 +2,6 @@ node_modules/
 vendor/
 build/
 .claude/
+# Splitting a block's style attribute drops core's solid style on its borders.
+templates/
+parts/

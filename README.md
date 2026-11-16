@@ -23,9 +23,8 @@ The theme follows the [WordPress Coding Standards](https://developer.wordpress.o
 - `npm run lint:php` checks PHP with PHPCS, WPCS and PHPCompatibilityWP (`phpcs.xml.dist`); `npm run lint:php:fix` fixes what it can.
 - `npm run lint:css` checks CSS with Stylelint; `npm run lint:css:fix` fixes what it can.
 - `npm run lint:js` checks JavaScript with ESLint and Prettier; `npm run lint:js:fix` fixes what it can.
-- `npm run format:check` checks template and part HTML with Prettier; `npm run format` rewrites it.
 
-`assets/css/woocommerce.css`, `assets/css/masteriyo.css`, `assets/css/hide-block-presets.css` and the `retired-names` block in `style.css` are generated from a design source outside this repo, so Stylelint skips them.
+Prettier never touches `templates/` or `parts/`. Splitting a block's `style` attribute across lines stops WordPress from giving a border colour or width its solid style, so the border disappears.
 
 ## Resources
 

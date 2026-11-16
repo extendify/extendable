@@ -1768,3 +1768,6 @@ body.masteriyo .masteriyo-order.masteriyo-container a {
 	border-radius: var(--wp--custom--radius--panel);
 	color: var(--wp--custom--color--text-error);
 }
+
+/* masteriyo/courses: every vibe's store card is tertiary, so on the tertiary band the card would vanish. */
+.masteriyo-course--card:is(.has-tertiary-background-color.has-background *) { background-color: var(--wp--preset--color--background) !important; --wp--custom--color--text-weak: var(--wp--preset--color--foreground-alt); --wp--custom--color--background-base: var(--wp--preset--color--background); --wp--custom--color--stroke-strong: color-mix(in oklab, var(--wp--preset--color--foreground) 45%, var(--wp--preset--color--background)); --wp--custom--color--stroke-weak: color-mix(in oklab, var(--wp--preset--color--foreground) 18%, var(--wp--preset--color--background)); }

@@ -2,6 +2,7 @@
  * Masteriyo's blocks on the design system. Loaded only while Masteriyo is active.
  * Generated; edit the source, not this file.
  */
+
 /* Masteriyo turns every block support off, so a theme.json leaf has nothing to attach to; the
    base is CSS instead, pointing its ~40 :root colour variables (assets/css/public.css) at
    lattice's semantic tokens in one rule, reaching the course-taking app too. Hand-authored, not
@@ -15,8 +16,10 @@
 	--masteriyo-color-heading: var(--wp--custom--color--text-strong);
 	--masteriyo-color-text: var(--wp--custom--color--text-strong);
 	--masteriyo-color-text-light: var(--wp--custom--color--text-weak);
+
 	/* A course card's and a related-course card's title link rests on this, not --masteriyo-color-text. */
 	--masteriyo-color-grey-dark: var(--wp--custom--color--text-strong);
+
 	/* A closed curriculum section's title reads this, not --masteriyo-color-text. */
 	--masteriyo-text-color: var(--wp--custom--color--text-strong);
 	--masteriyo-color-border: var(--wp--custom--color--stroke-weak);
@@ -25,12 +28,15 @@
 	--masteriyo-color-info: var(--wp--custom--color--fill-info-strong);
 	--masteriyo-color-success: var(--wp--custom--color--fill-success-strong);
 	--masteriyo-color-warning: var(--wp--custom--color--fill-warning-strong);
+
 	/* The Courses page's search icon and placeholder read this. */
 	--masteriyo-color-placeholder: var(--wp--custom--color--text-weak);
+
 	/* Tints Masteriyo derives from its factory blue and never reprints, so no setting moves them. */
 	--masteriyo-color-primary-lightest: var(--wp--custom--color--fill-brand-weaker);
 	--masteriyo-color-primary-a10: var(--wp--custom--color--fill-brand-weaker);
 	--masteriyo-color-primary-a20: var(--wp--custom--color--fill-brand-weak);
+
 	/* A hovered link reads this; the UI link keeps its ink and underlines instead. */
 	--masteriyo-color-primary-a80: var(--wp--custom--color--text-strong);
 }
@@ -147,23 +153,23 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 }
 
 /* masteriyo/courses: the Modern card's title and price, off Masteriyo's hardcoded near-blacks. */
-.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title .masteriyo-course-title,
-.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title .masteriyo-course-title,
-.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--rating-amount .masteriyo-archive-card__content--amount .masteriyo-sale-price,
-.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--rating-amount .masteriyo-archive-card__content--amount .masteriyo-sale-price {
+.masteriyo-course-list-display-section[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title .masteriyo-course-title,
+.masteriyo-related-post[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title .masteriyo-course-title,
+.masteriyo-course-list-display-section[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__content--rating-amount .masteriyo-archive-card__content--amount .masteriyo-sale-price,
+.masteriyo-related-post[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__content--rating-amount .masteriyo-archive-card__content--amount .masteriyo-sale-price {
 	color: var(--wp--custom--color--text-strong);
 }
 
 /* masteriyo/courses: the Overlay card's title sits on the photo, so it takes the media ink, not Masteriyo's white, which follows the page. */
 .masteriyo-course-cards .masteriyo-course-card__content--course-title .masteriyo-course-title,
-.masteriyo-course-list-display-section[data-layout=layout_2] .masteriyo-course-cards .masteriyo-course-card__content--course-title:hover .masteriyo-course-title,
-.masteriyo-related-post[data-layout=layout_2] .masteriyo-course-cards .masteriyo-course-card__content--course-title:hover .masteriyo-course-title {
+.masteriyo-course-list-display-section[data-layout="layout_2"] .masteriyo-course-cards .masteriyo-course-card__content--course-title:hover .masteriyo-course-title,
+.masteriyo-related-post[data-layout="layout_2"] .masteriyo-course-cards .masteriyo-course-card__content--course-title:hover .masteriyo-course-title {
 	color: var(--wp--custom--color--text-media-strong);
 }
 
 /* masteriyo/courses: the same title under the pointer underlines, as a UI link does. */
-.masteriyo-course-list-display-section[data-layout=layout_2] .masteriyo-course-cards .masteriyo-course-card__content--course-title:hover .masteriyo-course-title,
-.masteriyo-related-post[data-layout=layout_2] .masteriyo-course-cards .masteriyo-course-card__content--course-title:hover .masteriyo-course-title {
+.masteriyo-course-list-display-section[data-layout="layout_2"] .masteriyo-course-cards .masteriyo-course-card__content--course-title:hover .masteriyo-course-title,
+.masteriyo-related-post[data-layout="layout_2"] .masteriyo-course-cards .masteriyo-course-card__content--course-title:hover .masteriyo-course-title {
 	text-decoration: var(--wp--custom--link--ui--hover-decoration);
 }
 
@@ -389,22 +395,22 @@ body.ext-masteriyo-factory-button-size .masteriyo-btn.masteriyo-btn-primary {
 }
 
 /* masteriyo/courses, masteriyo/single-course: the Modern card's preview button, whose label Masteriyo sets to its white. */
-.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__image-preview-button,
-.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__image-preview-button {
+.masteriyo-course-list-display-section[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__image-preview-button,
+.masteriyo-related-post[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__image-preview-button {
 	color: var(--wp--custom--color--text-on-brand);
 }
 
 /* masteriyo/courses, masteriyo/single-course: the Modern preview button's icon, on the same ink. */
-.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__image-preview-button--icon svg,
-.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__image-preview-button--icon svg {
+.masteriyo-course-list-display-section[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__image-preview-button--icon svg,
+.masteriyo-related-post[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__image-preview-button--icon svg {
 	fill: var(--wp--custom--color--text-on-brand);
 }
 
 /* masteriyo/courses, masteriyo/course-categories, masteriyo/single-course: a title link under the pointer underlines as a UI link does; Masteriyo's own turns it the brand fill, unreadable as text. */
 .masteriyo-course--content .masteriyo-course--content__title a:hover,
 .masteriyo-course--content .masteriyo-course--content__title a:focus,
-.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title:hover .masteriyo-course-title,
-.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title:hover .masteriyo-course-title,
+.masteriyo-course-list-display-section[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title:hover .masteriyo-course-title,
+.masteriyo-related-post[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title:hover .masteriyo-course-title,
 .masteriyo-category-card h2 a:hover,
 .masteriyo-category-card__title a:hover {
 	color: var(--ext-masteriyo-link-ink, var(--masteriyo-color-primary));
@@ -623,76 +629,76 @@ body.masteriyo-courses-page {
 }
 
 /* masteriyo/single-course-immersive: the hero's text in the dark overlay's light ink, the same in every palette, under the pointer too. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__title,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__badges a,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__badges span,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__meta,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__meta-item--difficulty,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__author-name,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__badges a:hover,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__badges span:hover {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero__title,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero__badges a,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero__badges span,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero__meta,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero__meta-item--difficulty,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero__author-name,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero__badges a:hover,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero__badges span:hover {
 	color: var(--wp--custom--color--text-media-strong);
 }
 
 /* masteriyo/single-course-immersive: the band's heading and subheading, on the same ink. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-cta-band__heading,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-cta-band__subheading {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-cta-band__heading,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-cta-band__subheading {
 	color: var(--wp--custom--color--text-on-brand);
 }
 
 /* masteriyo/single-course-immersive: the glow was hardcoded blue, clashing against a non-blue brand fill. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-cta-band {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-cta-band {
 	background-image: none;
 }
 
 /* masteriyo/single-course-immersive: an edge, so the button reads against its own band colour. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-cta-band__action .masteriyo-btn,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-cta-band__action .masteriyo-enroll-btn {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-cta-band__action .masteriyo-btn,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-cta-band__action .masteriyo-enroll-btn {
 	border-color: var(--wp--custom--color--text-on-brand);
 }
 
 /* masteriyo/single-course-immersive: a closed section's chevron reads as a neutral icon, not Masteriyo's own hardcoded fill. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-single-body-accordion-icon svg {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-single-body-accordion-icon svg {
 	fill: var(--wp--custom--color--icon-default);
 }
 
 /* masteriyo/single-course-immersive: the open header wears the brand fill; its title and counts take the button's ink. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion.active > .masteriyo-single-body__main--curriculum-content-bottom__accordion--header .masteriyo-single-body__main--curriculum-content-bottom__accordion--header-title,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion.active > .masteriyo-single-body__main--curriculum-content-bottom__accordion--header .masteriyo-single-body__main--curriculum-content-bottom__accordion--header-misc,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion.active > .masteriyo-single-body__main--curriculum-content-bottom__accordion--header .masteriyo-single-body__main--curriculum-content-bottom__accordion--header-misc .masteriyo-single-body-accordion-info {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion.active > .masteriyo-single-body__main--curriculum-content-bottom__accordion--header .masteriyo-single-body__main--curriculum-content-bottom__accordion--header-title,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion.active > .masteriyo-single-body__main--curriculum-content-bottom__accordion--header .masteriyo-single-body__main--curriculum-content-bottom__accordion--header-misc,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion.active > .masteriyo-single-body__main--curriculum-content-bottom__accordion--header .masteriyo-single-body__main--curriculum-content-bottom__accordion--header-misc .masteriyo-single-body-accordion-info {
 	color: var(--wp--custom--color--text-on-brand);
 }
 
 /* masteriyo/single-course-immersive: the open section's chevron, on the same ink. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion.active > .masteriyo-single-body__main--curriculum-content-bottom__accordion--header .masteriyo-single-body-accordion-icon svg {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion.active > .masteriyo-single-body__main--curriculum-content-bottom__accordion--header .masteriyo-single-body-accordion-icon svg {
 	fill: var(--wp--custom--color--text-on-brand);
 }
 
 /* masteriyo/single-course-immersive: a closed section's lesson count, off Masteriyo's hardcoded grey. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-single-body__main--curriculum-content-bottom__accordion--header-misc .masteriyo-single-body-accordion-info {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-single-body__main--curriculum-content-bottom__accordion--header-misc .masteriyo-single-body-accordion-info {
 	color: var(--wp--custom--color--text-weak);
 }
 
 /* masteriyo/single-course-immersive: unreadable at Masteriyo's own hardcoded near-black on a dark palette. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion--header::before {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion--header::before {
 	color: var(--wp--custom--color--text-strong);
 }
 
 /* masteriyo/single-course-immersive: our readable ink while the owner's Primary color stays factory, their own colour once changed. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-top--expand-btn {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-top--expand-btn {
 	color: var(--ext-masteriyo-link-ink, var(--masteriyo-color-primary));
 }
 
 /* masteriyo/single-course-immersive: the same ink, so the hover-reveal underline follows it too. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-top--expand-btn::before {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-top--expand-btn::before {
 	background: var(--ext-masteriyo-link-ink, var(--masteriyo-color-primary));
 }
 
 /* masteriyo/single-course-immersive: our readable icon ink while the owner's Primary color stays factory, their own colour once changed. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card__includes-item svg,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card__includes-item svg path,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-instructor__stat svg {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-enroll-card__includes-item svg,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-enroll-card__includes-item svg path,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-instructor__stat svg {
 	fill: var(--ext-masteriyo-icon-ink, var(--masteriyo-color-primary));
 }
 
@@ -727,17 +733,17 @@ body.masteriyo-courses-page {
 }
 
 /* masteriyo/single-course-immersive: the hero is the dark-overlay part; Masteriyo's brand wash comes out pale on a light brand, under white text. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 }
 
 /* masteriyo/single-course-immersive: the same scrim over the course photo, in place of the brand wash. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero--has-image {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero--has-image {
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), var(--masteriyo-immersive-hero-image);
 }
 
 /* masteriyo/single-course-immersive: the hero on the gutter and wide width; its foot stays Masteriyo's so the enroll card clears the author. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__inner {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero__inner {
 	max-width: none;
 	padding-left: max(var(--wp--style--root--padding-left), calc(50vw - var(--wp--style--global--wide-size) / 2));
 	padding-right: max(var(--wp--style--root--padding-right), calc(50vw - var(--wp--style--global--wide-size) / 2));
@@ -745,29 +751,29 @@ body.masteriyo-courses-page {
 }
 
 /* masteriyo/single-course-immersive: the body columns on the same width and gutter. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-body {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-body {
 	column-gap: var(--wp--preset--spacing--64);
 	padding-left: max(var(--wp--style--root--padding-left), calc(50vw - var(--wp--style--global--wide-size) / 2));
 	padding-right: max(var(--wp--style--root--padding-right), calc(50vw - var(--wp--style--global--wide-size) / 2));
 }
 
 /* masteriyo/single-course-immersive: the main column's top and its sections' rhythm, the template's section gap in place of Masteriyo's 56px. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-body__main {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-body__main {
 	padding-top: var(--wp--preset--spacing--64);
 }
 
 /* masteriyo/single-course-immersive: the same gap between sections. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-body__main > .masteriyo-immersive-section {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-body__main > .masteriyo-immersive-section {
 	margin-bottom: var(--wp--preset--spacing--64);
 }
 
 /* masteriyo/single-course-immersive: the closing band on the same gutter, at the section padding. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-cta-band {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-cta-band {
 	padding: var(--wp--preset--spacing--64) max(var(--wp--style--root--padding-right), calc(50vw - var(--wp--style--global--wide-size) / 2));
 }
 
 /* masteriyo/single-course-immersive: the course title, the Woo product title's heading-1 look, in place of Masteriyo's 52px at 800. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__title {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero__title {
 	font-size: var(--wp--preset--font-size--large);
 	font-weight: var(--wp--custom--text--heading-1--font-weight);
 	letter-spacing: var(--wp--custom--text--heading-1--letter-spacing);
@@ -776,7 +782,7 @@ body.masteriyo-courses-page {
 }
 
 /* masteriyo/single-course-immersive: the hero's category as the badge part on the dark overlay, not Masteriyo's 13px pill. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__badges a {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero__badges a {
 	background: var(--wp--custom--color--fill-media-weak);
 	border-color: var(--wp--custom--color--stroke-media-weak);
 	border-radius: var(--wp--custom--radius--chip);
@@ -788,20 +794,20 @@ body.masteriyo-courses-page {
 }
 
 /* masteriyo/single-course-immersive: the meta line and author at the theme's small size, in the dark overlay's quiet ink. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__meta,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__author-name {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero__meta,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero__author-name {
 	color: var(--wp--custom--color--text-media-weak);
 	font-size: var(--wp--preset--font-size--small);
 }
 
 /* masteriyo/single-course-immersive: the author's avatar keeps its round corner, without Masteriyo's white ring shadow. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-hero__author-avatar {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-hero__author-avatar {
 	border-color: var(--wp--custom--color--stroke-media-strong);
 	box-shadow: none;
 }
 
 /* masteriyo/single-course-immersive: each section's title at heading-5, under the course title and over the body text. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-section__title {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-section__title {
 	font-size: var(--wp--custom--text--heading-5--font-size);
 	font-weight: var(--wp--custom--text--heading-5--font-weight);
 	letter-spacing: var(--wp--custom--text--heading-5--letter-spacing);
@@ -810,7 +816,7 @@ body.masteriyo-courses-page {
 }
 
 /* masteriyo/single-course-immersive: the enroll card, the buy box's framed face raised over the hero, in place of Masteriyo's 16px corners and heavy shadow. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-enroll-card {
 	background: var(--wp--custom--store-card--background);
 	border-color: var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
@@ -820,25 +826,25 @@ body.masteriyo-courses-page {
 }
 
 /* masteriyo/single-course-immersive: the card's photo inset by the card's own group inset. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card__media {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-enroll-card__media {
 	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--30) 0;
 }
 
 /* masteriyo/single-course-immersive: a nested photo's corner one step under the card's. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card__media img {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-enroll-card__media img {
 	border-radius: var(--wp--custom--radius--panel);
 	padding: 0;
 }
 
 /* masteriyo/single-course-immersive: the card body on the same inset. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card__body {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-enroll-card__body {
 	padding: var(--wp--preset--spacing--25) var(--wp--preset--spacing--30) var(--wp--preset--spacing--30);
 }
 
 /* masteriyo/single-course-immersive: the price part's heading look, in place of Masteriyo's 32px at 800 and its hardcoded near-black. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card .masteriyo-course-price .current-amount,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card .masteriyo-course-price .current-amount .masteriyo-price-amount,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card .masteriyo-course-price .current-amount .amount {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-enroll-card .masteriyo-course-price .current-amount,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-enroll-card .masteriyo-course-price .current-amount .masteriyo-price-amount,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-enroll-card .masteriyo-course-price .current-amount .amount {
 	color: var(--wp--custom--color--text-strong);
 	font-size: var(--wp--custom--text--heading-5--font-size);
 	font-weight: var(--wp--custom--text--heading-5--font-weight);
@@ -846,35 +852,35 @@ body.masteriyo-courses-page {
 }
 
 /* masteriyo/single-course-immersive: a sale's struck-through price at the small size. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card .masteriyo-course-price .old-amount {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-enroll-card .masteriyo-course-price .old-amount {
 	font-size: var(--wp--preset--font-size--small);
 }
 
 /* masteriyo/single-course-immersive: the card's and the band's buttons at the main button's size and label weight, not Masteriyo's 700 on a padded box. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card .masteriyo-btn,
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-cta-band__action .masteriyo-btn {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-enroll-card .masteriyo-btn,
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-cta-band__action .masteriyo-btn {
 	font-weight: var(--wp--custom--typography--font-weight--medium);
 	padding: 0 1em;
 }
 
 /* masteriyo/single-course-immersive: "This course includes" as a small label. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-enroll-card__includes-title {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-enroll-card__includes-title {
 	font-size: var(--wp--preset--font-size--small);
 	font-weight: var(--wp--custom--typography--font-weight--semi-bold);
 }
 
 /* masteriyo/single-course-immersive: each curriculum section on the card's corner, not Masteriyo's 12px. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion {
 	border-radius: var(--wp--custom--radius--card);
 }
 
 /* masteriyo/single-course-immersive: the section header's own corner follows, so an open header's fill never shows Masteriyo's 3px. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion--header {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-curriculum .masteriyo-single-body__main--curriculum-content-bottom__accordion--header {
 	border-radius: 0;
 }
 
 /* masteriyo/single-course-immersive, masteriyo/course-author: the instructor card on the vibe's card face and inset. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-instructor__card {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-instructor__card {
 	background: var(--wp--custom--store-card--background);
 	border-color: var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
@@ -885,14 +891,14 @@ body.masteriyo-courses-page {
 }
 
 /* masteriyo/single-course-immersive, masteriyo/course-author: the name as the person-name part's label. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-instructor__name {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-instructor__name {
 	font-size: var(--wp--custom--text--label--font-size);
 	font-weight: var(--wp--custom--text--label--font-weight);
 	line-height: var(--wp--custom--text--label--line-height);
 }
 
 /* masteriyo/single-course-immersive, masteriyo/course-author: the role as the job-title part's quiet small text. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-instructor__role {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-instructor__role {
 	color: var(--wp--custom--color--text-weak);
 	font-size: var(--wp--custom--text--text-small--font-size);
 	line-height: var(--wp--custom--text--text-small--line-height);
@@ -904,7 +910,7 @@ body.masteriyo-courses-page {
 }
 
 /* masteriyo/single-course-immersive: the closing band's heading a step under the course title, so the page keeps one top heading. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-cta-band__heading {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-cta-band__heading {
 	font-size: var(--wp--preset--font-size--large);
 	font-weight: var(--wp--custom--text--heading-2--font-weight);
 	letter-spacing: var(--wp--custom--text--heading-2--letter-spacing);
@@ -913,7 +919,7 @@ body.masteriyo-courses-page {
 }
 
 /* masteriyo/single-course-immersive: the band's subline at the paragraph's own size. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-cta-band__subheading {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-cta-band__subheading {
 	font-size: var(--wp--custom--text--text-regular--font-size);
 	margin: 0 0 var(--wp--preset--spacing--30);
 }
@@ -956,34 +962,34 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 }
 
 /* masteriyo/single-course-immersive: the course description at the paragraph's own size, not Masteriyo's 17px. */
-.masteriyo-single-course--wrapper[data-layout=immersive] .masteriyo-immersive-description__content {
+.masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-description__content {
 	font-size: var(--wp--custom--text--text-regular--font-size);
 	line-height: var(--wp--custom--text--text-regular--line-height);
 }
 
 /* masteriyo/single-course: Default and Modern on the gutter and wide width, not Masteriyo's 1200px box at the screen edge. */
-.masteriyo-single-course--wrapper[data-layout=default],
-.masteriyo-single-course--wrapper[data-layout=modern] {
+.masteriyo-single-course--wrapper[data-layout="default"],
+.masteriyo-single-course--wrapper[data-layout="modern"] {
 	padding-left: max(var(--wp--style--root--padding-left), calc(50vw - var(--wp--style--global--wide-size) / 2));
 	padding-right: max(var(--wp--style--root--padding-right), calc(50vw - var(--wp--style--global--wide-size) / 2));
 }
 
 /* masteriyo/single-course: Minimal leaves its wrapper open around the theme footer, so its rows take the gutter, not the wrapper. */
-.masteriyo-single-course--wrapper[data-layout=minimal] > .masteriyo-course--img-wrap,
-.masteriyo-single-course--wrapper[data-layout=minimal] > .masteriyo-single-main-content-wrapper,
-.masteriyo-single-course--wrapper[data-layout=minimal] > .masteriyo-single-body {
+.masteriyo-single-course--wrapper[data-layout="minimal"] > .masteriyo-course--img-wrap,
+.masteriyo-single-course--wrapper[data-layout="minimal"] > .masteriyo-single-main-content-wrapper,
+.masteriyo-single-course--wrapper[data-layout="minimal"] > .masteriyo-single-body {
 	padding-left: max(var(--wp--style--root--padding-left), calc(50vw - var(--wp--style--global--wide-size) / 2));
 	padding-right: max(var(--wp--style--root--padding-right), calc(50vw - var(--wp--style--global--wide-size) / 2));
 }
 
 /* masteriyo/single-course: the page's top at the template's top padding, not Masteriyo's 60px. */
-.masteriyo-w-100.masteriyo-container:has(> .masteriyo-single-course--wrapper:not([data-layout=immersive])) {
+.masteriyo-w-100.masteriyo-container:has(> .masteriyo-single-course--wrapper:not([data-layout="immersive"])) {
 	margin-top: var(--wp--preset--spacing--30);
 }
 
 /* masteriyo/single-course: the course title, the Woo product title's heading-1 look, off Masteriyo's hardcoded near-black. */
-.masteriyo-single-course--wrapper:not([data-layout=immersive]) .masteriyo-single-course--title,
-.masteriyo-single-course--wrapper:not([data-layout=immersive]) .masteriyo-single-header__content--title {
+.masteriyo-single-course--wrapper:not([data-layout="immersive"]) .masteriyo-single-course--title,
+.masteriyo-single-course--wrapper:not([data-layout="immersive"]) .masteriyo-single-header__content--title {
 	color: var(--wp--custom--color--text-strong);
 	font-size: var(--wp--preset--font-size--large);
 	font-weight: var(--wp--custom--text--heading-1--font-weight);
@@ -992,9 +998,9 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 }
 
 /* masteriyo/single-course: the price box's price, the price part's heading look, off Masteriyo's hardcoded near-black. */
-.masteriyo-single-course--wrapper:not([data-layout=immersive]) .masteriyo-course-price .current-amount,
-.masteriyo-single-course--wrapper:not([data-layout=immersive]) .masteriyo-course-price .current-amount .masteriyo-price-amount,
-.masteriyo-single-course--wrapper:not([data-layout=immersive]) .masteriyo-course-price .current-amount .amount {
+.masteriyo-single-course--wrapper:not([data-layout="immersive"]) .masteriyo-course-price .current-amount,
+.masteriyo-single-course--wrapper:not([data-layout="immersive"]) .masteriyo-course-price .current-amount .masteriyo-price-amount,
+.masteriyo-single-course--wrapper:not([data-layout="immersive"]) .masteriyo-course-price .current-amount .amount {
 	color: var(--wp--custom--color--text-strong);
 	font-size: var(--wp--custom--text--heading-5--font-size);
 	font-weight: var(--wp--custom--text--heading-5--font-weight);
@@ -1009,21 +1015,21 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 }
 
 /* masteriyo/single-course, masteriyo/course-overview: the overview at the paragraph's own size and body ink, off Masteriyo's 15px and its greys. */
-.masteriyo-single-course--wrapper:not([data-layout=immersive]) .masteriyo-single-course--main__content .course-overview,
-.masteriyo-single-course--wrapper:not([data-layout=immersive]) .masteriyo-single-course--main__content .course-overview p,
-.masteriyo-single-course--wrapper:not([data-layout=immersive]) .masteriyo-single-body__main .masteriyo-single-body__main--content .course-overview p {
+.masteriyo-single-course--wrapper:not([data-layout="immersive"]) .masteriyo-single-course--main__content .course-overview,
+.masteriyo-single-course--wrapper:not([data-layout="immersive"]) .masteriyo-single-course--main__content .course-overview p,
+.masteriyo-single-course--wrapper:not([data-layout="immersive"]) .masteriyo-single-body__main .masteriyo-single-body__main--content .course-overview p {
 	color: var(--wp--custom--color--text-strong);
 	font-size: var(--wp--custom--text--text-regular--font-size);
 	line-height: var(--wp--custom--text--text-regular--line-height);
 }
 
 /* masteriyo/single-course, masteriyo/course-stats: the stats line at the theme's small size. */
-.masteriyo-single-course--wrapper:not([data-layout=immersive]) .masteriyo-course-statistics .masteriyo-stats span {
+.masteriyo-single-course--wrapper:not([data-layout="immersive"]) .masteriyo-course-statistics .masteriyo-stats span {
 	font-size: var(--wp--preset--font-size--small);
 }
 
 /* masteriyo/single-course: Default's main box on the vibe's card face, in place of Masteriyo's 8px corners and border. */
-.masteriyo-single-course--wrapper[data-layout=default] .masteriyo-single-course--main {
+.masteriyo-single-course--wrapper[data-layout="default"] .masteriyo-single-course--main {
 	background-color: var(--wp--custom--store-card--background);
 	border-color: var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
@@ -1034,12 +1040,12 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 }
 
 /* masteriyo/single-course: its photo's corners facing the text stay square, the top ones the card's. */
-.masteriyo-single-course--wrapper[data-layout=default] .masteriyo-single-course--main .masteriyo-feature-img img {
+.masteriyo-single-course--wrapper[data-layout="default"] .masteriyo-single-course--main .masteriyo-feature-img img {
 	border-radius: var(--wp--custom--radius--card) var(--wp--custom--radius--card) 0 0;
 }
 
 /* masteriyo/single-course: Default's price box, the buy box's framed face. */
-.masteriyo-single-course--wrapper[data-layout=default] .masteriyo-right-sidebar-area .masteriyo-single-course--aside {
+.masteriyo-single-course--wrapper[data-layout="default"] .masteriyo-right-sidebar-area .masteriyo-single-course--aside {
 	background-color: var(--wp--custom--store-card--background);
 	border-color: var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
@@ -1049,8 +1055,8 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 }
 
 /* masteriyo/single-course: Modern's header band and price box on the vibe's card face, in place of Masteriyo's 12px corners and its own shadow. */
-.masteriyo-single-course--wrapper[data-layout=modern] .masteriyo-single-header,
-.masteriyo-single-course--wrapper[data-layout=modern] .masteriyo-single-course--card {
+.masteriyo-single-course--wrapper[data-layout="modern"] .masteriyo-single-header,
+.masteriyo-single-course--wrapper[data-layout="modern"] .masteriyo-single-course--card {
 	background: var(--wp--custom--store-card--background);
 	border-color: var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
@@ -1060,29 +1066,29 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 }
 
 /* masteriyo/single-course: Modern's header photo, a nested corner one step under the card's, without Masteriyo's border. */
-.masteriyo-single-course--wrapper[data-layout=modern] .masteriyo-single-header__image img {
+.masteriyo-single-course--wrapper[data-layout="modern"] .masteriyo-single-header__image img {
 	border: 0;
 	border-radius: var(--wp--custom--radius--panel);
 }
 
 /* masteriyo/single-course: Minimal's lead photo on the media corner, not Masteriyo's 8px. */
-.masteriyo-container .masteriyo-single-course--wrapper[data-layout=minimal] > .masteriyo-course--img-wrap .masteriyo-feature-img img {
+.masteriyo-container .masteriyo-single-course--wrapper[data-layout="minimal"] > .masteriyo-course--img-wrap .masteriyo-feature-img img {
 	border-radius: var(--wp--custom--radius--media);
 }
 
 /* masteriyo/single-course, masteriyo/course-author: the author's avatar keeps its round corner, without Masteriyo's ring shadow. */
-.masteriyo-single-course--wrapper:not([data-layout=immersive]) .masteriyo-course-author img {
+.masteriyo-single-course--wrapper:not([data-layout="immersive"]) .masteriyo-course-author img {
 	box-shadow: none;
 }
 
 /* masteriyo/single-course: Minimal prints Related Courses inside its body, so it takes the section gap to the footer there. */
-.masteriyo-single-course--wrapper[data-layout=minimal] .masteriyo-related-post {
+.masteriyo-single-course--wrapper[data-layout="minimal"] .masteriyo-related-post {
 	padding-bottom: var(--wp--preset--spacing--64);
 }
 
 /* masteriyo/courses, masteriyo/single-course: the Modern card on the vibe's card face, in place of Masteriyo's 12px corners and own shadow. */
-.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card,
-.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card {
+.masteriyo-course-list-display-section[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card,
+.masteriyo-related-post[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card {
 	background-color: var(--wp--custom--store-card--background);
 	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
@@ -1093,15 +1099,15 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 }
 
 /* masteriyo/courses, masteriyo/single-course: the inset photo on the panel corner, without Masteriyo's 6px corners and border. */
-.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__image .masteriyo-course-thumbnail,
-.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__image .masteriyo-course-thumbnail {
+.masteriyo-course-list-display-section[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__image .masteriyo-course-thumbnail,
+.masteriyo-related-post[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__image .masteriyo-course-thumbnail {
 	border: 0;
 	border-radius: var(--wp--custom--radius--panel);
 }
 
 /* masteriyo/courses, masteriyo/single-course: the text column fills the card, so the price sinks to its foot. */
-.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__content,
-.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__content {
+.masteriyo-course-list-display-section[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__content,
+.masteriyo-related-post[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__content {
 	display: flex;
 	flex: 1 1 auto;
 	flex-direction: column;
@@ -1109,26 +1115,26 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 }
 
 /* masteriyo/courses, masteriyo/single-course: prices line up across a row whose titles wrap unevenly. */
-.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__content--rating-amount,
-.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__content--rating-amount {
+.masteriyo-course-list-display-section[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__content--rating-amount,
+.masteriyo-related-post[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-archive-card__content--rating-amount {
 	margin-top: auto;
 }
 
 /* masteriyo/courses, masteriyo/single-course: the tagline a related gap over the title. */
-.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-course-category,
-.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-course-category {
+.masteriyo-course-list-display-section[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-course-category,
+.masteriyo-related-post[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-course-category {
 	margin-bottom: var(--wp--preset--spacing--20);
 }
 
 /* masteriyo/courses, masteriyo/single-course: the title a related gap over the price, not Masteriyo's 16px over and 20px under. */
-.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-course-title-wrapper,
-.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-course-title-wrapper {
+.masteriyo-course-list-display-section[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-course-title-wrapper,
+.masteriyo-related-post[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card .masteriyo-course-title-wrapper {
 	margin: 0 0 var(--wp--preset--spacing--25);
 }
 
 /* masteriyo/courses, masteriyo/single-course: the Modern title at the card title's medium-plus and heading-4 look, as the Simple card's; no setting reaches it. */
-.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title .masteriyo-course-title,
-.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title .masteriyo-course-title {
+.masteriyo-course-list-display-section[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title .masteriyo-course-title,
+.masteriyo-related-post[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__content--course-title .masteriyo-course-title {
 	font-size: var(--wp--preset--font-size--medium-plus);
 	font-weight: var(--wp--custom--text--heading-4--font-weight);
 	letter-spacing: var(--wp--custom--text--heading-4--letter-spacing);
@@ -1136,8 +1142,8 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 }
 
 /* masteriyo/courses, masteriyo/single-course: the price part's text-regular size, as the Simple card's. */
-.masteriyo-course-list-display-section[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--rating-amount .masteriyo-archive-card__content--amount .masteriyo-sale-price .masteriyo-price-amount,
-.masteriyo-related-post[data-layout=layout_1] .masteriyo-archive-cards .masteriyo-archive-card__content--rating-amount .masteriyo-archive-card__content--amount .masteriyo-sale-price .masteriyo-price-amount {
+.masteriyo-course-list-display-section[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__content--rating-amount .masteriyo-archive-card__content--amount .masteriyo-sale-price .masteriyo-price-amount,
+.masteriyo-related-post[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__content--rating-amount .masteriyo-archive-card__content--amount .masteriyo-sale-price .masteriyo-price-amount {
 	font-size: var(--wp--custom--text--text-regular--font-size);
 	font-weight: var(--wp--custom--text--text-regular--font-weight);
 	line-height: var(--wp--custom--text--text-regular--line-height);

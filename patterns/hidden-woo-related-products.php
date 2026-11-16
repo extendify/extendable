@@ -12,13 +12,13 @@
 	<div class="wp-block-woocommerce-product-collection alignwide">
 		<!-- wp:heading {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"color":{"text":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dcolor\u002d\u002dtext-weak)"}},"fontSize":"medium-plus"} -->
 			<h2 class="wp-block-heading has-text-color has-medium-plus-font-size" style="color:var(--wp--custom--color--text-weak);margin-top:0;margin-bottom:0">
-	    		<?php echo esc_html_x( 'Related products', 'Heading for a single product page related products section', 'extendable' ); ?>
-	  		</h2>
-	  	<!-- /wp:heading -->
+				<?php echo esc_html_x( 'Related products', 'Heading for a single product page related products section', 'extendable' ); ?>
+				</h2>
+			<!-- /wp:heading -->
 
-	  <!-- wp:woocommerce/product-template -->
-	    <!-- wp:pattern {"slug":"extendable/hidden-shop-product"} /-->
-	  <!-- /wp:woocommerce/product-template -->
+		<!-- wp:woocommerce/product-template -->
+		<!-- wp:pattern {"slug":"extendable/hidden-shop-product"} /-->
+		<!-- /wp:woocommerce/product-template -->
 	</div>
 	<!-- /wp:woocommerce/product-collection -->
 </div>

@@ -3,6 +3,7 @@
 	line-height: inherit;
 	font-size: inherit;
 }
+
 .wpcf7 input:where(:not([type="submit"]):not([type="checkbox"])),
 .wpcf7 textarea {
 	padding: calc(0.667em + 1px);

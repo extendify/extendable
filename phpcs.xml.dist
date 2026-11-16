@@ -1,24 +1,47 @@
 <?xml version="1.0"?>
-<ruleset name="WordPress Coding Standards">
-    <description>WordPress Coding Standards for HTML and PHP files in the project.</description>
-    <rule ref="WordPress"/>
-    <rule ref="WordPress-Core"/>
-    <rule ref="WordPress-Docs"/>
-    <rule ref="WordPress-Extra"/>
+<ruleset name="Extendable">
+	<description>WordPress Coding Standards for the Extendable theme.</description>
 
-    <!-- Paths to exclude from the scan -->
-    <exclude-pattern>vendor/*</exclude-pattern>
-    <exclude-pattern>node_modules/*</exclude-pattern>
-    <exclude-pattern>assets/*</exclude-pattern>
-    <exclude-pattern>styles/*</exclude-pattern>
+	<file>.</file>
+	<exclude-pattern>vendor/*</exclude-pattern>
+	<exclude-pattern>node_modules/*</exclude-pattern>
+	<exclude-pattern>assets/*</exclude-pattern>
+	<exclude-pattern>styles/*</exclude-pattern>
 	<exclude-pattern>build/*</exclude-pattern>
 
-	<!-- Only scan PHP files. -->
 	<arg name="extensions" value="php"/>
-	
-	<!-- Check up to 20 files simultaneously. -->
 	<arg name="parallel" value="20"/>
+	<arg name="colors"/>
+	<arg value="sp"/>
 
-    <!-- Paths to scan -->
-    <file>.</file>
+	<!-- Keep in step with "Requires PHP" and "Requires at least" in style.css. -->
+	<config name="testVersion" value="7.4-"/>
+	<config name="minimum_wp_version" value="6.6"/>
+
+	<rule ref="WordPress"/>
+	<rule ref="PHPCompatibilityWP"/>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="extendable"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="extendable"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- A pattern's header is WordPress registration metadata, not a file docblock. -->
+	<rule ref="Squiz.Commenting.FileComment.MissingPackageTag">
+		<exclude-pattern>patterns/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.FileComment.SpacingAfterComment">
+		<exclude-pattern>patterns/*</exclude-pattern>
+	</rule>
 </ruleset>

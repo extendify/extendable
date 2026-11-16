@@ -3,7 +3,7 @@ Contributors: extendify, richtabor, colorful-tones
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.1.9
+Stable tag: 2.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Extendable is a distinct, dynamic block theme designed as a canvas for your next online venture. Sporting multiple style variations, Extendable is the most expressive block theme yet. Go fresh, bold, bohemian or minimal — with a single click.
 
 == Changelog ==
+
+= 2.2.0 - 2026-11-09 =
+- Added: WooCommerce store pages rebuilt on WooCommerce's current blocks — the shop with a product card and a filter sidebar, the product page with its gallery, buy box and details, the cart and mini-cart, checkout, order confirmation, and every My account page
+- Added: Three alternative product page layouts as patterns — thumbnails under the photo, stacked photos with a sticky buy box, and thumbnails beside the photo
+- Added: A designed default look for core blocks — lists, separators, quotes, pullquotes, tables, details, files, video, code, galleries, embeds, footnotes and the playlist — and for the blog and comment blocks
+- Added: Three spacing sizes (8, 24 and 72px); the spacing slider keeps eight choices and every existing size keeps its value
+- Changed: Type sizes, buttons and form fields now follow one set of design tokens — headings come from one type scale and are larger on phones, h5 and h6 are no longer uppercase, body text eases to 16px on phones, and buttons and fields share one set of heights with a visible keyboard focus ring
+- Changed: Older design token names keep working through aliases, so saved content and styles render as before
+- Fixed: Secondary buttons, sunken sections and raised surfaces were unreadable on the dark palettes — Brisbane, Cairo, Coral, Gdansk, Gold, Lime, Limepop, Onyx, Piraeus, Royal and Sunset; on an existing site, choose the palette again to apply the fix
+- Fixed: Text areas, multi-row selects and code blocks turned into capsules when a design uses fully rounded fields
+- Fixed: The mobile menu's close button was cut off at the top of the screen for logged-out visitors
+- Fixed: The dark-header logo filter turned uploaded logos into a blank white block
 
 = 2.1.9 - 2026-08-27 =
 - Added: Four color palettes with matching style variations — Heath, Signal, Marzipan and Butterscotch

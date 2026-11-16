@@ -2,3 +2,7 @@ node_modules/
 vendor/
 build/
 tribe-events/
+# Generated from a design source outside this repo; a fix made here is overwritten.
+assets/css/hide-block-presets.css
+assets/css/masteriyo.css
+assets/css/woocommerce.css

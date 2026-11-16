@@ -8,10 +8,9 @@
  * @since Extendable 1.0
  */
 
-
 if ( ! defined( 'EXTENDABLE_THEME_VERSION' ) ) {
-	$theme_version = wp_get_theme()->get( 'Version' );
-	define( 'EXTENDABLE_THEME_VERSION', is_string( $theme_version ) ? $theme_version : '1.0.0' );
+	$extendable_theme_version = wp_get_theme()->get( 'Version' );
+	define( 'EXTENDABLE_THEME_VERSION', is_string( $extendable_theme_version ) ? $extendable_theme_version : '1.0.0' );
 }
 
 if ( ! function_exists( 'extendable_support' ) ) :
@@ -106,7 +105,7 @@ add_action( 'wp_enqueue_scripts', 'extendable_styles' );
  * @return void
  */
 function extendable_enqueue_block_styles() {
-	// Check for specific blocks and enqueue their styles
+	// Check for specific blocks and enqueue their styles.
 	if ( has_block( 'contact-form-7/contact-form-selector' ) ) {
 		wp_enqueue_style(
 			'extendable-contact-form-7-style',
@@ -191,11 +190,11 @@ require_once get_template_directory() . '/inc/animations.php';
 
 /**
  * Add primary-foreground duotone to extendify demo Site Logo block.
- * 
+ *
  * @param array $parsed_block Parsed block data.
  * @return array Filtered block data.
  */
-function extendable_add_duotone_to_extendify_demo_site_logo( array $parsed_block ) : array {
+function extendable_add_duotone_to_extendify_demo_site_logo( array $parsed_block ): array {
 
 	if ( 'core/site-logo' !== $parsed_block['blockName'] ) {
 		return $parsed_block;
@@ -243,9 +242,11 @@ add_filter( 'render_block_data', 'extendable_add_duotone_to_extendify_demo_site_
  *
  * @package Extendable
  * @since Extendable 2.0.21
+ *
+ * @param WP_Block_Template[] $templates The block templates found.
+ * @return WP_Block_Template[]
  */
-
- function extendable_exclude_wc_block_templates( $templates, $query ) {
+function extendable_exclude_wc_block_templates( $templates ) {
 	if ( ! class_exists( 'WooCommerce' ) ) {
 		$wc_template_slugs = array(
 			'archive-product',
@@ -264,7 +265,7 @@ add_filter( 'render_block_data', 'extendable_add_duotone_to_extendify_demo_site_
 	}
 	return $templates;
 }
-add_filter( 'get_block_templates', 'extendable_exclude_wc_block_templates', 10, 2 );
+add_filter( 'get_block_templates', 'extendable_exclude_wc_block_templates' );
 
 /**
  * WooCommerce prints upsells after product-details, which sits in the buy box; the template has its own row.
@@ -304,27 +305,28 @@ add_action( 'wp_enqueue_scripts', 'extendable_enqueue_header_scripts' );
 if ( ! function_exists( 'extendable_enqueue_navigation_customizations' ) ) :
 	/**
 	 * Enqueue the JS that fetches logo & site title to customize the mobile navigation.
-	 *
 	 */
 	function extendable_enqueue_navigation_customizations() {
 
-		$logo_id   = get_theme_mod( 'custom_logo' );
-    	$logo_url  = $logo_id ? wp_get_attachment_image_url( $logo_id, 'full' ) : '';
-    	$site_title = get_bloginfo( 'name' );
+		$logo_id    = get_theme_mod( 'custom_logo' );
+		$logo_url   = $logo_id ? wp_get_attachment_image_url( $logo_id, 'full' ) : '';
+		$site_title = get_bloginfo( 'name' );
 
 		wp_enqueue_script(
 			'extendable-navigation_customizations',
 			get_template_directory_uri() . '/assets/js/navigation-customization.js',
-			array(),   // no dependencies; add 'wp-interactivity' if you switch back to that version
-			null,
-			true        // load in footer
+			array(),
+			EXTENDABLE_THEME_VERSION,
+			true
 		);
 
-		wp_localize_script( 'extendable-navigation_customizations', 'ExtendableNavData',
+		wp_localize_script(
+			'extendable-navigation_customizations',
+			'ExtendableNavData',
 			array(
-        		'logoUrl'   => $logo_url,
-        		'siteTitle' => $site_title,
-    		)
+				'logoUrl'   => $logo_url,
+				'siteTitle' => $site_title,
+			)
 		);
 	}
 endif;
@@ -334,14 +336,17 @@ add_action( 'wp_enqueue_scripts', 'extendable_enqueue_navigation_customizations'
  * Set default template for new pages in the block editor (auto-drafts)
  *
  * @since Extendable 2.0.26
- * @return void
+ *
+ * @param WP_REST_Response $response The page's REST response.
+ * @param WP_Post          $post     The page.
+ * @return WP_REST_Response
  */
 function extendable_set_default_template_for_auto_drafts( WP_REST_Response $response, WP_Post $post ) {
 
 	if ( 'page' !== $post->post_type ) {
 		return $response;
 	}
-	
+
 	if ( 'auto-draft' !== $post->post_status ) {
 		return $response;
 	}
@@ -357,7 +362,7 @@ function extendable_set_default_template_for_auto_drafts( WP_REST_Response $resp
 	return $response;
 }
 add_filter( 'rest_prepare_page', 'extendable_set_default_template_for_auto_drafts', 10, 2 );
- 
+
 /**
  * Set default template for new pages when saved/published
  *
@@ -387,8 +392,8 @@ function extendable_set_default_template_for_new_pages( $post_id, $post, $update
 	}
 
 	$current_template = get_page_template_slug( $post_id );
-    
-	// If no template is set or it's the default template, set our default
+
+	// If no template is set or it's the default template, set our default.
 	if ( empty( $current_template ) || 'page' === $current_template ) {
 		update_post_meta( $post_id, '_wp_page_template', 'page-with-title' );
 	}
@@ -423,7 +428,7 @@ add_filter( 'page_template_hierarchy', 'extendable_store_pages_skip_page_with_ti
  * @param array $parsed_block Parsed block data.
  * @return array Filtered block data.
  */
-function extendable_cross_sells_use_shop_card( array $parsed_block ) : array {
+function extendable_cross_sells_use_shop_card( array $parsed_block ): array {
 	if ( 'woocommerce/product-collection' !== $parsed_block['blockName'] ) {
 		return $parsed_block;
 	}
@@ -464,7 +469,7 @@ add_filter( 'render_block_data', 'extendable_cross_sells_use_shop_card' );
  * @param WP_Block|null $parent_block The parent block instance, if this one is nested.
  * @return array Filtered block data.
  */
-function extendable_mark_empty_cart_product_new( array $parsed_block, array $source_block, $parent_block = null ) : array {
+function extendable_mark_empty_cart_product_new( array $parsed_block, array $source_block, $parent_block = null ): array {
 	if ( 'woocommerce/product-new' !== $parsed_block['blockName'] ) {
 		return $parsed_block;
 	}
@@ -487,7 +492,7 @@ add_filter( 'render_block_data', 'extendable_mark_empty_cart_product_new', 10, 3
  * @param array  $parsed_block  Parsed block data.
  * @return string Filtered block content.
  */
-function extendable_empty_cart_new_products_use_shop_card( string $block_content, array $parsed_block ) : string {
+function extendable_empty_cart_new_products_use_shop_card( string $block_content, array $parsed_block ): string {
 	if ( empty( $parsed_block['attrs']['__extendableEmptyCart'] ) ) {
 		return $block_content;
 	}
@@ -503,7 +508,7 @@ function extendable_empty_cart_new_products_use_shop_card( string $block_content
 				'query'         => array(
 					'woocommerceAttributes'         => array(),
 					'woocommerceStockStatus'        => array( 'instock', 'outofstock', 'onbackorder' ),
-					'woocommerceOnSale'              => false,
+					'woocommerceOnSale'             => false,
 					'woocommerceHandPickedProducts' => array(),
 					'taxQuery'                      => array(),
 					'isProductCollectionBlock'      => true,
@@ -548,8 +553,8 @@ function extendable_hide_block_style_variations() {
 			display: none !important;
 		}
 	';
-	
-	wp_add_inline_style('wp-edit-blocks', $css);
+
+	wp_add_inline_style( 'wp-edit-blocks', $css );
 }
 add_action( 'enqueue_block_editor_assets', 'extendable_hide_block_style_variations' );
 
@@ -583,12 +588,19 @@ function extendable_hide_site_editor_block_style_variations() {
 			display: none !important;
 		}
 	';
-	
-	wp_add_inline_style('wp-edit-site', $css);
+
+	wp_add_inline_style( 'wp-edit-site', $css );
 }
 add_action( 'admin_enqueue_scripts', 'extendable_hide_site_editor_block_style_variations' );
 
-// Temporary fix: Hide matrix-1, prism-1, wave-1 variations when Extendify < 2.4.0
+/**
+ * Temporary fix: Hide matrix-1, prism-1, wave-1 variations when Extendify < 2.4.0.
+ *
+ * @param WP_REST_Response $response The REST response.
+ * @param array            $handler  The route handler.
+ * @param WP_REST_Request  $request  The REST request.
+ * @return WP_REST_Response
+ */
 function extendable_filter_global_styles_rest_response( $response, $handler, $request ) {
 	$route = $request->get_route();
 	if ( strpos( $route, '/wp/v2/global-styles/themes/' ) === false ) {
@@ -639,7 +651,7 @@ function extendable_filter_global_styles_rest_response( $response, $handler, $re
 	if ( isset( $data['_links']['wp:block-style-variations'] ) ) {
 		$data['_links']['wp:block-style-variations'] = array_filter(
 			$data['_links']['wp:block-style-variations'],
-			function( $variation ) use ( $patterns ) {
+			function ( $variation ) use ( $patterns ) {
 				$href = $variation['href'] ?? '';
 				foreach ( $patterns as $pattern ) {
 					if ( strpos( $href, $pattern ) !== false ) {

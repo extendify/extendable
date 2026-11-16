@@ -12,21 +12,20 @@ To get started with development:
 ## Requirements
 
 - WordPress 6.6+
-- PHP 5.6+
+- PHP 7.4+
 - License: [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html) or later
 
-To optionally run tests locally, you will also need:
+## Coding standards
 
-- [Node.js](https://nodejs.org/en/)
-- [Composer](https://getcomposer.org/)
+The theme follows the [WordPress Coding Standards](https://developer.wordpress.org/coding-standards/). Install the tools with `npm ci && composer install`, then:
 
-You can install the test-specific development dependencies by running `npm i && composer install`. The following test commands are then available:
+- `npm run lint` runs every check below; CI runs the same on each pull request.
+- `npm run lint:php` checks PHP with PHPCS, WPCS and PHPCompatibilityWP (`phpcs.xml.dist`); `npm run lint:php:fix` fixes what it can.
+- `npm run lint:css` checks CSS with Stylelint; `npm run lint:css:fix` fixes what it can.
+- `npm run lint:js` checks JavaScript with ESLint and Prettier; `npm run lint:js:fix` fixes what it can.
+- `npm run format:check` checks template and part HTML with Prettier; `npm run format` rewrites it.
 
-- `npm run lint:css` lints and autofixes where possible the CSS
-- `composer run analyze [filename.php]` statically analyzes PHP for bugs
-- `composer run lint` checks PHP for syntax errors
-- `composer run standards:check` checks PHP for standards errors according to [WordPress coding standards](https://developer.wordpress.org/coding-standards/)
-- `composer run standards:fix` attempts to automatically fix errors
+`assets/css/woocommerce.css`, `assets/css/masteriyo.css`, `assets/css/hide-block-presets.css` and the `retired-names` block in `style.css` are generated from a design source outside this repo, so Stylelint skips them.
 
 ## Resources
 

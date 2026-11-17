@@ -41,14 +41,18 @@
 	--masteriyo-color-primary-a80: var(--wp--custom--color--text-strong);
 }
 
-/* masteriyo/courses: no switch hides the "Select View" toggle it always prints above the grid. */
-.masteriyo-courses-view-mode-section {
-	display: none;
+/* masteriyo/courses: the block's grid or list switch on its own row at the grid's right edge, on a phone too, without Masteriyo's rule under it. */
+.masteriyo-search-section:has(+ .masteriyo-w-100.masteriyo-course-list-display-section) {
+	border-bottom: 0;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin: 0 0 var(--wp--preset--spacing--30);
+	padding-bottom: 0;
 }
 
-/* masteriyo/courses: always empty at this block's fixed attributes; the archive page's own search keeps it. */
-.masteriyo-search-section:has(+ .masteriyo-w-100.masteriyo-course-list-display-section) {
-	display: none;
+/* masteriyo/courses: on a phone Masteriyo stretches the switch across the row, so its parts keep to the right. */
+.masteriyo-search-section:has(+ .masteriyo-w-100.masteriyo-course-list-display-section) .masteriyo-courses-view-mode-section {
+	justify-content: flex-end;
 }
 
 /* masteriyo/courses: a row whose parts the settings all turned off keeps its margin at zero height. */

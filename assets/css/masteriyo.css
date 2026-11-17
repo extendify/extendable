@@ -51,9 +51,11 @@
 	display: none;
 }
 
-/* masteriyo/courses: no switch reaches these rows; each keeps its margin even at zero height. */
-.masteriyo-course-list-display-section .masteriyo-course--content__stats,
-.masteriyo-course-list-display-section .masteriyo-course-author-rating-wrapper {
+/* masteriyo/courses: a row whose parts the settings all turned off keeps its margin at zero height. */
+.masteriyo-course-list-display-section .masteriyo-course--content__stats:not(:has(*)),
+.masteriyo-course-list-display-section .masteriyo-course-author-rating-wrapper:not(:has(*)),
+body.single-mto-course .masteriyo-related-post .masteriyo-course--content__stats:not(:has(*)),
+body.single-mto-course .masteriyo-related-post .masteriyo-course-author-rating-wrapper:not(:has(*)) {
 	display: none;
 }
 
@@ -119,6 +121,23 @@ body.single-mto-course .masteriyo-related-post .masteriyo-course--card .masteriy
 
 /* masteriyo/courses, masteriyo/courses-archive: the same placeholder, hidden over the surface. */
 .masteriyo-course--card .masteriyo-feature-img img[src$="placeholder.jpg"] {
+	opacity: 0;
+}
+
+/* masteriyo/courses, masteriyo/courses-archive: the Modern and Overlay cards print the same lavender placeholder. */
+.masteriyo-archive-card .masteriyo-archive-card__image:has(img.masteriyo-course-thumbnail[src$="placeholder.jpg"]) {
+	background-color: var(--wp--custom--color--fill-weaker);
+	border-radius: var(--wp--custom--radius--panel);
+}
+
+/* masteriyo/courses, masteriyo/courses-archive: the Overlay card's placeholder under its scrim. */
+.masteriyo-course-card:has(img.masteriyo-course-card__thumbnail-image[src$="placeholder.jpg"]) {
+	background-color: var(--wp--custom--color--fill-weaker);
+}
+
+/* masteriyo/courses, masteriyo/courses-archive: their placeholder, hidden over that surface. */
+.masteriyo-archive-card .masteriyo-archive-card__image img.masteriyo-course-thumbnail[src$="placeholder.jpg"],
+.masteriyo-course-card img.masteriyo-course-card__thumbnail-image[src$="placeholder.jpg"] {
 	opacity: 0;
 }
 
@@ -433,7 +452,7 @@ body.ext-masteriyo-factory-button-size .masteriyo-btn.masteriyo-btn-primary {
 	fill: var(--wp--custom--color--text-on-brand);
 }
 
-/* masteriyo/courses, masteriyo/courses-archive: the store card's small secondary button, ours while Button color stays factory, the owner's once changed. */
+/* masteriyo/courses, masteriyo/courses-archive: the store card's small secondary button, ours while Button color stays factory; the owner's colour keeps Masteriyo's white label, since our page colour turns dark on a dark palette. */
 .masteriyo-courses-wrapper.grid-view .masteriyo-col .masteriyo-course--content .masteriyo-course-pricing--wrapper .masteriyo-enroll-btn,
 .masteriyo-courses-wrapper.list-view .masteriyo-col .masteriyo-course--content .masteriyo-course-pricing--wrapper .masteriyo-enroll-btn,
 body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-col .masteriyo-course--content .masteriyo-course-pricing--wrapper .masteriyo-enroll-btn {
@@ -441,7 +460,7 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 	border-color: var(--ext-masteriyo-secondary-edge, var(--masteriyo-button-primary));
 	box-shadow: none;
 	box-sizing: border-box;
-	color: var(--ext-masteriyo-secondary-ink, var(--masteriyo-color-white));
+	color: var(--ext-masteriyo-secondary-ink, var(--wp--custom--color--text-media-strong));
 	font-size: var(--wp--custom--control-label--sm);
 	font-weight: var(--wp--custom--typography--font-weight--medium);
 	height: var(--wp--custom--control--sm);
@@ -458,7 +477,7 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 .masteriyo-courses-wrapper.list-view .masteriyo-col .masteriyo-course--content .masteriyo-course-pricing--wrapper .masteriyo-enroll-btn:hover,
 body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-col .masteriyo-course--content .masteriyo-course-pricing--wrapper .masteriyo-enroll-btn:hover {
 	background-color: var(--ext-masteriyo-secondary-fill-hover, var(--masteriyo-button-primary-hover));
-	color: var(--ext-masteriyo-secondary-ink, var(--masteriyo-color-white));
+	color: var(--ext-masteriyo-secondary-ink, var(--wp--custom--color--text-media-strong));
 }
 
 /* masteriyo/courses, masteriyo/courses-archive: beats button_size only at factory, at the small button's label. */
@@ -491,9 +510,9 @@ body.masteriyo-courses-page {
 	background-color: var(--wp--custom--color--background-base);
 }
 
-/* masteriyo/courses-archive: one gutter for the row and the grid; Masteriyo prints no main to carry the layout's padding. */
+/* masteriyo/courses-archive: one gutter for the row and the grid; Masteriyo prints no main to carry the layout's padding. Items top-align, so a second line of controls leaves the title level with the first. */
 .masteriyo-w-100.masteriyo-container:has(> .masteriyo-courses-header) {
-	align-items: center;
+	align-items: flex-start;
 	box-sizing: border-box;
 	column-gap: var(--wp--preset--spacing--25);
 	flex-flow: row wrap;
@@ -517,8 +536,12 @@ body.masteriyo-courses-page {
 
 /* masteriyo/courses-archive: the title leads the row Masteriyo prints after the search, and shrinks so the search and switch fit. */
 .masteriyo-w-100.masteriyo-container:has(> .masteriyo-courses-header) > .masteriyo-courses-header {
+	display: flex;
 	flex: 1 1 0;
+	flex-direction: column;
 	float: none;
+	justify-content: center;
+	min-height: var(--wp--custom--control--md);
 	min-width: 0;
 	order: -1;
 	width: auto;
@@ -530,9 +553,129 @@ body.masteriyo-courses-page {
 	flex: 0 1 auto;
 	flex-direction: row;
 	gap: var(--wp--preset--spacing--25);
+	justify-content: flex-end;
 	margin: 0;
 	min-width: 0;
 	padding-bottom: 0;
+	row-gap: var(--wp--preset--spacing--20);
+}
+
+/* masteriyo/courses-archive: with sorting on, the sort takes its own line at the row's right edge, as a shop's sort-by; on a phone the filters button leads it. */
+.masteriyo-w-100.masteriyo-container:has(> .masteriyo-courses-header) > .masteriyo-search-section .masteriyo-courses-sorting-section {
+	align-items: center;
+	display: flex;
+	flex-basis: 100%;
+	gap: var(--wp--preset--spacing--20);
+	justify-content: flex-end;
+	max-width: none;
+	order: 1;
+}
+
+/* masteriyo/courses-archive: the filters button, shown only on a phone, at the line's start. */
+.masteriyo-w-100.masteriyo-container:has(> .masteriyo-courses-header) > .masteriyo-search-section .masteriyo-courses-sorting-section .masteriyo-toggle-course-filters-sidebar {
+	margin: 0 auto 0 0;
+}
+
+/* masteriyo/courses-archive: the sort menu on the vibe's field corner, not Masteriyo's 3px. */
+.masteriyo-courses-sorting .masteriyo-courses-order-by {
+	border-radius: var(--wp--custom--radius--input);
+}
+
+/* masteriyo/courses-archive: the filters' price-type choices as chips, off Masteriyo's slate and grey edge, which fail on a dark palette. */
+.masteriyo-courses-filters .masteriyo-filter-section--price-type__list label {
+	border-color: var(--wp--custom--color--stroke-weak);
+	border-radius: var(--wp--custom--radius--chip);
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* masteriyo/courses-archive: the chosen price type on the brand fill's ink, not our page colour; the owner's Primary color keeps Masteriyo's white. */
+.masteriyo-courses-filters .masteriyo-filter-section--price-type__list input:checked ~ label {
+	color: var(--ext-masteriyo-on-brand-ink, var(--wp--custom--color--text-media-strong));
+}
+
+/* masteriyo/courses-archive: each filter's open and close arrow, off the fill Masteriyo hardcodes in its markup. */
+.masteriyo-courses-filters .masteriyo-filter-section--heading svg {
+	fill: var(--wp--custom--color--icon-default);
+}
+
+/* masteriyo/courses-archive: the price range's fields on the vibe's field corner and edge. */
+.masteriyo-courses-filters .masteriyo-price-filter--input input {
+	border-color: var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--input);
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* masteriyo/courses-archive: Reset Filters as an outline button, off Masteriyo's grey, which fails on a dark palette. */
+.masteriyo-clear-filters,
+.masteriyo-courses-filters .masteriyo-filter-section--buttons .masteriyo-clear-filters {
+	border-color: var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--control);
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* masteriyo/courses-archive: the same button under the pointer on the soft fill, not Masteriyo's light grey under our light ink. */
+.masteriyo-courses-filters .masteriyo-filter-section--buttons .masteriyo-clear-filters:hover {
+	background-color: var(--wp--custom--color--fill-weak);
+	border-color: var(--wp--custom--color--stroke-strong);
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* masteriyo/courses-archive: Apply Filters, shown when filters do not apply as they change, as the main button, not Masteriyo's hardcoded blue. */
+.masteriyo-courses-filters .masteriyo-filter-section--buttons .masteriyo-apply-filters {
+	background-color: var(--wp--custom--color--fill-brand-strong);
+	border-color: transparent;
+	border-radius: var(--wp--custom--radius--control);
+	color: var(--wp--custom--color--text-on-brand);
+}
+
+/* masteriyo/courses-archive: the same button under the pointer, the brand fill's hover step, not Masteriyo's blue outline. */
+.masteriyo-courses-filters .masteriyo-filter-section--buttons .masteriyo-apply-filters:hover {
+	background-color: var(--wp--custom--color--fill-brand-strong-hover);
+	color: var(--wp--custom--color--text-on-brand);
+}
+
+/* masteriyo/courses-archive: the phone's filters button, the same outline button. */
+.masteriyo-toggle-course-filters-sidebar,
+.masteriyo-close-filters-sidebar {
+	border-color: var(--wp--custom--color--stroke-strong);
+	border-radius: var(--wp--custom--radius--control);
+}
+
+/* masteriyo/courses-archive: its label and icon in the body ink and icon ink, off Masteriyo's #494949. */
+.masteriyo-toggle-course-filters-sidebar .text {
+	color: var(--wp--custom--color--text-strong);
+}
+
+/* masteriyo/courses-archive: the same button's icon. */
+.masteriyo-toggle-course-filters-sidebar svg,
+.masteriyo-close-filters-sidebar svg {
+	fill: var(--wp--custom--color--icon-default);
+}
+
+/* masteriyo/courses-archive: the filters button under the pointer wears the brand fill, so its label and icon take its ink, not our page colour. */
+.masteriyo-toggle-course-filters-sidebar:hover .text,
+.masteriyo-close-filters-sidebar:hover .text {
+	color: var(--ext-masteriyo-on-brand-ink, var(--wp--custom--color--text-media-strong));
+}
+
+/* masteriyo/courses-archive: the same icon under the pointer. */
+.masteriyo-toggle-course-filters-sidebar:hover svg,
+.masteriyo-close-filters-sidebar:hover svg {
+	fill: var(--ext-masteriyo-on-brand-ink, var(--wp--custom--color--text-media-strong));
+}
+
+/* masteriyo/courses-archive: the current page number on the brand fill's ink, not our page colour. */
+.masteriyo-container ul.page-numbers li span.current,
+.masteriyo-course-list-display-section ul.page-numbers li span.current {
+	color: var(--ext-masteriyo-on-brand-ink, var(--wp--custom--color--text-media-strong));
+}
+
+/* masteriyo/courses-archive: the page numbers on the vibe's control corner, not Masteriyo's 4px. */
+.masteriyo-container ul.page-numbers li span,
+.masteriyo-container ul.page-numbers li a,
+.masteriyo-course-list-display-section ul.page-numbers li span,
+.masteriyo-course-list-display-section ul.page-numbers li a {
+	border-radius: var(--wp--custom--radius--control);
 }
 
 /* masteriyo/courses-archive: the search capped at half the content width; Masteriyo's 100% width pushes the switch to a second line. */
@@ -652,10 +795,10 @@ body.masteriyo-courses-page {
 	color: var(--wp--custom--color--text-media-strong);
 }
 
-/* masteriyo/single-course-immersive: the band's heading and subheading, on the same ink. */
+/* masteriyo/single-course-immersive: the band's heading and subheading on its brand ink; the owner's Primary color darkens the band, so Masteriyo's white returns. */
 .masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-cta-band__heading,
 .masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-cta-band__subheading {
-	color: var(--wp--custom--color--text-on-brand);
+	color: var(--ext-masteriyo-on-brand-ink, var(--wp--custom--color--text-media-strong));
 }
 
 /* masteriyo/single-course-immersive: the glow was hardcoded blue, clashing against a non-blue brand fill. */
@@ -666,7 +809,7 @@ body.masteriyo-courses-page {
 /* masteriyo/single-course-immersive: an edge, so the button reads against its own band colour. */
 .masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-cta-band__action .masteriyo-btn,
 .masteriyo-single-course--wrapper[data-layout="immersive"] .masteriyo-immersive-cta-band__action .masteriyo-enroll-btn {
-	border-color: var(--wp--custom--color--text-on-brand);
+	border-color: var(--ext-masteriyo-on-brand-ink, var(--wp--custom--color--text-media-strong));
 }
 
 /* masteriyo/single-course-immersive: a closed section's chevron reads as a neutral icon, not Masteriyo's own hardcoded fill. */
@@ -956,12 +1099,6 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap {
 	row-gap: var(--wp--preset--spacing--40);
 }
 
-/* masteriyo/single-course-immersive, masteriyo/single-course: the related card shows what the courses grid's card shows, without author and stats rows. */
-body.single-mto-course .masteriyo-related-post .masteriyo-course--content__stats,
-body.single-mto-course .masteriyo-related-post .masteriyo-course-author-rating-wrapper {
-	display: none;
-}
-
 /* masteriyo/single-course-immersive, masteriyo/single-course: the related card's title at the card title part's medium-plus; no Masteriyo setting reaches it. */
 body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-col .masteriyo-course--card .masteriyo-course--content__title {
 	font-size: var(--wp--preset--font-size--medium-plus);
@@ -1092,8 +1229,8 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 	box-shadow: none;
 }
 
-/* masteriyo/single-course: Minimal prints Related Courses inside its body, so it takes the section gap to the footer there. */
-.masteriyo-single-course--wrapper[data-layout="minimal"] .masteriyo-related-post {
+/* masteriyo/single-course: Minimal leaves its wrapper open around the theme footer, so its body takes the section gap to it, with or without Related Courses. */
+.masteriyo-single-course--wrapper[data-layout="minimal"] > .masteriyo-single-body {
 	padding-bottom: var(--wp--preset--spacing--64);
 }
 
@@ -1150,6 +1287,18 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 	font-weight: var(--wp--custom--text--heading-4--font-weight);
 	letter-spacing: var(--wp--custom--text--heading-4--letter-spacing);
 	line-height: var(--wp--custom--text--heading-4--line-height);
+}
+
+/* masteriyo/courses, masteriyo/single-course: the Modern card's lesson count and duration in the secondary ink, off Masteriyo's #646464, which fails on a dark palette. */
+.masteriyo-course-list-display-section[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__content--info .masteriyo-info-label,
+.masteriyo-related-post[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__content--info .masteriyo-info-label {
+	color: var(--wp--custom--color--text-weak);
+}
+
+/* masteriyo/courses, masteriyo/single-course: their icons in the icon ink. */
+.masteriyo-course-list-display-section[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__content--info svg,
+.masteriyo-related-post[data-layout="layout_1"] .masteriyo-archive-cards .masteriyo-archive-card__content--info svg {
+	fill: var(--wp--custom--color--icon-default);
 }
 
 /* masteriyo/courses, masteriyo/single-course: the price part's text-regular size, as the Simple card's. */
@@ -1278,28 +1427,28 @@ body.masteriyo-account-page {
 	--chakra-colors-gray-700: var(--wp--custom--color--text-strong);
 	--chakra-colors-gray-800: var(--wp--custom--color--text-strong);
 	--chakra-colors-green-400: var(--wp--custom--color--fill-success-strong);
-	--chakra-colors-green-500: var(--wp--custom--color--fill-success-strong);
+	--chakra-colors-green-500: var(--wp--custom--color--text-success);
 	--chakra-colors-red-500: var(--wp--custom--color--fill-error-strong);
 	--chakra-colors-red-600: var(--wp--custom--color--text-error);
 }
 
-/* masteriyo/account: the app's brand scale from Primary color, ours only while it holds Masteriyo's factory value. */
+/* masteriyo/account: the app's brand scale from Primary color, ours only while it holds Masteriyo's factory value; the app spends 500 to 700 as text and as a fill under the page colour, so the readable brand ink, not a light brand's fill. */
 body.ext-masteriyo-factory-primary-color.masteriyo-account-page {
 	--chakra-colors-primary-50: var(--wp--custom--color--fill-brand-weaker);
 	--chakra-colors-primary-100: var(--wp--custom--color--fill-brand-weak);
-	--chakra-colors-primary-500: var(--wp--custom--color--fill-brand-strong);
-	--chakra-colors-primary-600: var(--wp--custom--color--fill-brand-strong-hover);
-	--chakra-colors-primary-700: var(--wp--custom--color--fill-brand-strong-active);
+	--chakra-colors-primary-500: var(--wp--custom--color--text-brand);
+	--chakra-colors-primary-600: var(--wp--custom--color--text-brand-strong);
+	--chakra-colors-primary-700: var(--wp--custom--color--text-brand-strong);
 }
 
-/* masteriyo/account: the app's buttons from Button color, ours only while it holds the factory value. */
+/* masteriyo/account: the app's buttons from Button color, ours only while it holds the factory value; an outline button's label and edge spend it too. */
 body.ext-masteriyo-factory-button-color.masteriyo-account-page {
-	--chakra-colors-button-500: var(--wp--custom--color--fill-brand-strong);
+	--chakra-colors-button-500: var(--wp--custom--color--text-brand);
 }
 
-/* masteriyo/account: the same buttons under the pointer, from Button hover color. */
+/* masteriyo/account: the same buttons under the pointer, from Button hover color, under the page colour as their label. */
 body.ext-masteriyo-factory-button-hover-color.masteriyo-account-page {
-	--chakra-colors-buttonHover: var(--wp--custom--color--fill-brand-strong-hover);
+	--chakra-colors-buttonHover: var(--wp--custom--color--text-brand-strong);
 }
 
 /* masteriyo/account: the signed-in app's corners from the vibe; Chakra's own radii round every tile, field and button. */
@@ -1321,6 +1470,17 @@ body.masteriyo-account-page #masteriyo-account-page {
 /* masteriyo/account: the app's own 16px inset would step it in from the header's edge; Masteriyo's notices keep theirs. */
 body.masteriyo-account-page #masteriyo-account-page > div:has(> #masteriyo-account-container) {
 	padding-inline: 0;
+}
+
+/* masteriyo/account: the open menu item on the owner's Primary color keeps Masteriyo's white; the app's white is our page colour, dark on a dark palette. */
+body.masteriyo-account-page:not(.ext-masteriyo-factory-primary-color) #masteriyo-account-page a[aria-current="page"] {
+	color: var(--wp--custom--color--text-media-strong) !important;
+}
+
+/* masteriyo/account: a notice over the app on the shop notice's shape; Chakra's base corner is the control's, a pill in a round vibe. */
+body.masteriyo-account-page #masteriyo-account-page > div:not(:has(> #masteriyo-account-container)) {
+	border-radius: var(--wp--custom--radius--panel);
+	padding: var(--wp--preset--spacing--20);
 }
 
 /* masteriyo/account: Masteriyo blanks the page title here, so the template's title band prints empty. */

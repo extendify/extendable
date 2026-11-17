@@ -79,6 +79,11 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 	height: 100%;
 }
 
+/* masteriyo/courses, masteriyo/courses-archive: the filters column stretches the grid, so its rows would stretch the cards with it. */
+.masteriyo-courses-wrapper.grid-view {
+	align-content: start;
+}
+
 /* masteriyo/courses, masteriyo/courses-archive: the card part's insets, regular below the photo and group on the sides and foot. */
 .masteriyo-courses-wrapper.grid-view .masteriyo-col .masteriyo-course--card .masteriyo-course--content,
 body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-col .masteriyo-course--card .masteriyo-course--content {
@@ -415,6 +420,12 @@ body.ext-masteriyo-factory-button-size .masteriyo-btn.masteriyo-btn-primary {
 .masteriyo-category-card__title a:hover {
 	color: var(--ext-masteriyo-link-ink, var(--masteriyo-color-primary));
 	text-decoration: var(--wp--custom--link--ui--hover-decoration);
+}
+
+/* masteriyo/courses, masteriyo/single-course: Masteriyo clips the title after two lines, cutting the second line's underline at the theme's deeper offset. */
+.masteriyo-course--content .masteriyo-course--content__title a:hover,
+.masteriyo-course--content .masteriyo-course--content__title a:focus {
+	text-underline-offset: auto;
 }
 
 /* masteriyo/single-course: a cohort or password-gated course's lock icon reads as the button's ink, not Masteriyo's white. */
@@ -1307,8 +1318,8 @@ body.masteriyo-account-page #masteriyo-account-page {
 	padding-top: var(--wp--preset--spacing--64);
 }
 
-/* masteriyo/account: the app's own 16px inset would step it in from the header's edge. */
-body.masteriyo-account-page #masteriyo-account-page > div {
+/* masteriyo/account: the app's own 16px inset would step it in from the header's edge; Masteriyo's notices keep theirs. */
+body.masteriyo-account-page #masteriyo-account-page > div:has(> #masteriyo-account-container) {
 	padding-inline: 0;
 }
 

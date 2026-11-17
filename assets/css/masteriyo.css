@@ -1432,13 +1432,13 @@ body.masteriyo-account-page {
 	--chakra-colors-red-600: var(--wp--custom--color--text-error);
 }
 
-/* masteriyo/account: the app's brand scale from Primary color, ours only while it holds Masteriyo's factory value; the app spends 500 to 700 as text and as a fill under the page colour, so the readable brand ink, not a light brand's fill. */
+/* masteriyo/account: the app's brand scale from Primary color, ours only while it holds Masteriyo's factory value; the app spends 500 and 600 as text and as a fill under the page colour, so the readable brand ink, not a light brand's fill. */
 body.ext-masteriyo-factory-primary-color.masteriyo-account-page {
 	--chakra-colors-primary-50: var(--wp--custom--color--fill-brand-weaker);
 	--chakra-colors-primary-100: var(--wp--custom--color--fill-brand-weak);
 	--chakra-colors-primary-500: var(--wp--custom--color--text-brand);
 	--chakra-colors-primary-600: var(--wp--custom--color--text-brand-strong);
-	--chakra-colors-primary-700: var(--wp--custom--color--text-brand-strong);
+	--chakra-colors-primary-700: var(--wp--custom--color--fill-brand-strong-active);
 }
 
 /* masteriyo/account: the app's buttons from Button color, ours only while it holds the factory value; an outline button's label and edge spend it too. */
@@ -1900,6 +1900,17 @@ body.masteriyo .masteriyo-order.masteriyo-container .masteriyo-notice.masteriyo-
 	background-color: var(--wp--custom--color--fill-success-weak);
 	border: var(--wp--custom--border-width--1) solid var(--wp--custom--color--stroke-success-weak);
 	color: var(--wp--custom--color--text-success);
+}
+
+/* masteriyo/checkout: the warning notice's label on the amber solid, not the page colour Masteriyo prints there. */
+body.masteriyo .masteriyo-order.masteriyo-container .masteriyo-notice.masteriyo-notice--warning {
+	color: var(--wp--custom--color--text-on-warning, var(--wp--custom--color--text-on-status));
+}
+
+/* masteriyo/courses, masteriyo/single-course: the intermediate difficulty badge's label on the amber solid, not the page colour. */
+.masteriyo-badge.masteriyo-badge-yellow,
+.masteriyo-course--badges .masteriyo-single-course--badge .masteriyo-badge.masteriyo-badge-yellow {
+	color: var(--wp--custom--color--text-on-warning, var(--wp--custom--color--text-on-status));
 }
 
 /* masteriyo/checkout: the receipt's account and invoice links read as links; Masteriyo prints them in the body ink, unmarked. */

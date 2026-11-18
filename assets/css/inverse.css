@@ -33,9 +33,13 @@
 	--wp--custom--color--fill-brand-strong-active: var(--wp--custom--color--inverse-fill-brand-strong-active);
 	--wp--custom--color--fill-brand-strong-hover: var(--wp--custom--color--inverse-fill-brand-strong-hover);
 	--wp--custom--color--fill-brand-weak: var(--wp--custom--color--inverse-fill-brand-weak);
+	--wp--custom--color--fill-brand-weak-active: var(--wp--custom--color--inverse-fill-brand-weak-active);
+	--wp--custom--color--fill-brand-weak-hover: var(--wp--custom--color--inverse-fill-brand-weak-hover);
 	--wp--custom--color--fill-brand-weaker: var(--wp--custom--color--inverse-fill-brand-weaker);
 	--wp--custom--color--fill-disabled: var(--wp--custom--color--inverse-fill-disabled);
 	--wp--custom--color--fill-error-strong: var(--wp--custom--color--inverse-fill-error-strong);
+	--wp--custom--color--fill-error-strong-active: var(--wp--custom--color--inverse-fill-error-strong-active);
+	--wp--custom--color--fill-error-strong-hover: var(--wp--custom--color--inverse-fill-error-strong-hover);
 	--wp--custom--color--fill-error-weak: var(--wp--custom--color--inverse-fill-error-weak);
 	--wp--custom--color--fill-info-strong: var(--wp--custom--color--inverse-fill-info-strong);
 	--wp--custom--color--fill-info-weak: var(--wp--custom--color--inverse-fill-info-weak);
@@ -45,6 +49,7 @@
 	--wp--custom--color--fill-media-weak: var(--wp--custom--color--inverse-fill-media-weak);
 	--wp--custom--color--fill-media-weak-active: var(--wp--custom--color--inverse-fill-media-weak-active);
 	--wp--custom--color--fill-media-weak-hover: var(--wp--custom--color--inverse-fill-media-weak-hover);
+	--wp--custom--color--fill-neutral-active: var(--wp--custom--color--inverse-fill-neutral-active);
 	--wp--custom--color--fill-neutral-hover: var(--wp--custom--color--inverse-fill-neutral-hover);
 	--wp--custom--color--fill-neutral-strong: var(--wp--custom--color--inverse-fill-neutral-strong);
 	--wp--custom--color--fill-strong: var(--wp--custom--color--inverse-fill-strong);
@@ -102,8 +107,10 @@
 	--wp--preset--shadow--base: 0 1px 3px color-mix(in oklab, transparent 76%, var(--wp--custom--color--inverse-stroke-strong)), 0 1px 2px color-mix(in oklab, transparent 84%, var(--wp--custom--color--inverse-stroke-strong));
 	--wp--custom--elements--button--color--background: var(--wp--custom--color--inverse-fill-brand-strong);
 	--wp--custom--elements--button--color--text: var(--wp--custom--color--inverse-text-on-brand);
-	--wp--custom--elements--button--hover--color--background: var(--wp--custom--color--inverse-text-strong);
-	--wp--custom--elements--button--hover--color--text: var(--wp--custom--color--inverse-background-base);
+	--wp--custom--elements--button--hover--color--background: var(--wp--custom--color--inverse-fill-brand-strong-hover);
+	--wp--custom--elements--button--hover--color--text: var(--wp--custom--color--inverse-text-on-brand);
+	--wp--custom--elements--button--active--color--background: var(--wp--custom--color--inverse-fill-brand-strong-active);
+	--wp--custom--elements--button--active--color--text: var(--wp--custom--color--inverse-text-on-brand);
 	--wp--custom--elements--button--focus--color--background: var(--wp--custom--color--inverse-fill-brand-strong);
 	--wp--custom--elements--button--focus--color--text: var(--wp--custom--color--inverse-text-on-brand);
 	color-scheme: var(--wp--custom--inverse-color-scheme, light) only;

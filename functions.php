@@ -189,6 +189,13 @@ add_action( 'enqueue_block_editor_assets', 'extendable_hide_block_presets' );
 require_once get_template_directory() . '/inc/animations.php';
 
 /**
+ * Plugins load before the theme, so Masteriyo's class is already known here.
+ */
+if ( class_exists( 'Masteriyo\Masteriyo' ) ) {
+	require_once get_template_directory() . '/inc/masteriyo.php';
+}
+
+/**
  * Add primary-foreground duotone to extendify demo Site Logo block.
  *
  * @param array $parsed_block Parsed block data.

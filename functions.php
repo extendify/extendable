@@ -37,6 +37,7 @@ if ( ! function_exists( 'extendable_support' ) ) :
 		} else {
 			$editor_style = 'style.css';
 		}
+		$editor_style = array_merge( (array) $editor_style, array( 'assets/css/inverse.css' ) );
 		if ( class_exists( 'WooCommerce' ) ) {
 			$editor_style = array_merge( (array) $editor_style, array( 'assets/css/woocommerce.css' ) );
 		}
@@ -69,6 +70,13 @@ if ( ! function_exists( 'extendable_styles' ) ) :
 
 		// Enqueue theme stylesheet.
 		wp_enqueue_style( 'extendable-style' );
+
+		wp_enqueue_style(
+			'extendable-inverse-style',
+			get_template_directory_uri() . '/assets/css/inverse.css',
+			array( 'extendable-style' ),
+			EXTENDABLE_THEME_VERSION
+		);
 
 		if ( class_exists( 'WooCommerce' ) ) {
 			wp_enqueue_style(

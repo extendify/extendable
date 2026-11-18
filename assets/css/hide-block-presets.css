@@ -58,6 +58,7 @@
 .block-editor-block-styles__item[aria-label="Stat Value 1"],
 .block-editor-block-styles__item[aria-label="Step Number 1"],
 .block-editor-block-styles__item[aria-label="Tagline 1"],
-.block-editor-block-styles__item[aria-label="Template"] {
+.block-editor-block-styles__item[aria-label="Template"],
+.block-editor-block-styles__item[aria-label^="ext-preset--"]:not([aria-label="ext-preset--inverse"]) {
 	display: none !important;
 }

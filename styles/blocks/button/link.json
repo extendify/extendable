@@ -27,23 +27,6 @@
 			}
 		},
 		"shadow": "none",
-		":hover": {
-			"color": {
-				"text": "var(--wp--custom--color--text-brand)",
-				"background": "transparent"
-			},
-			"typography": {
-				"textDecoration": "underline dashed"
-			}
-		},
-		":active": {
-			"color": {
-				"text": "var(--wp--custom--color--text-brand)",
-				"background": "transparent"
-			},
-			"typography": {
-				"textDecoration": "none"
-			}
-		}
+		"css": "&:hover { color: var(--wp--custom--color--text-brand); background-color: transparent; text-decoration: underline dashed; } &:active { color: var(--wp--custom--color--text-brand); background-color: transparent; text-decoration: none; }"
 	}
 }

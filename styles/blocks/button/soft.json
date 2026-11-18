@@ -25,17 +25,6 @@
 			}
 		},
 		"shadow": "none",
-		":hover": {
-			"color": {
-				"text": "var(--wp--custom--color--text-brand)",
-				"background": "var(--wp--custom--color--fill-brand-weak-hover)"
-			}
-		},
-		":active": {
-			"color": {
-				"text": "var(--wp--custom--color--text-brand)",
-				"background": "var(--wp--custom--color--fill-brand-weak-active)"
-			}
-		}
+		"css": "&:hover { color: var(--wp--custom--color--text-brand); background-color: var(--wp--custom--color--fill-brand-weak-hover); } &:active { color: var(--wp--custom--color--text-brand); background-color: var(--wp--custom--color--fill-brand-weak-active); }"
 	}
 }

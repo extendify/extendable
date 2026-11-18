@@ -36,6 +36,7 @@
 .block-editor-block-styles__item[aria-label="Image 1 Content Right"],
 .block-editor-block-styles__item[aria-label="Image 1 Content Top"],
 .block-editor-block-styles__item[aria-label="Inline Icon 1"],
+.block-editor-block-styles__item[aria-label="Inverse 1"],
 .block-editor-block-styles__item[aria-label="Item Card 1"],
 .block-editor-block-styles__item[aria-label="Item Card 1 Align Center"],
 .block-editor-block-styles__item[aria-label="Item Card 1 Align Start"],
@@ -59,6 +60,6 @@
 .block-editor-block-styles__item[aria-label="Step Number 1"],
 .block-editor-block-styles__item[aria-label="Tagline 1"],
 .block-editor-block-styles__item[aria-label="Template"],
-.block-editor-block-styles__item[aria-label^="ext-preset--"]:not([aria-label="ext-preset--inverse"]) {
+.block-editor-block-styles__item[aria-label^="ext-preset--"] {
 	display: none !important;
 }

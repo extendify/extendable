@@ -13,6 +13,9 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= Unreleased =
+- Added: Atlas Beacon, Catalina Skyline and Ceadar Peak open WordPress 7.0's own mobile menu — the phone, button or social extra now shows inside it instead of disappearing between 600 and 782px
+
 = 2.2.0 - 2026-11-09 =
 - Added: WooCommerce store pages rebuilt on WooCommerce's current blocks — the shop with a product card and a filter sidebar, the product page with its gallery, buy box and details, the cart and mini-cart, checkout, order confirmation, and every My account page
 - Added: Three alternative product page layouts as patterns — thumbnails under the photo, stacked photos with a sticky buy box, and thumbnails beside the photo

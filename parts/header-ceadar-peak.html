@@ -23,9 +23,11 @@
 
 		<!-- wp:group {"className":"ext-nav-extras","layout":{"type":"flex","flexWrap":"nowrap"}} -->
 		<div class="wp-block-group ext-nav-extras">
-			<!-- wp:navigation {"icon":"menu","overlayBackgroundColor":"background","overlayTextColor":"foreground","layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"right"}} -->
+			<!-- wp:navigation {"overlay":"mobile-menu","icon":"menu","overlayBackgroundColor":"background","overlayTextColor":"foreground","layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"right"}} -->
 			<!-- wp:page-list {"isNavigationChild":true,"showSubmenuIcon":true,"openSubmenusOnClick":false} /-->
 			<!-- /wp:navigation -->
+
+			<!-- wp:template-part {"slug":"header-extras","metadata":{"blockVisibility":{"viewport":{"mobile":false,"tablet":false}}}} /-->
 		</div>
 		<!-- /wp:group -->
 	</div>

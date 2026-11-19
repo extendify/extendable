@@ -2514,6 +2514,16 @@
 			"area": "header"
 		},
 		{
+			"name": "header-extras",
+			"title": "Header Extras",
+			"area": "uncategorized"
+		},
+		{
+			"name": "mobile-menu",
+			"title": "Mobile Menu",
+			"area": "navigation-overlay"
+		},
+		{
 			"name": "footer",
 			"title": "Footer",
 			"area": "footer"

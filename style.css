@@ -1428,6 +1428,16 @@ body:has(.ext-header-overlay) .entry-content > .ext-hero-section.ext-hero-sectio
 	z-index: 0;
 }
 
+/* Under the overlay, text would start behind the header; a margin keeps the pattern's padding. */
+body:has(.ext-header-overlay) .entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child > .wp-block-cover > .wp-block-cover__inner-container {
+	margin-top: var(--ext-header-height);
+}
+
+/* Without it, centred text drops by half the header; the editor writes "min-height: 100vh". */
+body:has(.ext-header-overlay) .entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child > .wp-block-cover:is([style*="min-height:100vh"], [style*="min-height: 100vh"]):not([class*="is-position-top-"], [class*="is-position-bottom-"]) > .wp-block-cover__inner-container {
+	margin-bottom: var(--ext-header-height);
+}
+
 /* Overlay over hero: wrapper goes transparent so the hero shows through.
    Reverts to default theme bg once .is-past-hero is added or on subpages without a hero. */
 body:has(.entry-content > .ext-hero-section.ext-hero-section--full-screen:first-child) header.wp-block-template-part:has(.ext-header-overlay):not(.is-past-hero):not(:has(.ext-header-glass)) {

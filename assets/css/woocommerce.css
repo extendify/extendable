@@ -179,9 +179,9 @@
 	border-radius: min(var(--wp--custom--radius--input), var(--wp--preset--border-radius--1));
 }
 
-/* woocommerce/checkout: the ticked checkbox, filled on a name that holds 3:1 where a pale brand does not. */
+/* woocommerce/checkout: the ticked checkbox, filled with the indicator fill and edged at 3:1 where that fill is not. */
 .wc-block-components-checkbox .wc-block-components-checkbox__input[type="checkbox"]:checked {
-	background-color: var(--wp--custom--color--stroke-focus);
+	background-color: var(--wp--custom--color--fill-brand-strong);
 	border-color: var(--wp--custom--color--stroke-focus);
 }
 
@@ -191,9 +191,9 @@
 	outline-offset: var(--wp--custom--focus-ring--offset);
 }
 
-/* woocommerce/checkout: the tick, in the page colour on its fill. */
+/* woocommerce/checkout: the tick, in the solid's own label colour. */
 .wc-block-components-checkbox .wc-block-components-checkbox__mark {
-	fill: var(--wp--custom--color--background-base);
+	fill: var(--wp--custom--color--text-on-brand);
 }
 
 /* woocommerce/checkout: a required checkbox left unticked. */
@@ -211,9 +211,9 @@
 	border-color: var(--wp--custom--color--stroke-error);
 }
 
-/* woocommerce/checkout: a required checkbox in focus. */
+/* woocommerce/checkout: a required checkbox in focus keeps the theme's ring over Woo's red one; its border shows the error. */
 .wc-block-components-checkbox.has-error .wc-block-components-checkbox__input:focus {
-	outline-color: var(--wp--custom--color--stroke-error);
+	outline-color: var(--wp--custom--color--stroke-focus);
 }
 
 /* woocommerce/checkout-shipping-methods-block, woocommerce/checkout-payment-block: the radio. */
@@ -222,14 +222,15 @@
 	border-color: var(--wp--custom--color--stroke-strong);
 }
 
-/* woocommerce/checkout-shipping-methods-block, woocommerce/checkout-payment-block: the picked radio; a pale brand stroke falls under 3:1. */
+/* woocommerce/checkout-shipping-methods-block, woocommerce/checkout-payment-block: filled with the indicator fill and edged at 3:1 where that fill is not. */
 .wc-block-components-radio-control .wc-block-components-radio-control__input:checked {
+	background-color: var(--wp--custom--color--fill-brand-strong);
 	border-color: var(--wp--custom--color--stroke-focus);
 }
 
-/* woocommerce/checkout-shipping-methods-block, woocommerce/checkout-payment-block: the picked radio's dot, on the same 3:1 name. */
+/* woocommerce/checkout-shipping-methods-block, woocommerce/checkout-payment-block: the dot, in the fill's label colour. */
 .wc-block-components-radio-control .wc-block-components-radio-control__input:checked::before {
-	background-color: var(--wp--custom--color--stroke-focus);
+	background-color: var(--wp--custom--color--text-on-brand);
 }
 
 /* woocommerce/checkout-shipping-methods-block, woocommerce/checkout-payment-block: the option's label, at the label weight a checkbox's has. */
@@ -245,13 +246,13 @@
 /* woocommerce/checkout-payment-block: the picked payment option's frame, which Woo draws in currentColor. */
 .wc-block-components-radio-control--highlight-checked .wc-block-components-radio-control-accordion-option--checked-option-highlighted {
 	border-radius: min(var(--wp--custom--radius--input), var(--wp--preset--border-radius--5));
-	box-shadow: inset 0 0 0 var(--wp--custom--border-width--2) var(--wp--custom--color--stroke-focus);
+	box-shadow: inset 0 0 0 var(--wp--custom--border-width--2) var(--wp--custom--color--fill-brand-strong);
 }
 
 /* woocommerce/checkout-shipping-methods-block: the picked shipping option's frame, on the same name. */
 .wc-block-components-radio-control--highlight-checked label.wc-block-components-radio-control__option--checked-option-highlighted {
 	border-radius: min(var(--wp--custom--radius--input), var(--wp--preset--border-radius--5));
-	box-shadow: inset 0 0 0 var(--wp--custom--border-width--2) var(--wp--custom--color--stroke-focus);
+	box-shadow: inset 0 0 0 var(--wp--custom--border-width--2) var(--wp--custom--color--fill-brand-strong);
 }
 
 /* woocommerce/checkout-shipping-methods-block, woocommerce/checkout-payment-block: the radio in focus. */
@@ -583,7 +584,9 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 /* woocommerce/classic-shortcode: the current item on the soft fill at the label weight, not Woo's underline. */
 .woocommerce-account .woocommerce-MyAccount-navigation li.is-active a {
 	background-color: var(--wp--custom--color--fill-weak);
+	border: var(--wp--custom--border-width--1) solid transparent;
 	font-weight: var(--wp--custom--text--label--font-weight);
+	padding: calc(var(--wp--preset--spacing--10) - var(--wp--custom--border-width--1)) calc(var(--wp--preset--spacing--20) - var(--wp--custom--border-width--1));
 	text-decoration: none;
 }
 
@@ -655,6 +658,8 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	box-shadow: var(--wp--custom--shadow--card);
 	margin: 0;
 	max-width: 28rem;
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: var(--wp--preset--spacing--25);
 }
 
@@ -692,6 +697,8 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	box-shadow: var(--wp--custom--shadow--card);
 	margin: 0;
 	max-width: 28rem;
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: var(--wp--preset--spacing--25);
 }
 
@@ -731,6 +738,8 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	display: flex;
 	flex-direction: column;
 	gap: var(--wp--preset--spacing--20);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: var(--wp--preset--spacing--25);
 }
 
@@ -775,6 +784,8 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
 	box-shadow: var(--wp--custom--shadow--card);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: var(--wp--preset--spacing--25);
 }
 
@@ -887,6 +898,8 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 .wc-block-components-notice-banner > svg {
 	background-color: var(--wp--custom--color--fill-neutral-strong);
 	fill: var(--wp--custom--color--text-on-neutral);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 }
 
 /* woocommerce/store-notices, woocommerce/checkout: the error notice. */
@@ -1094,6 +1107,8 @@ p.demo_store a {
 	line-height: var(--wp--custom--text--text-small--line-height);
 	min-height: 0;
 	min-width: 0;
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: 0.125em 0.5em;
 }
 
@@ -1104,6 +1119,8 @@ p.demo_store a {
 	border-width: 0;
 	color: var(--wp--custom--color--text-strong);
 	font-size: var(--wp--custom--text--text-small--font-size);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: 0.125em 0.5em;
 }
 
@@ -1131,6 +1148,8 @@ table.wc-block-cart-items .wc-block-cart-items__header {
 	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
 	box-shadow: var(--wp--custom--shadow--card);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: var(--wp--preset--spacing--25);
 }
 
@@ -1140,6 +1159,8 @@ table.wc-block-cart-items .wc-block-cart-items__header {
 	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
 	box-shadow: var(--wp--custom--shadow--card);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: var(--wp--preset--spacing--25);
 }
 
@@ -1426,11 +1447,11 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image i
 	margin-block-start: 0;
 }
 
-/* woocommerce/product-filter-chips, woocommerce/add-to-cart-with-options: a picked chip or pill, which falls back to the system's CanvasText; a pale brand falls under 3:1. */
+/* woocommerce/product-filter-chips, woocommerce/add-to-cart-with-options: a picked chip or pill, which falls back to the system's CanvasText. */
 :where(.wc-block-product-filter-chips) {
-	--wc-product-filter-chips-selected-background: var(--wp--custom--color--stroke-focus); /* 2026-10-29 */
-	--wc-product-filter-chips-selected-border: var(--wp--custom--color--stroke-focus); /* 2026-10-29 */
-	--wc-product-filter-chips-selected-text: var(--wp--custom--color--background-base); /* 2026-10-29 */
+	--wc-product-filter-chips-selected-background: var(--wp--custom--color--fill-brand-strong);
+	--wc-product-filter-chips-selected-border: var(--wp--custom--color--fill-brand-strong);
+	--wc-product-filter-chips-selected-text: var(--wp--custom--color--text-on-brand);
 }
 
 /* woocommerce/product-filter-chips, woocommerce/add-to-cart-with-options: the chips in a row sit related, not 4px apart. */
@@ -1480,9 +1501,9 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image i
 
 /* woocommerce/product-filter-checkbox-list: the box, its edge and the tick. */
 :where(.wc-block-product-filter-checkbox-list) {
-	--wc-product-filter-checkbox-list-option-element: var(--wp--custom--color--background-base); /* 2026-10-28 */
-	--wc-product-filter-checkbox-list-option-element-border: var(--wp--custom--color--stroke-strong); /* 2026-10-28 */
-	--wc-product-filter-checkbox-list-option-element-selected: var(--wp--custom--color--stroke-focus); /* 2026-10-28 */
+	--wc-product-filter-checkbox-list-option-element: var(--wp--custom--color--background-base);
+	--wc-product-filter-checkbox-list-option-element-border: var(--wp--custom--color--stroke-strong);
+	--wc-product-filter-checkbox-list-option-element-selected: var(--wp--custom--color--text-on-brand);
 }
 
 /* woocommerce/product-filter-checkbox-list: the options sit related, at a spacing step rather than their line height. */
@@ -1513,6 +1534,12 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input {
 	border-radius: min(var(--wp--custom--radius--input), var(--wp--preset--border-radius--1));
 	height: var(--wp--custom--form-control--choice);
 	width: var(--wp--custom--form-control--choice);
+}
+
+/* woocommerce/product-filter-checkbox-list: Woo's variable only colours the tick, not the box; edged at 3:1 where the fill is not. */
+input[type="checkbox"].wc-block-product-filter-checkbox-list__input:checked {
+	background-color: var(--wp--custom--color--fill-brand-strong);
+	border-color: var(--wp--custom--color--stroke-focus);
 }
 
 /* woocommerce/product-filter-checkbox-list: the tick, sized to the box so it stays centred. */
@@ -1548,14 +1575,14 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 /* woocommerce/product-filter-price-slider: a handle under the pointer or in focus, which Woo prints #1e1e1e. */
 .wc-block-product-filter-price-slider__range input[type="range"]::-webkit-slider-thumb:hover,
 .wc-block-product-filter-price-slider__range input[type="range"]:focus::-webkit-slider-thumb {
-	background-color: var(--wp--custom--color--stroke-focus);
+	background-color: var(--wp--custom--color--fill-brand-strong);
 	border-color: var(--wp--custom--color--background-base);
 }
 
 /* woocommerce/product-filter-price-slider: the same handle in Firefox; one list would drop both engines. */
 .wc-block-product-filter-price-slider__range input[type="range"]::-moz-range-thumb:hover,
 .wc-block-product-filter-price-slider__range input[type="range"]:focus::-moz-range-thumb {
-	background-color: var(--wp--custom--color--stroke-focus);
+	background-color: var(--wp--custom--color--fill-brand-strong);
 	border-color: var(--wp--custom--color--background-base);
 }
 
@@ -1734,12 +1761,19 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 	color: var(--wp--custom--color--text-weak);
 }
 
-/* woocommerce/product-details: the reviews pagination's current page, and a page under the pointer, which Woo prints at 3.65:1. */
+/* woocommerce/product-details: a page under the pointer, which Woo prints at 3.65:1. */
 .woocommerce nav.woocommerce-pagination ul li a:focus,
-.woocommerce nav.woocommerce-pagination ul li a:hover,
-.woocommerce nav.woocommerce-pagination ul li span.current {
+.woocommerce nav.woocommerce-pagination ul li a:hover {
 	background-color: var(--wp--custom--color--fill-weak);
 	color: var(--wp--custom--color--text-strong);
+}
+
+/* woocommerce/product-details: the current page, which Woo prints at 3.65:1 and keeps its own edge in forced colours. */
+.woocommerce nav.woocommerce-pagination ul li span.current {
+	background-color: var(--wp--custom--color--fill-weak);
+	border: var(--wp--custom--border-width--1) solid transparent;
+	color: var(--wp--custom--color--text-strong);
+	padding: calc(0.5em - var(--wp--custom--border-width--1));
 }
 
 /* woocommerce/product-details: the pagination's frame. */
@@ -1857,6 +1891,8 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
 	box-shadow: var(--wp--custom--shadow--card);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: var(--wp--preset--spacing--25);
 }
 
@@ -1872,6 +1908,8 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
 	box-shadow: var(--wp--custom--shadow--card);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 }
 
 /* woocommerce/order-confirmation-totals, woocommerce/order-confirmation-downloads: weak ink, caps tracking — the store's own table-header look. */
@@ -1887,6 +1925,8 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
 	box-shadow: var(--wp--custom--shadow--card);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: var(--wp--preset--spacing--25);
 }
 
@@ -1909,6 +1949,8 @@ input[type="checkbox"].wc-block-product-filter-checkbox-list__input:focus {
 .wc-block-mini-cart__badge {
 	background-color: var(--wp--custom--color--fill-brand-strong) !important;
 	color: var(--wp--custom--color--text-on-brand) !important;
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 }
 
 /* woocommerce/mini-cart: the drawer's title at heading-6, over Woo's own fixed 1.5rem. */
@@ -1940,6 +1982,7 @@ h2.wc-block-mini-cart__title {
 .wc-block-components-button.wc-block-components-drawer__close {
 	align-items: center;
 	background-color: var(--wp--custom--color--fill-weak) !important;
+	border: var(--wp--custom--border-width--1) solid transparent;
 	border-radius: var(--wp--custom--radius--avatar);
 	box-sizing: border-box;
 	color: var(--wp--custom--color--text-strong) !important;
@@ -2139,6 +2182,8 @@ table.wc-block-mini-cart-items .wc-block-cart-items__row .wc-block-cart-item__wr
 	flex-direction: column;
 	gap: var(--wp--preset--spacing--10);
 	max-width: none;
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding-block-end: var(--wp--preset--spacing--25);
 	text-align: start;
 }
@@ -2195,6 +2240,8 @@ a.wc-block-grid__product-link:hover {
 	letter-spacing: var(--wp--custom--text--text-small--letter-spacing);
 	line-height: var(--wp--custom--text--text-small--line-height);
 	margin: 0;
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: 0.125em 0.5em;
 	text-transform: none;
 }

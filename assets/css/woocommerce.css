@@ -912,7 +912,7 @@ div.wc-block-add-to-cart-form.wc-block-add-to-cart-form--stepper .wc-block-compo
 /* woocommerce/store-notices, woocommerce/checkout: the warning notice's icon. */
 .wc-block-components-notice-banner.is-warning > svg {
 	background-color: var(--wp--custom--color--fill-warning-strong);
-	fill: var(--wp--custom--color--text-on-status);
+	fill: var(--wp--custom--color--text-on-warning, var(--wp--custom--color--text-on-status));
 }
 
 /* woocommerce/store-notices, woocommerce/checkout: the success notice. */

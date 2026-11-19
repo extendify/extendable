@@ -1,0 +1,115 @@
+/*
+ * The inverse colours as a class: add ext-inverse to a section, a card or any block.
+ * Generated; edit the source, not this file.
+ */
+
+.ext-inverse {
+	--wp--custom--color--background-base: var(--wp--custom--color--inverse-background-base);
+	--wp--custom--color--background-overlay: var(--wp--custom--color--inverse-background-overlay);
+	--wp--custom--color--background-raised: var(--wp--custom--color--inverse-background-raised);
+	--wp--custom--color--background-sunken: var(--wp--custom--color--inverse-background-sunken);
+	--wp--custom--color--background-sunken-stroke-strong: var(--wp--custom--color--inverse-background-sunken-stroke-strong);
+	--wp--custom--color--background-sunken-stroke-weak: var(--wp--custom--color--inverse-background-sunken-stroke-weak);
+	--wp--custom--color--background-sunken-weak: var(--wp--custom--color--inverse-background-sunken-weak);
+	--wp--custom--color--background-tint-1: var(--wp--custom--color--inverse-background-tint-1);
+	--wp--custom--color--background-tint-1-ink: var(--wp--custom--color--inverse-background-tint-1-ink);
+	--wp--custom--color--background-tint-1-stroke-strong: var(--wp--custom--color--inverse-background-tint-1-stroke-strong);
+	--wp--custom--color--background-tint-1-stroke-weak: var(--wp--custom--color--inverse-background-tint-1-stroke-weak);
+	--wp--custom--color--background-tint-1-weak: var(--wp--custom--color--inverse-background-tint-1-weak);
+	--wp--custom--color--background-tint-2: var(--wp--custom--color--inverse-background-tint-2);
+	--wp--custom--color--background-tint-2-ink: var(--wp--custom--color--inverse-background-tint-2-ink);
+	--wp--custom--color--background-tint-2-stroke-strong: var(--wp--custom--color--inverse-background-tint-2-stroke-strong);
+	--wp--custom--color--background-tint-2-stroke-weak: var(--wp--custom--color--inverse-background-tint-2-stroke-weak);
+	--wp--custom--color--background-tint-2-weak: var(--wp--custom--color--inverse-background-tint-2-weak);
+	--wp--custom--color--background-tint-3: var(--wp--custom--color--inverse-background-tint-3);
+	--wp--custom--color--background-tint-3-ink: var(--wp--custom--color--inverse-background-tint-3-ink);
+	--wp--custom--color--background-tint-3-stroke-strong: var(--wp--custom--color--inverse-background-tint-3-stroke-strong);
+	--wp--custom--color--background-tint-3-stroke-weak: var(--wp--custom--color--inverse-background-tint-3-stroke-weak);
+	--wp--custom--color--background-tint-3-weak: var(--wp--custom--color--inverse-background-tint-3-weak);
+	--wp--custom--color--chip-ink: var(--wp--custom--color--inverse-chip-ink);
+	--wp--custom--color--chip-surface: var(--wp--custom--color--inverse-chip-surface);
+	--wp--custom--color--fill-brand-max: var(--wp--custom--color--inverse-fill-brand-max);
+	--wp--custom--color--fill-brand-strong: var(--wp--custom--color--inverse-fill-brand-strong);
+	--wp--custom--color--fill-brand-strong-active: var(--wp--custom--color--inverse-fill-brand-strong-active);
+	--wp--custom--color--fill-brand-strong-hover: var(--wp--custom--color--inverse-fill-brand-strong-hover);
+	--wp--custom--color--fill-brand-weak: var(--wp--custom--color--inverse-fill-brand-weak);
+	--wp--custom--color--fill-brand-weaker: var(--wp--custom--color--inverse-fill-brand-weaker);
+	--wp--custom--color--fill-disabled: var(--wp--custom--color--inverse-fill-disabled);
+	--wp--custom--color--fill-error-strong: var(--wp--custom--color--inverse-fill-error-strong);
+	--wp--custom--color--fill-error-weak: var(--wp--custom--color--inverse-fill-error-weak);
+	--wp--custom--color--fill-info-strong: var(--wp--custom--color--inverse-fill-info-strong);
+	--wp--custom--color--fill-info-weak: var(--wp--custom--color--inverse-fill-info-weak);
+	--wp--custom--color--fill-media-strong: var(--wp--custom--color--inverse-fill-media-strong);
+	--wp--custom--color--fill-media-strong-active: var(--wp--custom--color--inverse-fill-media-strong-active);
+	--wp--custom--color--fill-media-strong-hover: var(--wp--custom--color--inverse-fill-media-strong-hover);
+	--wp--custom--color--fill-media-weak: var(--wp--custom--color--inverse-fill-media-weak);
+	--wp--custom--color--fill-media-weak-active: var(--wp--custom--color--inverse-fill-media-weak-active);
+	--wp--custom--color--fill-media-weak-hover: var(--wp--custom--color--inverse-fill-media-weak-hover);
+	--wp--custom--color--fill-neutral-hover: var(--wp--custom--color--inverse-fill-neutral-hover);
+	--wp--custom--color--fill-neutral-strong: var(--wp--custom--color--inverse-fill-neutral-strong);
+	--wp--custom--color--fill-strong: var(--wp--custom--color--inverse-fill-strong);
+	--wp--custom--color--fill-success-strong: var(--wp--custom--color--inverse-fill-success-strong);
+	--wp--custom--color--fill-success-weak: var(--wp--custom--color--inverse-fill-success-weak);
+	--wp--custom--color--fill-warning-strong: var(--wp--custom--color--inverse-fill-warning-strong);
+	--wp--custom--color--fill-warning-weak: var(--wp--custom--color--inverse-fill-warning-weak);
+	--wp--custom--color--fill-weak: var(--wp--custom--color--inverse-fill-weak);
+	--wp--custom--color--fill-weak-active: var(--wp--custom--color--inverse-fill-weak-active);
+	--wp--custom--color--fill-weak-hover: var(--wp--custom--color--inverse-fill-weak-hover);
+	--wp--custom--color--fill-weaker: var(--wp--custom--color--inverse-fill-weaker);
+	--wp--custom--color--highlight: var(--wp--custom--color--inverse-highlight);
+	--wp--custom--color--icon-brand: var(--wp--custom--color--inverse-icon-brand);
+	--wp--custom--color--icon-default: var(--wp--custom--color--inverse-icon-default);
+	--wp--custom--color--icon-ink: var(--wp--custom--color--inverse-icon-ink);
+	--wp--custom--color--icon-surface: var(--wp--custom--color--inverse-icon-surface);
+	--wp--custom--color--neutral-950: var(--wp--custom--color--inverse-neutral-950);
+	--wp--custom--color--overlay-scrim: var(--wp--custom--color--inverse-overlay-scrim);
+	--wp--custom--color--stroke-brand: var(--wp--custom--color--inverse-stroke-brand);
+	--wp--custom--color--stroke-brand-weak: var(--wp--custom--color--inverse-stroke-brand-weak);
+	--wp--custom--color--stroke-error: var(--wp--custom--color--inverse-stroke-error);
+	--wp--custom--color--stroke-error-weak: var(--wp--custom--color--inverse-stroke-error-weak);
+	--wp--custom--color--stroke-focus: var(--wp--custom--color--inverse-stroke-focus);
+	--wp--custom--color--stroke-info-weak: var(--wp--custom--color--inverse-stroke-info-weak);
+	--wp--custom--color--stroke-media-strong: var(--wp--custom--color--inverse-stroke-media-strong);
+	--wp--custom--color--stroke-media-weak: var(--wp--custom--color--inverse-stroke-media-weak);
+	--wp--custom--color--stroke-strong: var(--wp--custom--color--inverse-stroke-strong);
+	--wp--custom--color--stroke-success-weak: var(--wp--custom--color--inverse-stroke-success-weak);
+	--wp--custom--color--stroke-warning-weak: var(--wp--custom--color--inverse-stroke-warning-weak);
+	--wp--custom--color--stroke-weak: var(--wp--custom--color--inverse-stroke-weak);
+	--wp--custom--color--text-brand: var(--wp--custom--color--inverse-text-brand);
+	--wp--custom--color--text-brand-strong: var(--wp--custom--color--inverse-text-brand-strong);
+	--wp--custom--color--text-disabled: var(--wp--custom--color--inverse-text-disabled);
+	--wp--custom--color--text-error: var(--wp--custom--color--inverse-text-error);
+	--wp--custom--color--text-info: var(--wp--custom--color--inverse-text-info);
+	--wp--custom--color--text-inverse-strong: var(--wp--custom--color--inverse-text-inverse-strong);
+	--wp--custom--color--text-media-strong: var(--wp--custom--color--inverse-text-media-strong);
+	--wp--custom--color--text-media-weak: var(--wp--custom--color--inverse-text-media-weak);
+	--wp--custom--color--text-on-brand: var(--wp--custom--color--inverse-text-on-brand);
+	--wp--custom--color--text-on-media: var(--wp--custom--color--inverse-text-on-media);
+	--wp--custom--color--text-on-neutral: var(--wp--custom--color--inverse-text-on-neutral);
+	--wp--custom--color--text-on-status: var(--wp--custom--color--inverse-text-on-status);
+	--wp--custom--color--text-on-warning: var(--wp--custom--color--inverse-text-on-warning);
+	--wp--custom--color--text-strong: var(--wp--custom--color--inverse-text-strong);
+	--wp--custom--color--text-success: var(--wp--custom--color--inverse-text-success);
+	--wp--custom--color--text-warning: var(--wp--custom--color--inverse-text-warning);
+	--wp--custom--color--text-weak: var(--wp--custom--color--inverse-text-weak);
+	--wp--custom--color--text-weaker: var(--wp--custom--color--inverse-text-weaker);
+	--wp--preset--color--background: var(--wp--custom--color--inverse-background-base);
+	--wp--preset--color--foreground: var(--wp--custom--color--inverse-text-strong);
+	--wp--preset--color--primary: var(--wp--custom--color--inverse-fill-brand-strong);
+	--wp--preset--color--secondary: var(--wp--custom--color--inverse-secondary);
+	--wp--preset--color--tertiary: var(--wp--custom--color--inverse-background-sunken);
+	--wp--preset--color--foreground-alt: var(--wp--custom--color--inverse-foreground-alt);
+	--wp--preset--shadow--base: 0 1px 3px color-mix(in oklab, transparent 76%, var(--wp--custom--color--inverse-stroke-strong)), 0 1px 2px color-mix(in oklab, transparent 84%, var(--wp--custom--color--inverse-stroke-strong));
+	--wp--custom--elements--button--color--background: var(--wp--custom--color--inverse-fill-brand-strong);
+	--wp--custom--elements--button--color--text: var(--wp--custom--color--inverse-text-on-brand);
+	--wp--custom--elements--button--hover--color--background: var(--wp--custom--color--inverse-text-strong);
+	--wp--custom--elements--button--hover--color--text: var(--wp--custom--color--inverse-background-base);
+	--wp--custom--elements--button--focus--color--background: var(--wp--custom--color--inverse-fill-brand-strong);
+	--wp--custom--elements--button--focus--color--text: var(--wp--custom--color--inverse-text-on-brand);
+	color-scheme: var(--wp--custom--inverse-color-scheme, light) only;
+}
+
+:where(.ext-inverse) {
+	background-color: var(--wp--custom--color--background-base);
+	color: var(--wp--custom--color--text-strong);
+}

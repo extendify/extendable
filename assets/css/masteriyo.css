@@ -74,6 +74,8 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 	border-style: var(--wp--custom--store-card--border-style);
 	border-width: var(--wp--custom--store-card--border-width);
 	box-shadow: var(--wp--custom--shadow--card);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 }
 
 /* masteriyo/courses, masteriyo/courses-archive: every card in a row as tall as the tallest, as the card part's min-height does. */
@@ -981,6 +983,8 @@ body.masteriyo-courses-page {
 	border-style: var(--wp--custom--store-card--border-style);
 	border-width: var(--wp--custom--store-card--border-width);
 	box-shadow: var(--wp--custom--shadow--raised);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 }
 
 /* masteriyo/single-course-immersive: the card's photo inset by the card's own group inset. */
@@ -1045,6 +1049,8 @@ body.masteriyo-courses-page {
 	border-style: var(--wp--custom--store-card--border-style);
 	border-width: var(--wp--custom--store-card--border-width);
 	box-shadow: var(--wp--custom--shadow--card);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: var(--wp--preset--spacing--30);
 }
 
@@ -1188,6 +1194,8 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 	border-style: var(--wp--custom--store-card--border-style);
 	border-width: var(--wp--custom--store-card--border-width);
 	box-shadow: var(--wp--custom--shadow--card);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	overflow: hidden;
 }
 
@@ -1204,6 +1212,8 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 	border-style: var(--wp--custom--store-card--border-style);
 	border-width: var(--wp--custom--store-card--border-width);
 	box-shadow: var(--wp--custom--shadow--card);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 }
 
 /* masteriyo/single-course: Modern's header band and price box on the vibe's card face, in place of Masteriyo's 12px corners and its own shadow. */
@@ -1215,6 +1225,8 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 	border-style: var(--wp--custom--store-card--border-style);
 	border-width: var(--wp--custom--store-card--border-width);
 	box-shadow: var(--wp--custom--shadow--card);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 }
 
 /* masteriyo/single-course: Modern's header photo, a nested corner one step under the card's, without Masteriyo's border. */
@@ -1247,6 +1259,8 @@ body.single-mto-course .masteriyo-related-post .masteriyo-item--wrap .masteriyo-
 	box-shadow: var(--wp--custom--shadow--card);
 	display: flex;
 	flex-direction: column;
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: var(--wp--preset--spacing--25);
 }
 
@@ -1519,6 +1533,8 @@ body.masteriyo .masteriyo-login-form-wrapper:not(.no-signup) {
 	box-shadow: var(--wp--custom--shadow--card);
 	box-sizing: border-box;
 	flex: 0 1 28rem;
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: var(--wp--preset--spacing--30);
 	width: auto;
 }
@@ -1534,6 +1550,8 @@ body.masteriyo .masteriyo-login-form-wrapper:not(.no-signup) {
 	margin-bottom: var(--wp--preset--spacing--70);
 	margin-top: var(--wp--preset--spacing--64);
 	max-width: 28rem;
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: var(--wp--preset--spacing--30);
 	width: 100%;
 }
@@ -1606,6 +1624,8 @@ body.masteriyo-account-page .masteriyo-input:not(.search-field):focus-visible {
 	border: var(--wp--custom--store-card--border-width) var(--wp--custom--store-card--border-style) var(--wp--custom--store-card--border-color);
 	border-radius: var(--wp--custom--radius--card);
 	box-shadow: var(--wp--custom--shadow--card);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	overflow: hidden;
 }
 
@@ -1731,11 +1751,23 @@ body:has(.masteriyo-checkout-container) main > div:not(:has(*)) {
 	border-radius: var(--wp--custom--radius--card);
 	box-shadow: var(--wp--custom--shadow--card);
 	color: var(--wp--custom--color--text-strong);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: var(--wp--preset--spacing--25);
 }
 
-/* masteriyo/checkout: the narrow screen's summary toggle on the same card; Masteriyo pins its own face by id. */
-#masteriyo-checkout .masteriyo-checkout-summary-toggle,
+/* masteriyo/checkout: the narrow screen's summary toggle, edged since the card border is 0; Masteriyo pins its own face by id. */
+#masteriyo-checkout .masteriyo-checkout-summary-toggle {
+	background-color: var(--wp--custom--store-card--background);
+	border: var(--wp--custom--border-width--1) solid transparent;
+	border-radius: var(--wp--custom--radius--card);
+	box-shadow: var(--wp--custom--shadow--card);
+	color: var(--wp--custom--color--text-strong);
+	font-size: var(--wp--custom--text--label--font-size);
+	padding: calc(var(--wp--preset--spacing--25) - var(--wp--custom--border-width--1));
+}
+
+/* masteriyo/checkout: the toggle on the same card while pointed at, focused or active. */
 #masteriyo-checkout .masteriyo-checkout-summary-toggle:hover,
 #masteriyo-checkout .masteriyo-checkout-summary-toggle:focus,
 #masteriyo-checkout .masteriyo-checkout-summary-toggle:active {
@@ -1887,6 +1919,8 @@ body.masteriyo .masteriyo-order.masteriyo-container {
 	box-shadow: var(--wp--custom--shadow--card);
 	margin-bottom: var(--wp--preset--spacing--64);
 	margin-top: var(--wp--preset--spacing--40);
+	outline: var(--wp--custom--border-width--1) solid transparent;
+	outline-offset: calc(-1 * var(--wp--custom--border-width--1));
 	padding: var(--wp--preset--spacing--30);
 }
 

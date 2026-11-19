@@ -223,7 +223,7 @@ select:where([multiple], [size]:not([size="1"])) {
 	border-radius: min(var(--wp--custom--radius--input), var(--wp--preset--border-radius--5));
 }
 
-/* Radix step 10, the step C3 walks to pass on background-base; the UA grey is under 4.5:1. */
+/* Step 10, the step C3 walks to pass on background-base; the UA grey is under 4.5:1. */
 :where(input, textarea)::placeholder {
 	color: var(--wp--custom--color--text-weaker);
 	opacity: 1;
@@ -261,10 +261,11 @@ html :where(a:focus-visible, button:focus-visible, [tabindex]:focus-visible) {
 /* core/code dresses its own <code> through theme.json; this is every other one. */
 :where(:not(pre) > code) {
 	background-color: var(--wp--custom--color--fill-weak);
+	border: var(--wp--custom--border-width--1) solid transparent;
 	color: var(--wp--custom--color--text-strong);
 	font-family: var(--wp--preset--font-family--mono);
 	font-size: 0.95em;
-	padding: 0.1em 0.25em;
+	padding: calc(0.1em - var(--wp--custom--border-width--1)) calc(0.25em - var(--wp--custom--border-width--1));
 	border-radius: var(--wp--custom--radius--chip);
 }
 
@@ -579,8 +580,9 @@ html :where(.wp-block-details > summary:focus-visible) {
 	.wp-block-comments-pagination-numbers .current
 ) {
 	background-color: var(--wp--custom--color--fill-weak);
+	border: var(--wp--custom--border-width--1) solid transparent;
 	color: var(--wp--custom--color--text-strong);
-	padding: var(--wp--preset--spacing--10);
+	padding: calc(var(--wp--preset--spacing--10) - var(--wp--custom--border-width--1));
 }
 
 /* Core's own reply-list indent is a raw 2rem, not a preset. */

@@ -1,7 +1,7 @@
 === Extendable ===
 Contributors: extendify, richtabor, colorful-tones
 Requires at least: 6.6
-Tested up to: 7.1
+Tested up to: 7.2
 Requires PHP: 7.4
 Stable tag: 2.2.0
 License: GPLv2 or later
@@ -13,8 +13,19 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
-= Unreleased =
+= 2.2.1 - 2026-11-19 =
+- Added: Masteriyo course pages follow the site's design — its colours, fonts and spacing — and any colour the site owner picked in Masteriyo still wins
+- Added: An `ext-inverse` class that shows a section or card in the page's opposite colours, with default inverse colours so it draws on every palette and colourway
 - Added: Atlas Beacon, Catalina Skyline and Ceadar Peak open WordPress 7.0's own mobile menu — the phone, button or social extra now shows inside it instead of disappearing between 600 and 782px
+- Changed: Catalina Skyline no longer ships default social icons in its bar; add them under Header Extras in the Site Editor
+- Changed: The WordPress emoji script is off, so a visitor's browser no longer fetches emoji images from wordpress.org; on Windows, flag emoji show as two letters
+- Changed: Form fields and the keyboard focus ring keep 3:1 contrast on every palette, and filled shapes keep an edge in high-contrast mode
+- Fixed: A full-screen hero's text could start behind an overlay header on a short screen or when the menu wrapped onto more rows
+- Fixed: WooCommerce's login, register and lost-password fields stayed white on dark palettes, and the variation dropdown drew a black arrow on a dark field
+- Fixed: The top divider of two footers and the bottom line of the sticky header were not drawn
+- Fixed: The floating glass header read warmer than the page behind it on wide-gamut displays, and stayed shrunk to 80% under the zoom-in animation
+- Fixed: A button whose hover changes both colours flashed the wrong text colour while it eased
+- Fixed: The navigation script could stay on an old cached copy after an update
 
 = 2.2.0 - 2026-11-09 =
 - Added: WooCommerce store pages rebuilt on WooCommerce's current blocks — the shop with a product card and a filter sidebar, the product page with its gallery, buy box and details, the cart and mini-cart, checkout, order confirmation, and every My account page

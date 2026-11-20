@@ -35,6 +35,11 @@ if ( ! function_exists( 'extendable_masteriyo_styles' ) ) :
 	 * @return void
 	 */
 	function extendable_masteriyo_styles() {
+		// Masteriyo loads its CSS only where its content shows; a missing dependency logs a notice.
+		if ( ! wp_style_is( 'masteriyo-public', 'registered' ) ) {
+			return;
+		}
+
 		// Masteriyo enqueues its own CSS late; without this dependency it overrides ours.
 		wp_enqueue_style(
 			'extendable-masteriyo-style',
@@ -248,7 +253,8 @@ if ( ! function_exists( 'extendable_masteriyo_factory_body_classes' ) ) :
 endif;
 
 add_action( 'after_setup_theme', 'extendable_masteriyo_editor_style' );
-add_action( 'wp_enqueue_scripts', 'extendable_masteriyo_styles' );
+// After Masteriyo registers its CSS, before its learn and account pages strip other styles.
+add_action( 'wp_enqueue_scripts', 'extendable_masteriyo_styles', PHP_INT_MAX - 5 );
 add_filter( 'body_class', 'extendable_masteriyo_factory_body_classes' );
 add_action( 'enqueue_block_assets', 'extendable_masteriyo_editor_styles' );
 add_action( 'enqueue_block_assets', 'extendable_masteriyo_editor_markers' );

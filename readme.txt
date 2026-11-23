@@ -13,6 +13,11 @@ Extendable is a distinct, dynamic block theme designed as a canvas for your next
 
 == Changelog ==
 
+= 2.2.2 - 2026-11-24 =
+- Fixed: With animations on, shop products stayed blank after moving to another page of results, and so did posts in a blog list set to change pages without reloading; anything that never gets its animation now shows after 3 seconds
+- Fixed: On dark palettes, hovering a closed section in Masteriyo's course content list hid its title, and the Courses page title could run under the view switch between phone and desktop widths
+- Fixed: With Masteriyo active, every page without course content wrote a notice to the debug log
+
 = 2.2.1 - 2026-11-19 =
 - Added: Masteriyo course pages follow the site's design — its colours, fonts and spacing — and any colour the site owner picked in Masteriyo still wins
 - Added: An `ext-inverse` class that shows a section or card in the page's opposite colours, with default inverse colours so it draws on every palette and colourway

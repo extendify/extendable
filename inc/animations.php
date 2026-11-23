@@ -203,8 +203,14 @@ function extendable_enqueue_animations() {
 			? $css_config[ $animation ]
 			: 'opacity: 0;';
 
+		// Shows an element after 3s if the script never sets it up.
+		$hold           = 'ext-hold-' . $animation;
+		$animation_css .= '@keyframes ' . $hold . ' { from, to { ' . $css_rule . ' } } ';
+
 		// Only hide elements if reduced motion is not preferred.
-		$animation_css .= '@media (prefers-reduced-motion: no-preference) { ' . $selector . ':not(.ext-animate--off):not([data-ext-animated]) { ' . $css_rule . ' } } ';
+		$animation_css .= '@media (prefers-reduced-motion: no-preference) { '
+			. $selector . '.ext-animate:not(.ext-animate--off):not([data-ext-animated]) { ' . $css_rule . ' } '
+			. $selector . ':not(.ext-animate--off):not(.ext-animate) { animation: ' . $hold . ' 3s; } } ';
 	}
 
 	if ( ! empty( $animation_css ) ) {

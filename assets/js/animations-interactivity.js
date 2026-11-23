@@ -11,7 +11,10 @@
 		parseFloat(config.defaults && config.defaults.stagger) || 0.08;
 	const maxStagger = 0.6;
 	let observer = null;
+	let mutationObserver = null;
 	let trackedElements = [];
+	let addedNodes = [];
+	let flushScheduled = false;
 
 	const speeds = Object.freeze({
 		slow: 1,
@@ -72,41 +75,60 @@
 		const pending = [];
 		Object.keys(currentMap).forEach((selector) => {
 			try {
-				const elements = document.querySelectorAll(selector);
-				const animationType = currentMap[selector];
-				const elementsByParent = new Map();
-				elements.forEach((element) => {
-					if (element.classList.contains('ext-animate--off')) {
-						return;
-					}
-					const parent = element.parentElement;
-					if (!elementsByParent.has(parent)) {
-						elementsByParent.set(parent, []);
-					}
-					elementsByParent.get(parent).push(element);
-				});
-
-				elementsByParent.forEach((siblingElements) => {
-					siblingElements.forEach((element, index) => {
-						const rect = element.getBoundingClientRect();
-						pending.push({
-							element,
-							animationType,
-							delay: Math.min(index * staggerDelay, maxStagger),
-							// Elements already in viewport (like headers) - reveal immediately
-							inViewport:
-								rect.top < window.innerHeight &&
-								rect.bottom > 0,
-						});
-					});
-				});
+				collect(
+					document.querySelectorAll(selector),
+					currentMap[selector],
+					pending
+				);
 			} catch {}
 		});
+		apply(pending);
 
-		// Batch all writes into one frame so layout happens once, not once per element.
+		if (!mutationObserver) {
+			mutationObserver = new MutationObserver(onMutations);
+			mutationObserver.observe(document.body, {
+				childList: true,
+				subtree: true,
+			});
+		}
+	}
+
+	function collect(elements, animationType, pending) {
+		const elementsByParent = new Map();
+		elements.forEach((element) => {
+			if (element.classList.contains('ext-animate--off')) {
+				return;
+			}
+			const parent = element.parentElement;
+			if (!elementsByParent.has(parent)) {
+				elementsByParent.set(parent, []);
+			}
+			elementsByParent.get(parent).push(element);
+		});
+
+		elementsByParent.forEach((siblingElements) => {
+			siblingElements.forEach((element, index) => {
+				const rect = element.getBoundingClientRect();
+				pending.push({
+					element,
+					animationType,
+					delay: Math.min(index * staggerDelay, maxStagger),
+					// Elements already in viewport (like headers) - reveal immediately
+					inViewport:
+						rect.top < window.innerHeight && rect.bottom > 0,
+				});
+			});
+		});
+	}
+
+	// Batch all writes into one frame so layout happens once, not once per element.
+	function apply(pending) {
 		const duration = speeds[currentSpeed];
 		requestAnimationFrame(() => {
 			pending.forEach(({ element, animationType, delay, inViewport }) => {
+				if (element.classList.contains('ext-animate')) {
+					return;
+				}
 				element.classList.add('ext-animate');
 				element.dataset.extAnimate = animationType;
 				element.style.animationDuration = `${duration}s`;
@@ -129,6 +151,64 @@
 				trackedElements.push(element);
 			});
 		});
+	}
+
+	function onMutations(records) {
+		records.forEach((record) => {
+			record.addedNodes.forEach((node) => {
+				if (node.nodeType === Node.ELEMENT_NODE) {
+					addedNodes.push(node);
+				}
+			});
+		});
+
+		if (addedNodes.length && !flushScheduled) {
+			flushScheduled = true;
+			requestAnimationFrame(setUpAddedNodes);
+		}
+	}
+
+	// Content swapped in after load, e.g. by the Interactivity API router.
+	function setUpAddedNodes() {
+		flushScheduled = false;
+		const added = addedNodes;
+		addedNodes = [];
+
+		if (currentType === 'none' || prefersReducedMotion.matches) {
+			return;
+		}
+
+		const nodes = added.filter((node) => node.isConnected);
+		trackedElements = trackedElements.filter((element) => {
+			if (element.isConnected) {
+				return true;
+			}
+			observer.unobserve(element);
+			return false;
+		});
+
+		const pending = [];
+		Object.keys(currentMap).forEach((selector) => {
+			try {
+				const found = new Set();
+				nodes.forEach((node) => {
+					if (node.matches(selector)) {
+						found.add(node);
+					}
+					node.querySelectorAll(selector).forEach((element) =>
+						found.add(element)
+					);
+				});
+				collect(
+					[...found].filter(
+						(element) => !element.classList.contains('ext-animate')
+					),
+					currentMap[selector],
+					pending
+				);
+			} catch {}
+		});
+		apply(pending);
 	}
 
 	function resetAnimations() {
@@ -251,9 +331,9 @@
 		if (initialType === 'none') {
 			const styleEl = document.createElement('style');
 			styleEl.id = 'ext-fouc-styles';
-			let css = '';
+			let css = '@keyframes ext-hold { from, to { opacity: 0; } } ';
 			Object.keys(currentMap).forEach((selector) => {
-				css += `@media (prefers-reduced-motion: no-preference) { ${selector}:not(.ext-animate--off) { opacity: 0; } } `;
+				css += `@media (prefers-reduced-motion: no-preference) { ${selector}.ext-animate:not(.ext-animate--off) { opacity: 0; } ${selector}:not(.ext-animate--off):not(.ext-animate):not([data-ext-animated]) { animation: ext-hold 3s; } } `;
 			});
 			styleEl.textContent = css;
 			document.head.appendChild(styleEl);

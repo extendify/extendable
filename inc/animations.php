@@ -210,7 +210,7 @@ function extendable_enqueue_animations() {
 		// Only hide elements if reduced motion is not preferred.
 		$animation_css .= '@media (prefers-reduced-motion: no-preference) { '
 			. $selector . '.ext-animate:not(.ext-animate--off):not([data-ext-animated]) { ' . $css_rule . ' } '
-			. $selector . ':not(.ext-animate--off):not(.ext-animate) { animation: ' . $hold . ' 3s; } } ';
+			. $selector . ':not(.ext-animate--off):not(.ext-animate):not([data-ext-animated]) { animation: ' . $hold . ' 3s; } } ';
 	}
 
 	if ( ! empty( $animation_css ) ) {

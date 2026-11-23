@@ -333,7 +333,7 @@
 			styleEl.id = 'ext-fouc-styles';
 			let css = '@keyframes ext-hold { from, to { opacity: 0; } } ';
 			Object.keys(currentMap).forEach((selector) => {
-				css += `@media (prefers-reduced-motion: no-preference) { ${selector}.ext-animate:not(.ext-animate--off) { opacity: 0; } ${selector}:not(.ext-animate--off):not(.ext-animate) { animation: ext-hold 3s; } } `;
+				css += `@media (prefers-reduced-motion: no-preference) { ${selector}.ext-animate:not(.ext-animate--off) { opacity: 0; } ${selector}:not(.ext-animate--off):not(.ext-animate):not([data-ext-animated]) { animation: ext-hold 3s; } } `;
 			});
 			styleEl.textContent = css;
 			document.head.appendChild(styleEl);
